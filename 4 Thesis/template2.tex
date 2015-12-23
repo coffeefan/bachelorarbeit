@@ -1,0 +1,154 @@
+\documentclass[ oneside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ngerman,american,%
+                ]{scrreprt}
+%\documentclass[a4paper,oneside,11pt,parskip=half,ngerman]{scrreprt}
+\usepackage{typearea}
+
+\usepackage[ngerman]{babel}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=green,filecolor=black,urlcolor=red,linktoc=page, pdfborder={0 0 0}]{hyperref}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage[expert]{mathdesign}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{color}
+
+\usepackage{rotating}
+\usepackage{titlesec}
+\usepackage{mathptmx}
+\usepackage{amssymb} % checkmark
+% \usepackage{helvet}
+\usepackage[scaled]{uarial}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[squaren]{SIunits}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage[absolute]{textpos}
+\usepackage{makeidx}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{scrhack}
+\usepackage{csquotes}
+\usepackage{tocloft}
+\usepackage[pdfspacing,dottedtoc]{classicthesis}  
+\usepackage[section]{placeins}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%\usepackage[firstpage]{draftwatermark}
+
+
+% Bibliography
+\usepackage[
+backend=bibtex,
+style=alphabetic-verb,
+citestyle=alphabetic-verb
+]{biblatex}
+\bibliography{./Citer}
+
+
+% new table type
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{6cm}}
+
+
+% remove header spacing vor to*
+\setlength\cftbeforetoctitleskip{-2.5em}
+\setlength\cftbeforeloftitleskip{-2.5em}
+\setlength\cftbeforelottitleskip{-2.5em}
+
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=r,basicstyle=\small\ttfamily}}{}
+$endif$
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+% We will generate all images so they have a width \maxwidth. This means
+% that they will get their normal width if they fit onto the page, but
+% are scaled down if they would overflow the margins.
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+\else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth,height=20em,keepaspectratio]{#1}}
+
+
+\newcommand{\starredpart}[1]{%
+  \LaTeXStandardPart*{#1}%
+}%
+
+\newcommand{\unstarredpart}{%
+  \@ifnextchar[{\unstarredpart@@opt}{\unstarredpart@@noopt}%
+}%
+
+\renewcommand{\part}{%
+  \@ifstar{\starredpart}{\unstarredpart}%
+}%
+
+
+%styling \part
+\titleclass{\part}{top} % make part like a chapter
+\titleformat{\part}
+[display]
+{\centering}
+{\MakeUppercase{\partname} \thepart}
+{5pt}
+{\color{red}\MakeUppercase}
+
+
+
+
+\setlength{\parindent}{0pt}
+
+
+\begin{document} 
+\selectlanguage{ngerman} 
+
+\begin{titlepage}
+
+\begin{center}
+
+
+\includegraphics{./images/zhaw.png}\\[5cm]
+\textsc{\Large Bachelorthesis}\\[1cm]
+{\huge Evaluation von Synchronisations- und Konfliktlösungsverfahren im Web-Umfeld}\\[6.0cm]
+
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large \emph{Author:}\\ Martin \textsc{Eigenmann} \end{flushleft}
+\end{minipage} 
+\hfill 
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} 
+\large \emph{Betreuer:} \\ Philip \textsc{Stanik} \\[1cm]
+\large \emph{Experte:} \\ Silvan \textsc{Spross}
+\end{flushright} 
+\end{minipage}
+
+\vfill
+
+{\large April bis Juli 2015}
+\end{center}
+\end{titlepage}
+
+$body$
+$for(include-after)$
+  $include-after$
+$endfor$
+
+\end{document}

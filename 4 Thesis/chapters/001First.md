@@ -1,7 +1,9 @@
+\newpage
+# A level-one header
+
 This is just a sample. You can play around with your own text right here.
 
-Markdown
--------------
+
 
 ...is really just ordinary text, *plain and simple*. How is it good for you?
 
@@ -20,14 +22,7 @@ To see what else you can do with Markdown (including **tables**, **images**, **n
       1     1          1             1
 
 
-
-#Grundlagen
-Dieses Kapitel erläutert die Grundlagen. Ein grosser Teil der Arbeit stützt sich auf den Grundlagen ab
-
-##Basisbegriffe
-
-
-![This is the caption](image.jpg)
+![This is the caption](images/image.jpg)
 
 Test  |test2   | saleti
 --|---|--
@@ -35,3 +30,16 @@ olé  | Thats the way   |
   |   |  
 
 This is the day
+
+\newpage
+
+#Grundlagen
+Dieses Kapitel erläutert die Grundlagen. Ein grosser Teil der Arbeit stützt sich auf den Grundlagen ab [@rupDatenbanken pp.105]
+
+##Basisbegriffe
+
+###Authentifizierung
+###Autorisierung
+Saleti
+
+

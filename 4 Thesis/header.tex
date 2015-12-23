@@ -52,7 +52,7 @@
 \usepackage{scrhack}
 \usepackage[plainpages=false]{hyperref}
 \usepackage{wallpaper} %\ThisTileWallPaper{}
-\usepackage[super,square]{natbib} %für BibTeX Literaturverzeichnis
+%\usepackage[super,square]{natbib} für BibTeX Literaturverzeichnis
 \usepackage{enumitem}
 \usepackage{subfig}
 \usepackage[export]{adjustbox}
@@ -61,6 +61,16 @@
 \usepackage{fancyvrb}
 \usepackage{graphicx}
 \usepackage{booktabs}
+
+% Bibliography
+\usepackage[
+backend=bibtex,
+style=alphabetic-verb,
+citestyle=alphabetic-verb
+]{biblatex}
+\bibliography{./Citer}
+
+\usepackage{calc}
 
 
 
@@ -156,3 +166,6 @@
 %     string=[l]{"},
 %     stringstyle=\color{lblue}\ttfamily
 %  }
+
+
+
