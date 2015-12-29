@@ -91,46 +91,61 @@ Playbuzz ist kostenlos und lässt sich einfach integrieren. Durch Verwendung von
 Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die Möglichkeiten in Funktionalität und Design haben Grenzen. Individuelle Erweiterungen sind nicht einfach möglich.
 
 
-##Grundlegende Sicherheitskonzepte
-In diesem Unterkapitel werden die Grundlagen
-
 
 \newpage
-...is really just ordinary text, *plain and simple*. How is it good for you?
+##Grundlegende Sicherheitsprinzipien
+In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt auf denen danach eine Authentifizierungssoftware aufgebaut werden kann.
 
-- You just **type naturally**, and the result looks good.
-- You **don't have to worry** about clicking formatting buttons.
-  - Or fiddling with indentation. (Two spaces is all you need.)
+###KISS
+**K**eep **I**t **S**tupid *and* **S**imple 
 
-To see what else you can do with Markdown (including **tables**, **images**, **numbered lists**, and more) take a look at the [Cheatsheet][2]. And then try it out by typing in this box!
-
-[2]: https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
-
-  Right     Left     Center     Default
--------     ------ ----------   -------
-     12     12        12            12
-    123     123       123          123
-      1     1          1             1
+Ein verbreitetes Problem unter Software Engineers und Programmier heute ist, dass sie dazu tendieren Probleme zu kompliziert und verschachtelt zu lösen. 8-9 von 10 Entwickeln machen den Fehler, Probleme zu wenig auseinander zu brechen und alles in einem grossen Programm zu lösen. Anstatt es in kleinen Paketen verständlich zu programmieren.[@apachekiss] 
 
 
-![This is the caption](images/image.jpg)
+Software Entwickler profitieren von Kiss:
 
-Test  |test2   | saleti
---|---|--
-olé  | Thats the way   |  
-  |   |  
+* You will be able to solve more problems, faster.
+* You will be able to produce code to solve complex problems in fewer lines of code
+* You will be able to produce higher quality code
+* You will be able to build larger systems, easier to maintain
+* You're code base will be more flexible, easier to extend, modify or refactor when new requirements arrive
+* You will be able to achieve more than you ever imagined
+* You will be able to work in large development groups and large projects since all the code is stupid simple
 
-This is the day
+<!-- TODO: Übersetzten-->
 
-\newpage
+####KISS fördert die Sicherheit
+Die Begründung warum KISS die Sicherheit fördert liefer Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und die wiederum setzt voraus, dass
+Designs einfach und klein sein sind.Designs müssen so beschaffen
+sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere
+Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [@sicheresysteme pp.93]
 
-#Grundlagen
-Dieses Kapitel erläutert die Grundlagen. Ein grosser Teil der Arbeit stützt sich auf den Grundlagen ab [@rupDatenbanken pp.105]
 
-##Basisbegriffe
+###Default-is-deny
+Ob eine Person oder Programm Zugriff auf Daten/Funktionen haben, sollte nicht durch Verbote sondern durch explizite Erlaubnis geregelt werden. Dies bedeutet solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlich ist wie viele Organisationen und Entwicklungsfirma nicht dieses vorgehen verwenden. z.B. Filesysteme setzten auf Verbote anstatt auf explizite Erlaubnise.
+[@defaultdeny] , [@sicheresysteme pp.94]
 
-###Authentifizierung
-###Autorisierung
-Saleti
+
+###Open Design
+Abgeleitet von der Kryprotografie: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll nach dem Ansatz entworfen werden. Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch das Softwaredesign geheimzuhalten um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
+[@sicheresysteme pp.95]
+
+
+###Zusammenfassung der Sicherheitsprinzipien
+Die wichtigsten Sicherheitsprinzipien zusammengefasst:
+
+* Software muss aus kleinen, isolierten Einheiten aufgebaut werden, deren externe
+Beziehungen am Interface deutlich werden. Damit wird sowohl praktische
+Schadensreduzierung durch Isolation als auch eine schnelle und einfache Sicherheitsanalyse
+möglich.
+* Zugriffsentscheidungen dürfen nur auf der Basis expliziter, minimaler und
+keinesfalls durch immer und global verfügbare Permissions fallen.
+* Das Softwaredesign von Applikationen sollte wenn möglich öffentlich sein. Zumindest sollte
+ein interner Review-Prozess stattfinden, in dessen Verlauf eine Sicherheitsanalyse
+durch nicht an der Entwicklung Beteiligte erstellt wird.
+
+<!-- TODO: Weitere Konzepte Sicherheitssystem Seite 104 -->
+
+
 
 
