@@ -23,10 +23,8 @@ Neues Verzeichnisse
 
 \pagebreak
 
-##Quellenverzeichnis
-\renewcommand{\bibname}{}\begingroup \let\clearpage\relax
+## Quellenverzeichnis
 
-\endgroup
 
 \pagebreak
 

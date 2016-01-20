@@ -1,7 +1,5 @@
 
 
-
-
 \part[Präambel]{Einleitung und Abgrenzung}
 
 
@@ -93,5 +91,22 @@ Proof of Concept
 - Dokumentierte Entwicklung eines Prototypen der Authentifizierungsschnittstelle und der Verwaltung, basierend auf den erarbeiteten Spezifikationen und Architektur
 - Dokumentierte Integration der Studienresultate im Prototypen
 - Dokumentiertes Fazit
+
+##Rahmenbedingungen Bachelorarbeit
+Die vorliegende Bachelorarbeit umfasst gemäss Regelment unter anderem folgende Punkte:
+
+- Eine Bachelorarbeit besteht aus einer konzeptionellen Arbeit und deren Umsetzung. Der
+Schwerpunkt liegt auf dem konzeptionellen Teil, in dem die theoretischen und methodischen
+Grundlagen einer Entwicklung oder eines Konzeptes ausgearbeitet und dargelegt
+werden. Im Umsetzungsteil erfolgt anschliessend die Beschreibung der Implementierung
+bzw. der Anwendung. Die Umsetzung besteht zumindest aus einem „Proof of Concept“,
+um die prinzipielle Realisierbarkeit darzulegen. Die Bachelorarbeit ist als praxisnahes Projekt
+durchzuführen.
+- Der Aufwand für die Fertigstellung einer Bachelorarbeit beträgt insgesamt mindestens 360
+Stunden.
+- Die Bachelorarbeit hat die Form eines technischen Berichtes.
+
+[^bachelorreglement]: [@bachelorreglement]
+
 
 

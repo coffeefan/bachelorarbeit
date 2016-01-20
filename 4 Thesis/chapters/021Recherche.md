@@ -93,6 +93,46 @@ Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den SocialMedia-K
 
 
 \newpage
+
+###WebSMS.com Zwei-Faktor-Authentifizierung
+Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl Telefonnummern pro Person ein:
+
+-------------------------------------------------------------------------------
+__Attribut__                __Anazahl SIM Cards__
+--------------------------- --------------------------------------------------
+__Swisscom__				
+							5 Sim Cards pro Person
+__Beschreibung__            
+                            Fehler/Problembeschreibung des Tickets.
+
+__Anmerkungen__             
+                            Alle Antworten von Technikern und Kunden. Eine Antwort des Technikers kann als FAQ-Eintrag markiert werden.
+
+__Arbeitszeit__             
+                            Alle erfassten und aufgewendeten Stunden für den Support-Fall.
+
+__tArbeitszeit__            
+                            Das Total der erfassten Arbeitszeit.
+
+__pNotes__                  
+                            Persönliche Bemerkungen zum Support-Fall. Nur der Autor einer Notiz, kann diese bearbeiten oder lesen.
+-------------------------------------------------------------------------------
+Table: Attribute Support-Fall
+
+
+[^uvek]: Meldung des UVEKS über Gesetzesänderung: [@uvek]
+
+
+2012 wurde Playbuzz von Shaul Olmert (Sohn des Premie Minster von Israel Ehuad Olmert) und Tom Pachys ins Leben gerufen. Der offizielle Launch war im Dezember 2013. Im Juni 2014 wurde Playbuzz bereits das 1. Mal unter den Top 10 Facebook Shared Publishers aufgelistet. Im Juni 2014 konnte Playbuzz bereits 70 millionen unique views aufweisen. Im September 2014 kamen 7 von den 10 Top Shares auf Facebook laut forbes.com von Playbuzz. Playbuzz setzt nach eigenen Angaben auf Content wie Votes und Quizes welcher gerne Viral geteilt wird und ermöglicht Endnutzer und Redaketeueren einfache Verwendung. [@t3nplaybuzz] [@playbuzz]
+
+####Vorteile
+Playbuzz ist kostenlos und lässt sich einfach integrieren. Durch Verwendung von Playbuzz kann die Verbreitung des eigenen Inhalts stark gesteigert werden. Die Verwaltungsoberfläche und Reports sind übersichtlich und einfach zu bedienen.
+
+####Nachteile
+Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die Möglichkeiten in Funktionalität und Design haben Grenzen. Individuelle Erweiterungen sind nicht einfach möglich.
+
+
+\newpage
 ##Grundlegende Sicherheitsprinzipien
 In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt auf denen danach eine Authentifizierungssoftware aufgebaut werden kann.
 
