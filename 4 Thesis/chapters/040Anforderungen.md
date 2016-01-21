@@ -17,20 +17,62 @@ Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis ge
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Developer kann sich an der Authentifizierungsschnittstelle registrieren
+__Ziel__                    Ein Developer ist am Authentifizierungsschnittstellen-Service registrieren
 
 
-__Beschreibung__           	Der Developer kann die Authentifizierungsschnittstelle in seinem System integrieren
+__Beschreibung__           	Ein Developer muss sich am Authentifizierungsschnittstellen-Service registrieren können
 
-__Akteure__                 Developer, System
+__Akteure__                 Developer
 
-__Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsprogramm konfiguriert
+__Vorbedingung__            Keine
 
-__Ergebnis__                Der Developer hat eine individuellen Zugang zur Authentifizierungsschnittstelle seines Authentifizierungsvorgangs
+__Ergebnis__                Registrierter Developer
 
-__Hauptszenario__           Der Developer möchte nach konfigurieren seines Authentifizierungsprogramm den Zugang für die Implmentierung auslösen.
+__Hauptszenario__           Der Developer füllt ein Registrationsformular aus und bestätigt seine E-Mail Adresse
 
 __Alternativszenario__      -
+-------------------------------------------------------------------------------
+
+#### UC-01 Login
+
+-------------------------------------------------------------------------------
+__UseCase__
+--------------------------- --------------------------------------------------
+__Ziel__                    Ein Developer kann sich beim Authentifizierungsschnittstellen-Service
+
+
+__Beschreibung__           	Ein Developer muss sich am Authentifizierungsschnittstellen-Service authentifizieren können
+
+__Akteure__                 Developer
+
+__Vorbedingung__            Der Developer ist registriert.
+
+__Ergebnis__                Authentifizierter und eigeloggter Developer
+
+__Hauptszenario__           Der Developer loggt sich mit E-Mail und Passwort am Authentifizierungsschnittstellen-Service ein.
+
+__Alternativszenario__      Der Developer sendet sich das verpasste Passwort per E-Mail zu. Erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
+-------------------------------------------------------------------------------
+
+#### UC-01 Konfigurieren einer neuen Social-Media Modul Authentifizierungsvorgang
+
+-------------------------------------------------------------------------------
+__UseCase__
+--------------------------- --------------------------------------------------
+__Ziel__                    Es ist eine neuer Authentifizierungsvorgang für ein neus Social Media-Modul konfiguriert
+
+
+__Beschreibung__           	Der Developer kann eine neue Aktivität eröffnen
+
+__Akteure__                 Developer
+
+__Vorbedingung__            Der Developer hat sich am System angemeldet
+
+__Ergebnis__                Neuer Authentifizierungsvorgang
+
+__Hauptszenario__           Der Developer eröffnet einen neuen Authentifizierungsvorgang. Er benennt ihn sinnig. Die zu verwende(n) Authentifizierungskomponennten werden ausgewählt. Bei der Konfiguration unterstützen die Resultate die Studie den Developer für die optimalte Konfiguration. Am Ende der Konfiguration werden die Akzeptanzkritieren für eine erfolgreiche Authtentifizierung festgelegt.
+
+__Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupliziert
 -------------------------------------------------------------------------------
 
 
@@ -39,12 +81,12 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Die Authentifizierungsschnittstelle muss in ein (bestehendes) System eingebunden werden können
+__Ziel__                    Die Authentifizierungsschnittstelle kann in ein (bestehendes) System eingebunden werden
 
 
 __Beschreibung__           	Der Developer kann die Authentifizierungsschnittstelle in seinem System integrieren
 
-__Akteure__                 Developer, System
+__Akteure__                 Developer
 
 __Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsvorgang konfiguriert
 
@@ -55,26 +97,27 @@ __Hauptszenario__           Der Developer öffnet die Einbindeseite. Es werden i
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
-
-
-
-#### UC-01 Einbinden in vorhandenes System
+#### UC-01 Report eines Authentifizierungsvorgangs
 
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Die Authentifizierungsschnittstelle muss in ein (bestehendes) System eingebunden werden können
+__Ziel__                    Die Verwendung des Authentifizierungsvorgangs ist übersichtlich dargestellt
 
 
-__Beschreibung__           	Der Developer kann die Authentifizierungsschnittstelle in seinem System integrieren
+__Beschreibung__           	Um den Verwendung des Authentifizierungsvorgangs auszuwerten soll ein Report erstellt werden
 
-__Akteure__                 Developer, System
+__Akteure__                 Developer
 
-__Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsvorgang konfiguriert
+__Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsvorgang konfiguriert. (Der Authentifizerungsvorgang ist eingebunden und verwendet worden)
 
-__Ergebnis__                Der Developer hat eine Möglichkeit die Authentifizierungsschnittstelle mit seinem konfigurierten Authentifizierungsvorgangs in seiner Software einzubinden
+__Ergebnis__                Report eines Authentifizierungsvorgangs
 
-__Hauptszenario__           Der Developer öffnet die Einbindeseite. Es werden ihm alle Schritte zur Erfolgreichen Einbindung aufgelistet. Der Code liegt individualisiert vor. Der Developer kopiert den Code in sein Programm
+__Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt sich der Developer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 
-__Alternativszenario__      -
+__Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Developer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 -------------------------------------------------------------------------------
+
+
+
+

@@ -104,7 +104,7 @@ um die prinzipielle Realisierbarkeit darzulegen. Die Bachelorarbeit ist als prax
 durchzuführen.
 - Der Aufwand für die Fertigstellung einer Bachelorarbeit beträgt insgesamt mindestens 360
 Stunden.
-- Die Bachelorarbeit hat die Form eines technischen Berichtes.
+- Die Bachelorarbeit hat die Form eines technischen Berichtes. [^bachelorreglement]
 
 [^bachelorreglement]: [@bachelorreglement]
 
