@@ -1,4 +1,8 @@
-#Architektur
+#Design der Software
+In diesem Kapitel soll ein System entworfen werden. Das System soll den Anforderungen, welche im vorherigen Kapitel definiert wurden, entsprechen.
+
+##Authentifizierungsmöglichkeiten
+
 
 ##Integration der Schnittstelle
 Wie in der Anforderungsanalyse <!--TODO Punkt beschreiben --> und Aufgabenstellung  <!--TODO Punkt beschreiben -->geschrieben, soll die Schnittstelle möglichst einfach in Bestehende Systeme integriert werden können. Bevor wir untersuchen wie wir die Integration umsetzten können, bedarf es die wichtigsten bestehenden Systeme zu kennen.

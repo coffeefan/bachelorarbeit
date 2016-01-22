@@ -9,8 +9,14 @@ Die Schlüsselwörter „muss“, „muss nicht“, „erforderlich“, „empfo
 file:///C:/Users/chris/Downloads/doku.pdf 3.2
 -->
 
+##Akteuere
+<!--TODO Akteure-->
 ##Use-Cases
 Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis gefunden wurden.
+
+###Diagramm
+
+<!--TODO YUML.me diagramm erstellen -->
 
 #### UC-01 Registration
 
