@@ -101,24 +101,24 @@ __Hauptszenario__           Der Developer öffnet die Einbindeseite. Es werden i
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
-#### UC-31 Einbinden in vorhandenes System
+#### UC-31 Authentifizieren
 
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Die Authentifizierungsschnittstelle kann in ein (bestehendes) System eingebunden werden
+__Ziel__                    Der User ist authtentifiziert oder der User abgelehnt
 
-__Beschreibung__           	Der Developer kann die Authentifizierungsschnittstelle in seinem System integrieren
+__Beschreibung__           	Der User probiert sich über den Authentifizierungsschnittstellen-Service zu authentifizieren um an einem Social-Media Modul teilzunehmen
 
-__Akteure__                 Developer
+__Akteure__                 User
 
-__Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsvorgang konfiguriert
+__Vorbedingung__            Der Developer hat den Authentifizierungsvorgang konfiguriert und in seinem System eingebunden.
 
-__Ergebnis__                Der Developer hat eine Möglichkeit die Authentifizierungsschnittstelle mit seinem konfigurierten Authentifizierungsvorgangs in seiner Software einzubinden
+__Ergebnis__                Der Authentifizierungsschnittstellen-Service authentifiziert den User oder lehnt ihn ab.
 
-__Hauptszenario__           Der Developer öffnet die Einbindeseite. Es werden ihm alle Schritte zur Erfolgreichen Einbindung aufgelistet. Der Code liegt individualisiert vor. Der Developer kopiert den Code in sein Programm
+__Hauptszenario__           Der User wird vom Social Media Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User authentifziert sich. Der User kann die Eingabe des Social Media Modul erfolgreich abschliessen
 
-__Alternativszenario__      -
+__Alternativszenario__      Der User wird vom Social Media Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe des Social-Media Modul nicht erfolgreich abschliessen.
 -------------------------------------------------------------------------------
 
 #### UC-41 Report eines Authentifizierungsvorgangs
@@ -139,6 +139,26 @@ __Ergebnis__                Report eines Authentifizierungsvorgangs
 __Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt sich der Developer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 
 __Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Developer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
+-------------------------------------------------------------------------------
+
+#### UC-51 Wartbarkeit
+
+-------------------------------------------------------------------------------
+__UseCase__
+--------------------------- --------------------------------------------------
+__Ziel__                    Der Authentifizierungsschnittstellen-Service soll mit geringen Aufwand angepasst werden können.
+
+__Beschreibung__           	
+
+__Akteure__                 Entwicklungsteam-Mitglied
+
+__Vorbedingung__            Das Entwicklungsteam-Mitglied hat Zugriff auf das Entwicklungs-Repository, Testsystem und Livesystem
+
+__Ergebnis__                Die Anpassung ist integriert
+
+__Hauptszenario__           Dank eingehaltenen Coderichtlinien ist es einfach möglich die Anpassung einzupflegen
+
+__Alternativszenario__      -
 -------------------------------------------------------------------------------
 
 \newpage
@@ -229,32 +249,183 @@ __Beschreibung__        Ein Developer kann ein neues Social-Media Modul erfassen
 
 __Techn. Risiko__       Hoch
 
-__Business Value__     	Niedrig
+__Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-212			Anpassen eines Authentifizierungsvorgangs
+### FREQ-212			Authentifizerungs-Stufe auswählen
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Developer kann verschiedene Authentifizierungsvorgang
+__Beschreibung__        Ein Developer muss eine Authentifizerungs-Stufe für den Authentifizierungsvorgangs auswählen
 
-__Techn. Risiko__       Hoch
+__Techn. Risiko__       Niederig
 
-__Business Value__     	Niedrig
+__Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-311			Generierung von Code für einbinden in vorhandenes System
+### FREQ-251			Generierung von Code für einbinden in vorhandenes System
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25
+
+__Beschreibung__        Ein Developer kann einen Code generieren lassen. Dieser Code soll ihm die Integration in sein System vereinfachen
+
+__Techn. Risiko__       Sehr Hoch
+
+__Business Value__     	Hoch
+-----------------------------------------------------------------------------------------------------------------
+
+### FREQ-311			Authentifizieren
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Ein Developer kann einen Code generieren lassen. Dieser Code soll ihm die Integration in sein System vereinfachen
+__Beschreibung__        Ein User kann isch über den Authentifizierungsschnittstellen-Service authentifizieren um am Social-Media Modul teilzunehmen. Der Authentifizierungsschnittstellen-Service authentifiziert oder lehnt den User ab.
 
-__Techn. Risiko__       	Hoch
+__Techn. Risiko__       Mittel
 
-__Business Value__     	Niedrig
+__Business Value__     	Sehr Hoch
 -----------------------------------------------------------------------------------------------------------------
 
+### FREQ-411			Report generieren
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-41
+
+__Beschreibung__        Der Developer kann ein Report generieren. Der Report soll die Verwendung übersichtlich darstellen.
+
+__Techn. Risiko__       Mittel
+
+__Business Value__     	Sehr Hoch
+-----------------------------------------------------------------------------------------------------------------
+
+\newpage
+##Nicht Funktionale Anforderungen
+Nicht Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
+
+### NFREQ-110			Betriebsystemunabhängigkeit
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         Alle
+
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service muss auf allen bekannten Betriebsystemen mit HTML5 und javascritfähigen Browser vewerdent werden können.
+
+__Techn. Risiko__       Mittel
+
+__Business Value__     	Sehr Hoch
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-115			Wartbarkeit
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-51
+
+__Beschreibung__        Die Wartbarkeit des sSystems soll sichergestellt werden
+
+__Techn. Risiko__       Mittel
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-120			Einfache Integration
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach im vorhandenen System eingebunden werden können.
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-120			Performance
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-31
+
+__Beschreibung__        Das System soll insbesondere an der Stelle der Authentifzierung Performant sein.
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+\newpage
+##Bewertung der Anforderungen
+<!--TODO -->
+
+\newpag
+##Risiken
+Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Riskiken bezüglich der Bachelorarbeit, sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
+
+###R-01 Akzeptanz
+Developer und insbesondere auch User, welche den Authentifizierungsschnittstellen-Service verwenden soll, sind völlig unterschiedlich. Deren unterschiedliche Ansprüche machen es schwierig, eine Lösung zu entwickeln welchen Akteuren gerecht wird.
+
+Da der Auftraggeber sowohl die Zielgruppe Developer wie auch User kenn, kann er hier gezielt Feedback geben.
+
+Die Auswirkung bei Eintritt dieses Risikos ist im Rahmen der Bachelorarbeit gering, da der Erfolg der Arbeit nicht von der tatsächlichen Verwendung im produktiven Umfeld abhängt.
+
+###R-02 Kosten
+Da es sich bei diesem Projekt um eine Bachelorarbeit handelt, besteht kein Personalkostenrisiko. Kostenpflichtige Produkte Dritter werden nicht verwendet. Einzig der Betrieb/Hosting der Bachelorarbeit verursacht Kosten. Das Kostenrisiko kann dank fixen Leistungsparameter auf ein Minimum reduziert werden.
+
+###R-03 Überkomplexität
+Es besteht die Möglichkeit, dass die Komplexität des zu entwickelnden Systems viel höher ist, als angenommen. Da die Komplexität nur zu einem gewissen Grad durch Architekturentscheide beeinflusst werden kann, muss besonderes Augenmerk auf dieses Risiko gelegt werden.
+
+Dieses Risiko wird mit hoher Wahrscheinlichkeit eintreten.
+
+Die Auswirkung bei Eintritt dieses Risikos ist, dass nicht der gesamte Umfang der Bachelorarbeit erarbeitet werden kann, weil zur Lösung der Komplexitätsprobleme zusätzliche Zeit benötigt wird.
+
+###R-04 Systemumfeldänderungen
+Umsysteme könnten während der Projektphase dieser Bachelorarbeit massgeblich verändert werden.
+
+Dieses Risiko wird mit sehr geringer Wahrscheinlichkeit eintreten.
+
+Die Auswirkung bei Eintritt dieses Risikos kann nicht abgeschätzt werden. Situativ muss dieses Risiko behandelt werden.
+
+###R-05 Schlechte/Unzureichende Framework
+Die Bachelorarbeit wird basierend auf verschiedenen Frameworks umgesetzt. Das Risiko, dass Frameworks nicht wie beschrieben funktionieren, schlecht dokumtiert oder instabil sind besteht.
+
+Dieses Risiko wird mit mittlerer Wahrscheinlichkeit eintreten
+Als Auswirkungen dieses Risikos sind Wechsel des Frameworks oder gar manuelle Entwicklungen und daraus zusätzliche nicht einschätzbare Aufwendungen nötig.
+
+###R-06 Termineinhaltung
+Der fixe Abgabetermin der Semesterarbeit gilt es einzuhalten. Das Risiko das die Arbeit verspätet abgegeben wird besteht.
+
+Dieses Risiko wird mit geringer Wahrscheinlichkeit eintreten.
+Die Auswirkung bei Eintritt dieses Risikos ist das nicht Bestehen der Arbeit.
+
+###-07 Auslastung
+Das Projekt wird durch einen Mitarbeiter getragen. Dieser ist sowohl im Beruf wie auch privat stark ausgelastet. Der hohe schulische Aufwand kann beeinflusst werden. Mit zusätzliche Ausfälle durch Krankheit oder nicht vorhersehbaren Vorfällen muss gerechnet werden.
+
+Das Risiko wird mit mittlerer Wahrscheinlichkeit eintreten.
+Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Quantität der Arbeit wiederspiegeln.
+
+ 
+3.9.8	Risikomatrix
+1		5
+		7	3
+	4		6
+
+	2		
+
+Tabelle 4 - Risikomatrix
+Rot: 	Massnahmen erforderlich
+Gelb: 	Risiken beobachten
+Grün: 	Keine Massnahmen erforderlich
+
+1	Akzeptanz
+2	Kosten
+3	Überkomplexität
+4	Systemumfeldänderungen
+5	Schlechte/Unzureichende Frameworks
+6	Termineinhaltung
+7	Auslastung
 
 
+###Massnahmen
+Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende Komplexität einschätzen zu können wird vor Projektbeginn ein Prototyp mittels Durchstich durch alle Technologien erstellt. Danach kann die Komplexität im Zusammenspiel der Technologie eingeschätzt und bei Bedarf eine Technologie durch eine andere Ersetzt werden. So kann das Risiko 3 Überkomplexität und Risiko 5 Schlechte/Unzureichende Frameworks minimiert werden.
+
+Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich wurden vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen sollte das Risiko 6 Termineinhaltung minimal bleiben.
+Das Risiko 7 Auslastung kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit wurde auf ein Minimum reduziert. Für die restliche freiwilige Arbeit wurde mit Freunden ein Nofallszenario entwickelt, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen. Der Kontakt mit dem  mit Arbeitgeber wird intensiv gepflegt um, so bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen wurden entschärfen auch Risiko 7.
