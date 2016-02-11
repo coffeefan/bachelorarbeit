@@ -240,7 +240,19 @@ __Techn. Risiko__       Niedrig
 __Business Value__     	Sehr Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-212			Anpassen eines Authentifizierungsvorgangs
+### FREQ-214			Studien Ergebnis zur Konfiguration nutzten
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-21
+
+__Beschreibung__        Ein Developer kann zur Konfiguration des Authentifizierungsvorangs die Studien-Ergebnisse visualisiert nutzen
+
+__Techn. Risiko__       Niedrig
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### FREQ-214			Anpassen eines Authentifizierungsvorgangs
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
@@ -252,7 +264,7 @@ __Techn. Risiko__       Hoch
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-212			Authentifizerungs-Stufe auswählen
+### FREQ-215			Authentifizerungs-Stufe auswählen
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
@@ -356,7 +368,7 @@ __Business Value__     	Mittel
 ##Bewertung der Anforderungen
 <!--TODO -->
 
-\newpag
+\newpage
 ##Risiken
 Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Riskiken bezüglich der Bachelorarbeit, sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
 
@@ -396,31 +408,38 @@ Der fixe Abgabetermin der Semesterarbeit gilt es einzuhalten. Das Risiko das die
 Dieses Risiko wird mit geringer Wahrscheinlichkeit eintreten.
 Die Auswirkung bei Eintritt dieses Risikos ist das nicht Bestehen der Arbeit.
 
-###-07 Auslastung
+###R-07 Auslastung
 Das Projekt wird durch einen Mitarbeiter getragen. Dieser ist sowohl im Beruf wie auch privat stark ausgelastet. Der hohe schulische Aufwand kann beeinflusst werden. Mit zusätzliche Ausfälle durch Krankheit oder nicht vorhersehbaren Vorfällen muss gerechnet werden.
 
 Das Risiko wird mit mittlerer Wahrscheinlichkeit eintreten.
 Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Quantität der Arbeit wiederspiegeln.
 
- 
-3.9.8	Risikomatrix
-1		5
-		7	3
-	4		6
+\newpage
+### Risikomatrix
 
-	2		
+![Risikomatrix [^risikomatrix]](images/excel-statistik/risikomatrix.JPG)
 
-Tabelle 4 - Risikomatrix
+
 Rot: 	Massnahmen erforderlich
+
 Gelb: 	Risiken beobachten
+
 Grün: 	Keine Massnahmen erforderlich
 
+
+
 1	Akzeptanz
+
 2	Kosten
+
 3	Überkomplexität
+
 4	Systemumfeldänderungen
+
 5	Schlechte/Unzureichende Frameworks
+
 6	Termineinhaltung
+
 7	Auslastung
 
 
@@ -429,3 +448,5 @@ Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende
 
 Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich wurden vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen sollte das Risiko 6 Termineinhaltung minimal bleiben.
 Das Risiko 7 Auslastung kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit wurde auf ein Minimum reduziert. Für die restliche freiwilige Arbeit wurde mit Freunden ein Nofallszenario entwickelt, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen. Der Kontakt mit dem  mit Arbeitgeber wird intensiv gepflegt um, so bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen wurden entschärfen auch Risiko 7.
+
+[^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen
