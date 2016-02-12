@@ -35,7 +35,67 @@ Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der St
 
 
 ##Hauptziel der Studie
-In den vergangenen Kapiteln wurden immer wieder verschiedene Authentzifizierungsarten erwähnt und beschrieben. Diese verschiedenen Möglichkeiten gilt es mit einander zu vergleichen. 
+In den vergangenen Kapiteln wurden immer wieder verschiedene Authentzifizierungsarten erwähnt und beschrieben. Diese verschiedenen Möglichkeiten gilt es mit einander zu vergleichen.
 
 
+##Aufbau
+"Ein Fragebogen soll als Gesamtkomzept (Einleitung, Hauptteil, Endteil, Design, Aufmachung) betrachtet werden, in dem die Reihenfolge und die Struktur der Frage wichtige einflussfaktoren zur Erlangung korrekter Daten sind" [^fragebogen]
 
+In den folgenden Unterkapitel wird die Entwicklung dieses Gesamtkonzept abgebildet.
+
+###Einleitung
+Die Einleitung soll die Befragten motivieren an der Studie teilzunehmen und allgemeine Hinweise zur Studie geben. Die folgenden Fragen wurden Batinic (WWW-Fragebogengenerator) und dem Institut für webbasierte Kommunikation und E-Learning zusammen getragen und und für die Studie der Bachelorarbeit beantwortet:
+
+####Wer wird befragt?
+Die Hauptzielgruppe sind Schweizer welche Deutsch sprechen. Die Nebenzielgruppe sind Personen die Deutsch sprechen aus anderen Nationen. Die Telnehmer sollen die technische Know-How besitzen an einem Social-Media Modul teilzunehmen und den Internetzugriff haben.
+
+####Was ist der Zweck bzw. das Ziel der Untersuchung?
+Die Studie dient dem Programmierer zur richtigen Konfiugration der Authentifizierungsmethode für seinen aktuellen Verwendungszweck.
+
+####Was passiert mit den Ergebnissen?
+Die Ergebnisse werden Programmierer zum Konfigurieren der Authentifizierungsmethode zur Verfügung gestellt und in der Bachelorarbeit veröffentlicht.
+
+####Können die Ergebnisse eingesehen werden?
+Durch diesen Punkt kann besonders Vertrauen und Wohlwollen gewonnen werden [^fragebogen1]. Deshalb soll das Kapitel Studie der Bachelorarbeit auf Wunsch den Befragten per E-Mail zugesendet werden.
+
+####Wer führt die Befragung durch?
+ZHAW Student Christian Bachmann im Auftrag der inaffect AG
+
+####Kontakt für Support und Fragen
+Christian Bachmann, bachmch3@students.zhaw.ch
+
+####Wie viel Zeit muss der Befragte Investieren?
+Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen sollte genannt werden. Folgend ist das Diagramm aus der Studie von Bosnjak und Batini abgebildet. Die Erkenntnis aus der Studie zeigt, dass nicht nur unter dem Motto je kürzer desto besser gehandelt werden sollte. Die Studie ist jedoch schon 15 Jahren alt und ist deshalb differenzierter zu sehen. Wir streben einen Aufwand von 8-12 Minuten an.
+
+<!--TODO Studie von Bosnjak abbilden -->
+
+<!--TODO Einleitung abbilden -->
+
+[^fragebogen]: Zitat vom Institut für webbasierte Kommunikation und E-Learning und Gräf et al. 2001 [@fragebogen]
+[^fragebogen1]: [@fragebogen]
+
+###Hauptteil/Fragen
+Offensichtlich stellt der Hauptteil den Löwenanteil des Aufwands dar.
+
+####Erste Frage
+Die erste Frage ist nach Dillman[^Dillman] von grosser Bedeutung. Mit ihr wird Motivation und Einsatz für den ganzen Fragebogen gesetzt. Diese Frage soll als Interesse und Neugier der Befragten bewirken.
+
+Das Institut für webbasierte Kommunikation und E-Learning hat dafür aus verschiedenen Studien die wichtigsten Kriterien für eine erfolgreiche erste Frage zusammen getragen[^fragebogen2]:
+- **Einfache Formulierung**
+Der Befragte versteht sofort um was es geht und glaubt daran dass er die Fragen meistern kann
+- **Kurze Beantwortungszeit, keine offenen Fragen**
+Ein schnelles überwinden der ersten "Hürde" motiviert den Teilnehmer
+- **Angstabbauend**
+Ängste wie z.b. die des nicht Beantworten können soll abgebaut werden.
+- **Inhaltlich einführen**
+Die Frage soll in das Thema einführen und im Idealfall Interesse und Neugier wecken
+- **Keine Fragen zur Person oder zur Ihrem demographischen Eigenschaften**
+
+Es kann Sinn machen eine "perfekte" Einstiegsfrage zu erstellen, die in der Auswertung der Ergebnisse nicht berücksichtigt wird. Sie dient lediglich die Anforderungen einzuhalten und en Teilnehmer einen positives Einstiegserlebnis zu vermitteln.
+
+Die 1. Frage der Studie dieser Bachelorarbeit:
+Hatten Sie schon einmal das Gefühl, dass an einem Onlinewettbewerb gemogelt werden kann?
+0 Ja 0 Nein
+
+[^Dillman]: [@Dillman]
+[^fragebogen2]: [@fragebogen]
