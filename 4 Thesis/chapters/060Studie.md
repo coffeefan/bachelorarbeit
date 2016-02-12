@@ -33,6 +33,7 @@ Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der St
 
 
 
+\newpage
 
 ##Hauptziel der Studie
 In den vergangenen Kapiteln wurden immer wieder verschiedene Authentzifizierungsarten erwähnt und beschrieben. Diese verschiedenen Möglichkeiten gilt es mit einander zu vergleichen.
@@ -74,6 +75,8 @@ Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen so
 [^fragebogen]: Zitat vom Institut für webbasierte Kommunikation und E-Learning und Gräf et al. 2001 [@fragebogen]
 [^fragebogen1]: [@fragebogen]
 
+\newpage
+
 ###Hauptteil/Fragen
 Offensichtlich stellt der Hauptteil den Löwenanteil des Aufwands dar.
 
@@ -97,5 +100,5 @@ Die 1. Frage der Studie dieser Bachelorarbeit:
 Hatten Sie schon einmal das Gefühl, dass an einem Onlinewettbewerb gemogelt werden kann?
 0 Ja 0 Nein
 
-[^Dillman]: [@Dillman]
+[^Dillman]: [@dillman]
 [^fragebogen2]: [@fragebogen]

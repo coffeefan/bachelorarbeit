@@ -67,35 +67,38 @@ Table: Meilensteine
 [^meilenstein]: [@meilensteine]
 
 \newpage
+
 ##Termine
+
 ------------------------------------------------
-__Datum__     				__Termin__           
---------------------------- --------------------
-28.10.2015					Besprechung Aufgabenstellung mit Betreuer
+__Datum__   __Termin__           
+----------- ------------------------------------
+28.10.2015	Besprechung Aufgabenstellung mit Betreuer
 
-18.11.2015					Freigabe der Aufgabenstellung
+18.11.2015	Freigabe der Aufgabenstellung
 
-9.12.2015					Kichkoff
+9.12.2015	Kichkoff
 
-6.01.2016					Statusmeeting mit Betreuer
+6.01.2016	Statusmeeting mit Betreuer
 
-<!--TODO-->					Statusmeeting mit Betreuer
+<!--TODO-->	Statusmeeting mit Betreuer
 							
-<!--TODO-->					Statusmeeting mit Betreuer
+<!--TODO-->	Statusmeeting mit Betreuer
 							
-<!--TODO-->					Statusmeeting mit Betreuer
+<!--TODO-->	Statusmeeting mit Betreuer
 
-<!--TODO-->					Designreview
+<!--TODO-->	Designreview
 
-<!--TODO-->					Statusmeeting mit Betreuer
+<!--TODO-->	Statusmeeting mit Betreuer
 
-<!--TODO-->					Abgabe schriftliche Arbeit
+<!--TODO-->	Abgabe schriftliche Arbeit
 
-<!--TODO-->					Präsentation                       
+<!--TODO-->	Präsentation                       
 ------------------------------------------------
 Table: Termine der Bachelorarbeit
 
 \newpage
+
 ##Infrastruktur
 Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert werden.
 
@@ -103,15 +106,21 @@ Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert werden.
 Um einerseits eine Datensicherung zu gewährleisten und anderseits die Änderungen nachvollziehbar abzulegen, wird die Bachelorarbeit mittels Git und GitHub versioniert. Das Repository [^gitrepository] ist für den Betreuer, Experten und Auftrageber jederzeit einsehbar.
 
 ###Zeitmanagement
-Beim Arbeiten an der Bachelorarbeit kann man sich schnell in details verlieren. Das Zeitmanagement Tool toggl gibt einem schnell ein Feedback zu aktuell verbrauchten Zeit und einen Überblick um das geplante mit der realen Zeit zu vergleichen.Die Software ist besonders unter Kreativagenturen und Freelancern beliebt. Sie präsentiert sich als eine besonders simple Lösung, die die flexible Zeiterfassung in den Fokus stellt. Der User kann neue Aufgaben mit nur einem Klick anlegen und die Stoppuhr starten, um Arbeitszeiten automatisch zu erfassen.
+Beim Arbeiten an der Bachelorarbeit kann man sich schnell in details verlieren. Das Zeitmanagement Tool toggl[^toggl] gibt einem schnell ein Feedback zu aktuell verbrauchten Zeit und einen Überblick um das geplante mit der realen Zeit zu vergleichen.Die Software ist besonders unter Kreativagenturen und Freelancern beliebt. Sie präsentiert sich als eine besonders simple Lösung, die die flexible Zeiterfassung in den Fokus stellt. Der User kann neue Aufgaben mit nur einem Klick anlegen und die Stoppuhr starten, um Arbeitszeiten automatisch zu erfassen.
 <!--TODO Screenshot-->
 
-###Yuml.me
-<!--TODO Beschreiben -->
+\newpage
+
+###yUML
+Um Abläufe, Use Case und andere Uml-Diagramme zu visualisieren bedarf es ein Tool dass die Diagramm sowohl optisch ansprechend wie aber auch einfach und schnell anpassbar umsetzt. yUML ist ein gratis online service über welchen Code und dadurch ziemlich strukturiert ein UML-Diagramm kreiert werden kann. Der Code welche zum Diagramm führt kann so einfach als Textdatei abgespeichert werden und wird in dieser Bachelorarbeit im Github-Repository hinterlegt.
+
+![Screenshot yUML Beispiel Klassendiagramm ](images/yuml.JPG)
+
 
 
 
 <!-- TODO Continous Integration?-->
 
 [^gitrepository]: https://github.com/coffeefan/bachelorarbeit
+[^toggl]: https://toggl.com
 

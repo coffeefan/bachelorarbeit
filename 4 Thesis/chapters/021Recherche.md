@@ -95,7 +95,9 @@ Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den SocialMedia-K
 \newpage
 
 ###WebSMS.com Zwei-Faktor-Authentifizierung
-Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl Telefonnummern pro Person ein:
+Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl SIM-Karten auf maximal 5 pro Person ein. Dieses Maximum
+
+
 
 -------------------------------------------------------------------------------
 __Attribut__                __Anazahl SIM Cards__
@@ -142,17 +144,14 @@ In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittel
 Ein verbreitetes Problem unter Software Engineers und Programmier heute ist, dass sie dazu tendieren Probleme zu kompliziert und verschachtelt zu lösen. 8-9 von 10 Entwickeln machen den Fehler, Probleme zu wenig auseinander zu brechen und alles in einem grossen Programm zu lösen. Anstatt es in kleinen Paketen verständlich zu programmieren.[@apachekiss] 
 
 
-Software Entwickler profitieren von Kiss:
+Die folgenden Punkte listen die Vorteile für Software Entwickler bei verwenden von Kiss auf:
+- Mehr Probleme sollen schneller gelöst werden
+- Der Entwickler kann komplexe Probleme in wenigen Zeilen Code lösen
+- Die Codequalität steigt
+- Der Entwickler kann grössere System erstellen und unterhalten
+- Der Code wird flexibler werden, einfach wieder zu verwenden und zu modifizieren
+- Die Zusammenarbeit in grösseren Entwicklerteams und Projekten wird vereinfacht da der Code bei allen "stupid simple" ist
 
-* You will be able to solve more problems, faster.
-* You will be able to produce code to solve complex problems in fewer lines of code
-* You will be able to produce higher quality code
-* You will be able to build larger systems, easier to maintain
-* You're code base will be more flexible, easier to extend, modify or refactor when new requirements arrive
-* You will be able to achieve more than you ever imagined
-* You will be able to work in large development groups and large projects since all the code is stupid simple
-
-<!-- TODO: Übersetzten-->
 
 ####KISS fördert die Sicherheit
 Die Begründung warum KISS die Sicherheit fördert liefer Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und die wiederum setzt voraus, dass
