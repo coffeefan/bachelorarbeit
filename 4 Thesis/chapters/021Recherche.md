@@ -95,8 +95,21 @@ Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den SocialMedia-K
 \newpage
 
 ###WebSMS.com Zwei-Faktor-Authentifizierung
-Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl SIM-Karten auf maximal 5 pro Person ein. Dieses Maximum
+Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl SIM-Karten auf maximal 5 pro Person ein. Dieses Maximum konnte aber auf den Webseiten der Anbieter nicht direkt gefunden werden. Daher galt es den Wert zu untersuchen und mögliche abweichungen ausfindig zu machen.
 
+####Swisscom
+Die Swisscom hat kein öffentlich zugängiges Dokument welches dies beschreibt. Mündlich durch das Verkaufspersonal des Swisscom-Shops Zürich HB Dezember 2015 und im Chatprotokoll [^swisscom_chat] wurde der Wert bestätigt. Es  hingewiesen, dass nicht ein Dokument mit dieser Zahl vorhanden ist. 
+#####Selbstversuch
+Es wurde versucht bei zwei unabhängigen Handyanbieter mehr als 5 Swisscom-Perpaid-Abos abzuschliessen. Dabei wurden von Thomas Bachmann über 4 Wochen verteilt bei dem Anbieter Interdiscount im Manor Winterthur bei verschiedenem Kaufspersonal ein Prepaidhandy eingekauft. Beim Einkauf des 6. Handys wurde der Verkauf von der Kasse abgelehnt. Die Nummer liess sich nicht erneut auf den Kunden registrieren, da er schon 5 SIM Karten bei der Swisscom besitzt.
+Christian Bachmann kaufte über 2 Wochen verteilt dem Anbieter Migros Electronics in der Migros Limmat bei verschiedenem Kaufspersonal ein Swisscom Prepaidhandy. Beim Einkauf des 6. Handys wurde der Verkauf von der Kasse abgelehnt. Die Nummer liess sich nicht erneut auf den Kunden registrieren, da er schon 5 SIM Karten bei der Swisscom besitzt.
+
+####Sunrise
+Die Sunrise hat nach Rücksprache ein PDF zugesendet. Die maximale Anzahl SIM-Karten ist in Ihren Bestell- und Lieferbedingungen festgelegt. Auch die Sunrise hat das Maximum auf 5 pro Person festgelegt.
+
+
+
+[^swisscom_chat] Chat-Protokoll Swisscom 12.Februar 2016 https://github.com/coffeefan/bachelorarbeit/blob/master/0%20Sources/chatverlauf_swisscom.pdf
+[^sunrise_lieferbedienungen] Kopie Bestell- und Lieferbedingungen 12.Februar 2016 https://github.com/coffeefan/bachelorarbeit/blob/master/0%20Sources/Bestell-%20und%20Lieferbedingungen_DE_sunrise.pdf
 
 
 -------------------------------------------------------------------------------
@@ -125,7 +138,7 @@ Table: Attribute Support-Fall
 [^uvek]: Meldung des UVEKS über Gesetzesänderung: [@uvek]
 
 
-2012 wurde Playbuzz von Shaul Olmert (Sohn des Premie Minster von Israel Ehuad Olmert) und Tom Pachys ins Leben gerufen. Der offizielle Launch war im Dezember 2013. Im Juni 2014 wurde Playbuzz bereits das 1. Mal unter den Top 10 Facebook Shared Publishers aufgelistet. Im Juni 2014 konnte Playbuzz bereits 70 millionen unique views aufweisen. Im September 2014 kamen 7 von den 10 Top Shares auf Facebook laut forbes.com von Playbuzz. Playbuzz setzt nach eigenen Angaben auf Content wie Votes und Quizes welcher gerne Viral geteilt wird und ermöglicht Endnutzer und Redaketeueren einfache Verwendung. [@t3nplaybuzz] [@playbuzz]
+
 
 ####Vorteile
 Playbuzz ist kostenlos und lässt sich einfach integrieren. Durch Verwendung von Playbuzz kann die Verbreitung des eigenen Inhalts stark gesteigert werden. Die Verwaltungsoberfläche und Reports sind übersichtlich und einfach zu bedienen.
