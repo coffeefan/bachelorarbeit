@@ -100,5 +100,65 @@ Die 1. Frage der Studie dieser Bachelorarbeit:
 Hatten Sie schon einmal das Gefühl, dass an einem Onlinewettbewerb gemogelt werden kann?
 0 Ja 0 Nein
 
+Zitiert aus: 3.5 Aufbau der Fragen - fragebogen.de von http://www.fragebogen.de
+
+####Funktion der fragebogen
+Fragen sollen eine Funktion übernehmen. Dabei schlägt Kleber[^kleber92] folgende Klassifizierung vor:
+- Übergangs- und Vorbereitungsfragen für Themenwechsel,
+- Ablenkungs- und Pufferfragen zur Minderung von Ausstrahlungseffekten,
+- Filterfragen zum Übergehen von eventuell irrelevanten Fragen,
+- Rangier- und Konzentrationsfragen zum Auflockern langer Darstellungen,
+- Motivationsfragen zur Stärkung des Selbstvertrauens und Verminderung von Hemmungen,
+- Kontrollfragen als Wahrheitskontrolle der Antworten bzw. Sichtbarmachen von Widersprüchen.
+
+Diese Klassifizierung soll helfen den Fragebogen zu gestalten.
+
+####Frageart
+Bei der Stellung der Frage sollte festgestellt werden welche Art von Frage gestellt wird. Da sich dadurch die Antwort markantlich unterscheided.
+Folgende 3 Hauptgruppen gibt es
+- **Einstellungsfragen**
+Dieser Fragestellung bezieht sich auf "Wunschbarkeit oder negativen bzw. Beurteilung , den Befragte mit bestimmten Statements verbinden.
+- **Verhaltensfragen**
+Dabei wird direkt auf das Verhalten des Befragten bezug genommen. Dabei muss beachtet werden, dass der Befragte sein Verhalten selbst beschreibt. Einerseits entspricht die Selbstwahrnehmung der Teilnehmer teilweise nicht der Realität anderseits kann die Antwort auch dem Wunschdenken des Befragten zugrunde liegen
+- **Eigenschftsfragen**
+Diese Fragestellung fragt nach den Eigeschaften von Personen. Vielfach sind es persönliche und demographische Daten.
+
+####Fragetypen
+Die Fragetypen sind allgemein bekannt. Folgend eine Liste der wichtigsten Fragetypen.
+
+-----------------------------------------------------------------------------
+__Form__             __Beschreibung / Beispiel__           
+------------------- ---------------------------------------------------------
+Offene Frage        Besprechung Aufgabenstellung mit Betreuer
+
+18.11.2015	Freigabe der Aufgabenstellung
+
+9.12.2015	Kichkoff
+
+6.01.2016	Statusmeeting mit Betreuer
+
+<!--TODO-->	Statusmeeting mit Betreuer
+
+<!--TODO-->	Statusmeeting mit Betreuer
+
+<!--TODO-->	Statusmeeting mit Betreuer
+
+<!--TODO-->	Designreview
+
+<!--TODO-->	Statusmeeting mit Betreuer
+
+<!--TODO-->	Abgabe schriftliche Arbeit
+
+<!--TODO-->	Präsentation                       
+------------------------------------------------
+Table: Termine der Bachelorarbeit
+
+
+
+
+
+
+
 [^Dillman]: [@dillman]
+[^kleber92]: [@kleber92]
 [^fragebogen2]: [@fragebogen]
