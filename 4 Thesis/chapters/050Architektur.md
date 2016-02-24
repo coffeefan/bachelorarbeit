@@ -7,30 +7,114 @@ In diesem Kapitel soll ein System entworfen werden. Das System soll den Anforder
 
 
 ##Integration der Schnittstelle
-Wie in der Anforderungsanalyse <!--TODO Punkt beschreiben --> und Aufgabenstellung  <!--TODO Punkt beschreiben -->geschrieben, soll die Schnittstelle möglichst einfach in Bestehende Systeme integriert werden können. Bevor wir untersuchen wie wir die Integration umsetzten können, bedarf es die wichtigsten bestehenden Systeme zu kennen.
+Wie in der Anforderungsanalyse <!--TODO Punkt beschreiben --> und Aufgabenstellung  <!--TODO Punkt beschreiben -->geschrieben, soll die Schnittstelle möglichst einfach in Bestehende Systeme integriert werden können. Bevor wir untersuchen wie wir die Integration umsetzten können, bedarf es die wichtigsten bestehenden Systeme zu kennen um evtl für diese Systeme eine spezifisch einfach Integration zu entwickeln.
 
 ###Bestehende Systeme für Votings, Wettbewerbe und Quizes
-Das bestehende Social-Media Modul wird als Teil einer Webseite in einer Webapplikation geführt. Die Webapplikation zum Verwalten von Inhalten kurz CMS werden von Statista.com mehrmals im Jahr ausgewertet [^statisticinfostatista]. Folgend ist die letzte Erhebung abgebildet:
+Das bestehende Social-Media Modul wird als Teil einer Webseite in einer Webapplikation geführt. Webapplikation, welche Inhalte verwalten, werden sinngemäss Content Management Systeme genannt. Die Abkürzung CMS hat sich im IT-Fachjargon etabliert. Statista.com  wertetet mehrmals im Jahr die Verbreitung der verschiedenen CMS aus [^statisticinfostatista]. Folgend ist die Erhebung aus dem November 2015 abgebildet:
 
 ![Nutzungsanteil CMS weltweit *Quelle:de.statista.com*](images/cms_statistik_november2015.JPG)
 
-Die Zahlen wurden mit Werten von W3techs.com verglichen[^statisticinfow3techs]. Die Unterschiede sind für unsere Verwendung minimal und liegen im 10tels Prozentbereich. 
+Die von statista.com veröffentlichten Zahlen wurden mit Werten von W3techs.com verglichen[^statisticinfow3techs]. Die Unterschiede sind für unsere Verwendung minimal und liegen im 10tels Prozentbereich. Da beide bekannten Statistik unternehmen auf die selben Werte gekommen sind, kann von einem hohen Warheitsgrad ausgegangen werden.
 Beim Betrachten der Statistik fällt auf das Wordpress mit 25,2 mit Abstand am meisten genutzt wird. Alle dynamischen Webseiten unter den Top 10 basieren auf Systemen in PHP[^phpinfotag]. Adobe Dreamviewer und FrontPage sind keine Systeme welche auf dem Server betrieben werden. Sie sind Editoren welche auf dem jeweiligen Computer ausgeführt werden und danach mehrheitlich HTML, CSS und Javascript Code an den Server ausliefern. Funktionalitäten werden mit den beiden Editoren manuell geschrieben. 
 
-#### Wodpress PlugIn
+Basierend auf diesen statistischen Erkenntnissen lohnt es sich die Wordpress Welt kennen zu lernen und recherchieren wie dort eine Authentifizierungsschnittstelle eingebunden werden könnte.
+
+### Wordpress PlugIn Hook
 Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können direkt über das CMS-Backend eingespielt werden. Alternativ können Sie natürlich manuell installiert werden. Zum Beispiel in dem man ein Plugin selber Programmiert oder beim Hersteller oder über das Plugin-Verzeichnis von Wordpress[^plugin-verzeichnis] downloadedt. Wordpress sammelt zugleich die aktiven Installationen der PlugIns (sofern man als Entwickler den Informationsaustausch nicht unterbindet). Die Gesamtzahl wird im CMS-Backend Wordpress und auf Ihrer Plugin-Verzeichnis Webseite[^plugin-verzeichnis] veröffentlicht. Dank dieser Kennzahl kann nun die meist verbreiteten Plugins herrausgefunden werden. 
 
 <!--TODO Auflistung von bekannten Plugins -->
 
+Wordpress basiert auf einem sogennanten Hook-System. "Hook" eins zu eins übersetzt bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle bei der man seinen eigenen Code  einhaken kann. Der PlugIn Entwickler definiert diese Hooks um anderen PlugIns oder Funktionalitäten zu erlauben sein PlugIn zu erweitern. Auch der Core vom Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass PlugIn's oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir evtuell also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der PlugIn-Entwickler kann selbständig bestimmen ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle PlugIn's verfolgen vielfach den Weg möglichst verschlossen zu agieren um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Social Plugin's ausgewählt. Die Top 1000 installierten Wordpress PlugIns welche von der Art Social-Media Modul waren, ein paar Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen PlugIns:
 
-#### Möglichkeit ein Wordpress PlugIn zu erweitern
-Wordpress basiert auf einem sogennanten Hook-System. Übersetzt man "Hook" vom Englischen ins Deutsch erhält Haken, Aufhänger oder Greifer. Ein Hook ist im Wordpress eine definierte Code-stelle bei der man seinen eigenen Code  einhaken kann. Der PlugIn Entwickler definiert diese Hooks um anderen PlugIns oder Funktionalitäten zu erlauben sein PlugIn zu erweitern. Auch der Core vom Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass PlugIn's oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir auf den ersten Blick also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der PlugIn-Entwickler kann selbständig bestimmen ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle PlugIn's verfolgen vielfach den Weg möglichst verschlossen zu agieren um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Im nächsten Kapitel ista analysieret ob und wie die grossen Social-Media Module von Wordpress Hooks einsetzen.
+--------------------------------------------------- -------------------------
+__PlugIn__					  		
+--------------------------- -----------	-----------	------------------------
+__WP-Polls__                kostenlos	100000+		Über "wp_polls_add_poll" könnte man den erstellten Poll authentfizieren und bei fehlerhafter Authentifizierung löschen
 
-##### Wordpres Social-Media Hooks
-<!--TODO Beschreibung von bekannten Plugins Hooks-->
- 
+__Polldaddy Polls & Ratings__ Freemium 	20000+		-
+
+__Wp-Pro-Quiz__				kostenlos	20000+		Hooks vorhanden. Nicht für eine Authentifizierungsschnittstelle zu gebrauchen.
+	
+__Responsive Poll__         15$			-			Keine Hooks. Laut Hersteller sind welche geplant (Zeitpunkt ungewiss)
+
+__TotalPoll Pro__           18$			-			Hooks vorhanden. Ähnlich wie bei WP-Polls könnte man evtl. den erstellten Datensatz löschen. Jedoch ist dies ohne Kauf nicht ersichtlich.
+
+__Easy Polling__			15$			-			-
+
+__Opinion Stage__           kostenlos	10000+		-
+
+__Wedgies__                	Freemium	800+		- 
+
+-------------------------------------------------------------------------------
+Table: Recherche PlugIn's [^plugin-verzeichnis], [^plugin-market] 
+
+
+Wir haben nun verschiedene Wordpress-Plugin's für Umfragen, Wettbewerbe & Abstimmungen auf Hooks untersucht. Alle PlugIn's bieten gar keinen Hook an oder keinen Hook, welcher unseren Anforderungen einer einfachen Integration genügt. Die aufgelisteten Plugins bilden eine wesentliche Verbreitung ab. Selbst wenn wieder erwartet alle nicht untersuchten Plugin's eine perfekte Hookanbindung liefern würden, hätten wir, mit den nicht getesteten Plugin's eine zu geringe Verbreitung. Der Ansatz die Integration per Hooks zu machen muss also fallen gelassen werden.
 
 [^statisticinfostatista]: CMS Nutzungsstatistik von statista.com [@statisticinfostatista]
 [^statisticinfow3techs]: CMS Nutzungsstatistik von w3techs.com [@statisticinfow3techs]
 [^phpinfotag] Die Information wurde von den jeweiligen Hersteller- bzw. Communitywebseiten bezogen.
 [^plugin-verzeichnis] Das Pluginverzeichnis befindet sich unter https://de.wordpress.org/plugins/ 
+[^plugin-market] Envato bietet eine Plattform für den Verkauf von Wordpress-Plugin's an: http://market.envato.com/
+
+### Ansatz Social
+
+\newpage
+
+### Parallellen im ähnliches Anwendungsfeld 
+Der vertieften Research der letzten Kapitel wird verlassen und es wird probiert einen anderen Herangehensweise zur Findung der Lösung zu nehmen: Forscher adaptieren immer wieder erfolgreiche Modelle aus anderen Bereich in ihr Gebiet. Vielfach wird die Natur als erfolgreiches Vorlagemodell genommen. Ganz soweit wird hier nicht gegangen. Payment-Gateways wie der Schweizer Anbieter Datatrans müssen Webshop-Entwicklern auch eine Möglichkeit bieten das Gateway einfach in Ihren Webshop einbinden zu können. Auch bei Ihnen steht die Sicherheit auf der obersten Stufe und eine einfache Integration ist für den Erfolg trotz internationalem Druck von nöten. 
+Dabei fährt Datatrans eine Zweiwegstrategie. Sie stellen für bekannte Shopsysteme gleich ganze PlugIns zur Verfügung[^dt-plugin]. Auf der anderen Seite bieten Sie ausführliche beschriebene und einfache Schnittstellen an.
+
+#### Datatrans Zahlungsablauf
+Um die Gateway-Implementation der Datatrans als Ganzes zu verstehen, führen wir uns der generellen Ablauf vor Augen. Der Ablauf eines Webshopeinkaufs bei Datatrans:
+
+![Nutzungsanteil Zahlungsablauf Webshop mit Datatrans *Quelle:datatrans*](images/datatrans-autorisierung.JPG)
+
+1.	Der Endkunde wählt Produkt aus und schliesst die Bestellung ab
+2. 	Der Webshop/Merchant zeigt Zahlungsseite von Datatrans, Karteninhaber gibt seine Kartendaten ein.
+3.-7.Datatrans autorisiert und verarbeitet wennmöglich  die Transaktion zum Acquirer.
+8. 	Datatrans zeigt den Status dem Kunden an und sendet Status dem Merchant zurück.
+9. 	Merchant zeigt dem Karteninhaber die Antwortseite (erfolgreich oder abgelehnt)
+[^dt-api]
+
+[^dt-plugin]: Übersicht der Web-Shop PlugIn's [@datatrans-plugin]
+
+\newpage
+
+#### Datatrans XML/SOAP API Lightbox Mode
+Bei Schritt 2 des Zahlungsablaufs ruft der Webshop das Datatransgateway auf. Beim "Lightbox Mode" wird dabei ein iframe in einem Overlay über die Webseite gelegt und der Webshop ansich verdunkelt dargestellt.
+
+![Datatrans Lightbox Integration *Quelle:datatrans*](images/datatrans-lightbox.JPG)
+
+
+
+Das Gateway muss eine minimum an Informationen erhalten, um den Zahlungsvorgang überhaupt starten zu können. So muss es wissen, wer der Verchäufer ist. Datatrans regelt dies über eine Merchan-ID. Wie viel Geld in welcher Währung verkauft werden sollte muss Datatrans über amount und currceny mitgeteilt werden. Um dem Shop später mitteilen zu können welche Bestellung erfolgreich verarbeitet wurde braucht es eine Referenznummer die refno. Die Ganzen Parameter werden optional mit einem sign-Parameter gesichert und mittels Form dem Javascript übergeben:[^dt-api]
+
+\newpage
+
+~~~~~~~
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://pilot.datatrans.biz/upp/payment/js/datatrans-1.0.2.js"></script>
+
+	<form id="paymentForm"
+		 data-merchant-id="1100004624"
+		 data-amount="1000"
+		 data-currency="CHF"
+		 data-refno="123456789"
+		 data-sign="30916165706580013">
+		 <button id="paymentButton">Pay</button>
+	</form>
+	
+<script type="text/javascript">
+	 $("#paymentButton").click(function () {
+		Datatrans.startPayment({'form': '#paymentForm'});
+	 });
+</script>
+~~~~~~~
+
+
+
+
+[^dt-api]: Für die Bachelorarbeit wurde die V 9.1.13 verwendet [@datatrans-api]
+
+

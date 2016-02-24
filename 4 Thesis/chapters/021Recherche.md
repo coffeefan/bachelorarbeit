@@ -9,7 +9,7 @@ Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem
 In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, die als für die Bearbeitung dieser Bachelorthesis herangezogen wurden.
 
 ###Authentifizierung
-Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen verfolgt das Ziel [@duden]
+Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [@duden]
 
 Eine Person oder Objekt eindeutig zu **authentifizieren** bedeute zu ermitteln ob die oder derjenige auch der ist als welcher er sich ausgibt. [@authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenicate*, was auf Deutsch sich als *echt erweisen, sich verbürgen, glaubwürdig sein* bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiletelefon häufig verbreitet. Die Möglichkeiten der Authentifizierung nahe zu grenzenlos.
 [@authentifizierungsdeforg]

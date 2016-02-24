@@ -3,9 +3,7 @@
 #Projektmanagement
 In diesem Kapitel wird die Planung der Bachelorarbeit ausgeführt. Weiter wird die verwendete Infrastruktur erläutert.
 
-##Vorgehensweise
 
-\newpage
 ##Grobe Projektplanung
 Der grobe Projektplan illustriert die Strukturierung der Bachelorarbeit über die knapp sechs Monate lange Projektzeit. Der Projektplan liefert einen generellen Überblick über den zeitlichen Ablauf der Bachelorarbeit und legt die Milestons fest.
 Als Soll Aufwand der Bachelorarbeit wurden 375 Stunden veranschlagt. Der effektive aufgelaufene Aufwand betrug xx Stunden.

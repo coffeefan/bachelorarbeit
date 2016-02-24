@@ -5,6 +5,10 @@ Dieses Kapitel beschreibt das Durchführen einer Anforderungsanalyse festgehalte
 ##Use-Cases
 Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis gefunden wurden.
 
+
+
+
+
 ##Akteure
 
 -------------------------------------------------------------------------------
@@ -15,9 +19,16 @@ __Developer__				Der Developer ist der Entwickler der Webseite. Er möchte sein 
 __User__           			Der User ist der Endkunde. Er nimmt am Social-Media Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service
 -------------------------------------------------------------------------------
 
+\newpage
+
 ###Diagramm
 
-<!--TODO YUML.me diagramm erstellen -->
+Das Use-Case Diagramm illustriert die nachfolgenden Use Cases. Dadurch kann rasch ein Überblick über die zu entwickelnde Lösung geschaffen werden.
+
+![Use-Case Diagram](images/use-case-diagram.png)
+
+\newpage
+
 
 #### UC-11 Registration
 
@@ -60,7 +71,7 @@ __Hauptszenario__           Der Developer loggt sich mit E-Mail und Passwort am 
 __Alternativszenario__      Der Developer sendet sich das verpasste Passwort per E-Mail zu. Erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
 -------------------------------------------------------------------------------
 
-#### UC-21 Konfigurieren einer neuen Social-Media Modul Authentifizierungsvorgang
+#### UC-21 Konfigurieren eines Authentifizierungsvorgang
 
 -------------------------------------------------------------------------------
 __UseCase__

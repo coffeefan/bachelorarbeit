@@ -1,0 +1,7 @@
+[Developer]-(Login)
+(Login)>(Registration)
+[Developer]-(Konfigurieren eines Authentifizierungsvorgang)
+[Developer]-(Einbinden in vorhandenes System)
+[Developer]-(Report eines Authentifizierungsvorgangs)
+[User]-(Authentifizieren)
+(Wartbarkeit)
