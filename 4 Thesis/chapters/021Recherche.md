@@ -112,7 +112,7 @@ Die Stärke und Sicherheit dieses Service ist direkt mit mit dem Umgang von Mobi
 Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl SIM-Karten auf maximal 5 pro Person ein. Dieses Maximum konnte aber auf den Webseiten der Anbieter nicht direkt gefunden werden. Daher galt es den Wert zu untersuchen und mögliche abweichungen ausfindig zu machen.
 
 ####Swisscom
-Die Swisscom hat kein öffentlich zugängiges Dokument welches dies beschreibt. Mündlich durch das Verkaufspersonal des Swisscom-Shops Zürich HB Dezember 2015 und im Chatprotokoll [^swisscom_chat] wurde der Wert bestätigt. Es  hingewiesen, dass nicht ein Dokument mit dieser Zahl vorhanden ist.
+Die Swisscom hat kein öffentlich zugängigliches Dokument welches die maximale Anzahl SIM-Karten pro Person beschreibt. Mündlich durch das Verkaufspersonal des Swisscom-Shops Zürich HB Dezember 2015 und im Chatprotokoll [^swisscom_chat] wurde der Wert bestätigt. Es  hingewiesen, dass nicht ein Dokument mit dieser Zahl vorhanden ist.
 
 #####Selbstversuch
 Es wurde versucht bei zwei unabhängigen Handyanbieter mehr als 5 Swisscom-Perpaid-Abos abzuschliessen. Dabei wurden von Thomas Bachmann über 4 Wochen verteilt bei dem Anbieter Interdiscount im Manor Winterthur bei verschiedenem Kaufspersonal ein Prepaidhandy eingekauft. Beim Einkauf des 6. Handys wurde der Verkauf von der Kasse abgelehnt. Die Fehlermeldung der Kasse beinhaltete den Hinweis, dass sich die Nummer nicht erneut auf den Kunden registrieren lassen kann, da er schon 5 SIM Karten bei der Swisscom besitzt.
@@ -122,8 +122,7 @@ Christian Bachmann kaufte über 2 Wochen verteilt bei dem Anbieter Migros Electr
 Die Sunrise hat nach Rücksprache ein PDF mit Ihren Bestell- und Lieferbedingunge zugesendet.[^sunrise_lieferbedienungen] Die maximale Anzahl SIM-Karten ist in diesen Bestell- und Lieferbedingungen festgelegt. Auch die Sunrise hat das Maximum auf 5 pro Person festgelegt.
 
 ####SALT
-In Bearbeitung
-<!-- TODO -->
+Bei der Die Firma SALT konnte mir ebenfalls kein Dokument mit der Kennzahl gegeben werden. SALT stellt vergibt ihrer schriftlichen Auskunft [^salt_email] pro Person maximum 3 SIM Karten.
 
 
 ####Vorteile
@@ -133,8 +132,9 @@ Die mehrfache Registrierung ist auf maximal 5 beschränkt. Durch die Kosten für
 Der Versand von SMS verursacht Kosten. Die Implementation bedarf hohes technisches Know-How.
 
 [^websmskosten]: Die Kosten sind am 28. Dezember 2015 unter folgendem Link abgerufen worden: https://websms.ch/preise#at-preisuebersicht 
-[^swisscom_chat]: Chat-Protokoll Swisscom 12.Februar 2016 https://github.com/coffeefan/bachelorarbeit/blob/master/0%20Sources/chatverlauf_swisscom.pdf
-[^sunrise_lieferbedienungen]: Kopie Bestell- und Lieferbedingungen 12.Februar 2016 https://github.com/coffeefan/bachelorarbeit/blob/master/0%20Sources/Bestell-%20und%20Lieferbedingungen_DE_sunrise.pdf
+[^swisscom_chat]: Chat-Protokoll Swisscom 12.Februar 2016 http://bit.ly/swisscom-chat
+[^salt_email]: E-Mail von Salt 13.Februar 2016 http://bit.ly/salt-email
+[^sunrise_lieferbedienungen]: Kopie Bestell- und Lieferbedingungen http://bit.ly/sunrise-bedienungen
 [^uvek]: Meldung des UVEKS über Gesetzesänderung: [@uvek]
 
 
@@ -144,15 +144,16 @@ Der Versand von SMS verursacht Kosten. Die Implementation bedarf hohes technisch
 
 \newpage
 ##Grundlegende Sicherheitsprinzipien
-In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt auf denen danach eine Authentifizierungssoftware aufgebaut werden kann.
+In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt auf denen eine Authentifizierungssoftware aufgebaut werden kann.
 
 ###KISS
 **K**eep **I**t **S**tupid *and* **S**imple
 
-Ein verbreitetes Problem unter Software Engineers und Programmier heute ist, dass sie dazu tendieren Probleme zu kompliziert und verschachtelt zu lösen. 8-9 von 10 Entwickeln machen den Fehler, Probleme zu wenig auseinander zu brechen und alles in einem grossen Programm zu lösen. Anstatt es in kleinen Paketen verständlich zu programmieren.[@apachekiss]
+Ein verbreitetes Problem unter Software Engineers und Programmier heute ist, dass sie dazu tendiert wird, Probleme zu kompliziert und verschachtelt zu lösen. 8-9 von 10 Entwickeln machen den Fehler, Probleme zu wenig auseinander zu brechen und alles in einem grossen Programm zu lösen. Anstatt es in kleinen Paketen verständlich zu programmieren.[^apachekiss]
 
 
 Die folgenden Punkte listen die Vorteile für Software Entwickler bei verwenden von Kiss auf:
+
 - Mehr Probleme sollen schneller gelöst werden
 - Der Entwickler kann komplexe Probleme in wenigen Zeilen Code lösen
 - Die Codequalität steigt
@@ -162,20 +163,17 @@ Die folgenden Punkte listen die Vorteile für Software Entwickler bei verwenden 
 
 
 ####KISS fördert die Sicherheit
-Die Begründung warum KISS die Sicherheit fördert liefer Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und die wiederum setzt voraus, dass
-Designs einfach und klein sein sind.Designs müssen so beschaffen
-sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere
-Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [@sicheresysteme pp.93]
+Die Begründung warum KISS die Sicherheit fördert, liefert Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und die wiederum setzt voraus, dass
+Designs einfach und klein sein sind. Designs müssen so beschaffen sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [^sicheresysteme_93]
 
 
 ###Default-is-deny
-Ob eine Person oder Programm Zugriff auf Daten/Funktionen haben, sollte nicht durch Verbote sondern durch explizite Erlaubnis geregelt werden. Dies bedeutet solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlich ist wie viele Organisationen und Entwicklungsfirma nicht dieses vorgehen verwenden. z.B. Filesysteme setzten auf Verbote anstatt auf explizite Erlaubnise.
-[@defaultdeny] , [@sicheresysteme pp.94]
+Ob eine Person oder Programm Zugriff auf Daten/Funktionen haben, sollte nicht durch Verbote sondern durch explizite Erlaubnis geregelt werden. Dies bedeutet solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlich ist wie viele Organisationen und Entwicklungsfirma nicht dieses vorgehen verwenden. z.B. Filesysteme setzten auf Verbote anstatt auf explizite Erlaubnise.[^sicheresysteme_94] [^defaultdeny]
 
 
 ###Open Design
 Abgeleitet von der Kryprotografie: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll nach dem Ansatz entworfen werden. Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch das Softwaredesign geheimzuhalten um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
-[@sicheresysteme pp.95]
+[^sicheresysteme_95]
 
 
 ###Zusammenfassung der Sicherheitsprinzipien
@@ -190,5 +188,11 @@ keinesfalls durch immer und global verfügbare Permissions fallen.
 * Das Softwaredesign von Applikationen sollte wenn möglich öffentlich sein. Zumindest sollte
 ein interner Review-Prozess stattfinden, in dessen Verlauf eine Sicherheitsanalyse
 durch nicht an der Entwicklung Beteiligte erstellt wird.
+
+[^sicheresysteme_93] : [@sicheresysteme pp.93]
+[^sicheresysteme_94] :[@sicheresysteme pp.94]
+[^sicheresysteme_95] :[@sicheresysteme pp.95]
+[^apachekiss]: [@apachekiss]
+[^defaultdeny]: [@defaultdeny]
 
 <!-- TODO: Weitere Konzepte Sicherheitssystem Seite 104 -->
