@@ -4,6 +4,13 @@
 
 #Glossar
 
+__2FA__
+2FA bedeutet Zwei-Faktor-Authentifizierung. Weitere Infos im Kapitel Authentifizierungs Kompononten
+
+__Github__
+Github ist ein Cloud basierter SourceCode Verwaltungsdienst für Git.
+[https://github.com](https://github.com)
+
 __Non-Response__
 Nichtbeantwortung einer oder mehrerer einzelner Fragen. Die Repräsentativität einer Befragung hängt stark ab von der Rücklaufquote, auch Response-Rate genannt.
 
@@ -11,9 +18,7 @@ __ORM__
 ORM steht für object-relational mapping und ist eine Technik mit der Objekte einer Anwendung in einem relationalen Datenbanksystem abgelegt werden kann.
 \
 
-__Github__
-Github ist ein Cloud basierter SourceCode Verwaltungsdienst für Git.
-[https://github.com](https://github.com)
+
 \
 
 __REST / Restfull__

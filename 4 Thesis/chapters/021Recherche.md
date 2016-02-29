@@ -27,22 +27,7 @@ Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwec
 [^authentifizierungsdef]: [@authentifizierungsdef] 
 [^authentifizierungsdeforg]: [@authentifizierungsdeforg]
 
-###Captcha
-Captcha - Test, mit dem festgestellt werden kann, ob sich ein Mensch oder ein Computer eines Programms bedient [^duden]
 
-Im Jahre 2000 wurde das Captcha an der Carnegie Mellon University erfunden. Captcha steht für **C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part. Luis von Ahn, Professor der Entwickler-Gruppe, erklärte die Dringlichkeit von Captcha damals so: "Anybody can write a program to sign up for millions of accounts, and the idea was to prevent that". ****
-[^captcha]
-
-####Captcha Zahlen
-In 2014 wurden 200 Million Captchas  pro Tag eingegeben. Dabei braucht ein User durchschnittlich 10 Sekunden das entspricht 500'000 Stunden.[^statisticinfo]
-
-![Beispiele von Captchas *Quelle:drupal.org*](images/captcha.png)
-
-
-[^duden]: [@duden]
-[^captcha]: [@captcha]
-
-[^statisticinfo]: Die statistischen Daten wurden von Google 2014 in ihrem Blog publiziert [@googlecaptcha]
 
 \newpage
 ###OAuth
@@ -196,3 +181,53 @@ durch nicht an der Entwicklung Beteiligte erstellt wird.
 [^defaultdeny]: [@defaultdeny]
 
 <!-- TODO: Weitere Konzepte Sicherheitssystem Seite 104 -->
+
+## Authetentifizierungskomponenten
+Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt werden. Folgend gilt es die Komponenten zu erklären.
+
+###Captcha
+Captcha - Test, mit dem festgestellt werden kann, ob sich ein Mensch oder ein Computer eines Programms bedient [^duden]
+
+Im Jahre 2000 wurde das Captcha an der Carnegie Mellon University erfunden. Captcha steht für **C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part. Luis von Ahn, Professor der Entwickler-Gruppe, erklärte die Dringlichkeit von Captcha damals so: "Anybody can write a program to sign up for millions of accounts, and the idea was to prevent that". ****
+[^captcha]
+
+####Captcha Zahlen
+In 2014 wurden 200 Million Captchas  pro Tag eingegeben. Dabei braucht ein User durchschnittlich 10 Sekunden das entspricht 500'000 Stunden.[^statisticinfo]
+
+![Beispiele von Captchas *Quelle:drupal.org*](images/captcha.png)
+
+
+[^duden]: [@duden]
+[^captcha]: [@captcha]
+
+[^statisticinfo]: Die statistischen Daten wurden von Google 2014 in ihrem Blog publiziert [@googlecaptcha]
+
+###Zweiweg Authentifizierung
+Die Zwei-Faktor-Authentifizierung wird häufig 2FA genannt. Der User wird mittels zweier unabhängigen Faktoren identifiziert. Der Begriff Faktor umschreibt dabei eine Komponente oder Authentifizierungsmethode. [^cnet-2fa]
+
+Die Zwei-Faktor-Authentifizierung ist in der Schweiz durch das E-Banking bekannt geworden. Der User gibt als 1. Faktor Username/Vertragnummer und Passwort ein. In einem 2. Schritt gibt er vom System gewünschten Code aus der Codekarte oder des elektirschen Rechners als 2. Faktor ein. 
+Im Alltag bei einem Einkauf im Detailhandel authentifiziert sich der EC-Karten Chip als 1. Faktor. Als 2. Faktor hat sich der Kunde ein Passwort auswendig gemerkt welches er eingibt.
+
+Diese 2 Faktor Authentifizierung hatte die Entwicklung und Förderung der Vielfalt von Faktoren/Komponenten zu folge von welchen wir nun für unsere Authentifizierung profitieren können:
+
+###E-Mail Bestätigungs-Code
+Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungs-Code zum quasi Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mail Adresse auch tatsächlich existiert und der User darauf Zugriff hat.
+
+####Automatisierungsmöglichkeit
+Das automatische Auslesen von E-Mails ist möglich. Jedoch ist der Aufwand dafür sehr hoch.
+
+####Mehrfach Teilnahme
+Ein User kann verschiedene E-Mail Adressen besitzen. Dass Erstellen von neuen E-Mail Adressen ist mit Aufwand verbunden. Aber möglich.
+
+Anbieter wie 10-Minutes Mail [^10minutemail] stellen auf Knopfdruck für einige Minuten eine temporäre E-Mail Adresse zur Verfügung. Dadurch können schnell einige E-Mail Adressen erstellt werden. 
+Diese Domains müssen über eine aufwendige Blacklist gefiltert werden.
+
+###SMS Bestätigungs-Code
+
+
+
+[^10minutemail]: 10-Minute Mail [@10minutemail]
+
+
+[^cnet-2fa]
+[^cnet-2fa]: [@cnet-2fa]

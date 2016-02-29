@@ -39,10 +39,10 @@ Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der St
 In den vergangenen Kapiteln wurden immer wieder verschiedene Authentzifizierungsarten erwähnt und beschrieben. Diese verschiedenen Möglichkeiten gilt es mit einander zu vergleichen.
 
 
-##Aufbau
-"Ein Fragebogen soll als Gesamtkomzept (Einleitung, Hauptteil, Endteil, Design, Aufmachung) betrachtet werden, in dem die Reihenfolge und die Struktur der Frage wichtige einflussfaktoren zur Erlangung korrekter Daten sind" [^fragebogen]
+##Aufbau Gesamtkonzept
+"Ein Fragebogen soll als Gesamtkomzept (Einleitung, Hauptteil, Endteil, Design, Aufmachung) betrachtet werden, in dem die Reihenfolge und die Struktur der Frage wichtige Einflussfaktoren zur Erlangung korrekter Daten sind" [^fragebogen]
 
-In den folgenden Unterkapitel wird die Entwicklung dieses Gesamtkonzept abgebildet.
+In den folgenden Abschnitten wird die Theorie für die Entwicklung dieses Gesamtkonzept abgebildet.
 
 ###Einleitung
 Die Einleitung soll die Befragten motivieren an der Studie teilzunehmen und allgemeine Hinweise zur Studie geben. Die folgenden Fragen wurden Batinic (WWW-Fragebogengenerator) und dem Institut für webbasierte Kommunikation und E-Learning zusammen getragen und und für die Studie der Bachelorarbeit beantwortet:
@@ -66,11 +66,12 @@ ZHAW Student Christian Bachmann im Auftrag der inaffect AG
 Christian Bachmann, bachmch3@students.zhaw.ch
 
 ####Wie viel Zeit muss der Befragte Investieren?
-Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen sollte genannt werden. Folgend ist das Diagramm aus der Studie von Bosnjak und Batini abgebildet. Die Erkenntnis aus der Studie zeigt, dass nicht nur unter dem Motto je kürzer desto besser gehandelt werden sollte. Die Studie ist jedoch schon 15 Jahren alt und ist deshalb differenzierter zu sehen. Wir streben einen Aufwand von 8-12 Minuten an.
+Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen sollte genannt werden. Folgend ist das Diagramm aus der Studie von Bosnjak und Batini abgebildet. Die Erkenntnis aus der Studie zeigt, dass nicht nur unter dem Motto je kürzer desto besser gehandelt werden sollte. Die Studie ist jedoch schon 15 Jahren alt und ist deshalb differenzierter zu sehen. Die Studie der Bachelorarbeit streben einen Aufwand von 8-12 Minuten an.
 
 <!--TODO Studie von Bosnjak abbilden -->
 
 <!--TODO Einleitung abbilden -->
+
 
 [^fragebogen]: Zitat vom Institut für webbasierte Kommunikation und E-Learning und Gräf et al. 2001 [@fragebogen]
 [^fragebogen1]: [@fragebogen]
@@ -100,7 +101,6 @@ Die 1. Frage der Studie dieser Bachelorarbeit:
 Hatten Sie schon einmal das Gefühl, dass an einem Onlinewettbewerb gemogelt werden kann?
 0 Ja 0 Nein
 
-Zitiert aus: 3.5 Aufbau der Fragen - fragebogen.de von http://www.fragebogen.de
 
 ####Funktion der fragebogen
 Fragen sollen eine Funktion übernehmen. Dabei schlägt Kleber[^kleber92] folgende Klassifizierung vor:
@@ -114,45 +114,40 @@ Fragen sollen eine Funktion übernehmen. Dabei schlägt Kleber[^kleber92] folgen
 Diese Klassifizierung soll helfen den Fragebogen zu gestalten.
 
 ####Frageart
-Bei der Stellung der Frage sollte festgestellt werden welche Art von Frage gestellt wird. Da sich dadurch die Antwort markantlich unterscheided.
+Bei der Stellung der Frage sollte festgestellt werden welche Art von Frage gestellt wird. Da sich dadurch die Antwort markantlich unterscheidet.
 Folgende 3 Hauptgruppen gibt es
 - **Einstellungsfragen**
 Dieser Fragestellung bezieht sich auf "Wunschbarkeit oder negativen bzw. Beurteilung , den Befragte mit bestimmten Statements verbinden.
 - **Verhaltensfragen**
 Dabei wird direkt auf das Verhalten des Befragten bezug genommen. Dabei muss beachtet werden, dass der Befragte sein Verhalten selbst beschreibt. Einerseits entspricht die Selbstwahrnehmung der Teilnehmer teilweise nicht der Realität anderseits kann die Antwort auch dem Wunschdenken des Befragten zugrunde liegen
 - **Eigenschftsfragen**
-Diese Fragestellung fragt nach den Eigeschaften von Personen. Vielfach sind es persönliche und demographische Daten.
+Diese Fragestellung fragt nach den Eigenschaften von Personen. Vielfach sind es persönliche und demographische Daten.
 
 ####Fragetypen
-Die Fragetypen sind allgemein bekannt. Folgend eine Liste der wichtigsten Fragetypen.
+Die Fragen können generell in zwei Typen unterteilt werden
 
 -----------------------------------------------------------------------------
-__Form__             __Beschreibung / Beispiel__           
+__Form__             __Eigenschaften__       
 ------------------- ---------------------------------------------------------
-Offene Frage        Besprechung Aufgabenstellung mit Betreuer
+Offene Frage        Der Aufwand bei der Auswertung ist sehr hoch. Ungeübte Teilnehmer können unverwertbare Antworten niederschreiben. Antworten sind schwer vergleichbar Dafür Teilnehmer kann sich so ausdrücken wie er möchte. Er wird nicht durch vorgegebene Antworten beeinflusst.
 
-18.11.2015	Freigabe der Aufgabenstellung
-
-9.12.2015	Kichkoff
-
-6.01.2016	Statusmeeting mit Betreuer
-
-<!--TODO-->	Statusmeeting mit Betreuer
-
-<!--TODO-->	Statusmeeting mit Betreuer
-
-<!--TODO-->	Statusmeeting mit Betreuer
-
-<!--TODO-->	Designreview
-
-<!--TODO-->	Statusmeeting mit Betreuer
-
-<!--TODO-->	Abgabe schriftliche Arbeit
-
-<!--TODO-->	Präsentation                       
+Geschlossene Frage	Leichte Auswertung. Gefahr besteht, dass der Teilnehmer ratet und durch die Antworten beeinflusst wird. Der Vorbereitungsaufwand für die Frage ist hoch. Auswahlmöglichkeiten für die Antwort könnten irelevant sein.
+                   
 ------------------------------------------------
-Table: Termine der Bachelorarbeit
+Table: Fragetypen
 
+###Abschluss
+Der Abschluss des Fragebogens kann sehr kurz gehalten werden. Folgende Elemente sollten enthalten sein:
+
+####Dankensformel
+Eine kurze Dankensformel gehört zum guten Ton und motiviert den Teilnehmer die Umfrage korrekt abzuschliessen.
+
+####Einladung zur Kommentierung
+Durch Kommentare am Schluss können Befrate dem Untersucher Hinweise zukommenlassen die für die Auswertung und weitere Untersuchungen dienlich sind. Dieser Möglichkeit wird nach der Erfahrung von Reuband[^kzfss01] gewürdigt.
+
+
+##Umsetzung Gesamtkonzept
+Basierend auf der Erarbeitung der Theoretischen Umsetzung eines Gesamtkonzepts einer wissenschaftlichen Studie, gilt es nun dieses Umzusetzen. 
 
 
 
