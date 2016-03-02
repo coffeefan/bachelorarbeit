@@ -211,23 +211,52 @@ Im Alltag bei einem Einkauf im Detailhandel authentifiziert sich der EC-Karten C
 Diese 2 Faktor Authentifizierung hatte die Entwicklung und Förderung der Vielfalt von Faktoren/Komponenten zu folge von welchen wir nun für unsere Authentifizierung profitieren können:
 
 ###E-Mail Bestätigungs-Code
-Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungs-Code zum quasi Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mail Adresse auch tatsächlich existiert und der User darauf Zugriff hat.
+Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungs-Code zum quasi Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mail Adresse auch tatsächlich existiert und der User darauf Zugriff hat. Der User soll also auch bei der Authentifizierungsschnittstelle seine E-Mail eintragen und erhält dann umgehend den Bestätigungslink an seine E-Mail Adresse zugesandt.
 
 ####Automatisierungsmöglichkeit
 Das automatische Auslesen von E-Mails ist möglich. Jedoch ist der Aufwand dafür sehr hoch.
 
 ####Mehrfach Teilnahme
-Ein User kann verschiedene E-Mail Adressen besitzen. Dass Erstellen von neuen E-Mail Adressen ist mit Aufwand verbunden. Aber möglich.
+Ein User kann verschiedene E-Mail Adressen besitzen. Dass Erstellen von neuen E-Mail Adressen ist mit Aufwand verbunden. Aber einfach möglich.
 
 Anbieter wie 10-Minutes Mail [^10minutemail] stellen auf Knopfdruck für einige Minuten eine temporäre E-Mail Adresse zur Verfügung. Dadurch können schnell einige E-Mail Adressen erstellt werden. 
-Diese Domains müssen über eine aufwendige Blacklist gefiltert werden.
+Diese Domains müssen über eine aufwendige Blacklist gefiltert werden oder durch zeitversetztes Bestätigungsmail ausgehebelt werden.
+
+####Kosten
+Das Versenden von E-Mails über einen SMTP Server ist generell kostenlos. Bei hohem Gebrauch dieser Komponente lohnt es sich die E-Mails über eine professionelle Inrastruktur für Massenversendung zu versenden und analysieren. Beispiele dafür sind Mailchimp [^mailchimp] oder Sendgrid [^sendgrid]
 
 ###SMS Bestätigungs-Code
+Das Konzept des im einem vorherigen Kapitel Anbieters WebSMS soll von der Authentifizierungsschnittstelle ebenfalls implementiert werden. Der User gibt im 1. Schritt seine Mobilenummer ein. Er hält dann einen Code per SMS zu gesandt. Im 2. Schritt gibt der User der erhaltene Mobilecode im Webform ein und bestätigt so, dass ihm die Mobilenummer gehört.
+Zum Versenden der SMS ist ein SMS-Gateway nötig.
 
+<!--TODO- Gateway-->
 
+####Automatisierungsmöglichkeit
+Die Automatisierung kann als nicht möglich eingestuft werden
+
+####Mehrfach Teilnahme
+Die mehrfache Teilnahme wurde bereits im Kapitel zum Anbieter WebSMS eingehenden behandelt. Daraus resultierte, dass in der Schweiz maximal 5 Mobilenummern pro Anbieter und Person bezogen werden können.
+
+####Kosten
+Je nach SMS-Gateway, Mobileanbieter des Empfängers und Verwendungsintensität belaufen sich der Versand eines SMS zwischen 0.04 CHF und 0.15 CHF [^smspreise]
+
+###Telefonanruf mit Bestätigungscode
+Nacheingabe der Telefonnummer oder Mobilenummer erhält der User einen digitalen Anruf. Die Computerstimme liest dem User einen Code vor, welcher er danach in der Webpage einggibt.
+
+####Automatisierungsmöglichkeit
+Die Automatisierung kann als nicht möglich eingestuft werden
+
+####Mehrfach Teilnahme
+Die Teilnahmeanzahl ist von den vorhandenen Telefonanschlüssen abhängig und daher nur eingschrenkt möglich.
+
+####Kosten
+Die Kosten berechnen sich bei den analysierten Anbietern basierend auf einer geringen Monatspauschle zwischen CHF 1.00 und CHF 2.00 und Kosten pro Minute je nach Telefonanbieter des Empfängers und Voicegateway zwischen CHF 0.10 und CHF 0.65.[^voiceprice]
 
 [^10minutemail]: 10-Minute Mail [@10minutemail]
-
+[^mailchimp]: www.mailchimp.com
+[^sendgrid]: sendgrid.com
+[^smspreise]: Die Preise wurden am 1. März 2016 auf aspsms.ch/instruction/prices.asp, tropo.com/pricing und twilio.com/sms/pricing abgefragt
+[^voiceprice]: Die Preise wurden am 1. März 2016 auf nexmo.com/products/voice/, tropo.com/pricing und twilio.com/voice/pricing abgefragt
 
 [^cnet-2fa]
 [^cnet-2fa]: [@cnet-2fa]

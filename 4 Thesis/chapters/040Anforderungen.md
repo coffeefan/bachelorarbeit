@@ -375,9 +375,20 @@ __Techn. Risiko__       Sehr hoch
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
+### NFREQ-120			Hohe Verfügbarkeit
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll eine Hohe Verfügbarkeit von 99.9%
+
+__Techn. Risiko__       Hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
 \newpage
-##Bewertung der Anforderungen
-<!--TODO -->
+
 
 \newpage
 ##Risiken
