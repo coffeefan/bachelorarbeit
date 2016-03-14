@@ -225,6 +225,7 @@ Diese Domains müssen über eine aufwendige Blacklist gefiltert werden oder durc
 ####Kosten
 Das Versenden von E-Mails über einen SMTP Server ist generell kostenlos. Bei hohem Gebrauch dieser Komponente lohnt es sich die E-Mails über eine professionelle Inrastruktur für Massenversendung zu versenden und analysieren. Beispiele dafür sind Mailchimp [^mailchimp] oder Sendgrid [^sendgrid]
 
+
 ###SMS Bestätigungs-Code
 Das Konzept des im einem vorherigen Kapitel Anbieters WebSMS soll von der Authentifizierungsschnittstelle ebenfalls implementiert werden. Der User gibt im 1. Schritt seine Mobilenummer ein. Er hält dann einen Code per SMS zu gesandt. Im 2. Schritt gibt der User der erhaltene Mobilecode im Webform ein und bestätigt so, dass ihm die Mobilenummer gehört.
 Zum Versenden der SMS ist ein SMS-Gateway nötig.
@@ -240,6 +241,7 @@ Die mehrfache Teilnahme wurde bereits im Kapitel zum Anbieter WebSMS eingehenden
 ####Kosten
 Je nach SMS-Gateway, Mobileanbieter des Empfängers und Verwendungsintensität belaufen sich der Versand eines SMS zwischen 0.04 CHF und 0.15 CHF [^smspreise]
 
+
 ###Telefonanruf mit Bestätigungscode
 Nacheingabe der Telefonnummer oder Mobilenummer erhält der User einen digitalen Anruf. Die Computerstimme liest dem User einen Code vor, welcher er danach in der Webpage einggibt.
 
@@ -252,11 +254,52 @@ Die Teilnahmeanzahl ist von den vorhandenen Telefonanschlüssen abhängig und da
 ####Kosten
 Die Kosten berechnen sich bei den analysierten Anbietern basierend auf einer geringen Monatspauschle zwischen CHF 1.00 und CHF 2.00 und Kosten pro Minute je nach Telefonanbieter des Empfängers und Voicegateway zwischen CHF 0.10 und CHF 0.65.[^voiceprice]
 
+
+
+###Postversand
+Wie kann sichergestellt werden, dass eine Person auch tatsächlich am angegebenen Ort wohnt? Im Telefonbuch digital oder analog waren früher fast alle Personen erfasst. Immer weniger Personen haben heute einen Fixanschluss und einige lassen Ihre Nummern nicht mehr eintragen. Nur vereinzelte Personen tragen Ihre mobile Telefonnumer und Adresse im Telefonbuch ein.
+Google steht vor dem gleichen Problem mit Ihrem Produkt Google Maps. In Google Maps sollen schnell neue Firmendaten, Veranstaltungslocations oder andere Adresseintröge erfasst werden können. Doch sollen Betrügern oder Spassvögel daran gehindert werden Falscheinträge zu machen. Daher versendet Google zur Verifikation einfach einen Code per Brief bzw.Postkarte an die Adresse.[^googlebusiness]
+Das simple Konzept kann auch für den Authentifizierungsschnittstelle umsetzt werden um die Adresse eindeutig zu verifizieren. Einen Haken hat dieses Konzept jedoch. Jemand muss den Brief ausdrucken, in ein Couvert legen, frankieren und per Post versenden. Dieser Jemand kann als Service z.b. beim schweizer Startup pingen.com eingekauft werden. 
+
+####Automatisierungsmöglichkeit
+Die Automatisierung kann als nicht möglich eingestuft werden.
+
+####Mehrfach Teilnahme
+Die Teilnahmeanzahl ist von den vorhandenen Adressanschriften abhängig und daher nur eingschrenkt möglich.
+
+####Kosten
+Die Kosten berechnen sich für den Versand in der Schweiz bei dem analysierten Anbietern je nach Druck und Versandart des Empfängers zwischen CHF 1.20 und CHF 1.65.[^pingen]
+
+
+###Browser Fingerprints
+
+Der Fingerabdruck ist aus der Kriminaltechnik nicht mehr wegzudenken. Bereits vor 2000 Jahren haben Chinesen ihre Schuldscheine mit Fingerabdrücke unterzeichnet. Es sollten über 19 Jahrhunderte gehen bis der Fingerabdrücke auch in der Kriminaltechnik ein gesetzt wurde. Seit über 100 Jahren 1913 ist der Fingerabdruck auch im Dienst der Schweizer Eidgenossenschaft. 
+Im Gegensatz zur DNA unterscheidet sich der Fingerabdruck bei Zwillingen klar auch wenn ähnliche Merkmale erkennbar sind. Bereits nach nur 4 Monaten Schwangerschaft sind die Muster der Papilarleisten beim Embryo festgelegt. Der einzigartige Fingerabdruck des Menschen ist fertig. Dieses Muster ändert sich bis zur Auflösung des Körpers nach dem Tod nicht mehr. [^derfingerabdruck]
+
+![Fingerabdruck Mit Kohlepulver werden Fingerabdrücke sichtbar gemacht und auf Klebefolie gesichert *Quelle:phi-hannover.de*](images/fingerabdruck.jpg)
+
+Der Fingerabdruck eignet sich zur Authentifizierung einer Person durch folgende Merkmale:
+- Der Fingerabdruck ist eindeutig
+- Der Fingerabdruck ist über den Tod hinaus beständig
+- Der Fingerabdruck ist von aussen einfach "abrufbar". Er ist von blossem Augenn sichtbar und wir hinterlassen das Muster der Papilarleiste auf Gegenständen wie Glas.
+
+####Fingerabdruck des Browsers
+Im Gegensatz zum Datenschutz wäre es aus Sicht der eindeutigen Identifikation wünschenswert, wenn digitale Personen oder deren Geräte auch einen Fingerabdruck von sich geben würde, der sowohl eindeutig, beständig und abrufbar ist. Immer wieder versuchten unter dem Thema "Browser Fingerprint" Personen ein Verfahren zu entwickeln die genau dies ermöglicht.
+Microsoft führte laut eigenen Angaben [^xpactivation] mit Windows XP Produktaktivierung einen Verfahren ein das aus Prozesser-Typ, Grafikkarten Informationen und Festplatte einen Fingerabdruck des Geräts erstellt. So konnte bei einer zweiten Aktivierung mit dem selben Registrationsschlüssel Massnahmen getroffen werden.
+
+Auch der Browser übermittelt an den Server verschiedene Informationen:
+
+
+
+
+[^xpactivation]: [@xpactivation]
+[^derfingerabdruck]: [@derfingerabdruck]
+[^googlebusiness]: [@googlebusiness]
 [^10minutemail]: 10-Minute Mail [@10minutemail]
 [^mailchimp]: www.mailchimp.com
 [^sendgrid]: sendgrid.com
 [^smspreise]: Die Preise wurden am 1. März 2016 auf aspsms.ch/instruction/prices.asp, tropo.com/pricing und twilio.com/sms/pricing abgefragt
 [^voiceprice]: Die Preise wurden am 1. März 2016 auf nexmo.com/products/voice/, tropo.com/pricing und twilio.com/voice/pricing abgefragt
-
+[^pingen]: Die Preise wurdem am 10. März 2016 auf pingen.com abgefragt
 [^cnet-2fa]
 [^cnet-2fa]: [@cnet-2fa]
