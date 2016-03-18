@@ -74,6 +74,16 @@ C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\
 C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\System.Web.Http.Owin.xml
 C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.dll
 C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.pdb
-C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.csprojResolveAssemblyReference.cache
 C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.Migrations.init.resources
 C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.csproj.GenerateResource.Cache
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.Migrations.UserFields.resources
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.Migrations.UserFieldsGender.resources
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\System.Web.Cors.dll
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\System.Web.Http.Cors.dll
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\System.Web.Http.Cors.xml
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\Microsoft.Owin.Cors.dll
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\Microsoft.Owin.Cors.xml
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.Resource.Email.resources
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\RazorEngine.dll
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\bin\RazorEngine.xml
+C:\Project\Bachelorarbeit\5 Implementation\Webservice\Authentifizierungsservice\Authentifizierungsservice\obj\Debug\Authentifizierungsservice.csprojResolveAssemblyReference.cache

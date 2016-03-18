@@ -1,0 +1,75 @@
+<div class="col-md-8">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">Registrationsformular</h4>
+        </div>
+        <div class="content">
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Geschlecht</label>
+                            <select class="form-control" ng-model="registration.Gender" ng-change="reloadBerufsbezeichnungen()" required="required">
+                                <option value="null" >Geschlecht auswählen</option>
+                                <option ng-repeat="gender in genders" value="{{gender.key}}" >{{gender.name}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Vorname*</label>
+                            <input type="text" class="form-control" placeholder="Vorname" ng-model="registration.FirstName"  required="required"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Nachname*</label>
+                            <input type="text" class="form-control" placeholder="Nachname" ng-model="registration.LastName"  required="required"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>E-Mail</label>
+                            <input type="email" class="form-control" placeholder="E-Mail*" ng-model="registration.Email" required="required"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Passwort*</label>
+                            <input type="password" class="form-control"  ng-model="registration.Password" required="required"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Passwort wiederholen*</label>
+                            <input type="password" class="form-control"  ng-model="registration.ConfirmPassword" required="required"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Firma</label>
+                            <input type="text" class="form-control" placeholder="Firma" ng-model="registration.Company"  required="required"/>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Registrieren</button><br/>
+                <hr/>
+                <a href="login/">Konto bereits registriert</a><br/>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+</div>

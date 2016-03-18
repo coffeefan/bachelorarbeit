@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Authentifizierungsservice.Models
 {
@@ -30,10 +31,22 @@ namespace Authentifizierungsservice.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        
     }
 
     public class RegisterBindingModel
     {
+        [Required]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public ApplicationUser.GenderEnum Gender { get; set; }
+
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -48,6 +61,12 @@ namespace Authentifizierungsservice.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+       
+
+        public string Company { get; set; }
+
+        
     }
 
     public class RegisterExternalBindingModel

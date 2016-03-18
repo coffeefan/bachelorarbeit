@@ -8,7 +8,8 @@
  * Controller of the configuratorApp
  */
 angular.module('configuratorApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($rootScope) {
+      $rootScope.pageTitle="Main";
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

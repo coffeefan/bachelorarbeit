@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 
 namespace Authentifizierungsservice.Models
@@ -32,6 +34,10 @@ namespace Authentifizierungsservice.Models
         public bool HasRegistered { get; set; }
 
         public string LoginProvider { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public ApplicationUser.GenderEnum Gender { get; set; }
     }
 
     public class UserLoginInfoViewModel

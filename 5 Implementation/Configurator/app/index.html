@@ -9,7 +9,9 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css' />
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.css' />
     <link rel='stylesheet' href='bower_components/components-font-awesome/css/font-awesome.css' />
+    <link rel='stylesheet' href='bower_components/sweetalert/dist/sweetalert.css' />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -25,71 +27,46 @@
     <![endif]-->
 
     <div class="wrapper">
-      <div class="sidebar" data-color="blue" data-image="assets/img/sidebar-5.jpg">
-
-        <!--
-
-            Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
-            Tip 2: you can also add an image using data-image tag
-
-        -->
-
-        <div class="sidebar-wrapper" ">
+      <div class="sidebar" data-color="blue" data-image="images/sidebar-1.jpg">
+        <div class="sidebar-wrapper">
           <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-              authentication Service
+            <a href="#" class="simple-text">
+              Authentication Service
             </a>
           </div>
 
           <ul class="nav">
-            <li class="active">
+            <li class="active" ng-show="isLoggedIn">
               <a href="dashboard.html">
                 <i class="pe-7s-graph"></i>
                 <p>Dashboard</p>
               </a>
             </li>
             <li>
-              <a href="user.html">
+              <a href="user.html" ng-show="isLoggedIn">
                 <i class="pe-7s-user"></i>
                 <p>User Profile</p>
               </a>
             </li>
             <li>
-              <a href="table.html">
+              <a href="table.html" ng-show="isLoggedIn">
                 <i class="pe-7s-note2"></i>
                 <p>Table List</p>
               </a>
             </li>
             <li>
-              <a href="typography.html">
+              <a href="typography.html" ng-show="isLoggedIn">
                 <i class="pe-7s-news-paper"></i>
                 <p>Typography</p>
               </a>
             </li>
             <li>
-              <a href="icons.html">
-                <i class="pe-7s-science"></i>
-                <p>Icons</p>
+              <a href="typography.html" >
+                <i class="pe-7s-news-paper"></i>
+                <p>Typography</p>
               </a>
             </li>
-            <li>
-              <a href="maps.html">
-                <i class="pe-7s-map-marker"></i>
-                <p>Maps</p>
-              </a>
-            </li>
-            <li>
-              <a href="notifications.html">
-                <i class="pe-7s-bell"></i>
-                <p>Notifications</p>
-              </a>
-            </li>
-            <li class="active-pro">
-              <a href="upgrade.html">
-                <i class="pe-7s-rocket"></i>
-                <p>Upgrade to PRO</p>
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
@@ -104,60 +81,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Dashboard</a>
+              <a class="navbar-brand">{{pageTitle}}</a>
             </div>
             <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav navbar-left">
-                <li>
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-dashboard"></i>
-                  </a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-globe"></i>
-                    <b class="caret"></b>
-                    <span class="notification">5</span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Notification 1</a></li>
-                    <li><a href="#">Notification 2</a></li>
-                    <li><a href="#">Notification 3</a></li>
-                    <li><a href="#">Notification 4</a></li>
-                    <li><a href="#">Another notification</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="">
-                    <i class="fa fa-search"></i>
-                  </a>
-                </li>
-              </ul>
-
               <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <a href="">
-                    Account
-                  </a>
-                </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Dropdown
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">
+
+                <li ng-show="isLoggedIn">
+                  <a href="#" >
                     Log out
+                  </a>
+                </li>
+                <li ng-show="!isLoggedIn">
+                  <a href="#" >
+                    Log In
                   </a>
                 </li>
               </ul>
@@ -168,9 +104,7 @@
         <div class="content">
           <div class="content-fluid">
             <div ng-view=""></div>
-
           </div>
-
         </div>
 
 
@@ -234,13 +168,31 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/lib/light-bootstrap-dashboard.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/changePassword.js"></script>
+    <script src="scripts/controllers/forgotPassword.js"></script>
+    <script src="scripts/controllers/forgotPasswordConfirm.js"></script>
+    <script src="scripts/controllers/login.js"></script>
+    <script src="scripts/controllers/logout.js"></script>
+    <script src="scripts/controllers/registration.js"></script>
+    <script src="scripts/controllers/confirmRegistration.js"></script>
+
+    <script src="scripts/services/changePassword.js"></script>
+    <script src="scripts/services/forgotPassword.js"></script>
+    <script src="scripts/services/registration.js"></script>
+    <script src="scripts/services/confirmRegistration.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

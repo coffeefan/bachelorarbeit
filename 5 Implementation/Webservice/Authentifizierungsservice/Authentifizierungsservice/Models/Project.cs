@@ -14,10 +14,10 @@ namespace Authentifizierungsservice.Models
        
 
         public int ProjectID { get; set; }
-        public String ProjectName { get; set; }
+        public string ProjectName { get; set; }
         [ForeignKey("OwnerId")]
         public ApplicationUser Owner { get; set; }
-        public String OwnerId { get; set; }
+        public string OwnerId { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         public AcceptionLevel.InteractiveTypeEnum InteractiveType { get; set; }

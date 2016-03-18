@@ -12,8 +12,8 @@ namespace Authentifizierungsservice.Models
     {
         public enum InteractiveTypeEnum
         {
-            Poll = 10,
-            Win = 20
+            poll = 10,
+            win = 20
         }
         public int AcceptionLevelId { get; set; }
 
