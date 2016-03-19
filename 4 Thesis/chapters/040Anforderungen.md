@@ -14,7 +14,7 @@ Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis ge
 -------------------------------------------------------------------------------
 __Akteure__
 --------------------------- --------------------------------------------------
-__Developer__				Der Developer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media Modul mit dem Authentifizierungsschnittstellen-Service schützen.
+__Programmierer__			Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media Modul mit dem Authentifizierungsschnittstellen-Service schützen.
 
 __User__           			Der User ist der Endkunde. Er nimmt am Social-Media Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service
 -------------------------------------------------------------------------------
@@ -35,18 +35,18 @@ Das Use-Case Diagramm illustriert die nachfolgenden Use Cases. Dadurch kann rasc
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Developer ist am Authentifizierungsschnittstellen-Service registrieren
+__Ziel__                    Ein Programmierer ist am Authentifizierungsschnittstellen-Service registrieren
 
 
-__Beschreibung__           	Ein Developer muss sich am Authentifizierungsschnittstellen-Service registrieren können
+__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service registrieren können
 
-__Akteure__                 Developer
+__Akteure__                 Programmierer
 
 __Vorbedingung__            Keine
 
-__Ergebnis__                Registrierter Developer
+__Ergebnis__                Registrierter Programmierer
 
-__Hauptszenario__           Der Developer füllt ein Registrationsformular aus und bestätigt seine E-Mail Adresse
+__Hauptszenario__           Der Programmierer füllt ein Registrationsformular aus und bestätigt seine E-Mail Adresse
 
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
@@ -56,19 +56,19 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Developer kann sich beim Authentifizierungsschnittstellen-Service
+__Ziel__                    Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service
 
-__Beschreibung__           	Ein Developer muss sich am Authentifizierungsschnittstellen-Service authentifizieren können
+__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service authentifizieren können
 
-__Akteure__                 Developer
+__Akteure__                 Programmierer
 
-__Vorbedingung__            Der Developer ist registriert.
+__Vorbedingung__            Der Programmierer ist registriert.
 
-__Ergebnis__                Authentifizierter und eigeloggter Developer
+__Ergebnis__                Authentifizierter und eigeloggter Programmierer
 
-__Hauptszenario__           Der Developer loggt sich mit E-Mail und Passwort am Authentifizierungsschnittstellen-Service ein.
+__Hauptszenario__           Der Programmierer loggt sich mit E-Mail und Passwort am Authentifizierungsschnittstellen-Service ein.
 
-__Alternativszenario__      Der Developer sendet sich das verpasste Passwort per E-Mail zu. Erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
+__Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort per E-Mail zu. Erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
 -------------------------------------------------------------------------------
 
 #### UC-21 Konfigurieren eines Authentifizierungsvorgang
@@ -78,15 +78,15 @@ __UseCase__
 --------------------------- --------------------------------------------------
 __Ziel__                    Es ist eine neuer Authentifizierungsvorgang für ein neus Social Media-Modul konfiguriert
 
-__Beschreibung__           	Der Developer kann ein neuer Authentifizierungsvorgang eröffnen
+__Beschreibung__           	Der Programmierer kann ein neuer Authentifizierungsvorgang eröffnen
 
-__Akteure__                 Developer
+__Akteure__                 Programmierer
 
-__Vorbedingung__            Der Developer hat sich am System angemeldet
+__Vorbedingung__            Der Programmierer hat sich am System angemeldet
 
 __Ergebnis__                Neuer Authentifizierungsvorgang
 
-__Hauptszenario__           Der Developer eröffnet einen neuen Authentifizierungsvorgang. Er benennt ihn sinnig. Die zu verwende(n) Authentifizierungskomponennten werden ausgewählt. Bei der Konfiguration unterstützen die Resultate die Studie den Developer für die optimalte Konfiguration. Am Ende der Konfiguration werden die Akzeptanzkritieren für eine erfolgreiche Authtentifizierung festgelegt.
+__Hauptszenario__           Der Programmierer eröffnet einen neuen Authentifizierungsvorgang. Er benennt ihn sinnig. Die zu verwende(n) Authentifizierungskomponennten werden ausgewählt. Bei der Konfiguration unterstützen die Resultate die Studie den Programmierer für die optimalte Konfiguration. Am Ende der Konfiguration werden die Akzeptanzkritieren für eine erfolgreiche Authtentifizierung festgelegt.
 
 __Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupliziert
 -------------------------------------------------------------------------------
@@ -99,15 +99,15 @@ __UseCase__
 --------------------------- --------------------------------------------------
 __Ziel__                    Die Authentifizierungsschnittstelle kann in ein (bestehendes) System eingebunden werden
 
-__Beschreibung__           	Der Developer kann die Authentifizierungsschnittstelle in seinem System integrieren
+__Beschreibung__           	Der Programmierer kann die Authentifizierungsschnittstelle in seinem System integrieren
 
-__Akteure__                 Developer
+__Akteure__                 Programmierer
 
-__Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsvorgang konfiguriert
+__Vorbedingung__            Der Programmierer hat sich am System angemeldet. Der Programmierer hat ein neues Authentifizierungsvorgang konfiguriert
 
-__Ergebnis__                Der Developer hat eine Möglichkeit die Authentifizierungsschnittstelle mit seinem konfigurierten Authentifizierungsvorgangs in seiner Software einzubinden
+__Ergebnis__                Der Programmierer hat eine Möglichkeit die Authentifizierungsschnittstelle mit seinem konfigurierten Authentifizierungsvorgangs in seiner Software einzubinden
 
-__Hauptszenario__           Der Developer öffnet die Einbindeseite. Es werden ihm alle Schritte zur Erfolgreichen Einbindung aufgelistet. Der Code liegt individualisiert vor. Der Developer kopiert den Code in sein Programm
+__Hauptszenario__           Der Programmierer öffnet die Einbindeseite. Es werden ihm alle Schritte zur Erfolgreichen Einbindung aufgelistet. Der Code liegt individualisiert vor. Der Programmierer kopiert den Code in sein Programm
 
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
@@ -123,7 +123,7 @@ __Beschreibung__           	Der User probiert sich über den Authentifizierungss
 
 __Akteure__                 User
 
-__Vorbedingung__            Der Developer hat den Authentifizierungsvorgang konfiguriert und in seinem System eingebunden.
+__Vorbedingung__            Der Programmierer hat den Authentifizierungsvorgang konfiguriert und in seinem System eingebunden.
 
 __Ergebnis__                Der Authentifizierungsschnittstellen-Service authentifiziert den User oder lehnt ihn ab.
 
@@ -141,15 +141,15 @@ __Ziel__                    Die Verwendung des Authentifizierungsvorgangs ist ü
 
 __Beschreibung__           	Um den Verwendung des Authentifizierungsvorgangs auszuwerten soll ein Report erstellt werden
 
-__Akteure__                 Developer
+__Akteure__                 Programmierer
 
-__Vorbedingung__            Der Developer hat sich am System angemeldet. Der Developer hat ein neues Authentifizierungsvorgang konfiguriert. (Der Authentifizerungsvorgang ist eingebunden und verwendet worden)
+__Vorbedingung__            Der Programmierer hat sich am System angemeldet. Der Programmierer hat ein neues Authentifizierungsvorgang konfiguriert. (Der Authentifizerungsvorgang ist eingebunden und verwendet worden)
 
 __Ergebnis__                Report eines Authentifizierungsvorgangs
 
-__Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt sich der Developer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
+__Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt sich der Programmierer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 
-__Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Developer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
+__Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Programmierer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 -------------------------------------------------------------------------------
 
 #### UC-51 Wartbarkeit
@@ -191,48 +191,48 @@ Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsschnit
 
 Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet
 
-### FREQ-111			Developer Registration
+### FREQ-111			Programmierer Registration
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-11
 
-__Beschreibung__        Ein Developer kann sich an der Authentifizierungsschnittstellen-Service registrieren.
+__Beschreibung__        Ein Programmierer kann sich an der Authentifizierungsschnittstellen-Service registrieren.
 
 __Techn. Risiko__       Niedrig
 
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-112			Developer Login
+### FREQ-112			Programmierer Login
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-12
 
-__Beschreibung__        Ein Developer muss sich an der Authentifizierungsschnittstellen-Service mittels E-Mail und Passwort anmelden.
+__Beschreibung__        Ein Programmierer muss sich an der Authentifizierungsschnittstellen-Service mittels E-Mail und Passwort anmelden.
 
 __Techn. Risiko__       Niedrig
 
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-113			Developer Passwort vergessen
+### FREQ-113			Programmierer Passwort vergessen
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-11, UC-12
 
-__Beschreibung__        Ein Developer kann ein Passwort per E-Mail anfordern.
+__Beschreibung__        Ein Programmierer kann ein Passwort per E-Mail anfordern.
 
 __Techn. Risiko__       Niedrig
 
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-114			Developer Passwort ändern
+### FREQ-114			Programmierer Passwort ändern
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-11, UC-12
 
-__Beschreibung__        Ein Developer kann sein Passwort ändern. Dafür muss der Developer das alte und neue Passwort angeben.
+__Beschreibung__        Ein Programmierer kann sein Passwort ändern. Dafür muss der Programmierer das alte und neue Passwort angeben.
 
 __Techn. Risiko__       Niedrig
 
@@ -244,7 +244,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Developer kann ein neuer Authentifizierungsvoragn für sein neus Social-Media Modul erfassen.
+__Beschreibung__        Ein Programmierer kann ein neuer Authentifizierungsvoragn für sein neus Social-Media Modul erfassen.
 
 __Techn. Risiko__       Niedrig
 
@@ -256,7 +256,7 @@ __Business Value__     	Sehr Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Developer kann zur Konfiguration des Authentifizierungsvorangs die Studien-Ergebnisse visualisiert nutzen
+__Beschreibung__        Ein Programmierer kann zur Konfiguration des Authentifizierungsvorangs die Studien-Ergebnisse visualisiert nutzen
 
 __Techn. Risiko__       Niedrig
 
@@ -268,7 +268,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Developer kann ein neues Social-Media Modul erfassen
+__Beschreibung__        Ein Programmierer kann ein neues Social-Media Modul erfassen
 
 __Techn. Risiko__       Hoch
 
@@ -280,7 +280,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Developer muss eine Authentifizerungs-Stufe für den Authentifizierungsvorgangs auswählen
+__Beschreibung__        Ein Programmierer muss eine Authentifizerungs-Stufe für den Authentifizierungsvorgangs auswählen
 
 __Techn. Risiko__       Niederig
 
@@ -292,7 +292,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25
 
-__Beschreibung__        Ein Developer kann einen Code generieren lassen. Dieser Code soll ihm die Integration in sein System vereinfachen
+__Beschreibung__        Ein Programmierer kann einen Code generieren lassen. Dieser Code soll ihm die Integration in sein System vereinfachen
 
 __Techn. Risiko__       Sehr Hoch
 
@@ -316,7 +316,7 @@ __Business Value__     	Sehr Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-41
 
-__Beschreibung__        Der Developer kann ein Report generieren. Der Report soll die Verwendung übersichtlich darstellen.
+__Beschreibung__        Der Programmierer kann ein Report generieren. Der Report soll die Verwendung übersichtlich darstellen.
 
 __Techn. Risiko__       Mittel
 
@@ -395,9 +395,9 @@ __Business Value__     	Mittel
 Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Riskiken bezüglich der Bachelorarbeit, sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
 
 ###R-01 Akzeptanz
-Developer und insbesondere auch User, welche den Authentifizierungsschnittstellen-Service verwenden soll, sind völlig unterschiedlich. Deren unterschiedliche Ansprüche machen es schwierig, eine Lösung zu entwickeln welchen Akteuren gerecht wird.
+Programmierer und insbesondere auch User, welche den Authentifizierungsschnittstellen-Service verwenden soll, sind völlig unterschiedlich. Deren unterschiedliche Ansprüche machen es schwierig, eine Lösung zu entwickeln welchen Akteuren gerecht wird.
 
-Da der Auftraggeber sowohl die Zielgruppe Developer wie auch User kenn, kann er hier gezielt Feedback geben.
+Da der Auftraggeber sowohl die Zielgruppe Programmierer wie auch User kenn, kann er hier gezielt Feedback geben.
 
 Die Auswirkung bei Eintritt dieses Risikos ist im Rahmen der Bachelorarbeit gering, da der Erfolg der Arbeit nicht von der tatsächlichen Verwendung im produktiven Umfeld abhängt.
 

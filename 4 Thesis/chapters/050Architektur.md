@@ -8,14 +8,56 @@ Der Authtentifizierungsservice besteht aus drei Hauptkomponenten: Web-API, Konfi
 
 ![Übersicht der Hauptkomponenten](images/draw_io/BA_KomponentenDiagramm.png)
 
+\newpage
+##Ablauf Authentifizierung
+Der User nimmt an einer Interaktivität eines Anbieters teil. Dabei füllt er den Wettbewerb, Umfrage aus oder löst die gegebene Aufgabe und sendet einmal oder mehrmals ein Feedback an die Anbieter Webseite zurück. Nach Abschluss der Interaktivität, werden die Datengespeichert und mit der daraus resultierenden eindeutigen Identität des Feedbacks wird die Authentifizierung gestartet. Das vom Programmierer definierte Authentifizierungsverfahren wird durchgeführt um Identität im gewünschten Masse sicher zustellen. User und das Anbieter System werden über erfolgreiche Authentifizierung informiert. Nach Möglichkeit wird auch eine fehlerhafte Authentifizierung mitgeteilt.
 
+![Aufbau Inhalt im Card-Design](images/draw_io/BA_AutorisationOverview.png)
+
+##Domänenmodel Differenziert
+Ein differenziertes Domänemodel oder auch Domänenmodel Basis Level genannt, erlaubt eine vereinfachte Kommunikation zwischen Kunde/Auftraggeber und Entwicklungsteam/Entwicklungsperson. Die Denkweise im Model erfordert keine Programmierkenntnisse und fördert die strukturierte Wiedergabe von Datengefässen. Beim Domänenmodel werden die Begriffe aus der Domäne des Kunden verwendet und fördern so die Verständlichkeit auf beiden Seiten.
+
+![Differenziertes Domänemodel des Authentifizierungservice](images/domaenenmodell.png)
+
+<!--TODO beschreibung des Models-->
+\newpage
+##Datenbankdesign
+In der Systemarchitektur des Authentifizierungservice stehen Objekte nur während der Ausführungszeit zur Verfügung. Um sie zu persitieren, werden sie in einer relationalen Datenbank gespeichert.
+Die Pradigmen der Objektorientierten Programmiersprache und der relationalen Datenbank sind grundlegend verschieden. 
+So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als "object-relational impedance mismatch" bekannt.[^the-vietnam-of-computer-science]
+Um diesen Wiederspruch zu mindern stellt Microsoft das Entity-Framework zur Verfügung. Das Entity-Framework hat verschiedene Konzeptionelle Ansätze. Es gilt nun den richtigen Ansatz für den Authenifizierungsservice zu wählen
+
+###Database First
+Beim Database First Ansatz wird zuerst die Datenbank designt. Das Entity-Framework bildet aus der Datenbank die POCO-Klassen ab. Sollten Anpassungen an den Entitäten ergeben, werden diese zuerst in der Datenbank implementiert und daraus werden wiederum neuen POCO-Klassen generiert.
+
+###Code First
+Beim Code First Ansatz werden zuerst die POCO-Klassen erstellt. Das Entity-Framework bildet aus den POCO-Klassen die Tabellen in der Datenbank. Alle Anpassungen werden gleich in den POCO-Klassen umgesetzt und durch das Entity-Framework in der Datenbank geändert erstellt.
+
+###Entscheidung
+Wenn die POCO-Klassen gleich mehrheitlich für die Schnittstellendefinition als Parameterdefinition verwendet werden könnten, fallen Mehraufwendungen für Umwandlungen im Programmcode weg. Eine Schnittstellendefinition sollte aber nicht willkürlich durch eine Datenbankänderung beeinflusst werden. Der umgekehrte Fall ist aber minder wichtig, da die Datenbank nur von der Schnittstelle verwendet wird. Deshalb wird das Konzept Code First eingesetzt.
+
+
+###ERD
+Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen Tabellen durch das Entity Framework selbständig generiert
+
+
+
+[^the-vietnam-of-computer-science]: [@the-vietnam-of-computer-science]
+
+\newpage
 ##Mockup
 Ein Mockup ist eine grobe Vorlage für die Design-Umsetzung. Es ist eine ideale Möglichkeit das visuelle Konzept ab zu bilden und mit dem Auftraggeber vorgängig anzuschauen. Die folgenden Unterkapitel bilden die Mockups der App ab.
 
 ###Konfigurator Template
-Der Konfigurator soll den Programmierer visuell beim Konfigurieren und Verwalten seiner Authtenifizierungsprojekte unterstützen. Bei der Zielgruppe handelt es sich um Programmierer. Es kann deshalb von einem hohen Know-How ausgegangen werden. Die Oberfläche soll möglichst effizient gestaltet sein. Die Designelemente sollen deshalb klar und einheitlich gestaltet werden. Generell ist davon auszugehen, dass der Programmierer beim Einrichten seines Projektes am Desktop arbeitet. Für Auswertungen und Präsentationen kann der Programmierer durchaus auch mobile Endgeräte verwenden. Deshalb soll die Umsetzung responsive gestaltet werden.
+Der Konfigurator soll den Programmierer visuell beim Konfigurieren und Verwalten seiner Authentifizierungssoftware unterstützen. Bei der Zielgruppe handelt es sich um Programmierer. Es kann deshalb von einem hohen Know-How ausgegangen werden. Die Oberfläche soll möglichst effizient gestaltet sein. Die Designelemente sollen deshalb klar und einheitlich gestaltet werden. Generell ist davon auszugehen, dass der Programmierer beim Einrichten seines Projektes am Desktop arbeitet. Für Auswertungen und Präsentationen kann der Programmierer durchaus auch mobile Endgeräte verwenden. Deshalb soll die Umsetzung responsive gestaltet werden.
 
-![Mockup Konfigurator Template](images/mockups/overview.png)
+![Mockup Konfigurator Template Desktop](images/mockups/General.png)
+
+
+
+\newpage
+
+![Mockup Konfigurator Template Mobile](images/mockups/Mobile.png)
 
 ####Seitenaufbau
 Im Header wird der Programmierer anhand des Seitentitels gleich über seinen aktuellen Standort orientert. 
@@ -23,8 +65,30 @@ Im Header wird der Programmierer anhand des Seitentitels gleich über seinen akt
 ####Navigation
 Im Designkonzept wurde von einer Klappmenü oder Topnavigation abgesehen. Die Wichtigkeit durch einen Klick alle Navigationspunkte zuerreichen, überwiegte den Platzersparnissen in der Breite. Die wenigen Navigationspunkte erlauben eine flache Navigationsstruktur. Dadurch kann in der Desktopansicht links immer alle Navigationspunkte angezeigt werden. Der Programmierer kann rasch auf die gewünsche Seite switchen. In der Mobileansicht kann durch einen einzigen Klick auf die "Burger-Navigation" das gesamte Menü eingefahren werden. Der Entscheid, für eine statische linke Navigationsstruktur in der Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach umsetzbar.
 
-####Content
-Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. 
+####Inhaltaufbau
+Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept English genannt Card Based Design. Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgerenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel (wenn auch repetitiv) dem Anwender kommuniziert, was für ein Inhalt im Breich Content der "Card" zu erwarten ist. [^card-based-design]
+
+![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
+
+###Hinweis zur Zusammenarbeit mit dem Auftraggeber
+Die hier abgebildeten Mockups und weitere Ansichten sind das Ergebnis aus den Absprache mit dem Auftraggeber. Sie sind vom Auftraggeber abgenommen und zur Impelmentation freigegeben[^freigabeMockups]
+
+[^card-based-design]: Weitere Informationen und Beispiele auf webdesigner.com [@card-based-design]
+[^freigabeMockups]: Alle Freigaben sind in der Beilage-Datei oder auf dem gihtub-Account einsehbar
+\newpage
+
+##Wahl des Applikation Hosters
+###Asp.net Shared Hosting
+Ein Asp.net Shared Hosting ist durchaus für komplexere Webapplikationen wie der Authentifizierungservice ausgerichtet. Die Kosten sind jährlich fix und nicht abhängig von der eigentlichen Nutzung. Überschreitet die Applikation den Speicherbedarf, Zugriffszahlen oder Traffic kann auf ein grösseres Paket aktualisiert werden. Wechsel zu einem kleineren Paket ist meist nur jährlich möglich. Die Skalierbarkeit ist stark eingeschränkt. Die Daten können innerhalb der Schweiz gespeichert werden. Der zuständige Systemtechniker ist meist direkt oder indirekt kontaktierbar. Spezielle Konfigurationen am Hosting sind nicht möglich. Die Datencenter sind meist nicht redundant geführt. Fällt das Datencenter aus ist, die Applikation nicht verfügbar.
+
+###Cloud Hosting
+Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting ist skalierbar und kann sich automatisiert an den aktuellen Nutzungsbedürfnissen anpassen. Die realen Kosten sind im vornherein schwerer zu definieren. Die Daten sind in der Cloud redundant geführt. Fällt ein Datencenter aus kann ein anderes dessen Aufgabe übernehmen. Ein Anbieter der direkt Asp.net Webservice als Hostingservice anbietet wurde nicht gefunden.[^cloudservicech] Indirekt über z.b. über ein Docker Image könnte auch ein Schweizer Anbieter berücksichtigt werden. Die genutzten Serverdienste können komplett an seinen eigenen Bedürfnissen angepasst werden.
+
+###Entscheidung
+Skalierbarkeit, nutzungsabhängige Kosten, Freiheit in der Serverdienst-Konfiguration überwiegen der einfachen Speicherung der Daten in der Schweiz. Ausserdem wird das einfache publishen (veröffentlichen) einer Web-Application aus dem Visual Studio bei allen Cloudanbieter angeboten (bei Shared Hosting sind es nur vereinzelte Anbieter), was den Development Workflow erheblich unterstützt.
+
+
+[^cloudservicech]: Stand 18. Dezember 2015
 
 
 ##Authentifizierungsmöglichkeiten
