@@ -14,5 +14,9 @@ namespace Authentifizierungsservice.Models
         public int WinAcceptionLevel { get; set; }
 
         public string Description { get; set; }
+
+        public bool IsVerification { get; set; }
+        public bool IsUniqueCheck { get; set; }
+    
     }
 }

@@ -1,4 +1,4 @@
-#Design der Software
+#Konzept
 In diesem Kapitel soll ein System für den Authentifizierungsservice entworfen werden. Das System soll den Anforderungen, welche im vorherigen Kapitel definiert wurden, entsprechen. 
 
 Um die Komponenten unabhängig von einander zu entwickeln, wird bei der Entwicklung der Architektur des Authtenifizierungsservice darauf geachte möglichst gerine Kopplung aufzuweisen.
@@ -7,6 +7,11 @@ Um die Komponenten unabhängig von einander zu entwickeln, wird bei der Entwickl
 Der Authtentifizierungsservice besteht aus drei Hauptkomponenten: Web-API, Konfigurator und Autorisierung. Die folgende Abbildung zeigt die Verbindungen der drei Hauptkomponenten im Systemkontext des Authentifizierungservice auf.
 
 ![Übersicht der Hauptkomponenten](images/draw_io/BA_KomponentenDiagramm.png)
+
+##Software Design
+###Webservice
+
+###
 
 \newpage
 ##Ablauf Authentifizierung
@@ -39,60 +44,7 @@ Wenn die POCO-Klassen gleich mehrheitlich für die Schnittstellendefinition als 
 
 ###ERD
 Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen Tabellen durch das Entity Framework selbständig generiert
-
-
-
 [^the-vietnam-of-computer-science]: [@the-vietnam-of-computer-science]
-
-\newpage
-##Mockup
-Ein Mockup ist eine grobe Vorlage für die Design-Umsetzung. Es ist eine ideale Möglichkeit das visuelle Konzept ab zu bilden und mit dem Auftraggeber vorgängig anzuschauen. Die folgenden Unterkapitel bilden die Mockups der App ab.
-
-###Konfigurator Template
-Der Konfigurator soll den Programmierer visuell beim Konfigurieren und Verwalten seiner Authentifizierungssoftware unterstützen. Bei der Zielgruppe handelt es sich um Programmierer. Es kann deshalb von einem hohen Know-How ausgegangen werden. Die Oberfläche soll möglichst effizient gestaltet sein. Die Designelemente sollen deshalb klar und einheitlich gestaltet werden. Generell ist davon auszugehen, dass der Programmierer beim Einrichten seines Projektes am Desktop arbeitet. Für Auswertungen und Präsentationen kann der Programmierer durchaus auch mobile Endgeräte verwenden. Deshalb soll die Umsetzung responsive gestaltet werden.
-
-![Mockup Konfigurator Template Desktop](images/mockups/General.png)
-
-
-
-\newpage
-
-![Mockup Konfigurator Template Mobile](images/mockups/Mobile.png)
-
-####Seitenaufbau
-Im Header wird der Programmierer anhand des Seitentitels gleich über seinen aktuellen Standort orientert. 
-
-####Navigation
-Im Designkonzept wurde von einer Klappmenü oder Topnavigation abgesehen. Die Wichtigkeit durch einen Klick alle Navigationspunkte zuerreichen, überwiegte den Platzersparnissen in der Breite. Die wenigen Navigationspunkte erlauben eine flache Navigationsstruktur. Dadurch kann in der Desktopansicht links immer alle Navigationspunkte angezeigt werden. Der Programmierer kann rasch auf die gewünsche Seite switchen. In der Mobileansicht kann durch einen einzigen Klick auf die "Burger-Navigation" das gesamte Menü eingefahren werden. Der Entscheid, für eine statische linke Navigationsstruktur in der Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach umsetzbar.
-
-####Inhaltaufbau
-Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept English genannt Card Based Design. Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgerenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel (wenn auch repetitiv) dem Anwender kommuniziert, was für ein Inhalt im Breich Content der "Card" zu erwarten ist. [^card-based-design]
-
-![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
-
-###Hinweis zur Zusammenarbeit mit dem Auftraggeber
-Die hier abgebildeten Mockups und weitere Ansichten sind das Ergebnis aus den Absprache mit dem Auftraggeber. Sie sind vom Auftraggeber abgenommen und zur Impelmentation freigegeben[^freigabeMockups]
-
-[^card-based-design]: Weitere Informationen und Beispiele auf webdesigner.com [@card-based-design]
-[^freigabeMockups]: Alle Freigaben sind in der Beilage-Datei oder auf dem gihtub-Account einsehbar
-\newpage
-
-##Wahl des Applikation Hosters
-###Asp.net Shared Hosting
-Ein Asp.net Shared Hosting ist durchaus für komplexere Webapplikationen wie der Authentifizierungservice ausgerichtet. Die Kosten sind jährlich fix und nicht abhängig von der eigentlichen Nutzung. Überschreitet die Applikation den Speicherbedarf, Zugriffszahlen oder Traffic kann auf ein grösseres Paket aktualisiert werden. Wechsel zu einem kleineren Paket ist meist nur jährlich möglich. Die Skalierbarkeit ist stark eingeschränkt. Die Daten können innerhalb der Schweiz gespeichert werden. Der zuständige Systemtechniker ist meist direkt oder indirekt kontaktierbar. Spezielle Konfigurationen am Hosting sind nicht möglich. Die Datencenter sind meist nicht redundant geführt. Fällt das Datencenter aus ist, die Applikation nicht verfügbar.
-
-###Cloud Hosting
-Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting ist skalierbar und kann sich automatisiert an den aktuellen Nutzungsbedürfnissen anpassen. Die realen Kosten sind im vornherein schwerer zu definieren. Die Daten sind in der Cloud redundant geführt. Fällt ein Datencenter aus kann ein anderes dessen Aufgabe übernehmen. Ein Anbieter der direkt Asp.net Webservice als Hostingservice anbietet wurde nicht gefunden.[^cloudservicech] Indirekt über z.b. über ein Docker Image könnte auch ein Schweizer Anbieter berücksichtigt werden. Die genutzten Serverdienste können komplett an seinen eigenen Bedürfnissen angepasst werden.
-
-###Entscheidung
-Skalierbarkeit, nutzungsabhängige Kosten, Freiheit in der Serverdienst-Konfiguration überwiegen der einfachen Speicherung der Daten in der Schweiz. Ausserdem wird das einfache publishen (veröffentlichen) einer Web-Application aus dem Visual Studio bei allen Cloudanbieter angeboten (bei Shared Hosting sind es nur vereinzelte Anbieter), was den Development Workflow erheblich unterstützt.
-
-
-[^cloudservicech]: Stand 18. Dezember 2015
-
-
-##Authentifizierungsmöglichkeiten
-
 
 ##Integration der Schnittstelle
 Wie in der Anforderungsanalyse <!--TODO Punkt beschreiben --> und Aufgabenstellung  <!--TODO Punkt beschreiben -->geschrieben, soll die Schnittstelle möglichst einfach in Bestehende Systeme integriert werden können. Bevor wir untersuchen wie wir die Integration umsetzten können, bedarf es die wichtigsten bestehenden Systeme zu kennen um evtl für diese Systeme eine spezifisch einfach Integration zu entwickeln.
@@ -180,6 +132,8 @@ Das Gateway muss eine minimum an Informationen erhalten, um den Zahlungsvorgang 
 
 \newpage
 
+Implementierungscode der Datatrans:
+
 ~~~~~~~
 <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="https://pilot.datatrans.biz/upp/payment/js/datatrans-1.0.2.js"></script>
@@ -199,6 +153,137 @@ Das Gateway muss eine minimum an Informationen erhalten, um den Zahlungsvorgang 
 	 });
 </script>
 ~~~~~~~
+
+### Integrationsentscheid
+
+Die Stragtegie der Paymentintegration von Datatrans soll für den Authentifizierungservice genutzt werden. 
+
+Durch automatisches Öffnen der Lightbox erreicht der Endbenutzer mühelos den Schritt der Authentifizierung. Die Authentifzierung springt ihm nahe zu entgegen. Dadurch ist eine Hohe Effiktivität gegeben. Der User bleibt auf der selben Seite und wird dadurch nicht aus dem Fluss der Abarbeitung der Interaktivität geworfen. 
+Das Verfahren ist sehr effizient. Die Javascript und CSS Daten werden beim Laden der Interaktivität bereits mit geladen. So entsteht eine minimale Wartezeit beim Einblenden der Lightbox. Dies ist für den User nicht spürbar oder störend.
+
+Bei der Darstellung der Authentifizierung auf einer einzelnen Seite müsste das Web-Design des Interaktivitäs-Anbiter adaptiert werden können. Da die Authentifizierungs-Lightbox auf seiner Seite dargestellt wird, braucht der Interaktivitäts-Anbieter nicht sein Design mühsam für eine Authentifizierungsseite zu konfigurieren. 
+
+Die Lightbox des Authenifizierungsservice wird mit einer grösseren Verbreitung einen gewissen Wiedererkennungswert erhalten. So wird die Lösung als professionelles Produkt wahrgenommen werden. Das Ziel das Benutzer und Entwickler den Authenifizierungsservice als ein sicheres und glaubwürdiges Produkt für Interaktivitäten wahrnehmen wird so versteckt werden.
+
+### Integrationskonzept
+
+### Integrationsparameter
+
+------------------------------------------------------------------------------------
+__Feldname__				__Wert__		__Beschreibung__												
+--------------------------- ---------------	----------------------------------------
+__as_projectid__            Integer			Project ID			
+
+__as_id_provider__ 			String			Die ID um die Interaktivität seitens Interaktionsanbieter eindeutig zu erkennen
+
+__as_auth_date__			Integer			Datum und Uhrzeit der Transaktion im UTC Format z.b. 20160516231500	
+	
+__as_sign__					Integer			Signatur, welche die Eingaben überprüft.
+
+-----------------------------------------------------------------------------------
+Table: Parameter Authenifizierungsservice Lightbox
+
+
+#### Einfache Signature
+Die Verwendung einer einfachen Signatur beugt Eingabefehler vor. Wenn auch nur geringfügig, der Aufwand erschwert den Missbraucht. 
+Um eine korrekte Signatur zu erstellen werden folgende Parameter konkateniert und mit einem Plus separiert.
+
+- as_projectid
+- as_id_provider
+- as_auth_date
+
+Beispiel: 30045+12+20160405180023
+
+
+
+
+
+
+--------------------------------------------------- -------------------------
+__Security Plugin__			Unique	Automation	Kosten	Beschreibung  		
+--------------------------- ------	-----------	------- ---------------------
+__WP-Polls__                1	100000+		Über "wp_polls_add_poll" könnte man den erstellten Poll authentfizieren und bei fehlerhafter Authentifizierung löschen
+
+__Polldaddy Polls & Ratings__ Freemium 	20000+		-
+
+__Wp-Pro-Quiz__				kostenlos	20000+		Hooks vorhanden. Nicht für eine Authentifizierungsschnittstelle zu gebrauchen.
+	
+__Responsive Poll__         15$			-			Keine Hooks. Laut Hersteller sind welche geplant (Zeitpunkt ungewiss)
+
+__TotalPoll Pro__           18$			-			Hooks vorhanden. Ähnlich wie bei WP-Polls könnte man evtl. den erstellten Datensatz löschen. Jedoch ist dies ohne Kauf nicht ersichtlich.
+
+__Easy Polling__			15$			-			-
+
+__Opinion Stage__           kostenlos	10000+		-
+
+__Wedgies__                	Freemium	800+		- 
+
+-------------------------------------------------------------------------------
+Table: Recherche PlugIn's  
+
+
+
+
+\newpage
+##Mockup
+Ein Mockup ist eine grobe Vorlage für die Design-Umsetzung. Es ist eine ideale Möglichkeit das visuelle Konzept ab zu bilden und mit dem Auftraggeber vorgängig anzuschauen. Die folgenden Unterkapitel bilden die Mockups der App ab.
+
+###Konfigurator Template
+Der Konfigurator soll den Programmierer visuell beim Konfigurieren und Verwalten seiner Authentifizierungssoftware unterstützen. Bei der Zielgruppe handelt es sich um Programmierer. Es kann deshalb von einem hohen Know-How ausgegangen werden. Die Oberfläche soll möglichst effizient gestaltet sein. Die Designelemente sollen deshalb klar und einheitlich gestaltet werden. Generell ist davon auszugehen, dass der Programmierer beim Einrichten seines Projektes am Desktop arbeitet. Für Auswertungen und Präsentationen kann der Programmierer durchaus auch mobile Endgeräte verwenden. Deshalb soll die Umsetzung responsive gestaltet werden.
+
+![Mockup Konfigurator Template Desktop](images/mockups/General.png)
+
+
+
+\newpage
+
+![Mockup Konfigurator Template Mobile](images/mockups/Mobile.png)
+
+####Seitenaufbau
+Im Header wird der Programmierer anhand des Seitentitels gleich über seinen aktuellen Standort orientert. 
+
+####Navigation
+Im Designkonzept wurde von einer Klappmenü oder Topnavigation abgesehen. Die Wichtigkeit durch einen Klick alle Navigationspunkte zuerreichen, überwiegte den Platzersparnissen in der Breite. Die wenigen Navigationspunkte erlauben eine flache Navigationsstruktur. Dadurch kann in der Desktopansicht links immer alle Navigationspunkte angezeigt werden. Der Programmierer kann rasch auf die gewünsche Seite switchen. In der Mobileansicht kann durch einen einzigen Klick auf die "Burger-Navigation" das gesamte Menü eingefahren werden. Der Entscheid, für eine statische linke Navigationsstruktur in der Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach umsetzbar.
+
+####Inhaltaufbau
+Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept English genannt Card Based Design. Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgerenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel (wenn auch repetitiv) dem Anwender kommuniziert, was für ein Inhalt im Breich Content der "Card" zu erwarten ist. [^card-based-design]
+
+![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
+
+
+
+
+![Aufbau Inhalt im Card-Design](images/mockups/Kundenimplementation-Desktop.png)
+
+![Aufbau Inhalt im Card-Design](images/mockups/Kundenimplementation-Mobile.png)
+
+###Hinweis zur Zusammenarbeit mit dem Auftraggeber
+Die hier abgebildeten Mockups und weitere Ansichten sind das Ergebnis aus den Absprache mit dem Auftraggeber. Sie sind vom Auftraggeber abgenommen und zur Impelmentation freigegeben[^freigabeMockups]
+
+[^card-based-design]: Weitere Informationen und Beispiele auf webdesigner.com [@card-based-design]
+[^freigabeMockups]: Alle Freigaben sind in der Beilage-Datei oder auf dem gihtub-Account einsehbar
+\newpage
+
+##Wahl des Applikation Hosters
+###Asp.net Shared Hosting
+Ein Asp.net Shared Hosting ist durchaus für komplexere Webapplikationen wie der Authentifizierungservice ausgerichtet. Die Kosten sind jährlich fix und nicht abhängig von der eigentlichen Nutzung. Überschreitet die Applikation den Speicherbedarf, Zugriffszahlen oder Traffic kann auf ein grösseres Paket aktualisiert werden. Wechsel zu einem kleineren Paket ist meist nur jährlich möglich. Die Skalierbarkeit ist stark eingeschränkt. Die Daten können innerhalb der Schweiz gespeichert werden. Der zuständige Systemtechniker ist meist direkt oder indirekt kontaktierbar. Spezielle Konfigurationen am Hosting sind nicht möglich. Die Datencenter sind meist nicht redundant geführt. Fällt das Datencenter aus ist, die Applikation nicht verfügbar.
+
+###Cloud Hosting
+Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting ist skalierbar und kann sich automatisiert an den aktuellen Nutzungsbedürfnissen anpassen. Die realen Kosten sind im vornherein schwerer zu definieren. Die Daten sind in der Cloud redundant geführt. Fällt ein Datencenter aus kann ein anderes dessen Aufgabe übernehmen. Ein Anbieter der direkt Asp.net Webservice als Hostingservice anbietet wurde nicht gefunden.[^cloudservicech] Indirekt über z.b. über ein Docker Image könnte auch ein Schweizer Anbieter berücksichtigt werden. Die genutzten Serverdienste können komplett an seinen eigenen Bedürfnissen angepasst werden.
+
+###Entscheidung
+Skalierbarkeit, nutzungsabhängige Kosten, Freiheit in der Serverdienst-Konfiguration überwiegen der einfachen Speicherung der Daten in der Schweiz. Ausserdem wird das einfache publishen (veröffentlichen) einer Web-Application aus dem Visual Studio bei allen Cloudanbieter angeboten (bei Shared Hosting sind es nur vereinzelte Anbieter), was den Development Workflow erheblich unterstützt.
+
+
+[^cloudservicech]: Stand 18. Dezember 2015
+
+
+##Authentifizierungsmöglichkeiten
+
+
+
+
+
 
 ##Domänenmodell
 ###Entitäten
