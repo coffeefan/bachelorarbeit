@@ -175,10 +175,8 @@ __Feldname__				__Wert__		__Beschreibung__
 __as_projectid__            Integer			Project ID			
 
 __as_id_provider__ 			String			Die ID um die Interaktivität seitens Interaktionsanbieter eindeutig zu erkennen
-
-__as_auth_date__			Integer			Datum und Uhrzeit der Transaktion im UTC Format z.b. 20160516231500	
 	
-__as_sign__					Integer			Signatur, welche die Eingaben überprüft.
+__as_sign__					String			Signatur, welche die Eingaben überprüft.
 
 -----------------------------------------------------------------------------------
 Table: Parameter Authenifizierungsservice Lightbox
@@ -190,36 +188,136 @@ Um eine korrekte Signatur zu erstellen werden folgende Parameter konkateniert un
 
 - as_projectid
 - as_id_provider
-- as_auth_date
 
-Beispiel: 30045+12+20160405180023
+Beispiel: 30045+12
+
+Der daraus resultierende String wird mit SHA1 verschlüsselt
+
+Beim Beispiel gäbe es die Signatur 8a2298ebfe7208ebe63dd11cdbf5b6cafb56d09c
+
+
+\newpage
+##Sicherheitstufen integrieren
+
+Im Kapitel Recherche wurden einige Sicherheitskomponenten recherchiert und illustriert. Es gilt nun ein Setting an Komponenten zu finden, welche dem Developer eine Breite Auswahlmölgichkeit bietet ihn aber nicht durch komplexes Auswählen der Sicherheitstufen aufhaltet.
+
+####Cookie
+Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser Makro Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahme als auch das verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht.
+
+
+####IP-Adresse
+Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP Adressen vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss"[!internetanschluss]. Dadurch könnte nur einmal pro Internetanschluss an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know How durch Tools möglich ist, lässt sowohl Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand
+
+####Browser Fingerprint
+Durch Generierung eine Browser Fingerprints (siehe Recherche) identifiziert werden. Das Verfahren kann zu 94% ein User wiedererkennen. Dass Verwenden mehrerer Browser oder Geräte führt zu verschiedenen Browser Fingerprints. iPhone taugt nicht für die Methode. Deshalb muss  Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewertet werden. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
+
+####SMS Authentifizierung
+Der Benutzer gibt seine Mobilenummer ein. Durch versenden eines Codes wird sichergestellt, dass dem Benutzer die Telefonnumer gehört. In der Schweiz können maximal 5 Mobilenummern bei den Anbietern gekauft werden.<!--TODO Siehe-->(Siehe Kapitel Recherche) Der Benutzer kann eindeutig anhand der Mobilenummer erkannt werden. Die möglichen Mobilenummern pro User sind beschränkt. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro SMS sind tragbar. Der Benutzer muss bei dieser Methode sein Handy bei sich tragen und den Code übertragen.
+
+####Telefon Authentifizierung
+Der Benutzer gibt seine Telefonnumer ein. Der Benutzer swird automatisiert angerufen und die Computerstimme liest ein Code vor, welcher der Benutzer im Rückbestätigungsformular einträgt. Dadurch wird sichergestellt, dass die Telefonnummer dem Benutzer gehört. Mobilenummern sind wie vorhin erwähnt eingeschränkt. Festnetzanschlüsse unterliegen einer finanziellen Hürde. 
+
+####Postversand Authentifizierung
+Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, deshalb wird Unique mit gut und nicht sehr gut bewertet. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach erhalten auf einer Webseite quittieren
+
+
+###Übersicht
+
+------------------------------------------------------------------------- --------------
+__Komponente__		__Unique__	__Automat-		__Kosten__	__Aufwand	  __Verbreitung__	
+								isierung__					Benutzer__						
+------------------- ----------- --------------- ----------	------------- -------------
+__Cookie__			2.5 		2.5 			6			6             6
+                                                                          
+                                                                          
+__IP__				3			3 				6			6             6
+                                                                          
+                                                                          
+__Browser 			3.5			3.5	 			6			6             6
+Fingerprint__		                                                      
+
+__E-Mail__			4			4.5				6			4.5           6
+                                                                          
+                                                                          
+__SMS__				5.5			5.75			5			4.5           5.5
+					                                                      
+                                                                          
+					                                                      
+__Telefon__			5.25		5.75			5			4.5           5.75
+					                                                      
+                                                                          
+					                                                      
+__Ausweis-			3.5			3.5				6			5          	  6
+nummer__
+
+
+__SuisseID__		5.5			5.75			5			5			  3
+																	      		
+-----------------------------------------------------------------------------------------
+Table: Übersicht der Authentifizierungs Methoden
+
+[!internetanschluss]: Der Begriff Internetanschluss ist schwamig eingesetzt.
+
+
+###Auswahl der zu integrierenden Sicherheitsstufen
+Um die geforderte Breite an Sicherheitsmethoden 
+
+\newpage
+##Modularität und Erweiterbarkeit
+Wie in der Einführung zur Architektur erwähnt <!--TODO Siehe-->, sollte eine Architektur so konstruiert werden dass Sie möglichst Modular aufgebaut ist. Auch wenn wir die zu verwendenden Authentifizierungsmethoden im vorherigen Kapitel definiert haben, werden sich diese in Zukunft ändern. Anderseits kann sich auch die Authentifizierungsmethoden an sich komplett verändern. Sehr realistisch ist, dass für einen Browser Fingerprint neue Berechnungsmethodiken bekannt werden. Der Anbieter der hinter eine Authentifizierungsmethode steht, kann sich verändern oder dessen Anbindung. Kurz gesagt, die Modularität der Authentifizierungsmethoden muss unbedingt gewährleistet sein. Eine Implementation der Sicherheitsstufe SMS wie im folgenden einfachen Beispiel sollte nicht verwendet werden.
+
+~~~~~~~
+SMSSecurityStep inst = new SMSSecurityStep();
+~~~~~~~
+
+###Design by Contract
+Das Design Pattern "Design by Contract" soll das Zusammenspiel von Modulen durch eine Definition/Vertrag regeln. Herr Bertrand Meyer führte das Pattern bei der Enwicklung der Programmiersprache Eiffel ein. Die Verträge enthält besteht aus
+
+- precondition: "Die Zusicherung die der Aufrufer einzuhalten hat"
+- postcondition: "Die Zusicherung die der Aufgegrufene einhalten wird"
+- Invariants:	"Invariants sorgen dafür,dass bei Eintritts- und Austrittspunkten des Server Codes gewisse Conditions erfüllt bzw. Zustände gewahrt sind. Invariants sind in gewisser Weise also Pre- und Postconditions."
+
+Im Grunde geht es darum den Operator new zu eliminieren.
+
+Der Beispielcode als Design by Contract Pattern:
+
+~~~~~~~
+ISecurityStep proxy = new SomeFactory.GetSecurityStep(...);
+~~~~~~~
+
+ISecurityStep-Vertrag ist im Beispielcode der Vertrag. Die Instanz proxy Liefert ein Objekt zurück, welches das nach ISecurityStep-Vertrag definiert ist. Welches Objekt (Implementierung) sich dahinter verbirgt, ist uninteressant da diese Komponente gegen eine andere Implementierung ausgetauscht werden kann. In diesem konkreten Fall, könnten beispielsweise die Komponenten SMSSecurityStep und CookieSecurityStep die Schnittstelle ISecurityStep implementieren.
+
+SomeFactory muss für die Umsetzung von Desing by Contract implementiert werden. Dafür gibt es in der .net Welt einiges an Beispiel Code und Frameworks zu finden. Ein beliebtes Framework ist die Windows Communication Foundation [^design-By-Contract]
 
 
 
+###MEF - Managed Extensibility Framework
+MEF das Managed Extensibility Framework ist seit der Version 4.0 Bestandteil des Frameworks. MEF ist eine Bibliothekt und Implementiert das Problem der Erweiterbarkeit sogar zur Laufzeit. Es vereinfacht die Implementierung von erweiterbaren Anwendungen und bietet Ermittlung von Typen, Erzeugung von Instanzen und Composition Fähigkeiten an.
+
+![Vereinfacht die Architektur des Managed Extensibility Framework Quelle: msdn.microsoft.com](images/mef_architektur.jpg)
+
+Die Abbilldung <!--TODO Siehe --> zeigt eine stark vereinfachte Architektur von MEF auf. Die Hauptmodule vom MEF-Core sind Catalog und CompositionContainer.
+Der Catalog kontrolliert und stellt das Laden der Komponenten sicher. Der CompositionContainer erzeugt aus den Komponenten Instanzen und bindet diese an die entsprechenden Variablen.
+Parts sind die Objekte die vom Type Export oder Import sein können. Die Komponenten die geladen und instanziert sind nennen sich Exports. Imports sind die Variabeln an den Exports gebunden werden sollen. 
+
+Um das Konzept besser zu verstehen, soll der Beispielcode von Design by Contract <!--TODO Siehe --> herangezogen werden. Die Variable proxy vom Type ISecurityStep die die Instanz dieser Komponente enthalten soll, wäre ein „Import“ in einer MEF Anwendung. Der SMSSecurityStep oder CookieSecurityStep wären in einer MEF Anwendung ein Export.
+
+MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
+
+###Entscheidung
+MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zu Verfügung. Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory. MEF bietet des weiteren die Möglichkeit die DLL's zur Laufzeit auszutauschen und eine automatisierte Instanzierung.
+
+\newpage
+### Sicherheitsstufen Libaray-Übersicht anhand MEF
+Basierend auf dem Managed Extensibility Framework wird wir der Aufbau unstrukturiert. Neu wird nicht alles in einer Library im Webservice gespeichert sondern mehrere Libarays erstellt. Die Libaray SecurityStepContracts beinhaltet den Contract/Vertrag der Sicherheitsstufen ISecurityStep. Es besteht keine Abhängigkeit zwischen dem Authenifizierungsservice und den Sicherheitsstufen. 
+
+![UML Library Overview](images/mef_library_overview.png)
+
+[^design-By-Contract]: [@design-By-Contract]
 
 
 
---------------------------------------------------- -------------------------
-__Security Plugin__			Unique	Automation	Kosten	Beschreibung  		
---------------------------- ------	-----------	------- ---------------------
-__WP-Polls__                1	100000+		Über "wp_polls_add_poll" könnte man den erstellten Poll authentfizieren und bei fehlerhafter Authentifizierung löschen
-
-__Polldaddy Polls & Ratings__ Freemium 	20000+		-
-
-__Wp-Pro-Quiz__				kostenlos	20000+		Hooks vorhanden. Nicht für eine Authentifizierungsschnittstelle zu gebrauchen.
-	
-__Responsive Poll__         15$			-			Keine Hooks. Laut Hersteller sind welche geplant (Zeitpunkt ungewiss)
-
-__TotalPoll Pro__           18$			-			Hooks vorhanden. Ähnlich wie bei WP-Polls könnte man evtl. den erstellten Datensatz löschen. Jedoch ist dies ohne Kauf nicht ersichtlich.
-
-__Easy Polling__			15$			-			-
-
-__Opinion Stage__           kostenlos	10000+		-
-
-__Wedgies__                	Freemium	800+		- 
-
--------------------------------------------------------------------------------
-Table: Recherche PlugIn's  
+   
 
 
 

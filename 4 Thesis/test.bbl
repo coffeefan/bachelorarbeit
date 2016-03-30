@@ -1,0 +1,611 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{10minutemail}{misc}{}
+  \field{labelalpha}{10m}
+  \field{sortinit}{1}
+  \field{howpublished}{\url{http://www.10minutemail.com}}
+  \field{note}{[Online; accessed 28-02-2016]}
+  \field{title}{10minutemail.com}
+  \field{year}{2016}
+\endentry
+
+\entry{authentifizierungsdeforg}{misc}{}
+  \field{labelalpha}{Aut}
+  \field{sortinit}{A}
+  \field{howpublished}{\url{http://authentifizierung.org/}}
+  \field{note}{[Online; accessed 23-12-2015]}
+  \field{title}{http://authentifizierung.org}
+  \field{year}{2015}
+\endentry
+
+\entry{captcha}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Burling}{B.}%
+     {Stacey}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BS1}
+  \strng{fullhash}{BS1}
+  \field{labelalpha}{Bur12}
+  \field{sortinit}{B}
+  \field{howpublished}{\url{http://phys.org/news/2012-06-captcha-story-squiggly-letters.html}}
+  \field{note}{[Online; accessed 22-12-2015]}
+  \field{title}{CAPTCHA: The story behind those squiggly computer letters}
+  \field{year}{2012}
+\endentry
+
+\entry{card-based-design}{misc}{}
+  \field{labelalpha}{Car}
+  \field{sortinit}{C}
+  \field{howpublished}{\url{http://webdesignledger.com/card-based-design/}}
+  \field{note}{[Online; accessed 04-03-2016]}
+  \field{title}{A Serious Look At Card Based Design}
+  \field{year}{2014}
+\endentry
+
+\entry{cnet-2fa}{misc}{}
+  \field{labelalpha}{Cne}
+  \field{sortinit}{C}
+  \field{howpublished}{\url{http://www.cnet.com/news/two-factor-authentication-what-you-need-to-know-faq/}}
+  \field{note}{[Online; accessed 28-02-2016]}
+  \field{title}{Two-factor authentication: FAQ}
+  \field{year}{2016}
+\endentry
+
+\entry{datatrans-api}{misc}{}
+  \field{labelalpha}{Dat}
+  \field{extraalpha}{1}
+  \field{sortinit}{D}
+  \field{howpublished}{\url{https://pilot.datatrans.biz/showcase/doc/Technical_Implementation_Guide.pdf}}
+  \field{note}{[Online; accessed 22-02-2016]}
+  \field{title}{Datatrans eCom - Technical Implementation Guide}
+  \field{year}{2016}
+\endentry
+
+\entry{datatrans-plugin}{misc}{}
+  \field{labelalpha}{Dat}
+  \field{extraalpha}{2}
+  \field{sortinit}{D}
+  \field{howpublished}{\url{https://www.datatrans.ch/de/e-payment/shop-schnittstellen}}
+  \field{note}{[Online; accessed 21-02-2016]}
+  \field{title}{Webshop}
+  \field{year}{2016}
+\endentry
+
+\entry{dillman}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Dillman}{D.}%
+     {Don~A.}{D.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {John Wiley & Sons Inc}%
+  }
+  \strng{namehash}{DDA1}
+  \strng{fullhash}{DDA1}
+  \field{labelalpha}{Dil78}
+  \field{sortinit}{D}
+  \field{isbn}{978-0471215554}
+  \field{title}{Mail and telephone surveys.The total design method}
+  \list{location}{1}{%
+    {New York}%
+  }
+  \field{year}{1978}
+\endentry
+
+\entry{duden}{book}{}
+  \list{publisher}{1}{%
+    {Dudenredaktion}%
+  }
+  \field{labelalpha}{Dud}
+  \field{sortinit}{D}
+  \field{isbn}{978-3-411-04650-8}
+  \field{title}{Duden}
+  \field{volume}{26}
+  \field{year}{2014}
+\endentry
+
+\entry{googlebusiness}{misc}{}
+  \field{labelalpha}{Goo}
+  \field{extraalpha}{1}
+  \field{sortinit}{G}
+  \field{howpublished}{\url{https://www.google.com/business/}}
+  \field{note}{[Online; accessed 02-03-2016]}
+  \field{title}{Google Business}
+  \field{year}{2016}
+\endentry
+
+\entry{googlecaptcha}{misc}{}
+  \field{labelalpha}{Goo}
+  \field{extraalpha}{2}
+  \field{sortinit}{G}
+  \field{howpublished}{\url{http://www.google.com/recaptcha/digitizing}}
+  \field{note}{[Online; accessed 10-01-2015]}
+  \field{title}{reCAPTCHA Digitization Accuracy}
+  \field{year}{2014}
+\endentry
+
+\entry{apachekiss}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hanik}{H.}%
+     {Filip}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HF1}
+  \strng{fullhash}{HF1}
+  \field{labelalpha}{Han15}
+  \field{sortinit}{H}
+  \field{howpublished}{\url{https://people.apache.org/~fhanik/kiss.html}}
+  \field{note}{[Online; accessed 29-12-2015]}
+  \field{title}{Kiss}
+  \field{year}{2015}
+\endentry
+
+\entry{design-By-Contract}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hausherr}{H.}%
+     {Matthias}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HM1}
+  \strng{fullhash}{HM1}
+  \field{labelalpha}{Hau06}
+  \field{sortinit}{H}
+  \field{howpublished}{\url{http://www.gruntz.ch/courses/sem/ws06/DBC.pdf}}
+  \field{note}{[Online; accessed 10-03-2016]}
+  \field{title}{Design By Contract in Java}
+  \field{year}{2006}
+\endentry
+
+\entry{hippler}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hippler}{H.}%
+     {Hans-Jürgen}{H.-J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HHJ1}
+  \strng{fullhash}{HHJ1}
+  \field{labelalpha}{Hip88}
+  \field{sortinit}{H}
+  \field{title}{Methodische Aspekte schriftlicher Befragungen: Probleme und
+  Forschungsperspektiven}
+  \field{year}{1988}
+\endentry
+
+\entry{kleber92}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hippler}{H.}%
+     {Hans-Jürgen}{H.-J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Juventa Verlag}%
+  }
+  \strng{namehash}{HHJ1}
+  \strng{fullhash}{HHJ1}
+  \field{labelalpha}{Hip92}
+  \field{sortinit}{H}
+  \field{title}{Diagnostik in pädagogischen Handlungsfeldern}
+  \list{location}{1}{%
+    {Weinheim, München}%
+  }
+  \field{year}{1992}
+\endentry
+
+\entry{umfragemethodik}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Höpflinger}{H.}%
+     {François}{F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HF2}
+  \strng{fullhash}{HF2}
+  \field{labelalpha}{Hö11}
+  \field{sortinit}{H}
+  \field{howpublished}{\url{http://www.hoepflinger.com/fhtop/Umfragemethodik.pdf}}
+  \field{note}{[Online; accessed 11-02-2016]}
+  \field{title}{Standardisierte Erhebungen - methodische Hinweise zu Umfragen}
+  \field{year}{2011}
+\endentry
+
+\entry{goldbachsocial}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Interactive}{I.}%
+     {Goldbach}{G.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{IG1}
+  \strng{fullhash}{IG1}
+  \field{labelalpha}{Int15}
+  \field{sortinit}{I}
+  \field{howpublished}{\url{https://twitter.com/revogt/}}
+  \field{note}{[Online; accessed 28-12-2015]}
+  \field{title}{Nutzerzahlen der wichtigsten Plattformen}
+  \field{year}{2015}
+\endentry
+
+\entry{sicheresysteme}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kriha}{K.}%
+     {Walter}{W.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Schmitz}{S.}%
+     {Roland}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \strng{namehash}{KWSR1}
+  \strng{fullhash}{KWSR1}
+  \field{labelalpha}{KS09}
+  \field{sortinit}{K}
+  \field{isbn}{978-3-540-78958-1}
+  \field{series}{Xpert.press}
+  \field{title}{Sichere Systeme}
+  \list{location}{1}{%
+    {Berlin, Heidelberg}%
+  }
+  \field{year}{2009}
+\endentry
+
+\entry{meilensteine}{misc}{}
+  \field{labelalpha}{Mei}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{http://projektmanagement-definitionen.de/glossar/meilenstein/}}
+  \field{note}{[Online; accessed 24-12-2015]}
+  \field{title}{Projektmanagement: Definitionen, Einführungen und Vorlagen}
+  \field{year}{2015}
+\endentry
+
+\entry{digitalerevolutionhz}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Millischer}{M.}%
+     {Sven}{S.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{MS1}
+  \strng{fullhash}{MS1}
+  \field{labelalpha}{Mil15}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{handelszeitung.ch/digitalisierung/hz-sonderausgabe-die-digitale-revolution-874557}}
+  \field{note}{[Online; accessed 02-01-2016]}
+  \field{title}{Die digitale Revolution}
+  \field{year}{2015}
+\endentry
+
+\entry{csharpbasic}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {MSDN}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{labelalpha}{MSD15}
+  \field{extraalpha}{1}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{https://msdn.microsoft.com/de-de/library/z1zx9t92.aspx}}
+  \field{note}{[Online; accessed 01-02-2016]}
+  \field{title}{Einführung in die Programmiersprache C# und in .NET Framework}
+  \field{year}{2015}
+\endentry
+
+\entry{efbasic}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {MSDN}{M.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{M1}
+  \strng{fullhash}{M1}
+  \field{labelalpha}{MSD15}
+  \field{extraalpha}{2}
+  \field{sortinit}{M}
+  \field{howpublished}{\url{https://msdn.microsoft.com/de-ch/data/ef.aspx}}
+  \field{note}{[Online; accessed 01-02-2016]}
+  \field{title}{Entity Framework}
+  \field{year}{2015}
+\endentry
+
+\entry{netmatrixaudit}{misc}{}
+  \field{labelalpha}{Net}
+  \field{sortinit}{N}
+  \field{howpublished}{\url{http://netreport.net-metrix.ch/audit/}}
+  \field{note}{[Online; accessed 02-01-2016]}
+  \field{title}{NET-Metrix-Audit}
+  \field{year}{2015}
+\endentry
+
+\entry{the-vietnam-of-computer-science}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Neward}{N.}%
+     {Ted}{T.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NT1}
+  \strng{fullhash}{NT1}
+  \field{labelalpha}{New06}
+  \field{sortinit}{N}
+  \field{howpublished}{\url{http://blogs.tedneward.com/post/the-vietnam-of-computer-science//}}
+  \field{note}{[Online; accessed 10-03-2016]}
+  \field{title}{The Vietnam of Computer Science}
+  \field{year}{2006}
+\endentry
+
+\entry{playbuzz}{misc}{}
+  \field{labelalpha}{Pla}
+  \field{sortinit}{P}
+  \field{howpublished}{\url{http://www.playbuzz.com}}
+  \field{note}{[Online; accessed 28-12-2015]}
+  \field{title}{PlayBuzz}
+  \field{year}{2015}
+\endentry
+
+\entry{fragebogen}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Pratzner}{P.}%
+     {Axel}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Institut für webbasierte Kommunikation und E-Learning}%
+  }
+  \strng{namehash}{PA1}
+  \strng{fullhash}{PA1}
+  \field{labelalpha}{Pra01}
+  \field{sortinit}{P}
+  \field{title}{Wissenschaftlich fundierter Aufbau von Fragebogen}
+  \field{year}{2001}
+\endentry
+
+\entry{kzfss01}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Reuband}{R.}%
+     {Prof. Dr. Karl-Heinz}{P.~D. K.-H.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RPDKH1}
+  \strng{fullhash}{RPDKH1}
+  \field{labelalpha}{Reu01}
+  \field{sortinit}{R}
+  \field{issn}{0023-2653}
+  \field{title}{Möglichkeiten und Probleme des Einsatzes postalischer
+  Befragungen}
+  \field{year}{2001}
+\endentry
+
+\entry{defaultdeny}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rothman}{R.}%
+     {Mike}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RM1}
+  \strng{fullhash}{RM1}
+  \field{labelalpha}{Rot15}
+  \field{sortinit}{R}
+  \field{howpublished}{\url{https://securosis.com/blog/network-security-fundamentals-default-deny}}
+  \field{note}{[Online; accessed 29-12-2015]}
+  \field{title}{Default Deny}
+  \field{year}{2015}
+\endentry
+
+\entry{authentifizierungsdef}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rouse}{R.}%
+     {Margaret}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RM2}
+  \strng{fullhash}{RM2}
+  \field{labelalpha}{Rou15}
+  \field{sortinit}{R}
+  \field{howpublished}{\url{http://www.searchsecurity.de/definition/Authentifizierung}}
+  \field{note}{[Online; accessed 23-12-2015]}
+  \field{title}{Authentifizierung - Definition}
+  \field{year}{2015}
+\endentry
+
+\entry{rupp}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rupp}{R.}%
+     {K.~P.}{K.~P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {dpunkt.verlag}%
+  }
+  \strng{namehash}{RKP1}
+  \strng{fullhash}{RKP1}
+  \field{labelalpha}{Rup11}
+  \field{sortinit}{R}
+  \field{title}{Basiswissen Requirements Engineering}
+  \field{year}{2011}
+\endentry
+
+\entry{angularjsbasic}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sandeep}{S.}%
+     {Panda}{P.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Sitepoint Pty. Ltd.}%
+  }
+  \strng{namehash}{SP1}
+  \strng{fullhash}{SP1}
+  \field{labelalpha}{San14}
+  \field{sortinit}{S}
+  \field{title}{AngularJS Novice to Ninja}
+  \field{year}{2014}
+\endentry
+
+\entry{smi}{misc}{}
+  \field{labelalpha}{Smi}
+  \field{sortinit}{S}
+  \field{howpublished}{\url{http://socialmedia-institute.com/}}
+  \field{note}{[Online; accessed 28-12-2015]}
+  \field{title}{SMI (SocialMedia Institute)}
+  \field{year}{2015}
+\endentry
+
+\entry{derfingerabdruck}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Sondereggerl}{S.}%
+     {Bernhard}{B.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Bundesamt für Polizei fedpo}%
+  }
+  \strng{namehash}{SB1}
+  \strng{fullhash}{SB1}
+  \field{labelalpha}{Son13}
+  \field{sortinit}{S}
+  \field{title}{Der FingerabDruck}
+  \list{location}{1}{%
+    {Bern, Nussbaumstrasse 29}%
+  }
+  \field{year}{2013}
+\endentry
+
+\entry{statista}{misc}{}
+  \field{labelalpha}{Sta}
+  \field{extraalpha}{1}
+  \field{sortinit}{S}
+  \field{howpublished}{\url{http://de.statista.com/}}
+  \field{note}{[Online; accessed 28-12-2015]}
+  \field{title}{Statistik Plattform}
+  \field{year}{2015}
+\endentry
+
+\entry{statisticinfostatista}{misc}{}
+  \field{labelalpha}{Sta}
+  \field{extraalpha}{2}
+  \field{sortinit}{S}
+  \field{howpublished}{\url{http://de.statista.com/statistik/daten/studie/320685/umfrage/nutzungsanteil-der-content-management-systeme-cms-weltweit/}}
+  \field{note}{[Online; accessed 21-01-2016]}
+  \field{title}{Top 10 CMS November 2015}
+  \field{year}{2015}
+\endentry
+
+\entry{statisticinfow3techs}{misc}{}
+  \field{labelalpha}{Sta}
+  \field{extraalpha}{3}
+  \field{sortinit}{S}
+  \field{howpublished}{\url{http://w3techs.com/technologies/overview/content_management/all}}
+  \field{note}{[Online; accessed 01-12-2015]}
+  \field{title}{Usage of content management systems for websites}
+  \field{year}{2015}
+\endentry
+
+\entry{bachelorreglement}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Stern}{S.}%
+     {Olaf}{O.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Zürcher Hochschule für Angewandte Wissenschaften}%
+  }
+  \strng{namehash}{SO1}
+  \strng{fullhash}{SO1}
+  \field{labelalpha}{Ste12}
+  \field{sortinit}{S}
+  \field{title}{Reglement Bachelorarbeit}
+  \field{year}{2012}
+\endentry
+
+\entry{t3nplaybuzz}{misc}{}
+  \field{labelalpha}{T3n}
+  \field{sortinit}{T}
+  \field{howpublished}{\url{https://www.youtube.com/watch?v=X_fQ1uG9rFY}}
+  \field{note}{[Online; accessed 28-12-2015]}
+  \field{title}{Interview mit Shaul Olmert}
+  \field{year}{2015}
+\endentry
+
+\entry{uvek}{misc}{}
+  \field{labelalpha}{Uve}
+  \field{sortinit}{U}
+  \field{howpublished}{\url{news.admin.ch/message/index.html?lang=de&msg-id=13600}}
+  \field{note}{[Online; accessed 06-01-2016]}
+  \field{title}{NET-Metrix-Audit}
+  \field{year}{2004}
+\endentry
+
+\entry{xpactivation}{misc}{}
+  \field{labelalpha}{Xpa}
+  \field{sortinit}{X}
+  \field{howpublished}{\url{https://technet.microsoft.com/en-us/library/bb457054.aspx}}
+  \field{note}{[Online; accessed 02-03-2016]}
+  \field{title}{Technical Details on Microsoft Product Activation for Windows
+  XP}
+  \field{year}{2001}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

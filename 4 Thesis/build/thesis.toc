@@ -1,0 +1,389 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Einf\IeC {\"u}hrung}{2}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Aufgabenstellung}{3}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.1}Ausgangslage}{3}{subsection.1.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.2}Ziel der Arbeit}{3}{subsection.1.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.3}Aufgabenstellung}{3}{subsection.1.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.4}Erwartete Resultate}{4}{subsection.1.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Rahmenbedingungen Bachelorarbeit}{5}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Projektmanagement}{6}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Grobe Projektplanung}{6}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Aufwand}{7}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Meilensteine}{8}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Termine}{9}{section.2.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Infrastruktur}{10}{section.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.1}Quellcode-Verwaltung}{10}{subsection.2.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.2}Zeitmanagement}{10}{subsection.2.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.5.3}yUML}{11}{subsection.2.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Recherche}{12}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Fachbegriffe}{12}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Erl\IeC {\"a}uterung der Grundlagen}{12}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.1}Authentifizierung}{12}{subsection.3.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.2}Autorisierung}{12}{subsection.3.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.3}OAuth}{13}{subsection.3.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Das Bed\IeC {\"u}rfnis nach OAuth}{13}{subsubsection*.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Funktionalit\IeC {\"a}t von OAuth}{13}{subsubsection*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}\IeC {\"A}hnliche Produkte auf dem Markt}{14}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}OAuth-Provider}{14}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Vorteile}{15}{subsubsection*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Nachteile}{15}{subsubsection*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}playbuzz.com}{16}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Vorteile}{16}{subsubsection*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Nachteile}{16}{subsubsection*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}WebSMS.com Zwei-Faktor-Authentifizierung}{17}{subsection.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Swisscom}{17}{subsubsection*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {paragraph}{Selbstversuch}{17}{paragraph*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Sunrise}{17}{subsubsection*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{SALT}{18}{subsubsection*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Vorteile}{18}{subsubsection*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Nachteile}{18}{subsubsection*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Grundlegende Sicherheitsprinzipien}{19}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}KISS}{19}{subsection.3.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{KISS f\IeC {\"o}rdert die Sicherheit}{19}{subsubsection*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Default-is-deny}{19}{subsection.3.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Open Design}{19}{subsection.3.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.4}Zusammenfassung der Sicherheitsprinzipien}{20}{subsection.3.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Authetentifizierungskomponenten}{20}{section.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.1}Captcha}{20}{subsection.3.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Captcha Zahlen}{20}{subsubsection*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.2}Zweiweg Authentifizierung}{20}{subsection.3.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.3}E-Mail Best\IeC {\"a}tigungs-Code}{21}{subsection.3.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit}{21}{subsubsection*.20}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mehrfach Teilnahme}{22}{subsubsection*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Kosten}{22}{subsubsection*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.4}SMS Best\IeC {\"a}tigungs-Code}{22}{subsection.3.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit}{22}{subsubsection*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mehrfach Teilnahme}{22}{subsubsection*.24}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Kosten}{22}{subsubsection*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.5}Telefonanruf mit Best\IeC {\"a}tigungscode}{23}{subsection.3.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit}{23}{subsubsection*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mehrfach Teilnahme}{23}{subsubsection*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Kosten}{23}{subsubsection*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.6}Postversand}{23}{subsection.3.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit}{23}{subsubsection*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Mehrfach Teilnahme}{23}{subsubsection*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Kosten}{24}{subsubsection*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5.7}Browser Fingerprints}{24}{subsection.3.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Fingerabdruck des Browsers}{24}{subsubsection*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Anforderungen}{26}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Use-Cases}{26}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Akteure}{26}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Diagramm}{27}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-11 Registration}{28}{subsubsection*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-12 Login}{28}{subsubsection*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-21 Konfigurieren eines Authentifizierungsvorgang}{28}{subsubsection*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-25 Einbinden in vorhandenes System}{29}{subsubsection*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-31 Authentifizieren}{29}{subsubsection*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-41 Report eines Authentifizierungsvorgangs}{30}{subsubsection*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{UC-51 Wartbarkeit}{30}{subsubsection*.41}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Anforderungen}{32}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}Aufbau}{32}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Funktionale Anforderungen}{33}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}FREQ-111 Programmierer Registration}{33}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}FREQ-112 Programmierer Login}{33}{subsection.4.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}FREQ-113 Programmierer Passwort vergessen}{33}{subsection.4.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.4}FREQ-114 Programmierer Passwort \IeC {\"a}ndern}{33}{subsection.4.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.5}FREQ-211 Konfigurieren einer neuen Social-Media Modul Authentifizierungsvorgang}{33}{subsection.4.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.6}FREQ-214 Studien Ergebnis zur Konfiguration nutzten}{34}{subsection.4.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.7}FREQ-214 Anpassen eines Authentifizierungsvorgangs}{34}{subsection.4.4.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.8}FREQ-215 Authentifizerungs-Stufe ausw\IeC {\"a}hlen}{34}{subsection.4.4.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.9}FREQ-251 Generierung von Code f\IeC {\"u}r einbinden in vorhandenes System}{34}{subsection.4.4.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.10}FREQ-311 Authentifizieren}{34}{subsection.4.4.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.11}FREQ-411 Report generieren}{35}{subsection.4.4.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Nicht Funktionale Anforderungen}{36}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.1}NFREQ-110 Betriebsystemunabh\IeC {\"a}ngigkeit}{36}{subsection.4.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.2}NFREQ-115 Wartbarkeit}{36}{subsection.4.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.3}NFREQ-120 Einfache Integration}{36}{subsection.4.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.4}NFREQ-120 Performance}{36}{subsection.4.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.5}NFREQ-120 Hohe Verf\IeC {\"u}gbarkeit}{36}{subsection.4.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Risiken}{37}{section.4.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.1}R-01 Akzeptanz}{37}{subsection.4.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.2}R-02 Kosten}{37}{subsection.4.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.3}R-03 \IeC {\"U}berkomplexit\IeC {\"a}t}{37}{subsection.4.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.4}R-04 Systemumfeld\IeC {\"a}nderungen}{37}{subsection.4.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.5}R-05 Schlechte/Unzureichende Framework}{38}{subsection.4.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.6}R-06 Termineinhaltung}{38}{subsection.4.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.7}R-07 Auslastung}{38}{subsection.4.6.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.8}Risikomatrix}{39}{subsection.4.6.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.6.9}Massnahmen}{39}{subsection.4.6.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Konzept}{41}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Architektur}{41}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Software Design}{42}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.1}Webservice}{42}{subsection.5.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2.2}}{42}{subsection.5.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Ablauf Authentifizierung}{43}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Dom\IeC {\"a}nenmodel Differenziert}{44}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Datenbankdesign}{45}{section.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.1}Database First}{45}{subsection.5.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.2}Code First}{45}{subsection.5.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.3}Entscheidung}{45}{subsection.5.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.5.4}ERD}{45}{subsection.5.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.6}Integration der Schnittstelle}{45}{section.5.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.1}Bestehende Systeme f\IeC {\"u}r Votings, Wettbewerbe und Quizes}{46}{subsection.5.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.2}Wordpress PlugIn Hook}{46}{subsection.5.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.3}Parallellen im \IeC {\"a}hnliches Anwendungsfeld}{49}{subsection.5.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Datatrans Zahlungsablauf}{49}{subsubsection*.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Datatrans XML/SOAP API Lightbox Mode}{50}{subsubsection*.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.4}Integrationsentscheid}{51}{subsection.5.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.5}Integrationskonzept}{51}{subsection.5.6.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.6.6}Integrationsparameter}{51}{subsection.5.6.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Einfache Signature}{52}{subsubsection*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.7}Sicherheitstufen integrieren}{53}{section.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Cookie}{53}{subsubsection*.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{IP-Adresse}{53}{subsubsection*.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Browser Fingerprint}{53}{subsubsection*.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{SMS Authentifizierung}{53}{subsubsection*.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Telefon Authentifizierung}{54}{subsubsection*.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Postversand Authentifizierung}{54}{subsubsection*.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7.1}\IeC {\"U}bersicht}{54}{subsection.5.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.7.2}Auswahl der zu integrierenden Sicherheitsstufen}{54}{subsection.5.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.8}Modularit\IeC {\"a}t und Erweiterbarkeit}{55}{section.5.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.1}Design by Contract}{55}{subsection.5.8.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.2}MEF - Managed Extensibility Framework}{55}{subsection.5.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.3}Entscheidung}{56}{subsection.5.8.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.8.4}Sicherheitsstufen Libaray-\IeC {\"U}bersicht anhand MEF}{57}{subsection.5.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.9}Mockup}{58}{section.5.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9.1}Konfigurator Template}{58}{subsection.5.9.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Seitenaufbau}{59}{subsubsection*.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Navigation}{59}{subsubsection*.65}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Inhaltaufbau}{59}{subsubsection*.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.9.2}Hinweis zur Zusammenarbeit mit dem Auftraggeber}{60}{subsection.5.9.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.10}Wahl des Applikation Hosters}{60}{section.5.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.1}Asp.net Shared Hosting}{60}{subsection.5.10.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.2}Cloud Hosting}{60}{subsection.5.10.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.10.3}Entscheidung}{63}{subsection.5.10.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.11}Authentifizierungsm\IeC {\"o}glichkeiten}{63}{section.5.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.12}Dom\IeC {\"a}nenmodell}{63}{section.5.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.12.1}Entit\IeC {\"a}ten}{63}{subsection.5.12.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.13}Systemarchitektur}{63}{section.5.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Studie}{64}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Art der Studie}{64}{section.6.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.1}Vor - und Nachteile schriftlicher Fragebogen}{64}{subsection.6.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1.2}Fazit}{65}{subsection.6.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Hauptziel der Studie}{66}{section.6.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Aufbau Gesamtkonzept}{66}{section.6.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.1}Einleitung}{66}{subsection.6.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Wer wird befragt?}{66}{subsubsection*.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Was ist der Zweck bzw. das Ziel der Untersuchung?}{66}{subsubsection*.71}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Was passiert mit den Ergebnissen?}{66}{subsubsection*.72}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{K\IeC {\"o}nnen die Ergebnisse eingesehen werden?}{66}{subsubsection*.73}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Wer f\IeC {\"u}hrt die Befragung durch?}{67}{subsubsection*.74}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Kontakt f\IeC {\"u}r Support und Fragen}{67}{subsubsection*.75}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Wie viel Zeit muss der Befragte Investieren?}{67}{subsubsection*.76}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.2}Hauptteil/Fragen}{68}{subsection.6.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Erste Frage}{68}{subsubsection*.77}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Funktion der fragebogen}{68}{subsubsection*.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Frageart}{68}{subsubsection*.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Fragetypen}{69}{subsubsection*.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.3.3}Abschluss}{69}{subsection.6.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Dankensformel}{69}{subsubsection*.81}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Einladung zur Kommentierung}{69}{subsubsection*.82}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}Umsetzung Gesamtkonzept}{69}{section.6.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}ProofOfConcept}{70}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}Techologien}{70}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.1}C-Sharp}{70}{subsection.7.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.2}ASP.net Web API 2 / ASP.net MVC Framework}{70}{subsection.7.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.3}Entity Framework}{71}{subsection.7.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.4}AngularJS}{71}{subsection.7.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {7.1.5}JSON}{71}{subsection.7.1.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Fazit}{72}{chapter.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Glossar}{73}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Verzeichnisse}{74}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Abbildungsverzeichnis}{74}{section.B.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Quellenverzeichnis}{75}{section.B.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}Tabellenverzeichnis}{76}{section.B.3}

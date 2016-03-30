@@ -7,6 +7,7 @@ using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Routing;
 using System.Web.Http.Cors;
+using System.Web.Http.Dispatcher;
 
 namespace Authentifizierungsservice
 {
@@ -21,6 +22,8 @@ namespace Authentifizierungsservice
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            config.Services.Replace(typeof(IAssembliesResolver), new MyAssembliesResolver());
 
             //Ignore OPTIONS Request for CORS Issue 
             var constraints = new { httpMethod = new HttpMethodConstraint(HttpMethod.Options) };

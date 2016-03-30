@@ -37,7 +37,9 @@ Neues Verzeichnisse
 \pagebreak
 
 ## Quellenverzeichnis
-
+\renewcommand{\bibname}{}\begingroup \let\clearpage\relax
+\printbibliography
+\endgroup
 
 \pagebreak
 
