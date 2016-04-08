@@ -9,6 +9,7 @@ namespace EMailSecurityStep.Models
     {
         public int EMailSecurityStepId { get; set; }
         public int ProjectId { get; set; }
+        public string ProviderId { get; set; }
         public int StatusId { get; set; }
         public DateTime Created { get; set; }
         public string EMail { get; set; }

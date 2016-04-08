@@ -15,7 +15,7 @@ namespace EMailSecurityStep.Controllers
             _repository = repository;
         }
         // GET: EMailSecurityStep
-        public ActionResult Index()
+        public ViewResult Index()
         {
             return View();
         }

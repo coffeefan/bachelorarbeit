@@ -6,49 +6,76 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EMailSecurityStep;
 using EMailSecurityStep.Controllers;
+using EMailSecurityStep.Models;
+using System.Web.Routing;
+using System.Web;
+using System.Security.Principal;
+using EMailSecurityStep.Tests.Models;
 
 namespace EMailSecurityStep.Tests.Controllers
 {
     [TestClass]
     public class EMailSecurityStepControllerTest
     {
-        [TestMethod]
-        public void Index()
+        EMailSecurityStepValidation GetEMailSecurityStepValidation(int projectId, string providerId,string email,int statusId)
         {
-            // Arrange
-            HomeController controller = new HomeController();
+            return new EMailSecurityStepValidation()
+            {
+                EMailSecurityStepId = 1,
+                ProjectId = projectId,
+                ProviderId = providerId,
+                EMail = email,
+                Code = "1234",
+                CodeEntered = "",
+                Created = new DateTime(2016, 1, 1, 12, 00, 00),
+                StatusId = statusId
+            };
+                
+        }
+        EMailSecurityStepValidation GetEMailSecurityStepValidation()
+        {
+            return GetEMailSecurityStepValidation(1, "AAA", "cbwerbung@inaffect.net", -1);
+        }
 
-            // Act
-            ViewResult result = controller.Index() as ViewResult;
+        private class MockHttpContext : HttpContextBase
+        {
+            private readonly IPrincipal _user = new GenericPrincipal(
+                     new GenericIdentity("someUser"), null /* roles */);
 
-            // Assert
-            Assert.IsNotNull(result);
+            public override IPrincipal User
+            {
+                get
+                {
+                    return _user;
+                }
+                set
+                {
+                    base.User = value;
+                }
+            }
+        }
+
+        private static EMailSecurityStepController GetHomeController(IEMailSecurityStepValidationRepository repository)
+        {
+            EMailSecurityStepController controller = new EMailSecurityStepController(repository);
+
+            controller.ControllerContext = new ControllerContext()
+            {
+                Controller = controller,
+                RequestContext = new RequestContext(new MockHttpContext(), new RouteData())
+            };
+            return controller;
         }
 
         [TestMethod]
-        public void About()
+        public void Index_Get_AsksForIndexView()
         {
             // Arrange
-            HomeController controller = new HomeController();
-
+            var controller = GetHomeController(new InMemory_EMailSecurityStepValidationRepository());
             // Act
-            ViewResult result = controller.About() as ViewResult;
-
+            ViewResult result = controller.Index();
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
-        }
-
-        [TestMethod]
-        public void Contact()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
-
-            // Act
-            ViewResult result = controller.Contact() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
+            Assert.AreEqual("Index", result.ViewName);
         }
     }
 }
