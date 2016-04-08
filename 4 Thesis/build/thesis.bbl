@@ -99,7 +99,7 @@
      {}{}}%
   }
   \list{publisher}{1}{%
-    {John Wiley & Sons Inc}%
+    {John Wiley \& Sons Inc}%
   }
   \strng{namehash}{DDA1}
   \strng{fullhash}{DDA1}
@@ -327,7 +327,8 @@
   \field{sortinit}{M}
   \field{howpublished}{\url{https://msdn.microsoft.com/de-de/library/z1zx9t92.aspx}}
   \field{note}{[Online; accessed 01-02-2016]}
-  \field{title}{Einführung in die Programmiersprache C# und in .NET Framework}
+  \field{title}{Einführung in die Programmiersprache C\# und in .NET
+  Framework}
   \field{year}{2015}
 \endentry
 

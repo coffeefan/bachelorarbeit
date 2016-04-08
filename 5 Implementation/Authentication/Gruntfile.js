@@ -253,6 +253,17 @@ module.exports = function (grunt) {
       }
     },
 
+    concat: {
+      js: {
+        src: ['dist/scripts/vendor*.js','dist/scripts/scripts*.js'],
+        dest: 'dist/scripts/concat.js'
+      },
+      css: {
+        src: ['dist/scripts/vendor*.css','dist/scripts/scripts*.css'],
+        dest: 'dist/styles/concat.css'
+      }
+    },
+
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
@@ -269,6 +280,7 @@ module.exports = function (grunt) {
         }
       }
     },
+
 
     // The following *-min tasks will produce minified files in the dist folder
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
@@ -295,6 +307,8 @@ module.exports = function (grunt) {
     // concat: {
     //   dist: {}
     // },
+
+
 
     imagemin: {
       dist: {
@@ -471,7 +485,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'concat'
   ]);
 
   grunt.registerTask('default', [

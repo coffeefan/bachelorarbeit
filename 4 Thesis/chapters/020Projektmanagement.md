@@ -98,7 +98,7 @@ Table: Termine der Bachelorarbeit
 \newpage
 
 ##Infrastruktur
-Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert werden.
+Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert werden. [TESTLINK][Open Design]
 
 ###Quellcode-Verwaltung
 Um einerseits eine Datensicherung zu gewährleisten und anderseits die Änderungen nachvollziehbar abzulegen, wird die Bachelorarbeit mittels Git und GitHub versioniert. Das Repository [^gitrepository] ist für den Betreuer, Experten und Auftrageber jederzeit einsehbar.
