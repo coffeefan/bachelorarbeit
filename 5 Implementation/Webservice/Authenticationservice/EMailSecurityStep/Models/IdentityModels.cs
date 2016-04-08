@@ -18,18 +18,20 @@ namespace EMailSecurityStep.Models
         }
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    
+
+    public class Application2DbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+        public Application2DbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 
-        public DbSet<EMailSecurityStepValidation> EMailSecurityStepValidations { get; set; }
+        
 
-        public static ApplicationDbContext Create()
+        public static Application2DbContext Create()
         {
-            return new ApplicationDbContext();
+            return new Application2DbContext();
         }
     }
 }

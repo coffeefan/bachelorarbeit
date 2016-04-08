@@ -28,7 +28,7 @@ namespace EMailSecurityStep.Tests.Models
 
         public EMailSecurityStepValidation GetEMailSecurityStepValidationByID(int id)
         {
-            return _db.FirstOrDefault(essv => essv.EMailSecurityStepId == id);
+            return _db.FirstOrDefault(essv => essv.EMailSecurityStepValidationId == id);
         }
 
         public int SaveChanges()

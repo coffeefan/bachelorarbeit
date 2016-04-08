@@ -7,7 +7,7 @@ namespace EMailSecurityStep.Models
 {
     public class EMailSecurityStepValidation
     {
-        public int EMailSecurityStepId { get; set; }
+        public int EMailSecurityStepValidationId { get; set; }
         public int ProjectId { get; set; }
         public string ProviderId { get; set; }
         public int StatusId { get; set; }
