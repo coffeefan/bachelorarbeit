@@ -182,6 +182,7 @@
     <Compile Include="Models\EMailSecurityStepValidation.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IEMailSecurityStepValidationRepository.cs" />
+    <Compile Include="Models\MailHandler.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -241,9 +242,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\EMailSecurityStep\Index.cshtml" />
-    <Content Include="Views\EMailSecurityStep\Step2.cshtml" />
     <Content Include="Views\EMailSecurityStep\SetParameter.cshtml" />
+    <Content Include="Views\EMailSecurityStep\Index.cshtml" />
+    <Content Include="Views\EMailSecurityStep\CodeValidation.cshtml" />
+    <Content Include="Views\EMailSecurityStep\ValidationSuccesed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

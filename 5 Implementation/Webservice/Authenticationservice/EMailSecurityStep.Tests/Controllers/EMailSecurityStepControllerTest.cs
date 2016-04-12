@@ -23,14 +23,15 @@ namespace EMailSecurityStep.Tests.Controllers
         private static string providerId = "AAA";
 
         [ClassInitialize()]
-        public static void EMailSecurityStepControllerTestnitialize(TestContext testContext) {
-            
+        public static void EMailSecurityStepControllerTestnitialize(TestContext testContext)
+        {
+
         }
 
 
 
 
-        EMailSecurityStepValidation GetEMailSecurityStepValidation(int projectId, string providerId,string email,int statusId)
+        EMailSecurityStepValidation GetEMailSecurityStepValidation(int projectId, string providerId, string email, int statusId)
         {
             return new EMailSecurityStepValidation()
             {
@@ -43,7 +44,7 @@ namespace EMailSecurityStep.Tests.Controllers
                 Created = new DateTime(2016, 1, 1, 12, 00, 00),
                 StatusId = statusId
             };
-                
+
         }
         EMailSecurityStepValidation GetEMailSecurityStepValidation()
         {
@@ -94,16 +95,16 @@ namespace EMailSecurityStep.Tests.Controllers
         [TestMethod]
         public void Generate_Code_IsNummeric()
         {
-            string code=EMailSecurityStepController.RandomString(6);
-            int n;            
-            Assert.IsTrue(int.TryParse(code,out n));
+            string code = EMailSecurityStepController.RandomString(6);
+            int n;
+            Assert.IsTrue(int.TryParse(code, out n));
         }
 
         [TestMethod]
         public void Generate_Code_6CharactersLong()
         {
             string code = EMailSecurityStepController.RandomString(6);
-            Assert.AreEqual(code.Length,6);
+            Assert.AreEqual(code.Length, 6);
         }
 
         public static class MockHelpers
@@ -127,7 +128,28 @@ namespace EMailSecurityStep.Tests.Controllers
         }
 
         [TestMethod]
-        public void Step2_SaveValidationIntoRepository()
+        public void GenerateMailText()
+        {
+            InMemory_EMailSecurityStepValidationRepository repository = new InMemory_EMailSecurityStepValidationRepository();
+            EMailSecurityStepController controller = GetEMailSecurityStepController(repository);
+            Assert.AreEqual(controller.generateMailText("test"), "Bitte tragen Sie folgenden den Code test im Webformular ein");
+        }
+
+        [TestMethod]
+        public void Send_Mail()
+        {
+            string email = "cbwerbung@inaffect.net";
+            string name = "Test";
+            string subject = "Testemail";
+            string plaintext = "Das ist ein Test";
+            string htmlbody = "Das ist ein <strong>Test</strong>";
+            bool result = new MailHandler().send(email, name, subject, plaintext, htmlbody);
+            Assert.IsTrue(result);
+        }
+
+
+        [TestMethod]
+        public void Index_SaveValidationIntoRepository()
         {
             HttpContext.Current = MockHelpers.FakeHttpContext();
             HttpContext.Current.Session["ProviderId"] = providerId;
@@ -138,18 +160,145 @@ namespace EMailSecurityStep.Tests.Controllers
             InMemory_EMailSecurityStepValidationRepository repository = new InMemory_EMailSecurityStepValidationRepository();
             EMailSecurityStepController controller = GetEMailSecurityStepController(repository);
 
-            
-
-
             // Act
-            controller.Step2(email);
+            controller.Index(new EMailSecurityStepValidation_Mail()
+            {
+                EMail = email
+            });
 
             // Assert
             IEnumerable<EMailSecurityStepValidation> eMailSecurityStepValidations = repository.GetAllEMailSecurityStepValidations();
-            EMailSecurityStepValidation eMailSecurityStepValidation = 
+            EMailSecurityStepValidation eMailSecurityStepValidation =
                 eMailSecurityStepValidations.FirstOrDefault(essv => essv.EMail == email);
             Assert.IsNotNull(eMailSecurityStepValidation);
-            Assert.AreEqual(eMailSecurityStepValidation.ProjectId,projectId);
+            Assert.AreEqual(eMailSecurityStepValidation.ProjectId, projectId);
         }
+
+        [TestMethod]
+        public void Check_Is_MailInSession()
+        {
+            HttpContext.Current = MockHelpers.FakeHttpContext();
+            String email = "testmail@testworld.ch";
+            HttpContext.Current.Session["email"] = email;
+
+            InMemory_EMailSecurityStepValidationRepository repository = new InMemory_EMailSecurityStepValidationRepository();
+            EMailSecurityStepController controller = GetEMailSecurityStepController(repository);
+            Assert.IsTrue(controller.isEMailInSession(email));
+        }
+
+        [TestMethod]
+        public void CodeValidation_Get_AsksForIndexView()
+        {
+            // Arrange
+            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+            // Act
+            ViewResult result = controller.CodeValidation();
+            // Assert
+            Assert.AreEqual("CodeValidation", result.ViewName);
+        }
+
+        [TestMethod]
+        public void EMailSecurityStep_Status_NOTOPEN()
+        {
+            // Arrange
+            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+            // Act
+            EMailSecurityStepValidation_Status result = controller.GetEMailSecurityStepValidationStatus(1, "ZZZ");
+            // Assert
+            Assert.AreEqual(result, EMailSecurityStepValidation_Status.NOTOPEN);
+        }
+
+        [TestMethod]
+        public void EMailSecurityStep_Status_OPEN()
+        {
+            InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
+            // Arrange
+            var controller = GetEMailSecurityStepController(_repository);
+            // Act
+
+            _repository.CreateNewEMailSecurityStepValidation(
+                new EMailSecurityStepValidation()
+                {
+                    ProjectId = 1,
+                    ProviderId = "ZZZ",
+                    StatusId = -1
+                }
+                );
+
+
+            EMailSecurityStepValidation_Status result = controller.GetEMailSecurityStepValidationStatus(1, "ZZZ");
+            // Assert
+            Assert.AreEqual(result, EMailSecurityStepValidation_Status.NOTOPEN);
+        }
+
+        [TestMethod]
+        public void EMailSecurityStep_Status_VALID()
+        {
+            InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
+            // Arrange
+            var controller = GetEMailSecurityStepController(_repository);
+            // Act
+
+            _repository.CreateNewEMailSecurityStepValidation(
+                new EMailSecurityStepValidation()
+                {
+                    ProjectId = 1,
+                    ProviderId = "ZZZ",
+                    StatusId = 1
+                }
+                );
+
+
+            EMailSecurityStepValidation_Status result = controller.GetEMailSecurityStepValidationStatus(1, "ZZZ");
+            // Assert
+            Assert.AreEqual(result, EMailSecurityStepValidation_Status.VALID);
+        }
+
+        [TestMethod]
+        public void EMailSecurityStep_Status_INVALID()
+        {
+            InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
+            // Arrange
+            var controller = GetEMailSecurityStepController(_repository);
+            // Act
+
+            _repository.CreateNewEMailSecurityStepValidation(
+                new EMailSecurityStepValidation()
+                {
+                    ProjectId = 1,
+                    ProviderId = "ZZZ",
+                    StatusId = 0
+                }
+                );
+
+            EMailSecurityStepValidation_Status result = controller.GetEMailSecurityStepValidationStatus(1, "ZZZ");
+            // Assert
+            Assert.AreEqual(result, EMailSecurityStepValidation_Status.INVALID);
+        }
+
+        [TestMethod]
+        public void EMailSecurityStep_Status_Update()
+        {
+            InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
+            _repository.CreateNewEMailSecurityStepValidation(
+                new EMailSecurityStepValidation()
+                {
+                    ProjectId = 1,
+                    ProviderId = "ZZZ",
+                    StatusId = 1
+                }
+                );
+            _repository.UpdateEMailSecurityStepValidation(new EMailSecurityStepValidation()
+            {
+                ProjectId = 1,
+                ProviderId = "ZZZ",
+                StatusId = 122
+            });
+
+            EMailSecurityStepValidation essv = _repository.GetEMailSecurityStepValidationByValid(1,"ZZZ");
+            Assert.AreEqual(essv.StatusId, 122);
+
+        }
+
     }
 }

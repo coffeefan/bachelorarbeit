@@ -10,6 +10,7 @@ namespace EMailSecurityStep.Controllers
     {
         public ActionResult Index()
         {
+            int x = 1 + 1;
             return View();
         }
 

@@ -25,6 +25,10 @@ namespace Authenticationservice.Models
         {
         }
 
+        public DbSet<Project> Projects { get; set; }
+        public DbSet<ProjectSecurityStep> ProjectSecuritySteps { get; set; }
+        public DbSet<ProjectAuthentication> ProjectAuthentication { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

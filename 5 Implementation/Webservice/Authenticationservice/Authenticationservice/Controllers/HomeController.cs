@@ -11,9 +11,18 @@ namespace Authenticationservice.Controllers
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
+        public ActionResult Index() { 
             return View();
+        }
+
+        public ActionResult Validate(int ProjectId, string ProviderId)
+        {
+            System.Web.HttpContext.Current.Session["ProjectId"] = ProjectId;
+            System.Web.HttpContext.Current.Session["ProviderId"] = ProviderId;
+            
+
+            return RedirectToAction("Index", "EMailSecurityStep");
+            
         }
 
         public ActionResult Loading()

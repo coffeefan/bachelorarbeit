@@ -166,8 +166,7 @@
 }
 /* iFrame */
 .lity-iframe .lity-container {
-  width: 100%;
-  max-width: 964px;
+  width: 400px;
 }
 .lity-iframe-container {
   width: 100%;

@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -14,6 +16,7 @@ namespace Authenticationservice
     {
         protected void Application_Start()
         {
+            AntiForgeryConfig.SuppressXFrameOptionsHeader = true;
             var pluginFolders = new List<string>();
 
             var plugins = Directory.GetDirectories(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Modules")).ToList();
@@ -31,6 +34,7 @@ namespace Authenticationservice
             ViewEngines.Engines.Add(new CustomViewEngine(pluginFolders));
 
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
         }
     }
 }

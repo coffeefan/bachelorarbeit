@@ -1,0 +1,27 @@
+{
+  "name": "AuthenciationLightbox",
+  "title": "AuthenticationLightbox",
+  "description": "\u001b[A\u001b[A\u001b[c\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C  \u001b[A\u001b[A\u001b[B\u001b[B",
+  "version": "0.0.8",
+  "homepage": "https://github.com/coffeefan/bachelorarbeit",
+  "author": {
+    "name": "Chris Bachmann",
+    "email": "bachmch3@students.zhaw.ch",
+    "url": "http://www.christianbachmann.ch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coffeefan/bachelorarbeit.git"
+  },
+  "bugs": "https://github.com/coffeefan/bachelorarbeit/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/coffeefan/bachelorarbeit/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

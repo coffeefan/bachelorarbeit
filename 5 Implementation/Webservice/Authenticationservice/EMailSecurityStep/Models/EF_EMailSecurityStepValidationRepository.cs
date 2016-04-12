@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -27,12 +28,29 @@ namespace EMailSecurityStep.Models
             return _db.EMailSecurityStepValidations.FirstOrDefault(essv => essv.EMailSecurityStepValidationId == id);
         }
 
-        public int SaveChanges()
+        public EMailSecurityStepValidation GetEMailSecurityStepValidationByValid(int projectid, string providerid)
         {
-            throw new NotImplementedException();
+            return _db.EMailSecurityStepValidations.FirstOrDefault(essv => essv.ProjectId== projectid && essv.ProviderId== providerid);
         }
 
-       
 
+
+        public void UpdateEMailSecurityStepValidation(EMailSecurityStepValidation eMailSecurityStepValidation)
+        {
+            EMailSecurityStepValidation essvtemp=
+                _db.EMailSecurityStepValidations.FirstOrDefault(essv => essv.EMailSecurityStepValidationId == eMailSecurityStepValidation.EMailSecurityStepValidationId);
+
+            essvtemp = eMailSecurityStepValidation;
+            _db.Entry(essvtemp).State= EntityState.Modified;
+            _db.SaveChanges();
+
+        }
+
+        public void resetEMailSecurityStepValidationByValid(int projectid, string providerid)
+        {
+            _db.EMailSecurityStepValidations.RemoveRange(
+            _db.EMailSecurityStepValidations.Where(essv => essv.ProjectId == projectid && essv.ProviderId == providerid && essv.StatusId != 1));
+            _db.SaveChanges();
+        }
     }
 }

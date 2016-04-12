@@ -1,28 +1,30 @@
 # AuthenticationLightbox
 
-> Lightbox for Authenticationservice
-
+[A[A[c[D[D[D[D[D[D[D[C[C[C[C[C[C[C[C[C[C[C[C  [A[A[B[B
 
 ## Getting Started
-
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.githubusercontent.com/coffeefan/jquery-authenticationlightbox/master/dist/jquery.authenticationlightbox.min.js
-[max]: https://raw.githubusercontent.com/coffeefan/jquery-authenticationlightbox/master/dist/jquery.authenticationlightbox.js
+[min]: https://raw.github.com/coffeefan/bachelorarbeit/master/dist/AuthenciationLightbox.min.js
+[max]: https://raw.github.com/coffeefan/bachelorarbeit/master/dist/AuthenciationLightbox.js
 
 In your web page:
 
 ```html
 <script src="jquery.js"></script>
-<script src="dist/authenticationlightbox.min.js"></script>
+<script src="dist/AuthenciationLightbox.min.js"></script>
 <script>
-  jQuery(function ($) {
-    $.awesome(); // "awesome"
-  });
+jQuery(function($) {
+  $.awesome(); // "awesome"
+});
 </script>
 ```
 
+## Documentation
+_(Coming soon)_
 
-## License
+## Examples
+_(Coming soon)_
 
-MIT © Chris Bachmann
+## Release History
+_(Nothing yet)_

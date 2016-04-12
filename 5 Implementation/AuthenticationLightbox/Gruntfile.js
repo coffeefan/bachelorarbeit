@@ -1,19 +1,16 @@
 'use strict';
-module.exports = function (grunt) {
-  // Load all grunt tasks
-  require('load-grunt-tasks')(grunt);
-  // Show elapsed time at the end
-  require('time-grunt')(grunt);
+
+module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
     // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+    pkg: grunt.file.readJSON('AuthenciationLightbox.jquery.json'),
+    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
       '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed MIT */\n',
+      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
     clean: {
       files: ['dist']
@@ -24,9 +21,9 @@ module.exports = function (grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['src/<%= pkg.name %>.js'],
+        src: ['src/jquery.<%= pkg.name %>.js'],
         dest: 'dist/jquery.<%= pkg.name %>.js'
-      }
+      },
     },
     uglify: {
       options: {
@@ -35,37 +32,24 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'dist/jquery.<%= pkg.name %>.min.js'
-      }
+      },
     },
     qunit: {
-      all: {
-        options: {
-          urls: ['http://localhost:9000/test/<%= pkg.name %>.html']
-        }
-      }
+      files: ['test/**/*.html']
     },
     jshint: {
       options: {
-        reporter: require('jshint-stylish')
+        jshintrc: true
       },
       gruntfile: {
-        options: {
-          jshintrc: '.jshintrc'
-        },
         src: 'Gruntfile.js'
       },
       src: {
-        options: {
-          jshintrc: 'src/.jshintrc'
-        },
         src: ['src/**/*.js']
       },
       test: {
-        options: {
-          jshintrc: 'test/.jshintrc'
-        },
         src: ['test/**/*.js']
-      }
+      },
     },
     watch: {
       gruntfile: {
@@ -79,24 +63,19 @@ module.exports = function (grunt) {
       test: {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
-      }
+      },
     },
-    connect: {
-      server: {
-        options: {
-          hostname: '*',
-          port: 9000
-        }
-      }
-    }
   });
 
+  // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-qunit');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+
   // Default task.
-  grunt.registerTask('default', ['jshint', 'connect', 'qunit', 'clean', 'concat', 'uglify']);
-  grunt.registerTask('server', function () {
-    grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-    grunt.task.run(['serve']);
-  });
-  grunt.registerTask('serve', ['connect', 'watch']);
-  grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
+  grunt.registerTask('default', ['jshint', 'qunit', 'clean', 'concat', 'uglify']);
+
 };
