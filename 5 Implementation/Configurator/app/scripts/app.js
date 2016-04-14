@@ -66,11 +66,21 @@ angular
                 controller: 'RegistrationCtrl',
                 controllerAs: 'registration'
             })
+            .when('/projects/', {
+                templateUrl: 'views/projectoverview.html',
+                controller: 'ProjectOverviewCtrl',
+                controllerAs: 'projectoverview'
+            })
+            .when('/projects/detail/:projectId', {
+                templateUrl: 'views/projectdetail.html',
+                controller: 'ProjectDetailCtrl',
+                controllerAs: 'projectdetail'
+            })
             .otherwise({
                 redirectTo: '/'
             });
     }).run(function ($rootScope, $window, $sessionStorage, $location) {
-        $rootScope.ServiceUrl = "http://localhost:55636/";
+        $rootScope.ServiceUrl = "http://localhost:53204/";
 
         $rootScope.isLoggedIn = false;
         if (typeof $sessionStorage.accessToken != 'undefined') {

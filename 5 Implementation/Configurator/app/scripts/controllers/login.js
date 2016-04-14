@@ -49,21 +49,23 @@ angular.module('configuratorApp')
                     location.reload();
 
                 }).error(function(data){
+                    delete $sessionStorage.accessToken;
                     console.log("Error2");
                     console.log(data);
                     swal({
                         title: "Login",
-                        text: data.error_description,
+                        text: data.Message,
                         type: "error"
                     });
                 });
 
             }).error(function(data){
+                delete $sessionStorage.accessToken;
                 console.log("Error1");
                 console.log(data);
                 swal({
                     title: "Login",
-                    text: data.error_description,
+                    text: data.Message,
                     type: "error"
                 });
             });

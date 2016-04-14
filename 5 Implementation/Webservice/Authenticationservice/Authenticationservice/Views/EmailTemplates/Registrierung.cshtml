@@ -1,11 +1,11 @@
-﻿@using Authentifizierungsservice.Resource;
-@using Authentifizierungsservice.Models;
-@using Authentifizierungsservice.Models.Helper;
+﻿@using Authenticationservice.Resource;
+@using Authenticationservice.Models;
+@using Authenticationservice.Models.Helper;
 
 @model RegistrierungDTO
 
 @{
-    var imglink = Model.ConfigurationUrl + "images/e-mail-registration.jpg";
+    var imglink = Model.ConfigurationUrl + "/images/e-mail-registration.jpg";
     Layout = null;
 }
 
@@ -179,7 +179,7 @@
                                                 <td align="center" style="padding-top: 25px;" class="padding">
                                                     <table border="0" cellspacing="0" cellpadding="0" class="mobile-button-container">
                                                         <tr>
-                                                            <td align="center" style="border-radius: 3px;" bgcolor="#1F77D0"><a href="@Model.ConfigurationUrl#/confirm-registration?UserId=@Model.UserId&Code=@Model.Code" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #1F77D0; display: inline-block;" class="mobile-button">@Email.Registration_BtnConfirm&rarr;</a></td>
+                                                            <td align="center" style="border-radius: 3px;" bgcolor="#1F77D0"><a href="@Model.ConfigurationUrl/#/confirm-registration?UserId=@Model.UserId&Code=@Model.Code" target="_blank" style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; border-radius: 3px; padding: 15px 25px; border: 1px solid #1F77D0; display: inline-block;" class="mobile-button">@Email.Registration_BtnConfirm&rarr;</a></td>
                                                         </tr>
                                                     </table>
                                                 </td>

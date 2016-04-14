@@ -4,7 +4,7 @@
             <h4 class="title">Registrationsformular</h4>
         </div>
         <div class="content">
-            <form>
+            <form data-ng-submit="requestRegistration()">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Registrieren</button><br/>
+                <button type="submit"  class="btn btn-info btn-fill ">Registrieren</button><br/>
                 <hr/>
                 <a href="login/">Konto bereits registriert</a><br/>
                 <div class="clearfix"></div>

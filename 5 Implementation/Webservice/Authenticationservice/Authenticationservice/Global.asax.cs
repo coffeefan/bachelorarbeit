@@ -27,6 +27,7 @@ namespace Authenticationservice
                 pluginFolders.Add(di.Name);
             });
 
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             Bootstrapper.Compose(pluginFolders);

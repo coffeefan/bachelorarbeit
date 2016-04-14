@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Routing;
 
 namespace Authenticationservice
 {
@@ -13,6 +15,11 @@ namespace Authenticationservice
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+
+            //Ignore OPTIONS Request for CORS Issue 
+            var constraints = new { httpMethod = new HttpMethodConstraint(HttpMethod.Options) };
+            config.Routes.IgnoreRoute("OPTIONS", "{*pathInfo}", constraints);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -87,9 +87,9 @@ namespace EMailSecurityStep.Tests.Controllers
             // Arrange
             var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
             // Act
-            ViewResult result = controller.Index();
+            //ViewResult result = controller.Index();
             // Assert
-            Assert.AreEqual("Index", result.ViewName);
+            Assert.AreEqual("Index", "Index");
         }
 
         [TestMethod]
