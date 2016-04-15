@@ -86,11 +86,23 @@
     <Compile Include="..\EMailSecurityStep\Models\ApplicationDbContext.cs">
       <Link>ApplicationDbContext.cs</Link>
     </Compile>
+    <Compile Include="..\EMailSecurityStep\Models\EF_EMailSecurityStepConfigRepository.cs">
+      <Link>EF_EMailSecurityStepConfigRepository.cs</Link>
+    </Compile>
     <Compile Include="..\EMailSecurityStep\Models\EF_EMailSecurityStepValidationRepository.cs">
       <Link>EF_EMailSecurityStepValidationRepository.cs</Link>
     </Compile>
+    <Compile Include="..\EMailSecurityStep\Models\EMailSecurityStepConfig.cs">
+      <Link>EMailSecurityStepConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\EMailSecurityStep\Models\EMailSecurityStepInfo.cs">
+      <Link>EMailSecurityStepInfo.cs</Link>
+    </Compile>
     <Compile Include="..\EMailSecurityStep\Models\EMailSecurityStepValidation.cs">
       <Link>EMailSecurityStepValidation.cs</Link>
+    </Compile>
+    <Compile Include="..\EMailSecurityStep\Models\IEMailSecurityStepConfigRepository.cs">
+      <Link>IEMailSecurityStepConfigRepository.cs</Link>
     </Compile>
     <Compile Include="..\EMailSecurityStep\Models\IEMailSecurityStepValidationRepository.cs">
       <Link>IEMailSecurityStepValidationRepository.cs</Link>
@@ -103,6 +115,15 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SecurityStepContract\SecurityStepContract.csproj">
+      <Project>{127b21cf-55d0-4d8b-9814-324985ed05a8}</Project>
+      <Name>SecurityStepContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

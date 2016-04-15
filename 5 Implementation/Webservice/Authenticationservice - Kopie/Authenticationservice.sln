@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authenticationservice", "Authenticationservice\Authenticationservice.csproj", "{07439958-D733-4642-BCD0-1EDBB4588E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSSecurityStep", "SMSSecurityStep\SMSSecurityStep.csproj", "{AABF1EA0-FD17-4794-AAF0-DACEB6B8C337}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SMSSecurityStepPlugin", "SMSSecurityStepPlugin\SMSSecurityStepPlugin.xproj", "{71DF7C4A-023A-43A7-A722-2CB5931F34BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSSecurityStepLib", "SMSSecurityStepLib\SMSSecurityStepLib.csproj", "{3C21E7C3-C185-4D82-9725-056A67A1BE45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMailSecurityStep", "EMailSecurityStep\EMailSecurityStep.csproj", "{115AE1F9-2927-4E45-AD73-62DC7FACD567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMailSecurityStep.Tests", "EMailSecurityStep.Tests\EMailSecurityStep.Tests.csproj", "{343355EB-BAC7-4C36-8DDD-9BE7E920EB76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMailSecurityStepLib", "EMailSecurityStepLib\EMailSecurityStepLib.csproj", "{0B73482D-64A2-410D-88BC-276072EED1D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07439958-D733-4642-BCD0-1EDBB4588E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07439958-D733-4642-BCD0-1EDBB4588E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07439958-D733-4642-BCD0-1EDBB4588E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07439958-D733-4642-BCD0-1EDBB4588E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AABF1EA0-FD17-4794-AAF0-DACEB6B8C337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AABF1EA0-FD17-4794-AAF0-DACEB6B8C337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AABF1EA0-FD17-4794-AAF0-DACEB6B8C337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AABF1EA0-FD17-4794-AAF0-DACEB6B8C337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71DF7C4A-023A-43A7-A722-2CB5931F34BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DF7C4A-023A-43A7-A722-2CB5931F34BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71DF7C4A-023A-43A7-A722-2CB5931F34BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71DF7C4A-023A-43A7-A722-2CB5931F34BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C21E7C3-C185-4D82-9725-056A67A1BE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C21E7C3-C185-4D82-9725-056A67A1BE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C21E7C3-C185-4D82-9725-056A67A1BE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C21E7C3-C185-4D82-9725-056A67A1BE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{115AE1F9-2927-4E45-AD73-62DC7FACD567}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{115AE1F9-2927-4E45-AD73-62DC7FACD567}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{115AE1F9-2927-4E45-AD73-62DC7FACD567}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{115AE1F9-2927-4E45-AD73-62DC7FACD567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343355EB-BAC7-4C36-8DDD-9BE7E920EB76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343355EB-BAC7-4C36-8DDD-9BE7E920EB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343355EB-BAC7-4C36-8DDD-9BE7E920EB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343355EB-BAC7-4C36-8DDD-9BE7E920EB76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B73482D-64A2-410D-88BC-276072EED1D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B73482D-64A2-410D-88BC-276072EED1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B73482D-64A2-410D-88BC-276072EED1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B73482D-64A2-410D-88BC-276072EED1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -35,6 +35,7 @@ namespace Authenticationservice
             ViewEngines.Engines.Add(new CustomViewEngine(pluginFolders));
 
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            new SecurityStepInfoContainer().runSecurityStepInfoContainer();
 
         }
     }

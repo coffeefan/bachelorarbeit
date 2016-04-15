@@ -6,29 +6,19 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>Vorname</th>
-                <th>Nachname</th>
-                <th>Kanzlei</th>
+                <th>Projekt ID</th>
+                <th>Betzeichnung</th>
                 <th></th>
             </tr>
             </thead>
             <tbody>
             <tr data-ng-repeat="project in projects">
-                <td><a data-ng-href="detail/{{anwalt.Slug}}">{{anwalt.Vorname}}</a></td>
-                <td><a data-ng-href="detail/{{anwalt.Slug}}">{{anwalt.Nachname}}</a></td>
-                <td><a data-ng-href="detail/{{anwalt.Slug}}">{{anwalt.Kanzlei.Name}}</a></td>
-                <td class="text-center">
-                    <div ng-show="!anwalt.EMailConfirmed"  class="">
-                        <span class="label label-danger">E-Mail noch nicht bestätigt</span>
-                    </div>
-                    <div ng-show="anwalt.EMailConfirmed"  class="">
-                        <button ng-show="!anwalt.Validated" class="btn btn-xs btn-warning" data-ng-click="validate(anwalt.PersonId)">
-                            Validieren
-                        </button>
-                        <button ng-show="anwalt.Validated" class="btn btn-xs btn-info" data-ng-click="unvalidate(anwalt.PersonId)">
-                            Validierung entfernen
-                        </button>
-                    </div>
+                <td><a data-ng-href="/#/projects/detail/{{project.ProjectId}}" class="blacklink">{{project.ProjectId}}</a></td>
+                <td><a data-ng-href="/#/projects/detail/{{project.ProjectId}}" class="blacklink">{{project.Description}}</a></td>
+                <td class="text-right">
+
+                    <a class="btn btn-xs btn-info" data-ng-href="/#/projects/detail/{{project.ProjectId}}"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <a class="btn btn-xs btn-warning" href data-ng-click="deleteProject(project.ProjectId)"><span class="glyphicon glyphicon-trash"></span></a>
                 </td>
             </tr>
             </tbody>

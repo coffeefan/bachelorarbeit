@@ -50,22 +50,21 @@ namespace Authenticationservice.Controllers
                 return BadRequest(ModelState);
             }
 
-            
-
             ApplicationUser dbuser = db.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault();
-            Project projectTemp = db.Projects.Where(p => p.ProjectId == id && p.ApplicationUserId== dbuser.Id).FirstOrDefault();
+            Project projectTemp = db.Projects.Where(p => p.ProjectId == id && p.ApplicationUserId == dbuser.Id).FirstOrDefault();
 
-            if (id != project.ProjectId || projectTemp==null || project.ApplicationUserId != dbuser.Id)
+            if (id != project.ProjectId || projectTemp == null)
             {
                 return BadRequest();
             }
 
-           
+            projectTemp.Description = project.Description;
+            projectTemp.ReturnUrl = project.ReturnUrl;
             project.Updated = MasterFunctions.GetWestEuropeDate();
-            db.Entry(project).State = EntityState.Modified;
+
+
+            db.Entry(projectTemp).State = EntityState.Modified;
             project.IsDeleted = false;
-            db.Entry(project).Property(x => x.Created).IsModified = false;
-            db.Entry(project).Property(x => x.ApplicationUserId).IsModified = false;
 
             try
             {
@@ -146,6 +145,15 @@ namespace Authenticationservice.Controllers
 
             return Ok(project);
         }
+
+        [OverrideAuthorization, AllowAnonymous]
+        [Route("api/Projects/Config")]
+        public IHttpActionResult GETProductConfg()
+        {
+            new SecurityStepInfoContainer();
+            return Ok();
+        } 
+
 
         protected override void Dispose(bool disposing)
         {

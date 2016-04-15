@@ -15,7 +15,8 @@ factory('ProjectService', function($resource,$rootScope,$sessionStorage){
         'find': { method:'Get',isArray:false, headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken}},
         'findAll': { method:'Get',isArray:true, headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken}},
         'add': { method:'Post',isArray:false, headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken}},
-        'update': { method:'Put',isArray:false, headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken}}
+        'update': { method:'Put',isArray:false, headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken}},
+        'remove': { method:'delete',isArray:false, headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken}}
     });
 
 

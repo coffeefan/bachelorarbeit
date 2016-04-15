@@ -64,4 +64,14 @@ angular.module('configuratorApp')
             $scope.loadProject($scope.project.ProjectId);
         }
 
+        $scope.success = function () {
+            console.log('Copied!');
+            $rootScope.showAlert("alertCopied");
+        };
+
+        $scope.fail = function (err) {
+            console.error('Error!', err);
+            return false;
+        };
+
     });

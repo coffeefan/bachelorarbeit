@@ -17,10 +17,11 @@ namespace Authenticationservice.Models
         public int ProjectAuthenticationId { get; set; }
         public int ProjectId { get; set; }
         public Project Project { get; set; }
-        public String ProviderId { get; set; }
-        public String IPAdresse { get; set; }
+        public string ProviderId { get; set; }
+        public string IPAdresse { get; set; }
         public AuthenticationStatus AuthenticationStatus { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
+        public DateTime Finished { get; set; }
     }
 }

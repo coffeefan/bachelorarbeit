@@ -178,9 +178,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\EF_EMailSecurityStepConfigRepository.cs" />
     <Compile Include="Models\EF_EMailSecurityStepValidationRepository.cs" />
+    <Compile Include="Models\EMailSecurityStepConfig.cs" />
+    <Compile Include="Models\EMailSecurityStepInfo.cs" />
     <Compile Include="Models\EMailSecurityStepValidation.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IEMailSecurityStepConfigRepository.cs" />
     <Compile Include="Models\IEMailSecurityStepValidationRepository.cs" />
     <Compile Include="Models\MailHandler.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -257,6 +261,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SecurityStepContract\SecurityStepContract.csproj">
+      <Project>{127b21cf-55d0-4d8b-9814-324985ed05a8}</Project>
+      <Name>SecurityStepContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

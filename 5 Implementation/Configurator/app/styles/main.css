@@ -59,3 +59,8 @@
 .table-upgrade td:nth-child(3){
   text-align: center;
 }
+
+
+a.blacklink, a:hover.blacklink{
+  color: #000000;
+}

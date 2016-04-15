@@ -14,6 +14,7 @@ namespace EMailSecurityStep.Models
         }
 
         public DbSet<EMailSecurityStepValidation> EMailSecurityStepValidations { get; set; }
+        public DbSet<EMailSecurityStepConfig> EMailSecurityStepConfigs { get; set; }
 
         public static ApplicationDbContext Create()
         {

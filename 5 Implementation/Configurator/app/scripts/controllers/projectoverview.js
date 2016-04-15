@@ -20,6 +20,31 @@ angular.module('configuratorApp')
             });
         };
 
+        $scope.deleteProject= function(projectId){
+
+            swal({
+                title: "Löschen von Projekt "+projectId,
+                text: "Willst du wirklich das Projekt löschen?",
+                type: "warning",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true
+            },
+                function(){
+                    $scope.deleteProjectNow(projectId);
+            });
+        };
+
+        $scope.deleteProjectNow=function(projectId){
+            ProjectService.remove({id:projectId}, {}, function (data) {
+                swal({title: "Löschung erfolgreich", text: "Das Projekt wurde erfolgreich gelöscht", type: "success"}, function () {
+                    location.reload();
+                });
+            }, function (error) {
+                $rootScope.errorAlert(error)
+            });
+        };
+
 
         $scope.loadProjects();
 

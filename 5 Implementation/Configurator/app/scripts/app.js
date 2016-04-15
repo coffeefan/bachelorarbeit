@@ -17,7 +17,8 @@ angular
         'ngSanitize',
         'ngTouch',
         'angular-loading-bar',
-        'ngStorage'
+        'ngStorage',
+        'angular-clipboard'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -79,7 +80,7 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
-    }).run(function ($rootScope, $window, $sessionStorage, $location) {
+    }).run(function ($rootScope, $window, $sessionStorage,$route, $location) {
         $rootScope.ServiceUrl = "http://localhost:53204/";
 
         $rootScope.isLoggedIn = false;
@@ -91,4 +92,13 @@ angular
             {key: 'men', name: 'Männlich'},
             {key: 'women', name: 'Weiblich'}
         ];
+
+        $rootScope.showAlert=function(showAlert){
+            $rootScope[showAlert]=true;
+            setTimeout(function(){ $rootScope[showAlert]=false; $route.reload();}, 4000);
+        };
+
+        $rootScope.hideAlert=function(hideAlert) {
+            $rootScope[hideAlert] = false;
+        };
 });
