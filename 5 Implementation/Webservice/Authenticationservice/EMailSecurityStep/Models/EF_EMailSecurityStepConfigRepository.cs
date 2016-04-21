@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
@@ -21,8 +22,27 @@ namespace EMailSecurityStep.Models
             _db.EMailSecurityStepConfigs.RemoveRange(
             _db.EMailSecurityStepConfigs.Where(essc => essc.ProjectId == eMailSecurityStepConfig.ProjectId));
             _db.SaveChanges();
-            _db.EMailSecurityStepConfigs.Add(eMailSecurityStepConfig);
-            _db.SaveChanges();
+            try
+            {
+                _db.EMailSecurityStepConfigs.Add(eMailSecurityStepConfig);
+                _db.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                string errormessage = ""; 
+                foreach (var eve in e.EntityValidationErrors)
+                {              
+
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        errormessage +=ve.ErrorMessage;
+                    }
+
+                }
+                    throw new HttpException(510, errormessage);
+            }
+                
+           
         }
         
     }

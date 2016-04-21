@@ -29,7 +29,7 @@ namespace SMSSecurityStep.Models
 
         }
 
-        public string saveConfigParameters(object config)
+        public string saveConfigParameters(IDictionary<string, string> config, int projectId)
         {
             SMSSecurityStepConfig SMSSecurityStepConfig; 
             try

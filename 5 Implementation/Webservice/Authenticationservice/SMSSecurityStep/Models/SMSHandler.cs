@@ -10,7 +10,7 @@ using System.Web;
 
 namespace SMSSecurityStep.Models
 {
-    public class MailHandler
+    public class SMSHandler
     {
 
        

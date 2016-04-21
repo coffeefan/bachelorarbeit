@@ -71,7 +71,7 @@ namespace SMSSecurityStep.Controllers
                 });
 
             //Send E-Mail to EndUser
-            MailHandler mailHandler = new MailHandler();
+            SMSHandler mailHandler = new SMSHandler();
             bool mail=mailHandler.send(model.EMail, model.EMail, "Code prüfen", generateMailText(code), generateMailText(code));
             System.Web.HttpContext.Current.Session["email"] = model.EMail;
 

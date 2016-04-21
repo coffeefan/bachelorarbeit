@@ -28,7 +28,7 @@ Diesen Vorteilen stehen auch gewisse Nachteile gegenüber. Die folgenden Punkte 
 [^kzfss01]: [@kzfss01]
 
 ###Fazit
-Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der Studie zu nutzen. Das bestimme Bevölkerungsteile ausgeschlossen werden, verfältscht das Ergebniss nicht, da die Anforderung für die Umfrage geringer oder gleich hoch ist wie die der nutzung eines Social-Media Moduls. Die Nonresponse-Rate ist ein Risiko, dass unbedingt Rechnung getragen werden muss um nicht eine ungültige Studie zu erhalten. Damit die Problematik Nonresponse-Rate, der Umgang mit der Datenerhubbssituation und eine geplante vorhersehbare Fragestellung ausgefürt werdne kann gilt es sich weiter den korrekten Aufbau einer Studie zu recherchieren.
+Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der Studie zu nutzen. Der Ausgeschlossene Bevölkerungsteil verfältscht das Ergebniss nicht, da die Zielgruppe für die Umfrage nur gerade die Personen sind, welche auch tatsächlich an einer Onlineumfrage teilnehmen können. Die Nonresponse-Rate ist ein Risiko, dass Rechnung getragen werden muss um nicht eine ungültige Studie zu erhalten. Damit die Problematik Nonresponse-Rate gerin gehalten wird und eine geeignete Umgebung für die Datenerhebungssituation  vorhanden ist, gilt es sich weiter den korrekten Aufbau einer Studie zu recherchieren.
 
 
 
@@ -36,8 +36,7 @@ Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der St
 \newpage
 
 ##Hauptziel der Studie
-In den vergangenen Kapiteln wurden immer wieder verschiedene Authentzifizierungsarten erwähnt und beschrieben. Diese verschiedenen Möglichkeiten gilt es mit einander zu vergleichen.
-
+In den vergangenen Kapiteln wurden immer wieder verschiedene Authentzifizierungsarten erwähnt und beschrieben. Es gilt nun herauszufinden bei welchen Interaktivität ein User bereit ist eine Authentifizierungsmethode zu gebrauchen.
 
 ##Aufbau Gesamtkonzept
 "Ein Fragebogen soll als Gesamtkomzept (Einleitung, Hauptteil, Endteil, Design, Aufmachung) betrachtet werden, in dem die Reihenfolge und die Struktur der Frage wichtige Einflussfaktoren zur Erlangung korrekter Daten sind" [^fragebogen]
@@ -48,16 +47,16 @@ In den folgenden Abschnitten wird die Theorie für die Entwicklung dieses Gesamt
 Die Einleitung soll die Befragten motivieren an der Studie teilzunehmen und allgemeine Hinweise zur Studie geben. Die folgenden Fragen wurden Batinic (WWW-Fragebogengenerator) und dem Institut für webbasierte Kommunikation und E-Learning zusammen getragen und und für die Studie der Bachelorarbeit beantwortet:
 
 ####Wer wird befragt?
-Die Hauptzielgruppe sind Schweizer welche Deutsch sprechen. Die Nebenzielgruppe sind Personen die Deutsch sprechen aus anderen Nationen. Die Telnehmer sollen die technische Know-How besitzen an einem Social-Media Modul teilzunehmen und den Internetzugriff haben.
+Mit Absprache des Auftraggebers soll die die Zielgruppe sind Schweizer welche Deutsch sprechen und zwischen 16 und 65 Jahre alt sind sein. Die Angabe begründete der Auftraggeber dadurch, dass sich darin die Hauptzielgruppen seiner Kunden wiederspiegeln. Die Nebenzielgruppe sind Personen die Deutsch sprechen aus anderen Nationen oder nicht der Altersgruppe entsprechen. Die Telnehmer sollen die technische Know-How besitzen an einer Interaktivität teilzunehmen und den Internetzugriff haben. Dieses minimale technische Know-How werden sie Beweisen indem sie ander Umfrage teilnehmen können.
 
 ####Was ist der Zweck bzw. das Ziel der Untersuchung?
-Die Studie dient dem Programmierer zur richtigen Konfiugration der Authentifizierungsmethode für seinen aktuellen Verwendungszweck.
+Die Studie dient dem Programmierer zur richtigen Konfiguration der Authentifizierungsmethode für seinen aktuellen Verwendungszweck.
 
 ####Was passiert mit den Ergebnissen?
 Die Ergebnisse werden Programmierer zum Konfigurieren der Authentifizierungsmethode zur Verfügung gestellt und in der Bachelorarbeit veröffentlicht.
 
 ####Können die Ergebnisse eingesehen werden?
-Durch diesen Punkt kann besonders Vertrauen und Wohlwollen gewonnen werden [^fragebogen1]. Deshalb soll das Kapitel Studie der Bachelorarbeit auf Wunsch den Befragten per E-Mail zugesendet werden.
+Durch Veröffentlichung der Ergebnisse kann besonders Vertrauen und Wohlwollen gewonnen werden [^fragebogen1]. Deshalb soll das Kapitel Studie der Bachelorarbeit auf Wunsch den Befragten per E-Mail zugesendet werden.
 
 ####Wer führt die Befragung durch?
 ZHAW Student Christian Bachmann im Auftrag der inaffect AG
@@ -66,7 +65,7 @@ ZHAW Student Christian Bachmann im Auftrag der inaffect AG
 Christian Bachmann, bachmch3@students.zhaw.ch
 
 ####Wie viel Zeit muss der Befragte Investieren?
-Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen sollte genannt werden. Folgend ist das Diagramm aus der Studie von Bosnjak und Batini abgebildet. Die Erkenntnis aus der Studie zeigt, dass nicht nur unter dem Motto je kürzer desto besser gehandelt werden sollte. Die Studie ist jedoch schon 15 Jahren alt und ist deshalb differenzierter zu sehen. Die Studie der Bachelorarbeit streben einen Aufwand von 8-12 Minuten an.
+Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen sollte zur Beginn der Studie genannt werden. Folgend ist das Diagramm aus der Studie von Bosnjak und Batini abgebildet. Die Erkenntnis aus der Studie zeigt, dass nicht nur unter dem Motto je kürzer desto besser gehandelt werden sollte. Die Studie ist jedoch schon 15 Jahren alt und ist deshalb differenzierter zu sehen. Die Studie der Bachelorarbeit streben einen Aufwand von 8-12 Minuten an.
 
 <!--TODO Studie von Bosnjak abbilden -->
 
@@ -78,10 +77,10 @@ Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen so
 
 \newpage
 
-###Hauptteil/Fragen
+##Hauptteil/Fragen
 Offensichtlich stellt der Hauptteil den Löwenanteil des Aufwands dar.
 
-####Erste Frage
+###Erste Frage Theorie
 Die erste Frage ist nach Dillman[^Dillman] von grosser Bedeutung. Mit ihr wird Motivation und Einsatz für den ganzen Fragebogen gesetzt. Diese Frage soll als Interesse und Neugier der Befragten bewirken.
 
 Das Institut für webbasierte Kommunikation und E-Learning hat dafür aus verschiedenen Studien die wichtigsten Kriterien für eine erfolgreiche erste Frage zusammen getragen[^fragebogen2]:
@@ -97,12 +96,13 @@ Die Frage soll in das Thema einführen und im Idealfall Interesse und Neugier we
 
 Es kann Sinn machen eine "perfekte" Einstiegsfrage zu erstellen, die in der Auswertung der Ergebnisse nicht berücksichtigt wird. Sie dient lediglich die Anforderungen einzuhalten und en Teilnehmer einen positives Einstiegserlebnis zu vermitteln.
 
+###Erste Frage 
 Die 1. Frage der Studie dieser Bachelorarbeit:
 Hatten Sie schon einmal das Gefühl, dass an einem Onlinewettbewerb gemogelt werden kann?
 0 Ja 0 Nein
 
 
-####Funktion der fragebogen
+###Theorie Fragen
 Fragen sollen eine Funktion übernehmen. Dabei schlägt Kleber[^kleber92] folgende Klassifizierung vor:
 - Übergangs- und Vorbereitungsfragen für Themenwechsel,
 - Ablenkungs- und Pufferfragen zur Minderung von Ausstrahlungseffekten,
@@ -136,18 +136,31 @@ Geschlossene Frage	Leichte Auswertung. Gefahr besteht, dass der Teilnehmer ratet
 ------------------------------------------------
 Table: Fragetypen
 
-###Abschluss
+
+
+##Abschluss
 Der Abschluss des Fragebogens kann sehr kurz gehalten werden. Folgende Elemente sollten enthalten sein:
 
 ####Dankensformel
 Eine kurze Dankensformel gehört zum guten Ton und motiviert den Teilnehmer die Umfrage korrekt abzuschliessen.
 
 ####Einladung zur Kommentierung
-Durch Kommentare am Schluss können Befrate dem Untersucher Hinweise zukommenlassen die für die Auswertung und weitere Untersuchungen dienlich sind. Dieser Möglichkeit wird nach der Erfahrung von Reuband[^kzfss01] gewürdigt.
+Durch Kommentare am Schluss können Befragte dem Untersuchter Hinweise zukommen lassen die für die Auswertung und weitere Untersuchungen dienlich sind. Dieser Möglichkeit wird nach der Erfahrung von Reuband[^kzfss01] gewürdigt.
+
+
+##Verständlichkeit
+Als der Umfragebogen Personen mit geringem technischem Know-How vorgelegt wurde, wurde klar das die genannten Authentifizierungsmethoden nicht bekannt sind. Selbst der Begriff Authentifizieren konnte nicht erklärt werden.
+Deshalb wurden die zu analysierenden Methoden erklärt und illustriert.
+
+![Beispiele der Illustrationen für die Umfrage ](images/studien-ilustrationen.jpg)
+
+
 
 
 ##Umsetzung Gesamtkonzept
-Basierend auf der Erarbeitung der Theoretischen Umsetzung eines Gesamtkonzepts einer wissenschaftlichen Studie, gilt es nun dieses Umzusetzen. 
+Basierend auf der Erarbeitung der Theoretischen Umsetzung eines Gesamtkonzepts einer wissenschaftlichen Studie, gilt es nun dieses Umzusetzen. Die umgesetzte Umfrage finden Sie im Anhang.
+
+
 
 
 

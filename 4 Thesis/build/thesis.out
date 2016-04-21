@@ -117,19 +117,25 @@
 \BOOKMARK [1][-]{section.6.2}{Hauptziel der Studie}{chapter.6}% 117
 \BOOKMARK [1][-]{section.6.3}{Aufbau Gesamtkonzept}{chapter.6}% 118
 \BOOKMARK [2][-]{subsection.6.3.1}{Einleitung}{section.6.3}% 119
-\BOOKMARK [2][-]{subsection.6.3.2}{Hauptteil/Fragen}{section.6.3}% 120
-\BOOKMARK [2][-]{subsection.6.3.3}{Abschluss}{section.6.3}% 121
-\BOOKMARK [1][-]{section.6.4}{Umsetzung Gesamtkonzept}{chapter.6}% 122
-\BOOKMARK [0][-]{chapter.7}{ProofOfConcept}{}% 123
-\BOOKMARK [1][-]{section.7.1}{Techologien}{chapter.7}% 124
-\BOOKMARK [2][-]{subsection.7.1.1}{C-Sharp}{section.7.1}% 125
-\BOOKMARK [2][-]{subsection.7.1.2}{ASP.net Web API 2 / ASP.net MVC Framework}{section.7.1}% 126
-\BOOKMARK [2][-]{subsection.7.1.3}{Entity Framework}{section.7.1}% 127
-\BOOKMARK [2][-]{subsection.7.1.4}{AngularJS}{section.7.1}% 128
-\BOOKMARK [2][-]{subsection.7.1.5}{JSON}{section.7.1}% 129
-\BOOKMARK [0][-]{chapter.8}{Fazit}{}% 130
-\BOOKMARK [0][-]{appendix.A}{Glossar}{}% 131
-\BOOKMARK [0][-]{appendix.B}{Verzeichnisse}{}% 132
-\BOOKMARK [1][-]{section.B.1}{Abbildungsverzeichnis}{appendix.B}% 133
-\BOOKMARK [1][-]{section.B.2}{Quellenverzeichnis}{appendix.B}% 134
-\BOOKMARK [1][-]{section.B.3}{Tabellenverzeichnis}{appendix.B}% 135
+\BOOKMARK [1][-]{section.6.4}{Hauptteil/Fragen}{chapter.6}% 120
+\BOOKMARK [2][-]{subsection.6.4.1}{Erste Frage Theorie}{section.6.4}% 121
+\BOOKMARK [2][-]{subsection.6.4.2}{Erste Frage}{section.6.4}% 122
+\BOOKMARK [2][-]{subsection.6.4.3}{Theorie Fragen}{section.6.4}% 123
+\BOOKMARK [1][-]{section.6.5}{Abschluss}{chapter.6}% 124
+\BOOKMARK [1][-]{section.6.6}{Verst\344ndlichkeit}{chapter.6}% 125
+\BOOKMARK [1][-]{section.6.7}{Umsetzung Gesamtkonzept}{chapter.6}% 126
+\BOOKMARK [0][-]{chapter.7}{ProofOfConcept}{}% 127
+\BOOKMARK [1][-]{section.7.1}{Techologien}{chapter.7}% 128
+\BOOKMARK [2][-]{subsection.7.1.1}{C-Sharp}{section.7.1}% 129
+\BOOKMARK [2][-]{subsection.7.1.2}{ASP.net Web API 2 / ASP.net MVC Framework}{section.7.1}% 130
+\BOOKMARK [2][-]{subsection.7.1.3}{Entity Framework}{section.7.1}% 131
+\BOOKMARK [2][-]{subsection.7.1.4}{Grunt}{section.7.1}% 132
+\BOOKMARK [2][-]{subsection.7.1.5}{AngularJS}{section.7.1}% 133
+\BOOKMARK [2][-]{subsection.7.1.6}{JSON}{section.7.1}% 134
+\BOOKMARK [1][-]{section.7.2}{Authentifizierungs-App mit einem einer Datei pro Technoligie}{chapter.7}% 135
+\BOOKMARK [0][-]{chapter.8}{Fazit}{}% 136
+\BOOKMARK [0][-]{appendix.A}{Glossar}{}% 137
+\BOOKMARK [0][-]{appendix.B}{Verzeichnisse}{}% 138
+\BOOKMARK [1][-]{section.B.1}{Abbildungsverzeichnis}{appendix.B}% 139
+\BOOKMARK [1][-]{section.B.2}{Quellenverzeichnis}{appendix.B}% 140
+\BOOKMARK [1][-]{section.B.3}{Tabellenverzeichnis}{appendix.B}% 141

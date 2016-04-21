@@ -175,6 +175,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604211225036_ReplayMail.cs" />
+    <Compile Include="Migrations\201604211225036_ReplayMail.Designer.cs">
+      <DependentUpon>201604211225036_ReplayMail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -267,6 +271,11 @@
       <Project>{127b21cf-55d0-4d8b-9814-324985ed05a8}</Project>
       <Name>SecurityStepContract</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604211225036_ReplayMail.resx">
+      <DependentUpon>201604211225036_ReplayMail.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

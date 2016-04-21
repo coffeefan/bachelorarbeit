@@ -12,7 +12,9 @@ namespace EMailSecurityStep.Models
         public int ProjectId { get; set; }
         public string FromName { get; set; }
 
+        [Required]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         public string ReplayMail { get; set; }
     }
 }

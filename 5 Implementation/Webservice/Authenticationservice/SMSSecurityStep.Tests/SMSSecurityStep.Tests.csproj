@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{343355EB-BAC7-4C36-8DDD-9BE7E920EB76}</ProjectGuid>
+    <ProjectGuid>{7F68B7AA-6609-4008-A2AE-46EF019D0B61}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SMSSecurityStep.Tests</RootNamespace>
@@ -116,7 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SMSSecurityStep\SMSSecurityStep.csproj">
-      <Project>{115AE1F9-2927-4E45-AD73-62DC7FACD567}</Project>
+      <Project>{f6ec597c-36e7-4a40-96c3-ac250dc031b8}</Project>
       <Name>SMSSecurityStep</Name>
     </ProjectReference>
   </ItemGroup>

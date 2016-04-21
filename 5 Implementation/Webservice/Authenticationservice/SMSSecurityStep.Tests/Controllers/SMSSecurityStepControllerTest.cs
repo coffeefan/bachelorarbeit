@@ -143,7 +143,7 @@ namespace SMSSecurityStep.Tests.Controllers
             string subject = "Testemail";
             string plaintext = "Das ist ein Test";
             string htmlbody = "Das ist ein <strong>Test</strong>";
-            bool result = new MailHandler().send(email, name, subject, plaintext, htmlbody);
+            bool result = new SMSHandler().send(email, name, subject, plaintext, htmlbody);
             Assert.IsTrue(result);
         }
 

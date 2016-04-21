@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B73482D-64A2-410D-88BC-276072EED1D1}</ProjectGuid>
+    <ProjectGuid>{DCDD0835-F7A5-4355-B983-27DB0E31C77B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SMSSecurityStepLib</RootNamespace>
@@ -92,6 +92,9 @@
     <Compile Include="..\SMSSecurityStep\Models\EF_SMSSecurityStepValidationRepository.cs">
       <Link>EF_SMSSecurityStepValidationRepository.cs</Link>
     </Compile>
+    <Compile Include="..\SMSSecurityStep\Models\SMSHandler.cs">
+      <Link>SMSHandler.cs</Link>
+    </Compile>
     <Compile Include="..\SMSSecurityStep\Models\SMSSecurityStepConfig.cs">
       <Link>SMSSecurityStepConfig.cs</Link>
     </Compile>
@@ -106,9 +109,6 @@
     </Compile>
     <Compile Include="..\SMSSecurityStep\Models\ISMSSecurityStepValidationRepository.cs">
       <Link>ISMSSecurityStepValidationRepository.cs</Link>
-    </Compile>
-    <Compile Include="..\SMSSecurityStep\Models\MailHandler.cs">
-      <Link>MailHandler.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

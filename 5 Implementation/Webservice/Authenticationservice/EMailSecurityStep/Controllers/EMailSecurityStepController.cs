@@ -8,9 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 
 namespace EMailSecurityStep.Controllers
-{
-
-    
+{   
 
     [Export("EMailSecurityStep", typeof(IController))]
     [PartCreationPolicy(CreationPolicy.NonShared)]

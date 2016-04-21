@@ -336,7 +336,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Was passiert mit den Ergebnissen?}{69}{subsubsection*.72}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{K\IeC {\"o}nnen die Ergebnisse eingesehen werden?}{69}{subsubsection*.73}
+\contentsline {subsubsection}{K\IeC {\"o}nnen die Ergebnisse eingesehen werden?}{70}{subsubsection*.73}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Wer f\IeC {\"u}hrt die Befragung durch?}{70}{subsubsection*.74}
 \defcounter {refsection}{0}\relax 
@@ -344,46 +344,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Wie viel Zeit muss der Befragte Investieren?}{70}{subsubsection*.76}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Hauptteil/Fragen}{71}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}Hauptteil/Fragen}{71}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Erste Frage}{71}{subsubsection*.77}
+\contentsline {subsection}{\numberline {6.4.1}Erste Frage Theorie}{71}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Funktion der fragebogen}{71}{subsubsection*.78}
+\contentsline {subsection}{\numberline {6.4.2}Erste Frage}{71}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Frageart}{71}{subsubsection*.79}
+\contentsline {subsection}{\numberline {6.4.3}Theorie Fragen}{71}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Fragetypen}{72}{subsubsection*.80}
+\contentsline {subsubsection}{Frageart}{71}{subsubsection*.77}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Abschluss}{72}{subsection.6.3.3}
+\contentsline {subsubsection}{Fragetypen}{72}{subsubsection*.78}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Dankensformel}{72}{subsubsection*.81}
+\contentsline {section}{\numberline {6.5}Abschluss}{72}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Einladung zur Kommentierung}{72}{subsubsection*.82}
+\contentsline {subsubsection}{Dankensformel}{72}{subsubsection*.79}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Umsetzung Gesamtkonzept}{72}{section.6.4}
+\contentsline {subsubsection}{Einladung zur Kommentierung}{72}{subsubsection*.80}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}ProofOfConcept}{73}{chapter.7}
+\contentsline {section}{\numberline {6.6}Verst\IeC {\"a}ndlichkeit}{72}{section.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Techologien}{73}{section.7.1}
+\contentsline {section}{\numberline {6.7}Umsetzung Gesamtkonzept}{73}{section.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.1}C-Sharp}{73}{subsection.7.1.1}
+\contentsline {chapter}{\numberline {7}ProofOfConcept}{74}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.2}ASP.net Web API 2 / ASP.net MVC Framework}{73}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.1}Techologien}{74}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.3}Entity Framework}{74}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.1}C-Sharp}{74}{subsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.4}AngularJS}{74}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.2}ASP.net Web API 2 / ASP.net MVC Framework}{74}{subsection.7.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1.5}JSON}{74}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.3}Entity Framework}{75}{subsection.7.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Fazit}{75}{chapter.8}
+\contentsline {subsection}{\numberline {7.1.4}Grunt}{75}{subsection.7.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Glossar}{76}{appendix.A}
+\contentsline {subsection}{\numberline {7.1.5}AngularJS}{75}{subsection.7.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Verzeichnisse}{77}{appendix.B}
+\contentsline {subsection}{\numberline {7.1.6}JSON}{75}{subsection.7.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Abbildungsverzeichnis}{77}{section.B.1}
+\contentsline {section}{\numberline {7.2}Authentifizierungs-App mit einem einer Datei pro Technoligie}{75}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Quellenverzeichnis}{78}{section.B.2}
+\contentsline {chapter}{\numberline {8}Fazit}{76}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Tabellenverzeichnis}{81}{section.B.3}
+\contentsline {chapter}{\numberline {A}Glossar}{77}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Verzeichnisse}{78}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Abbildungsverzeichnis}{78}{section.B.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Quellenverzeichnis}{79}{section.B.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}Tabellenverzeichnis}{82}{section.B.3}

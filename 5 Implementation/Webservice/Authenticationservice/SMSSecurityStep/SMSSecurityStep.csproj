@@ -186,7 +186,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ISMSSecurityStepConfigRepository.cs" />
     <Compile Include="Models\ISMSSecurityStepValidationRepository.cs" />
-    <Compile Include="Models\MailHandler.cs" />
+    <Compile Include="Models\SMSHandler.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

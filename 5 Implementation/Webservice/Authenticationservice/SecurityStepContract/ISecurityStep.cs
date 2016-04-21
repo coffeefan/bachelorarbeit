@@ -11,7 +11,7 @@ namespace SecurityStepContract
     {
 
         object getConfigParameters(int projectId);
-        string saveConfigParameters(object config);
+        string saveConfigParameters(IDictionary<string, string> config,int projectId);
         bool checkIsValidated(int projectid, string providerid);
     }
 }

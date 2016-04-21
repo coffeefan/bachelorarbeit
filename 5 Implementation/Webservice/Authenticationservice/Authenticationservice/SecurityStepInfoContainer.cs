@@ -29,6 +29,20 @@ namespace Authenticationservice
             }
             return securityStepInfoNames;
         }
+
+        public ISecurityStepInfo getSecurityStepInfo(string name)
+        {
+            ISecurityStepInfo securityStepInfo = null;
+            foreach (ISecurityStepInfo securityStepInfoItem in securityStepInfoComposer.getSecurityStepInfo())
+            {
+                if(securityStepInfoItem.GetType().Name== name)
+                {
+                    return securityStepInfoItem;
+                }
+
+            }
+            return securityStepInfo;
+        }
     }
 
     public class SecurityStepInfoComposer

@@ -1,25 +1,27 @@
-﻿@model SMSSecurityStep.Models.SMSSecurityStepValidation_Mail
+﻿@model SMSSecurityStep.Models.SMSSecurityStepValidation_Code
 
-@{
-    ViewBag.Title = "Start";
+
+@{ 
+    ViewBag.Title = "CodeValidation";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>View</h2>
+<h2>CodeValidation</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>SMSSecurityStepValidation_Step2</h4>
+        <h4>SMSSecurityStepValidation_Code</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.EMail, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Code, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.EMail, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EMail, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Code, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Code, "", new { @class = "text-danger" })
+                @Html.HiddenFor(x => x.EMail, new { id = "EMail" })
             </div>
         </div>
 
