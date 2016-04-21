@@ -230,14 +230,32 @@
     <Compile Include="Migrations\201604152045150_EMailSecurityStep.Designer.cs">
       <DependentUpon>201604152045150_EMailSecurityStep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604211356437_ReplayMail.cs" />
+    <Compile Include="Migrations\201604211356437_ReplayMail.Designer.cs">
+      <DependentUpon>201604211356437_ReplayMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604211516411_SecuritySteps.cs" />
+    <Compile Include="Migrations\201604211516411_SecuritySteps.Designer.cs">
+      <DependentUpon>201604211516411_SecuritySteps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604212022291_SecurityStepsq.cs" />
+    <Compile Include="Migrations\201604212022291_SecurityStepsq.Designer.cs">
+      <DependentUpon>201604212022291_SecurityStepsq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604212036506_ProjectSecurityStep.cs" />
+    <Compile Include="Migrations\201604212036506_ProjectSecurityStep.Designer.cs">
+      <DependentUpon>201604212036506_ProjectSecurityStep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EF_ProjectSecurityStepRepository.cs" />
     <Compile Include="Models\Helper\MailHandler.cs" />
     <Compile Include="Models\Helper\MasterFunctions.cs" />
     <Compile Include="Models\Helper\RegistrierungDTO.cs" />
     <Compile Include="Models\Helper\Result.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IProjectSecurityStepRepository.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\ProjectAuthentication.cs" />
@@ -338,6 +356,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604152045150_EMailSecurityStep.resx">
       <DependentUpon>201604152045150_EMailSecurityStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604211356437_ReplayMail.resx">
+      <DependentUpon>201604211356437_ReplayMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604211516411_SecuritySteps.resx">
+      <DependentUpon>201604211516411_SecuritySteps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604212022291_SecurityStepsq.resx">
+      <DependentUpon>201604212022291_SecurityStepsq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604212036506_ProjectSecurityStep.resx">
+      <DependentUpon>201604212036506_ProjectSecurityStep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\Email.resx" />
   </ItemGroup>

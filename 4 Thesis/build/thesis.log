@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.23)  16 APR 2016 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.23)  21 APR 2016 23:55
 entering extended mode
 **./build/thesis.tex
 (build/thesis.tex
@@ -2835,13 +2835,23 @@ tatrans-1.0.2.js"></script>[]
  []
 
 [54] [55] [56]
+Overfull \hbox (11.09572pt too wide) in paragraph at lines 3052--3054
+[]|\T1/lmss/bx/n/10.95 Verhinderung 
+ []
+
+
 Overfull \hbox (2.8987pt too wide) in paragraph at lines 3064--3066
-[]|\T1/lmss/bx/n/10.95 Verbreitung 
+ []|\T1/lmss/bx/n/10.95 Verbreitung 
+ []
+
+
+Overfull \hbox (11.09572pt too wide) in paragraph at lines 3073--3075
+[]|\T1/lmss/bx/n/10.95 Verhinderung 
  []
 
 
 Overfull \hbox (2.8987pt too wide) in paragraph at lines 3085--3087
-[]|\T1/lmss/bx/n/10.95 Verbreitung 
+ []|\T1/lmss/bx/n/10.95 Verbreitung 
  []
 
 [57] <images/mef_architektur.jpg, id=1260, 1806.75pt x 994.71625pt>
@@ -2922,7 +2932,7 @@ chapter 8.
 ]
 chapter A.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3969--3972
+Underfull \hbox (badness 10000) in paragraph at lines 3972--3975
 
  []
 
@@ -2939,41 +2949,41 @@ chapter B.
 
 
 ]
-Underfull \hbox (badness 1442) in paragraph at lines 4001--4001
+Underfull \hbox (badness 1442) in paragraph at lines 4004--4004
 []\T1/lmss/m/sl/10.95 Datatrans eCom - Tech-ni-cal Im-ple-men-ta-ti-on Gui-de\T
 1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 https : / / pilot .
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 4001--4001
+Underfull \hbox (badness 1087) in paragraph at lines 4004--4004
 []\T1/lmss/m/sl/10.95 Webshop\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 https :
  / / www . datatrans . ch / de / e -[] payment / shop -[]
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 4000.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 4003.
 
 ("C:\Users\chris\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 4000.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 4003.
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 4001--4001
+Underfull \hbox (badness 2426) in paragraph at lines 4004--4004
 []\T1/lmss/m/n/10.95 Goldbach In-ter-ac-ti-ve. \T1/lmss/m/sl/10.95 Nutzer-zah-l
 en der wich-tigs-ten Platt-for-men\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 ht
 tps :
  []
 
 [79]
-Underfull \hbox (badness 1694) in paragraph at lines 4001--4001
+Underfull \hbox (badness 1694) in paragraph at lines 4004--4004
 []\T1/lmss/m/sl/10.95 Projektmanagement: De-fi-ni-tio-nen, Ein-füh-run-gen und 
 Vor-la-gen\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 http : / /
  []
 
 
-Overfull \hbox (6.31033pt too wide) in paragraph at lines 4001--4001
+Overfull \hbox (6.31033pt too wide) in paragraph at lines 4004--4004
 []\T1/lmss/m/n/10.95 Sven Mil-li-scher. \T1/lmss/m/sl/10.95 Die di-gi-ta-le Re-
 vo-lu-ti-on\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 handelszeitung . ch / dig
 italisierung /
@@ -2983,13 +2993,13 @@ italisierung /
 \tf@lot=\write9
 \openout9 = `thesis.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4017.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4020.
  [82]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4017.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4020.
 
 ("C:\Project\Bachelorarbeit\4 Thesis\build\thesis.aux" (titlepage.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4017.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4017.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4020.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4020.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 14F84FF14ABDE391806E1BB3D1D03350;10270.
@@ -3004,7 +3014,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  29402 strings out of 493634
  505214 string characters out of 3135238
- 865399 words of memory out of 3000000
+ 866399 words of memory out of 3000000
  31867 multiletter control sequences out of 15000+200000
  83519 words of font info for 85 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
@@ -3195,7 +3205,7 @@ e1/public/lm/lmssbx10.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsso10.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/lm/lmtt10.pfb>
 Output written on "C:/Project/Bachelorarbeit/4 Thesis/build/thesis.pdf" (83 pag
-es, 2480935 bytes).
+es, 2482417 bytes).
 PDF statistics:
  1668 PDF objects out of 1728 (max. 8388607)
  447 named destinations out of 1000 (max. 500000)

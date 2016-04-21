@@ -18,7 +18,10 @@ angular
         'ngTouch',
         'angular-loading-bar',
         'ngStorage',
-        'angular-clipboard'
+        'angular-clipboard',
+        'dndLists',
+        'ui.bootstrap',
+        'chart.js'
     ])
     .config(function ($routeProvider) {
         $routeProvider

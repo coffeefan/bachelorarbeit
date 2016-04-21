@@ -31,7 +31,7 @@ Um RESTful-Webservices einfach entwickeln zu können stellt Microsoft mit ASP.ne
 Entity Framework (EF) ist eine objektrelationale Zuordnung, die .NET-Entwicklern über domänenspezifische Objekte die Nutzung relationaler Daten ermöglicht. Ein Grossteil des Datenzugriffscodes, den Entwickler normalerweise programmieren, muss folglich nicht geschrieben werden. [^efbasic]
 
 ###Grunt
-Grunt.js ist ein sogenannter Taskrunner, d.h. es übernimmt Aufgaben wie das Kompilieren von SASS und LESS Files in CSS, checkt JavaScript auf Fehler ab und optimiert alle Assets für das Web. Das Schöne daran ist, dass - bei richtiger Konfiguration - Grunt.js die Daten selbst überwacht und bei Änderungen die oben genannten Tasks automatisch ausführt.
+Grunt.js ist ein sogenannter Taskrunner, d.h. es übernimmt Aufgaben wie das Kompilieren von SASS und LESS Files in CSS, checkt JavaScript auf Fehler ab und optimiert alle Assets für das Web. Das Schöne daran ist, dass, bei richtiger Konfiguration, Grunt.js die Daten selbst überwacht und bei Änderungen die oben genannten Tasks automatisch ausführt.
 
 
 
@@ -47,6 +47,8 @@ Zwischen der AngularJS WebApp und dem Webservice dient JSON(JavaScript Object No
 [^angularjsbasic]: Quelle [@angularjsbasic]
 
 ##Authentifizierungs-App mit einem einer Datei pro Technoligie
-Wie im Kapitel [Integration der Schnittstelle][Integration der Schnittstelle] konzeptioniert soll beim Enduser ein Javascript File und ein CSS File integriert werden. 
+Wie im Kapitel [Integration der Schnittstelle][Integration der Schnittstelle] konzeptioniert soll beim Enduser ein Javascript Datei und ein CSS Datei integriert werden. Grunt generiert von Haus aus leider 2 Dateien pro Technoligie. Um doch eine Datei zu erhalten muss die Generierung mit dem Grunt-Concat Befehl erweitert werden. Dadurch können die Dateien danach zu einer Datei zusammengefasst werden.
+
+
 
 

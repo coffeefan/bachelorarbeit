@@ -1,57 +1,144 @@
 
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Projekt Info</h4>
+            </div>
+            <div class="content">
+                <form id="info" data-ng-submit="saveProject()">
 
-<div class="col-md-6">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">Projekt Info</h4>
-        </div>
-        <div class="content">
-            <form id="info" data-ng-submit="saveProject()">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Bezeichnung</label>
-                            <input type="text" class="form-control" placeholder="Bezeichnung" ng-model="project.Description"  required="required"/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Bezeichnung</label>
+                                <input type="text" class="form-control" placeholder="Bezeichnung" ng-model="project.Description"  required="required"/>
+                            </div>
                         </div>
                     </div>
+                    <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Speichern</button><br/>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6" ng-show="project.ProjectId>0">
+
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Projekt Implementierung</h4>
+            </div>
+            <div class="content">
+                <div class="alert alert-success" ng-show="alertCopied">
+                    <button type="button" aria-hidden="true" class="close" data-ng-click="hideAlert('alertCopied')">×</button>
+                    <span><b>Kopiert</b> Der Validierungscode wurde in den Zwischenspeicher kopiert"</span>
                 </div>
-                <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Speichern</button><br/>
-            </form>
+                <form id="implementation" data-ng-submit="saveProject()">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Validation-Code</label>
+                                <input type="text" class="form-control" ng-model="project.ValidationCode"  readonly/> <br/>
+                                <button class="btn btn-fill" type="button" clipboard text="project.ValidationCode" on-copied="success()" on-error="fail(err)"><i class="pe-7s-copy-file"></i> Kopieren</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Return Url</label>
+                                <input type="url" class="form-control" placeholder="Bezeichnung" ng-model="project.ReturnUrl" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Speichern</button><br/>
+                </form>
+            </div>
         </div>
     </div>
 </div>
-<div class="col-md-6" ng-show="project.ProjectId>0">
-
-    <div class="card">
-        <div class="header">
-            <h4 class="title">Projekt Implementierung</h4>
-        </div>
-        <div class="content">
-            <div class="alert alert-success" ng-show="alertCopied">
-                <button type="button" aria-hidden="true" class="close" data-ng-click="hideAlert('alertCopied')">×</button>
-                <span><b>Kopiert</b> Der Validierungscode wurde in den Zwischenspeicher kopiert"</span>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">SecurityStep</h4>
             </div>
-            <form id="implementation" data-ng-submit="saveProject()">
+            <div class="content simpleDemo ">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Validation-Code</label>
-                            <input type="text" class="form-control" ng-model="project.ValidationCode"  readonly/> <br/>
-                            <button class="btn btn-fill" type="button" clipboard text="project.ValidationCode" on-copied="success()" on-error="fail(err)"><i class="pe-7s-copy-file"></i> Kopieren</button>
+                    <div class="col-md-3">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Verwendet</h3>
+                            </div>
+                            <!-- The dnd-list directive allows to drop elements into it.
+         The dropped data will be added to the referenced list -->
+                            <ul dnd-list="projectSecuritySteps">
+                                <!-- The dnd-draggable directive makes an element draggable and will
+                                     transfer the object that was assigned to it. If an element was
+                                     dragged away, you have to remove it from the original list
+                                     yourself using the dnd-moved attribute -->
+                                <li ng-repeat="item in projectSecuritySteps"
+                                    dnd-draggable="item"
+                                    dnd-moved=" movedProjectSecurityStep($index,item)"
+                                    dnd-effect-allowed="move"
+                                    dnd-selected="changeselectedSecurityStep(item)"
+                                    ng-class="{'selected': infobox.securitystepselected === item}"
+                                >
+                                    {{item}}
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Return Url</label>
-                            <input type="url" class="form-control" placeholder="Bezeichnung" ng-model="project.ReturnUrl" />
+                    <div class="col-md-3">
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Verfügbar</h3>
+                            </div>
+                            <!-- The dnd-list directive allows to drop elements into it.
+         The dropped data will be added to the referenced list -->
+                            <ul dnd-list="availableSecuritySteps">
+                                <!-- The dnd-draggable directive makes an element draggable and will
+                                     transfer the object that was assigned to it. If an element was
+                                     dragged away, you have to remove it from the original list
+                                     yourself using the dnd-moved attribute -->
+                                <li ng-repeat="item in availableSecuritySteps"
+                                    dnd-draggable="item"
+                                    dnd-moved="movedAvailableSecurityStepst($index,item)"
+                                    dnd-effect-allowed="move"
+                                    dnd-selected="changeselectedSecurityStep(item)"
+                                    ng-class="{'selected': infobox.securitystepselected === item}"
+                                >
+                                    {{item}}
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        {{infobox.securitystepselected}}12
+                        <canvas id="radar" class="chart chart-radar"
+                                chart-data="securityStepCompareInfo.data" chart-labels="securityStepCompareInfo.labels">
+                        </canvas>
+                    </div>
                 </div>
-                <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Speichern</button><br/>
-            </form>
+
+            </div>
         </div>
     </div>
+    <div class="col-md-6"></div>
+
+
+    <script type="text/ng-template" id="configSecurityStep.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <form id="dynamicForm" data-ng-submit="saveSecurityStepProject()">
+
+                <button type="submit" class="btn btn-info btn-fill ">Speichern</button><br/>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
 </div>

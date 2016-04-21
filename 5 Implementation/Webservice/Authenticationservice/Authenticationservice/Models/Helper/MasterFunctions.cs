@@ -19,6 +19,11 @@ namespace Authenticationservice.Models.Helper
             return time.ToString("yyyyMMddTHHmmss");
         }
 
+        internal static int NoteTo100(float note)
+        {
+            return (int) Math.Round(((note-2 / 6-2) * 100),0);
+        }
+
         public static string RandomString(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

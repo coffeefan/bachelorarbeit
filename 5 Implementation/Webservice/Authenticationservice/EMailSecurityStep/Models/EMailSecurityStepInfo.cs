@@ -84,6 +84,16 @@ namespace EMailSecurityStep.Models
 
         }
 
-        
+        public SecurityStepCompareInfo getSecurityStepCompareInfo()
+        {
+            return new SecurityStepCompareInfo()
+            {
+                MultipleParticipation = 4,
+                Automation = 4.5F,
+                Costs = 6,
+                ClientEffort = 4.5F,
+                Awareness = 6
+            };
+        }
     }
 }

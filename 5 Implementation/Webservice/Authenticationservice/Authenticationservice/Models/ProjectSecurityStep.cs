@@ -13,8 +13,7 @@ namespace Authenticationservice.Models
         public Project Project { get; set; }
         public String SecurityStep { get; set; }
         public int Position { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Updated { get; set; }
+       
 
     }
 }

@@ -29,6 +29,11 @@ namespace SMSSecurityStep.Models
 
         }
 
+        public SecurityStepCompareInfo getSecurityStepCompareInfo()
+        {
+            throw new NotImplementedException();
+        }
+
         public string saveConfigParameters(IDictionary<string, string> config, int projectId)
         {
             SMSSecurityStepConfig SMSSecurityStepConfig; 

@@ -223,37 +223,37 @@ Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem Us
 
 ###Übersicht
 
-------------------------------------------------------------------------- --------------
-__Komponente__		__Unique__	__Automat-		__Kosten__	__Aufwand	  __Verbreitung__	
-								isierung__					Benutzer__						
-------------------- ----------- --------------- ----------	------------- -------------
-__Cookie__			2.5 		2.5 			6			6             6
+------------------------------------------------------------------------- -------------------------------------------------
+__Komponente__				__Verhinderung		 __Automat-			__Kosten__	   	__Aufwand	  	     __Verbreitung__	
+							Mehrfachteilnahme__		sierung__						Benutzer__							
+--------------------------  ------------------- ------------------- --------------- ------------------- -------------------
+__Cookie__				  	2.5 		     	2.5 				6				6                	6
                                                                           
                                                                           
-__IP__				3			3 				6			6             6
+__IP__				      	3					3 					6				6             		6
                                                                           
                                                                           
-__Browser 			3.5			3.5	 			6			6             6
-Fingerprint__		                                                      
-
-__E-Mail__			4			4.5				6			4.5           6
-                                                                          
-                                                                          
-__SMS__				5.5			5.75			5			4.5           5.5
-					                                                      
-                                                                          
-					                                                      
-__Telefon__			5.25		5.75			5			4.5           5.75
-					                                                      
-                                                                          
-					                                                      
-__Ausweis-			3.5			3.5				6			5          	  6
-nummer__
-
-
-__SuisseID__		5.5			5.75			5			5			  3
-																	      		
------------------------------------------------------------------------------------------
+__Browser 					3.5					3.5	 				6				6             		6
+Fingerprint__			                                                      
+                
+__E-Mail__					4					4.5					6				4.5           		6
+                                                                              
+                                                                              
+__SMS__						5.5					5.75				5				4.5           		5.5
+						                                                      
+                                                                              
+						                                                      
+__Telefon__					5.25				5.75				5				4.5           		5.75
+						                                                      
+                                                                              
+						                                                      
+__Ausweis-					3.5					3.5					6				5          	  		6
+nummer__        
+                
+                
+__SuisseID__				5.5					5.75				5				5			  		3
+																		      		
+------------------------------------------------------------------------- -------------------------------------------------
 Table: Übersicht der Authentifizierungs Methoden
 
 [!internetanschluss]: Der Begriff Internetanschluss ist schwamig eingesetzt.

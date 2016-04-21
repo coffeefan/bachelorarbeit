@@ -65,7 +65,7 @@ angular.module('configuratorApp')
                 console.log(data);
                 swal({
                     title: "Login",
-                    text: data.Message,
+                    text: "Fehler",
                     type: "error"
                 });
             });
