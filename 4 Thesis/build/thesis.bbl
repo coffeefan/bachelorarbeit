@@ -145,6 +145,16 @@
   \field{year}{2014}
 \endentry
 
+\entry{google-cookies}{misc}{}
+  \field{labelalpha}{Goo}
+  \field{extraalpha}{3}
+  \field{sortinit}{G}
+  \field{howpublished}{\url{https://www.google.ch/intl/de/policies/technologies/cookies}}
+  \field{note}{[Online; accessed 08-01-2016]}
+  \field{title}{So verwendet Google Cookies}
+  \field{year}{2016}
+\endentry
+
 \entry{apachekiss}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -254,6 +264,24 @@
   \field{note}{[Online; accessed 28-12-2015]}
   \field{title}{Nutzerzahlen der wichtigsten Plattformen}
   \field{year}{2015}
+\endentry
+
+\entry{pclexikon-ip}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kirk}{K.}%
+     {Alexender}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KA1}
+  \strng{fullhash}{KA1}
+  \field{labelalpha}{Kir05}
+  \field{sortinit}{K}
+  \field{howpublished}{\url{http://www.computerlexikon.com/begriff-ip-adresse}}
+  \field{note}{[Online; accessed 08-01-2016]}
+  \field{title}{IP Adresse}
+  \field{year}{2005}
 \endentry
 
 \entry{sicheresysteme}{book}{}
@@ -594,6 +622,25 @@
   \field{note}{[Online; accessed 06-01-2016]}
   \field{title}{NET-Metrix-Audit}
   \field{year}{2004}
+\endentry
+
+\entry{flashussage}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {w3techs}{w.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{w1}
+  \strng{fullhash}{w1}
+  \field{labelalpha}{w3t16}
+  \field{sortinit}{W}
+  \field{howpublished}{\url{http://w3techs.com/technologies/history_overview/client_side_language/all}}
+  \field{note}{[Online; accessed 08-01-2016]}
+  \field{title}{Historical trends in the usage of client-side programming
+  languages for websites}
+  \field{year}{2016}
 \endentry
 
 \entry{xpactivation}{misc}{}

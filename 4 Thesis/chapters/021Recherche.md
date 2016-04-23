@@ -2,35 +2,12 @@
 
 #Recherche
 
-## Fachbegriffe
-Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel "[Glossar]".
+## Ähnliche Produkte auf dem Markt
+Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
 
-## Erläuterung der Grundlagen
-In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, die als für die Bearbeitung dieser Bachelorthesis herangezogen wurden.
+###OAuth-Provider
 
-###Authentifizierung
-Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
-
-Eine Person oder Objekt eindeutig zu **authentifizieren** bedeute zu ermitteln ob die oder derjenige auch der ist als welcher er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenicate*, was auf Deutsch sich als *echt erweisen, sich verbürgen, glaubwürdig sein* bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiletelefon häufig verbreitet. Die Möglichkeiten der Authentifizierung nahe zu grenzenlos.
-[^authentifizierungsdeforg]
-
-###Autorisierung
-Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung [^duden]
-
-Wenn die Authenfizierung[Authentifizierung] erfolgreich war erteilt das System die Autorisierung. Dabei wird der Person oder Objekt erlaubt bestimmte Aktionen/Zugriffe durchzuführen. Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist ebenfalls Bestandteil der Autorisierung.
-
-Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt zu sein. Die anschließende Autorisierung erfolgt automatisch durch das System selbst. Im Zuge der Autorisierung werden dem Benutzer seine Zugriffsrechte zugewiesen.
-[@authentifizierungsdeforg]
-
-
-
-[^authentifizierungsdef]: [@authentifizierungsdef] 
-[^authentifizierungsdeforg]: [@authentifizierungsdeforg]
-
-
-
-\newpage
-###OAuth
+####OAuth
 OAuth ist ein Protokoll. Es erlaubt sichere API-Autorisierungen.
 
 ####Das Bedürfnis nach OAuth
@@ -45,11 +22,6 @@ Dank der weiten Verbreitung gibt es nun in allen bekannten Programmiersprachen e
 
 [1]: http://oauth.net/2/
 
-\newpage
-## Ähnliche Produkte auf dem Markt
-Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
-
-###OAuth-Provider
 Die grössten [OAuth]-Provider wie Google, Facebook und Twitter erziehlen eine weiter Verbreitung weltweit:
 
 ![Aktive Nutzer Weltweit [^socialmediaweltweit]](images/excel-statistik/socialmedia-aktivenutzer.jpg)
@@ -73,7 +45,7 @@ Mehrfachregistrierungen sind möglich. Jenach OAuth-Provider werden verschiedene
 \newpage
 
 ###playbuzz.com
-Youtube von Google ist im Jahr 2015 mit Abstand die meist verbreiteste Videopublishing-Plattform[^statista]. Medienhäuser nutzen Youtube um einfach Ihren Artikel mit einem Video zu ergänzen. Neben der einfachen Integration profitieren die Medienhäuser von der zusätzlichen Verbreitung über youtube.com und der einfachen viralen Verbreitungsmöglichkeiten von youtube. PlayBuzz möchte das Youtube für Votings, Quiz und ähnlicher Embeded Content zu werden. Neben MTV, Focus, Time oder Bild verwendet seit Herbst 2015 auch ein grosses Medienhaus der Schweiz die Plattform. Tamedia erfasst neu auf 20minuten Votings und Umfragen mit PlayBuzz.
+Youtube von Google ist im Jahr 2015 mit Abstand die meist verbreiteste Videopublishing-Plattform[^statista]. Medienhäuser nutzen Youtube um einfach Ihren Artikel mit einem Video zu ergänzen. Neben der einfachen Integration profitieren die Medienhäuser von der zusätzlichen Verbreitung über youtube.com und der einfachen viralen Verbreitungsmöglichkeiten von youtube. PlayBuzz möchte das Youtube für Votings, Quiz und ähnlicher Embeded Content werden. Neben MTV, Focus, Time oder Bild verwendet seit Herbst 2015 auch ein grosses Medienhaus der Schweiz die Plattform. Tamedia erfasst neu immer wieder auf 20minuten Votings und Umfragen mit PlayBuzz.
 
 2012 wurde Playbuzz von Shaul Olmert (Sohn des Premie Minster von Israel Ehuad Olmert) und Tom Pachys ins Leben gerufen. Der offizielle Launch war im Dezember 2013. Im Juni 2014 wurde Playbuzz bereits das 1. Mal unter den Top 10 Facebook Shared Publishers aufgelistet. Im Juni 2014 konnte Playbuzz bereits 70 millionen unique views aufweisen. Im September 2014 kamen 7 von den 10 Top Shares auf Facebook laut forbes.com von Playbuzz. Playbuzz setzt nach eigenen Angaben auf Content wie Votes und Quizes welcher gerne Viral geteilt wird und ermöglicht Endnutzer und Redaketeueren einfache Verwendung. [^t3nplaybuzz] [^playbuzz]
 
@@ -81,7 +53,7 @@ Youtube von Google ist im Jahr 2015 mit Abstand die meist verbreiteste Videopubl
 Playbuzz ist kostenlos und lässt sich einfach integrieren. Durch Verwendung von Playbuzz kann die Verbreitung des eigenen Inhalts gesteigert werden. Die Verwaltungsoberfläche und Reports sind übersichtlich und einfach zu bedienen.
 
 ####Nachteile
-Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die Möglichkeiten in Funktionalität und Design haben Grenzen. Individuelle Erweiterungen sind nicht einfach möglich.
+Der Verweis auf Playbuzz ist immer klar ersichtlich. Auch beim Posten auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die Möglichkeiten in Funktionalität und Design haben Grenzen. Individuelle Erweiterungen sind nicht einfach möglich. Bestehende Interaktivitäten oder Interaktivitäten welche nicht von PlayBuzz erstellt werden können nicht verwendet werden. Mehrfachteilnahmen waren möglich.
 
 [^statista]: [@statista]
 [^t3nplaybuzz]: [@t3nplaybuzz] 
@@ -123,9 +95,50 @@ Der Versand von SMS verursacht Kosten. Die Implementation bedarf hohes technisch
 [^uvek]: Meldung des UVEKS über Gesetzesänderung: [@uvek]
 
 
+###SuisseID
+Die SuisseID schafft die rechtlichen und technischen Voraussetzungen für den elektronischen Geschäftsverkehr. Als digitaler Identitätsausweis im Internet bietet sie ihren Anwenderinnen und Anwendern eine sichere Authentifikation zu Web-Applikationen, eindeutige Identifikation für Internet-Dienste und digitales, rechtsgültiges Signieren von Dokumenten.
+Der Erwerb so einer SuisseID kostet den Endkunden eine beträchtliche Summe Geld. Der Anbieter der Authentifizierung erwarten keine grossen Kosten. Dadurch ist eine kleine Verbreitung für privaten Nutzen offensichtlich. Entwickler von Integrationen erhalten eine ganzes SDK und Kontaktmöglichkeiten
+
+####Vorteile
+Hohe Sicherheit durch sichere und eindeutige Authentifikation. Rechtliche Vorraussetzungen sind gegeben. Enwickler von Integrationen werden unterstützt.
+
+####Nachteile
+Kleine Verbreitung und hohe kosten für den Enduser.
+
+
+##Fazit
+Auf dem Markt sind verschiedene Anbieter welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service welcher es erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
+
+## Fachbegriffe
+Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel "[Glossar]".
+
+## Erläuterung der Grundlagen
+In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden. 
+
+###Authentifizierung
+Duden: Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
+
+Eine Person oder Objekt eindeutig zu **authentifizieren** bedeute zu ermitteln ob die oder derjenige auch der ist als welcher er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenicate*, was auf Deutsch sich als *echt erweisen, sich verbürgen, glaubwürdig sein* bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiletelefon häufig verbreitet. Die Möglichkeiten von verschiedenen Authentifizierung ist nahe zu grenzenlos.
+[^authentifizierungsdeforg]
+
+###Autorisierung
+Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung [^duden]
+
+Wenn die [Authentifizierung] erfolgreich war erteilt das System die Autorisierung. Dabei wird der Person oder Objekt erlaubt bestimmte Aktionen/Zugriffe durchzuführen. Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist ebenfalls Bestandteil der Autorisierung.
+
+Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt zu sein. Die anschliessende Autorisierung erfolgt automatisch durch das System selbst. Im Zuge der Autorisierung werden dem Benutzer seine Zugriffsrechte zugewiesen.
+[@authentifizierungsdeforg]
 
 
 
+[^authentifizierungsdef]: [@authentifizierungsdef] 
+[^authentifizierungsdeforg]: [@authentifizierungsdeforg]
+
+
+\newpage
+
+
+[^stand20160108]: Stand 4. Januar 2016
 
 \newpage
 ##Grundlegende Sicherheitsprinzipien
@@ -184,6 +197,54 @@ durch nicht an der Entwicklung Beteiligte erstellt wird.
 
 ## Authetentifizierungskomponenten
 Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt werden. Folgend gilt es die Komponenten zu erklären.
+
+###Cookie
+Ein Cookie ist ein kurzes Text-Snippet, welches beim Besuch einer Webseite an den Browser gesendet wird. Dabei kann das Cookie serverseitig vom Webserver an den Browser gesendet werden oder in einem Skript wie Javascript erstellt werden. Der Browser sendet das Cookie bei jeder Aufforderung wieder der Webseite zu. 
+Der Erfinder der Cookie-Technologie ist Vita Lou Montulli, der 1994 nach seinem Studienabbruch bei Netscape einstieg und zudem den Navigator mit entwickelte.
+Der Betreiber der Interaktivität speichert also im Cookie die Teilnahme. Beim erneuten Aufruf werhält er das Cookie und weiss so, dass der Teilnehmer schon einmal teilgenommen hat oder nicht. 
+Das Absichern von Interaktivitäten durch Cookies ist weit verbreitet. Durch die browserseitige/clientseitige Speicherung, kann diese Speicherung auch clientseitig manipuliert werden. [^cookie-centra][^google-cookies]
+
+####Automatisierungsmöglichkeit und Mehrfach Teilnahme
+Die Automatisierung ist ohne IT-Know How möglich. Es stehen einige Browser Plugins zur Verfügung welche es ermöglichen sein Surfverhalten über einfache Record-Funktion aufzunehmen und danach Cookies zu löschen. So kann blieb vielmal an einer Interkativität wie Umfrage teilgenommen werden.
+
+####Kosten
+Cookies verursachen keine direkten Kosten
+
+###Flash-Cookies
+Ein Flash-Cookie ist wie es der Name bereits vermuten lässt ein Cookie, dass an den Adobe-Flash Player gebunden ist. Da der der Flash-Player im Betriebsystem installiert wird, funktionieren die Flash-Cookies browserunabhängig. Die Bedienungen dieser Flash-Cookies werden von Adobe festgelegt und der Browser kann nicht direkt in das Handling eingreiffen. Auch hier wird die Speicherung clientseitige durchgeführt und kann diese Speicherung auch clientseitig manipuliert werden.
+Seit Steven Jobs mit Apple keinen Support für die mobilen Geräte in Aussicht stellte und auf die Probleme und Risiken hinwies verliert die Plattform gestärkt durch immer wieder auftretende Sicherheitsprobleme an User. So hat haben am 1. Januar noch knapp 10%[^flashussage] aller Webseitenbesucher den Flash-Player.
+
+[^flashussage][@flashussage]
+
+###Mehrfach Teilnahme
+Flash-Cookies können je nach Betriebsystem mit verschiedenem Aufwand gelöscht werden und dadurch ist eine Mehrfach-Teilnahme ermöglich.
+
+####Automatisierungsmöglichkeit
+Die Automatisierte Teilnahme und Löschung ist im Gegensatz zu klassichen Cookies aufwendiger aber durchaus machbar.
+
+####Kosten
+Cookies verursachen keine direkten Kosten
+
+###IP-Adresse
+Bei der Nutzung einer Interkativität wird die IP-Adresse des Teilnehmers gespeichert. So kann bei erneutem teilnehmen die Teilnahme verweigert werden.
+Das Internet Protokoll kurz IP sieht für jedes Geräte welches an einem IP-Netzwerk angeschlossen ist eine eindeutige Adresse vor. Deshalb auch der nahheliegende Name IP-Adresse. Mit wenigen Ausnahmen wird über den IP Version 4 standart im Internet kommunziert. Damit lassen sich aber nur 4,22 Miliarden eindeutige Adressen im Wordl Wide Web vergeben. Deshalb mussten einige Methoden entwickelt werden um vorerst das Problem umgehen zu können. Unter anderem identifiziert sich ein Router wie ein Rechner und nutzt intern andere IP-Adressen. Gegen aussen haben also alle Nutzer des Netzwerks die selbe IP-Adresse. Dadurch entsteht die Problematik an dieser Methode, dass in einem Grossraumbüro mit einem Internetanschluss auch nur eine Person an einen Wettbewerb teilnehmen kann.[^pclexikon-ip]
+
+
+####Mehrfach Teilnahme
+Es gibt verschiedene Möglichkeiten die IP-Adresse zu wechseln. Eine einfache Möglichkeit ist durch verwenden von Proxy-Servern eine andere IP-Adresse zu verwenden. Die Mehrfachteilnahme ist also einfach möglich.
+
+####Automatisierungsmöglichkeit
+Das automatisierte wechseln eines Proxys ist etwas aufwendiger und braucht technisches Know-How aber durchaus möglich.
+
+###Kosten
+Das authentifzieren via IP-Adresse verursacht keine direkten Kosten
+
+
+
+
+[^cookie-centra]: [@cookie-centra]
+[^google-cookies]: [@google-cookies]
+[^pclexikon-ip]: [@pclexikon-ip]]
 
 ###Captcha
 Captcha - Test, mit dem festgestellt werden kann, ob sich ein Mensch oder ein Computer eines Programms bedient [^duden]
@@ -270,6 +331,31 @@ Die Teilnahmeanzahl ist von den vorhandenen Adressanschriften abhängig und dahe
 ####Kosten
 Die Kosten berechnen sich für den Versand in der Schweiz bei dem analysierten Anbietern je nach Druck und Versandart des Empfängers zwischen CHF 1.20 und CHF 1.65.[^pingen]
 
+###OAuth
+Die Zwei-Faktor-Authentifizierung OAuth ist im Kapitel [OAuth-Provider] ausführlich erläutert.
+
+####Automatisierungsmöglichkeit
+Eine OAuth Registrierung kann als nicht automatisierbar eingestuft werden. Automatisierbares Anmelden und verwenden von verschiedenen Accounts ist durchaus möglich. Plattformen wie kinglfuencers.ch zeigen Möglichkeiten auf wie automatisiert auf SocialMedia Platfformen von dritten zugegriffen werden kann und Tätigkeiten ausgeführt werden können.
+
+####Mehrfach Teilnahme
+Eine Mehrfach Registration ist möglich
+
+####Kosten
+OAuth bewirkt keine direkten Kosten
+
+###SuisseID Integration
+SuisseID wurde bereits im Kapitel [SuisseID] erläutert. 
+
+
+###Automatisierungsmöglichkeit
+Eine Automatisierung ist nahe zu unmöglich
+
+####Mehrfach Teilnahme
+Eine Mehrfach Teilnahme ist nahe zu unmöglich
+
+####Kosten
+Für den Betreiber fallen geringe Kosten an. Der Enduser zahlt aber bemerkenswerten Preis.
+
 
 ###Browser Fingerprints
 
@@ -303,3 +389,7 @@ Auch der Browser übermittelt an den Server verschiedene Informationen:
 [^pingen]: Die Preise wurdem am 10. März 2016 auf pingen.com abgefragt
 [^cnet-2fa]
 [^cnet-2fa]: [@cnet-2fa]
+
+
+####Cookies
+

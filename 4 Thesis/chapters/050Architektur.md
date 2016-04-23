@@ -14,8 +14,8 @@ Der Authtentifizierungsservice besteht aus drei Hauptkomponenten: Web-API, Konfi
 ###
 
 \newpage
-##Ablauf Authentifizierung
-Der User nimmt an einer Interaktivität eines Anbieters teil. Dabei füllt er den Wettbewerb, Umfrage aus oder löst die gegebene Aufgabe und sendet einmal oder mehrmals ein Feedback an die Anbieter Webseite zurück. Nach Abschluss der Interaktivität, werden die Datengespeichert und mit der daraus resultierenden eindeutigen Identität des Feedbacks wird die Authentifizierung gestartet. Das vom Programmierer definierte Authentifizierungsverfahren wird durchgeführt um Identität im gewünschten Masse sicher zustellen. User und das Anbieter System werden über erfolgreiche Authentifizierung informiert. Nach Möglichkeit wird auch eine fehlerhafte Authentifizierung mitgeteilt.
+##Genereller Ablauf Authentifizierung
+Der User nimmt an einer Interaktivität eines Anbieters teil. Dabei füllt er den Wettbewerb, Umfrage aus oder löst die gegebene Aufgabe und sendet einmal oder mehrmals ein Feedback an die Anbieter Webseite zurück. Nach Abschluss der Interaktivität, werden die Datengespeichert und mit der daraus resultierenden eindeutigen Identität des Feedbacks wird die Authentifizierung gestartet. Das vom Programmierer definierte Authentifizierungsverfahren bestehend aus ein oder mehreren Sicherheitsstufen wird durchgeführt um Identität im gewünschten Masse sicher zustellen. User und das Anbieter System werden über erfolgreiche Authentifizierung informiert. Nach Möglichkeit wird auch eine fehlerhafte Authentifizierung mitgeteilt.
 
 ![Aufbau Inhalt im Card-Design](images/draw_io/BA_AutorisationOverview.png)
 
@@ -25,27 +25,32 @@ Ein differenziertes Domänemodel oder auch Domänenmodel Basis Level genannt, er
 ![Differenziertes Domänemodel des Authentifizierungservice](images/domaenenmodell.png)
 
 <!--TODO beschreibung des Models-->
+
 \newpage
 ##Datenbankdesign
 In der Systemarchitektur des Authentifizierungservice stehen Objekte nur während der Ausführungszeit zur Verfügung. Um sie zu persitieren, werden sie in einer relationalen Datenbank gespeichert.
 Die Pradigmen der Objektorientierten Programmiersprache und der relationalen Datenbank sind grundlegend verschieden. 
-So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als "object-relational impedance mismatch" bekannt.[^the-vietnam-of-computer-science]
-Um diesen Wiederspruch zu mindern stellt Microsoft das Entity-Framework zur Verfügung. Das Entity-Framework hat verschiedene Konzeptionelle Ansätze. Es gilt nun den richtigen Ansatz für den Authenifizierungsservice zu wählen
+So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als "object-relational impedance mismatch" bekannt.[^vietnamcomputerscience]
+Um diesen Wiederspruch zu mindern stellt Microsoft das Entity-Framework zur Verfügung. 
 
-###Database First
+###Entity-Framework
+Das Entity-Framework hat verschiedene Konzeptionelle Ansätze um möglichst viele Bedürfnisse an den ORM-Mapper zu erfüllen. Es gilt nun den richtigen Ansatz für den Authenifizierungsservice zu wählen.
+
+####Database First
 Beim Database First Ansatz wird zuerst die Datenbank designt. Das Entity-Framework bildet aus der Datenbank die POCO-Klassen ab. Sollten Anpassungen an den Entitäten ergeben, werden diese zuerst in der Datenbank implementiert und daraus werden wiederum neuen POCO-Klassen generiert.
 
-###Code First
+####Code First
 Beim Code First Ansatz werden zuerst die POCO-Klassen erstellt. Das Entity-Framework bildet aus den POCO-Klassen die Tabellen in der Datenbank. Alle Anpassungen werden gleich in den POCO-Klassen umgesetzt und durch das Entity-Framework in der Datenbank geändert erstellt.
 
-###Entscheidung
+####Entscheidung
 Wenn die POCO-Klassen gleich mehrheitlich für die Schnittstellendefinition als Parameterdefinition verwendet werden könnten, fallen Mehraufwendungen für Umwandlungen im Programmcode weg. Eine Schnittstellendefinition sollte aber nicht willkürlich durch eine Datenbankänderung beeinflusst werden. Der umgekehrte Fall ist aber minder wichtig, da die Datenbank nur von der Schnittstelle verwendet wird. Deshalb wird das Konzept Code First eingesetzt.
 
-
+[^vietnamcomputerscience]: [@the-vietnam-of-computer-science]
 ###ERD
 Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen Tabellen durch das Entity Framework selbständig generiert
-[^the-vietnam-of-computer-science]: [@the-vietnam-of-computer-science]
 
+
+\newpage
 ##Integration der Schnittstelle
 Wie in der Anforderungsanalyse <!--TODO Punkt beschreiben --> und Aufgabenstellung  <!--TODO Punkt beschreiben -->geschrieben, soll die Schnittstelle möglichst einfach in Bestehende Systeme integriert werden können. Bevor wir untersuchen wie wir die Integration umsetzten können, bedarf es die wichtigsten bestehenden Systeme zu kennen um evtl für diese Systeme eine spezifisch einfach Integration zu entwickeln.
 
@@ -199,7 +204,8 @@ Beim Beispiel gäbe es die Signatur 8a2298ebfe7208ebe63dd11cdbf5b6cafb56d09c
 \newpage
 ##Sicherheitstufen integrieren
 
-Im Kapitel Recherche wurden einige Sicherheitskomponenten recherchiert und illustriert. Es gilt nun ein Setting an Komponenten zu finden, welche dem Developer eine Breite Auswahlmölgichkeit bietet ihn aber nicht durch komplexes Auswählen der Sicherheitstufen aufhaltet.
+Im Kapitel Recherche wurden einige Sicherheitskomponenten recherchiert und illustriert. Es gilt nun ein Setting an Komponenten zu finden, welche dem Developer eine Breite Auswahlmölgichkeit ([NFREQ-210](###NFREQ-210)) bietet  und eine genügende Verbreitung in der Schweiz hat ([NFREQ-212](###NFREQ-212)), ihn aber nicht durch komplexes Auswählen der Sicherheitstufen aufhaltet ([NFREQ-222](###NFREQ-222)),.
+
 
 ####Cookie
 Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser Makro Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahme als auch das verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht.
@@ -221,14 +227,16 @@ Der Benutzer gibt seine Telefonnumer ein. Der Benutzer swird automatisiert anger
 Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, deshalb wird Unique mit gut und nicht sehr gut bewertet. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach erhalten auf einer Webseite quittieren
 
 
-###Übersicht
+###Sicherheitstufen bewerten
+Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgelegt. Der Auftraggeber hat die verschiedenen Stufen anhand den 4 definierten Aspekten und dem Musskriterium Verbreitung aus der Anforderungsanalyse bewertet.
 
 ------------------------------------------------------------------------- -------------------------------------------------
-__Komponente__				__Verhinderung		 __Automat-			__Kosten__	   	__Aufwand	  	     __Verbreitung__	
-							Mehrfachteilnahme__		sierung__						Benutzer__							
+__Sicherheitsstufen__		__Verhinderung		 __Automat-			__Kosten__	   	__Aufwand	  	     __Verbreitung	
+							Mehrfachteilnahme__	sierung__							Benutzer__			 in der Schweiz__				
 --------------------------  ------------------- ------------------- --------------- ------------------- -------------------
 __Cookie__				  	2.5 		     	2.5 				6				6                	6
-                                                                          
+ 
+__Flash-Cookie__		  	2.5 		     	3					6				6                	6 
                                                                           
 __IP__				      	3					3 					6				6             		6
                                                                           
@@ -260,7 +268,8 @@ Table: Übersicht der Authentifizierungs Methoden
 
 
 ###Auswahl der zu integrierenden Sicherheitsstufen
-Um die geforderte Breite an Sicherheitsmethoden 
+SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schweiz ([NFREQ-212](###NFREQ-212)) keine genügende Note und wird daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu erlangen wurden die folgenden Methoden mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
+ 
 
 \newpage
 ##Modularität und Erweiterbarkeit

@@ -63,5 +63,12 @@ Warning--entry type for "the-vietnam-of-computer-science" isn't style-file defin
 --line 301 of file Citer.bib
 Warning--entry type for "design-By-Contract" isn't style-file defined
 --line 309 of file Citer.bib
+Warning--entry type for "google-cookies" isn't style-file defined
+--line 318 of file Citer.bib
+Warning--entry type for "pclexikon-ip" isn't style-file defined
+--line 333 of file Citer.bib
+Warning--entry type for "flashussage" isn't style-file defined
+--line 341 of file Citer.bib
+Warning--I didn't find a database entry for "cookie-centra"
 Biblatex version: 3.0
-(There were 30 warnings)
+(There were 34 warnings)

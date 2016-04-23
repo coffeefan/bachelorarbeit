@@ -221,8 +221,8 @@ angular.module('configuratorApp')
                 }
             });
 
-            modalInstance.result.then(function (selectedItem) {
-                $scope.selected = selectedItem;
+            modalInstance.result.then(function (){//selectedItem) {
+                //$scope.selected = selectedItem;
             }, function () {
                 console.log('Modal dismissed at: ' + new Date());
             });
@@ -236,23 +236,27 @@ angular.module('configuratorApp')
     });
 
 angular.module('configuratorApp')
-.controller('ModalInstanceCtrl', function ($scope, $compile,$uibModalInstance,ProjectSecurityService, securitystepname,projectId) {
+.controller('ModalInstanceCtrl', function ($rootScope,$scope, $compile,$uibModalInstance,ProjectSecurityService, securitystepname,projectId) {
 
     $scope.loadProjectSecuritySteps= function(){
         ProjectSecurityService.find({securitystepname:securitystepname+"Info",projectId:projectId}, $scope.project, function (test) {
 
             angular.forEach(test, function(field, key) {
                 //alert(field+" "+key);
-                if(key!="$promise" && key!="ProjectId" &&key!="$resolved")
+                if(key!="$promise" && key!="ProjectId" &&key!="$resolved" && key!=securitystepname+"ConfigId")
                 var sourceHtml =
-                    "<div>" +
-                    "<label>" + key+ "</label\">" +
-                        "<input type=\"text\" data-ng-model=\"securitystepinfo." +
+                    "<div class=\"form-group\">" +
+                    "<label>" + key+ "</label>" +
+                        "<input type=\"text\" class=\"form-control\" data-ng-model=\"securitystepinfo." +
                     key + "\">" +
                     "</div>";
 
+
+
+
                 var compiledHtml = $compile(sourceHtml)($scope);
-                $('#dynamicForm').append(compiledHtml);
+                $('#dynamicForm').append(
+                compiledHtml);
             });
             $scope.securitystepinfo=test;
         }, function (error) {
@@ -265,17 +269,16 @@ angular.module('configuratorApp')
     $scope.saveSecurityStepProject = function(){
         $scope.securitystepinfo.ProjectId=projectId;
         ProjectSecurityService.update({securitystepname:securitystepname+"Info",projectId:projectId}, $scope.securitystepinfo, function (data) {
-            swal({title: "Speicherung erfolgreich", text: "Das Projekt wurde erfolgreich erstellt", type: "success"}, function () {
-                $location.path("/");
-            });
+            $uibModalInstance.close();
 
         }, function (error) {
-            $rootScope.errorAlert(error)
+            $scope.saveSecurityStepProjectError=error.data.ExceptionMessage;
+            $rootScope.showAlert("alertSaveSecurityStepProjectError");
         });
     };
 
     $scope.ok = function () {
-        $uibModalInstance.close($scope.selected.item);
+
     };
 
     $scope.cancel = function () {

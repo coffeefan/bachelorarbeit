@@ -363,7 +363,20 @@ __Techn. Risiko__       Sehr hoch
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
-### NFREQ-120			Performance
+
+### NFREQ-122			Einfache und verständliche visuelle Konfiguration
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach und verständlich optisch konfiguriert werden können
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-130			Performance
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
@@ -375,7 +388,7 @@ __Techn. Risiko__       Sehr hoch
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
-### NFREQ-120			Hohe Verfügbarkeit
+### NFREQ-135			Hohe Verfügbarkeit
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
@@ -385,6 +398,33 @@ __Beschreibung__        Der Authentifizierungsschnittstellen-Service soll eine H
 __Techn. Risiko__       Hoch
 
 __Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-210			Programmirer kann aus Breite von verschiedenen Sicherheitsstufen auswählen
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Dem Programmierer stehen verschiedene Sicherheitsstufen zur Verfügung. Das Wort verschieden wurde durch folgende Aspekte mit dem Auftraggeber definiert:
+						Abgeleitet von der Aufgabenstellung sind Aspekte "Mehfach-Teilnahme" und "Automatisierung" definiert worden. Beide Aspekte kann durch eine Sicherheitsstufe mehr oder weniger verhindern werden.
+						Abhängig von der Interkativität ist es wirtschaftlich sinnvoll das Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten ein Aspeket.
+						Ein weiterer Aspekt ist der Aufwand für den Benutzer. 		
+
+__Techn. Risiko__       Niedrig
+
+__Business Value__     	Hoch
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-212			Die verwendeten Sicherheitsstufen sind in der Schweiz verbreitet
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Die eingesetzten Sicherheitsstufen sollten in der Schweiz verbreitet sein.			
+
+__Techn. Risiko__       Niedrig
+
+__Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
 \newpage

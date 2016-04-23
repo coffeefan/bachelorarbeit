@@ -77,6 +77,10 @@ h4, .h4 {
   line-height: 30px;
 }
 
+h5.title{
+  font-size: 18px;
+}
+
 h5, .h5 {
   font-size: 16px;
   margin-bottom: 15px;
@@ -1872,7 +1876,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   padding: 15px 15px 0;
 }
 .card .category,
-.card label {
+.card label, #dynamicForm label {
   font-size: 14px;
   font-weight: 400;
   color: #9A9A9A;
@@ -1882,7 +1886,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 .card label i {
   font-size: 16px;
 }
-.card label {
+.card label, #dynamicForm label {
   font-size: 12px;
   margin-bottom: 5px;
   text-transform: uppercase;

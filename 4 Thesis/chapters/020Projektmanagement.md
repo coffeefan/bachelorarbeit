@@ -6,7 +6,7 @@ In diesem Kapitel wird die Planung der Bachelorarbeit ausgeführt. Weiter wird d
 
 ##Grobe Projektplanung
 Der grobe Projektplan illustriert die Strukturierung der Bachelorarbeit über die knapp sechs Monate lange Projektzeit. Der Projektplan liefert einen generellen Überblick über den zeitlichen Ablauf der Bachelorarbeit und legt die Milestons fest.
-Als Soll Aufwand der Bachelorarbeit wurden 375 Stunden veranschlagt. Der effektive aufgelaufene Aufwand betrug xx Stunden.
+Als Soll Aufwand der Bachelorarbeit wurden 376  Stunden veranschlagt. Der effektive aufgelaufene Aufwand betrug xx Stunden.
 
 ![Projektplan der Bachelorarbeit ](images/projektplan.jpg)
 <!--TODO Überarbeiten -->
@@ -98,24 +98,35 @@ Table: Termine der Bachelorarbeit
 \newpage
 
 ##Infrastruktur
-Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert werden. [TESTLINK][Open Design]
+Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert werden.
 
-###Quellcode-Verwaltung
+###Quellcode-Verwaltung mit GitHub
 Um einerseits eine Datensicherung zu gewährleisten und anderseits die Änderungen nachvollziehbar abzulegen, wird die Bachelorarbeit mittels Git und GitHub versioniert. Das Repository [^gitrepository] ist für den Betreuer, Experten und Auftrageber jederzeit einsehbar.
 
-###Zeitmanagement
+###Zeitmanagement mit toggl
 Beim Arbeiten an der Bachelorarbeit kann man sich schnell in details verlieren. Das Zeitmanagement Tool toggl[^toggl] gibt einem schnell ein Feedback zu aktuell verbrauchten Zeit und einen Überblick um das geplante mit der realen Zeit zu vergleichen.Die Software ist besonders unter Kreativagenturen und Freelancern beliebt. Sie präsentiert sich als eine besonders simple Lösung, die die flexible Zeiterfassung in den Fokus stellt. Der User kann neue Aufgaben mit nur einem Klick anlegen und die Stoppuhr starten, um Arbeitszeiten automatisch zu erfassen.
 <!--TODO Screenshot-->
+
+###Dokumentieren mit Pandoc und LaTex
+Die Thesis dieser Bachelorarbeit soll basierend auf anerkannten Wisschenschaftlichen Formaten erzeugt werden. Im Intranet der ZHAW wird die Erstellung von Wissenschaftlichen Arbeiten mit LaTex empfohlen. LaTex Templates der einzelnen Abteilungen können erworben werden. Die Effizienz bei der Erstellung von LaTex arbeiten ist umstritten. Diese Arbeit wird zuerst im Markdown Syntax geschrieben und mittels Pandoc in LaTex umgewandelt. Basierend auf den templates und Einstellungen in reinem LaTex wird dann das endgültige PDF-Dokument generiert.
+
+###Design Mockup Balsamiq
+Der Auftraggeber wünscht, dass eine strukturelle Vorlage des Designs vor der Umsetzung illustriert wird. Dafür stellt der Auftraggeber eine Lizenz des Tools Balsamiq zur Verfügung. Balsamiq ist ein wireframing Tool. Dank den vielen konfigurierbaren Elementen kann rasch ein Design-Mockup von Webseiten erstellt werden.
+
+
 
 \newpage
 
 ###yUML
-Um Abläufe, Use Case und andere Uml-Diagramme zu visualisieren bedarf es ein Tool dass die Diagramm sowohl optisch ansprechend wie aber auch einfach und schnell anpassbar umsetzt. yUML ist ein gratis online service über welchen Code und dadurch ziemlich strukturiert ein UML-Diagramm kreiert werden kann. Der Code welche zum Diagramm führt kann so einfach als Textdatei abgespeichert werden und wird in dieser Bachelorarbeit im Github-Repository hinterlegt.
+Um Ablaufe-Diagramm, Use Case-Diagramme und andere Uml-Diagramme zu visualisieren bedarf es ein Tool dass die Diagramm sowohl optisch ansprechend wie aber auch einfach und schnell anpassbar umsetzt. yUML ist ein gratis Online-Service über welchen mittels Code ein UML-Diagramm kreiert werden kann. Diese Art von UML designen ist daher sehr strukturiert und nachvollziehbar. Der Code welche zum Diagramm führt kann so einfach als Textdatei abgespeichert werden und wird in dieser Bachelorarbeit im Github-Repository hinterlegt.
 
 ![Screenshot yUML Beispiel Klassendiagramm ](images/yuml.JPG)
 
 
+###Draw.io
+Alle Diagramme welche nicht via yUML designt werden können werden mit dem Online Tool Draw.io erstellt. Draw.io wird in Entwicklerkreisen als webbasiertes Visio gehandelt. Seit dem letzten Release ist Draw.io ohne Einschränkung gratis verwendbar. Die gezeichneten Diagramme können direkt im Daten-Cloud Dienst Google Drive gespeichert werden.
 
+<
 
 <!-- TODO Continous Integration?-->
 

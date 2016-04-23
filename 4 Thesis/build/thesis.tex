@@ -52,8 +52,8 @@ Um Ihren Werbegewinn und Resonanz zu bewahren oder sogar auszubauen sind
 Medien angewiesen, dass Ihre Stories/Content auf den Social Media
 Kanälen verlinkt und so viral verbreitet werden. Neben altbekannten
 plakativen Titeln und interessanten Bildern beleben die Medienhäuser
-immer mehr ihren Content mit so genannten Playfull Content integriert
-durch Social Module. Dabei handelt sich um Abstimmungen, Wettbewerbe und
+immer mehr ihren Content mit so genannten Playfull Content oder Deutsch
+Interaktivitäten. Dabei handelt sich um Abstimmungen, Wettbewerbe und
 Umfragen oder anderen Interaktivitäten im Zusammenhang mit dem
 verfassten Inhalt. Diese Social-Module werden gerne verlinkt und fördern
 so die Verbreitung des Contents und dadurch einen Anstieg der
@@ -284,7 +284,7 @@ Der grobe Projektplan illustriert die Strukturierung der Bachelorarbeit
 über die knapp sechs Monate lange Projektzeit. Der Projektplan liefert
 einen generellen Überblick über den zeitlichen Ablauf der Bachelorarbeit
 und legt die Milestons fest. Als Soll Aufwand der Bachelorarbeit wurden
-375 Stunden veranschlagt. Der effektive aufgelaufene Aufwand betrug xx
+376 Stunden veranschlagt. Der effektive aufgelaufene Aufwand betrug xx
 Stunden.
 
 \includegraphics{images/projektplan.jpg}
@@ -562,16 +562,17 @@ Präsentation
 \section{Infrastruktur}\label{infrastruktur}
 
 Im Unterkapitel Infrastruktur sollen die verwendeten Tools erläutert
-werden. \protect\hyperlink{open-design}{TESTLINK}
+werden.
 
-\subsection{Quellcode-Verwaltung}\label{quellcode-verwaltung}
+\subsection{Quellcode-Verwaltung mit
+GitHub}\label{quellcode-verwaltung-mit-github}
 
 Um einerseits eine Datensicherung zu gewährleisten und anderseits die
 Änderungen nachvollziehbar abzulegen, wird die Bachelorarbeit mittels
 Git und GitHub versioniert. Das Repository \footnote{https://github.com/coffeefan/bachelorarbeit}
 ist für den Betreuer, Experten und Auftrageber jederzeit einsehbar.
 
-\subsection{Zeitmanagement}\label{zeitmanagement}
+\subsection{Zeitmanagement mit toggl}\label{zeitmanagement-mit-toggl}
 
 Beim Arbeiten an der Bachelorarbeit kann man sich schnell in details
 verlieren. Das Zeitmanagement Tool toggl\footnote{https://toggl.com}
@@ -583,15 +584,36 @@ Zeiterfassung in den Fokus stellt. Der User kann neue Aufgaben mit nur
 einem Klick anlegen und die Stoppuhr starten, um Arbeitszeiten
 automatisch zu erfassen.
 
+\subsection{Dokumentieren mit Pandoc und
+LaTex}\label{dokumentieren-mit-pandoc-und-latex}
+
+Die Thesis dieser Bachelorarbeit soll basierend auf anerkannten
+Wisschenschaftlichen Formaten erzeugt werden. Im Intranet der ZHAW wird
+die Erstellung von Wissenschaftlichen Arbeiten mit LaTex empfohlen.
+LaTex Templates der einzelnen Abteilungen können erworben werden. Die
+Effizienz bei der Erstellung von LaTex arbeiten ist umstritten. Diese
+Arbeit wird zuerst im Markdown Syntax geschrieben und mittels Pandoc in
+LaTex umgewandelt. Basierend auf den templates und Einstellungen in
+reinem LaTex wird dann das endgültige PDF-Dokument generiert.
+
+\subsection{Design Mockup Balsamiq}\label{design-mockup-balsamiq}
+
+Der Auftraggeber wünscht, dass eine strukturelle Vorlage des Designs vor
+der Umsetzung illustriert wird. Dafür stellt der Auftraggeber eine
+Lizenz des Tools Balsamiq zur Verfügung. Balsamiq ist ein wireframing
+Tool. Dank den vielen konfigurierbaren Elementen kann rasch ein
+Design-Mockup von Webseiten erstellt werden.
+
 \newpage
 
 \subsection{yUML}\label{yuml}
 
-Um Abläufe, Use Case und andere Uml-Diagramme zu visualisieren bedarf es
-ein Tool dass die Diagramm sowohl optisch ansprechend wie aber auch
-einfach und schnell anpassbar umsetzt. yUML ist ein gratis online
-service über welchen Code und dadurch ziemlich strukturiert ein
-UML-Diagramm kreiert werden kann. Der Code welche zum Diagramm führt
+Um Ablaufe-Diagramm, Use Case-Diagramme und andere Uml-Diagramme zu
+visualisieren bedarf es ein Tool dass die Diagramm sowohl optisch
+ansprechend wie aber auch einfach und schnell anpassbar umsetzt. yUML
+ist ein gratis Online-Service über welchen mittels Code ein UML-Diagramm
+kreiert werden kann. Diese Art von UML designen ist daher sehr
+strukturiert und nachvollziehbar. Der Code welche zum Diagramm führt
 kann so einfach als Textdatei abgespeichert werden und wird in dieser
 Bachelorarbeit im Github-Repository hinterlegt.
 
@@ -601,60 +623,28 @@ Bachelorarbeit im Github-Repository hinterlegt.
 \caption{Screenshot yUML Beispiel Klassendiagramm}
 \end{figure}
 
+\subsection{Draw.io}\label{draw.io}
+
+Alle Diagramme welche nicht via yUML designt werden können werden mit
+dem Online Tool Draw.io erstellt. Draw.io wird in Entwicklerkreisen als
+webbasiertes Visio gehandelt. Seit dem letzten Release ist Draw.io ohne
+Einschränkung gratis verwendbar. Die gezeichneten Diagramme können
+direkt im Daten-Cloud Dienst Google Drive gespeichert werden.
+
+\textless{}
+
 \newpage
 
 \chapter{Recherche}\label{recherche}
 
-\section{Fachbegriffe}\label{fachbegriffe}
+\section{Ähnliche Produkte auf dem
+Markt}\label{uxe4hnliche-produkte-auf-dem-markt}
 
-Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang
-unter dem Kapitel ``\protect\hyperlink{glossar}{Glossar}''.
+Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
 
-\section{Erläuterung der
-Grundlagen}\label{erluxe4uterung-der-grundlagen}
+\hypertarget{oauth-provider}{\subsection{OAuth-Provider}\label{oauth-provider}}
 
-In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, die
-als für die Bearbeitung dieser Bachelorthesis herangezogen wurden.
-
-\hypertarget{authentifizierung}{\subsection{Authentifizierung}\label{authentifizierung}}
-
-Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen
-\footnote{\autocite{duden}}
-
-Eine Person oder Objekt eindeutig zu \textbf{authentifizieren} bedeute
-zu ermitteln ob die oder derjenige auch der ist als welcher er sich
-ausgibt. \footnote{\autocite{authentifizierungsdef}} Dies unterstreicht
-auch die Ableitung des Wortes vom Englischen Verb \emph{authenicate},
-was auf Deutsch sich als \emph{echt erweisen, sich verbürgen,
-glaubwürdig sein} bedeutet. Das bekannteste Verfahren der
-Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter
-ist die PIN-Eingabe bei Bankautomaten oder Mobiletelefon häufig
-verbreitet. Die Möglichkeiten der Authentifizierung nahe zu grenzenlos.
-\footnote{\autocite{authentifizierungsdeforg}}
-
-\subsection{Autorisierung}\label{autorisierung}
-
-Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung
-\footnote{\autocite{duden}}
-
-Wenn die
-Authenfizierung\protect\hyperlink{authentifizierung}{Authentifizierung}
-erfolgreich war erteilt das System die Autorisierung. Dabei wird der
-Person oder Objekt erlaubt bestimmte Aktionen/Zugriffe durchzuführen.
-Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene
-Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist
-ebenfalls Bestandteil der Autorisierung.
-
-Der Begriff Authentifizierung wird vielfach mit dem Begriff
-Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer
-initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt
-zu sein. Die anschließende Autorisierung erfolgt automatisch durch das
-System selbst. Im Zuge der Autorisierung werden dem Benutzer seine
-Zugriffsrechte zugewiesen. \autocite{authentifizierungsdeforg}
-
-\newpage
-
-\hypertarget{oauth}{\subsection{OAuth}\label{oauth}}
+\subsubsection{OAuth}\label{oauth}
 
 OAuth ist ein Protokoll. Es erlaubt sichere API-Autorisierungen.
 
@@ -696,16 +686,7 @@ Dank der weiten Verbreitung gibt es nun in allen bekannten
 Programmiersprachen eine Implementierung sowohl von Client wie auch vom
 Server. Weitere Infos dazu unter oauth.net\href{http://oauth.net/2/}{1}
 
-\newpage
-
-\section{Ähnliche Produkte auf dem
-Markt}\label{uxe4hnliche-produkte-auf-dem-markt}
-
-Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
-
-\subsection{OAuth-Provider}\label{oauth-provider}
-
-Die grössten \protect\hyperlink{oauth}{OAuth}-Provider wie Google,
+Die grössten \protect\hyperlink{oauth-1}{OAuth}-Provider wie Google,
 Facebook und Twitter erziehlen eine weiter Verbreitung weltweit:
 
 \begin{figure}[htbp]
@@ -744,7 +725,7 @@ Account. Das Protokoll ist ein etablierter Standard.
 Mehrfachregistrierungen sind möglich. Jenach OAuth-Provider werden
 verschiedene Daten zur Verfügung gestellt. Pro OAuth Provider kann man
 sich registrieren einen Abgleich der verschiedenen OAuth Provider wird
-vom \protect\hyperlink{oauth}{OAuth}-Protokoll nicht zur Verfügung
+vom \protect\hyperlink{oauth-1}{OAuth}-Protokoll nicht zur Verfügung
 gestellt. Ein Teil der Bevölkerung müsste sich vor Nutzung noch
 registrieren. Die Implementierung ist trotz vielen Libaries nicht ohne
 tiefere Programmierkenntnisse möglich.
@@ -759,10 +740,10 @@ nutzen Youtube um einfach Ihren Artikel mit einem Video zu ergänzen.
 Neben der einfachen Integration profitieren die Medienhäuser von der
 zusätzlichen Verbreitung über youtube.com und der einfachen viralen
 Verbreitungsmöglichkeiten von youtube. PlayBuzz möchte das Youtube für
-Votings, Quiz und ähnlicher Embeded Content zu werden. Neben MTV, Focus,
+Votings, Quiz und ähnlicher Embeded Content werden. Neben MTV, Focus,
 Time oder Bild verwendet seit Herbst 2015 auch ein grosses Medienhaus
-der Schweiz die Plattform. Tamedia erfasst neu auf 20minuten Votings und
-Umfragen mit PlayBuzz.
+der Schweiz die Plattform. Tamedia erfasst neu immer wieder auf
+20minuten Votings und Umfragen mit PlayBuzz.
 
 2012 wurde Playbuzz von Shaul Olmert (Sohn des Premie Minster von Israel
 Ehuad Olmert) und Tom Pachys ins Leben gerufen. Der offizielle Launch
@@ -784,10 +765,13 @@ gesteigert werden. Die Verwaltungsoberfläche und Reports sind
 
 \subsubsection{Nachteile}\label{nachteile-1}
 
-Der Verweis auf Playbuzz ist ersichtlich. Auch beim Posten auf den
-SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die
-Möglichkeiten in Funktionalität und Design haben Grenzen. Individuelle
-Erweiterungen sind nicht einfach möglich.
+Der Verweis auf Playbuzz ist immer klar ersichtlich. Auch beim Posten
+auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz
+offensichtlich. Die Möglichkeiten in Funktionalität und Design haben
+Grenzen. Individuelle Erweiterungen sind nicht einfach möglich.
+Bestehende Interaktivitäten oder Interaktivitäten welche nicht von
+PlayBuzz erstellt werden können nicht verwendet werden.
+Mehrfachteilnahmen waren möglich.
 
 \newpage
 
@@ -869,6 +853,86 @@ Eine Automatisierung ist nahe zu unmöglich.
 Der Versand von SMS verursacht Kosten. Die Implementation bedarf hohes
 technisches Know-How.
 
+\hypertarget{suisseid}{\subsection{SuisseID}\label{suisseid}}
+
+Die SuisseID schafft die rechtlichen und technischen Voraussetzungen für
+den elektronischen Geschäftsverkehr. Als digitaler Identitätsausweis im
+Internet bietet sie ihren Anwenderinnen und Anwendern eine sichere
+Authentifikation zu Web-Applikationen, eindeutige Identifikation für
+Internet-Dienste und digitales, rechtsgültiges Signieren von Dokumenten.
+Der Erwerb so einer SuisseID kostet den Endkunden eine beträchtliche
+Summe Geld. Der Anbieter der Authentifizierung erwarten keine grossen
+Kosten. Dadurch ist eine kleine Verbreitung für privaten Nutzen
+offensichtlich. Entwickler von Integrationen erhalten eine ganzes SDK
+und Kontaktmöglichkeiten
+
+\subsubsection{Vorteile}\label{vorteile-3}
+
+Hohe Sicherheit durch sichere und eindeutige Authentifikation.
+Rechtliche Vorraussetzungen sind gegeben. Enwickler von Integrationen
+werden unterstützt.
+
+\subsubsection{Nachteile}\label{nachteile-3}
+
+Kleine Verbreitung und hohe kosten für den Enduser.
+
+\section{Fazit}\label{fazit}
+
+Auf dem Markt sind verschiedene Anbieter welche Interaktivitäten
+schützen können oder gar ganze Packages anbieten. Ein Service welcher es
+erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und
+diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden.
+Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung
+berücksichtigt werden. \footnote{Stand 4. Januar 2016}
+
+\section{Fachbegriffe}\label{fachbegriffe}
+
+Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang
+unter dem Kapitel ``\protect\hyperlink{glossar}{Glossar}''.
+
+\section{Erläuterung der
+Grundlagen}\label{erluxe4uterung-der-grundlagen}
+
+In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt,
+welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden.
+
+\hypertarget{authentifizierung}{\subsection{Authentifizierung}\label{authentifizierung}}
+
+Duden: Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen
+\footnote{\autocite{duden}}
+
+Eine Person oder Objekt eindeutig zu \textbf{authentifizieren} bedeute
+zu ermitteln ob die oder derjenige auch der ist als welcher er sich
+ausgibt. \footnote{\autocite{authentifizierungsdef}} Dies unterstreicht
+auch die Ableitung des Wortes vom Englischen Verb \emph{authenicate},
+was auf Deutsch sich als \emph{echt erweisen, sich verbürgen,
+glaubwürdig sein} bedeutet. Das bekannteste Verfahren der
+Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter
+ist die PIN-Eingabe bei Bankautomaten oder Mobiletelefon häufig
+verbreitet. Die Möglichkeiten von verschiedenen Authentifizierung ist
+nahe zu grenzenlos. \footnote{\autocite{authentifizierungsdeforg}}
+
+\subsection{Autorisierung}\label{autorisierung}
+
+Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung
+\footnote{\autocite{duden}}
+
+Wenn die \protect\hyperlink{authentifizierung}{Authentifizierung}
+erfolgreich war erteilt das System die Autorisierung. Dabei wird der
+Person oder Objekt erlaubt bestimmte Aktionen/Zugriffe durchzuführen.
+Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene
+Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist
+ebenfalls Bestandteil der Autorisierung.
+
+Der Begriff Authentifizierung wird vielfach mit dem Begriff
+Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer
+initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt
+zu sein. Die anschliessende Autorisierung erfolgt automatisch durch das
+System selbst. Im Zuge der Autorisierung werden dem Benutzer seine
+Zugriffsrechte zugewiesen. \autocite{authentifizierungsdeforg}
+
+\newpage
+
 \newpage
 
 \section{Grundlegende
@@ -933,7 +997,7 @@ dieses vorgehen verwenden. z.B. Filesysteme setzten auf Verbote anstatt
 auf explizite Erlaubnise.{[}\^{}sicheresysteme\_94{]}
 {[}\^{}defaultdeny{]}
 
-\hypertarget{open-design}{\subsection{Open Design}\label{open-design}}
+\subsection{Open Design}\label{open-design}
 
 Abgeleitet von der Kryprotografie: Nicht das Design der Software sollte
 die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept
@@ -976,6 +1040,98 @@ Die wichtigsten Sicherheitsprinzipien zusammengefasst:
 
 Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt
 werden. Folgend gilt es die Komponenten zu erklären.
+
+\subsection{Cookie}\label{cookie}
+
+Ein Cookie ist ein kurzes Text-Snippet, welches beim Besuch einer
+Webseite an den Browser gesendet wird. Dabei kann das Cookie
+serverseitig vom Webserver an den Browser gesendet werden oder in einem
+Skript wie Javascript erstellt werden. Der Browser sendet das Cookie bei
+jeder Aufforderung wieder der Webseite zu. Der Erfinder der
+Cookie-Technologie ist Vita Lou Montulli, der 1994 nach seinem
+Studienabbruch bei Netscape einstieg und zudem den Navigator mit
+entwickelte. Der Betreiber der Interaktivität speichert also im Cookie
+die Teilnahme. Beim erneuten Aufruf werhält er das Cookie und weiss so,
+dass der Teilnehmer schon einmal teilgenommen hat oder nicht. Das
+Absichern von Interaktivitäten durch Cookies ist weit verbreitet. Durch
+die browserseitige/clientseitige Speicherung, kann diese Speicherung
+auch clientseitig manipuliert werden. \footnote{\autocite{cookie-centra}}\footnote{\autocite{google-cookies}}
+
+\subsubsection{Automatisierungsmöglichkeit und Mehrfach
+Teilnahme}\label{automatisierungsmuxf6glichkeit-und-mehrfach-teilnahme}
+
+Die Automatisierung ist ohne IT-Know How möglich. Es stehen einige
+Browser Plugins zur Verfügung welche es ermöglichen sein Surfverhalten
+über einfache Record-Funktion aufzunehmen und danach Cookies zu löschen.
+So kann blieb vielmal an einer Interkativität wie Umfrage teilgenommen
+werden.
+
+\subsubsection{Kosten}\label{kosten}
+
+Cookies verursachen keine direkten Kosten
+
+\subsection{Flash-Cookies}\label{flash-cookies}
+
+Ein Flash-Cookie ist wie es der Name bereits vermuten lässt ein Cookie,
+dass an den Adobe-Flash Player gebunden ist. Da der der Flash-Player im
+Betriebsystem installiert wird, funktionieren die Flash-Cookies
+browserunabhängig. Die Bedienungen dieser Flash-Cookies werden von Adobe
+festgelegt und der Browser kann nicht direkt in das Handling
+eingreiffen. Auch hier wird die Speicherung clientseitige durchgeführt
+und kann diese Speicherung auch clientseitig manipuliert werden. Seit
+Steven Jobs mit Apple keinen Support für die mobilen Geräte in Aussicht
+stellte und auf die Probleme und Risiken hinwies verliert die Plattform
+gestärkt durch immer wieder auftretende Sicherheitsprobleme an User. So
+hat haben am 1. Januar noch knapp 10\%{[}\^{}flashussage{]} aller
+Webseitenbesucher den Flash-Player.
+
+{[}\^{}flashussage{]}\autocite{flashussage}
+
+\subsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme}
+
+Flash-Cookies können je nach Betriebsystem mit verschiedenem Aufwand
+gelöscht werden und dadurch ist eine Mehrfach-Teilnahme ermöglich.
+
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit}
+
+Die Automatisierte Teilnahme und Löschung ist im Gegensatz zu klassichen
+Cookies aufwendiger aber durchaus machbar.
+
+\subsubsection{Kosten}\label{kosten-1}
+
+Cookies verursachen keine direkten Kosten
+
+\subsection{IP-Adresse}\label{ip-adresse}
+
+Bei der Nutzung einer Interkativität wird die IP-Adresse des Teilnehmers
+gespeichert. So kann bei erneutem teilnehmen die Teilnahme verweigert
+werden. Das Internet Protokoll kurz IP sieht für jedes Geräte welches an
+einem IP-Netzwerk angeschlossen ist eine eindeutige Adresse vor. Deshalb
+auch der nahheliegende Name IP-Adresse. Mit wenigen Ausnahmen wird über
+den IP Version 4 standart im Internet kommunziert. Damit lassen sich
+aber nur 4,22 Miliarden eindeutige Adressen im Wordl Wide Web vergeben.
+Deshalb mussten einige Methoden entwickelt werden um vorerst das Problem
+umgehen zu können. Unter anderem identifiziert sich ein Router wie ein
+Rechner und nutzt intern andere IP-Adressen. Gegen aussen haben also
+alle Nutzer des Netzwerks die selbe IP-Adresse. Dadurch entsteht die
+Problematik an dieser Methode, dass in einem Grossraumbüro mit einem
+Internetanschluss auch nur eine Person an einen Wettbewerb teilnehmen
+kann.\footnote{\autocite{pclexikon-ip}{]}}
+
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-1}
+
+Es gibt verschiedene Möglichkeiten die IP-Adresse zu wechseln. Eine
+einfache Möglichkeit ist durch verwenden von Proxy-Servern eine andere
+IP-Adresse zu verwenden. Die Mehrfachteilnahme ist also einfach möglich.
+
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-1}
+
+Das automatisierte wechseln eines Proxys ist etwas aufwendiger und
+braucht technisches Know-How aber durchaus möglich.
+
+\subsection{Kosten}\label{kosten-2}
+
+Das authentifzieren via IP-Adresse verursacht keine direkten Kosten
 
 \subsection{Captcha}\label{captcha}
 
@@ -1031,12 +1187,12 @@ existiert und der User darauf Zugriff hat. Der User soll also auch bei
 der Authentifizierungsschnittstelle seine E-Mail eintragen und erhält
 dann umgehend den Bestätigungslink an seine E-Mail Adresse zugesandt.
 
-\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit}
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-2}
 
 Das automatische Auslesen von E-Mails ist möglich. Jedoch ist der
 Aufwand dafür sehr hoch.
 
-\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme}
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-2}
 
 Ein User kann verschiedene E-Mail Adressen besitzen. Dass Erstellen von
 neuen E-Mail Adressen ist mit Aufwand verbunden. Aber einfach möglich.
@@ -1048,7 +1204,7 @@ einige E-Mail Adressen erstellt werden. Diese Domains müssen über eine
 aufwendige Blacklist gefiltert werden oder durch zeitversetztes
 Bestätigungsmail ausgehebelt werden.
 
-\subsubsection{Kosten}\label{kosten}
+\subsubsection{Kosten}\label{kosten-3}
 
 Das Versenden von E-Mails über einen SMTP Server ist generell kostenlos.
 Bei hohem Gebrauch dieser Komponente lohnt es sich die E-Mails über eine
@@ -1065,17 +1221,17 @@ per SMS zu gesandt. Im 2. Schritt gibt der User der erhaltene Mobilecode
 im Webform ein und bestätigt so, dass ihm die Mobilenummer gehört. Zum
 Versenden der SMS ist ein SMS-Gateway nötig.
 
-\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-1}
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-3}
 
 Die Automatisierung kann als nicht möglich eingestuft werden
 
-\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-1}
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-3}
 
 Die mehrfache Teilnahme wurde bereits im Kapitel zum Anbieter WebSMS
 eingehenden behandelt. Daraus resultierte, dass in der Schweiz maximal 5
 Mobilenummern pro Anbieter und Person bezogen werden können.
 
-\subsubsection{Kosten}\label{kosten-1}
+\subsubsection{Kosten}\label{kosten-4}
 
 Je nach SMS-Gateway, Mobileanbieter des Empfängers und
 Verwendungsintensität belaufen sich der Versand eines SMS zwischen 0.04
@@ -1090,16 +1246,16 @@ Nacheingabe der Telefonnummer oder Mobilenummer erhält der User einen
 digitalen Anruf. Die Computerstimme liest dem User einen Code vor,
 welcher er danach in der Webpage einggibt.
 
-\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-2}
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-4}
 
 Die Automatisierung kann als nicht möglich eingestuft werden
 
-\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-2}
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-4}
 
 Die Teilnahmeanzahl ist von den vorhandenen Telefonanschlüssen abhängig
 und daher nur eingschrenkt möglich.
 
-\subsubsection{Kosten}\label{kosten-2}
+\subsubsection{Kosten}\label{kosten-5}
 
 Die Kosten berechnen sich bei den analysierten Anbietern basierend auf
 einer geringen Monatspauschle zwischen CHF 1.00 und CHF 2.00 und Kosten
@@ -1127,21 +1283,62 @@ dieses Konzept jedoch. Jemand muss den Brief ausdrucken, in ein Couvert
 legen, frankieren und per Post versenden. Dieser Jemand kann als Service
 z.b. beim schweizer Startup pingen.com eingekauft werden.
 
-\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-3}
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-5}
 
 Die Automatisierung kann als nicht möglich eingestuft werden.
 
-\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-3}
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-5}
 
 Die Teilnahmeanzahl ist von den vorhandenen Adressanschriften abhängig
 und daher nur eingschrenkt möglich.
 
-\subsubsection{Kosten}\label{kosten-3}
+\subsubsection{Kosten}\label{kosten-6}
 
 Die Kosten berechnen sich für den Versand in der Schweiz bei dem
 analysierten Anbietern je nach Druck und Versandart des Empfängers
 zwischen CHF 1.20 und CHF 1.65.\footnote{Die Preise wurdem am 10. März
   2016 auf pingen.com abgefragt}
+
+\hypertarget{oauth-1}{\subsection{OAuth}\label{oauth-1}}
+
+Die Zwei-Faktor-Authentifizierung OAuth ist im Kapitel
+\protect\hyperlink{oauth-provider}{OAuth-Provider} ausführlich
+erläutert.
+
+\subsubsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-6}
+
+Eine OAuth Registrierung kann als nicht automatisierbar eingestuft
+werden. Automatisierbares Anmelden und verwenden von verschiedenen
+Accounts ist durchaus möglich. Plattformen wie kinglfuencers.ch zeigen
+Möglichkeiten auf wie automatisiert auf SocialMedia Platfformen von
+dritten zugegriffen werden kann und Tätigkeiten ausgeführt werden
+können.
+
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-6}
+
+Eine Mehrfach Registration ist möglich
+
+\subsubsection{Kosten}\label{kosten-7}
+
+OAuth bewirkt keine direkten Kosten
+
+\subsection{SuisseID Integration}\label{suisseid-integration}
+
+SuisseID wurde bereits im Kapitel \protect\hyperlink{suisseid}{SuisseID}
+erläutert.
+
+\subsection{Automatisierungsmöglichkeit}\label{automatisierungsmuxf6glichkeit-7}
+
+Eine Automatisierung ist nahe zu unmöglich
+
+\subsubsection{Mehrfach Teilnahme}\label{mehrfach-teilnahme-7}
+
+Eine Mehrfach Teilnahme ist nahe zu unmöglich
+
+\subsubsection{Kosten}\label{kosten-8}
+
+Für den Betreiber fallen geringe Kosten an. Der Enduser zahlt aber
+bemerkenswerten Preis.
 
 \subsection{Browser Fingerprints}\label{browser-fingerprints}
 
@@ -1188,6 +1385,8 @@ werden.
 Auch der Browser übermittelt an den Server verschiedene Informationen:
 
 {[}\^{}cnet-2fa{]} {[}\^{}cnet-2fa{]}: \autocite{cnet-2fa}
+
+\subsubsection{Cookies}\label{cookies}
 
 \chapter{Anforderungen}\label{anforderungen}
 
@@ -2203,7 +2402,7 @@ Mittel
 \bottomrule
 \end{longtable}
 
-\subsection{NFREQ-120 Performance}\label{nfreq-120-performance}
+\subsection{NFREQ-130 Performance}\label{nfreq-130-performance}
 
 \begin{longtable}[c]{@{}ll@{}}
 \toprule
@@ -2235,8 +2434,8 @@ Mittel
 \bottomrule
 \end{longtable}
 
-\subsection{NFREQ-120 Hohe
-Verfügbarkeit}\label{nfreq-120-hohe-verfuxfcgbarkeit}
+\subsection{NFREQ-135 Hohe
+Verfügbarkeit}\label{nfreq-135-hohe-verfuxfcgbarkeit}
 
 \begin{longtable}[c]{@{}ll@{}}
 \toprule
@@ -2264,6 +2463,80 @@ Hoch
 \strut\end{minipage} &
 \begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
 Mittel
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{NFREQ-210 Programmirer kann aus Breite von verschiedenen
+Sicherheitsstufen
+auswählen}\label{nfreq-210-programmirer-kann-aus-breite-von-verschiedenen-sicherheitsstufen-auswuxe4hlen}
+
+\begin{longtable}[c]{@{}ll@{}}
+\toprule
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{UC-Referenz}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+UC-25, UC-21, UC22
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Beschreibung}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Dem Programmierer stehen verschiedene Sicherheitsstufen zur Verfügung.
+Das Wort verschieden wurde durch folgende Aspekte mit dem Auftraggeber
+definiert: Abgeleitet von der Aufgabenstellung sind Aspekte
+``Mehfach-Teilnahme'' und ``Automatisierung'' definiert worden. Beide
+Aspekte kann durch eine Sicherheitsstufe mehr oder weniger verhindern
+werden. Abhängig von der Interkativität ist es wirtschaftlich sinnvoll
+das Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten ein
+Aspeket. Ein weiterer Aspekt ist der Aufwand für den Benutzer.
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Techn. Risiko}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Niedrig
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Business Value}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Hoch
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{NFREQ-212 Die verwendeten Sicherheitsstufen sind in der
+Schweiz
+verbreitet}\label{nfreq-212-die-verwendeten-sicherheitsstufen-sind-in-der-schweiz-verbreitet}
+
+\begin{longtable}[c]{@{}ll@{}}
+\toprule
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{UC-Referenz}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+UC-25, UC-21, UC22
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Beschreibung}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Die eingesetzten Sicherheitsstufen sollten in der Schweiz verbreitet
+sein.
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Techn. Risiko}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Niedrig
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Business Value}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Hoch
 \strut\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -2442,7 +2715,8 @@ Authentifizierungservice auf.
 
 \newpage
 
-\section{Ablauf Authentifizierung}\label{ablauf-authentifizierung}
+\section{Genereller Ablauf
+Authentifizierung}\label{genereller-ablauf-authentifizierung}
 
 Der User nimmt an einer Interaktivität eines Anbieters teil. Dabei füllt
 er den Wettbewerb, Umfrage aus oder löst die gegebene Aufgabe und sendet
@@ -2450,10 +2724,11 @@ einmal oder mehrmals ein Feedback an die Anbieter Webseite zurück. Nach
 Abschluss der Interaktivität, werden die Datengespeichert und mit der
 daraus resultierenden eindeutigen Identität des Feedbacks wird die
 Authentifizierung gestartet. Das vom Programmierer definierte
-Authentifizierungsverfahren wird durchgeführt um Identität im
-gewünschten Masse sicher zustellen. User und das Anbieter System werden
-über erfolgreiche Authentifizierung informiert. Nach Möglichkeit wird
-auch eine fehlerhafte Authentifizierung mitgeteilt.
+Authentifizierungsverfahren bestehend aus ein oder mehreren
+Sicherheitsstufen wird durchgeführt um Identität im gewünschten Masse
+sicher zustellen. User und das Anbieter System werden über erfolgreiche
+Authentifizierung informiert. Nach Möglichkeit wird auch eine
+fehlerhafte Authentifizierung mitgeteilt.
 
 \begin{figure}[htbp]
 \centering
@@ -2491,13 +2766,19 @@ Verhalten hinter einer Schnittstelle und haben eine eindeutige
 Identität. Relationale Datenbanken basieren dagegen auf dem
 mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle
 Widerspruch wurde in den 1990er Jahren als ``object-relational impedance
-mismatch'' bekannt.{[}\^{}the-vietnam-of-computer-science{]} Um diesen
-Wiederspruch zu mindern stellt Microsoft das Entity-Framework zur
-Verfügung. Das Entity-Framework hat verschiedene Konzeptionelle Ansätze.
-Es gilt nun den richtigen Ansatz für den Authenifizierungsservice zu
-wählen
+mismatch'' bekannt.\footnote{\autocite{the-vietnam-of-computer-science}
+  \#\#\#ERD Durch den Codefirst Ansatz werden die Datenbank und alle
+  zugehörigen Tabellen durch das Entity Framework selbständig generiert}
+Um diesen Wiederspruch zu mindern stellt Microsoft das Entity-Framework
+zur Verfügung.
 
-\subsection{Database First}\label{database-first}
+\subsection{Entity-Framework}\label{entity-framework}
+
+Das Entity-Framework hat verschiedene Konzeptionelle Ansätze um
+möglichst viele Bedürfnisse an den ORM-Mapper zu erfüllen. Es gilt nun
+den richtigen Ansatz für den Authenifizierungsservice zu wählen.
+
+\subsubsection{Database First}\label{database-first}
 
 Beim Database First Ansatz wird zuerst die Datenbank designt. Das
 Entity-Framework bildet aus der Datenbank die POCO-Klassen ab. Sollten
@@ -2505,14 +2786,14 @@ Anpassungen an den Entitäten ergeben, werden diese zuerst in der
 Datenbank implementiert und daraus werden wiederum neuen POCO-Klassen
 generiert.
 
-\subsection{Code First}\label{code-first}
+\subsubsection{Code First}\label{code-first}
 
 Beim Code First Ansatz werden zuerst die POCO-Klassen erstellt. Das
 Entity-Framework bildet aus den POCO-Klassen die Tabellen in der
 Datenbank. Alle Anpassungen werden gleich in den POCO-Klassen umgesetzt
 und durch das Entity-Framework in der Datenbank geändert erstellt.
 
-\subsection{Entscheidung}\label{entscheidung}
+\subsubsection{Entscheidung}\label{entscheidung}
 
 Wenn die POCO-Klassen gleich mehrheitlich für die
 Schnittstellendefinition als Parameterdefinition verwendet werden
@@ -2522,12 +2803,7 @@ Datenbankänderung beeinflusst werden. Der umgekehrte Fall ist aber
 minder wichtig, da die Datenbank nur von der Schnittstelle verwendet
 wird. Deshalb wird das Konzept Code First eingesetzt.
 
-\subsection{ERD}\label{erd}
-
-Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen
-Tabellen durch das Entity Framework selbständig generiert
-{[}\^{}the-vietnam-of-computer-science{]}:
-\autocite{the-vietnam-of-computer-science}
+\newpage
 
 \hypertarget{integration-der-schnittstelle}{\section{Integration der
 Schnittstelle}\label{integration-der-schnittstelle}}
@@ -2970,10 +3246,13 @@ integrieren}\label{sicherheitstufen-integrieren}
 
 Im Kapitel Recherche wurden einige Sicherheitskomponenten recherchiert
 und illustriert. Es gilt nun ein Setting an Komponenten zu finden,
-welche dem Developer eine Breite Auswahlmölgichkeit bietet ihn aber
-nicht durch komplexes Auswählen der Sicherheitstufen aufhaltet.
+welche dem Developer eine Breite Auswahlmölgichkeit bietet
+\protect\hyperlink{ux5cux23ux5cux23NFREQ-210}{NFREQ-210} und eine
+genügende Verbreitung in der Schweiz hat ({[}NFREQ-212{]}), ihn aber
+nicht durch komplexes Auswählen der Sicherheitstufen aufhaltet
+{[}NFREQ-212{]}.
 
-\subsubsection{Cookie}\label{cookie}
+\subsubsection{Cookie}\label{cookie-1}
 
 Durch Speicherung des Cookies soll ein Benutzer der bereits an einer
 Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies
@@ -2985,7 +3264,7 @@ einer Interaktivität ungenügend geschützt. Vorteilhaft für die
 Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und
 es keine Kosten verursacht.
 
-\subsubsection{IP-Adresse}\label{ip-adresse}
+\subsubsection{IP-Adresse}\label{ip-adresse-1}
 
 Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer
 Interaktivität teilgenommen hat, identifiziert werden. Eine IP Adressen
@@ -3041,18 +3320,23 @@ pro Brief sind von allen aufgelisteten Methoden am höchsten. Der
 Benutzer muss bei dieser Methode den Brief nach erhalten auf einer
 Webseite quittieren
 
-\subsection{Übersicht}\label{uxfcbersicht}
+\subsection{Sicherheitstufen bewerten}\label{sicherheitstufen-bewerten}
 
-\begin{longtable}[c]{@{}llcllc@{}}
+Die Recherche der verschiedenen Sicherheitsstufen wurden dem
+Auftraggeber vorgelegt. Der Auftraggeber hat die verschiedenen Stufen
+anhand den 4 definierten Aspekten und dem Musskriterium Verbreitung aus
+der Anforderungsanalyse bewertet.
+
+\begin{longtable}[c]{@{}lllllc@{}}
 \caption{Übersicht der Authentifizierungs Methoden}\tabularnewline
 \toprule
 \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-\textbf{Komponente}
+\textbf{Sicherheitsstufen}
 \strut\end{minipage} &
 \begin{minipage}[b]{0.13\columnwidth}\raggedright\strut
 \textbf{Verhinderung Mehrfachteilnahme}
 \strut\end{minipage} &
-\begin{minipage}[b]{0.13\columnwidth}\centering\strut
+\begin{minipage}[b]{0.13\columnwidth}\raggedright\strut
 \textbf{Automat- sierung}
 \strut\end{minipage} &
 \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
@@ -3062,18 +3346,18 @@ Webseite quittieren
 \textbf{Aufwand Benutzer}
 \strut\end{minipage} &
 \begin{minipage}[b]{0.13\columnwidth}\centering\strut
-\textbf{Verbreitung}
+\textbf{Verbreitung in der Schweiz}
 \strut\end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
 \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
-\textbf{Komponente}
+\textbf{Sicherheitsstufen}
 \strut\end{minipage} &
 \begin{minipage}[b]{0.13\columnwidth}\raggedright\strut
 \textbf{Verhinderung Mehrfachteilnahme}
 \strut\end{minipage} &
-\begin{minipage}[b]{0.13\columnwidth}\centering\strut
+\begin{minipage}[b]{0.13\columnwidth}\raggedright\strut
 \textbf{Automat- sierung}
 \strut\end{minipage} &
 \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
@@ -3083,7 +3367,7 @@ Webseite quittieren
 \textbf{Aufwand Benutzer}
 \strut\end{minipage} &
 \begin{minipage}[b]{0.13\columnwidth}\centering\strut
-\textbf{Verbreitung}
+\textbf{Verbreitung in der Schweiz}
 \strut\end{minipage}\tabularnewline
 \midrule
 \endhead
@@ -3093,8 +3377,26 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 2.5
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 2.5
+\strut\end{minipage} &
+\begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+6
+\strut\end{minipage} &
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
+6
+\strut\end{minipage} &
+\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+6
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\textbf{Flash-Cookie}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
+2.5
+\strut\end{minipage} &
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
+3
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
 6
@@ -3111,7 +3413,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 3
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 3
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3129,7 +3431,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 3.5
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 3.5
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3147,7 +3449,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 4
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 4.5
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3165,7 +3467,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 5.5
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 5.75
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3183,7 +3485,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 5.25
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 5.75
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3201,7 +3503,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 3.5
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 3.5
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3219,7 +3521,7 @@ Webseite quittieren
 \begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 5.5
 \strut\end{minipage} &
-\begin{minipage}[t]{0.13\columnwidth}\centering\strut
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
 5.75
 \strut\end{minipage} &
 \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
@@ -3237,7 +3539,11 @@ Webseite quittieren
 \subsection{Auswahl der zu integrierenden
 Sicherheitsstufen}\label{auswahl-der-zu-integrierenden-sicherheitsstufen}
 
-Um die geforderte Breite an Sicherheitsmethoden
+SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in
+der Schweiz ({[}NFREQ-212{]}) keine genügende Note und wird daher
+ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu
+erlangen wurden die folgenden Methoden mit verschiedenen Stärken in
+Aspekten durch den Auftraggeber ausgewählt:
 
 \newpage
 
@@ -3598,7 +3904,7 @@ von Fragebögen gemeinsam haben:
   Personen mit zu wenig technischem Know-How oder Hardware.
 \end{itemize}
 
-\subsection{Fazit}\label{fazit}
+\subsection{Fazit}\label{fazit-1}
 
 Es gilt also die Vorteile der schriftlichen Fragebogen bei der
 Gestaltung der Studie zu nutzen. Der Ausgeschlossene Bevölkerungsteil
@@ -3899,7 +4205,7 @@ Framework. \footnote{Quelle:\autocite{csharpbasic}}
 
 \newpage
 
-\subsection{Entity Framework}\label{entity-framework}
+\subsection{Entity Framework}\label{entity-framework-1}
 
 Entity Framework (EF) ist eine objektrelationale Zuordnung, die
 .NET-Entwicklern über domänenspezifische Objekte die Nutzung
@@ -3951,7 +4257,7 @@ Dateien pro Technoligie. Um doch eine Datei zu erhalten muss die
 Generierung mit dem Grunt-Concat Befehl erweitert werden. Dadurch können
 die Dateien danach zu einer Datei zusammengefasst werden.
 
-\chapter{Fazit}\label{fazit-1}
+\chapter{Fazit}\label{fazit-2}
 
 \newpage
 
