@@ -1,0 +1,54 @@
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Profil ändern</h4>
+            </div>
+            <div class="content">
+                <form data-ng-submit="update()">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Geschlecht</label>
+                                <select class="form-control" ng-model="profil.Gender" ng-change="reloadBerufsbezeichnungen()" required="required">
+                                    <option value="null" >Geschlecht auswählen</option>
+                                    <option ng-repeat="gender in genders" value="{{gender.key}}" >{{gender.name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Vorname*</label>
+                                <input type="text" class="form-control" placeholder="Vorname" ng-model="profil.FirstName"  required="required"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Nachname*</label>
+                                <input type="text" class="form-control" placeholder="Nachname" ng-model="profil.LastName"  required="required"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Firma</label>
+                                <input type="text" class="form-control" placeholder="Firma" ng-model="profil.Company"  required="required"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit"  class="btn btn-info btn-fill ">Profil speichern</button><br/>
+                    <hr/>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

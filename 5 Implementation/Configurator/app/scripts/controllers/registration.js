@@ -15,7 +15,7 @@ angular.module('configuratorApp')
             RegistrationService.add({}, $scope.registration, function (data) {
 
                 swal({title: "Dein Account wurde erfolgreich erstellt", text: "In wenigen Augenblicken erhältst Du eine E-Mail zur Bestätigung", type: "success"}, function () {
-                    $location.path("/");
+                    $scope.$apply(function() { $location.path("/route"); });
                 });
 
             }, function (error) {

@@ -60,6 +60,11 @@ angular
                 controller: 'LoginCtrl',
                 controllerAs: 'login'
             })
+            .when('/profil', {
+                templateUrl: 'views/profil.html',
+                controller: 'ProfilCtrl',
+                controllerAs: 'profil'
+            })
             .when('/logout', {
                 templateUrl: 'views/logout.html',
                 controller: 'LogoutCtrl',
@@ -103,5 +108,25 @@ angular
 
         $rootScope.hideAlert=function(hideAlert) {
             $rootScope[hideAlert] = false;
+        };
+
+
+        $rootScope.errorAlert= function(error){
+            console.log(error);
+
+            swal("Oops...", error.status+":"+error.statusText+" "+$rootScope.parseError(error.data), "error");
+        };
+
+        $rootScope.parseError=function (response) {
+            var errortxt="";
+            if(typeof response=="undefined" || response==null || typeof response.ModelState=="undefined" ){
+                return "Unbekannter Fehler ist aufgetreten";
+            }
+            for (var key in response.ModelState) {
+                for (var i = 0; i < response.ModelState[key].length; i++) {
+                    errortxt+="\r\n"+response.ModelState[key][i];
+                }
+            }
+            return errortxt;
         };
 });

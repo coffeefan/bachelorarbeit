@@ -8,11 +8,9 @@
  * Controller of the configuratorApp
  */
 angular.module('configuratorApp')
-  .controller('MainCtrl', function ($rootScope) {
-      $rootScope.pageTitle="Main";
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($rootScope,$location) {
+      $rootScope.pageTitle="Welcome";
+      $scope.openRegister=function(){
+          $location.load("/registration");
+      }
   });

@@ -21,7 +21,7 @@ angular.module('configuratorApp')
             },{
             },function (data) {
                 swal({title: "Ihre E-Mail wurde erfolgreich bestätigt", text: "", type: "success"},function(){
-                    $location.path('/login');
+                    $scope.$apply(function() { $location.path("/login"); });
                 });
             },function (error) {
                 $rootScope.errorAlert(error)

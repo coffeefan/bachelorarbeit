@@ -22,7 +22,7 @@ namespace Authenticationservice.Models
         public string OldPassword { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 8)]
         [DataType(DataType.Password)]
         [Display(Name = "New password")]
         public string NewPassword { get; set; }
@@ -31,9 +31,37 @@ namespace Authenticationservice.Models
         [Display(Name = "Confirm new password")]
         [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
-
-
     }
+
+    public class ForgotPasswordBindingModel
+    {
+        [Required]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+    }
+
+    public class ForgotPasswordConfirmBindingModel
+    {
+        [Required]
+        [Display(Name = "UserId")]
+        public string UserId { get; set; }
+
+        [Required]
+        [Display(Name = "Token")]
+        public string Token { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 8)]
+        [DataType(DataType.Password)]
+        [Display(Name = "New password")]
+        public string NewPassword { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm new password")]
+        [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+    }
+
 
     public class RegisterBindingModel
     {
@@ -74,6 +102,32 @@ namespace Authenticationservice.Models
             this.Email = user.Email;
             this.Password = "";
             this.ConfirmPassword = "";
+            return this;
+        }
+
+
+    }
+
+    public class ProfilBindingModel
+    {
+        [Required]
+        [JsonConverter(typeof(StringEnumConverter))]
+        public ApplicationUser.GenderEnum Gender { get; set; }
+
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
+       
+        public string Company { get; set; }
+
+        public ProfilBindingModel UserToBindingModel(ApplicationUser user)
+        {
+            this.Gender = user.Gender;
+            this.FirstName = user.FirstName;
+            this.LastName = user.LastName;
             return this;
         }
 

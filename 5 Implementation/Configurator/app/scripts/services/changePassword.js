@@ -12,7 +12,7 @@
 
 angular.module('configuratorApp').
 factory('ChangePasswordService', function($resource,$rootScope,$sessionStorage){
-    return $resource($rootScope.ServiceUrl+'api/Account/ResetPassword', {}, {
-        'reset': { method:'POST'}
+    return $resource($rootScope.ServiceUrl+'api/Account/ChangePassword', {}, {
+        'change': { method:'POST', headers:{'Authorization':'Bearer ' +$sessionStorage.accessToken} }
     });
 });

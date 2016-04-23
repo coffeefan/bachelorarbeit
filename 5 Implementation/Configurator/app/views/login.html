@@ -1,32 +1,35 @@
-<div class="col-md-4">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">Login</h4>
-        </div>
-        <div class="content">
-            <form>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label>Username</label>
-                            <input type="email" class="form-control" placeholder="E-Mail" ng-model="login.email" >
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Login</h4>
+            </div>
+            <div class="content">
+                <form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Username</label>
+                                <input type="email" class="form-control" placeholder="E-Mail" ng-model="login.email" >
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control"  ng-model="login.password">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control"  ng-model="login.password">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <button type="submit" data-ng-click="requestLogin()" class="btn btn-info btn-fill ">Login</button><br/>
-                <hr/>
-                <a href="forgotPassword/">Passwort vergessen</a><br/>
-                <a href="registration">Neues Konto registrieren</a>
-                <div class="clearfix"></div>
-            </form>
+                    <button type="submit" data-ng-click="requestLogin()" class="btn btn-info btn-fill ">Login</button><br/>
+                    <hr/>
+                    <a href="/#/forgot-password/">Passwort vergessen</a><br/>
+                    <a href="/#/registration">Neues Konto registrieren</a>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

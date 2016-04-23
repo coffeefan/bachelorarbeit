@@ -14,6 +14,8 @@ angular.module('configuratorApp')
 
             delete $sessionStorage.accessToken;
             location.reload();
+        }else{
+            $location.path("/");
         }
 
     });

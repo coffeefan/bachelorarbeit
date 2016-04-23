@@ -16,6 +16,9 @@ using Microsoft.Owin.Security.OAuth;
 using Authenticationservice.Models;
 using Authenticationservice.Models.Helper;
 using System.Web.Http.Description;
+using System.Linq;
+using System.Net;
+using System.Data.Entity;
 
 namespace Authenticationservice.Controllers
 {
@@ -136,6 +139,137 @@ namespace Authenticationservice.Controllers
         {
             var result = await UserManager.ConfirmEmailAsync(userid, code);
             return !result.Succeeded ? GetErrorResult(result) : Ok();
+        }
+
+        // POST api/Account/ChangePassword
+        [AllowAnonymous]
+        [Route("ForgotPassword")]
+        public async Task<IHttpActionResult> ForgotPassword(ForgotPasswordBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var user = UserManager.Users.SingleOrDefault(u => u.Email == model.Email);
+            if (user == null || !user.EmailConfirmed) return StatusCode(HttpStatusCode.Forbidden);
+
+            string token = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+            Result feedback = new MailHandler("de")
+              .sendWithTemplate(user.Email,
+                user.Email,
+                "PasswordForgot",
+                "PasswordForgot_Subject",
+                new
+                {
+                    Token = HttpUtility.UrlEncode(token),
+                    UserId = user.Id,
+                    EMail = user.Email,
+                    ConfigurationUrl = MasterFunctions.ConfigurationWebUrl
+                });
+            if (!feedback.Success) return BadRequest(feedback.ErrorMessage);
+
+            return Ok();
+        }
+
+        // POST api/Account/SetPassword
+        [AllowAnonymous]
+        [Route("ForgotPasswordConfirm")]
+        public async Task<IHttpActionResult> ResetPassword(ForgotPasswordConfirmBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var user = await UserManager.FindByIdAsync(model.UserId);
+            if (user != null)
+            {
+                
+                IdentityResult result =
+                    await UserManager.ResetPasswordAsync(model.UserId, model.Token, model.NewPassword);
+
+                if (!result.Succeeded)
+                {
+                    return GetErrorResult(result);
+                }
+
+                
+                
+
+                return Ok();
+            }
+
+            return BadRequest();
+        }
+
+        // POST api/Account/ChangePassword
+        [Route("ChangePassword")]
+        public async Task<IHttpActionResult> ChangePassword(ChangePasswordBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword,
+                model.NewPassword);
+
+            if (!result.Succeeded)
+            {
+                return GetErrorResult(result);
+            }
+
+            return Ok();
+        }
+
+        // POST api/Account/ChangePassword
+        [Route("Profil")]
+        public async Task<IHttpActionResult> PutProfil(ProfilBindingModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            ApplicationUser user = _dbContext.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault();
+
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.Company = model.Company;
+            user.Gender = model.Gender;
+            
+            _dbContext.Entry(user).State = EntityState.Modified;
+            
+            _dbContext.SaveChanges();
+            
+
+            return Ok();
+        }
+
+        [Route("Profil")]
+        public async Task<IHttpActionResult> GETProfil()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            ApplicationUser user = _dbContext.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault();
+
+            
+
+
+            return Ok(user);
         }
 
 
@@ -533,7 +667,7 @@ namespace Authenticationservice.Controllers
         {
             return new MailHandler("de-CH").sendWithTemplate(user.Email,
                 user.Email,
-                "Registrierung",
+                "Registration",
                 "Registration_Subject",
                 new RegistrierungDTO
                 {
