@@ -40,6 +40,25 @@ namespace Authenticationservice.Controllers
             return Ok(project);
         }
 
+
+        public bool CheckSignIn(int projectId,String ProviderId,String Sign)
+        {
+            Project project = db.Projects.Where(p => p.ProjectId == projectId).FirstOrDefault();
+            if (project == null)
+            {
+                return false;
+            }
+            String serverSign = MasterFunctions.makeMD5(projectId.ToString() + "+" + ProviderId + "+" + project.ValidationCode);
+            if(serverSign== Sign)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         // PUT: api/Projects/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutProject(int id, Project project)

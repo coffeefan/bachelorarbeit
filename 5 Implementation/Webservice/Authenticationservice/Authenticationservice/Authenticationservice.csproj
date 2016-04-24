@@ -250,12 +250,14 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EF_ProjectAuthenticationRepository.cs" />
     <Compile Include="Models\EF_ProjectSecurityStepRepository.cs" />
     <Compile Include="Models\Helper\MailHandler.cs" />
     <Compile Include="Models\Helper\MasterFunctions.cs" />
     <Compile Include="Models\Helper\RegistrierungDTO.cs" />
     <Compile Include="Models\Helper\Result.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IProjectAuthenticationRepository.cs" />
     <Compile Include="Models\IProjectSecurityStepRepository.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Project.cs" />
@@ -274,6 +276,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\headerimage.jpg" />
     <Content Include="Content\Images\loading.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -333,6 +336,7 @@
     <Content Include="Views\Home\Validate.cshtml" />
     <Content Include="Views\EmailTemplates\Registration.cshtml" />
     <Content Include="Views\EmailTemplates\PasswordForgot.cshtml" />
+    <Content Include="Views\Home\Failedpage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

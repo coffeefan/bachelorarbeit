@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="lity.js"></script>
-    <link type="text/css" rel="stylesheet" href="lity.css" />
+    <script src="http://iaauth.christianbachmann.ch/include/js/jquery-1.12.3.min.js"></script>
+    <script src="http://iaauth.christianbachmann.ch/include/js/lity.js"></script>
+    <link type="text/css" rel="stylesheet" href="http://iaauth.christianbachmann.ch/include/css/lity.css" />
 </head>
 <body>
 
@@ -22,7 +22,10 @@
 
 
 <script type="text/javascript">
-    
+$(document).ready(function() {
+		var lightbox = lity();
+		lightbox("http://iaauth.azurewebsites.net/Loading");
+	});
 </script>
 </body>
 </html>
