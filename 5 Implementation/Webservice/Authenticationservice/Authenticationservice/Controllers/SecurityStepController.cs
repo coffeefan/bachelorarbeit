@@ -23,13 +23,13 @@ namespace Authenticationservice.Controllers
             return Ok(
             new {
                 labels =new string[] { "Verhinderung Mehrfachteilnahme", "Automatsierung", "Kosten", "Aufwand Benutzer", "Verbreitung" },
-                data = new int[] {
+                data = new int[][] {new int[] {
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.MultipleParticipation),
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.Automation),
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.Costs),
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.ClientEffort),
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.Awareness),
-                },
+                } },
             }
             );
         }

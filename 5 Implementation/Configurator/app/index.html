@@ -19,8 +19,9 @@
     <link href="styles/light-bootstrap-dashboard.css" rel="stylesheet"/>
     <link href="styles/pe-icon-7-stroke.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styles/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
     <!-- endbuild -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="configuratorApp">
     <!--[if lte IE 8]>
@@ -37,7 +38,13 @@
           </div>
 
           <ul class="nav">
-            <li class="active" ng-show="isLoggedIn">
+            <li>
+              <a href="/#/projects" ng-show="isLoggedIn">
+                <i class="pe-7s-notebook"></i>
+                <p>Projekte</p>
+              </a>
+            </li>
+            <li  ng-show="isLoggedIn">
               <a href="dashboard.html">
                 <i class="pe-7s-graph"></i>
                 <p>Dashboard</p>
@@ -46,15 +53,10 @@
             <li>
               <a href="/#/profil" ng-show="isLoggedIn">
                 <i class="pe-7s-user"></i>
-                <p>User Profile</p>
+                <p>Mein Profil</p>
               </a>
             </li>
-            <li>
-              <a href="table.html" ng-show="isLoggedIn">
-                <i class="pe-7s-note2"></i>
-                <p>Table List</p>
-              </a>
-            </li>
+
             <li>
               <a href="typography.html" ng-show="isLoggedIn">
                 <i class="pe-7s-news-paper"></i>
@@ -205,6 +207,7 @@
     <script src="scripts/services/project.js"></script>
     <script src="scripts/services/securitystep.js"></script>
     <script src="scripts/services/profil.js"></script>
+    <script src="scripts/services/securitystepsurvey.js"></script>
     <!-- endbuild -->
 </body>
 </html>

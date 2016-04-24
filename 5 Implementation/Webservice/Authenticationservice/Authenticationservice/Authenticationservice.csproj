@@ -204,6 +204,7 @@
     <Compile Include="Controllers\LoadingController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\SecurityStepSurveyController.cs" />
     <Compile Include="Controllers\SecurityStepController.cs" />
     <Compile Include="CustomControllerFactory.cs" />
     <Compile Include="CustomViewEngine.cs" />

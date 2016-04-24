@@ -10,7 +10,7 @@
 angular.module('configuratorApp')
     .controller('ProjectDetailCtrl', function ($scope, $rootScope,$location,ProjectService,$routeParams,$uibModal,
                                                AvailableSecurityService,SecurityStepProjectListService,
-                                               SecurityStepCompareInfoService,ProjectSecurityService) {
+                                               SecurityStepCompareInfoService,SecurityStepSurvey) {
         $rootScope.pageTitle = "Projekt Detail";
         $scope.project={};
         $scope.infobox={
@@ -23,6 +23,8 @@ angular.module('configuratorApp')
         $scope.projectSecuritySteps=[];
         $scope.securitySteps=[];
         $scope.securitystepselected="";
+        $scope.surveyAge={};
+        $scope.surveyTotal={};
 
         //SecurityStep Configuration
         $scope.models = {
@@ -135,7 +137,27 @@ angular.module('configuratorApp')
         $scope.loadSecurityStepInfo= function(securitystepname){
             SecurityStepCompareInfoService.find({securitystepname:securitystepname+"Info"}, {}, function (data) {
                 $scope.securityStepCompareInfo.labels=data.labels;
-                $scope.securityStepCompareInfo.data[0]=data.data;
+                $scope.securityStepCompareInfo.data=data.data;
+            }, function (error) {
+                $rootScope.errorAlert(error)
+            });
+        };
+
+        $scope.loadSurveyAge= function(securitystepname){
+            var securitystepshortname=securitystepname.replace("SecurityStep","").toLowerCase();
+            SecurityStepSurvey.find({typ:"AgeStep",securitystepshortname:securitystepshortname}, {}, function (data) {
+                $scope.surveyAge=data;
+
+            }, function (error) {
+                $rootScope.errorAlert(error)
+            });
+        };
+
+        $scope.loadSurveyTotal= function(securitystepname){
+            var securitystepshortname=securitystepname.replace("SecurityStep","").toLowerCase();
+            SecurityStepSurvey.find({typ:"TotalStep",securitystepshortname:securitystepshortname}, {}, function (data) {
+                $scope.surveyTotal=data;
+
             }, function (error) {
                 $rootScope.errorAlert(error)
             });
@@ -176,6 +198,8 @@ angular.module('configuratorApp')
         $scope.changeselectedSecurityStep=function(item){
             $scope.infobox.securitystepselected=item;
             $scope.loadSecurityStepInfo(item);
+            $scope.loadSurveyAge(item);
+            $scope.loadSurveyTotal(item);
         };
 
 
