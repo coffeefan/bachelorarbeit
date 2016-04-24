@@ -15,62 +15,54 @@ namespace Authenticationservice.Models
 
         public void FinishProjectAuthentication(int ProjectId, string ProviderId)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<ProjectSecurityStep> GetProjectSecurityStepList(int projectId)
-        {
-            var projectSecuritySteps = _db.ProjectSecuritySteps.Where(pss => pss.ProjectId == projectId);
-
-            if (projectSecuritySteps != null)
+            ProjectAuthentication projectAuthentication = _db.ProjectAuthentications.Where(pa => pa.ProjectId == ProjectId && ProviderId == ProviderId).FirstOrDefault();
+            if (projectAuthentication == null)
             {
-                return projectSecuritySteps.ToList();
+                throw new HttpException("No Project found");
             }
-            return null;
+            projectAuthentication.Finished = MasterFunctions.GetWestEuropeDate();
+            projectAuthentication.AuthenticationStatus = AuthenticationStatus.VALID;
+            _db.Entry(projectAuthentication).State = EntityState.Modified;
+            _db.SaveChanges();
         }
 
-        public void OpenProjectAuthentication(int ProjectId, string ProviderId)
-        {
-            _db.ProjectAuthentications.Add(new ProjectAuthentication()
-            {
-                AuthenticationStatus = AuthenticationStatus.OPEN,
-                Created = MasterFunctions.GetWestEuropeDate(),
-                Finished = MasterFunctions.GetWestEuropeDate(),
-                Updated = MasterFunctions.GetWestEuropeDate(),
-                IPAdresse = HttpContext.Current.Request.UserHostAddress,
-                ProjectId = ProjectId,
-                ProviderId = ProviderId
-            });
-            _db.SaveChanges();        
-        }
 
-        public void SaveProjectSecurityStepList(List<ProjectSecurityStep> projectSecurityStepList, int projectId)
+
+        public AuthenticationStatus OpenProjectAuthentication(int ProjectId, string ProviderId)
         {
-            _db.ProjectSecuritySteps.RemoveRange(
-            _db.ProjectSecuritySteps.Where(essc => essc.ProjectId == projectId));
-           _db.SaveChanges();
-            try
+            ProjectAuthentication projectAuthentication = _db.ProjectAuthentications.Where(pa => pa.ProjectId == ProjectId && pa.ProviderId == ProviderId).FirstOrDefault();
+            
+            //No Authentication for that ID started
+            if (projectAuthentication == null)
             {
-                foreach(ProjectSecurityStep projectSecurityStep in projectSecurityStepList)
+                _db.ProjectAuthentications.Add(new ProjectAuthentication()
                 {
-                    _db.ProjectSecuritySteps.Add(projectSecurityStep);
-                }               
+                    AuthenticationStatus = AuthenticationStatus.OPEN,
+                    Created = MasterFunctions.GetWestEuropeDate(),
+                    Finished = MasterFunctions.GetWestEuropeDate(),
+                    Updated = MasterFunctions.GetWestEuropeDate(),
+                    IPAdresse = HttpContext.Current.Request.UserHostAddress,
+                    ProjectId = ProjectId,
+                    ProviderId = ProviderId
+                });
                 _db.SaveChanges();
+                return AuthenticationStatus.OPEN;
             }
-            catch (DbEntityValidationException e)
+            else
             {
-                string errormessage = "";
-                foreach (var eve in e.EntityValidationErrors)
+                
+                if(projectAuthentication.AuthenticationStatus == AuthenticationStatus.OPEN)
                 {
-
-                    foreach (var ve in eve.ValidationErrors)
-                    {
-                        errormessage += ve.ErrorMessage;
-                    }
-
+                    projectAuthentication.Updated = MasterFunctions.GetWestEuropeDate();
+                    _db.Entry(projectAuthentication).State = EntityState.Modified;
+                    _db.SaveChanges();
                 }
-                throw new HttpException(510, errormessage);
+                return projectAuthentication.AuthenticationStatus;
+
             }
+                   
         }
+
+        
     }
 }

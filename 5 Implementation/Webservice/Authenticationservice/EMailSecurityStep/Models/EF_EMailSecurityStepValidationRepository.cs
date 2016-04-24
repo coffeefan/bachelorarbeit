@@ -23,12 +23,21 @@ namespace EMailSecurityStep.Models
             return _db.EMailSecurityStepValidations.ToList();
         }
 
+        public bool IsEMailUsed(string email,int projectid)
+        {
+            if(_db.EMailSecurityStepValidations.Where(essv => essv.EMail == email && essv.ProjectId == projectid).Count() > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public EMailSecurityStepValidation GetEMailSecurityStepValidationByID(int id)
         {
             return _db.EMailSecurityStepValidations.FirstOrDefault(essv => essv.EMailSecurityStepValidationId == id);
         }
 
-        public EMailSecurityStepValidation GetEMailSecurityStepValidationByValid(int projectid, string providerid)
+        public EMailSecurityStepValidation GetEMailSecurityStepValidationForValid(int projectid, string providerid)
         {
             return _db.EMailSecurityStepValidations.FirstOrDefault(essv => essv.ProjectId== projectid && essv.ProviderId== providerid);
         }

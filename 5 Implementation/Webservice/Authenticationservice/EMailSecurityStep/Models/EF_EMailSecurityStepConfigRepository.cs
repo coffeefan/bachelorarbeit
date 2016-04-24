@@ -22,6 +22,7 @@ namespace EMailSecurityStep.Models
             _db.EMailSecurityStepConfigs.RemoveRange(
             _db.EMailSecurityStepConfigs.Where(essc => essc.ProjectId == eMailSecurityStepConfig.ProjectId));
             _db.SaveChanges();
+
             try
             {
                 _db.EMailSecurityStepConfigs.Add(eMailSecurityStepConfig);
@@ -31,7 +32,7 @@ namespace EMailSecurityStep.Models
             {
                 string errormessage = ""; 
                 foreach (var eve in e.EntityValidationErrors)
-                {              
+                {             
 
                     foreach (var ve in eve.ValidationErrors)
                     {
@@ -39,7 +40,7 @@ namespace EMailSecurityStep.Models
                     }
 
                 }
-                    throw new HttpException(510, errormessage);
+                throw new HttpException(510, errormessage);
             }
                 
            

@@ -40,6 +40,12 @@ namespace Authenticationservice.Controllers
             return Ok(project);
         }
 
+        public Project ProjectById(int id)
+        {
+            
+            Project project = db.Projects.Where(p => p.ProjectId == id).FirstOrDefault();
+            return project;
+        }
 
         public bool CheckSignIn(int projectId,String ProviderId,String Sign)
         {

@@ -11,8 +11,9 @@ namespace EMailSecurityStep.Models
         void CreateNewEMailSecurityStepValidation(EMailSecurityStepValidation eMailSecurityStepValidation);
         void UpdateEMailSecurityStepValidation(EMailSecurityStepValidation eMailSecurityStepValidation);
         void resetEMailSecurityStepValidationByValid(int projectid, string providerid);
+        bool IsEMailUsed(string email, int projectid);
 
-        EMailSecurityStepValidation GetEMailSecurityStepValidationByValid(int projectid, string providerid);
+        EMailSecurityStepValidation GetEMailSecurityStepValidationForValid(int projectid, string providerid);
 
         EMailSecurityStepValidation GetEMailSecurityStepValidationByID(int id);
         IEnumerable<EMailSecurityStepValidation> GetAllEMailSecurityStepValidations();

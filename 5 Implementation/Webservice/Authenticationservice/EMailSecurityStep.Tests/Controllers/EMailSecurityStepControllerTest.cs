@@ -295,7 +295,7 @@ namespace EMailSecurityStep.Tests.Controllers
                 StatusId = 122
             });
 
-            EMailSecurityStepValidation essv = _repository.GetEMailSecurityStepValidationByValid(1,"ZZZ");
+            EMailSecurityStepValidation essv = _repository.GetEMailSecurityStepValidationForValid(1,"ZZZ");
             Assert.AreEqual(essv.StatusId, 122);
 
         }

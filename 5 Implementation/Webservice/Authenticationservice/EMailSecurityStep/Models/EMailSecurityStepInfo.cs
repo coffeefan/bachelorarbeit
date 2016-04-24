@@ -12,9 +12,26 @@ namespace EMailSecurityStep.Models
     [Export(typeof(SecurityStepContract.ISecurityStepInfo))]
     public class EMailSecurityStepInfo : SecurityStepContract.ISecurityStepInfo
     {
+        private IEMailSecurityStepConfigRepository eMailSecurityStepConfigRepository;
+        private IEMailSecurityStepValidationRepository eMailSecurityStepValidationRepository;
+
+        public EMailSecurityStepInfo() : this(new EF_EMailSecurityStepConfigRepository(), new EF_EMailSecurityStepValidationRepository()) { }
+        public EMailSecurityStepInfo(IEMailSecurityStepConfigRepository eMailSecurityStepConfigRepository,
+            IEMailSecurityStepValidationRepository eMailSecurityStepValidationRepository)
+        {
+            this.eMailSecurityStepConfigRepository = eMailSecurityStepConfigRepository;
+            this.eMailSecurityStepValidationRepository = eMailSecurityStepValidationRepository;
+        }
         public bool checkIsValidated(int projectid, string providerid)
         {
-            throw new NotImplementedException();
+            EMailSecurityStepValidation eMailSecurityStepValidation =
+                eMailSecurityStepValidationRepository.GetEMailSecurityStepValidationForValid(projectid, providerid);
+
+            if (eMailSecurityStepValidation != null && eMailSecurityStepValidation.StatusId == 1)
+            {
+                return true;
+            }
+            return false;
         }
 
         public object getConfigParameters(int projectId)
@@ -79,7 +96,7 @@ namespace EMailSecurityStep.Models
             if (!isValid)
                 throw new HttpException(510, "Parameters are not valid because " + string.Join(", ", results.Select(s => s.ErrorMessage).ToArray()));
 
-            new EF_EMailSecurityStepConfigRepository().SaveEMailSecurityConfigByProjectId(eMailSecurityStepConfig);
+                eMailSecurityStepConfigRepository.SaveEMailSecurityConfigByProjectId(eMailSecurityStepConfig);
             return "";
 
         }

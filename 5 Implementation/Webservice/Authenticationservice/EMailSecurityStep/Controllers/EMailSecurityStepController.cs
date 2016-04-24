@@ -53,6 +53,12 @@ namespace EMailSecurityStep.Controllers
                 return View("Index",model);
             }
 
+            if(_repository.IsEMailUsed(model.EMail, (int)System.Web.HttpContext.Current.Session["ProjectId"]))
+            {
+                ModelState.AddModelError("EMail", "Sie haben bereits an der Ufmrage teilgenommen");
+                return View("Index", model);
+            }
+
             //Create new EMailSecurityStepValidation
             String code = RandomString(6);
             _repository.CreateNewEMailSecurityStepValidation(
@@ -106,14 +112,10 @@ namespace EMailSecurityStep.Controllers
                 return View("CodeValidation", model);
             }
 
-            return RedirectToAction("ValidationSuccesed", "EMailSecurityStep");
+            return RedirectToAction("Check", "Validate");
         }
 
-        public ActionResult ValidationSuccesed()
-        {
-            return View("ValidationSuccesed");
-        }
-
+        
         public ViewResult SetParameter(int ProjectId, string ProviderId)
         {
             System.Web.HttpContext.Current.Session["ProjectId"] = ProjectId;
@@ -124,7 +126,7 @@ namespace EMailSecurityStep.Controllers
 
         public EMailSecurityStepValidation_Status GetEMailSecurityStepValidationStatus(int ProjectId, string ProviderId)
         {
-            EMailSecurityStepValidation essv = _repository.GetEMailSecurityStepValidationByValid(ProjectId, ProviderId);
+            EMailSecurityStepValidation essv = _repository.GetEMailSecurityStepValidationForValid(ProjectId, ProviderId);
 
             if (essv == null)
             {
@@ -139,7 +141,7 @@ namespace EMailSecurityStep.Controllers
 
         public bool isEMailCodeOkey(string email, string code)
         {
-            EMailSecurityStepValidation essv=_repository.GetEMailSecurityStepValidationByValid((int)System.Web.HttpContext.Current.Session["ProjectId"], (string)System.Web.HttpContext.Current.Session["ProviderId"]);
+            EMailSecurityStepValidation essv=_repository.GetEMailSecurityStepValidationForValid((int)System.Web.HttpContext.Current.Session["ProjectId"], (string)System.Web.HttpContext.Current.Session["ProviderId"]);
             essv.CodeEntered = code;
             _repository.UpdateEMailSecurityStepValidation(essv);
             if (essv.EMail== email && essv.Code== code)
@@ -157,7 +159,7 @@ namespace EMailSecurityStep.Controllers
 
         public static string RandomString(int length)
         {
-            const string chars = "0123456789";
+            const string chars = "123456789";
             var random = new Random();
             return new string(Enumerable.Repeat(chars, length)
               .Select(s => s[random.Next(s.Length)]).ToArray());

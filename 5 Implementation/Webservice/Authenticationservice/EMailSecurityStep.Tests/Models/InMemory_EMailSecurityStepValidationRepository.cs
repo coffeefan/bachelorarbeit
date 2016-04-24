@@ -31,9 +31,14 @@ namespace EMailSecurityStep.Tests.Models
             return _db.FirstOrDefault(essv => essv.EMailSecurityStepValidationId == id);
         }
 
-        public EMailSecurityStepValidation GetEMailSecurityStepValidationByValid(int projectid, string providerid)
+        public EMailSecurityStepValidation GetEMailSecurityStepValidationForValid(int projectid, string providerid)
         {
             return _db.FirstOrDefault(essv => essv.ProjectId == projectid && essv.ProviderId == providerid);
+        }
+
+        public bool IsEMailUsed(string email, int projectid)
+        {
+            throw new NotImplementedException();
         }
 
         public void resetEMailSecurityStepValidationByValid(int projectid, string providerid)

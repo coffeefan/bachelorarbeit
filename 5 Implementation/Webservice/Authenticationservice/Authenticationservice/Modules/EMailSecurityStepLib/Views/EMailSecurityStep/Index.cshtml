@@ -5,15 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>View</h2>
-
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>EMailSecurityStepValidation_Step2</h4>
-        <hr />
+        <h4>E-Mail Validierung</h4>
+        Tragen Sie in folgendem Feld Ihre E-Mail Adresse ein und wir senden Ihnen einen Code zu.
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.EMail, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -25,12 +23,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Code senden" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+

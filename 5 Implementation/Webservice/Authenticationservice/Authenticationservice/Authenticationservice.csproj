@@ -200,7 +200,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValidateApiController.cs" />
+    <Compile Include="Controllers\ValidateController.cs" />
     <Compile Include="Controllers\LoadingController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
@@ -276,6 +277,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\finish.jpg" />
     <Content Include="Content\Images\headerimage.jpg" />
     <Content Include="Content\Images\loading.gif" />
     <Content Include="favicon.ico" />
@@ -309,9 +311,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Validate\Finish.cshtml" />
+    <Content Include="Views\Validate\Contact.cshtml" />
+    <Content Include="Views\Validate\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -333,10 +335,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Loading\Index.cshtml" />
-    <Content Include="Views\Home\Validate.cshtml" />
+    <Content Include="Views\Validate\Check.cshtml" />
     <Content Include="Views\EmailTemplates\Registration.cshtml" />
     <Content Include="Views\EmailTemplates\PasswordForgot.cshtml" />
-    <Content Include="Views\Home\Failedpage.cshtml" />
+    <Content Include="Views\Validate\Failedpage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
