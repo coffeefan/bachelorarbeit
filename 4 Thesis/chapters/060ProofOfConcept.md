@@ -1,8 +1,8 @@
-#ProofOfConcept
+#Proof Of Concept
 
 ##Techologien
 
-Der Auftraggeber möchte dass die aktuell in seinem Betrieb eingesetzten Technologien für die Implementation der Arbeit verwendet werden. Die Technologien wurden abgesprochen und im folgenden Kapitel erklärt.
+Der Auftraggeber möchte dass die aktuell in seinem Betrieb eingesetzten Technologien für die Implementation der Arbeit verwendet werden. Die vorgegebenen Technologien sind im folgenden Kapitel erklärt.
 
 ###C-Sharp
 Im Rahmen der Einführung von .net veröffentlichte Microsoft 2002 die Programmiersprache C-Sharp oder verkürzt C#. C# orientiert sich stark an Java, C++, Haskell und Delphi. Daher liegt es Nahe das C# eine objektorientierte Programmiersprache ist und der Wechsel von den zu vorgenannten Programmiersprachen auf C# einfach fällt.
@@ -31,9 +31,7 @@ Um RESTful-Webservices einfach entwickeln zu können stellt Microsoft mit ASP.ne
 Entity Framework (EF) ist eine objektrelationale Zuordnung, die .NET-Entwicklern über domänenspezifische Objekte die Nutzung relationaler Daten ermöglicht. Ein Grossteil des Datenzugriffscodes, den Entwickler normalerweise programmieren, muss folglich nicht geschrieben werden. [^efbasic]
 
 ###Grunt
-Grunt.js ist ein sogenannter Taskrunner, d.h. es übernimmt Aufgaben wie das Kompilieren von SASS und LESS Files in CSS, checkt JavaScript auf Fehler ab und optimiert alle Assets für das Web. Das Schöne daran ist, dass, bei richtiger Konfiguration, Grunt.js die Daten selbst überwacht und bei Änderungen die oben genannten Tasks automatisch ausführt.
-
-
+Grunt.js ist ein sogenannter Taskrunner, d.h. es übernimmt Aufgaben wie das Kompilieren von CSS, überprüft JavaScript auf Fehler ab und optimiert alle Assets für das Web. Grunt.js zeichnet isch dadurch aus, dass, bei richtiger Konfiguration, Grunt.js die Daten selbst überwacht und bei Änderungen die oben genannten Tasks automatisch ausführt.
 
 ###AngularJS
 Mittels AngularJS wird die Client-Browser App entwickelt. AngularJS ist ein Javascript Framework, welches OpenSource von Google Inc. veröffentlicht wurde. AngularJS macht einen Grossteil des Codes, den man normalerweise schreibt, überflüssig. Die Reduktion des Codes begründet sich durch die Automatisierung von Standardaufgaben. Die manuelle DOM-Selektion, DOM-Manipulation und Event-Behandlung werden durch AngularJS überflüssig. Durch Einsatz von Direktiven und Modulen wird die Wiederverwendbarkeit von Code ermöglicht.
@@ -46,9 +44,25 @@ Zwischen der AngularJS WebApp und dem Webservice dient JSON(JavaScript Object No
 [^efbasic]: Quelle [@efbasic]
 [^angularjsbasic]: Quelle [@angularjsbasic]
 
-##Authentifizierungs-App mit einem einer Datei pro Technoligie
-Wie im Kapitel [Integration der Schnittstelle][Integration der Schnittstelle] konzeptioniert soll beim Enduser ein Javascript Datei und ein CSS Datei integriert werden. Grunt generiert von Haus aus leider 2 Dateien pro Technoligie. Um doch eine Datei zu erhalten muss die Generierung mit dem Grunt-Concat Befehl erweitert werden. Dadurch können die Dateien danach zu einer Datei zusammengefasst werden.
+\newpage
 
+## Sicherheitsstufe
+### Plugin Entwicklung
+Die Entwicklung einer Sicherheitstufe wird wie im Konzept unter[Modularität und Erweiterbarkeit] vorgesehen losgelöst und unabhängig entwickelt. Pro Sicherheitstufe werden 3 VisualStudio Projekte angelegt. 
+Im Hauptprojekt der Sicherheitstufe wird die klassiche Runtimeumgebung für Webprojekte mit den benötigten Standartreferenzen und Templates für Microsoft MVC und Microsoft WebAPI aufgesetzt. Das PlugIn kann in diesem Projekt ohne Authentifizierungsservice entwickelt und  ausgeführt werden. 
+Das Testprojekt stellt die Lauffähigkeit der im Hauptprojekt entwickelten Implementationen sicher. Um die Entwicklungen im Hauptprojekt als DLL-Klassenbibliothek zu generieren die ClassLibary-Projekt. In diesem werden die entwickelten Klassen aus dem Hauptprojekt verlinkt. Bei vorhandensein aller nötigen Referenzen und verlinkungen erstellt die ClassLibary bei einem Build die DLL-Klassenbibliothek unser PlugIn.
+![Screenshot VisualStudio der 3 Projekte der Sicherheitsstufe E-Mail](images/visualstudio_securitystep.jpg)
+
+### Interface - Vertrag mit den Sicherheitsstufen
+Für den Endbenutzer beginnt die Authentifizierung mit öffnnen der Authentifizierung-Lightbox. Dabei wird die Action "Validate/Check" des Authentifizierungsservice aufgerufen. Diese zentrale Funktionalität überprüft den Status der Verifizierung und ruft die nötigen Sicherheitstufen auf.
+Für den Endbenutzer ist der Ablauf der Authentifizierung pro Sicherheitsstufe sichtbar. Der Ablauf und Inhalt der Authentifzierung jeder Sicherheitsstufe kann individuell erstellt werden. Einzig der Startpunkt und Endpunkt wird von Authentifzierungsservice vorgegeben. So muss die Seite bzw. Action "Index" für den Start der Authentifizierung vorhanden sein. Am Ende der Authentifizierung soll es wieder zurück zur Action "Validate/Check" des Authentifzierungsservice gehen.
+Damit die Action "Validate/Check" übperüfen kann, ob die Authentifizierung der Sicherheitsstufe erfolgreich war oder zum 1. oder wiederholten mal ausgeführt werden, wir die Methode "checkIsValidated" pro Sicherheitsstufe implementiert. Diese Funktion teil anhand der eindeutigen Spezifikation Projekt und ID des Providers mit ob die Validierung erfolgreich ist.
+Das Interface des MEF-Contracts aller Sicherheitsstufen enthält ausserdem zwei Funktionalitäten zum abfrage und Speicherung individuellen Konfiguration der Sichstufen und die Abfrage der Vergleichsparameter.
+
+
+
+
+![ISecurityStep](images/code/ISecurityStep.jpg)
 
 
 

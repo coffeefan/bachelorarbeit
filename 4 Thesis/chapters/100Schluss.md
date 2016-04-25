@@ -16,17 +16,15 @@ Nichtbeantwortung einer oder mehrerer einzelner Fragen. Die Repräsentativität 
 
 __ORM__
 ORM steht für object-relational mapping und ist eine Technik mit der Objekte einer Anwendung in einem relationalen Datenbanksystem abgelegt werden kann.
-\
 
-
-\
+__POCO POCO Klassen__
+POCO ist die Abkürzung für Plain Old CLR Object. Eine POCO-Klasse ist ein ganz normales .NET-Objekt, das keine durch die Infrastruktur bedingte Basisklasse, Annotationen oder eine Enhancement auf Bytecode-Ebene (MSIL/CIL) erfordert.Damit ist es geeignet schlank Daten zu transportieren.
 
 __REST / Restfull__
 REST steht für Representational  State Transfer. REST ist eine Software Architektur des Webs. System welche die REST Architektur einhalten nennt man RESTful. REST System kommunizieren allgemein über das HTTP-Protokoll und nutzen die gleichen HTTP verbs wie ein Browser der eine Webseite abfragt. Neben GET und POST werden die weniger bekannten Verben PUT und Delete verwendet. Die URI beschreibt die zu beziehende oder verändernde Webressource.
 
 
 #Verzeichnisse
-Neues Verzeichnisse
 
 
 ##Abbildungsverzeichnis

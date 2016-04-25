@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.23)  24 APR 2016 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.23)  26 APR 2016 00:04
 entering extended mode
 **./build/thesis.tex
 (build/thesis.tex
@@ -2520,7 +2520,7 @@ Overfull \hbox (13.96013pt too wide) in paragraph at lines 25--123
 [][] [] 
  []
 
-<images/logos/SoE.pdf, id=615, 597.51233pt x 845.0471pt>
+<images/logos/SoE.pdf, id=635, 597.51233pt x 845.0471pt>
 File: images/logos/SoE.pdf Graphic file (type pdf)
 
 <use images/logos/SoE.pdf>
@@ -2552,7 +2552,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.129 ...line {3.6.5}Kosten}{22}{subsection.3.6.5}
+l.129 ...line {3.6.5}Kosten}{21}{subsection.3.6.5}
                                                    [1
 
 
@@ -2585,7 +2585,7 @@ LaTeX Font Info:    Try loading font information for TS1+lmss on input line 124
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [6] [7] [8]
 chapter 2.
-<images/projektplan.jpg, id=843, 734.745pt x 462.22687pt>
+<images/projektplan.jpg, id=868, 734.745pt x 462.22687pt>
 File: images/projektplan.jpg Graphic file (type jpg)
 
 <use images/projektplan.jpg>
@@ -2595,7 +2595,7 @@ Package pdftex.def Info: images/projektplan.jpg used on input line 289.
 
 
  <./images/projektplan.jpg>] [10] [11] [12]
-[13] <images/yuml.JPG, id=877, 459.96844pt x 331.99031pt>
+[13] <images/yuml.JPG, id=902, 459.96844pt x 331.99031pt>
 File: images/yuml.JPG Graphic file (type jpg)
 
 <use images/yuml.JPG>
@@ -2603,148 +2603,147 @@ Package pdftex.def Info: images/yuml.JPG used on input line 621.
 (pdftex.def)             Requested size: 426.79135pt x 308.0639pt.
  [14 <./images/yuml.JPG>]
 chapter 3.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 659.
+[15
 
-<images/excel-statistik/socialmedia-aktivenutzer.jpg, id=885, 903.375pt x 418.5
+
+] [16] [17]
+<images/excel-statistik/socialmedia-aktivenutzer.jpg, id=956, 903.375pt x 418.5
 6375pt>
 File: images/excel-statistik/socialmedia-aktivenutzer.jpg Graphic file (type jp
 g)
  <use images/excel-statistik/socialmedia-aktivenutzer.jpg>
 Package pdftex.def Info: images/excel-statistik/socialmedia-aktivenutzer.jpg us
-ed on input line 694.
+ed on input line 846.
 (pdftex.def)             Requested size: 426.79135pt x 197.74686pt.
- [15
 
-
-]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 703.
-
-<images/excel-statistik/socialmedia-schweiz.jpg, id=898, 903.375pt x 423.83344p
+<images/excel-statistik/socialmedia-schweiz.jpg, id=961, 903.375pt x 423.83344p
 t>
 File: images/excel-statistik/socialmedia-schweiz.jpg Graphic file (type jpg)
  <use images/excel-statistik/socialmedia-schweiz.jpg>
 Package pdftex.def Info: images/excel-statistik/socialmedia-schweiz.jpg used on
- input line 708.
+ input line 860.
 (pdftex.def)             Requested size: 426.79135pt x 200.23648pt.
- [16 <./images/excel-statistik/socialmedia-aktivenutzer.jpg> <./images/excel-st
-atistik/socialmedia-schweiz.jpg>] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 786--788
+ [18 <./images/excel-statistik/socialmedia-aktivenutzer.jpg>] [19 <./images/exc
+el-statistik/socialmedia-schweiz.jpg>] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 938--940
 [][]\T1/lmss/m/n/9 Die Kos-ten sind am 28. De-zem-ber 2015 un-ter fol-gen-dem L
 ink ab-ge-ru-fen wor-den:
  []
 
-[19] [20] [21] [22]
+[21] [22]
 
 LaTeX Warning: Citation 'cookie-centra' on page 23 undefined on input line 1060
 .
 
-[23] [24] <images/captcha.png, id=1039, 239.89626pt x 291.0875pt>
+[23] [24] <images/captcha.png, id=1066, 803.0pt x 291.0875pt>
 File: images/captcha.png Graphic file (type png)
 
 <use images/captcha.png>
 Package pdftex.def Info: images/captcha.png used on input line 1160.
-(pdftex.def)             Requested size: 239.89566pt x 291.09122pt.
- [25] [26 <./images/captcha.png>] [27]
-Underfull \hbox (badness 1242) in paragraph at lines 1265--1267
+(pdftex.def)             Requested size: 426.79135pt x 154.71535pt.
+ [25 <./images/captcha.png>] [26]
+Underfull \hbox (badness 1242) in paragraph at lines 1267--1269
 [][]\T1/lmss/m/n/9 Die Prei-se wur-den am 1. März 2016 auf nex-mo.com/products/
 voice/, tro-po.com/pricing und twi-
  []
 
-[28] <images/fingerabdruck.jpg, id=1099, 240.9pt x 154.176pt>
+[27] [28] <images/fingerabdruck.jpg, id=1127, 240.9pt x 154.176pt>
 File: images/fingerabdruck.jpg Graphic file (type jpg)
 
 <use images/fingerabdruck.jpg>
-Package pdftex.def Info: images/fingerabdruck.jpg used on input line 1361.
+Package pdftex.def Info: images/fingerabdruck.jpg used on input line 1363.
 (pdftex.def)             Requested size: 240.8994pt x 154.1803pt.
- [29] [30 <./images/fingerabdruck.jpg>]
+ [29 <./images/fingerabdruck.jpg>] [30]
 chapter 4.
 [31
 
 
-] <images/use-case-diagram.png, id=1130, 848.16875pt x 618.31pt>
+] <images/use-case-diagram.png, id=1154, 848.16875pt x 618.31pt>
 File: images/use-case-diagram.png Graphic file (type png)
 
 <use images/use-case-diagram.png>
-Package pdftex.def Info: images/use-case-diagram.png used on input line 1446.
+Package pdftex.def Info: images/use-case-diagram.png used on input line 1430.
 (pdftex.def)             Requested size: 426.79135pt x 311.12607pt.
  [32 <./images/use-case-diagram.png>] [33]
 [34] [35] [36]
-<images/basis-schablone.jpg, id=1169, 398.42766pt x 129.45757pt>
+<images/basis-schablone.jpg, id=1193, 398.42766pt x 129.45757pt>
 File: images/basis-schablone.jpg Graphic file (type jpg)
 
 <use images/basis-schablone.jpg>
-Package pdftex.def Info: images/basis-schablone.jpg used on input line 1908.
+Package pdftex.def Info: images/basis-schablone.jpg used on input line 1900.
 (pdftex.def)             Requested size: 398.42668pt x 129.46315pt.
 
-<images/erweiterte-schablone.jpg, id=1173, 480.29437pt x 137.01187pt>
+<images/erweiterte-schablone.jpg, id=1197, 480.29437pt x 137.01187pt>
 File: images/erweiterte-schablone.jpg Graphic file (type jpg)
 
 <use images/erweiterte-schablone.jpg>
-Package pdftex.def Info: images/erweiterte-schablone.jpg used on input line 191
-7.
+Package pdftex.def Info: images/erweiterte-schablone.jpg used on input line 190
+9.
 (pdftex.def)             Requested size: 426.79135pt x 121.75201pt.
  [37 <./images/basis-schablone.jpg> <./images/erweiterte-schablone.jpg>]
-Underfull \vbox (badness 10000) detected at line 1969
+Underfull \vbox (badness 10000) detected at line 1961
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2003
+Underfull \vbox (badness 10000) detected at line 1995
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2035
+Underfull \vbox (badness 10000) detected at line 2027
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2068
+Underfull \vbox (badness 10000) detected at line 2060
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2101
+Underfull \vbox (badness 10000) detected at line 2093
  []
 
 [38]
-Underfull \vbox (badness 10000) detected at line 2134
+Underfull \vbox (badness 10000) detected at line 2126
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2166
+Underfull \vbox (badness 10000) detected at line 2158
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2199
+Underfull \vbox (badness 10000) detected at line 2191
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2232
+Underfull \vbox (badness 10000) detected at line 2224
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2266
+Underfull \vbox (badness 10000) detected at line 2258
  []
 
 [39]
-Underfull \vbox (badness 10000) detected at line 2299
+Underfull \vbox (badness 10000) detected at line 2291
  []
 
 [40]
-Underfull \vbox (badness 10000) detected at line 2341
+Underfull \vbox (badness 10000) detected at line 2333
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2372
+Underfull \vbox (badness 10000) detected at line 2364
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2405
+Underfull \vbox (badness 10000) detected at line 2397
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2438
+Underfull \vbox (badness 10000) detected at line 2430
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2470
+Underfull \vbox (badness 10000) detected at line 2462
  []
 
 
@@ -2752,201 +2751,216 @@ Overfull \vbox (5.05016pt too high) has occurred while \output is active []
 
 
 [41]
-Underfull \vbox (badness 10000) detected at line 2503
+Underfull \vbox (badness 10000) detected at line 2493
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2543
+Underfull \vbox (badness 10000) detected at line 2526
  []
 
 
-Underfull \vbox (badness 10000) detected at line 2577
+Underfull \vbox (badness 10000) detected at line 2566
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 2600
  []
 
 [42] [43] [44]
-<images/excel-statistik/risikomatrix.JPG, id=1234, 463.7325pt x 307.1475pt>
+<images/excel-statistik/risikomatrix.JPG, id=1259, 463.7325pt x 307.1475pt>
 File: images/excel-statistik/risikomatrix.JPG Graphic file (type jpg)
 
 <use images/excel-statistik/risikomatrix.JPG>
 Package pdftex.def Info: images/excel-statistik/risikomatrix.JPG used on input 
-line 2673.
+line 2696.
 (pdftex.def)             Requested size: 426.79135pt x 282.68692pt.
  [45 <./images/excel-statistik/risikomatrix.JPG>] [46]
 chapter 5.
 
-<images/draw_io/BA_KomponentenDiagramm.png, id=1247, 655.44875pt x 522.95375pt>
+<images/draw_io/BA_KomponentenDiagramm.png, id=1272, 655.44875pt x 522.95375pt>
 File: images/draw_io/BA_KomponentenDiagramm.png Graphic file (type png)
 <use images/draw_io/BA_KomponentenDiagramm.png>
 Package pdftex.def Info: images/draw_io/BA_KomponentenDiagramm.png used on inpu
-t line 2741.
+t line 2760.
 (pdftex.def)             Requested size: 426.79135pt x 340.52235pt.
  [47
 
 
  <./images/draw_io/BA_KomponentenDiagramm.png>] [48]
-<images/draw_io/BA_AutorisationOverview.png, id=1259, 558.085pt x 586.19pt>
+<images/draw_io/BA_AutorisationOverview.png, id=1284, 558.085pt x 586.19pt>
 File: images/draw_io/BA_AutorisationOverview.png Graphic file (type png)
 
 <use images/draw_io/BA_AutorisationOverview.png>
 Package pdftex.def Info: images/draw_io/BA_AutorisationOverview.png used on inp
-ut line 2770.
+ut line 2789.
 (pdftex.def)             Requested size: 426.79135pt x 448.29973pt.
  [49 <./images/draw_io/BA_AutorisationOverview.png>]
-<images/domaenenmodell.png, id=1266, 1116.17pt x 250.9375pt>
+<images/domaenenmodell.png, id=1291, 1116.17pt x 250.9375pt>
 File: images/domaenenmodell.png Graphic file (type png)
 
 <use images/domaenenmodell.png>
-Package pdftex.def Info: images/domaenenmodell.png used on input line 2787.
+Package pdftex.def Info: images/domaenenmodell.png used on input line 2806.
 (pdftex.def)             Requested size: 426.79135pt x 95.95073pt.
  [50 <./images/domaenenmodell.png>] [51]
-<images/cms_statistik_november2015.JPG, id=1286, 1178.90437pt x 671.50874pt>
+<images/cms_statistik_november2015.JPG, id=1314, 1468.48625pt x 879.285pt>
 File: images/cms_statistik_november2015.JPG Graphic file (type jpg)
 
 <use images/cms_statistik_november2015.JPG>
 Package pdftex.def Info: images/cms_statistik_november2015.JPG used on input li
-ne 2865.
-(pdftex.def)             Requested size: 426.79135pt x 243.10573pt.
+ne 2889.
+(pdftex.def)             Requested size: 426.79135pt x 255.54962pt.
  [52 <./images/cms_statistik_november2015.JPG>] [53] [54]
-<images/datatrans-autorisierung.JPG, id=1317, 509.65407pt x 70.01157pt>
+<images/datatrans-autorisierung.JPG, id=1344, 509.65407pt x 70.01157pt>
 File: images/datatrans-autorisierung.JPG Graphic file (type jpg)
 
 <use images/datatrans-autorisierung.JPG>
 Package pdftex.def Info: images/datatrans-autorisierung.JPG used on input line 
-3093.
+3123.
 (pdftex.def)             Requested size: 426.79135pt x 58.63089pt.
  [55 <./images/datatrans-autorisierung.JPG>] <images/datatrans-lightbox.JPG, id
-=1334, 489.07245pt x 349.07773pt>
+=1361, 489.07245pt x 349.07773pt>
 File: images/datatrans-lightbox.JPG Graphic file (type jpg)
 
 <use images/datatrans-lightbox.JPG>
-Package pdftex.def Info: images/datatrans-lightbox.JPG used on input line 3127.
+Package pdftex.def Info: images/datatrans-lightbox.JPG used on input line 3157.
 
 (pdftex.def)             Requested size: 426.79135pt x 304.62729pt.
  [56 <./images/datatrans-lightbox.JPG>]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 3146
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 3176
 .
 
 ("C:\Users\chris\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (61.851pt too wide) in paragraph at lines 3164--3164
+Overfull \hbox (61.851pt too wide) in paragraph at lines 3194--3194
 []\T1/lmtt/m/n/10.95 <script src="https://pilot.datatrans.biz/upp/payment/js/da
 tatrans-1.0.2.js"></script>[] 
  []
 
 [57] [58] [59]
-Overfull \hbox (3.75768pt too wide) in paragraph at lines 3369--3371
+Overfull \hbox (3.75768pt too wide) in paragraph at lines 3404--3406
 []|\T1/lmss/bx/n/10.95 Sicherheitsstufen 
  []
 
 
-Overfull \hbox (11.09572pt too wide) in paragraph at lines 3372--3374
+Overfull \hbox (11.09572pt too wide) in paragraph at lines 3407--3409
 []|\T1/lmss/bx/n/10.95 Verhinderung 
  []
 
 
-Overfull \hbox (2.8987pt too wide) in paragraph at lines 3384--3386
+Overfull \hbox (2.8987pt too wide) in paragraph at lines 3419--3421
  []|\T1/lmss/bx/n/10.95 Verbreitung 
  []
 
 
-Overfull \hbox (3.75768pt too wide) in paragraph at lines 3390--3392
+Overfull \hbox (3.75768pt too wide) in paragraph at lines 3425--3427
 []|\T1/lmss/bx/n/10.95 Sicherheitsstufen 
  []
 
 
-Overfull \hbox (11.09572pt too wide) in paragraph at lines 3393--3395
+Overfull \hbox (11.09572pt too wide) in paragraph at lines 3428--3430
 []|\T1/lmss/bx/n/10.95 Verhinderung 
  []
 
 
-Overfull \hbox (2.8987pt too wide) in paragraph at lines 3405--3407
+Overfull \hbox (2.8987pt too wide) in paragraph at lines 3440--3442
  []|\T1/lmss/bx/n/10.95 Verbreitung 
  []
 
-[60] <images/mef_architektur.jpg, id=1382, 1806.75pt x 994.71625pt>
+[60] [61] <images/mef_architektur.jpg, id=1413, 1806.75pt x 994.71625pt>
 File: images/mef_architektur.jpg Graphic file (type jpg)
 
 <use images/mef_architektur.jpg>
-Package pdftex.def Info: images/mef_architektur.jpg used on input line 3658.
+Package pdftex.def Info: images/mef_architektur.jpg used on input line 3693.
 (pdftex.def)             Requested size: 426.79135pt x 234.9726pt.
- [61] [62 <./images/mef_architektur.jpg>]
-<images/mef_library_overview.png, id=1394, 685.56125pt x 536.0025pt>
+ [62] [63 <./images/mef_architektur.jpg>]
+<images/mef_library_overview.png, id=1426, 685.56125pt x 536.0025pt>
 File: images/mef_library_overview.png Graphic file (type png)
 
 <use images/mef_library_overview.png>
-Package pdftex.def Info: images/mef_library_overview.png used on input line 370
-2.
+Package pdftex.def Info: images/mef_library_overview.png used on input line 373
+9.
 (pdftex.def)             Requested size: 426.79135pt x 333.69214pt.
- [63 <./images/mef_library_overview.png>]
-<images/mockups/General.png, id=1401, 893.3375pt x 634.37pt>
+ [64 <./images/mef_library_overview.png>]
+<images/mockups/General.png, id=1433, 893.3375pt x 634.37pt>
 File: images/mockups/General.png Graphic file (type png)
 
 <use images/mockups/General.png>
-Package pdftex.def Info: images/mockups/General.png used on input line 3730.
+Package pdftex.def Info: images/mockups/General.png used on input line 3767.
 (pdftex.def)             Requested size: 426.79135pt x 303.07121pt.
- [64 <./images/mockups/General.png>]
-<images/mockups/Mobile.png, id=1408, 761.84625pt x 575.14874pt>
+ [65 <./images/mockups/General.png>]
+<images/mockups/Mobile.png, id=1440, 761.84625pt x 575.14874pt>
 File: images/mockups/Mobile.png Graphic file (type png)
 
 <use images/mockups/Mobile.png>
-Package pdftex.def Info: images/mockups/Mobile.png used on input line 3738.
+Package pdftex.def Info: images/mockups/Mobile.png used on input line 3775.
 (pdftex.def)             Requested size: 426.79135pt x 322.19519pt.
- [65 <./images/mockups/Mobile.png>]
-<images/mockups/card.jpg, id=1420, 848.16875pt x 250.9375pt>
+ [66 <./images/mockups/Mobile.png>]
+<images/mockups/card.jpg, id=1453, 848.16875pt x 250.9375pt>
 File: images/mockups/card.jpg Graphic file (type jpg)
 
 <use images/mockups/card.jpg>
-Package pdftex.def Info: images/mockups/card.jpg used on input line 3780.
+Package pdftex.def Info: images/mockups/card.jpg used on input line 3817.
 (pdftex.def)             Requested size: 426.79135pt x 126.26869pt.
 
-<images/mockups/Kundenimplementation-Desktop.png, id=1421, 673.51625pt x 579.16
+<images/mockups/Kundenimplementation-Desktop.png, id=1454, 673.51625pt x 579.16
 376pt>
 File: images/mockups/Kundenimplementation-Desktop.png Graphic file (type png)
  <use images/mockups/Kundenimplementation-Desktop.png>
 Package pdftex.def Info: images/mockups/Kundenimplementation-Desktop.png used o
-n input line 3786.
+n input line 3823.
 (pdftex.def)             Requested size: 426.79135pt x 367.00488pt.
 
-<images/mockups/Kundenimplementation-Mobile.png, id=1422, 752.8125pt x 583.1787
+<images/mockups/Kundenimplementation-Mobile.png, id=1455, 752.8125pt x 583.1787
 6pt>
 File: images/mockups/Kundenimplementation-Mobile.png Graphic file (type png)
  <use images/mockups/Kundenimplementation-Mobile.png>
 Package pdftex.def Info: images/mockups/Kundenimplementation-Mobile.png used on
- input line 3792.
+ input line 3829.
 (pdftex.def)             Requested size: 426.79135pt x 330.62672pt.
- [66 <./images/mockups/card.jpg>] [67 <./images/mockups/Kundenimplementation-De
-sktop.png>] [68 <./images/mockups/Kundenimplementation-Mobile.png>] [69]
+ [67 <./images/mockups/card.jpg>] [68 <./images/mockups/Kundenimplementation-De
+sktop.png>] [69 <./images/mockups/Kundenimplementation-Mobile.png>] [70]
 chapter 6.
-[70
+[71
 
 
-] [71] [72] [73] [74]
-<images/studien-ilustrationen.jpg, id=1512, 1180.41pt x 231.86626pt>
+] [72] <images/visualstudio_securitystep.jpg, id=1504, 803.0pt x 60.225pt>
+File: images/visualstudio_securitystep.jpg Graphic file (type jpg)
+
+<use images/visualstudio_securitystep.jpg>
+Package pdftex.def Info: images/visualstudio_securitystep.jpg used on input lin
+e 4028.
+(pdftex.def)             Requested size: 426.79135pt x 32.01006pt.
+
+<images/code/ISecurityStep.jpg, id=1505, 1026.08344pt x 662.475pt>
+File: images/code/ISecurityStep.jpg Graphic file (type jpg)
+
+<use images/code/ISecurityStep.jpg>
+Package pdftex.def Info: images/code/ISecurityStep.jpg used on input line 4057.
+
+(pdftex.def)             Requested size: 426.79135pt x 275.54874pt.
+ [73 <./images/visualstudio_securitystep.jpg>] [74 <./images/code/ISecurityStep
+.jpg>]
+chapter 7.
+[75
+
+
+] [76] [77] [78] [79]
+<images/studien-ilustrationen.jpg, id=1577, 1180.41pt x 231.86626pt>
 File: images/studien-ilustrationen.jpg Graphic file (type jpg)
 
 <use images/studien-ilustrationen.jpg>
-Package pdftex.def Info: images/studien-ilustrationen.jpg used on input line 41
-74.
+Package pdftex.def Info: images/studien-ilustrationen.jpg used on input line 43
+67.
 (pdftex.def)             Requested size: 426.79135pt x 83.83266pt.
- [75] [76 <./images/studien-ilustrationen.jpg>]
-chapter 7.
-[77
-
-
-] [78]
+ [80] [81 <./images/studien-ilustrationen.jpg>]
 chapter 8.
-[79
+[82
 
 
 ]
 chapter A.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4314--4317
-
- []
-
-[80
+[83
 
 
 ]
@@ -2955,64 +2969,64 @@ chapter B.
 \tf@lof=\write8
 \openout8 = `thesis.lof'.
 
- [81
+ [84
 
 
 ]
-Underfull \hbox (badness 1442) in paragraph at lines 4346--4346
+Underfull \hbox (badness 1442) in paragraph at lines 4431--4431
 []\T1/lmss/m/sl/10.95 Datatrans eCom - Tech-ni-cal Im-ple-men-ta-ti-on Gui-de\T
 1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 https : / / pilot .
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 4346--4346
+Underfull \hbox (badness 1087) in paragraph at lines 4431--4431
 []\T1/lmss/m/sl/10.95 Webshop\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 https :
  / / www . datatrans . ch / de / e -[] payment / shop -[]
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 4345.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 4430.
 
 ("C:\Users\chris\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10.95> not available
-(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 4345.
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 4430.
 
-[82]
-Underfull \hbox (badness 2426) in paragraph at lines 4346--4346
+[85]
+Underfull \hbox (badness 2426) in paragraph at lines 4431--4431
 []\T1/lmss/m/n/10.95 Goldbach In-ter-ac-ti-ve. \T1/lmss/m/sl/10.95 Nutzer-zah-l
 en der wich-tigs-ten Platt-for-men\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 ht
 tps :
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 4346--4346
+Underfull \hbox (badness 1694) in paragraph at lines 4431--4431
 []\T1/lmss/m/sl/10.95 Projektmanagement: De-fi-ni-tio-nen, Ein-füh-run-gen und 
 Vor-la-gen\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 http : / /
  []
 
 
-Overfull \hbox (6.31033pt too wide) in paragraph at lines 4346--4346
+Overfull \hbox (6.31033pt too wide) in paragraph at lines 4431--4431
 []\T1/lmss/m/n/10.95 Sven Mil-li-scher. \T1/lmss/m/sl/10.95 Die di-gi-ta-le Re-
 vo-lu-ti-on\T1/lmss/m/n/10.95 . []$\T1/lmtt/m/n/10.95 handelszeitung . ch / dig
 italisierung /
  []
 
-[83] [84] ("C:\Project\Bachelorarbeit\4 Thesis\build\thesis.lot")
+[86] [87] ("C:\Project\Bachelorarbeit\4 Thesis\build\thesis.lot")
 \tf@lot=\write9
 \openout9 = `thesis.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4362.
- [85]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 4362.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 4447.
+ [88]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 4447.
 
 ("C:\Project\Bachelorarbeit\4 Thesis\build\thesis.aux" (titlepage.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4362.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 4447.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 4447.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: AFD1EBD67510E3D1C6E518F8E38BC6B0;11365.
+(rerunfilecheck)             Checksum: C4B869815C37B4F78797DBEBE2AAB432;11721.
 
 
 LaTeX Warning: There were undefined references.
@@ -3030,15 +3044,18 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29499 strings out of 493634
- 507109 string characters out of 3135238
+ 29530 strings out of 493634
+ 507868 string characters out of 3135238
  868399 words of memory out of 3000000
- 31916 multiletter control sequences out of 15000+200000
+ 31934 multiletter control sequences out of 15000+200000
  86287 words of font info for 86 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,11n,85p,10495b,1467s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Hfootnote.63} has been referenced but does not ex
+ 57i,12n,85p,10495b,1467s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.64} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.63} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.62} has been referenced but does not exis
 t, replaced by a fixed one
@@ -3079,9 +3096,6 @@ t, replaced by a fixed one
 pdfTeX warning (dest): name{Hfootnote.50} has been referenced but does not exis
 t, replaced by a fixed one
 
-pdfTeX warning (dest): name{Hfootnote.49} has been referenced but does not exis
-t, replaced by a fixed one
-
 pdfTeX warning (dest): name{ux5cux23ux5cux23NFREQ-222} has been referenced but 
 does not exist, replaced by a fixed one
 
@@ -3090,6 +3104,9 @@ does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{ux5cux23ux5cux23NFREQ-210} has been referenced but 
 does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.49} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.48} has been referenced but does not exis
 t, replaced by a fixed one
@@ -3246,10 +3263,10 @@ public/lm/lmss9.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmssbx10.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/lm/lmsso10.pfb><C:/Users/chris/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "C:/Project/Bachelorarbeit/4 Thesis/build/thesis.pdf" (86 pag
-es, 2523445 bytes).
+Output written on "C:/Project/Bachelorarbeit/4 Thesis/build/thesis.pdf" (89 pag
+es, 2717103 bytes).
 PDF statistics:
- 1805 PDF objects out of 2073 (max. 8388607)
- 495 named destinations out of 1000 (max. 500000)
- 1350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1853 PDF objects out of 2073 (max. 8388607)
+ 505 named destinations out of 1000 (max. 500000)
+ 1400 words of extra memory for PDF output out of 10000 (max. 10000000)
 

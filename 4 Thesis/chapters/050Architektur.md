@@ -37,15 +37,19 @@ Um diesen Wiederspruch zu mindern stellt Microsoft das Entity-Framework zur Verf
 Das Entity-Framework hat verschiedene Konzeptionelle Ansätze um möglichst viele Bedürfnisse an den ORM-Mapper zu erfüllen. Es gilt nun den richtigen Ansatz für den Authenifizierungsservice zu wählen.
 
 ####Database First
-Beim Database First Ansatz wird zuerst die Datenbank designt. Das Entity-Framework bildet aus der Datenbank die POCO-Klassen ab. Sollten Anpassungen an den Entitäten ergeben, werden diese zuerst in der Datenbank implementiert und daraus werden wiederum neuen POCO-Klassen generiert.
+Beim Database First Ansatz wird zuerst die Datenbank designt. Das Entity-Framework bildet aus der Datenbank die POCO-Klassen[^pocoklasse] ab. Sollten Anpassungen an den Entitäten ergeben, werden diese zuerst in der Datenbank implementiert und daraus werden wiederum neuen POCO-Klassen generiert.
 
 ####Code First
 Beim Code First Ansatz werden zuerst die POCO-Klassen erstellt. Das Entity-Framework bildet aus den POCO-Klassen die Tabellen in der Datenbank. Alle Anpassungen werden gleich in den POCO-Klassen umgesetzt und durch das Entity-Framework in der Datenbank geändert erstellt.
 
 ####Entscheidung
+
 Wenn die POCO-Klassen gleich mehrheitlich für die Schnittstellendefinition als Parameterdefinition verwendet werden könnten, fallen Mehraufwendungen für Umwandlungen im Programmcode weg. Eine Schnittstellendefinition sollte aber nicht willkürlich durch eine Datenbankänderung beeinflusst werden. Der umgekehrte Fall ist aber minder wichtig, da die Datenbank nur von der Schnittstelle verwendet wird. Deshalb wird das Konzept Code First eingesetzt.
 
 [^vietnamcomputerscience]: [@the-vietnam-of-computer-science]
+[^pocoklasse]: Eine POCO-Klasse ist ein ganz "einfaches" .NET-Objekt. Damit ist es geeignet schlank Daten zu transportieren. Weitere Informationen im [Glossar]
+
+
 ###ERD
 Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen Tabellen durch das Entity Framework selbständig generiert
 
@@ -71,26 +75,27 @@ Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können direkt über
 
 Wordpress basiert auf einem sogennanten Hook-System. "Hook" eins zu eins übersetzt bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle bei der man seinen eigenen Code  einhaken kann. Der PlugIn Entwickler definiert diese Hooks um anderen PlugIns oder Funktionalitäten zu erlauben sein PlugIn zu erweitern. Auch der Core vom Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass PlugIn's oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir evtuell also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der PlugIn-Entwickler kann selbständig bestimmen ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle PlugIn's verfolgen vielfach den Weg möglichst verschlossen zu agieren um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Social Plugin's ausgewählt. Die Top 1000 installierten Wordpress PlugIns welche von der Art Social-Media Modul waren, ein paar Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen PlugIns: [^plugin-verzeichnis2], [^plugin-market2]
 
---------------------------------------------------- -------------------------
-__PlugIn__					  		
---------------------------- -----------	-----------	------------------------
-__WP-Polls__                kostenlos	100000+		Über "wp_polls_add_poll" könnte man den erstellten Poll authentfizieren und bei fehlerhafter Authentifizierung löschen
+------------------------------------------------------------------------------------------
+__PlugIn__				__Kosten__  __Installation__ 	__Info zu Hooks__		
+-----------------------	-----------	-------------------	----------------------------------
+__WP-Polls__        	kostenlos	100000+			 	Über "wp_polls_add_poll" könnte man den erstellten Poll authentfizieren und bei fehlerhafter Authentifizierung löschen
 
-__Polldaddy Polls & Ratings__ Freemium 	20000+		-
+__Polldaddy Polls  		Freemium 	20000+			 	-
+& Ratings__
 
-__Wp-Pro-Quiz__				kostenlos	20000+		Hooks vorhanden. Nicht für eine Authentifizierungsschnittstelle zu gebrauchen.
+__Wp-Pro-Quiz__			kostenlos	20000+			 	Hooks vorhanden. Nicht für eine Authentifizierungsschnittstelle zu gebrauchen.
 	
-__Responsive Poll__         15$			-			Keine Hooks. Laut Hersteller sind welche geplant (Zeitpunkt ungewiss)
+__Responsive Poll__		15$			-				 	Keine Hooks. Laut Hersteller sind welche geplant (Zeitpunkt ungewiss)
 
-__TotalPoll Pro__           18$			-			Hooks vorhanden. Ähnlich wie bei WP-Polls könnte man evtl. den erstellten Datensatz löschen. Jedoch ist dies ohne Kauf nicht ersichtlich.
+__TotalPoll Pro__		18$			-				 	Hooks vorhanden. Ähnlich wie bei WP-Polls könnte man evtl. den erstellten Datensatz löschen. Jedoch ist dies ohne Kauf nicht ersichtlich.
 
-__Easy Polling__			15$			-			-
+__Easy Polling__		15$			-				 	-
 
-__Opinion Stage__           kostenlos	10000+		-
+__Opinion Stage__		kostenlos	10000+			 	-
 
-__Wedgies__                	Freemium	800+		- 
+__Wedgies__      		Freemium	800+			 	- 
 
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
 Table: Recherche PlugIn's  
 
 
@@ -177,28 +182,31 @@ Die Lightbox des Authenifizierungsservice wird mit einer grösseren Verbreitung 
 ------------------------------------------------------------------------------------
 __Feldname__				__Wert__		__Beschreibung__												
 --------------------------- ---------------	----------------------------------------
-__as_projectid__            Integer			Project ID			
+__projectId__            	Integer			Project ID			
 
-__as_id_provider__ 			String			Die ID um die Interaktivität seitens Interaktionsanbieter eindeutig zu erkennen
+__providerId__ 				String			Die ID um die Interaktivität seitens Interaktionsanbieter eindeutig zu erkennen
 	
-__as_sign__					String			Signatur, welche die Eingaben überprüft.
+__sign__					String			Signatur, welche die Eingaben überprüft.
 
 -----------------------------------------------------------------------------------
 Table: Parameter Authenifizierungsservice Lightbox
 
 
 #### Einfache Signature
-Die Verwendung einer einfachen Signatur beugt Eingabefehler vor. Wenn auch nur geringfügig, der Aufwand erschwert den Missbraucht. 
-Um eine korrekte Signatur zu erstellen werden folgende Parameter konkateniert und mit einem Plus separiert.
 
-- as_projectid
-- as_id_provider
+Die Verwendung einer einfachen Signatur beugt Eingabefehler vor. Wenn auch nur geringfügig, der Aufwand erschwert zusätzlich den Missbrauch.Um eine korrekte Signatur zu erstellen werden folgende Parameter konkateniert und mit einem Plus separiert.
 
-Beispiel: 30045+12
+- projectId: Parameterfeld
+- providerId: Parameterfeld
+- validationCode: Beim Anlegen eines Projektes im Konfigurator des Authenifizierungsservice soll ein ValidationCode vom Authenifizierungsservice generiert werden und dem Programmierer zur Verfügung gestellt werden.
 
-Der daraus resultierende String wird mit SHA1 verschlüsselt
 
-Beim Beispiel gäbe es die Signatur 8a2298ebfe7208ebe63dd11cdbf5b6cafb56d09c
+
+Beispiel: 30045+12+BUQHFMNZ4P3T8XNVN0LK
+
+Der daraus resultierende String wird mit MD5 verschlüsselt.
+
+Beim Beispiel gäbe es die Signatur b37b3d4cd7cd8cba3f409f07d6f6d9bd
 
 
 \newpage
@@ -228,7 +236,7 @@ Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem Us
 
 
 ###Sicherheitstufen bewerten
-Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgelegt. Der Auftraggeber hat die verschiedenen Stufen anhand den 4 definierten Aspekten und dem Musskriterium Verbreitung aus der Anforderungsanalyse bewertet.
+Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgelegt. Beim Auftraggeber wurden die verschiedenen Sicherheitsstufen intern besprochen und bewertet. Pro Sicherheitsstufen wurde den vier definierten Aspekten und dem Musskriterium Verbreitung eine Schweizer Schulnote vergeben.
 
 ------------------------------------------------------------------------- -------------------------------------------------
 __Sicherheitsstufen__		__Verhinderung		 __Automat-			__Kosten__	   	__Aufwand	  	     __Verbreitung	
@@ -314,7 +322,7 @@ Um das Konzept besser zu verstehen, soll der Beispielcode von Design by Contract
 MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
 
 ###Entscheidung
-MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zu Verfügung. Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory. MEF bietet des weiteren die Möglichkeit die DLL's zur Laufzeit auszutauschen und eine automatisierte Instanzierung.
+Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory um die Modularität für [NFREQ-115] sicherzustellen . MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zu Verfügung.  MEF bietet des weiteren die Möglichkeit die DLL's zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authenifizierungsservice basierend auf MEF zu integrieren.
 
 \newpage
 ### Sicherheitsstufen Libaray-Übersicht anhand MEF
@@ -379,7 +387,7 @@ Ein Asp.net Shared Hosting ist durchaus für komplexere Webapplikationen wie der
 Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting ist skalierbar und kann sich automatisiert an den aktuellen Nutzungsbedürfnissen anpassen. Die realen Kosten sind im vornherein schwerer zu definieren. Die Daten sind in der Cloud redundant geführt. Fällt ein Datencenter aus kann ein anderes dessen Aufgabe übernehmen. Ein Anbieter der direkt Asp.net Webservice als Hostingservice anbietet wurde nicht gefunden.[^cloudservicech] Indirekt über z.b. über ein Docker Image könnte auch ein Schweizer Anbieter berücksichtigt werden. Die genutzten Serverdienste können komplett an seinen eigenen Bedürfnissen angepasst werden.
 
 ###Entscheidung
-Skalierbarkeit, nutzungsabhängige Kosten, Freiheit in der Serverdienst-Konfiguration überwiegen der einfachen Speicherung der Daten in der Schweiz. Ausserdem wird das einfache publishen (veröffentlichen) einer Web-Application aus dem Visual Studio bei allen Cloudanbieter angeboten (bei Shared Hosting sind es nur vereinzelte Anbieter), was den Development Workflow erheblich unterstützt.
+Die in [NFREQ-132] geforderte Skalierbarkeit, nutzungsabhängige Kosten, Freiheit in der Serverdienst-Konfiguration überwiegen der einfachen Speicherung der Daten in der Schweiz. Ausserdem wird das einfache publishen (veröffentlichen) einer Web-Application aus dem Visual Studio bei allen Cloudanbieter angeboten (bei Shared Hosting sind es nur vereinzelte Anbieter), was den Development Workflow erheblich unterstützt. Deshalb ist der Authenifizierungsservice im Cloud Hosting zu betreiben. 
 
 
 [^cloudservicech]: Stand 18. Dezember 2015

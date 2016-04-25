@@ -1,27 +1,25 @@
 #Anforderungen
 Dieses Kapitel beschreibt das Durchführen einer Anforderungsanalyse festgehalten. Anhand der Anforderungsanalyse sollen die Anforderungen für die entwickelnden Software ermittelt werden. Die Anforderungen bilden die Basis für die Architektur, das Softwaredesign, die Implementationund die Testfälle. Ihnen ist dem entsprechend ein sehr grosser Stellenwert zuzuschreiben.
 
+##Akteure
+__Programmierer__
+Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media Modul mit dem Authentifizierungsschnittstellen-Service schützen.
+
+__User__
+Der User ist der Endkunde. Er nimmt am Social-Media Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service
+
+
+
+
+
+
+
+\newpage
 
 ##Use-Cases
 Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis gefunden wurden.
 
-
-
-
-
-##Akteure
-
--------------------------------------------------------------------------------
-__Akteure__
---------------------------- --------------------------------------------------
-__Programmierer__			Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media Modul mit dem Authentifizierungsschnittstellen-Service schützen.
-
-__User__           			Der User ist der Endkunde. Er nimmt am Social-Media Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service
--------------------------------------------------------------------------------
-
-\newpage
-
-###Diagramm
+###Use-Cases Diagramm
 
 Das Use-Case Diagramm illustriert die nachfolgenden Use Cases. Dadurch kann rasch ein Überblick über die zu entwickelnde Lösung geschaffen werden.
 
@@ -29,8 +27,11 @@ Das Use-Case Diagramm illustriert die nachfolgenden Use Cases. Dadurch kann rasc
 
 \newpage
 
+###Use-Cases Beschreibung
+Die im Diagramm dargestellten Use-Cases werden nun noch beschrieben. Die Use-Cases wurden nummerisch nach Themenbereichen gruppiert.
 
-#### UC-11 Registration
+
+#### UC-11 Registration für den Konfigurator
 
 -------------------------------------------------------------------------------
 __UseCase__
@@ -51,7 +52,7 @@ __Hauptszenario__           Der Programmierer füllt ein Registrationsformular a
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
-#### UC-12 Login
+#### UC-12 Login Konfigurator
 
 -------------------------------------------------------------------------------
 __UseCase__
@@ -92,7 +93,7 @@ __Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupli
 -------------------------------------------------------------------------------
 
 
-#### UC-25 Einbinden in vorhandenes System
+#### UC-25 Authentifizierung in vorhandenes System einbinden
 
 -------------------------------------------------------------------------------
 __UseCase__
@@ -112,7 +113,7 @@ __Hauptszenario__           Der Programmierer öffnet die Einbindeseite. Es werd
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
-#### UC-31 Authentifizieren
+#### UC-31 User Authentifizieren
 
 -------------------------------------------------------------------------------
 __UseCase__
@@ -152,7 +153,7 @@ __Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt
 __Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Programmierer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 -------------------------------------------------------------------------------
 
-#### UC-51 Wartbarkeit
+#### UC-51 Wartbarkeit des Authentifizierungsservices
 
 -------------------------------------------------------------------------------
 __UseCase__
@@ -173,6 +174,7 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
 \newpage
+
 ##Anforderungen
 Die Anforderungen sollen basierend auf der Satzschablone erstellt werden. Ziel ist sprachliche Missverständnisse dadurch zu vermeiden. Die Schablone fördert eine syntaktische Eindeutigkeit der Anforderungen und eine optimalen Zeit- und Kostenrahmen für die Verfassung.
 
@@ -184,6 +186,7 @@ Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen
 ![Erweiterte Schablone  *Quelle Rupp*[^rupp]](images/erweiterte-schablone.jpg)
 
 [^rupp]: Rupp Bilder sind aus dem Buch Basiswissen Requirements Engineering [@rupp]
+
 
 \newpage
 ##Funktionale Anforderungen
@@ -388,6 +391,18 @@ __Techn. Risiko__       Sehr hoch
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
+### NFREQ-132			Skalierbar
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-31
+
+__Beschreibung__        Das System soll eine hohe Skalierbarkeit aufweisen. 
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
 ### NFREQ-135			Hohe Verfügbarkeit
 
 --------------------	-----------------------------------------------------------------------------------------
@@ -482,27 +497,22 @@ Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Qu
 ![Risikomatrix [^risikomatrix]](images/excel-statistik/risikomatrix.JPG)
 
 
-Rot: 	Massnahmen erforderlich
 
-Gelb: 	Risiken beobachten
+__Legende__
 
-Grün: 	Keine Massnahmen erforderlich
+R1	Akzeptanz
 
+R2	Kosten
 
+R3	Überkomplexität
 
-1	Akzeptanz
+R4	Systemumfeldänderungen
 
-2	Kosten
+R5	Schlechte/Unzureichende Frameworks
 
-3	Überkomplexität
+R6	Termineinhaltung
 
-4	Systemumfeldänderungen
-
-5	Schlechte/Unzureichende Frameworks
-
-6	Termineinhaltung
-
-7	Auslastung
+R7	Auslastung
 
 
 ###Massnahmen

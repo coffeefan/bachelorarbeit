@@ -19,21 +19,21 @@
 \BOOKMARK [2][-]{subsection.2.5.5}{yUML}{section.2.5}% 19
 \BOOKMARK [2][-]{subsection.2.5.6}{Draw.io}{section.2.5}% 20
 \BOOKMARK [0][-]{chapter.3}{Recherche}{}% 21
-\BOOKMARK [1][-]{section.3.1}{\304hnliche Produkte auf dem Markt}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.1.1}{OAuth-Provider}{section.3.1}% 23
-\BOOKMARK [2][-]{subsection.3.1.2}{playbuzz.com}{section.3.1}% 24
-\BOOKMARK [2][-]{subsection.3.1.3}{WebSMS.com Zwei-Faktor-Authentifizierung}{section.3.1}% 25
-\BOOKMARK [2][-]{subsection.3.1.4}{SuisseID}{section.3.1}% 26
-\BOOKMARK [1][-]{section.3.2}{Fazit}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.3}{Fachbegriffe}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Erl\344uterung der Grundlagen}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.4.1}{Authentifizierung}{section.3.4}% 30
-\BOOKMARK [2][-]{subsection.3.4.2}{Autorisierung}{section.3.4}% 31
-\BOOKMARK [1][-]{section.3.5}{Grundlegende Sicherheitsprinzipien}{chapter.3}% 32
-\BOOKMARK [2][-]{subsection.3.5.1}{KISS}{section.3.5}% 33
-\BOOKMARK [2][-]{subsection.3.5.2}{Default-is-deny}{section.3.5}% 34
-\BOOKMARK [2][-]{subsection.3.5.3}{Open Design}{section.3.5}% 35
-\BOOKMARK [2][-]{subsection.3.5.4}{Zusammenfassung der Sicherheitsprinzipien}{section.3.5}% 36
+\BOOKMARK [1][-]{section.3.1}{Fachbegriffe}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.2}{Erl\344uterung der Grundlagen}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Authentifizierung}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Autorisierung}{section.3.2}% 25
+\BOOKMARK [1][-]{section.3.3}{Grundlegende Sicherheitsprinzipien}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.1}{KISS}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.2}{Default-is-deny}{section.3.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.3}{Open Design}{section.3.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.4}{Zusammenfassung der Sicherheitsprinzipien}{section.3.3}% 30
+\BOOKMARK [1][-]{section.3.4}{\304hnliche Produkte auf dem Markt}{chapter.3}% 31
+\BOOKMARK [2][-]{subsection.3.4.1}{OAuth-Provider}{section.3.4}% 32
+\BOOKMARK [2][-]{subsection.3.4.2}{playbuzz.com}{section.3.4}% 33
+\BOOKMARK [2][-]{subsection.3.4.3}{WebSMS.com Zwei-Faktor-Authentifizierung}{section.3.4}% 34
+\BOOKMARK [2][-]{subsection.3.4.4}{SuisseID}{section.3.4}% 35
+\BOOKMARK [1][-]{section.3.5}{Fazit}{chapter.3}% 36
 \BOOKMARK [1][-]{section.3.6}{Authetentifizierungskomponenten}{chapter.3}% 37
 \BOOKMARK [2][-]{subsection.3.6.1}{Cookie}{section.3.6}% 38
 \BOOKMARK [2][-]{subsection.3.6.2}{Flash-Cookies}{section.3.6}% 39
@@ -51,103 +51,108 @@
 \BOOKMARK [2][-]{subsection.3.6.14}{Automatisierungsm\366glichkeit}{section.3.6}% 51
 \BOOKMARK [2][-]{subsection.3.6.15}{Browser Fingerprints}{section.3.6}% 52
 \BOOKMARK [0][-]{chapter.4}{Anforderungen}{}% 53
-\BOOKMARK [1][-]{section.4.1}{Use-Cases}{chapter.4}% 54
-\BOOKMARK [1][-]{section.4.2}{Akteure}{chapter.4}% 55
-\BOOKMARK [2][-]{subsection.4.2.1}{Diagramm}{section.4.2}% 56
-\BOOKMARK [1][-]{section.4.3}{Anforderungen}{chapter.4}% 57
-\BOOKMARK [2][-]{subsection.4.3.1}{Aufbau}{section.4.3}% 58
-\BOOKMARK [1][-]{section.4.4}{Funktionale Anforderungen}{chapter.4}% 59
-\BOOKMARK [2][-]{subsection.4.4.1}{FREQ-111 Programmierer Registration}{section.4.4}% 60
-\BOOKMARK [2][-]{subsection.4.4.2}{FREQ-112 Programmierer Login}{section.4.4}% 61
-\BOOKMARK [2][-]{subsection.4.4.3}{FREQ-113 Programmierer Passwort vergessen}{section.4.4}% 62
-\BOOKMARK [2][-]{subsection.4.4.4}{FREQ-114 Programmierer Passwort \344ndern}{section.4.4}% 63
-\BOOKMARK [2][-]{subsection.4.4.5}{FREQ-211 Konfigurieren einer neuen Social-Media Modul Authentifizierungsvorgang}{section.4.4}% 64
-\BOOKMARK [2][-]{subsection.4.4.6}{FREQ-214 Studien Ergebnis zur Konfiguration nutzten}{section.4.4}% 65
-\BOOKMARK [2][-]{subsection.4.4.7}{FREQ-214 Anpassen eines Authentifizierungsvorgangs}{section.4.4}% 66
-\BOOKMARK [2][-]{subsection.4.4.8}{FREQ-215 Authentifizerungs-Stufe ausw\344hlen}{section.4.4}% 67
-\BOOKMARK [2][-]{subsection.4.4.9}{FREQ-251 Generierung von Code f\374r einbinden in vorhandenes System}{section.4.4}% 68
-\BOOKMARK [2][-]{subsection.4.4.10}{FREQ-311 Authentifizieren}{section.4.4}% 69
-\BOOKMARK [2][-]{subsection.4.4.11}{FREQ-411 Report generieren}{section.4.4}% 70
-\BOOKMARK [1][-]{section.4.5}{Nicht Funktionale Anforderungen}{chapter.4}% 71
-\BOOKMARK [2][-]{subsection.4.5.1}{NFREQ-110 Betriebsystemunabh\344ngigkeit}{section.4.5}% 72
-\BOOKMARK [2][-]{subsection.4.5.2}{NFREQ-115 Wartbarkeit}{section.4.5}% 73
-\BOOKMARK [2][-]{subsection.4.5.3}{NFREQ-120 Einfache Integration}{section.4.5}% 74
-\BOOKMARK [2][-]{subsection.4.5.4}{NFREQ-122 Einfache und verst\344ndliche visuelle Konfiguration}{section.4.5}% 75
-\BOOKMARK [2][-]{subsection.4.5.5}{NFREQ-130 Performance}{section.4.5}% 76
-\BOOKMARK [2][-]{subsection.4.5.6}{NFREQ-135 Hohe Verf\374gbarkeit}{section.4.5}% 77
-\BOOKMARK [2][-]{subsection.4.5.7}{NFREQ-210 Programmirer kann aus Breite von verschiedenen Sicherheitsstufen ausw\344hlen}{section.4.5}% 78
-\BOOKMARK [2][-]{subsection.4.5.8}{NFREQ-212 Die verwendeten Sicherheitsstufen sind in der Schweiz verbreitet}{section.4.5}% 79
-\BOOKMARK [1][-]{section.4.6}{Risiken}{chapter.4}% 80
-\BOOKMARK [2][-]{subsection.4.6.1}{R-01 Akzeptanz}{section.4.6}% 81
-\BOOKMARK [2][-]{subsection.4.6.2}{R-02 Kosten}{section.4.6}% 82
-\BOOKMARK [2][-]{subsection.4.6.3}{R-03 \334berkomplexit\344t}{section.4.6}% 83
-\BOOKMARK [2][-]{subsection.4.6.4}{R-04 Systemumfeld\344nderungen}{section.4.6}% 84
-\BOOKMARK [2][-]{subsection.4.6.5}{R-05 Schlechte/Unzureichende Framework}{section.4.6}% 85
-\BOOKMARK [2][-]{subsection.4.6.6}{R-06 Termineinhaltung}{section.4.6}% 86
-\BOOKMARK [2][-]{subsection.4.6.7}{R-07 Auslastung}{section.4.6}% 87
-\BOOKMARK [2][-]{subsection.4.6.8}{Risikomatrix}{section.4.6}% 88
-\BOOKMARK [2][-]{subsection.4.6.9}{Massnahmen}{section.4.6}% 89
-\BOOKMARK [0][-]{chapter.5}{Konzept}{}% 90
-\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 91
-\BOOKMARK [1][-]{section.5.2}{Software Design}{chapter.5}% 92
-\BOOKMARK [2][-]{subsection.5.2.1}{Webservice}{section.5.2}% 93
-\BOOKMARK [2][-]{subsection.5.2.2}{}{section.5.2}% 94
-\BOOKMARK [1][-]{section.5.3}{Genereller Ablauf Authentifizierung}{chapter.5}% 95
-\BOOKMARK [1][-]{section.5.4}{Dom\344nenmodel Differenziert}{chapter.5}% 96
-\BOOKMARK [1][-]{section.5.5}{Datenbankdesign}{chapter.5}% 97
-\BOOKMARK [2][-]{subsection.5.5.1}{Entity-Framework}{section.5.5}% 98
-\BOOKMARK [1][-]{section.5.6}{Integration der Schnittstelle}{chapter.5}% 99
-\BOOKMARK [2][-]{subsection.5.6.1}{Bestehende Systeme f\374r Votings, Wettbewerbe und Quizes}{section.5.6}% 100
-\BOOKMARK [2][-]{subsection.5.6.2}{Wordpress PlugIn Hook}{section.5.6}% 101
-\BOOKMARK [2][-]{subsection.5.6.3}{Parallellen im \344hnliches Anwendungsfeld}{section.5.6}% 102
-\BOOKMARK [2][-]{subsection.5.6.4}{Integrationsentscheid}{section.5.6}% 103
-\BOOKMARK [2][-]{subsection.5.6.5}{Integrationskonzept}{section.5.6}% 104
-\BOOKMARK [2][-]{subsection.5.6.6}{Integrationsparameter}{section.5.6}% 105
-\BOOKMARK [1][-]{section.5.7}{Sicherheitstufen integrieren}{chapter.5}% 106
-\BOOKMARK [2][-]{subsection.5.7.1}{Sicherheitstufen bewerten}{section.5.7}% 107
-\BOOKMARK [2][-]{subsection.5.7.2}{Auswahl der zu integrierenden Sicherheitsstufen}{section.5.7}% 108
-\BOOKMARK [1][-]{section.5.8}{Modularit\344t und Erweiterbarkeit}{chapter.5}% 109
-\BOOKMARK [2][-]{subsection.5.8.1}{Design by Contract}{section.5.8}% 110
-\BOOKMARK [2][-]{subsection.5.8.2}{MEF - Managed Extensibility Framework}{section.5.8}% 111
-\BOOKMARK [2][-]{subsection.5.8.3}{Entscheidung}{section.5.8}% 112
-\BOOKMARK [2][-]{subsection.5.8.4}{Sicherheitsstufen Libaray-\334bersicht anhand MEF}{section.5.8}% 113
-\BOOKMARK [1][-]{section.5.9}{Mockup}{chapter.5}% 114
-\BOOKMARK [2][-]{subsection.5.9.1}{Konfigurator Template}{section.5.9}% 115
-\BOOKMARK [2][-]{subsection.5.9.2}{Hinweis zur Zusammenarbeit mit dem Auftraggeber}{section.5.9}% 116
-\BOOKMARK [1][-]{section.5.10}{Wahl des Applikation Hosters}{chapter.5}% 117
-\BOOKMARK [2][-]{subsection.5.10.1}{Asp.net Shared Hosting}{section.5.10}% 118
-\BOOKMARK [2][-]{subsection.5.10.2}{Cloud Hosting}{section.5.10}% 119
-\BOOKMARK [2][-]{subsection.5.10.3}{Entscheidung}{section.5.10}% 120
-\BOOKMARK [1][-]{section.5.11}{Authentifizierungsm\366glichkeiten}{chapter.5}% 121
-\BOOKMARK [1][-]{section.5.12}{Dom\344nenmodell}{chapter.5}% 122
-\BOOKMARK [2][-]{subsection.5.12.1}{Entit\344ten}{section.5.12}% 123
-\BOOKMARK [1][-]{section.5.13}{Systemarchitektur}{chapter.5}% 124
-\BOOKMARK [0][-]{chapter.6}{Studie}{}% 125
-\BOOKMARK [1][-]{section.6.1}{Art der Studie}{chapter.6}% 126
-\BOOKMARK [2][-]{subsection.6.1.1}{Vor - und Nachteile schriftlicher Fragebogen}{section.6.1}% 127
-\BOOKMARK [2][-]{subsection.6.1.2}{Fazit}{section.6.1}% 128
-\BOOKMARK [1][-]{section.6.2}{Hauptziel der Studie}{chapter.6}% 129
-\BOOKMARK [1][-]{section.6.3}{Aufbau Gesamtkonzept}{chapter.6}% 130
-\BOOKMARK [2][-]{subsection.6.3.1}{Einleitung}{section.6.3}% 131
-\BOOKMARK [1][-]{section.6.4}{Hauptteil/Fragen}{chapter.6}% 132
-\BOOKMARK [2][-]{subsection.6.4.1}{Erste Frage Theorie}{section.6.4}% 133
-\BOOKMARK [2][-]{subsection.6.4.2}{Erste Frage}{section.6.4}% 134
-\BOOKMARK [2][-]{subsection.6.4.3}{Theorie Fragen}{section.6.4}% 135
-\BOOKMARK [1][-]{section.6.5}{Abschluss}{chapter.6}% 136
-\BOOKMARK [1][-]{section.6.6}{Verst\344ndlichkeit}{chapter.6}% 137
-\BOOKMARK [1][-]{section.6.7}{Umsetzung Gesamtkonzept}{chapter.6}% 138
-\BOOKMARK [0][-]{chapter.7}{ProofOfConcept}{}% 139
-\BOOKMARK [1][-]{section.7.1}{Techologien}{chapter.7}% 140
-\BOOKMARK [2][-]{subsection.7.1.1}{C-Sharp}{section.7.1}% 141
-\BOOKMARK [2][-]{subsection.7.1.2}{ASP.net Web API 2 / ASP.net MVC Framework}{section.7.1}% 142
-\BOOKMARK [2][-]{subsection.7.1.3}{Entity Framework}{section.7.1}% 143
-\BOOKMARK [2][-]{subsection.7.1.4}{Grunt}{section.7.1}% 144
-\BOOKMARK [2][-]{subsection.7.1.5}{AngularJS}{section.7.1}% 145
-\BOOKMARK [2][-]{subsection.7.1.6}{JSON}{section.7.1}% 146
-\BOOKMARK [1][-]{section.7.2}{Authentifizierungs-App mit einem einer Datei pro Technoligie}{chapter.7}% 147
-\BOOKMARK [0][-]{chapter.8}{Fazit}{}% 148
-\BOOKMARK [0][-]{appendix.A}{Glossar}{}% 149
-\BOOKMARK [0][-]{appendix.B}{Verzeichnisse}{}% 150
-\BOOKMARK [1][-]{section.B.1}{Abbildungsverzeichnis}{appendix.B}% 151
-\BOOKMARK [1][-]{section.B.2}{Quellenverzeichnis}{appendix.B}% 152
-\BOOKMARK [1][-]{section.B.3}{Tabellenverzeichnis}{appendix.B}% 153
+\BOOKMARK [1][-]{section.4.1}{Akteure}{chapter.4}% 54
+\BOOKMARK [1][-]{section.4.2}{Use-Cases}{chapter.4}% 55
+\BOOKMARK [2][-]{subsection.4.2.1}{Use-Cases Diagramm}{section.4.2}% 56
+\BOOKMARK [2][-]{subsection.4.2.2}{Use-Cases Beschreibung}{section.4.2}% 57
+\BOOKMARK [1][-]{section.4.3}{Anforderungen}{chapter.4}% 58
+\BOOKMARK [2][-]{subsection.4.3.1}{Aufbau}{section.4.3}% 59
+\BOOKMARK [1][-]{section.4.4}{Funktionale Anforderungen}{chapter.4}% 60
+\BOOKMARK [2][-]{subsection.4.4.1}{FREQ-111 Programmierer Registration}{section.4.4}% 61
+\BOOKMARK [2][-]{subsection.4.4.2}{FREQ-112 Programmierer Login}{section.4.4}% 62
+\BOOKMARK [2][-]{subsection.4.4.3}{FREQ-113 Programmierer Passwort vergessen}{section.4.4}% 63
+\BOOKMARK [2][-]{subsection.4.4.4}{FREQ-114 Programmierer Passwort \344ndern}{section.4.4}% 64
+\BOOKMARK [2][-]{subsection.4.4.5}{FREQ-211 Konfigurieren einer neuen Social-Media Modul Authentifizierungsvorgang}{section.4.4}% 65
+\BOOKMARK [2][-]{subsection.4.4.6}{FREQ-214 Studien Ergebnis zur Konfiguration nutzten}{section.4.4}% 66
+\BOOKMARK [2][-]{subsection.4.4.7}{FREQ-214 Anpassen eines Authentifizierungsvorgangs}{section.4.4}% 67
+\BOOKMARK [2][-]{subsection.4.4.8}{FREQ-215 Authentifizerungs-Stufe ausw\344hlen}{section.4.4}% 68
+\BOOKMARK [2][-]{subsection.4.4.9}{FREQ-251 Generierung von Code f\374r einbinden in vorhandenes System}{section.4.4}% 69
+\BOOKMARK [2][-]{subsection.4.4.10}{FREQ-311 Authentifizieren}{section.4.4}% 70
+\BOOKMARK [2][-]{subsection.4.4.11}{FREQ-411 Report generieren}{section.4.4}% 71
+\BOOKMARK [1][-]{section.4.5}{Nicht Funktionale Anforderungen}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.5.1}{NFREQ-110 Betriebsystemunabh\344ngigkeit}{section.4.5}% 73
+\BOOKMARK [2][-]{subsection.4.5.2}{NFREQ-115 Wartbarkeit}{section.4.5}% 74
+\BOOKMARK [2][-]{subsection.4.5.3}{NFREQ-120 Einfache Integration}{section.4.5}% 75
+\BOOKMARK [2][-]{subsection.4.5.4}{NFREQ-122 Einfache und verst\344ndliche visuelle Konfiguration}{section.4.5}% 76
+\BOOKMARK [2][-]{subsection.4.5.5}{NFREQ-130 Performance}{section.4.5}% 77
+\BOOKMARK [2][-]{subsection.4.5.6}{NFREQ-132 Skalierbar}{section.4.5}% 78
+\BOOKMARK [2][-]{subsection.4.5.7}{NFREQ-135 Hohe Verf\374gbarkeit}{section.4.5}% 79
+\BOOKMARK [2][-]{subsection.4.5.8}{NFREQ-210 Programmirer kann aus Breite von verschiedenen Sicherheitsstufen ausw\344hlen}{section.4.5}% 80
+\BOOKMARK [2][-]{subsection.4.5.9}{NFREQ-212 Die verwendeten Sicherheitsstufen sind in der Schweiz verbreitet}{section.4.5}% 81
+\BOOKMARK [1][-]{section.4.6}{Risiken}{chapter.4}% 82
+\BOOKMARK [2][-]{subsection.4.6.1}{R-01 Akzeptanz}{section.4.6}% 83
+\BOOKMARK [2][-]{subsection.4.6.2}{R-02 Kosten}{section.4.6}% 84
+\BOOKMARK [2][-]{subsection.4.6.3}{R-03 \334berkomplexit\344t}{section.4.6}% 85
+\BOOKMARK [2][-]{subsection.4.6.4}{R-04 Systemumfeld\344nderungen}{section.4.6}% 86
+\BOOKMARK [2][-]{subsection.4.6.5}{R-05 Schlechte/Unzureichende Framework}{section.4.6}% 87
+\BOOKMARK [2][-]{subsection.4.6.6}{R-06 Termineinhaltung}{section.4.6}% 88
+\BOOKMARK [2][-]{subsection.4.6.7}{R-07 Auslastung}{section.4.6}% 89
+\BOOKMARK [2][-]{subsection.4.6.8}{Risikomatrix}{section.4.6}% 90
+\BOOKMARK [2][-]{subsection.4.6.9}{Massnahmen}{section.4.6}% 91
+\BOOKMARK [0][-]{chapter.5}{Konzept}{}% 92
+\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 93
+\BOOKMARK [1][-]{section.5.2}{Software Design}{chapter.5}% 94
+\BOOKMARK [2][-]{subsection.5.2.1}{Webservice}{section.5.2}% 95
+\BOOKMARK [2][-]{subsection.5.2.2}{}{section.5.2}% 96
+\BOOKMARK [1][-]{section.5.3}{Genereller Ablauf Authentifizierung}{chapter.5}% 97
+\BOOKMARK [1][-]{section.5.4}{Dom\344nenmodel Differenziert}{chapter.5}% 98
+\BOOKMARK [1][-]{section.5.5}{Datenbankdesign}{chapter.5}% 99
+\BOOKMARK [2][-]{subsection.5.5.1}{Entity-Framework}{section.5.5}% 100
+\BOOKMARK [2][-]{subsection.5.5.2}{ERD}{section.5.5}% 101
+\BOOKMARK [1][-]{section.5.6}{Integration der Schnittstelle}{chapter.5}% 102
+\BOOKMARK [2][-]{subsection.5.6.1}{Bestehende Systeme f\374r Votings, Wettbewerbe und Quizes}{section.5.6}% 103
+\BOOKMARK [2][-]{subsection.5.6.2}{Wordpress PlugIn Hook}{section.5.6}% 104
+\BOOKMARK [2][-]{subsection.5.6.3}{Parallellen im \344hnliches Anwendungsfeld}{section.5.6}% 105
+\BOOKMARK [2][-]{subsection.5.6.4}{Integrationsentscheid}{section.5.6}% 106
+\BOOKMARK [2][-]{subsection.5.6.5}{Integrationskonzept}{section.5.6}% 107
+\BOOKMARK [2][-]{subsection.5.6.6}{Integrationsparameter}{section.5.6}% 108
+\BOOKMARK [1][-]{section.5.7}{Sicherheitstufen integrieren}{chapter.5}% 109
+\BOOKMARK [2][-]{subsection.5.7.1}{Sicherheitstufen bewerten}{section.5.7}% 110
+\BOOKMARK [2][-]{subsection.5.7.2}{Auswahl der zu integrierenden Sicherheitsstufen}{section.5.7}% 111
+\BOOKMARK [1][-]{section.5.8}{Modularit\344t und Erweiterbarkeit}{chapter.5}% 112
+\BOOKMARK [2][-]{subsection.5.8.1}{Design by Contract}{section.5.8}% 113
+\BOOKMARK [2][-]{subsection.5.8.2}{MEF - Managed Extensibility Framework}{section.5.8}% 114
+\BOOKMARK [2][-]{subsection.5.8.3}{Entscheidung}{section.5.8}% 115
+\BOOKMARK [2][-]{subsection.5.8.4}{Sicherheitsstufen Libaray-\334bersicht anhand MEF}{section.5.8}% 116
+\BOOKMARK [1][-]{section.5.9}{Mockup}{chapter.5}% 117
+\BOOKMARK [2][-]{subsection.5.9.1}{Konfigurator Template}{section.5.9}% 118
+\BOOKMARK [2][-]{subsection.5.9.2}{Hinweis zur Zusammenarbeit mit dem Auftraggeber}{section.5.9}% 119
+\BOOKMARK [1][-]{section.5.10}{Wahl des Applikation Hosters}{chapter.5}% 120
+\BOOKMARK [2][-]{subsection.5.10.1}{Asp.net Shared Hosting}{section.5.10}% 121
+\BOOKMARK [2][-]{subsection.5.10.2}{Cloud Hosting}{section.5.10}% 122
+\BOOKMARK [2][-]{subsection.5.10.3}{Entscheidung}{section.5.10}% 123
+\BOOKMARK [1][-]{section.5.11}{Authentifizierungsm\366glichkeiten}{chapter.5}% 124
+\BOOKMARK [1][-]{section.5.12}{Dom\344nenmodell}{chapter.5}% 125
+\BOOKMARK [2][-]{subsection.5.12.1}{Entit\344ten}{section.5.12}% 126
+\BOOKMARK [1][-]{section.5.13}{Systemarchitektur}{chapter.5}% 127
+\BOOKMARK [0][-]{chapter.6}{Proof Of Concept}{}% 128
+\BOOKMARK [1][-]{section.6.1}{Techologien}{chapter.6}% 129
+\BOOKMARK [2][-]{subsection.6.1.1}{C-Sharp}{section.6.1}% 130
+\BOOKMARK [2][-]{subsection.6.1.2}{ASP.net Web API 2 / ASP.net MVC Framework}{section.6.1}% 131
+\BOOKMARK [2][-]{subsection.6.1.3}{Entity Framework}{section.6.1}% 132
+\BOOKMARK [2][-]{subsection.6.1.4}{Grunt}{section.6.1}% 133
+\BOOKMARK [2][-]{subsection.6.1.5}{AngularJS}{section.6.1}% 134
+\BOOKMARK [2][-]{subsection.6.1.6}{JSON}{section.6.1}% 135
+\BOOKMARK [1][-]{section.6.2}{Sicherheitsstufe}{chapter.6}% 136
+\BOOKMARK [2][-]{subsection.6.2.1}{Plugin Entwicklung}{section.6.2}% 137
+\BOOKMARK [2][-]{subsection.6.2.2}{Interface - Vertrag mit den Sicherheitsstufen}{section.6.2}% 138
+\BOOKMARK [0][-]{chapter.7}{Studie}{}% 139
+\BOOKMARK [1][-]{section.7.1}{Art der Studie}{chapter.7}% 140
+\BOOKMARK [2][-]{subsection.7.1.1}{Vor - und Nachteile schriftlicher Fragebogen}{section.7.1}% 141
+\BOOKMARK [2][-]{subsection.7.1.2}{Fazit}{section.7.1}% 142
+\BOOKMARK [1][-]{section.7.2}{Hauptziel der Studie}{chapter.7}% 143
+\BOOKMARK [1][-]{section.7.3}{Aufbau Gesamtkonzept}{chapter.7}% 144
+\BOOKMARK [2][-]{subsection.7.3.1}{Einleitung}{section.7.3}% 145
+\BOOKMARK [1][-]{section.7.4}{Hauptteil/Fragen}{chapter.7}% 146
+\BOOKMARK [2][-]{subsection.7.4.1}{Erste Frage Theorie}{section.7.4}% 147
+\BOOKMARK [2][-]{subsection.7.4.2}{Erste Frage}{section.7.4}% 148
+\BOOKMARK [2][-]{subsection.7.4.3}{Theorie Fragen}{section.7.4}% 149
+\BOOKMARK [1][-]{section.7.5}{Abschluss}{chapter.7}% 150
+\BOOKMARK [1][-]{section.7.6}{Verst\344ndlichkeit}{chapter.7}% 151
+\BOOKMARK [1][-]{section.7.7}{Umsetzung Gesamtkonzept}{chapter.7}% 152
+\BOOKMARK [0][-]{chapter.8}{Fazit}{}% 153
+\BOOKMARK [0][-]{appendix.A}{Glossar}{}% 154
+\BOOKMARK [0][-]{appendix.B}{Verzeichnisse}{}% 155
+\BOOKMARK [1][-]{section.B.1}{Abbildungsverzeichnis}{appendix.B}% 156
+\BOOKMARK [1][-]{section.B.2}{Quellenverzeichnis}{appendix.B}% 157
+\BOOKMARK [1][-]{section.B.3}{Tabellenverzeichnis}{appendix.B}% 158
