@@ -11,18 +11,18 @@ Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
 OAuth ist ein Protokoll. Es erlaubt sichere API-Autorisierungen.
 
 ####Das Bedürfnis nach OAuth
-2006 implementierte Blaine Cook OpenID für Twitter. Ma.gnolia erhielt dabei ein Dashboard, welches sich durch OpenID autorisieren liess. Deshalb suchten die Entwickler von Ma.gnolia und Blaine Cook eine Möglichkeit, OpenID auch für die Verwendung von APIs zu gebrauchen. Sie diskutierten verschiedene Implementierungen und stellten fest, dass es keinen offenen Standart für API-Access Delegation gab. So fingen sie an, einen Standard zu entwickeln. 2007 entstand daraus eine Google Group. Am 3. October 2007 war dann der OAuth Core 1.0 bereits veröffentlicht worden.
+2006 implementiere Blaine Cook OpenID für Twitter. Ma.gnolia erhielt dabei ein Dashboard welches sich durch OpenID autorisieren lies. Deshalb suchten die Entwickler von Ma.gnolia und Blaine Cook eine Möglichkeit OpenID auch für die Verwendung von APIs zu gebrauchen. Sie diskutierten Implementierungen und stellten fest, dass es keinen offenen Standart für API-Access Delegation gab. So fingen sie an den Standard zu entwickeln. 2007 entstand daraus eine Google Group. Am 3. October 2007 war dann der OAuth Core 1.0 bereits released worden.
 
 ####Funktionalität von OAuth
 Ein Programm/API (Consumer) stellt über das OAuth-Protokoll einem Endbenutzer(User) Zugriff (Autorisierung) auf seine Daten/Funktionalitäten zur Verfügung. Dieser Zugriff wird von einem anderen Programm (Service) gemanagt.
-Das Konzept ist nicht generell neu. OAuth ist ähnlich zu Google AuthSub, aol OpenAuth, Yahoo BBAuth, Upcoming api, Flickr api, Amazon Web Services api. OAuth studierte die existierenden Protokolle und standardisierte und kombinierte die existierenden industriellen Protokolle. Der wichtigste Unterschied zu den existierenden Protokollen ist, dass OAuth sowohl offen ist als es auch geschafft hat, genügend Einsatzgebiete zu finden, um als Standard zu gelten.
-Jeden Tag entstehen neue Webseiten, welche neue Funktionalitäten und Services offerieren und dabei Funktionalitäten von anderen Webseiten brauchen. OAuth stellt dem Programmierer einerseits eine standardisierte Implementierung zur Verfügung. Anderseites erhält der Endbenutzer dank dieses Protokolls die Möglichkeit, Teile seiner Funktionalität oder Daten bei einem anderen Anbieter zur Verfügung zu stellen. Bei Facebook OAuth kann der Endbenutzer zum Beispiel seine Posts zur Verfügung stellen, nicht aber seine Freunde bekannt geben.
+Das Konzept ist nicht generell neu. OAuth ist ähnlich zu Google AuthSub, aol OpenAuth, Yahoo BBAuth, Upcoming api, Flickr api, Amazon Web Services api. OAuth studierte die existierenden Protokolle und standardisiert und kombinierte die existierende industriellen Protokolle. Der wichtigste Unterschied zu den existierenden Protokollen ist, das OAuth sowohl offen ist und es geschafft hat genügend Einsatzgebiete zu finden um als Standard zu gelten.
+Jeden Tag entstehen neue Webseite welche neue Funktionalitäten und Services offerieren und dabei Funktionalitäten von anderen Webseiten brauchen. OAuth stellt dem Programmierer einerseits eine standardisierte Implementierung zur Verfügung. Anderseites erhält der Endbenutzer dank dieses Protokolls die Möglichkeit Teile seiner Funktionalität/Daten bei einem anderen Anbieter zur Verfügung zu stellen. Zum Beispiel bei Facebook OAuth kann der Endbenutzer seine Posts zur Verfügung stellen nicht aber seine Freunde bekannt geben.
 
-Dank der weiten Verbreitung gibt es nun in allen bekannten Programmiersprachen eine Implementierung, sowohl von Client wie auch vom Server. Weitere Infos dazu unter oauth.net[1]
+Dank der weiten Verbreitung gibt es nun in allen bekannten Programmiersprachen eine Implementierung sowohl von Client wie auch vom Server. Weitere Infos dazu unter oauth.net[1]
 
 [1]: http://oauth.net/2/
 
-Die grössten [OAuth]-Provider wie Google, Facebook und Twitter erziehlen eine weite Verbreitung weltweit:
+Die grössten [OAuth]-Provider wie Google, Facebook und Twitter erziehlen eine weiter Verbreitung weltweit:
 
 ![Aktive Nutzer Weltweit [^socialmediaweltweit]](images/excel-statistik/socialmedia-aktivenutzer.jpg)
 
@@ -31,29 +31,29 @@ Ganze *78%* [@goldbachsocial] der Schweizer Bevölkerung nutzten SocialMedia und
 ![Anzahl Schweizer Nutzer [^socialmediaschweiz]](images/excel-statistik/socialmedia-schweiz.jpg)
 
 
-[^socialmediaweltweit]: Die Statistik wurde basierend auf den Daten von SocialMedia-Institute [@smi]erstellt. Facebook- und Twitter-Daten sind am 5. November 2015 und die Google-Daten im 2014 erhoben worden.
+[^socialmediaweltweit]: Das Statistik wurde basierend auf den Daten von socialmedia-institute [@smi]erstellt. Facebook und Twitter Daten sind am 5. November 2015 und die Google Daten sind im 2014 erhoben worden.
 
-[^socialmediaschweiz]: Die Statistik wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben.
+[^socialmediaschweiz]: Das Statistik wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben.
 
 \newpage
 ####Vorteile
 Mindestes 78% der Schweizer Bevölkerung besitzt bereits einen OAuth Account. Das Protokoll ist ein etablierter Standard.
 
 ####Nachteile
-Mehrfachregistrierungen sind möglich. Jenach OAuth-Provider werden verschiedene Daten zur Verfügung gestellt. Pro OAuth Provider kann man sich registrieren. Ein Abgleich der verschiedenen OAuth Provider wird vom [OAuth]-Protokoll nicht zur Verfügung gestellt. Ein Teil der Bevölkerung müsste sich vor Nutzung noch registrieren. Die Implementierung ist trotz vielen Libraries nicht ohne tiefere Programmierkenntnisse möglich.
+Mehrfachregistrierungen sind möglich. Jenach OAuth-Provider werden verschiedene Daten zur Verfügung gestellt. Pro OAuth Provider kann man sich registrieren einen Abgleich der verschiedenen OAuth Provider wird vom [OAuth]-Protokoll nicht zur Verfügung gestellt. Ein Teil der Bevölkerung müsste sich vor Nutzung noch registrieren. Die Implementierung ist trotz vielen Libaries nicht ohne tiefere Programmierkenntnisse möglich.
 
 \newpage
 
 ###playbuzz.com
-Youtube von Google ist im Jahr 2015 mit Abstand die meist verbreiteste Videopublishing-Plattform[^statista]. Medienhäuser nutzen Youtube, um ihren Artikel einfach mit einem Video zu ergänzen. Neben der einfachen Integration profitieren die Medienhäuser von der zusätzlichen Verbreitung über youtube.com und der einfachen viralen Verbreitungsmöglichkeiten von youtube. PlayBuzz möchte das Youtube für Votings, Quiz und ähnlicher Embeded Content werden. Neben MTV, Focus, Time oder Bild verwendet seit Herbst 2015 auch ein grosses Medienhaus der Schweiz die Plattform. Tamedia erfasst neuerdings immer wieder auf 20minuten Votings und Umfragen mit PlayBuzz.
+Youtube von Google ist im Jahr 2015 mit Abstand die meist verbreiteste Videopublishing-Plattform[^statista]. Medienhäuser nutzen Youtube um einfach Ihren Artikel mit einem Video zu ergänzen. Neben der einfachen Integration profitieren die Medienhäuser von der zusätzlichen Verbreitung über youtube.com und der einfachen viralen Verbreitungsmöglichkeiten von youtube. PlayBuzz möchte das Youtube für Votings, Quiz und ähnlicher Embeded Content werden. Neben MTV, Focus, Time oder Bild verwendet seit Herbst 2015 auch ein grosses Medienhaus der Schweiz die Plattform. Tamedia erfasst neu immer wieder auf 20minuten Votings und Umfragen mit PlayBuzz.
 
-2012 wurde Playbuzz von Shaul Olmert (Sohn des Premie Minster von Israel Ehuad Olmert) und Tom Pachys ins Leben gerufen. Der offizielle Launch war im Dezember 2013. Im Juni 2014 wurde Playbuzz bereits das 1. Mal unter den Top 10 Facebook Shared Publishers aufgelistet. Im Juni 2014 konnte Playbuzz bereits 70 Millionen unique views aufweisen. Im September 2014 kamen sieben von den zehn Top Shares auf Facebook laut forbes.com von Playbuzz. Playbuzz setzt nach eigenen Angaben auf Content wie Votes und Quizes, welche gerne viral geteilt werden, und ermöglicht Endnutzer und Redaketeueren einfache Verwendung. [^t3nplaybuzz] [^playbuzz]
+2012 wurde Playbuzz von Shaul Olmert (Sohn des Premie Minster von Israel Ehuad Olmert) und Tom Pachys ins Leben gerufen. Der offizielle Launch war im Dezember 2013. Im Juni 2014 wurde Playbuzz bereits das 1. Mal unter den Top 10 Facebook Shared Publishers aufgelistet. Im Juni 2014 konnte Playbuzz bereits 70 millionen unique views aufweisen. Im September 2014 kamen 7 von den 10 Top Shares auf Facebook laut forbes.com von Playbuzz. Playbuzz setzt nach eigenen Angaben auf Content wie Votes und Quizes welcher gerne Viral geteilt wird und ermöglicht Endnutzer und Redaketeueren einfache Verwendung. [^t3nplaybuzz] [^playbuzz]
 
 ####Vorteile
-Playbuzz ist kostenlos und lässt sich einfach integrieren. Durch Verwendung von Playbuzz kann die Verbreitung des eigenen Inhalts gesteigert werden. Die Verwaltungsoberfläche und die Reports sind übersichtlich und einfach zu bedienen.
+Playbuzz ist kostenlos und lässt sich einfach integrieren. Durch Verwendung von Playbuzz kann die Verbreitung des eigenen Inhalts gesteigert werden. Die Verwaltungsoberfläche und Reports sind übersichtlich und einfach zu bedienen.
 
 ####Nachteile
-Der Verweis auf Playbuzz ist immer klar ersichtlich. Auch beim Posten auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die Möglichkeiten in Funktionalität und Design haben hingegen Grenzen. Individuelle Erweiterungen sind nicht einfach möglich. Bestehende Interaktivitäten oder Interaktivitäten, welche nicht von PlayBuzz erstellt werden, können nicht verwendet werden. Mehrfachteilnahmen waren möglich.
+Der Verweis auf Playbuzz ist immer klar ersichtlich. Auch beim Posten auf den SocialMedia-Kanälen ist die Herkunft von Playbuzz offensichtlich. Die Möglichkeiten in Funktionalität und Design haben Grenzen. Individuelle Erweiterungen sind nicht einfach möglich. Bestehende Interaktivitäten oder Interaktivitäten welche nicht von PlayBuzz erstellt werden können nicht verwendet werden. Mehrfachteilnahmen waren möglich.
 
 [^statista]: [@statista]
 [^t3nplaybuzz]: [@t3nplaybuzz] 
@@ -62,28 +62,28 @@ Der Verweis auf Playbuzz ist immer klar ersichtlich. Auch beim Posten auf den So
 \newpage
 
 ###WebSMS.com Zwei-Faktor-Authentifizierung
-WebSMS.com bittet eine Zwei-Faktor-Authentifizierung über SMS an. Der User gibt seine Mobilnummer in der Webmaske der Schnittstelle ein und erhält einen Code, welcher der User danach in der Webschnittstelle eingibt. Dadurch kann sichergestellt werden, dass der User zur eingegebenen Mobilenummer passt. Der Service kostet monatlich 20 CHF und weitere 0.08 CHF pro SMS. [^websmskosten]
+WebSMS.com bittet eine Zwei-Faktor-Authentifizierung über SMS an. Der User gibt seine Mobilnummer in der Webmaske der Schnittstelle ein und erhält einen Code welcher der User danach in der Webschnittstelle eingibt. Dadurch kann sichergestellt werden dass der User zur eingegebenen Mobilenummer passt. Der Service kostet monatlich 20 CHF und weitere 0.08 CHF pro SMS [^websmskosten]
 
-Die Stärke und Sicherheit dieses Services ist direkt mit dem Umgang von Mobilenummern/SIM-Karten und dessen Authentifizierung verbunden.
+Die Stärke und Sicherheit dieses Service ist direkt mit mit dem Umgang von Mobilenummern/SIM-Karten und dessen Authentifizierung verbunden.
 
-Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummern gewährleistet. Die Mobilefunkanbieter schränken die Anzahl SIM-Karten auf maximal fünf pro Person ein. Dieses Maximum konnte aber auf den Webseiten der Anbieter nicht direkt gefunden werden. Daher galt es den Wert zu untersuchen und mögliche Abweichungen ausfindig zu machen.
+Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hinterlegt werden.[^uvek] Dadurch ist eine eindeutige Authentifizierung über Mobilennummer gewährleistet. Die Mobilefunkanbieter schrenken die Anzahl SIM-Karten auf maximal 5 pro Person ein. Dieses Maximum konnte aber auf den Webseiten der Anbieter nicht direkt gefunden werden. Daher galt es den Wert zu untersuchen und mögliche abweichungen ausfindig zu machen.
 
 ####Swisscom
-Die Swisscom hat kein öffentlich zugängigliches Dokument, welches die maximale Anzahl SIM-Karten pro Person beschreibt. Mündlich durch das Verkaufspersonal des Swisscom-Shops Zürich HB im Dezember 2015 und im Chatprotokoll [^swisscom_chat] wurde der Wert bestätigt. Es wurde darauf hingewiesen, dass kein Dokument mit dieser Zahl vorhanden ist.
+Die Swisscom hat kein öffentlich zugängigliches Dokument welches die maximale Anzahl SIM-Karten pro Person beschreibt. Mündlich durch das Verkaufspersonal des Swisscom-Shops Zürich HB Dezember 2015 und im Chatprotokoll [^swisscom_chat] wurde der Wert bestätigt. Es  hingewiesen, dass nicht ein Dokument mit dieser Zahl vorhanden ist.
 
 #####Selbstversuch
-Es wurde versucht, bei zwei unabhängigen Handyanbietern mehr als fünf Swisscom-Perpaid-Abos abzuschliessen. Dabei wurde von Thomas Bachmann über vier Wochen verteilt bei dem Anbieter Interdiscount im Manor Winterthur bei verschiedenem Kaufspersonal ein Prepaidhandy eingekauft. Beim Einkauf des sechsten Handys wurde der Verkauf von der Kasse abgelehnt. Die Fehlermeldung der Kasse beinhaltete den Hinweis, dass die Nummer nicht erneut auf den Kunden registriert werden könne, da er schon fünf SIM Karten bei der Swisscom besitze.
-Christian Bachmann kaufte über zwei Wochen verteilt bei dem Anbieter Migros Electronics in der Migros Limmat, Interdiscount im Manor Winterthur, Interdiscount im Zürich HB bei verschiedenem Kaufspersonal ein Swisscom Prepaidhandy. Beim Einkauf des sechsten Handys wurde der Verkauf von der Kasse abgelehnt. Die Nummer liess sich nicht erneut auf den Kunden registrieren, da er schon fünf SIM Karten bei der Swisscom besessem hat .
+Es wurde versucht bei zwei unabhängigen Handyanbieter mehr als 5 Swisscom-Perpaid-Abos abzuschliessen. Dabei wurden von Thomas Bachmann über 4 Wochen verteilt bei dem Anbieter Interdiscount im Manor Winterthur bei verschiedenem Kaufspersonal ein Prepaidhandy eingekauft. Beim Einkauf des 6. Handys wurde der Verkauf von der Kasse abgelehnt. Die Fehlermeldung der Kasse beinhaltete den Hinweis, dass sich die Nummer nicht erneut auf den Kunden registrieren lassen kann, da er schon 5 SIM Karten bei der Swisscom besitzt.
+Christian Bachmann kaufte über 2 Wochen verteilt bei dem Anbieter Migros Electronics in der Migros Limmat, Interdiscount im Manor Winterthur, Interdiscount im Zürich HB  bei verschiedenem Kaufspersonal ein Swisscom Prepaidhandy. Beim Einkauf des 6. Handys wurde der Verkauf von der Kasse abgelehnt. Die Nummer liess sich nicht erneut auf den Kunden registrieren, da er schon 5 SIM Karten bei der Swisscom besitzt.
 
 ####Sunrise
-Die Sunrise hat nach Rücksprache ein PDF mit Ihren Bestell- und Lieferbedingunge zugesendet.[^sunrise_lieferbedienungen] Die maximale Anzahl SIM-Karten ist in diesen Bestell- und Lieferbedingungen festgelegt. Auch die Sunrise hat das Maximum auf fünf pro Person festgelegt.
+Die Sunrise hat nach Rücksprache ein PDF mit Ihren Bestell- und Lieferbedingunge zugesendet.[^sunrise_lieferbedienungen] Die maximale Anzahl SIM-Karten ist in diesen Bestell- und Lieferbedingungen festgelegt. Auch die Sunrise hat das Maximum auf 5 pro Person festgelegt.
 
 ####SALT
-Bei der Firma SALT konnte mir ebenfalls kein Dokument mit der Kennzahl gegeben werden. SALT vergibt gemäss ihrer schriftlichen Auskunft [^salt_email] pro Person maximum drei SIM Karten.
+Bei der Die Firma SALT konnte mir ebenfalls kein Dokument mit der Kennzahl gegeben werden. SALT stellt vergibt ihrer schriftlichen Auskunft [^salt_email] pro Person maximum 3 SIM Karten.
 
 
 ####Vorteile
-Die mehrfache Registrierung ist auf maximal fünf beschränkt. Durch die Kosten für eine SIM-Karte/Mobilenummer wird der Wert zusätzlich gemindert. Bei Missbrauch kann der User eindeutig identifiziert werden. Eine Automatisierung ist nahezu unmöglich.
+Die mehrfache Registrierung ist auf maximal 5 beschränkt. Durch die Kosten für eine SIM-Karte/Mobilenummer wird der Wert zusätzlich gemindert. Bei Missbrauch kann der User eindeutig identifiziert werden. Eine Automatisierung ist nahe zu unmöglich.
 
 ####Nachteile
 Der Versand von SMS verursacht Kosten. Die Implementation bedarf hohes technisches Know-How.
@@ -97,17 +97,17 @@ Der Versand von SMS verursacht Kosten. Die Implementation bedarf hohes technisch
 
 ###SuisseID
 Die SuisseID schafft die rechtlichen und technischen Voraussetzungen für den elektronischen Geschäftsverkehr. Als digitaler Identitätsausweis im Internet bietet sie ihren Anwenderinnen und Anwendern eine sichere Authentifikation zu Web-Applikationen, eindeutige Identifikation für Internet-Dienste und digitales, rechtsgültiges Signieren von Dokumenten.
-Der Erwerb einer solchen SuisseID kostet den Endkunden eine beträchtliche Summe Geld. Der Anbieter der Authentifizierung erwarten keine grossen Kosten. Dadurch ist eine kleine Verbreitung für privaten Nutzen offensichtlich. Entwickler von Integrationen erhalten eine ganzes SDK und Kontaktmöglichkeiten.
+Der Erwerb so einer SuisseID kostet den Endkunden eine beträchtliche Summe Geld. Der Anbieter der Authentifizierung erwarten keine grossen Kosten. Dadurch ist eine kleine Verbreitung für privaten Nutzen offensichtlich. Entwickler von Integrationen erhalten eine ganzes SDK und Kontaktmöglichkeiten
 
 ####Vorteile
-Hohe Sicherheit durch sichere und eindeutige Authentifikation ist gewährleistet. Rechtliche Vorraussetzungen sind gegeben. Enwickler von Integrationen werden unterstützt.
+Hohe Sicherheit durch sichere und eindeutige Authentifikation. Rechtliche Vorraussetzungen sind gegeben. Enwickler von Integrationen werden unterstützt.
 
 ####Nachteile
-Kleine Verbreitung und hohe Kosten für den Enduser sind die Nachteile von SuisseID.
+Kleine Verbreitung und hohe kosten für den Enduser.
 
 
 ##Fazit
-Auf dem Markt sind verschiedene Anbieter, welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service, welcher es erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
+Auf dem Markt sind verschiedene Anbieter welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service welcher es erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
 
 ## Fachbegriffe
 Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel "[Glossar]".
@@ -118,13 +118,13 @@ In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, welche für 
 ###Authentifizierung
 Duden: Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
 
-Eine Person oder Objekt eindeutig zu **authentifizieren** bedeutet zu ermitteln, ob die- oder derjenige auch die Person ist, als welche sie oder er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenticate*, was auf Deutsch "sich als *echt erweisen, sich verbürgen, glaubwürdig sein*" bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiltelefonen häufig verbreitet. Die Möglichkeiten von verschiedenen Authentifizierungen ist nahe zu grenzenlos.
+Eine Person oder Objekt eindeutig zu **authentifizieren** bedeute zu ermitteln ob die oder derjenige auch der ist als welcher er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenicate*, was auf Deutsch sich als *echt erweisen, sich verbürgen, glaubwürdig sein* bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiletelefon häufig verbreitet. Die Möglichkeiten von verschiedenen Authentifizierung ist nahe zu grenzenlos.
 [^authentifizierungsdeforg]
 
 ###Autorisierung
 Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung [^duden]
 
-Wenn die [Authentifizierung] erfolgreich war, erteilt das System die Autorisierung. Dabei wird der Person oder dem Objekt erlaubt, bestimmte Aktionen/Zugriffe durchzuführen. Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist ebenfalls Bestandteil der Autorisierung.
+Wenn die [Authentifizierung] erfolgreich war erteilt das System die Autorisierung. Dabei wird der Person oder Objekt erlaubt bestimmte Aktionen/Zugriffe durchzuführen. Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist ebenfalls Bestandteil der Autorisierung.
 
 Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt zu sein. Die anschliessende Autorisierung erfolgt automatisch durch das System selbst. Im Zuge der Autorisierung werden dem Benutzer seine Zugriffsrechte zugewiesen.
 [@authentifizierungsdeforg]
@@ -142,42 +142,43 @@ Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwec
 
 \newpage
 ##Grundlegende Sicherheitsprinzipien
-In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt, auf denen eine Authentifizierungssoftware aufgebaut werden kann.
+In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt auf denen eine Authentifizierungssoftware aufgebaut werden kann.
 
 ###KISS
 **K**eep **I**t **S**tupid *and* **S**imple
 
-Ein verbreitetes Problem unter Softwareentwickern und Programmiern heute ist, dass dazu tendiert wird, Probleme zu kompliziert und verschachtelt zu lösen. Acht bis neun von zehn Entwickeln machen den Fehler, Probleme zu wenig auseinanderzubrechen und alles in einem grossen Programm zu lösen, anstatt es in kleinen Paketen verständlich zu programmieren.[^apachekiss]
+Ein verbreitetes Problem unter Software Engineers und Programmier heute ist, dass sie dazu tendiert wird, Probleme zu kompliziert und verschachtelt zu lösen. 8-9 von 10 Entwickeln machen den Fehler, Probleme zu wenig auseinander zu brechen und alles in einem grossen Programm zu lösen. Anstatt es in kleinen Paketen verständlich zu programmieren.[^apachekiss]
 
 
-Die folgenden Punkte listen die Vorteile für Softwareentwickler beim Verwenden von Kiss auf:
+Die folgenden Punkte listen die Vorteile für Software Entwickler bei verwenden von Kiss auf:
 
 - Mehr Probleme sollen schneller gelöst werden
-- Der Entwickler kann komplexe Probleme mit wenigen Zeilencodes lösen
+- Der Entwickler kann komplexe Probleme in wenigen Zeilen Code lösen
 - Die Codequalität steigt
-- Der Entwickler kann grössere Systeme erstellen und unterhalten
+- Der Entwickler kann grössere System erstellen und unterhalten
 - Der Code wird flexibler werden, einfach wieder zu verwenden und zu modifizieren
-- Die Zusammenarbeit in grösseren Entwicklerteams und Projekten wird vereinfacht, da der Code bei allen "stupid and simple" ist
+- Die Zusammenarbeit in grösseren Entwicklerteams und Projekten wird vereinfacht da der Code bei allen "stupid simple" ist
 
 
 ####KISS fördert die Sicherheit
-Die Begründung, warum KISS die Sicherheit fördert, liefert Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und dies wiederum setzt voraus, dass Designs einfach und klein sind. Designs müssen so beschaffen sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [^sicheresysteme_93]
+Die Begründung warum KISS die Sicherheit fördert, liefert Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und die wiederum setzt voraus, dass
+Designs einfach und klein sein sind. Designs müssen so beschaffen sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [^sicheresysteme_93]
 
 
 ###Default-is-deny
-Ob eine Person oder ein Programm Zugriff auf Daten und Funktionen hat, sollte nicht durch Verbote, sondern durch eine explizite Erlaubnis geregelt werden. Dies bedeutet, dass solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlicher ist es, dass viele Organisationen und Entwicklungsfirma nicht dieses Vorgehen verwenden. Zum Beispiel Filesysteme setzen auf Verbote anstatt auf explizite Erlaubnisse.[^sicheresysteme_94] [^defaultdeny]
+Ob eine Person oder Programm Zugriff auf Daten/Funktionen haben, sollte nicht durch Verbote sondern durch explizite Erlaubnis geregelt werden. Dies bedeutet solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlich ist wie viele Organisationen und Entwicklungsfirma nicht dieses vorgehen verwenden. z.B. Filesysteme setzten auf Verbote anstatt auf explizite Erlaubnise.[^sicheresysteme_94] [^defaultdeny]
 
 
 ###Open Design
-Abgeleitet von der Theorie der Kryptografie gilt Folgendes: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll eher nach dem Ansatz entworfen werden: Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch Sinn, das Softwaredesign geheimzuhalten, um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
+Abgeleitet von der Kryprotografie: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll nach dem Ansatz entworfen werden. Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch das Softwaredesign geheimzuhalten um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
 [^sicheresysteme_95]
 
 
 ###Zusammenfassung der Sicherheitsprinzipien
-Die wichtigsten Sicherheitsprinzipien lauten zusammengefasst wie folgt:
+Die wichtigsten Sicherheitsprinzipien zusammengefasst:
 
-* Die Software muss aus kleinen, isolierten Einheiten aufgebaut werden, deren externe
-Beziehungen am Interface deutlich werden. Damit werden sowohl praktische
+* Software muss aus kleinen, isolierten Einheiten aufgebaut werden, deren externe
+Beziehungen am Interface deutlich werden. Damit wird sowohl praktische
 Schadensreduzierung durch Isolation als auch eine schnelle und einfache Sicherheitsanalyse
 möglich.
 * Zugriffsentscheidungen dürfen nur auf der Basis expliziter, minimaler und
@@ -211,7 +212,7 @@ Cookies verursachen keine direkten Kosten
 
 ###Flash-Cookies
 Ein Flash-Cookie ist wie es der Name bereits vermuten lässt ein Cookie, dass an den Adobe-Flash Player gebunden ist. Da der der Flash-Player im Betriebsystem installiert wird, funktionieren die Flash-Cookies browserunabhängig. Die Bedienungen dieser Flash-Cookies werden von Adobe festgelegt und der Browser kann nicht direkt in das Handling eingreiffen. Auch hier wird die Speicherung clientseitige durchgeführt und kann diese Speicherung auch clientseitig manipuliert werden.
-Seit Steven Jobs mit Apple keinen Support für die mobilen Geräte in Aussicht stellte und auf die Probleme und Risiken hinwies verliert die Plattform gestärkt durch immer wieder auftretende Sicherheitsprobleme an User. So hat haben am 1. Januar noch knapp 10%[^flashussage] aller Webseitenbesucher den Flash-Player. 
+Seit Steven Jobs mit Apple keinen Support für die mobilen Geräte in Aussicht stellte und auf die Probleme und Risiken hinwies verliert die Plattform gestärkt durch immer wieder auftretende Sicherheitsprobleme an User. So hat haben am 1. Januar noch knapp 10%[^flashussage] aller Webseitenbesucher den Flash-Player.
 
 [^flashussage][@flashussage]
 

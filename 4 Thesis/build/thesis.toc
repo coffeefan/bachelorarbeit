@@ -110,7 +110,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit und Mehrfach Teilnahme}{23}{subsubsection*.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Kosten}{23}{subsubsection*.22}
+\contentsline {subsubsection}{Kosten}{24}{subsubsection*.22}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6.2}Flash-Cookies}{24}{subsection.3.6.2}
 \defcounter {refsection}{0}\relax 
@@ -122,7 +122,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.6.4}IP-Adresse}{24}{subsection.3.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mehrfach Teilnahme}{24}{subsubsection*.25}
+\contentsline {subsubsection}{Mehrfach Teilnahme}{25}{subsubsection*.25}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit}{25}{subsubsection*.26}
 \defcounter {refsection}{0}\relax 
@@ -154,7 +154,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Automatisierungsm\IeC {\"o}glichkeit}{27}{subsubsection*.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Mehrfach Teilnahme}{27}{subsubsection*.36}
+\contentsline {subsubsection}{Mehrfach Teilnahme}{28}{subsubsection*.36}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Kosten}{28}{subsubsection*.37}
 \defcounter {refsection}{0}\relax 
@@ -246,13 +246,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5.3}NFREQ-120 Einfache Integration}{41}{subsection.4.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.4}NFREQ-130 Performance}{41}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.4}NFREQ-122 Einfache und verst\IeC {\"a}ndliche visuelle Konfiguration}{41}{subsection.4.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.5}NFREQ-135 Hohe Verf\IeC {\"u}gbarkeit}{41}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.5}NFREQ-130 Performance}{41}{subsection.4.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.6}NFREQ-210 Programmirer kann aus Breite von verschiedenen Sicherheitsstufen ausw\IeC {\"a}hlen}{42}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.6}NFREQ-135 Hohe Verf\IeC {\"u}gbarkeit}{42}{subsection.4.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.7}NFREQ-212 Die verwendeten Sicherheitsstufen sind in der Schweiz verbreitet}{42}{subsection.4.5.7}
+\contentsline {subsection}{\numberline {4.5.7}NFREQ-210 Programmirer kann aus Breite von verschiedenen Sicherheitsstufen ausw\IeC {\"a}hlen}{42}{subsection.4.5.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.5.8}NFREQ-212 Die verwendeten Sicherheitsstufen sind in der Schweiz verbreitet}{42}{subsection.4.5.8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.6}Risiken}{43}{section.4.6}
 \defcounter {refsection}{0}\relax 
