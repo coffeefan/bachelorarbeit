@@ -11,6 +11,9 @@ __Github__
 Github ist ein Cloud basierter SourceCode Verwaltungsdienst für Git.
 [https://github.com](https://github.com)
 
+__CRUD-Operationen__
+CRUD steht für Create, Read, Update, Delete. Diese 4 Operationen sind die Grundlage für alle Interkationen mit der Datenbank.
+
 __Non-Response__
 Nichtbeantwortung einer oder mehrerer einzelner Fragen. Die Repräsentativität einer Befragung hängt stark ab von der Rücklaufquote, auch Response-Rate genannt.
 

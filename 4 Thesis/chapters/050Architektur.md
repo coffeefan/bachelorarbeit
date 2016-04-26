@@ -366,7 +366,7 @@ Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formular
 ![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
 
 
-
+###Authentifizierungs-Lightbox Template
 
 ![Aufbau Inhalt im Card-Design](images/mockups/Kundenimplementation-Desktop.png)
 
@@ -392,14 +392,31 @@ Die in [NFREQ-132] geforderte Skalierbarkeit, nutzungsabhängige Kosten, Freihei
 
 [^cloudservicech]: Stand 18. Dezember 2015
 
-
-##Authentifizierungsmöglichkeiten
-
+##Validierung von Feldeingaben
 
 
 
+##Testing
+Die gewählte Architektur sowie Dependency Injection vereinfachen das Testing.
+
+###Wie kann getestet werden?
+Der Authenifizierungsservice und die Sicherheitstufen können wie normale Web-Applikationen in MVC oder Web-API getestet werden. Jedes Sichrheitstufen-Plugin sollunabhängig gekapselt getestet werden. Um in Unit-Test keine Datenbank zu nutzen soll das Repository Pattern eingesetzt werden.
+
+###Was soll getestet werden?
+Grundsätzlich sollte die Logik, welche im Controller ist, getestet werden. Wird eine spezielle Logik ausserhalb der Controller verwendet, so soll auch diese getestet werden. 
 
 
+###Repository Pattern
+Wie im Kapitel[Testing] beschrieben, sollte eine Möglichkeit geschaffen werden Datenbanken losgelöst zu testen. Dafür wir das Repository-Pattern eingesetzt. Das Repository-Pattern sieht vor, dass jedes POCO-Objekt genau eine Schnittstelle hat, an denen es die CRUD-Operationen ausführen kann. Im Prinzip eine Schnittstelle, die auf alle Anfragen an die Datenbank eine passende Reaktion hat. Diese Schnittstelle oder der Punkt, an welchem Anliegen bearbeitet werden, ist das Repository. Für beinahe jedes Objekt, was persistiert wird.
+
+Definition des Repository-Patterns von Edward Hieatt and Rob Mee:
+"Vermitteler für den Zugriff auf Domänenobjekte zwischen den Domänen- und Daten-Mapping-Schichten mit Hilfe einer Collectionartigen Schnittstelle"
+
+Die Vorteile des Patterns sind zum einen die vereinfachten Unit-Tests. Man kann jedes Repositoryeinfach testen und so auf seine korrekte Funktionalität überprüfen. Weiter bieten Repositories eine zentrale Anlaufstelle für Datenbankoperationen. Eine gemeinsame Schnittstelle gegenüber den Datenhaltungs-Schichten. Zudem bietet es einen idealen Punkt, an dem man Mechanismen wie beispielsweise Caching implementieren kann.
+[^repository]
+
+
+[^repository]:[@repository]
 ##Domänenmodell
 ###Entitäten
 

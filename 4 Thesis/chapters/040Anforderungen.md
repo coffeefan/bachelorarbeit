@@ -314,7 +314,7 @@ __Techn. Risiko__       Mittel
 __Business Value__     	Sehr Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-411			Report generieren
+### FREQ-411			Report der Authentifizierungen generieren
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-41
@@ -373,6 +373,18 @@ __Business Value__     	Mittel
 __UC-Referenz__         UC-25, UC-21, UC22
 
 __Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach und verständlich optisch konfiguriert werden können
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-126			Einfache und verständliche Authentifizierung
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-31
+
+__Beschreibung__        Der User soll einfach und verständlich optisch konfiguriert werden können
 
 __Techn. Risiko__       Sehr hoch
 
