@@ -34,6 +34,26 @@
   \field{year}{2015}
 \endentry
 
+\entry{bosnjak}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bosnjak}{B.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Hogrefe Verlag}%
+  }
+  \strng{namehash}{BM1}
+  \strng{fullhash}{BM1}
+  \field{labelalpha}{Bos00}
+  \field{sortinit}{B}
+  \field{isbn}{978-3801712266}
+  \field{title}{Internet für Psychologen}
+  \field{year}{2000}
+\endentry
+
 \entry{captcha}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -228,6 +248,29 @@
     {Weinheim, München}%
   }
   \field{year}{1992}
+\endentry
+
+\entry{repository}{misc}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Hieatt}{H.}%
+     {Edward}{E.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Mee}{M.}%
+     {Rob}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HEMR1}
+  \strng{fullhash}{HEMR1}
+  \field{labelalpha}{HM16}
+  \field{sortinit}{H}
+  \field{howpublished}{\url{http://martinfowler.com/eaaCatalog/repository.html}}
+  \field{note}{[Online; accessed 05-03-2016]}
+  \field{title}{Repository}
+  \field{year}{2016}
 \endentry
 
 \entry{umfragemethodik}{misc}{}

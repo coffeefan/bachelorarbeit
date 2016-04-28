@@ -2,6 +2,93 @@
 
 #Recherche
 
+
+## Fachbegriffe
+Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel "[Glossar]".
+
+## Erläuterung der Grundlagen
+In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden. 
+
+###Authentifizierung
+Duden: Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
+
+Eine Person oder Objekt eindeutig zu **authentifizieren** bedeutet zu ermitteln, ob die- oder derjenige auch die Person ist, als welche sie oder er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenticate*, was auf Deutsch "sich als *echt erweisen, sich verbürgen, glaubwürdig sein*" bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiltelefonen häufig verbreitet. Die Möglichkeiten von verschiedenen Authentifizierungen ist nahe zu grenzenlos.
+[^authentifizierungsdeforg]
+
+###Autorisierung
+Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung [^duden]
+
+Wenn die [Authentifizierung] erfolgreich war, erteilt das System die Autorisierung. Dabei wird der Person oder dem Objekt erlaubt, bestimmte Aktionen/Zugriffe durchzuführen. Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist ebenfalls Bestandteil der Autorisierung.
+
+Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt zu sein. Die anschliessende Autorisierung erfolgt automatisch durch das System selbst. Im Zuge der Autorisierung werden dem Benutzer seine Zugriffsrechte zugewiesen.
+[@authentifizierungsdeforg]
+
+
+
+[^authentifizierungsdef]: [@authentifizierungsdef] 
+[^authentifizierungsdeforg]: [@authentifizierungsdeforg]
+
+
+\newpage
+
+
+[^stand20160108]: Stand 4. Januar 2016
+
+\newpage
+##Grundlegende Sicherheitsprinzipien
+In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt, auf denen eine Authentifizierungssoftware aufgebaut werden kann.
+
+###KISS
+**K**eep **I**t **S**tupid *and* **S**imple
+
+Ein verbreitetes Problem unter Softwareentwickern und Programmiern heute ist, dass dazu tendiert wird, Probleme zu kompliziert und verschachtelt zu lösen. Acht bis neun von zehn Entwickeln machen den Fehler, Probleme zu wenig auseinanderzubrechen und alles in einem grossen Programm zu lösen, anstatt es in kleinen Paketen verständlich zu programmieren.[^apachekiss]
+
+
+Die folgenden Punkte listen die Vorteile für Softwareentwickler beim Verwenden von Kiss auf:
+
+- Mehr Probleme sollen schneller gelöst werden
+- Der Entwickler kann komplexe Probleme mit wenigen Zeilencodes lösen
+- Die Codequalität steigt
+- Der Entwickler kann grössere Systeme erstellen und unterhalten
+- Der Code wird flexibler werden, einfach wieder zu verwenden und zu modifizieren
+- Die Zusammenarbeit in grösseren Entwicklerteams und Projekten wird vereinfacht, da der Code bei allen "stupid and simple" ist
+
+
+####KISS fördert die Sicherheit
+Die Begründung, warum KISS die Sicherheit fördert, liefert Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und dies wiederum setzt voraus, dass Designs einfach und klein sind. Designs müssen so beschaffen sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [^sicheresysteme_93]
+
+
+###Default-is-deny
+Ob eine Person oder ein Programm Zugriff auf Daten und Funktionen hat, sollte nicht durch Verbote, sondern durch eine explizite Erlaubnis geregelt werden. Dies bedeutet, dass solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlicher ist es, dass viele Organisationen und Entwicklungsfirma nicht dieses Vorgehen verwenden. Zum Beispiel Filesysteme setzen auf Verbote anstatt auf explizite Erlaubnisse.[^sicheresysteme_94] [^defaultdeny]
+
+
+###Open Design
+Abgeleitet von der Theorie der Kryptografie gilt Folgendes: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll eher nach dem Ansatz entworfen werden: Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch Sinn, das Softwaredesign geheimzuhalten, um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
+[^sicheresysteme_95]
+
+
+###Zusammenfassung der Sicherheitsprinzipien
+Die wichtigsten Sicherheitsprinzipien lauten zusammengefasst wie folgt:
+
+* Die Software muss aus kleinen, isolierten Einheiten aufgebaut werden, deren externe
+Beziehungen am Interface deutlich werden. Damit werden sowohl praktische
+Schadensreduzierung durch Isolation als auch eine schnelle und einfache Sicherheitsanalyse
+möglich.
+* Zugriffsentscheidungen dürfen nur auf der Basis expliziter, minimaler und
+keinesfalls durch immer und global verfügbare Permissions fallen.
+* Das Softwaredesign von Applikationen sollte wenn möglich öffentlich sein. Zumindest sollte
+ein interner Review-Prozess stattfinden, in dessen Verlauf eine Sicherheitsanalyse
+durch nicht an der Entwicklung Beteiligte erstellt wird.
+
+[^sicheresysteme_93] : [@sicheresysteme pp.93]
+[^sicheresysteme_94] :[@sicheresysteme pp.94]
+[^sicheresysteme_95] :[@sicheresysteme pp.95]
+[^apachekiss]: [@apachekiss]
+[^defaultdeny]: [@defaultdeny]
+
+<!-- TODO: Weitere Konzepte Sicherheitssystem Seite 104 -->
+
+
 ## Ähnliche Produkte auf dem Markt
 Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
 
@@ -109,90 +196,7 @@ Kleine Verbreitung und hohe Kosten für den Enduser sind die Nachteile von Suiss
 ##Fazit
 Auf dem Markt sind verschiedene Anbieter, welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service, welcher es erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
 
-## Fachbegriffe
-Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel "[Glossar]".
 
-## Erläuterung der Grundlagen
-In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden. 
-
-###Authentifizierung
-Duden: Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
-
-Eine Person oder Objekt eindeutig zu **authentifizieren** bedeutet zu ermitteln, ob die- oder derjenige auch die Person ist, als welche sie oder er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenticate*, was auf Deutsch "sich als *echt erweisen, sich verbürgen, glaubwürdig sein*" bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiltelefonen häufig verbreitet. Die Möglichkeiten von verschiedenen Authentifizierungen ist nahe zu grenzenlos.
-[^authentifizierungsdeforg]
-
-###Autorisierung
-Autorisierung - Befugnis, Berechtigung, Erlaubnis, Genehmigung [^duden]
-
-Wenn die [Authentifizierung] erfolgreich war, erteilt das System die Autorisierung. Dabei wird der Person oder dem Objekt erlaubt, bestimmte Aktionen/Zugriffe durchzuführen. Meist verfügen unterschiedliche Benutzer eines Systems über verschiedene Zugriffsrechte. Die korrekte Zuweisung der individuellen Rechte ist ebenfalls Bestandteil der Autorisierung.
-
-Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwechselt. Die Authentifizierung wird vom Benutzer initiiert. Sie dient dem Nachweis, zur Ausübung bestimmter Rechte befugt zu sein. Die anschliessende Autorisierung erfolgt automatisch durch das System selbst. Im Zuge der Autorisierung werden dem Benutzer seine Zugriffsrechte zugewiesen.
-[@authentifizierungsdeforg]
-
-
-
-[^authentifizierungsdef]: [@authentifizierungsdef] 
-[^authentifizierungsdeforg]: [@authentifizierungsdeforg]
-
-
-\newpage
-
-
-[^stand20160108]: Stand 4. Januar 2016
-
-\newpage
-##Grundlegende Sicherheitsprinzipien
-In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt, auf denen eine Authentifizierungssoftware aufgebaut werden kann.
-
-###KISS
-**K**eep **I**t **S**tupid *and* **S**imple
-
-Ein verbreitetes Problem unter Softwareentwickern und Programmiern heute ist, dass dazu tendiert wird, Probleme zu kompliziert und verschachtelt zu lösen. Acht bis neun von zehn Entwickeln machen den Fehler, Probleme zu wenig auseinanderzubrechen und alles in einem grossen Programm zu lösen, anstatt es in kleinen Paketen verständlich zu programmieren.[^apachekiss]
-
-
-Die folgenden Punkte listen die Vorteile für Softwareentwickler beim Verwenden von Kiss auf:
-
-- Mehr Probleme sollen schneller gelöst werden
-- Der Entwickler kann komplexe Probleme mit wenigen Zeilencodes lösen
-- Die Codequalität steigt
-- Der Entwickler kann grössere Systeme erstellen und unterhalten
-- Der Code wird flexibler werden, einfach wieder zu verwenden und zu modifizieren
-- Die Zusammenarbeit in grösseren Entwicklerteams und Projekten wird vereinfacht, da der Code bei allen "stupid and simple" ist
-
-
-####KISS fördert die Sicherheit
-Die Begründung, warum KISS die Sicherheit fördert, liefert Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und dies wiederum setzt voraus, dass Designs einfach und klein sind. Designs müssen so beschaffen sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [^sicheresysteme_93]
-
-
-###Default-is-deny
-Ob eine Person oder ein Programm Zugriff auf Daten und Funktionen hat, sollte nicht durch Verbote, sondern durch eine explizite Erlaubnis geregelt werden. Dies bedeutet, dass solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlicher ist es, dass viele Organisationen und Entwicklungsfirma nicht dieses Vorgehen verwenden. Zum Beispiel Filesysteme setzen auf Verbote anstatt auf explizite Erlaubnisse.[^sicheresysteme_94] [^defaultdeny]
-
-
-###Open Design
-Abgeleitet von der Theorie der Kryptografie gilt Folgendes: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll eher nach dem Ansatz entworfen werden: Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch Sinn, das Softwaredesign geheimzuhalten, um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
-[^sicheresysteme_95]
-
-
-###Zusammenfassung der Sicherheitsprinzipien
-Die wichtigsten Sicherheitsprinzipien lauten zusammengefasst wie folgt:
-
-* Die Software muss aus kleinen, isolierten Einheiten aufgebaut werden, deren externe
-Beziehungen am Interface deutlich werden. Damit werden sowohl praktische
-Schadensreduzierung durch Isolation als auch eine schnelle und einfache Sicherheitsanalyse
-möglich.
-* Zugriffsentscheidungen dürfen nur auf der Basis expliziter, minimaler und
-keinesfalls durch immer und global verfügbare Permissions fallen.
-* Das Softwaredesign von Applikationen sollte wenn möglich öffentlich sein. Zumindest sollte
-ein interner Review-Prozess stattfinden, in dessen Verlauf eine Sicherheitsanalyse
-durch nicht an der Entwicklung Beteiligte erstellt wird.
-
-[^sicheresysteme_93] : [@sicheresysteme pp.93]
-[^sicheresysteme_94] :[@sicheresysteme pp.94]
-[^sicheresysteme_95] :[@sicheresysteme pp.95]
-[^apachekiss]: [@apachekiss]
-[^defaultdeny]: [@defaultdeny]
-
-<!-- TODO: Weitere Konzepte Sicherheitssystem Seite 104 -->
 
 ## Authetentifizierungskomponenten
 Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt werden. Folgend gilt es die Komponenten zu erklären.
@@ -267,7 +271,7 @@ Die Zwei-Faktor-Authentifizierung wird häufig 2FA genannt. Der User wird mittel
 Die Zwei-Faktor-Authentifizierung ist in der Schweiz durch das E-Banking bekannt geworden. Der User gibt als erstes Faktor Username/Vertragnummer und Passwort ein. In einem zweiten Schritt gibt er vom System gewünschten Code aus der Codekarte oder des elektrischen Rechners als zweiten Faktor ein. 
 Im Alltag bei einem Einkauf im Detailhandel authentifiziert sich der EC-Kartenchip als erster Faktor. Als zweiter Faktor hat sich der Kunde ein Passwort auswendig gemerkt, welches er eingibt.
 
-Diese Zwei-Faktor-Authentifizierung hatte die Entwicklung und Förderung der Vielfalt von Faktoren/Komponenten zur Folge, von welchen wir nun für unsere Authentifizierung profitieren können:
+. Die folgenden Authenfizierungen basieren auf den Prinzip der Zwei-Faktor-Authentifizierung.
 
 ###E-Mail-Bestätigungscode
 Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungscode quasi zum Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mailadresse auch tatsächlich existiert und der User darauf Zugriff hat. Der User soll also auch bei der Authentifizierungsschnittstelle seine E-Mailadresse eintragen und erhält dann umgehend den Bestätigungslink an diese zugesandt.

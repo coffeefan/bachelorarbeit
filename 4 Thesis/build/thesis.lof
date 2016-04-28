@@ -4,65 +4,75 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Screenshot yUML Beispiel Klassendiagramm\relax }}{14}{figure.caption.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Screenshot yUML Beispiel Klassendiagramm\relax }}{15}{figure.caption.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Aktive Nutzer Weltweit }}{18}{figure.caption.7}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Aktive Nutzer Weltweit }}{19}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Anzahl Schweizer Nutzer }}{19}{figure.caption.8}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Anzahl Schweizer Nutzer }}{20}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiele von Captchas \emph {Quelle:drupal.org}\relax }}{25}{figure.caption.28}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiele von Captchas \emph {Quelle:drupal.org}\relax }}{26}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Fingerabdruck Mit Kohlepulver werden Fingerabdr\IeC {\"u}cke sichtbar gemacht und auf Klebefolie gesichert \emph {Quelle:phi-hannover.de}\relax }}{29}{figure.caption.46}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Use-Case Diagram\relax }}{32}{figure.caption.49}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Basis Schablone \emph {Quelle Rupp}}}{37}{figure.caption.57}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Erweiterte Schablone \emph {Quelle Rupp}}}{37}{figure.caption.58}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Risikomatrix }}{45}{figure.caption.59}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Fingerabdruck Mit Kohlepulver werden Fingerabdr\IeC {\"u}cke sichtbar gemacht und auf Klebefolie gesichert \emph {Quelle:phi-hannover.de}\relax }}{30}{figure.caption.46}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces \IeC {\"U}bersicht der Hauptkomponenten\relax }}{47}{figure.caption.60}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Use-Case Diagram\relax }}{33}{figure.caption.49}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{49}{figure.caption.61}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Basis Schablone \emph {Quelle Rupp}}}{38}{figure.caption.57}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Differenziertes Dom\IeC {\"a}nemodel des Authentifizierungservice\relax }}{50}{figure.caption.62}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Erweiterte Schablone \emph {Quelle Rupp}}}{38}{figure.caption.58}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Nutzungsanteil CMS weltweit \emph {Quelle:de.statista.com}\relax }}{52}{figure.caption.66}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Nutzungsanteil Zahlungsablauf Webshop mit Datatrans \emph {Quelle:datatrans}\relax }}{55}{figure.caption.68}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Datatrans Lightbox Integration \emph {Quelle:datatrans}\relax }}{56}{figure.caption.70}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Vereinfacht die Architektur des Managed Extensibility Framework Quelle: msdn.microsoft.com\relax }}{63}{figure.caption.78}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces UML Library Overview\relax }}{64}{figure.caption.79}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Mockup Konfigurator Template Desktop\relax }}{65}{figure.caption.80}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Mockup Konfigurator Template Mobile\relax }}{66}{figure.caption.81}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{67}{figure.caption.85}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{68}{figure.caption.86}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{69}{figure.caption.87}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Risikomatrix }}{47}{figure.caption.59}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces ISecurityStep\relax }}{76}{figure.caption.88}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \IeC {\"U}bersicht der Hauptkomponenten\relax }}{49}{figure.caption.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{51}{figure.caption.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Differenziertes Dom\IeC {\"a}nemodel des Authentifizierungservice\relax }}{52}{figure.caption.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Nutzungsanteil CMS weltweit \emph {Quelle:de.statista.com}\relax }}{54}{figure.caption.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Nutzungsanteil Zahlungsablauf Webshop mit Datatrans \emph {Quelle:datatrans}\relax }}{57}{figure.caption.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Datatrans Lightbox Integration \emph {Quelle:datatrans}\relax }}{58}{figure.caption.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Vereinfacht die Architektur des Managed Extensibility Framework Quelle: msdn.microsoft.com\relax }}{65}{figure.caption.78}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces UML Library Overview\relax }}{66}{figure.caption.79}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Mockup Konfigurator Template Desktop\relax }}{67}{figure.caption.80}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Mockup Konfigurator Template Mobile\relax }}{68}{figure.caption.81}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{69}{figure.caption.85}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{70}{figure.caption.86}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Aufbau Inhalt im Card-Design\relax }}{71}{figure.caption.87}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces ISecurityStep\relax }}{78}{figure.caption.88}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Screenshot Unit-Test E-Mail Sicherheitsstufe\relax }}{79}{figure.caption.89}
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Beispiele der Illustrationen f\IeC {\"u}r die Umfrage\relax }}{84}{figure.caption.100}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot einer Akzeptanzfrage\relax }}{86}{figure.caption.99}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Screenshot der Umfrage zur Anstrengung\relax }}{87}{figure.caption.100}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Beispiele der Illustrationen f\IeC {\"u}r die Umfrage\relax }}{88}{figure.caption.103}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Berechnungsformel f\IeC {\"u}r Repr\IeC {\"a}sentativit\IeC {\"a}t\relax }}{89}{figure.caption.104}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Ergebnise Frage zu mogeln an Onlinewettbewerben\relax }}{90}{figure.caption.105}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

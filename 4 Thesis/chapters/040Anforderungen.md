@@ -1,12 +1,12 @@
 #Anforderungen
-Dieses Kapitel beschreibt das Durchführen einer Anforderungsanalyse festgehalten. Anhand der Anforderungsanalyse sollen die Anforderungen für die entwickelnden Software ermittelt werden. Die Anforderungen bilden die Basis für die Architektur, das Softwaredesign, die Implementationund die Testfälle. Ihnen ist dem entsprechend ein sehr grosser Stellenwert zuzuschreiben.
+Dieses Kapitel beschreibt das Durchführen einer Anforderungsanalyse. Anhand der Anforderungsanalyse sollen die Anforderungen für die zu entwickelnden Softwares ermittelt werden. Die Anforderungen bilden die Basis für die Architektur, das Softwaredesign, die Implementation und die Testfälle. Ihnen ist dementsprechend ein sehr grosser Stellenwert zuzuschreiben.
 
 ##Akteure
 __Programmierer__
-Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media Modul mit dem Authentifizierungsschnittstellen-Service schützen.
+Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media-Modul mit dem Authentifizierungsschnittstellen-Service schützen.
 
 __User__
-Der User ist der Endkunde. Er nimmt am Social-Media Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service
+Der User ist der Endkunde. Er nimmt am Social-Media-Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service.
 
 
 
@@ -21,14 +21,14 @@ Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis ge
 
 ###Use-Cases Diagramm
 
-Das Use-Case Diagramm illustriert die nachfolgenden Use Cases. Dadurch kann rasch ein Überblick über die zu entwickelnde Lösung geschaffen werden.
+Das Use-Case Diagramm illustriert die nachfolgenden Use-Cases. Dadurch kann rasch ein Überblick über die zu entwickelnde Lösung geschaffen werden.
 
 ![Use-Case Diagram](images/use-case-diagram.png)
 
 \newpage
 
 ###Use-Cases Beschreibung
-Die im Diagramm dargestellten Use-Cases werden nun noch beschrieben. Die Use-Cases wurden nummerisch nach Themenbereichen gruppiert.
+Die im Diagramm dargestellten Use-Cases werden nun noch beschrieben. Die Use-Cases wurden numerisch nach Themenbereichen gruppiert.
 
 
 #### UC-11 Registration für den Konfigurator
@@ -36,10 +36,10 @@ Die im Diagramm dargestellten Use-Cases werden nun noch beschrieben. Die Use-Cas
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Programmierer ist am Authentifizierungsschnittstellen-Service registrieren
+__Ziel__                    Ein Programmierer ist beim Authentifizierungsschnittstellen-Service registriert.
 
 
-__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service registrieren können
+__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service registrieren können.
 
 __Akteure__                 Programmierer
 
@@ -47,7 +47,7 @@ __Vorbedingung__            Keine
 
 __Ergebnis__                Registrierter Programmierer
 
-__Hauptszenario__           Der Programmierer füllt ein Registrationsformular aus und bestätigt seine E-Mail Adresse
+__Hauptszenario__           Der Programmierer füllt ein Registrationsformular aus und bestätigt seine E-Mail Adresse.
 
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
@@ -57,19 +57,19 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service
+__Ziel__                    Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service registrieren. 
 
-__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service authentifizieren können
+__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service authentifizieren können.
 
 __Akteure__                 Programmierer
 
 __Vorbedingung__            Der Programmierer ist registriert.
 
-__Ergebnis__                Authentifizierter und eigeloggter Programmierer
+__Ergebnis__                Authentifizierter und eingeloggter Programmierer
 
 __Hauptszenario__           Der Programmierer loggt sich mit E-Mail und Passwort am Authentifizierungsschnittstellen-Service ein.
 
-__Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort per E-Mail zu. Erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
+__Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort per E-Mail zu. Er erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
 -------------------------------------------------------------------------------
 
 #### UC-21 Konfigurieren eines Authentifizierungsvorgang
@@ -77,19 +77,19 @@ __Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Es ist eine neuer Authentifizierungsvorgang für ein neus Social Media-Modul konfiguriert
+__Ziel__                    Es ist ein neuer Authentifizierungsvorgang für ein neues Social Media-Modul konfiguriert.
 
-__Beschreibung__           	Der Programmierer kann ein neuer Authentifizierungsvorgang eröffnen
+__Beschreibung__           	Der Programmierer kann ein neuer Authentifizierungsvorgang eröffnen.
 
 __Akteure__                 Programmierer
 
-__Vorbedingung__            Der Programmierer hat sich am System angemeldet
+__Vorbedingung__            Der Programmierer hat sich am System angemeldet.
 
 __Ergebnis__                Neuer Authentifizierungsvorgang
 
-__Hauptszenario__           Der Programmierer eröffnet einen neuen Authentifizierungsvorgang. Er benennt ihn sinnig. Die zu verwende(n) Authentifizierungskomponennten werden ausgewählt. Bei der Konfiguration unterstützen die Resultate die Studie den Programmierer für die optimalte Konfiguration. Am Ende der Konfiguration werden die Akzeptanzkritieren für eine erfolgreiche Authtentifizierung festgelegt.
+__Hauptszenario__           Der Programmierer eröffnet einen neuen Authentifizierungsvorgang. Er benennt ihn sinnig. Die zu verwende(n) Authentifizierungskomponenten werden ausgewählt. Bei der Konfiguration unterstützen die Resultate der Studie den Programmierer für die optimale Konfiguration. Am Ende der Konfiguration werden die Akzeptanzkriteren für eine erfolgreiche Authentifizierung festgelegt.
 
-__Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupliziert
+__Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupliziert.
 -------------------------------------------------------------------------------
 
 
@@ -98,17 +98,17 @@ __Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupli
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Die Authentifizierungsschnittstelle kann in ein (bestehendes) System eingebunden werden
+__Ziel__                    Die Authentifizierungsschnittstelle kann in ein (bestehendes) System eingebunden werden.
 
-__Beschreibung__           	Der Programmierer kann die Authentifizierungsschnittstelle in seinem System integrieren
+__Beschreibung__           	Der Programmierer kann die Authentifizierungsschnittstelle in seinem System integrieren.
 
 __Akteure__                 Programmierer
 
-__Vorbedingung__            Der Programmierer hat sich am System angemeldet. Der Programmierer hat ein neues Authentifizierungsvorgang konfiguriert
+__Vorbedingung__            Der Programmierer hat sich am System angemeldet. Der Programmierer hat einen neuen Authentifizierungsvorgang konfiguriert.
 
-__Ergebnis__                Der Programmierer hat eine Möglichkeit die Authentifizierungsschnittstelle mit seinem konfigurierten Authentifizierungsvorgangs in seiner Software einzubinden
+__Ergebnis__                Der Programmierer hat eine Möglichkeit, die Authentifizierungsschnittstelle mit seinem konfigurierten Authentifizierungsvorgang in seiner Software einzubinden.
 
-__Hauptszenario__           Der Programmierer öffnet die Einbindeseite. Es werden ihm alle Schritte zur Erfolgreichen Einbindung aufgelistet. Der Code liegt individualisiert vor. Der Programmierer kopiert den Code in sein Programm
+__Hauptszenario__           Der Programmierer öffnet die Einbindeseite. Es werden ihm alle Schritte zur erfolgreichen Einbindung aufgelistet. Der Code liegt individualisiert vor. Der Programmierer kopiert den Code in sein Programm.
 
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
@@ -118,9 +118,9 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Der User ist authtentifiziert oder der User abgelehnt
+__Ziel__                    Der User ist authtentifiziert oder der User abgelehnt.
 
-__Beschreibung__           	Der User probiert sich über den Authentifizierungsschnittstellen-Service zu authentifizieren um an einem Social-Media Modul teilzunehmen
+__Beschreibung__           	Der User probiert sich über den Authentifizierungsschnittstellen-Service zu authentifizieren um an einem Social-Media Modul teilzunehmen.
 
 __Akteure__                 User
 
@@ -128,9 +128,9 @@ __Vorbedingung__            Der Programmierer hat den Authentifizierungsvorgang 
 
 __Ergebnis__                Der Authentifizierungsschnittstellen-Service authentifiziert den User oder lehnt ihn ab.
 
-__Hauptszenario__           Der User wird vom Social Media Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User authentifziert sich. Der User kann die Eingabe des Social Media Modul erfolgreich abschliessen
+__Hauptszenario__           Der User wird vom Social-Media-Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User authentifiziert sich. Der User kann die Eingabe des Social-Media Moduls erfolgreich abschliessen.
 
-__Alternativszenario__      Der User wird vom Social Media Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe des Social-Media Modul nicht erfolgreich abschliessen.
+__Alternativszenario__      Der User wird vom Social Media-Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe des Social-Media-Modul nicht erfolgreich abschliessen.
 -------------------------------------------------------------------------------
 
 #### UC-41 Report eines Authentifizierungsvorgangs
@@ -138,19 +138,19 @@ __Alternativszenario__      Der User wird vom Social Media Modul an den Authenti
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Die Verwendung des Authentifizierungsvorgangs ist übersichtlich dargestellt
+__Ziel__                    Die Verwendung des Authentifizierungsvorgangs ist übersichtlich dargestellt.
 
-__Beschreibung__           	Um den Verwendung des Authentifizierungsvorgangs auszuwerten soll ein Report erstellt werden
+__Beschreibung__           	Um den Verwendung des Authentifizierungsvorgangs auszuwerten, soll ein Report erstellt werden.
 
 __Akteure__                 Programmierer
 
-__Vorbedingung__            Der Programmierer hat sich am System angemeldet. Der Programmierer hat ein neues Authentifizierungsvorgang konfiguriert. (Der Authentifizerungsvorgang ist eingebunden und verwendet worden)
+__Vorbedingung__            Der Programmierer hat sich am System angemeldet. Der Programmierer hat einen neuen Authentifizierungsvorgang konfiguriert. (Der Authentifizerungsvorgang ist eingebunden und verwendet worden).
 
 __Ergebnis__                Report eines Authentifizierungsvorgangs
 
-__Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt sich der Programmierer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
+__Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt sich der Programmierer im System ein und generiert einen automatisierten Report, um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 
-__Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Programmierer im System ein und generiert einen automatisierten Report um die Verwendung des Authentifizierungsvorgangs auszuwerten.
+__Alternativszenario__      Um den Zwischenstand eines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Programmierer im System ein und generiert einen automatisierten Report, um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 -------------------------------------------------------------------------------
 
 #### UC-51 Wartbarkeit des Authentifizierungsservices
@@ -158,7 +158,7 @@ __Alternativszenario__      Um den Zwischenstand deines Quizes, Votings, Wettbew
 -------------------------------------------------------------------------------
 __UseCase__
 --------------------------- --------------------------------------------------
-__Ziel__                    Der Authentifizierungsschnittstellen-Service soll mit geringen Aufwand angepasst werden können.
+__Ziel__                    Der Authentifizierungsschnittstellen-Service soll mit geringem Aufwand angepasst werden können.
 
 __Beschreibung__           	
 
@@ -166,9 +166,9 @@ __Akteure__                 Entwicklungsteam-Mitglied
 
 __Vorbedingung__            Das Entwicklungsteam-Mitglied hat Zugriff auf das Entwicklungs-Repository, Testsystem und Livesystem
 
-__Ergebnis__                Die Anpassung ist integriert
+__Ergebnis__                Die Anpassung ist integriert.
 
-__Hauptszenario__           Dank eingehaltenen Coderichtlinien ist es einfach möglich die Anpassung einzupflegen
+__Hauptszenario__           Dank eingehaltenen Coderichtlinien ist es einfach möglich, die Anpassung einzupflegen.
 
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
@@ -176,10 +176,10 @@ __Alternativszenario__      -
 \newpage
 
 ##Anforderungen
-Die Anforderungen sollen basierend auf der Satzschablone erstellt werden. Ziel ist sprachliche Missverständnisse dadurch zu vermeiden. Die Schablone fördert eine syntaktische Eindeutigkeit der Anforderungen und eine optimalen Zeit- und Kostenrahmen für die Verfassung.
+Die Anforderungen sollen basierend auf der Satzschablone erstellt werden. Ziel ist es, sprachliche Missverständnisse dadurch zu vermeiden. Die Schablone fördert eine syntaktische Eindeutigkeit der Anforderungen und einen optimalen Zeit- und Kostenrahmen für die Verfassung.
 
 ###Aufbau
-Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen der grundlegenden Version ohne zeitlichem oder Bedienungsorientiertem Aspekt und der Schablone mit diesen Eigenschaften unterschieden.
+Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen der grundlegenden Version ohne zeitlichen oder bedienungsorientierten Aspekt und der Schablone mit diesen Eigenschaften unterschieden.
 
 ![Basis Schablone  *Quelle Rupp*[^rupp]](images/basis-schablone.jpg)
 
@@ -192,14 +192,14 @@ Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen
 ##Funktionale Anforderungen
 Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsschnittstellen-Service fest. Die Wünsche des Arbeitgebers aus <!--TODO Vorgehensschritten 1-4 (Kapitel 3.2)--> sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, bringen den Beweis dar, dass alle gewünschten Funktionen implementiert wurden.
 
-Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet
+Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 
 ### FREQ-111			Programmierer Registration
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-11
 
-__Beschreibung__        Ein Programmierer kann sich an der Authentifizierungsschnittstellen-Service registrieren.
+__Beschreibung__        Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service registrieren.
 
 __Techn. Risiko__       Niedrig
 
@@ -211,7 +211,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-12
 
-__Beschreibung__        Ein Programmierer muss sich an der Authentifizierungsschnittstellen-Service mittels E-Mail und Passwort anmelden.
+__Beschreibung__        Ein Programmierer muss sich beim Authentifizierungsschnittstellen-Service mittels E-Mail und Passwort anmelden.
 
 __Techn. Risiko__       Niedrig
 
@@ -242,24 +242,36 @@ __Techn. Risiko__       Niedrig
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-211			Konfigurieren einer neuen Social-Media Modul Authentifizierungsvorgang
+### FREQ-211			Konfigurieren eines neuen Social-Media-Modul Authentifizierungsvorgangs
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Programmierer kann ein neuer Authentifizierungsvoragn für sein neus Social-Media Modul erfassen.
+__Beschreibung__        Ein Programmierer kann einen neuen Authentifizierungsvorgang für sein neues Social-Media Modul erfassen.
 
 __Techn. Risiko__       Niedrig
 
 __Business Value__     	Sehr Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-214			Studien Ergebnis zur Konfiguration nutzten
+### FREQ-212			Antworten der Umfrage in Authentifizerungsservice importieren
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Programmierer kann zur Konfiguration des Authentifizierungsvorangs die Studien-Ergebnisse visualisiert nutzen
+__Beschreibung__        Die Umfrageantworten müssen in den Authentifizerungsservice abgespeichert werden können. Der Import ist über direkt über die Datenbank realisierbar.
+
+__Techn. Risiko__       Niedrig
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+### FREQ-213			Umfrageergebnisse zur Konfiguration nutzen
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-21
+
+__Beschreibung__        Ein Programmierer kann zur Konfiguration des Authentifizierungsvorangs die Umfrageergebnisse visualisiert nutzen. Dabei sollen verschiedene Auswertungsmöglichkeiten zur Anstrengung und Akzeptanz der Sicherheitsstufe möglich sein.
 
 __Techn. Risiko__       Niedrig
 
@@ -271,7 +283,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Programmierer kann ein neues Social-Media Modul erfassen
+__Beschreibung__        Ein Programmierer kann ein neues Social-Media-Modul erfassen
 
 __Techn. Risiko__       Hoch
 
@@ -283,19 +295,19 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Programmierer muss eine Authentifizerungs-Stufe für den Authentifizierungsvorgangs auswählen
+__Beschreibung__        Ein Programmierer muss eine Authentifizerungsstufe für den Authentifizierungsvorgangs auswählen.
 
 __Techn. Risiko__       Niederig
 
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
-### FREQ-251			Generierung von Code für einbinden in vorhandenes System
+### FREQ-251			Generierung von Code für Einbinden in ein vorhandenes System
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25
 
-__Beschreibung__        Ein Programmierer kann einen Code generieren lassen. Dieser Code soll ihm die Integration in sein System vereinfachen
+__Beschreibung__        Ein Programmierer kann einen Code generieren lassen. Dieser Code soll ihm die Integration in sein System vereinfachen.
 
 __Techn. Risiko__       Sehr Hoch
 
@@ -307,7 +319,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Ein User kann isch über den Authentifizierungsschnittstellen-Service authentifizieren um am Social-Media Modul teilzunehmen. Der Authentifizierungsschnittstellen-Service authentifiziert oder lehnt den User ab.
+__Beschreibung__        Ein User kann sich über den Authentifizierungsschnittstellen-Service authentifizieren um am Social-Media-Modul teilzunehmen. Der Authentifizierungsschnittstellen-Service authentifiziert oder lehnt den User ab.
 
 __Techn. Risiko__       Mittel
 
@@ -319,7 +331,7 @@ __Business Value__     	Sehr Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-41
 
-__Beschreibung__        Der Programmierer kann ein Report generieren. Der Report soll die Verwendung übersichtlich darstellen.
+__Beschreibung__        Der Programmierer kann einen Report generieren. Der Report soll die Verwendung übersichtlich darstellen.
 
 __Techn. Risiko__       Mittel
 
@@ -335,7 +347,7 @@ Nicht Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         Alle
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service muss auf allen bekannten Betriebsystemen mit HTML5 und javascritfähigen Browser vewerdent werden können.
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service muss auf allen bekannten Betriebsystemen mit HTML5 und javascriptfähigen Browser verwendet werden können.
 
 __Techn. Risiko__       Mittel
 
@@ -347,7 +359,7 @@ __Business Value__     	Sehr Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-51
 
-__Beschreibung__        Die Wartbarkeit des sSystems soll sichergestellt werden
+__Beschreibung__        Die Wartbarkeit des Systems soll sichergestellt werden.
 
 __Techn. Risiko__       Mittel
 
@@ -361,10 +373,23 @@ __UC-Referenz__         UC-25, UC-21, UC22
 
 __Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach im vorhandenen System eingebunden werden können.
 
+__Techn. Risiko__       Mittel
+
+__Business Value__     	hoch
+-----------------------------------------------------------------------------------------------------------------
+
+<!--mit dieser Anforderung kann man aufgehängt werden. ### NFREQ-121			Browser Kompatibilität der Authentifizierung des Users
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Möglichst viele User sollen an einer Authentifizierung teilnehmen können. Daher muss die Authentifizerungs des Users folgende Browser unterstützen:
+
+
 __Techn. Risiko__       Sehr hoch
 
 __Business Value__     	Mittel
------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------ -->
 
 
 ### NFREQ-122			Einfache und verständliche visuelle Konfiguration
@@ -372,7 +397,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach und verständlich optisch konfiguriert werden können
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach und verständlich optisch konfiguriert werden können.
 
 __Techn. Risiko__       Sehr hoch
 
@@ -384,7 +409,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Der User soll einfach und verständlich optisch konfiguriert werden können
+__Beschreibung__        Der User soll einfach und verständlich optisch konfiguriert werden können.
 
 __Techn. Risiko__       Sehr hoch
 
@@ -420,21 +445,21 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll eine Hohe Verfügbarkeit von 99.9%
+__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll eine hohe Verfügbarkeit von 99.9% haben. 
 
 __Techn. Risiko__       Hoch
 
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
-### NFREQ-210			Programmirer kann aus Breite von verschiedenen Sicherheitsstufen auswählen
+### NFREQ-210			Programmierer kann aus Vielzahl von verschiedenen Sicherheitsstufen auswählen
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Dem Programmierer stehen verschiedene Sicherheitsstufen zur Verfügung. Das Wort verschieden wurde durch folgende Aspekte mit dem Auftraggeber definiert:
-						Abgeleitet von der Aufgabenstellung sind Aspekte "Mehfach-Teilnahme" und "Automatisierung" definiert worden. Beide Aspekte kann durch eine Sicherheitsstufe mehr oder weniger verhindern werden.
-						Abhängig von der Interkativität ist es wirtschaftlich sinnvoll das Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten ein Aspeket.
+__Beschreibung__        Dem Programmierer stehen verschiedene Sicherheitsstufen zur Verfügung. Das Wort "verschieden" wurde durch folgende Aspekte mit dem Auftraggeber definiert:
+						Abgeleitet von der Aufgabenstellung sind Aspekte "Mehrfachteilnahme" und "Automatisierung" definiert worden. Beide Aspekte können durch eine Sicherheitsstufe mehr oder weniger verhindern werden.
+						Abhängig von der Art der Interaktivität ist es wirtschaftlich sinnvoll, dass Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten ein Aspekt.
 						Ein weiterer Aspekt ist der Aufwand für den Benutzer. 		
 
 __Techn. Risiko__       Niedrig
@@ -459,20 +484,20 @@ __Business Value__     	Hoch
 
 \newpage
 ##Risiken
-Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Riskiken bezüglich der Bachelorarbeit, sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
+Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Risiken bezüglich der Bachelorarbeit sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
 
 ###R-01 Akzeptanz
-Programmierer und insbesondere auch User, welche den Authentifizierungsschnittstellen-Service verwenden soll, sind völlig unterschiedlich. Deren unterschiedliche Ansprüche machen es schwierig, eine Lösung zu entwickeln welchen Akteuren gerecht wird.
+Programmierer und insbesondere auch User, welche den Authentifizierungsschnittstellen-Service verwenden sollen, sind völlig unterschiedlich. Deren unterschiedlichen Ansprüche machen es schwierig, eine Lösung zu entwickeln, welchen den Akteuren gerecht wird.
 
-Da der Auftraggeber sowohl die Zielgruppe Programmierer wie auch User kenn, kann er hier gezielt Feedback geben.
+Da der Auftraggeber sowohl die Zielgruppe Programmierer wie auch User kennt, kann er hier gezielt Feedback geben.
 
 Die Auswirkung bei Eintritt dieses Risikos ist im Rahmen der Bachelorarbeit gering, da der Erfolg der Arbeit nicht von der tatsächlichen Verwendung im produktiven Umfeld abhängt.
 
 ###R-02 Kosten
-Da es sich bei diesem Projekt um eine Bachelorarbeit handelt, besteht kein Personalkostenrisiko. Kostenpflichtige Produkte Dritter werden nicht verwendet. Einzig der Betrieb/Hosting der Bachelorarbeit verursacht Kosten. Das Kostenrisiko kann dank fixen Leistungsparameter auf ein Minimum reduziert werden.
+Da es sich bei diesem Projekt um eine Bachelorarbeit handelt, besteht kein Personalkostenrisiko. Kostenpflichtige Produkte Dritter werden nicht verwendet. Einzig der Betrieb/ das Hosting der Bachelorarbeit verursacht Kosten. Das Kostenrisiko kann dank fixen Leistungsparametern auf ein Minimum reduziert werden.
 
 ###R-03 Überkomplexität
-Es besteht die Möglichkeit, dass die Komplexität des zu entwickelnden Systems viel höher ist, als angenommen. Da die Komplexität nur zu einem gewissen Grad durch Architekturentscheide beeinflusst werden kann, muss besonderes Augenmerk auf dieses Risiko gelegt werden.
+Es besteht die Möglichkeit, dass die Komplexität des zu entwickelnden Systems viel höher ist, als angenommen. Da die Komplexität nur zu einem gewissen Grad durch Architekturentscheide beeinflusst werden kann, muss ein besonderes Augenmerk auf dieses Risiko gelegt werden.
 
 Dieses Risiko wird mit hoher Wahrscheinlichkeit eintreten.
 
@@ -489,19 +514,19 @@ Die Auswirkung bei Eintritt dieses Risikos kann nicht abgeschätzt werden. Situa
 Die Bachelorarbeit wird basierend auf verschiedenen Frameworks umgesetzt. Das Risiko, dass Frameworks nicht wie beschrieben funktionieren, schlecht dokumtiert oder instabil sind besteht.
 
 Dieses Risiko wird mit mittlerer Wahrscheinlichkeit eintreten
-Als Auswirkungen dieses Risikos sind Wechsel des Frameworks oder gar manuelle Entwicklungen und daraus zusätzliche nicht einschätzbare Aufwendungen nötig.
+Als Auswirkungen dieses Risikos sind Wechsel des Frameworks oder gar manuelle Entwicklungen und daraus zusätzlicher, nicht einschätzbarer Aufwand nötig.
 
 ###R-06 Termineinhaltung
-Der fixe Abgabetermin der Semesterarbeit gilt es einzuhalten. Das Risiko das die Arbeit verspätet abgegeben wird besteht.
+Den fixe Abgabetermin der Semesterarbeit gilt es einzuhalten. Das Risiko, dass die Arbeit verspätet abgegeben wird besteht.
 
 Dieses Risiko wird mit geringer Wahrscheinlichkeit eintreten.
-Die Auswirkung bei Eintritt dieses Risikos ist das nicht Bestehen der Arbeit.
+Die Auswirkung bei Eintritt dieses Risikos ist das Nichtbestehen der Arbeit.
 
 ###R-07 Auslastung
-Das Projekt wird durch einen Mitarbeiter getragen. Dieser ist sowohl im Beruf wie auch privat stark ausgelastet. Der hohe schulische Aufwand kann beeinflusst werden. Mit zusätzliche Ausfälle durch Krankheit oder nicht vorhersehbaren Vorfällen muss gerechnet werden.
+Das Projekt wird durch einen Mitarbeiter getragen. Dieser ist sowohl im Beruf wie auch privat stark ausgelastet. Der hohe schulische Aufwand kann beeinflusst werden. Mit zusätzlichen Ausfällen durch Krankheit oder nicht vorhersehbare Vorfällen muss gerechnet werden.
 
 Das Risiko wird mit mittlerer Wahrscheinlichkeit eintreten.
-Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Quantität der Arbeit wiederspiegeln.
+Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Quantität der Arbeit widerspiegeln.
 
 \newpage
 ### Risikomatrix
@@ -528,9 +553,9 @@ R7	Auslastung
 
 
 ###Massnahmen
-Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende Komplexität einschätzen zu können wird vor Projektbeginn ein Prototyp mittels Durchstich durch alle Technologien erstellt. Danach kann die Komplexität im Zusammenspiel der Technologie eingeschätzt und bei Bedarf eine Technologie durch eine andere Ersetzt werden. So kann das Risiko 3 Überkomplexität und Risiko 5 Schlechte/Unzureichende Frameworks minimiert werden.
+Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende Komplexität einschätzen zu können, wird vor Projektbeginn ein Prototyp mittels Durchstich durch alle Technologien erstellt. Danach kann die Komplexität im Zusammenspiel der Technologie eingeschätzt und bei Bedarf eine Technologie durch eine andere ersetzt werden. So kann das Risiko 3 "Überkomplexität" und Risiko 5 "Schlechte/Unzureichende Frameworks" minimiert werden.
 
-Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich wurden vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen sollte das Risiko 6 Termineinhaltung minimal bleiben.
-Das Risiko 7 Auslastung kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit wurde auf ein Minimum reduziert. Für die restliche freiwilige Arbeit wurde mit Freunden ein Nofallszenario entwickelt, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen. Der Kontakt mit dem  mit Arbeitgeber wird intensiv gepflegt um, so bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen wurden entschärfen auch Risiko 7.
+Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich wurde vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen sollte das Risiko 6 Termineinhaltung minimal bleiben.
+Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit wurde auf ein Minimum reduziert. Für die restliche freiwilige Arbeit wurde mit Freunden ein Notfallszenario entwickelt, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen wurden entschärfen auch Risiko 7.
 
-[^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen
+[^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen.

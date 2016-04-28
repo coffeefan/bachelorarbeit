@@ -356,7 +356,7 @@
 
 
 
-  $(document).on('click', '[data-paymentButton]', function () {
+  $(document).on('click', '[data-iaauthButton]', function () {
     var lightbox = lity();
     // Open a URL in a lightbox
     lightbox("http://iaauth.azurewebsites.net/Loading");

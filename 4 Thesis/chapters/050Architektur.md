@@ -392,8 +392,10 @@ Die in [NFREQ-132] geforderte Skalierbarkeit, nutzungsabhängige Kosten, Freihei
 
 [^cloudservicech]: Stand 18. Dezember 2015
 
-##Validierung von Feldeingaben
-
+##Validierung von Benutzereingaben
+NFREQ-126 und die Sicherheit des Authenifizierungsservice verlangen eine geeignete Validierung der Benutzereingaben. Um Fehlspeicherungen oder Fehloperationen vorzubeuegen werden alle Daten Vorgängig validiert. Die Fehlermeldungen sollen falls möglich klar und spezifisch formuliert werden. 
+Bei den Daten-Klassen/POCO-Klassen werden die gültigen Wertebereiche mittels Annotationen festgelegt. Microsoft MVC und Microsoft Web-API stellen eine "Modelstate.Valid()" Methode zur Verfügung welche das angelieferte Datenobjekt automatisch gegen die Annotationen prüft. Bei MVC Implementierungen werden mittels Microsoft jQuery Validate Standart Annotationen bereits in der Benutzereingabemaske überprüft. So muss der User bei Falscheingabe nicht zuerst einen manuellen Request auf den Server setzten sondern wird gleich über die Fehleingabe aufmerksam gemacht.
+Im Konfigurator, eine AngularJS-App ist die benutzerseitige Validierung mittels HTML5 Form Validation umgesetzt worden.
 
 
 ##Testing
