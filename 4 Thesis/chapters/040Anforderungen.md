@@ -378,18 +378,7 @@ __Techn. Risiko__       Mittel
 __Business Value__     	hoch
 -----------------------------------------------------------------------------------------------------------------
 
-<!--mit dieser Anforderung kann man aufgehängt werden. ### NFREQ-121			Browser Kompatibilität der Authentifizierung des Users
 
---------------------	-----------------------------------------------------------------------------------------
-__UC-Referenz__         UC-25, UC-21, UC22
-
-__Beschreibung__        Möglichst viele User sollen an einer Authentifizierung teilnehmen können. Daher muss die Authentifizerungs des Users folgende Browser unterstützen:
-
-
-__Techn. Risiko__       Sehr hoch
-
-__Business Value__     	Mittel
------------------------------------------------------------------------------------------------------------------- -->
 
 
 ### NFREQ-122			Einfache und verständliche visuelle Konfiguration
@@ -404,6 +393,8 @@ __Techn. Risiko__       Sehr hoch
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
 
+
+
 ### NFREQ-126			Einfache und verständliche Authentifizierung
 
 --------------------	-----------------------------------------------------------------------------------------
@@ -415,6 +406,31 @@ __Techn. Risiko__       Sehr hoch
 
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
+
+### NFREQ-127			Responsives Design für Authentifizerung
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Der User soll sich mit Desktop, Tablet und Smartphone authentifizieren können
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+-----------------------------------------------------------------------------------------------------------------
+
+<!--mit dieser Anforderung kann man aufgehängt werden. ### NFREQ-128			Browser Kompatibilität der Authentifizierung des Users
+
+--------------------	-----------------------------------------------------------------------------------------
+__UC-Referenz__         UC-25, UC-21, UC22
+
+__Beschreibung__        Möglichst viele User sollen an einer Authentifizierung teilnehmen können. Daher muss die Authentifizerungs des Users folgende Browser unterstützen:
+
+
+__Techn. Risiko__       Sehr hoch
+
+__Business Value__     	Mittel
+------------------------------------------------------------------------------------------------------------------ -->
 
 ### NFREQ-130			Performance
 
@@ -431,7 +447,7 @@ __Business Value__     	Mittel
 ### NFREQ-132			Skalierbar
 
 --------------------	-----------------------------------------------------------------------------------------
-__UC-Referenz__         UC-31
+__UC-Referenz__         UC-31, UC-25, UC-21, UC22
 
 __Beschreibung__        Das System soll eine hohe Skalierbarkeit aufweisen. 
 

@@ -1,6 +1,6 @@
 #Proof Of Concept
 
-Das Ziel des Prototyps ist es, zu zeigen, dass das Architekturkonzept auch umsetzbar und sinnvoll ist. Des Weiteren wird dabei die Entscheidung über die Auswahl der geeigneten Technologie überprüft. Ausserdem hilft der Prototyp, Probleme im Architekturkonzept zu erkennen und zu beheben.
+Das Ziel der Implementation des Prototyps ist es, zu zeigen, dass das Architekturkonzept auch umsetzbar und sinnvoll ist. Des Weiteren wird dabei die Entscheidung über die Auswahl der geeigneten Technologie überprüft. Ausserdem hilft der Prototyp, Probleme im Architekturkonzept zu erkennen und zu beheben.
 
 ##Techologien
 
@@ -19,6 +19,7 @@ Neben Grundprinzipen der objektorientierten Programmierung resultiert aus folgen
 
 Der C#-Erstellungsprozess ist im Vergleich zu C und C++ einfach und flexibler als in Java. Es gibt keine separaten Headerdateien und es ist nicht erforderlich, Methoden und Typen in einer bestimmten Reihenfolge zu deklarieren. Eine C#-Quelldatei kann eine beliebige Anzahl von Klassen, Strukturen, Schnittstellen und Ereignissen definieren. [^csharpbasic]
 
+\newpage
 ###ASP.net Web API 2 / ASP.net MVC Framework
 Microsoft entwickelte mit dem ASP.net MVC Framework ein schlankes und einfach zu testendes Präsentationsframework. Wie im Namen enthalten basiert das Framework auf dem MVC-Pattern.
 Die klare Trennung von Eingabelogik, Geschftslogik und Präsentationslogik wird durch die vom Framework bereitgestellten Komponenten unterstützt.
@@ -28,7 +29,7 @@ Um RESTful-Webservices einfach entwickeln zu können stellt Microsoft mit ASP.ne
 [^csharpbasic]: [@csharpbasic]
 [^aspnetbasic]: [@csharpbasic]
 
-\newpage
+
 ###Entity Framework
 Entity Framework (EF) ist eine objektrelationale Zuordnung, die .NET-Entwicklern über domänenspezifische Objekte die Nutzung relationaler Daten ermöglicht. Ein Grossteil des Datenzugriffscodes, den Entwickler normalerweise programmieren, muss folglich nicht geschrieben werden. [^efbasic]
 
@@ -51,18 +52,20 @@ Zwischen der AngularJS WebApp und dem Webservice dient JSON(JavaScript Object No
 [^efbasic]: [@efbasic]
 [^angularjsbasic]: [@angularjsbasic]
 
-##Entwicklungsumgebungen
-###VisualStudio
+###Entwicklungswerkezeuge
+Da die Entwicklungssprache C# verwendet wird, liegt es nahe das Entwicklungswerkezeug VisualStudio einzusetzen. Der Student hat während Studium die JetBrains Entwicklungsplattform PHPStorm kennen gelernt. Daher wird für die Entwicklung der JavaScript-Webapplikationen PHPStorm eingesetzt.
 
 
 \newpage
+
 
 ## Umsetzung Sicherheitsstufe
 ### Plugin Entwicklung
 Die Entwicklung einer Sicherheitstufe wird wie im Konzept unter[Modularität und Erweiterbarkeit] vorgesehen losgelöst und unabhängig entwickelt. Pro Sicherheitstufe werden 3 VisualStudio Projekte angelegt. 
 Im Hauptprojekt der Sicherheitstufe wird die klassiche Runtimeumgebung für Webprojekte mit den benötigten Standartreferenzen und Templates für Microsoft MVC und Microsoft WebAPI aufgesetzt. Das PlugIn kann in diesem Projekt ohne Authentifizierungsservice entwickelt und  ausgeführt werden. 
 Das Testprojekt stellt die Lauffähigkeit der im Hauptprojekt entwickelten Implementationen sicher. Um die Entwicklungen im Hauptprojekt als DLL-Klassenbibliothek zu generieren die ClassLibary-Projekt. In diesem werden die entwickelten Klassen aus dem Hauptprojekt verlinkt. Bei vorhandensein aller nötigen Referenzen und verlinkungen erstellt die ClassLibary bei einem Build die DLL-Klassenbibliothek unser PlugIn.
-![Screenshot VisualStudio der 3 Projekte der Sicherheitsstufe E-Mail](images/visualstudio_securitystep.jpg)
+
+![Screenshot VisualStudio der 3 Projekte der Sicherheitsstufe E-Mail](images/visualstudio_securitystep.png)
 
 ### Interface - Vertrag mit den Sicherheitsstufen
 Für den Endbenutzer startet der Authentifizierungsprozess mit öffnnen der Authentifizierung-Lightbox. Dabei wird die Action "Validate/Check" des Authentifizierungsservice aufgerufen. Diese zentrale Funktionalität überprüft den Status der Verifizierung und ruft die nötigen Sicherheitstufen auf.
@@ -70,8 +73,21 @@ Für den Endbenutzer ist der Ablauf der Authentifizierung pro Sicherheitsstufe s
 Damit die Action "Validate/Check" übperüfen kann, ob die Authentifizierung der Sicherheitsstufe erfolgreich war oder zum ersten oder wiederholten mal ausgeführt werden sollte, wir die Methode "checkIsValidated" pro Sicherheitsstufe implementiert. Diese Funktion teil basierend auf den übergebenen Parameter ProjektID und ProviderID mit ob die Validierung erfolgreich ist.
 Das MEF-Contracts Interface aller Sicherheitsstufen enthält ausserdem zwei Methoden zum Abfrage und Speicherung individuellen Konfiguration der Sichstufen und die Methode zur Abfrage der Vergleichsparameter.
 
-![ISecurityStep](images/code/ISecurityStep.jpg)
+![ISecurityStep](images/code/ISecurityStep.png)
 
+###Visualisierung
+##Auswahl des Anzeige-Frameworks
+Nach Anforderung [NFREQ-127] und den Kapitel [Mockup] soll die Authentifizierung-Lightbox <!-- und der Konfigurator--> responsive umgesetzt werden. Bootstrap unterstützt den Entwickler bei der visualisierung von Webapplikationen. AngularJS unterstützt seit Anfang an Bootstrap. Mit dem PlugIn AngularJS Boostrap UI stehen erweiterte Bootstrap Funktionalitäten wie Datetime-Picker zur Verfügung. Der Student hat bereits mehrfach Webseiten und Webapplikationen basierend auf Bootstrap umgesetzt. Deshalb fällt die Auswahl auf das mit bekannte Responsive-Framework bootstrap. Neben der Responsiven Unterstützung mit hilfe des Grid-System stehen dem Entwickler umgesetzte Vorlagen für die meistgenutzten Webkomponenten zur Verfügung. Diese können dank zentraler Parametrisierung rasch konfiguriert und individualisiert werden.
+
+##Visualisierung von Daten
+Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework eingesetzt. Die drei bekannten Charting-Frameworks GoogleCharts, ChartJs und D3 wurden verglichen. GoogleCharts und D3 visaulisieren in SVG. ChartJS visualisiert in Canvas. Ein eindeutiger Vorteil der beiden Konzepte für den Authentifizierungs-Konfigurator ist nicht zu nennen. Alle drei Charting-Frameworks können mit AngularJS integriert werden. GoogleCharts und ChartJs bieten fixfertige Direktiven[^Directiven] an. Damit ist die Integration in AngularJS der beiden Frameworks im Gegensatz zu D3 direkt möglich. Alle drei Charting-Framework bieten die benötigten Diagramme an. ChartJs hat das kleinste Code-Pakat (5KB) und wirkt in den Code deutlich einfacher und aufgeräumter. Visuell passt ChartJs mit den leichten Animationen am besten zum Authentifizierungs-Konfigurator. Zur Visualisierung wird ChartJS verwendet. Die AngularJS-Direktive, der einfache Code, das kleine Paket und die visuelle Umsetzung führen zu diesem Entscheid.
+
+
+
+
+
+[^Directiven]: Angular ermöglicht es, benutzerdefinierte HTML-Elemente und -Attribute, so genannte Direktiven, zu erstellen
+\newpage
 
 
 ## Finale Screens
@@ -87,16 +103,32 @@ Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer 
 
 
 ## Implementation Authentifizierung
+### Aufruf der Lightbox
 Die Implementation der Authentifizierung ist wie im Kapitel [Integrationskonzept] festgelegt, lean umgesetzt worden. Alle CSS-Befehle können von einer Datei abegrufen werden. Die Javascript-Entwicklungen sind in einem File öffentlich verfügbar. Um keine Konflikte mit bereits auf der Webseite implementierten jQuery Bibliotheken zu erhalten wird diese jQuery nicht im Authentifizierungsjavascript mitgeliefert.
 
-![HTML-Beispiel Implementation der Authentifizierung](images/code/implementation_lightbox.jpg)
-implementation_lightbox 
+![HTML-Beispiel Implementation der Authentifizierung](images/code/implementation_lightbox.png)
+
+### Gegeprüfung der Authentifizierung
+Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert und kann unter http://iaauth.azurewebsites.net/api/Validate mit den Parameter ProjectId und ProviderId konsumiert werden.
+
+
+###WordPressPlugIn / Erweiterung WP-Poll
+Die Implementation in einem neuerstellten Testprojekt ist erfolgreich. Das umgesetzte Implentationskonzept soll nun auch in einer bestehenden Webapplikation integriert werden. Daher soll das verbreitete Umfrage Modul WP_Poll aus dem Kapitel [Wordpress PlugIn Hook] eine Implementation der Authentifizierung-Lightbox erhalten. Dafür wurde eine neue Wordpress installation mit einem Standartlayout aufgesetzt und das PlugIn integriert. Statt den Code hardkodiert zu integrieren, wurde ein eigenes PlugIn entworfen dass nun mit minimaler Konfiguration wieder verwendet werden kann. Die Integration ist erfolgreich integriert und auf dem github Account verlinkt.[^demo-github]
+
+
+<TODOO--Screenshots-->
+
+[^demo-github]: https://github.com/coffeefan/bachelorarbeit
+
+
 
 
 [^Mockups-Konfigurator]: Siehe Kapitel [Konfigurator Template]
 [^Mockups-Authentifizierungs-Lightbox]: Siehe Kapitel [Authentifizierungs-Lightbox Template]
+
+\newpage
 ##Testing
-#Unit-Test Sicherheitsstufe und Authentifizierungsservice
+###Unit-Test Sicherheitsstufe und Authentifizierungsservice
 Die verschiedenen Sicherheitsstufen könnenen unabhängig geprüft werden. Jede Sicherheitstufe hat ein eigenes Testprojekt. Die verschiedenen Testprojekte der Sicherheitsstufen und das Testprojekt des Authentifizierungsservice basieren auf dem Template des Visual Studio 2015 Unit-Test Frameworks. Die Unit-Tests sind direkt im Visual Studio eingebetet. 
 
 ![Screenshot Unit-Test E-Mail Sicherheitsstufe](images/screenshot_test.jpg)

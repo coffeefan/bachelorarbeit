@@ -630,7 +630,13 @@ webbasiertes Visio gehandelt. Seit dem letzten Release ist Draw.io ohne
 Einschränkung gratis verwendbar. Die gezeichneten Diagramme können
 direkt im Daten-Cloud Dienst Google Drive gespeichert werden.
 
-\textless{}
+\subsection{Infrastruktur Entwicklung}\label{infrastruktur-entwicklung}
+
+Die Infrastruktur welche zur Entwicklung verwendet wird, kann je nach
+Anforderung und Konzeption varieren. Die verwendete Infrastruktur wird
+deshalb im Kapitel
+\protect\hyperlink{entwicklungswerkezeuge}{Entwicklungswerkezeuge}
+aufgelistet.
 
 \newpage
 
@@ -2422,13 +2428,13 @@ System eingebunden werden können.
 \textbf{Techn. Risiko}
 \strut\end{minipage} &
 \begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
-Sehr hoch
+Mittel
 \strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
 \textbf{Business Value}
 \strut\end{minipage} &
 \begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
-Mittel
+hoch
 \strut\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
@@ -2499,6 +2505,39 @@ Mittel
 \bottomrule
 \end{longtable}
 
+\subsection{NFREQ-127 Responsives Design für
+Authentifizerung}\label{nfreq-127-responsives-design-fuxfcr-authentifizerung}
+
+\begin{longtable}[c]{@{}ll@{}}
+\toprule
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{UC-Referenz}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+UC-25, UC-21, UC22
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Beschreibung}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Der User soll sich mit Desktop, Tablet und Smartphone authentifizieren
+können
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Techn. Risiko}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Sehr hoch
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\textbf{Business Value}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
+Mittel
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
 \subsection{NFREQ-130 Performance}\label{nfreq-130-performance}
 
 \begin{longtable}[c]{@{}ll@{}}
@@ -2539,7 +2578,7 @@ Mittel
 \textbf{UC-Referenz}
 \strut\end{minipage} &
 \begin{minipage}[t]{0.74\columnwidth}\raggedright\strut
-UC-31
+UC-31, UC-25, UC-21, UC22
 \strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
 \textbf{Beschreibung}
@@ -2616,9 +2655,9 @@ Das Wort ``verschieden'' wurde durch folgende Aspekte mit dem
 Auftraggeber definiert: Abgeleitet von der Aufgabenstellung sind Aspekte
 ``Mehrfachteilnahme'' und ``Automatisierung'' definiert worden. Beide
 Aspekte können durch eine Sicherheitsstufe mehr oder weniger verhindern
-werden. Abhängig von der Interaktivität ist es wirtschaftlich sinnvoll,
-dass Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten ein
-Aspekt. Ein weiterer Aspekt ist der Aufwand für den Benutzer.
+werden. Abhängig von der Art der Interaktivität ist es wirtschaftlich
+sinnvoll, dass Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten
+ein Aspekt. Ein weiterer Aspekt ist der Aufwand für den Benutzer.
 \strut\end{minipage}\tabularnewline
 \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
 \textbf{Techn. Risiko}
@@ -2978,7 +3017,8 @@ Basierend auf diesen statistischen Erkenntnissen lohnt es sich die
 Wordpress Welt kennen zu lernen und recherchieren wie dort eine
 Authentifizierungsschnittstelle eingebunden werden könnte.
 
-\subsection{Wordpress PlugIn Hook}\label{wordpress-plugin-hook}
+\hypertarget{wordpress-plugin-hook}{\subsection{Wordpress PlugIn
+Hook}\label{wordpress-plugin-hook}}
 
 Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können
 direkt über das CMS-Backend eingespielt werden. Alternativ können Sie
@@ -3375,6 +3415,20 @@ Beispiel: 30045+12+BUQHFMNZ4P3T8XNVN0LK
 Der daraus resultierende String wird mit MD5 verschlüsselt.
 
 Beim Beispiel gäbe es die Signatur b37b3d4cd7cd8cba3f409f07d6f6d9bd
+
+\hypertarget{schlussspeicherung}{\subsection{Schlussspeicherung}\label{schlussspeicherung}}
+
+Nach Abschluss der Authentifizierung erhält der User visualisiert ein
+Feedback. Sofern die Authentifizierung erfolgreich war, wird im
+Hintergrund die im Konfigurator angegebene Url des Anbieters aufgerufen.
+Über die Post-Parameter ProjectId, ProviderID erfährt die
+Serverapplikation um welchen Datensatz es sich handelt. Die Gefahr
+besteht, dass diese Redirect-Url auch von einem anderen Programm
+aufegrufen werden könnte. Deshalb kann die Serverapplikation des
+Anbieters die Validate WebAPI des Authentifizierungsservice aufrufen und
+die erhaltenen Daten gegeprüfen. Bei erfolgreicher gegenprüfung gilt der
+Datensatz seitens Anbieter auch als valide und kann dan persistiert
+werden.
 
 \newpage
 
@@ -3810,7 +3864,7 @@ dem Authenifizierungsservice und den Sicherheitsstufen.
 
 \newpage
 
-\section{Mockup}\label{mockup}
+\hypertarget{mockup}{\section{Mockup}\label{mockup}}
 
 Ein Mockup ist eine grobe Vorlage für die Design-Umsetzung. Es ist eine
 ideale Möglichkeit das visuelle Konzept ab zu bilden und mit dem
@@ -3865,6 +3919,8 @@ Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den
 Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über
 die linke Spalte einheitlich und einfach umsetzbar.
 
+\newpage
+
 \subsubsection{Inhaltaufbau}\label{inhaltaufbau}
 
 Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und
@@ -3887,19 +3943,24 @@ Content der ``Card'' zu erwarten ist. \footnote{Weitere Informationen
 \caption{Aufbau Inhalt im Card-Design}
 \end{figure}
 
+\newpage
+
 \hypertarget{authentifizierungs-lightbox-template}{\subsection{Authentifizierungs-Lightbox
 Template}\label{authentifizierungs-lightbox-template}}
 
-\begin{figure}[htbp]
-\centering
-\includegraphics{images/mockups/Kundenimplementation-Desktop.png}
-\caption{Aufbau Inhalt im Card-Design}
-\end{figure}
+Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der
+Endbenutzer kann ein geringes technische Know-How besitzen. Deshalb muss
+das Design einen Bereich schaffen in diesem die zu tätigenden Schritte
+erklärt werden können. Die Möglichkeiten und Anzahl Schritte sollen auf
+ein Minimum gehalten werden. Im Besten Fall kann der User eine Eingabe
+machen und dies mit einem Knopf bestätigen. Damit der Endbenutzer
+fokusiert bleibt soll, wie bei einer Lightbox üblich, der Rest der Seite
+abgedunkelt werden.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{images/mockups/Kundenimplementation-Mobile.png}
-\caption{Aufbau Inhalt im Card-Design}
+\includegraphics{images/mockups/authenticationlightbox.jpg}
+\caption{Mockup Konfigurator Template Mobile}
 \end{figure}
 
 \subsection{Hinweis zur Zusammenarbeit mit dem
@@ -3907,9 +3968,113 @@ Auftraggeber}\label{hinweis-zur-zusammenarbeit-mit-dem-auftraggeber}
 
 Die hier abgebildeten Mockups und weitere Ansichten sind das Ergebnis
 aus den Absprache mit dem Auftraggeber. Sie sind vom Auftraggeber
-abgenommen und zur Impelmentation freigegeben\footnote{Alle Freigaben
-  sind in der Beilage-Datei oder auf dem gihtub-Account einsehbar
-  \newpage}
+abgenommen und zur Impelmentation freigegeben
+
+\newpage
+
+\section{\texorpdfstring{``Du'' oder ``Sie'' --
+Ansprache}{Du oder Sie -- Ansprache}}\label{du-oder-sie-ansprache}
+
+Die Definition ob der Benutzer im Userinterface mit Du oder Sie
+angesprochen werden soll muss laut Jutta Beyer vorgängig klar geregelt
+sein.\footnote{\autocite{dusieansprache}} Eine einheitliche
+Kommunikation auf der Plattform ist unabdingbar.
+
+\subsection[Bestehende Vorurteile]{\texorpdfstring{Bestehende
+Vorurteile\footnote{\autocite{dusieansprache}}}{Bestehende Vorurteile}}\label{bestehende-vorurteiledusieansprache}
+
+\begin{longtable}[c]{@{}lll@{}}
+\caption{Auflistung von Vorurteilen}\tabularnewline
+\toprule
+\begin{minipage}[b]{0.13\columnwidth}\raggedright\strut
+\textbf{Art}
+\strut\end{minipage} &
+\begin{minipage}[b]{0.39\columnwidth}\raggedright\strut
+\textbf{Positiv}
+\strut\end{minipage} &
+\begin{minipage}[b]{0.40\columnwidth}\raggedright\strut
+\textbf{Negativ}
+\strut\end{minipage}\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{0.13\columnwidth}\raggedright\strut
+\textbf{Art}
+\strut\end{minipage} &
+\begin{minipage}[b]{0.39\columnwidth}\raggedright\strut
+\textbf{Positiv}
+\strut\end{minipage} &
+\begin{minipage}[b]{0.40\columnwidth}\raggedright\strut
+\textbf{Negativ}
+\strut\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
+\textbf{Du}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.39\columnwidth}\raggedright\strut
+Du steht für\\
+- Vertrautheit\\
+- Verbundenheit\\
+- Modern\\
+\strut\end{minipage} &
+\begin{minipage}[t]{0.40\columnwidth}\raggedright\strut
+Du steht aber auch für\\
+- weniger Respekt\\
+- weniger Kompetenz\\
+- ``Stammtischniveau''\\
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.13\columnwidth}\raggedright\strut
+\textbf{Sie}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.39\columnwidth}\raggedright\strut
+Sie steht für\\
+- Respekt\\
+- Kompetenz\\
+- Seriösität\\
+\strut\end{minipage} &
+\begin{minipage}[t]{0.40\columnwidth}\raggedright\strut
+Sie steht aber auch für\\
+- Distanz\\
+- Altmodische Eisntellungen\\
+- Emotionslos\\
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+Diese Wahrnehmungen sind nicht stichhaltig noch weniger können die
+Rückschlüsse stimmen. Dennoch müssen diese Ansichten, zum Teil
+entstanden aus Kultur und Tradition, ernstgenommen werden, da sie in
+unseren Köpfen tief verankert sind. Kinder werden beigebracht das man
+Fremde mit ``Sie'' an spricht. In der Familie, die Geborgenheit und
+Vertrautheit ausstrahlt, ist das ``Du'' normal. Gegenüber Lehrern und
+anderen Autoritätspersonen sollte das Kind aber ``Sie'' sagen. Also
+redet das Kind auch im erwachsenen Alter Erwachsene, vor denen es
+zugleich Respekt haben sollte, mit ``Sie'' an.
+
+Eine generelle Antwort zur Verwendung Du oder Sie auf Webseiten kann
+also nicht gemacht werden. Im Jahre 2011 wurden von statista Personen
+aus Deutschland gefragt ``Wie möchten Sie in Social Media von
+Unternehmen angesprochen werden?''. Dabei möchten 44\% der befragten per
+Sie angesprochen. Einem grossen Teil (43\%) ist die Ansprache egal und
+13\% würde sich eine Du-Ansprache bevorzugen.\footnote{\autocite{statistadusie}}
+
+\newpage
+
+\subsubsection{Entscheidung}\label{entscheidung-2}
+
+Die Authentifizierung welche vom Endbenutzer durchgeführt wird darf
+ruhig sprachlich distanziert und emotionslos wirken. Vielmehr sind
+Respekt, Kompetenz und Seriösität wichtige Eckpunkte dieses Produkts.
+Deshalb wird in der Authentifizierung der Endbenutzer falls nötig mit
+Sie angesprochen. Der Konfigurator wird durch Programmierer
+administriert. Hier gilt es zu vermitteln, dass der Programmierer sich
+angenommen und unterstützt in seinem Problemen / Herausforderungen
+fühlt. Das Produkt soll zeitgemäss und trendig sein. Deshalb wird mit
+hier die Kommunikation über Du geführt. Dies wird unterstützt das unter
+Programmierern auch in der Wirtschaft mehrheitlich geduzt wird.
+
+\newpage
 
 \section{Wahl des Applikation
 Hosters}\label{wahl-des-applikation-hosters}
@@ -3941,7 +4106,7 @@ z.b. über ein Docker Image könnte auch ein Schweizer Anbieter
 berücksichtigt werden. Die genutzten Serverdienste können komplett an
 seinen eigenen Bedürfnissen angepasst werden.
 
-\subsection{Entscheidung}\label{entscheidung-2}
+\subsection{Entscheidung}\label{entscheidung-3}
 
 Die in {[}NFREQ-132{]} geforderte Skalierbarkeit, nutzungsabhängige
 Kosten, Freiheit in der Serverdienst-Konfiguration überwiegen der
@@ -3971,7 +4136,7 @@ gleich über die Fehleingabe aufmerksam gemacht. Im Konfigurator, eine
 AngularJS-App ist die benutzerseitige Validierung mittels HTML5 Form
 Validation umgesetzt worden.
 
-\hypertarget{testing}{\section{Testing}\label{testing}}
+\section{Testing}\label{testing}
 
 Die gewählte Architektur sowie Dependency Injection vereinfachen das
 Testing.
@@ -3992,7 +4157,7 @@ so soll auch diese getestet werden.
 
 \subsection{Repository Pattern}\label{repository-pattern}
 
-Wie im Kapitel\protect\hyperlink{testing}{Testing} beschrieben, sollte
+Wie im Kapitel\protect\hyperlink{testing-1}{Testing} beschrieben, sollte
 eine Möglichkeit geschaffen werden Datenbanken losgelöst zu testen.
 Dafür wir das Repository-Pattern eingesetzt. Das Repository-Pattern
 sieht vor, dass jedes POCO-Objekt genau eine Schnittstelle hat, an denen
@@ -4034,11 +4199,11 @@ erstellt.
 
 \chapter{Proof Of Concept}\label{proof-of-concept}
 
-Das Ziel des Prototyps ist es, zu zeigen, dass das Architekturkonzept
-auch umsetzbar und sinnvoll ist. Des Weiteren wird dabei die
-Entscheidung über die Auswahl der geeigneten Technologie überprüft.
-Ausserdem hilft der Prototyp, Probleme im Architekturkonzept zu erkennen
-und zu beheben.
+Das Ziel der Implementation des Prototyps ist es, zu zeigen, dass das
+Architekturkonzept auch umsetzbar und sinnvoll ist. Des Weiteren wird
+dabei die Entscheidung über die Auswahl der geeigneten Technologie
+überprüft. Ausserdem hilft der Prototyp, Probleme im Architekturkonzept
+zu erkennen und zu beheben.
 
 \section{Techologien}\label{techologien}
 
@@ -4081,7 +4246,9 @@ flexibler als in Java. Es gibt keine separaten Headerdateien und es ist
 nicht erforderlich, Methoden und Typen in einer bestimmten Reihenfolge
 zu deklarieren. Eine C\#-Quelldatei kann eine beliebige Anzahl von
 Klassen, Strukturen, Schnittstellen und Ereignissen definieren.
-\footnote{Quelle:\autocite{csharpbasic}}
+\footnote{\autocite{csharpbasic}}
+
+\newpage
 
 \subsection{ASP.net Web API 2 / ASP.net MVC
 Framework}\label{asp.net-web-api-2-asp.net-mvc-framework}
@@ -4094,9 +4261,7 @@ Framework bereitgestellten Komponenten unterstützt. Um
 RESTful-Webservices einfach entwickeln zu können stellt Microsoft mit
 ASP.net Web API 2 eine einfache zu verwendendes und starkes Software
 Paket zur Verfügung. ASP.net Web API 2 basiert auf dem ASP.net MVC
-Framework. \footnote{Quelle:\autocite{csharpbasic}}
-
-\newpage
+Framework. \footnote{\autocite{csharpbasic}}
 
 \subsection{Entity Framework}\label{entity-framework-1}
 
@@ -4104,7 +4269,7 @@ Entity Framework (EF) ist eine objektrelationale Zuordnung, die
 .NET-Entwicklern über domänenspezifische Objekte die Nutzung
 relationaler Daten ermöglicht. Ein Grossteil des Datenzugriffscodes, den
 Entwickler normalerweise programmieren, muss folglich nicht geschrieben
-werden. {[}\^{}efbasic{]}
+werden. \footnote{\autocite{efbasic}}
 
 \subsection{Grunt}\label{grunt}
 
@@ -4116,7 +4281,7 @@ und bei Änderungen die oben genannten Tasks automatisch ausführt.
 
 \subsection{AngularJS}\label{angularjs}
 
-Mittels AngularJS wird die Client-Browser App entwickelt. AngularJS ist
+Mittels AngularJS ist die Client-Browser App entwickelt. AngularJS ist
 ein Javascript Framework, welches OpenSource von Google Inc.
 veröffentlicht wurde. AngularJS macht einen Grossteil des Codes, den man
 normalerweise schreibt, überflüssig. Die Reduktion des Codes begründet
@@ -4129,15 +4294,34 @@ Die normalen Datentypen von JavaScript können verwendet werden. Dadurch
 ist es sehr einfach möglich, fremde Bibliotheken einzubinden, ohne eine
 weitere Zwischenschicht (Glue Code) zu implementieren. Die Methode, die
 AngularJS dazu verwendet nennt sich Dirty-Checking und wird im
-Vertiefungskapitel näher erklärt.{[}\^{}angularjsbasic{]}
+Vertiefungskapitel näher erklärt.\footnote{\autocite{angularjsbasic}}
+
+\subsection{jQuery}\label{jquery}
+
+jQuery ist ein die meistverwendete Javascript-Bibliothek. jQuery wird
+bei 68\% aller Webseiten\footnote{\autocite{w3techweb2015}} eingesetzt.
+jQuery stellt unter anderem Funktion zur einfachen DOM-Manipulation,
+Event-Behandlung und Ajax-Komunikation zur Verfügung. Entwicklungen von
+grösseren Javascript Projekten ist mit jQuery einfacher als mit blankem
+Javascript jedoch zeitintensiver als mit Javascript Frameworks wie
+AngularJS. Dafür hat jQuery eine höhrere Browserkompatibilität. Die
+Kompatibilität der Authentifizierung des Endbenutzer ist wichtig um eine
+grosse Verbreitung zu erreichen. Deshalb wird die Authentifizierung des
+Endbenutzer mit jQuery umgesetzt.
 
 \subsection{JSON}\label{json}
 
 Zwischen der AngularJS WebApp und dem Webservice dient JSON(JavaScript
 Object Notation) als Datenübertragungsformat. JSON zeichnet sich durch
-seine schlanke Notation und der objektnahen Darstellung aus
-{[}\^{}efbasic{]}: Quelle \autocite{efbasic} {[}\^{}angularjsbasic{]}:
-Quelle \autocite{angularjsbasic}
+seine schlanke Notation und der objektnahen Darstellung aus.
+
+\hypertarget{entwicklungswerkezeuge}{\subsection{Entwicklungswerkezeuge}\label{entwicklungswerkezeuge}}
+
+Da die Entwicklungssprache C\# verwendet wird, liegt es nahe das
+Entwicklungswerkezeug VisualStudio einzusetzen. Der Student hat während
+Studium die JetBrains Entwicklungsplattform PHPStorm kennen gelernt.
+Daher wird für die Entwicklung der JavaScript-Webapplikationen PHPStorm
+eingesetzt.
 
 \newpage
 
@@ -4159,7 +4343,13 @@ DLL-Klassenbibliothek zu generieren die ClassLibary-Projekt. In diesem
 werden die entwickelten Klassen aus dem Hauptprojekt verlinkt. Bei
 vorhandensein aller nötigen Referenzen und verlinkungen erstellt die
 ClassLibary bei einem Build die DLL-Klassenbibliothek unser PlugIn.
-\includegraphics{images/visualstudio_securitystep.jpg}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/visualstudio_securitystep.png}
+\caption{Screenshot VisualStudio der 3 Projekte der Sicherheitsstufe
+E-Mail}
+\end{figure}
 
 \subsection{Interface - Vertrag mit den
 Sicherheitsstufen}\label{interface---vertrag-mit-den-sicherheitsstufen}
@@ -4189,9 +4379,48 @@ Vergleichsparameter.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{images/code/ISecurityStep.jpg}
+\includegraphics{images/code/ISecurityStep.png}
 \caption{ISecurityStep}
 \end{figure}
+
+\subsection{Visualisierung}\label{visualisierung}
+
+\section{Auswahl des
+Anzeige-Frameworks}\label{auswahl-des-anzeige-frameworks}
+
+Nach Anforderung {[}NFREQ-127{]} und den Kapitel
+\protect\hyperlink{mockup}{Mockup} soll die Authentifizierung-Lightbox
+responsive umgesetzt werden. Bootstrap unterstützt den Entwickler bei
+der visualisierung von Webapplikationen. AngularJS unterstützt seit
+Anfang an Bootstrap. Mit dem PlugIn AngularJS Boostrap UI stehen
+erweiterte Bootstrap Funktionalitäten wie Datetime-Picker zur Verfügung.
+Der Student hat bereits mehrfach Webseiten und Webapplikationen
+basierend auf Bootstrap umgesetzt. Deshalb fällt die Auswahl auf das mit
+bekannte Responsive-Framework bootstrap. Neben der Responsiven
+Unterstützung mit hilfe des Grid-System stehen dem Entwickler umgesetzte
+Vorlagen für die meistgenutzten Webkomponenten zur Verfügung. Diese
+können dank zentraler Parametrisierung rasch konfiguriert und
+individualisiert werden.
+
+\section{Visualisierung von Daten}\label{visualisierung-von-daten}
+
+Um die Umfrageergebnisse visualisieren zu können wird ein
+Charting-Framework eingesetzt. Die drei bekannten Charting-Frameworks
+GoogleCharts, ChartJs und D3 wurden verglichen. GoogleCharts und D3
+visaulisieren in SVG. ChartJS visualisiert in Canvas. Ein eindeutiger
+Vorteil der beiden Konzepte für den Authentifizierungs-Konfigurator ist
+nicht zu nennen. Alle drei Charting-Frameworks können mit AngularJS
+integriert werden. GoogleCharts und ChartJs bieten fixfertige
+Direktiven\footnote{Angular ermöglicht es, benutzerdefinierte
+  HTML-Elemente und -Attribute, so genannte Direktiven, zu erstellen
+  \newpage} an. Damit ist die Integration in AngularJS der beiden
+Frameworks im Gegensatz zu D3 direkt möglich. Alle drei
+Charting-Framework bieten die benötigten Diagramme an. ChartJs hat das
+kleinste Code-Pakat (5KB) und wirkt in den Code deutlich einfacher und
+aufgeräumter. Visuell passt ChartJs mit den leichten Animationen am
+besten zum Authentifizierungs-Konfigurator. Zur Visualisierung wird
+ChartJS verwendet. Die AngularJS-Direktive, der einfache Code, das
+kleine Paket und die visuelle Umsetzung führen zu diesem Entscheid.
 
 \section{Finale Screens}\label{finale-screens}
 
@@ -4214,16 +4443,12 @@ Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den
 Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens welche
 von den Mockups\footnote{Siehe Kapitel
   \protect\hyperlink{authentifizierungs-lightbox-template}{Authentifizierungs-Lightbox
-  Template} \#\#Testing \#Unit-Test Sicherheitsstufe und
-  Authentifizierungsservice Die verschiedenen Sicherheitsstufen könnenen
-  unabhängig geprüft werden. Jede Sicherheitstufe hat ein eigenes
-  Testprojekt. Die verschiedenen Testprojekte der Sicherheitsstufen und
-  das Testprojekt des Authentifizierungsservice basieren auf dem
-  Template des Visual Studio 2015 Unit-Test Frameworks. Die Unit-Tests
-  sind direkt im Visual Studio eingebetet.} abgeleitet wurden.
+  Template}} abgeleitet wurden.
 
 \section{Implementation
 Authentifizierung}\label{implementation-authentifizierung}
+
+\subsection{Aufruf der Lightbox}\label{aufruf-der-lightbox}
 
 Die Implementation der Authentifizierung ist wie im Kapitel
 \protect\hyperlink{integrationskonzept}{Integrationskonzept} festgelegt,
@@ -4233,8 +4458,52 @@ verfügbar. Um keine Konflikte mit bereits auf der Webseite
 implementierten jQuery Bibliotheken zu erhalten wird diese jQuery nicht
 im Authentifizierungsjavascript mitgeliefert.
 
-\includegraphics{images/code/implementation_lightbox.jpg}
-implementation\_lightbox
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/code/implementation_lightbox.png}
+\caption{HTML-Beispiel Implementation der Authentifizierung}
+\end{figure}
+
+\subsection{Gegeprüfung der
+Authentifizierung}\label{gegepruxfcfung-der-authentifizierung}
+
+Nach Abschluss der Authentifizierung erhält der User visualisiert ein
+Feedback. Wie im Kapitel
+\protect\hyperlink{schlussspeicherung}{Schlussspeicherung} im
+Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom
+Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der
+Webservice Validate zur Verfügung. Der Webservice wurde implementiert
+und kann unter http://iaauth.azurewebsites.net/api/Validate mit den
+Parameter ProjectId und ProviderId konsumiert werden.
+
+\subsection{WordPressPlugIn / Erweiterung
+WP-Poll}\label{wordpressplugin-erweiterung-wp-poll}
+
+Die Implementation in einem neuerstellten Testprojekt ist erfolgreich.
+Das umgesetzte Implentationskonzept soll nun auch in einer bestehenden
+Webapplikation integriert werden. Daher soll das verbreitete Umfrage
+Modul WP\_Poll aus dem Kapitel
+\protect\hyperlink{wordpress-plugin-hook}{Wordpress PlugIn Hook} eine
+Implementation der Authentifizierung-Lightbox erhalten. Dafür wurde eine
+neue Wordpress installation mit einem Standartlayout aufgesetzt und das
+PlugIn integriert. Statt den Code hardkodiert zu integrieren, wurde ein
+eigenes PlugIn entworfen dass nun mit minimaler Konfiguration wieder
+verwendet werden kann. Die Integration ist erfolgreich integriert und
+auf dem github Account verlinkt.\footnote{https://github.com/coffeefan/bachelorarbeit}
+
+\newpage
+
+\hypertarget{testing-1}{\section{Testing}\label{testing-1}}
+
+\subsection{Unit-Test Sicherheitsstufe und
+Authentifizierungsservice}\label{unit-test-sicherheitsstufe-und-authentifizierungsservice}
+
+Die verschiedenen Sicherheitsstufen könnenen unabhängig geprüft werden.
+Jede Sicherheitstufe hat ein eigenes Testprojekt. Die verschiedenen
+Testprojekte der Sicherheitsstufen und das Testprojekt des
+Authentifizierungsservice basieren auf dem Template des Visual Studio
+2015 Unit-Test Frameworks. Die Unit-Tests sind direkt im Visual Studio
+eingebetet.
 
 \begin{figure}[htbp]
 \centering
@@ -4614,7 +4883,7 @@ Bachelorarbeit dokumentiert, mehrfach an einer Umfrage teilzunehmen. Die
 Hypothese wird aufgestellt, dass ein Teilnehmer mit genügend technischem
 Know-How insbesondere bei diesem Umfragethema mehrfach teilnehmen wird.
 
-\chapter{Weitere Fragen}\label{weitere-fragen}
+\section{Weitere Fragen}\label{weitere-fragen}
 
 Weiter werden die 3 Eigenschftsfragen gestellt. Dabei soll Alter,
 Geschlecht und ob es sich um einen Schweizer oder Bewohner der Schweiz
@@ -4673,7 +4942,7 @@ von 7,4\% errechnen.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics{images/repraesentativitaet.jpg}
+\includegraphics{images/repraesentativitaet.png}
 \caption{Berechnungsformel für Repräsentativität}
 \end{figure}
 
@@ -4724,7 +4993,13 @@ festgelegt. Dabei ist feststellbar, dass unser Authentifizierungsservice
 Sicherheitsstufen mit angenehmem empfinden bis Sicherheitsstufen mit
 sehr anstrengendem empfinden zur Verfügung stellt. Die gewünschte Breite
 des Arbeitgebers konnte auch in diesem Aspekt gefunden werden.
+
+\begin{figure}[htbp]
+\centering
 \includegraphics{images/studie/anstrengung.jpg}
+\caption{Überischt der Ergebnisse zur Umfrage der Anstrengung mit
+Arithmetischem Mittel und Standardabweichung}
+\end{figure}
 
 \section{Aktzeptanz}\label{aktzeptanz}
 
@@ -4756,7 +5031,7 @@ Endbenutzer diesem geben kann.
 \hypertarget{glossar}{\chapter{Glossar}\label{glossar}}
 
 \textbf{2FA} 2FA bedeutet Zwei-Faktor-Authentifizierung. Weitere Infos
-im Kapitel Authentifizierungs Kompononten
+im Kapitel {[}AuthentifizierungsKompononten{]}
 
 \textbf{Github} Github ist ein Cloud basierter SourceCode
 Verwaltungsdienst für Git. \url{https://github.com}
@@ -4786,6 +5061,10 @@ allgemein über das HTTP-Protokoll und nutzen die gleichen HTTP verbs wie
 ein Browser der eine Webseite abfragt. Neben GET und POST werden die
 weniger bekannten Verben PUT und Delete verwendet. Die URI beschreibt
 die zu beziehende oder verändernde Webressource.
+
+\textbf{Sicherheitsstufe} Das Wort Sicherheitstufe ist ein
+domänenspezifische Beschreibung eines einzelnen
+Authentifizierungsvorgang auch Authentifizierungsart genannt.
 
 \chapter{Verzeichnisse}\label{verzeichnisse}
 

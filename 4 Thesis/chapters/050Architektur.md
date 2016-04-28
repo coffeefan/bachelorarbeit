@@ -208,6 +208,9 @@ Der daraus resultierende String wird mit MD5 verschlüsselt.
 
 Beim Beispiel gäbe es die Signatur b37b3d4cd7cd8cba3f409f07d6f6d9bd
 
+### Schlussspeicherung
+Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Sofern die Authentifizierung erfolgreich war, wird im Hintergrund die im Konfigurator angegebene Url des Anbieters aufgerufen. Über die Post-Parameter ProjectId, ProviderID erfährt die Serverapplikation um welchen Datensatz es sich handelt. Die Gefahr besteht, dass diese Redirect-Url auch von einem anderen Programm aufegrufen werden könnte. Deshalb kann die Serverapplikation des Anbieters die Validate WebAPI des Authentifizierungsservice aufrufen und die erhaltenen Daten gegeprüfen. Bei erfolgreicher gegenprüfung gilt der Datensatz seitens Anbieter auch als valide und kann dan persistiert werden.
+
 
 \newpage
 ##Sicherheitstufen integrieren
@@ -348,8 +351,6 @@ Der Konfigurator soll den Programmierer visuell beim Konfigurieren und Verwalten
 
 ![Mockup Konfigurator Template Desktop](images/mockups/General.png)
 
-
-
 \newpage
 
 ![Mockup Konfigurator Template Mobile](images/mockups/Mobile.png)
@@ -360,23 +361,62 @@ Im Header wird der Programmierer anhand des Seitentitels gleich über seinen akt
 ####Navigation
 Im Designkonzept wurde von einer Klappmenü oder Topnavigation abgesehen. Die Wichtigkeit durch einen Klick alle Navigationspunkte zuerreichen, überwiegte den Platzersparnissen in der Breite. Die wenigen Navigationspunkte erlauben eine flache Navigationsstruktur. Dadurch kann in der Desktopansicht links immer alle Navigationspunkte angezeigt werden. Der Programmierer kann rasch auf die gewünsche Seite switchen. In der Mobileansicht kann durch einen einzigen Klick auf die "Burger-Navigation" das gesamte Menü eingefahren werden. Der Entscheid, für eine statische linke Navigationsstruktur in der Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach umsetzbar.
 
+\newpage
 ####Inhaltaufbau
 Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept English genannt Card Based Design. Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgerenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel (wenn auch repetitiv) dem Anwender kommuniziert, was für ein Inhalt im Breich Content der "Card" zu erwarten ist. [^card-based-design]
 
 ![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
 
-
+\newpage
 ###Authentifizierungs-Lightbox Template
+Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der Endbenutzer kann ein geringes technische Know-How besitzen. Deshalb muss das Design einen Bereich schaffen in diesem die zu tätigenden Schritte erklärt werden können. Die Möglichkeiten und Anzahl Schritte sollen auf ein Minimum gehalten werden. Im Besten Fall kann der User eine Eingabe machen und dies mit einem Knopf bestätigen. Damit der Endbenutzer fokusiert bleibt soll, wie bei einer Lightbox üblich, der Rest der Seite abgedunkelt werden. 
 
-![Aufbau Inhalt im Card-Design](images/mockups/Kundenimplementation-Desktop.png)
 
-![Aufbau Inhalt im Card-Design](images/mockups/Kundenimplementation-Mobile.png)
+![Mockup Konfigurator Template Mobile](images/mockups/authenticationlightbox.jpg)
+
 
 ###Hinweis zur Zusammenarbeit mit dem Auftraggeber
-Die hier abgebildeten Mockups und weitere Ansichten sind das Ergebnis aus den Absprache mit dem Auftraggeber. Sie sind vom Auftraggeber abgenommen und zur Impelmentation freigegeben[^freigabeMockups]
+Die hier abgebildeten Mockups und weitere Ansichten sind das Ergebnis aus den Absprache mit dem Auftraggeber. Sie sind vom Auftraggeber abgenommen und zur Impelmentation freigegeben
 
 [^card-based-design]: Weitere Informationen und Beispiele auf webdesigner.com [@card-based-design]
-[^freigabeMockups]: Alle Freigaben sind in der Beilage-Datei oder auf dem gihtub-Account einsehbar
+
+\newpage
+
+## "Du" oder "Sie" – Ansprache
+Die Definition ob der Benutzer im Userinterface mit Du oder Sie angesprochen werden soll muss laut Jutta Beyer vorgängig klar geregelt sein.[^dusieansprache] Eine einheitliche Kommunikation auf der Plattform ist unabdingbar.
+
+###Bestehende Vorurteile[^dusieansprache]
+
+-------------------------------------------------------------------------------------
+__Art__   	__Positiv__                     	__Negativ__           
+----------- ----------------------------------- -------------------------------------
+__Du__		Du steht für \						Du steht aber auch für \
+			- Vertrautheit \					- weniger Respekt \
+			- Verbundenheit \					- weniger Kompetenz \
+			- Modern \							- "Stammtischniveau"  \
+
+__Sie__		Sie steht für \						Sie steht aber auch für \
+			- Respekt \							- Distanz \
+			- Kompetenz	 \						- Altmodische Eisntellungen \
+			- Seriösität \						- Emotionslos     \
+-------------------------------------------------------------------------------------
+Table: Auflistung von Vorurteilen
+
+
+Diese Wahrnehmungen sind nicht stichhaltig noch weniger können die Rückschlüsse stimmen. Dennoch müssen diese Ansichten, zum Teil entstanden aus Kultur und Tradition, ernstgenommen werden, da sie in unseren Köpfen tief verankert sind. Kinder werden beigebracht das man Fremde mit "Sie" an spricht.  In der Familie, die Geborgenheit und Vertrautheit ausstrahlt, ist das "Du" normal. Gegenüber Lehrern und anderen Autoritätspersonen sollte das Kind aber "Sie" sagen. Also redet das Kind auch im erwachsenen Alter Erwachsene, vor denen es zugleich Respekt haben sollte, mit "Sie" an.
+
+Eine generelle Antwort zur Verwendung Du oder Sie auf Webseiten kann also nicht gemacht werden. Im Jahre 2011 wurden von statista Personen aus Deutschland gefragt "Wie möchten Sie in Social Media von Unternehmen angesprochen werden?". Dabei möchten 44% der befragten per Sie angesprochen. Einem grossen Teil (43%) ist die Ansprache egal und 13% würde sich eine Du-Ansprache bevorzugen.[^statistadusie]
+
+\newpage
+####Entscheidung
+Die Authentifizierung welche vom Endbenutzer durchgeführt wird darf ruhig sprachlich distanziert und emotionslos wirken. Vielmehr sind Respekt, Kompetenz und Seriösität wichtige Eckpunkte dieses Produkts. Deshalb wird in der Authentifizierung der Endbenutzer falls nötig mit Sie angesprochen.
+Der Konfigurator wird durch Programmierer administriert. Hier gilt es zu vermitteln, dass der Programmierer sich angenommen und unterstützt in seinem Problemen / Herausforderungen fühlt. Das Produkt soll zeitgemäss und trendig sein. Deshalb wird mit hier die Kommunikation über Du geführt. Dies wird unterstützt das unter Programmierern auch in der Wirtschaft mehrheitlich geduzt wird.
+
+
+
+[^dusieansprache]: [@dusieansprache]
+[^statistadusie]:[@statistadusie]
+
 \newpage
 
 ##Wahl des Applikation Hosters

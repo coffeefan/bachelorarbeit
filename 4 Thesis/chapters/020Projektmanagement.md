@@ -126,7 +126,10 @@ Um Ablaufe-Diagramm, Use Case-Diagramme und andere Uml-Diagramme zu visualisiere
 ###Draw.io
 Alle Diagramme, welche nicht via yUML designt werden können, werden mit dem Online Tool Draw.io erstellt. Draw.io wird in Entwicklerkreisen als webbasiertes Visio gehandelt. Seit dem letzten Release ist Draw.io ohne Einschränkung gratis verwendbar. Die gezeichneten Diagramme können direkt im Daten-Cloud Dienst Google Drive gespeichert werden.
 
-<
+###Infrastruktur Entwicklung
+Die Infrastruktur welche zur Entwicklung verwendet wird, kann je nach Anforderung und Konzeption varieren. Die verwendete Infrastruktur wird deshalb im Kapitel [Entwicklungswerkezeuge] aufgelistet.
+
+
 
 <!-- TODO Continous Integration?-->
 

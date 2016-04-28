@@ -34,6 +34,24 @@
   \field{year}{2015}
 \endentry
 
+\entry{dusieansprache}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Beyer}{B.}%
+     {Jutta}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BJ1}
+  \strng{fullhash}{BJ1}
+  \field{labelalpha}{Bey15}
+  \field{sortinit}{B}
+  \field{howpublished}{\url{http://contentkiste.de/du-oder-sie-ansprache-auf-der-website/}}
+  \field{note}{[Online; accessed 24-02-2016]}
+  \field{title}{“Du” oder “Sie” – Ansprache auf der Website}
+  \field{year}{2015}
+\endentry
+
 \entry{bosnjak}{book}{}
   \name{author}{1}{}{%
     {{}%
@@ -630,6 +648,42 @@
   \field{year}{2015}
 \endentry
 
+\entry{statistadusie}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {statista}{s.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{s1}
+  \strng{fullhash}{s1}
+  \field{labelalpha}{sta11}
+  \field{sortinit}{S}
+  \field{howpublished}{\url{http://de.statista.com/statistik/daten/studie/218841/umfrage/von-nutzern-bevorzugte-ansprache-in-social-media-durch-unternehmen}}
+  \field{note}{[Online; accessed 24-02-2016]}
+  \field{title}{Wie möchten Sie in Social Media von Unternehmen angesprochen
+  werden?}
+  \field{year}{2011}
+\endentry
+
+\entry{bfs}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Statistik}{S.}%
+     {Bundesamt}{B.}%
+     {für}{f.}%
+     {}{}}%
+  }
+  \strng{namehash}{SBf1}
+  \strng{fullhash}{SBf1}
+  \field{labelalpha}{Sta15}
+  \field{sortinit}{S}
+  \field{howpublished}{\url{http://www.bfs.admin.ch}}
+  \field{title}{Statistik Schweiz}
+  \field{year}{2015}
+\endentry
+
 \entry{bachelorreglement}{book}{}
   \name{author}{1}{}{%
     {{}%
@@ -665,6 +719,15 @@
   \field{note}{[Online; accessed 06-01-2016]}
   \field{title}{NET-Metrix-Audit}
   \field{year}{2004}
+\endentry
+
+\entry{w3techweb2015}{misc}{}
+  \field{labelalpha}{W3t}
+  \field{sortinit}{W}
+  \field{howpublished}{\url{http://w3techs.com/blog/entry/web_technologies_of_the_year_2015}}
+  \field{note}{[Online; accessed 10-04-2016]}
+  \field{title}{Web Technologies of the Year 2015}
+  \field{year}{2016}
 \endentry
 
 \entry{flashussage}{misc}{}

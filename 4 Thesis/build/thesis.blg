@@ -43,35 +43,42 @@ Warning--entry type for "efbasic" isn't style-file defined
 --line 180 of file Citer.bib
 Warning--entry type for "kzfss01" isn't style-file defined
 --line 218 of file Citer.bib
+Warning--entry type for "bfs" isn't style-file defined
+--line 240 of file Citer.bib
 Warning--entry type for "umfragemethodik" isn't style-file defined
---line 242 of file Citer.bib
+--line 248 of file Citer.bib
 Warning--entry type for "datatrans-plugin" isn't style-file defined
---line 250 of file Citer.bib
+--line 256 of file Citer.bib
 Warning--entry type for "datatrans-api" isn't style-file defined
---line 257 of file Citer.bib
+--line 263 of file Citer.bib
 Warning--entry type for "cnet-2fa" isn't style-file defined
---line 264 of file Citer.bib
+--line 270 of file Citer.bib
 Warning--entry type for "10minutemail" isn't style-file defined
---line 271 of file Citer.bib
+--line 277 of file Citer.bib
 Warning--entry type for "googlebusiness" isn't style-file defined
---line 278 of file Citer.bib
+--line 284 of file Citer.bib
 Warning--entry type for "xpactivation" isn't style-file defined
---line 294 of file Citer.bib
+--line 300 of file Citer.bib
 Warning--entry type for "card-based-design" isn't style-file defined
---line 301 of file Citer.bib
+--line 307 of file Citer.bib
 Warning--entry type for "the-vietnam-of-computer-science" isn't style-file defined
---line 308 of file Citer.bib
+--line 314 of file Citer.bib
 Warning--entry type for "design-By-Contract" isn't style-file defined
---line 316 of file Citer.bib
+--line 322 of file Citer.bib
 Warning--entry type for "google-cookies" isn't style-file defined
---line 325 of file Citer.bib
+--line 331 of file Citer.bib
 Warning--entry type for "pclexikon-ip" isn't style-file defined
---line 340 of file Citer.bib
+--line 346 of file Citer.bib
 Warning--entry type for "flashussage" isn't style-file defined
---line 348 of file Citer.bib
+--line 354 of file Citer.bib
 Warning--entry type for "repository" isn't style-file defined
---line 357 of file Citer.bib
+--line 363 of file Citer.bib
+Warning--entry type for "w3techweb2015" isn't style-file defined
+--line 372 of file Citer.bib
+Warning--entry type for "dusieansprache" isn't style-file defined
+--line 380 of file Citer.bib
+Warning--entry type for "statistadusie" isn't style-file defined
+--line 388 of file Citer.bib
 Warning--I didn't find a database entry for "cookie-centra"
-Warning--I didn't find a database entry for "bfs"
 Biblatex version: 3.0
-(There were 36 warnings)
+(There were 39 warnings)

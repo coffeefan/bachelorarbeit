@@ -180,7 +180,7 @@ Die verschiedenen Sicherheitsstufen sollen für den User direkt vergleichbar bea
 ##Bonus "Frage", Umgehung der Absicherung
 Umfrageonline.ch enthält die Sicherheitsstufe Cookie und IP-Adresse. Wobei die Sicherheitsstufe IP-Adresse standardmässig deaktiviert ist. Diese beiden Sicherheitstufen, erlauben es wie mehrfach in dieser Bachelorarbeit dokumentiert, mehrfach an einer Umfrage teilzunehmen. Die Hypothese wird aufgestellt, dass ein Teilnehmer mit genügend technischem Know-How insbesondere bei diesem Umfragethema mehrfach teilnehmen wird.  
 
-#Weitere Fragen
+##Weitere Fragen
 Weiter werden die 3 Eigenschftsfragen gestellt. Dabei soll Alter, Geschlecht und ob es sich um einen Schweizer oder Bewohner der Schweiz handelt angegeben werden.
 
 
@@ -212,7 +212,7 @@ Weiter werden noch einige Anmerkungen zu den Fragen erläutert.
 Laut Bundesamt für Statistik ist enthält die definierte Zielgruppe 3.3 Milionen Personen[^bfs]. Dies Zahl beinhaltet die Deutschweizer welche zwischen 16 und 65 Jahre alt sind.
 An der Umfrage habe 176 Personen teilgenommen. Daraus lässt sich ein Konfidenzinterval von 7,4% errechnen.
 
-![Berechnungsformel für Repräsentativität](images/repraesentativitaet.jpg)
+![Berechnungsformel für Repräsentativität](images/repraesentativitaet.png)
 
 n= Strichprobengrösse=176 Umfrageteilnehmer
 
@@ -239,6 +239,7 @@ d= Gesuchter Wert, das Konfidenzintervals Fehlertoleranzwert= 7,4%
 Auf einer 5 stufigen Skala sind die Sicherheitsstufen nach Anstrengung bewertet: 1 Punkt für sehr anstrengend, 5 Punkte für sehr angenehm.
 Anhand dieser Punkte konnte nun ein arithmetisches Mittel errechnet werden.
 Das empfinden der Anstrengung ist bei allen Teilnehmer ähnlich feststellbar und mit einer Standartabweichung von 0.85 bis 1.1 Punkte festgelegt. Dabei ist feststellbar, dass unser Authentifizierungsservice Sicherheitsstufen mit angenehmem empfinden bis Sicherheitsstufen mit sehr anstrengendem empfinden zur Verfügung stellt. Die gewünschte Breite des Arbeitgebers konnte auch in diesem Aspekt gefunden werden.
+
 ![Überischt der Ergebnisse zur Umfrage der Anstrengung mit Arithmetischem Mittel und Standardabweichung ](images/studie/anstrengung.jpg)
 
 
