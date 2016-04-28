@@ -3,15 +3,23 @@ In diesem Kapitel soll ein System für den Authentifizierungsservice entworfen w
 
 Um die Komponenten unabhängig von einander zu entwickeln, wird bei der Entwicklung der Architektur des Authtenifizierungsservice darauf geachte möglichst gerine Kopplung aufzuweisen.
 
-##Architektur
+
+##Systemarchitektur
+Gemäss den nichtfunktionalen Anforderungen muss die Serversoftware - unter anderem - folgende Eigenschaften erfüllen:
+
+- Hohe Verfügbarkeit von 99.9%
+- Wartbarkeit
+- Performance
+
+Die Softwarearchitektur wurde im Hinblick auf diese Anforderungen erstellt.
+
+\newpage
+
+##Architekturübersicht
 Der Authtentifizierungsservice besteht aus drei Hauptkomponenten: Web-API, Konfigurator und Autorisierung. Die folgende Abbildung zeigt die Verbindungen der drei Hauptkomponenten im Systemkontext des Authentifizierungservice auf.
 
 ![Übersicht der Hauptkomponenten](images/draw_io/BA_KomponentenDiagramm.png)
 
-##Software Design
-###Webservice
-
-###
 
 \newpage
 ##Genereller Ablauf Authentifizierung
@@ -175,9 +183,10 @@ Bei der Darstellung der Authentifizierung auf einer einzelnen Seite müsste das 
 
 Die Lightbox des Authenifizierungsservice wird mit einer grösseren Verbreitung einen gewissen Wiedererkennungswert erhalten. So wird die Lösung als professionelles Produkt wahrgenommen werden. Das Ziel das Benutzer und Entwickler den Authenifizierungsservice als ein sicheres und glaubwürdiges Produkt für Interaktivitäten wahrnehmen wird so versteckt werden.
 
+\newpage
 ### Integrationskonzept
 
-### Integrationsparameter
+#### Integrationsparameter
 
 ------------------------------------------------------------------------------------
 __Feldname__				__Wert__		__Beschreibung__												
@@ -209,7 +218,7 @@ Der daraus resultierende String wird mit MD5 verschlüsselt.
 Beim Beispiel gäbe es die Signatur b37b3d4cd7cd8cba3f409f07d6f6d9bd
 
 ### Schlussspeicherung
-Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Sofern die Authentifizierung erfolgreich war, wird im Hintergrund die im Konfigurator angegebene Url des Anbieters aufgerufen. Über die Post-Parameter ProjectId, ProviderID erfährt die Serverapplikation um welchen Datensatz es sich handelt. Die Gefahr besteht, dass diese Redirect-Url auch von einem anderen Programm aufegrufen werden könnte. Deshalb kann die Serverapplikation des Anbieters die Validate WebAPI des Authentifizierungsservice aufrufen und die erhaltenen Daten gegeprüfen. Bei erfolgreicher gegenprüfung gilt der Datensatz seitens Anbieter auch als valide und kann dan persistiert werden.
+Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Sofern die Authentifizierung erfolgreich war, wird im Hintergrund die im Konfigurator angegebene Url des Anbieters aufgerufen. Über die Post-Parameter ProjectId + ProviderID erfährt die Serverapplikation um welchen Datensatz es sich handelt. Wiederum wird der sign-Parameter zum Absichern mitgegeben. Die Gefahr besteht trotzdem, dass diese Redirect-Url auch von einem anderen Programm aufgerufen werden könnte. Deshalb kann als zweite Absicherung die Serverapplikation des Anbieters die Validate WebAPI des Authentifizierungsservice aufrufen und die erhaltenen Daten gegeprüfen. Bei erfolgreicher Gegenprüfung gilt der Datensatz seitens Anbieter auch als valide und kann dann persistiert werden.
 
 
 \newpage
@@ -277,21 +286,28 @@ Table: Übersicht der Authentifizierungs Methoden
 
 [!internetanschluss]: Der Begriff Internetanschluss ist schwamig eingesetzt.
 
+...Tabelle vervollständigen
 
 ###Auswahl der zu integrierenden Sicherheitsstufen
-SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schweiz ([NFREQ-212](###NFREQ-212)) keine genügende Note und wird daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu erlangen wurden die folgenden Methoden mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
+SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schweiz ([NFREQ-212](FREQ-212)) keine genügende Note und wird daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu erlangen wurden die folgenden Methoden mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
+
+- IP-Adresse
+- E-Mail
+- SMS
+- Telefon
+- Ausweisnummer
  
 
 \newpage
 ##Modularität und Erweiterbarkeit
-Wie in der Einführung zur Architektur erwähnt <!--TODO Siehe-->, sollte eine Architektur so konstruiert werden dass Sie möglichst Modular aufgebaut ist. Auch wenn wir die zu verwendenden Authentifizierungsmethoden im vorherigen Kapitel definiert haben, werden sich diese in Zukunft ändern. Anderseits kann sich auch die Authentifizierungsmethoden an sich komplett verändern. Sehr realistisch ist, dass für einen Browser Fingerprint neue Berechnungsmethodiken bekannt werden. Der Anbieter der hinter eine Authentifizierungsmethode steht, kann sich verändern oder dessen Anbindung. Kurz gesagt, die Modularität der Authentifizierungsmethoden muss unbedingt gewährleistet sein. Eine Implementation der Sicherheitsstufe SMS wie im folgenden einfachen Beispiel sollte nicht verwendet werden.
+Wie in der Einführung zur [Architektur] erwähnt, sollte eine Architektur so konstruiert werden dass Sie möglichst Modular aufgebaut ist. Auch wenn wir die zu verwendenden Authentifizierungsmethoden im vorherigen Kapitel definiert haben, werden sich diese in Zukunft ändern. Anderseits kann sich auch die Authentifizierungsmethoden an sich komplett verändern. Sehr realistisch ist, dass für einen Browser Fingerprint neue Berechnungsmethodiken bekannt werden. Der Anbieter der hinter eine Authentifizierungsmethode steht, kann sich verändern oder dessen Anbindung anpassen. Kurz gesagt, die Modularität der Authentifizierungsmethoden muss unbedingt gewährleistet sein. Eine Implementation der Sicherheitsstufe SMS wie im folgenden einfachen Beispiel sollte nicht verwendet werden.
 
 ~~~~~~~
 SMSSecurityStep inst = new SMSSecurityStep();
 ~~~~~~~
 
 ###Design by Contract
-Das Design Pattern "Design by Contract" soll das Zusammenspiel von Modulen durch eine Definition/Vertrag regeln. Herr Bertrand Meyer führte das Pattern bei der Enwicklung der Programmiersprache Eiffel ein. Die Verträge enthält besteht aus
+Das Design Pattern "Design by Contract" soll das Zusammenspiel von Modulen durch eine Definition/Vertrag regeln. Herr Bertrand Meyer führte das Pattern bei der Enwicklung der Programmiersprache Eiffel ein.[^design-By-Contract] Die Verträge enthält besteht aus
 
 - precondition: "Die Zusicherung die der Aufrufer einzuhalten hat"
 - postcondition: "Die Zusicherung die der Aufgegrufene einhalten wird"
@@ -307,20 +323,20 @@ ISecurityStep proxy = new SomeFactory.GetSecurityStep(...);
 
 ISecurityStep-Vertrag ist im Beispielcode der Vertrag. Die Instanz proxy Liefert ein Objekt zurück, welches das nach ISecurityStep-Vertrag definiert ist. Welches Objekt (Implementierung) sich dahinter verbirgt, ist uninteressant da diese Komponente gegen eine andere Implementierung ausgetauscht werden kann. In diesem konkreten Fall, könnten beispielsweise die Komponenten SMSSecurityStep und CookieSecurityStep die Schnittstelle ISecurityStep implementieren.
 
-SomeFactory muss für die Umsetzung von Desing by Contract implementiert werden. Dafür gibt es in der .net Welt einiges an Beispiel Code und Frameworks zu finden. Ein beliebtes Framework ist die Windows Communication Foundation [^design-By-Contract]
+SomeFactory muss für die Umsetzung  jedoch implementiert werden. Dafür gibt es in der .net Welt einiges an Beispiel Code und Frameworks zu finden. Ein beliebtes Framework ist die Windows Communication Foundation.[^design-By-Contract]
 
 
 
 ###MEF - Managed Extensibility Framework
-MEF das Managed Extensibility Framework ist seit der Version 4.0 Bestandteil des Frameworks. MEF ist eine Bibliothekt und Implementiert das Problem der Erweiterbarkeit sogar zur Laufzeit. Es vereinfacht die Implementierung von erweiterbaren Anwendungen und bietet Ermittlung von Typen, Erzeugung von Instanzen und Composition Fähigkeiten an.
+MEF das Managed Extensibility Framework ist seit der Version 4.0 Bestandteil des .NET Frameworks. MEF ist eine Bibliothekt und Implementiert das Problem der Erweiterbarkeit sogar zur Laufzeit. Es vereinfacht die Implementierung von erweiterbaren Anwendungen und bietet Ermittlung von Typen, Erzeugung von Instanzen und Composition Fähigkeiten an.
 
-![Vereinfacht die Architektur des Managed Extensibility Framework Quelle: msdn.microsoft.com](images/mef_architektur.jpg)
+![Vereinfachte Architektur des Managed Extensibility Framework Quelle: msdn.microsoft.com](images/mef_architektur.jpg)
 
 Die Abbilldung <!--TODO Siehe --> zeigt eine stark vereinfachte Architektur von MEF auf. Die Hauptmodule vom MEF-Core sind Catalog und CompositionContainer.
 Der Catalog kontrolliert und stellt das Laden der Komponenten sicher. Der CompositionContainer erzeugt aus den Komponenten Instanzen und bindet diese an die entsprechenden Variablen.
 Parts sind die Objekte die vom Type Export oder Import sein können. Die Komponenten die geladen und instanziert sind nennen sich Exports. Imports sind die Variabeln an den Exports gebunden werden sollen. 
 
-Um das Konzept besser zu verstehen, soll der Beispielcode von Design by Contract <!--TODO Siehe --> herangezogen werden. Die Variable proxy vom Type ISecurityStep die die Instanz dieser Komponente enthalten soll, wäre ein „Import“ in einer MEF Anwendung. Der SMSSecurityStep oder CookieSecurityStep wären in einer MEF Anwendung ein Export.
+Um das Konzept besser zu verstehen, soll der Beispielcode von Design by Contract <!--TODO Siehe --> herangezogen werden: In einer MEF Anwendung wäre die Variable proxy vom Type ISecurityStep und die Instanz dieser Komponente wäre ein „Import“. Die Objekte der SMSSecurityStep oder CookieSecurityStep wären in einer MEF Anwendung ein Export.
 
 MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
 
@@ -359,17 +375,17 @@ Der Konfigurator soll den Programmierer visuell beim Konfigurieren und Verwalten
 Im Header wird der Programmierer anhand des Seitentitels gleich über seinen aktuellen Standort orientert. 
 
 ####Navigation
-Im Designkonzept wurde von einer Klappmenü oder Topnavigation abgesehen. Die Wichtigkeit durch einen Klick alle Navigationspunkte zuerreichen, überwiegte den Platzersparnissen in der Breite. Die wenigen Navigationspunkte erlauben eine flache Navigationsstruktur. Dadurch kann in der Desktopansicht links immer alle Navigationspunkte angezeigt werden. Der Programmierer kann rasch auf die gewünsche Seite switchen. In der Mobileansicht kann durch einen einzigen Klick auf die "Burger-Navigation" das gesamte Menü eingefahren werden. Der Entscheid, für eine statische linke Navigationsstruktur in der Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach umsetzbar.
+Im Designkonzept wurde von einer Klappmenü oder Topnavigation abgesehen. Die Wichtigkeit durch einen Klick alle Navigationspunkte zuerreichen, überwiegte den Platzersparnissen in der Breite. Die wenigen Navigationspunkte erlauben eine flache Navigationsstruktur. Dadurch kann in der Desktopansicht links immer alle Navigationspunkte angezeigt werden. Der Programmierer kann rasch auf die gewünsche Seite switchen. In der Mobileansicht kann durch einen einzigen Klick auf die "Burger-Navigation" das gesamte Menü eingefahren werden. Der Entscheid, für eine statische linke Navigationsstruktur in der Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch des Auftraggebers den Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach umsetzbar.
 
 \newpage
 ####Inhaltaufbau
-Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept English genannt Card Based Design. Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgerenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel (wenn auch repetitiv) dem Anwender kommuniziert, was für ein Inhalt im Breich Content der "Card" zu erwarten ist. [^card-based-design]
+Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben einerseits Übersichten wie Dashboards mit verschiedenen Inhalten auf einer Seite abzubilden. Die selbe Struktur soll aber auch für Seiten mit nur einem Inhaltselement wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept English genannt Card Based Design. Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgerenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel dem Anwender kommuniziert, was für ein Inhalt im Breich Content der "Card" zu erwarten ist. [^card-based-design]
 
 ![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
 
 \newpage
 ###Authentifizierungs-Lightbox Template
-Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der Endbenutzer kann ein geringes technische Know-How besitzen. Deshalb muss das Design einen Bereich schaffen in diesem die zu tätigenden Schritte erklärt werden können. Die Möglichkeiten und Anzahl Schritte sollen auf ein Minimum gehalten werden. Im Besten Fall kann der User eine Eingabe machen und dies mit einem Knopf bestätigen. Damit der Endbenutzer fokusiert bleibt soll, wie bei einer Lightbox üblich, der Rest der Seite abgedunkelt werden. 
+Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der Endbenutzer kann ein geringes technische Know-How aufweisen. Deshalb muss das Design einen Bereich verfügbar machen, in welchem die zu tätigenden Schritte erklärt werden können. Die Möglichkeiten und Anzahl Schritte sollen auf ein Minimum gehalten werden. Im besten Fall kann der User eine Eingabe machen und dies mit einem Button bestätigen. Damit der Endbenutzer fokusiert bleibt soll, wie bei einer Lightbox üblich, der Rest der Seite abgedunkelt werden. 
 
 
 ![Mockup Konfigurator Template Mobile](images/mockups/authenticationlightbox.jpg)
@@ -403,14 +419,14 @@ __Sie__		Sie steht für \						Sie steht aber auch für \
 Table: Auflistung von Vorurteilen
 
 
-Diese Wahrnehmungen sind nicht stichhaltig noch weniger können die Rückschlüsse stimmen. Dennoch müssen diese Ansichten, zum Teil entstanden aus Kultur und Tradition, ernstgenommen werden, da sie in unseren Köpfen tief verankert sind. Kinder werden beigebracht das man Fremde mit "Sie" an spricht.  In der Familie, die Geborgenheit und Vertrautheit ausstrahlt, ist das "Du" normal. Gegenüber Lehrern und anderen Autoritätspersonen sollte das Kind aber "Sie" sagen. Also redet das Kind auch im erwachsenen Alter Erwachsene, vor denen es zugleich Respekt haben sollte, mit "Sie" an.
+Diese Wahrnehmungen sind nicht stichhaltig noch weniger können die Rückschlüsse stimmen. Dennoch müssen diese Ansichten, zum Teil entstanden aus Kultur und Tradition, ernstgenommen werden, da sie in unseren Köpfen tief verankert sind. Kinder werden beigebracht das man Fremde mit "Sie" an spricht.  In der Familie, die Geborgenheit und Vertrautheit ausstrahlt, ist das "Du" normal. Gegenüber Lehrern und anderen Autoritätspersonen sollte das Kind aber "Sie" sagen. Also spricht das Kind auch im fortgeschrittenen Alter Erwachsene, vor denen es zugleich Respekt haben sollte, mit "Sie" an.
 
 Eine generelle Antwort zur Verwendung Du oder Sie auf Webseiten kann also nicht gemacht werden. Im Jahre 2011 wurden von statista Personen aus Deutschland gefragt "Wie möchten Sie in Social Media von Unternehmen angesprochen werden?". Dabei möchten 44% der befragten per Sie angesprochen. Einem grossen Teil (43%) ist die Ansprache egal und 13% würde sich eine Du-Ansprache bevorzugen.[^statistadusie]
 
 \newpage
 ####Entscheidung
-Die Authentifizierung welche vom Endbenutzer durchgeführt wird darf ruhig sprachlich distanziert und emotionslos wirken. Vielmehr sind Respekt, Kompetenz und Seriösität wichtige Eckpunkte dieses Produkts. Deshalb wird in der Authentifizierung der Endbenutzer falls nötig mit Sie angesprochen.
-Der Konfigurator wird durch Programmierer administriert. Hier gilt es zu vermitteln, dass der Programmierer sich angenommen und unterstützt in seinem Problemen / Herausforderungen fühlt. Das Produkt soll zeitgemäss und trendig sein. Deshalb wird mit hier die Kommunikation über Du geführt. Dies wird unterstützt das unter Programmierern auch in der Wirtschaft mehrheitlich geduzt wird.
+Die Authentifizierung welche vom Endbenutzer durchgeführt wird darf ruhig sprachlich distanziert und emotionslos wirken. Vielmehr sind Respekt, Kompetenz und Seriösität wichtige Eckpunkte dieses Produkts. Deshalb wird in der Authentifizierung der Endbenutzer, falls nötig, mit Sie angesprochen.
+Der Konfigurator wird durch Programmierer administriert. Hier gilt es zu vermitteln, dass der Programmierer sich angenommen und unterstützt in seinem Problemen / Herausforderungen fühlt. Das Produkt soll zeitgemäss und trendig sein. Deshalb wird die Kommunikation über Du geführt. Dies Entscheidung wird durch die Annahme unterstützt das unter Programmierern auch in der Wirtschaft mehrheitlich geduzt wird.
 
 
 
@@ -435,7 +451,7 @@ Die in [NFREQ-132] geforderte Skalierbarkeit, nutzungsabhängige Kosten, Freihei
 ##Validierung von Benutzereingaben
 NFREQ-126 und die Sicherheit des Authenifizierungsservice verlangen eine geeignete Validierung der Benutzereingaben. Um Fehlspeicherungen oder Fehloperationen vorzubeuegen werden alle Daten Vorgängig validiert. Die Fehlermeldungen sollen falls möglich klar und spezifisch formuliert werden. 
 Bei den Daten-Klassen/POCO-Klassen werden die gültigen Wertebereiche mittels Annotationen festgelegt. Microsoft MVC und Microsoft Web-API stellen eine "Modelstate.Valid()" Methode zur Verfügung welche das angelieferte Datenobjekt automatisch gegen die Annotationen prüft. Bei MVC Implementierungen werden mittels Microsoft jQuery Validate Standart Annotationen bereits in der Benutzereingabemaske überprüft. So muss der User bei Falscheingabe nicht zuerst einen manuellen Request auf den Server setzten sondern wird gleich über die Fehleingabe aufmerksam gemacht.
-Im Konfigurator, eine AngularJS-App ist die benutzerseitige Validierung mittels HTML5 Form Validation umgesetzt worden.
+Im Konfigurator, eine AngularJS-App, ist die benutzerseitige Validierung mittels HTML5 Form Validation umgesetzt worden.
 
 
 ##Testing
@@ -459,17 +475,8 @@ Die Vorteile des Patterns sind zum einen die vereinfachten Unit-Tests. Man kann 
 
 
 [^repository]:[@repository]
-##Domänenmodell
-###Entitäten
 
-##Systemarchitektur
-Gemäss den nichtfunktionalen Anforderungen muss die Serversoftware - unter anderem - folgende Eigenschaften erfüllen:
 
-- Hohe Verfügbarkeit von 99.9%
-- Wartbarkeit
-- Performance
-
-Die Softwarearchitektur wurde im Hinblick auf diese Anforderungen erstellt.
 
 
 

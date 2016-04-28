@@ -94,103 +94,99 @@
 \BOOKMARK [2][-]{subsection.4.6.8}{Risikomatrix}{section.4.6}% 94
 \BOOKMARK [2][-]{subsection.4.6.9}{Massnahmen}{section.4.6}% 95
 \BOOKMARK [0][-]{chapter.5}{Konzept}{}% 96
-\BOOKMARK [1][-]{section.5.1}{Architektur}{chapter.5}% 97
-\BOOKMARK [1][-]{section.5.2}{Software Design}{chapter.5}% 98
-\BOOKMARK [2][-]{subsection.5.2.1}{Webservice}{section.5.2}% 99
-\BOOKMARK [2][-]{subsection.5.2.2}{}{section.5.2}% 100
-\BOOKMARK [1][-]{section.5.3}{Genereller Ablauf Authentifizierung}{chapter.5}% 101
-\BOOKMARK [1][-]{section.5.4}{Dom\344nenmodel Differenziert}{chapter.5}% 102
-\BOOKMARK [1][-]{section.5.5}{Datenbankdesign}{chapter.5}% 103
-\BOOKMARK [2][-]{subsection.5.5.1}{Entity-Framework}{section.5.5}% 104
-\BOOKMARK [2][-]{subsection.5.5.2}{ERD}{section.5.5}% 105
-\BOOKMARK [1][-]{section.5.6}{Integration der Schnittstelle}{chapter.5}% 106
-\BOOKMARK [2][-]{subsection.5.6.1}{Bestehende Systeme f\374r Votings, Wettbewerbe und Quizes}{section.5.6}% 107
-\BOOKMARK [2][-]{subsection.5.6.2}{Wordpress PlugIn Hook}{section.5.6}% 108
-\BOOKMARK [2][-]{subsection.5.6.3}{Parallellen im \344hnliches Anwendungsfeld}{section.5.6}% 109
-\BOOKMARK [2][-]{subsection.5.6.4}{Integrationsentscheid}{section.5.6}% 110
-\BOOKMARK [2][-]{subsection.5.6.5}{Integrationskonzept}{section.5.6}% 111
-\BOOKMARK [2][-]{subsection.5.6.6}{Integrationsparameter}{section.5.6}% 112
-\BOOKMARK [2][-]{subsection.5.6.7}{Schlussspeicherung}{section.5.6}% 113
-\BOOKMARK [1][-]{section.5.7}{Sicherheitstufen integrieren}{chapter.5}% 114
-\BOOKMARK [2][-]{subsection.5.7.1}{Sicherheitstufen bewerten}{section.5.7}% 115
-\BOOKMARK [2][-]{subsection.5.7.2}{Auswahl der zu integrierenden Sicherheitsstufen}{section.5.7}% 116
-\BOOKMARK [1][-]{section.5.8}{Modularit\344t und Erweiterbarkeit}{chapter.5}% 117
-\BOOKMARK [2][-]{subsection.5.8.1}{Design by Contract}{section.5.8}% 118
-\BOOKMARK [2][-]{subsection.5.8.2}{MEF - Managed Extensibility Framework}{section.5.8}% 119
-\BOOKMARK [2][-]{subsection.5.8.3}{Entscheidung}{section.5.8}% 120
-\BOOKMARK [2][-]{subsection.5.8.4}{Sicherheitsstufen Libaray-\334bersicht anhand MEF}{section.5.8}% 121
-\BOOKMARK [1][-]{section.5.9}{Mockup}{chapter.5}% 122
-\BOOKMARK [2][-]{subsection.5.9.1}{Konfigurator Template}{section.5.9}% 123
-\BOOKMARK [2][-]{subsection.5.9.2}{Authentifizierungs-Lightbox Template}{section.5.9}% 124
-\BOOKMARK [2][-]{subsection.5.9.3}{Hinweis zur Zusammenarbeit mit dem Auftraggeber}{section.5.9}% 125
-\BOOKMARK [1][-]{section.5.10}{Du oder Sie \205 Ansprache}{chapter.5}% 126
-\BOOKMARK [2][-]{subsection.5.10.1}{Bestehende Vorurteile}{section.5.10}% 127
-\BOOKMARK [1][-]{section.5.11}{Wahl des Applikation Hosters}{chapter.5}% 128
-\BOOKMARK [2][-]{subsection.5.11.1}{Asp.net Shared Hosting}{section.5.11}% 129
-\BOOKMARK [2][-]{subsection.5.11.2}{Cloud Hosting}{section.5.11}% 130
-\BOOKMARK [2][-]{subsection.5.11.3}{Entscheidung}{section.5.11}% 131
-\BOOKMARK [1][-]{section.5.12}{Validierung von Benutzereingaben}{chapter.5}% 132
-\BOOKMARK [1][-]{section.5.13}{Testing}{chapter.5}% 133
-\BOOKMARK [2][-]{subsection.5.13.1}{Wie kann getestet werden?}{section.5.13}% 134
-\BOOKMARK [2][-]{subsection.5.13.2}{Was soll getestet werden?}{section.5.13}% 135
-\BOOKMARK [2][-]{subsection.5.13.3}{Repository Pattern}{section.5.13}% 136
-\BOOKMARK [1][-]{section.5.14}{Systemarchitektur}{chapter.5}% 137
-\BOOKMARK [0][-]{chapter.6}{Proof Of Concept}{}% 138
-\BOOKMARK [1][-]{section.6.1}{Techologien}{chapter.6}% 139
-\BOOKMARK [2][-]{subsection.6.1.1}{C-Sharp}{section.6.1}% 140
-\BOOKMARK [2][-]{subsection.6.1.2}{ASP.net Web API 2 / ASP.net MVC Framework}{section.6.1}% 141
-\BOOKMARK [2][-]{subsection.6.1.3}{Entity Framework}{section.6.1}% 142
-\BOOKMARK [2][-]{subsection.6.1.4}{Grunt}{section.6.1}% 143
-\BOOKMARK [2][-]{subsection.6.1.5}{AngularJS}{section.6.1}% 144
-\BOOKMARK [2][-]{subsection.6.1.6}{jQuery}{section.6.1}% 145
-\BOOKMARK [2][-]{subsection.6.1.7}{JSON}{section.6.1}% 146
-\BOOKMARK [2][-]{subsection.6.1.8}{Entwicklungswerkezeuge}{section.6.1}% 147
-\BOOKMARK [1][-]{section.6.2}{Umsetzung Sicherheitsstufe}{chapter.6}% 148
-\BOOKMARK [2][-]{subsection.6.2.1}{Plugin Entwicklung}{section.6.2}% 149
-\BOOKMARK [2][-]{subsection.6.2.2}{Interface - Vertrag mit den Sicherheitsstufen}{section.6.2}% 150
-\BOOKMARK [2][-]{subsection.6.2.3}{Visualisierung}{section.6.2}% 151
-\BOOKMARK [1][-]{section.6.3}{Auswahl des Anzeige-Frameworks}{chapter.6}% 152
-\BOOKMARK [1][-]{section.6.4}{Visualisierung von Daten}{chapter.6}% 153
-\BOOKMARK [1][-]{section.6.5}{Finale Screens}{chapter.6}% 154
-\BOOKMARK [2][-]{subsection.6.5.1}{AngularJS-Konfigurator}{section.6.5}% 155
-\BOOKMARK [2][-]{subsection.6.5.2}{Authentifizierung-Lightbox mit Sicherheitsstufen}{section.6.5}% 156
-\BOOKMARK [1][-]{section.6.6}{Implementation Authentifizierung}{chapter.6}% 157
-\BOOKMARK [2][-]{subsection.6.6.1}{Aufruf der Lightbox}{section.6.6}% 158
-\BOOKMARK [2][-]{subsection.6.6.2}{Gegepr\374fung der Authentifizierung}{section.6.6}% 159
-\BOOKMARK [2][-]{subsection.6.6.3}{WordPressPlugIn / Erweiterung WP-Poll}{section.6.6}% 160
-\BOOKMARK [1][-]{section.6.7}{Testing}{chapter.6}% 161
-\BOOKMARK [2][-]{subsection.6.7.1}{Unit-Test Sicherheitsstufe und Authentifizierungsservice}{section.6.7}% 162
-\BOOKMARK [0][-]{chapter.7}{Studie}{}% 163
-\BOOKMARK [1][-]{section.7.1}{Definition der Begriffe aus Aufgabenstellung}{chapter.7}% 164
-\BOOKMARK [1][-]{section.7.2}{Ziel der Studie}{chapter.7}% 165
-\BOOKMARK [1][-]{section.7.3}{Art der Studie}{chapter.7}% 166
-\BOOKMARK [2][-]{subsection.7.3.1}{Vor - und Nachteile schriftlicher Fragebogen}{section.7.3}% 167
-\BOOKMARK [2][-]{subsection.7.3.2}{Fazit}{section.7.3}% 168
-\BOOKMARK [2][-]{subsection.7.3.3}{Webapplikation f\374r Umfrage}{section.7.3}% 169
-\BOOKMARK [1][-]{section.7.4}{Aufbau Gesamtkonzept}{chapter.7}% 170
-\BOOKMARK [2][-]{subsection.7.4.1}{Einleitung}{section.7.4}% 171
-\BOOKMARK [1][-]{section.7.5}{Hauptteil/Fragen}{chapter.7}% 172
-\BOOKMARK [2][-]{subsection.7.5.1}{Erste Frage Theorie}{section.7.5}% 173
-\BOOKMARK [1][-]{section.7.6}{Erste Frage}{chapter.7}% 174
-\BOOKMARK [1][-]{section.7.7}{Theorie Fragen}{chapter.7}% 175
-\BOOKMARK [1][-]{section.7.8}{Fragen \374ber Aktzeptanz}{chapter.7}% 176
-\BOOKMARK [1][-]{section.7.9}{Frage Anstrengung}{chapter.7}% 177
-\BOOKMARK [1][-]{section.7.10}{Bonus Frage, Umgehung der Absicherung}{chapter.7}% 178
-\BOOKMARK [1][-]{section.7.11}{Weitere Fragen}{chapter.7}% 179
-\BOOKMARK [1][-]{section.7.12}{Abschluss}{chapter.7}% 180
-\BOOKMARK [1][-]{section.7.13}{Verst\344ndlichkeit}{chapter.7}% 181
-\BOOKMARK [1][-]{section.7.14}{Auswertung}{chapter.7}% 182
-\BOOKMARK [2][-]{subsection.7.14.1}{Repr\344sentativit\344t}{section.7.14}% 183
-\BOOKMARK [2][-]{subsection.7.14.2}{Gemogelt an Wettbewerben}{section.7.14}% 184
-\BOOKMARK [2][-]{subsection.7.14.3}{Bonus Frage, Umgehung der Absicherung}{section.7.14}% 185
-\BOOKMARK [1][-]{section.7.15}{Anstrengung}{chapter.7}% 186
-\BOOKMARK [1][-]{section.7.16}{Aktzeptanz}{chapter.7}% 187
-\BOOKMARK [0][-]{chapter.8}{Fazit}{}% 188
-\BOOKMARK [0][-]{appendix.A}{Glossar}{}% 189
-\BOOKMARK [0][-]{appendix.B}{Verzeichnisse}{}% 190
-\BOOKMARK [1][-]{section.B.1}{Abbildungsverzeichnis}{appendix.B}% 191
-\BOOKMARK [1][-]{section.B.2}{Quellenverzeichnis}{appendix.B}% 192
-\BOOKMARK [1][-]{section.B.3}{Tabellenverzeichnis}{appendix.B}% 193
-\BOOKMARK [0][-]{appendix.C}{Danksagung}{}% 194
-\BOOKMARK [0][-]{appendix.D}{Personalienblatt}{}% 195
-\BOOKMARK [0][-]{appendix.E}{Best\344tigung}{}% 196
+\BOOKMARK [1][-]{section.5.1}{Systemarchitektur}{chapter.5}% 97
+\BOOKMARK [1][-]{section.5.2}{Architektur\374bersicht}{chapter.5}% 98
+\BOOKMARK [1][-]{section.5.3}{Genereller Ablauf Authentifizierung}{chapter.5}% 99
+\BOOKMARK [1][-]{section.5.4}{Dom\344nenmodel Differenziert}{chapter.5}% 100
+\BOOKMARK [1][-]{section.5.5}{Datenbankdesign}{chapter.5}% 101
+\BOOKMARK [2][-]{subsection.5.5.1}{Entity-Framework}{section.5.5}% 102
+\BOOKMARK [2][-]{subsection.5.5.2}{ERD}{section.5.5}% 103
+\BOOKMARK [1][-]{section.5.6}{Integration der Schnittstelle}{chapter.5}% 104
+\BOOKMARK [2][-]{subsection.5.6.1}{Bestehende Systeme f\374r Votings, Wettbewerbe und Quizes}{section.5.6}% 105
+\BOOKMARK [2][-]{subsection.5.6.2}{Wordpress PlugIn Hook}{section.5.6}% 106
+\BOOKMARK [2][-]{subsection.5.6.3}{Parallellen im \344hnliches Anwendungsfeld}{section.5.6}% 107
+\BOOKMARK [2][-]{subsection.5.6.4}{Integrationsentscheid}{section.5.6}% 108
+\BOOKMARK [2][-]{subsection.5.6.5}{Integrationskonzept}{section.5.6}% 109
+\BOOKMARK [2][-]{subsection.5.6.6}{Schlussspeicherung}{section.5.6}% 110
+\BOOKMARK [1][-]{section.5.7}{Sicherheitstufen integrieren}{chapter.5}% 111
+\BOOKMARK [2][-]{subsection.5.7.1}{Sicherheitstufen bewerten}{section.5.7}% 112
+\BOOKMARK [2][-]{subsection.5.7.2}{Auswahl der zu integrierenden Sicherheitsstufen}{section.5.7}% 113
+\BOOKMARK [1][-]{section.5.8}{Modularit\344t und Erweiterbarkeit}{chapter.5}% 114
+\BOOKMARK [2][-]{subsection.5.8.1}{Design by Contract}{section.5.8}% 115
+\BOOKMARK [2][-]{subsection.5.8.2}{MEF - Managed Extensibility Framework}{section.5.8}% 116
+\BOOKMARK [2][-]{subsection.5.8.3}{Entscheidung}{section.5.8}% 117
+\BOOKMARK [2][-]{subsection.5.8.4}{Sicherheitsstufen Libaray-\334bersicht anhand MEF}{section.5.8}% 118
+\BOOKMARK [1][-]{section.5.9}{Mockup}{chapter.5}% 119
+\BOOKMARK [2][-]{subsection.5.9.1}{Konfigurator Template}{section.5.9}% 120
+\BOOKMARK [2][-]{subsection.5.9.2}{Authentifizierungs-Lightbox Template}{section.5.9}% 121
+\BOOKMARK [2][-]{subsection.5.9.3}{Hinweis zur Zusammenarbeit mit dem Auftraggeber}{section.5.9}% 122
+\BOOKMARK [1][-]{section.5.10}{Du oder Sie \205 Ansprache}{chapter.5}% 123
+\BOOKMARK [2][-]{subsection.5.10.1}{Bestehende Vorurteile}{section.5.10}% 124
+\BOOKMARK [1][-]{section.5.11}{Wahl des Applikation Hosters}{chapter.5}% 125
+\BOOKMARK [2][-]{subsection.5.11.1}{Asp.net Shared Hosting}{section.5.11}% 126
+\BOOKMARK [2][-]{subsection.5.11.2}{Cloud Hosting}{section.5.11}% 127
+\BOOKMARK [2][-]{subsection.5.11.3}{Entscheidung}{section.5.11}% 128
+\BOOKMARK [1][-]{section.5.12}{Validierung von Benutzereingaben}{chapter.5}% 129
+\BOOKMARK [1][-]{section.5.13}{Testing}{chapter.5}% 130
+\BOOKMARK [2][-]{subsection.5.13.1}{Wie kann getestet werden?}{section.5.13}% 131
+\BOOKMARK [2][-]{subsection.5.13.2}{Was soll getestet werden?}{section.5.13}% 132
+\BOOKMARK [2][-]{subsection.5.13.3}{Repository Pattern}{section.5.13}% 133
+\BOOKMARK [0][-]{chapter.6}{Proof Of Concept}{}% 134
+\BOOKMARK [1][-]{section.6.1}{Techologien}{chapter.6}% 135
+\BOOKMARK [2][-]{subsection.6.1.1}{C-Sharp}{section.6.1}% 136
+\BOOKMARK [2][-]{subsection.6.1.2}{ASP.net Web API 2 / ASP.net MVC Framework}{section.6.1}% 137
+\BOOKMARK [2][-]{subsection.6.1.3}{Entity Framework}{section.6.1}% 138
+\BOOKMARK [2][-]{subsection.6.1.4}{Grunt}{section.6.1}% 139
+\BOOKMARK [2][-]{subsection.6.1.5}{AngularJS}{section.6.1}% 140
+\BOOKMARK [2][-]{subsection.6.1.6}{jQuery}{section.6.1}% 141
+\BOOKMARK [2][-]{subsection.6.1.7}{JSON}{section.6.1}% 142
+\BOOKMARK [2][-]{subsection.6.1.8}{Entwicklungswerkezeuge}{section.6.1}% 143
+\BOOKMARK [1][-]{section.6.2}{Umsetzung Sicherheitsstufe}{chapter.6}% 144
+\BOOKMARK [2][-]{subsection.6.2.1}{Plugin Entwicklung}{section.6.2}% 145
+\BOOKMARK [2][-]{subsection.6.2.2}{Interface - Vertrag mit den Sicherheitsstufen}{section.6.2}% 146
+\BOOKMARK [2][-]{subsection.6.2.3}{Visualisierung}{section.6.2}% 147
+\BOOKMARK [1][-]{section.6.3}{Auswahl des Anzeige-Frameworks}{chapter.6}% 148
+\BOOKMARK [1][-]{section.6.4}{Visualisierung von Daten}{chapter.6}% 149
+\BOOKMARK [1][-]{section.6.5}{Finale Screens}{chapter.6}% 150
+\BOOKMARK [2][-]{subsection.6.5.1}{AngularJS-Konfigurator}{section.6.5}% 151
+\BOOKMARK [2][-]{subsection.6.5.2}{Authentifizierung-Lightbox mit Sicherheitsstufen}{section.6.5}% 152
+\BOOKMARK [1][-]{section.6.6}{Implementation Authentifizierung}{chapter.6}% 153
+\BOOKMARK [2][-]{subsection.6.6.1}{Aufruf der Lightbox}{section.6.6}% 154
+\BOOKMARK [2][-]{subsection.6.6.2}{Gegepr\374fung der Authentifizierung}{section.6.6}% 155
+\BOOKMARK [2][-]{subsection.6.6.3}{WordPressPlugIn / Erweiterung WP-Poll}{section.6.6}% 156
+\BOOKMARK [1][-]{section.6.7}{Testing}{chapter.6}% 157
+\BOOKMARK [2][-]{subsection.6.7.1}{Unit-Test Sicherheitsstufe und Authentifizierungsservice}{section.6.7}% 158
+\BOOKMARK [0][-]{chapter.7}{Studie}{}% 159
+\BOOKMARK [1][-]{section.7.1}{Definition der Begriffe aus Aufgabenstellung}{chapter.7}% 160
+\BOOKMARK [1][-]{section.7.2}{Ziel der Studie}{chapter.7}% 161
+\BOOKMARK [1][-]{section.7.3}{Art der Studie}{chapter.7}% 162
+\BOOKMARK [2][-]{subsection.7.3.1}{Vor - und Nachteile schriftlicher Fragebogen}{section.7.3}% 163
+\BOOKMARK [2][-]{subsection.7.3.2}{Fazit}{section.7.3}% 164
+\BOOKMARK [2][-]{subsection.7.3.3}{Webapplikation f\374r Umfrage}{section.7.3}% 165
+\BOOKMARK [1][-]{section.7.4}{Aufbau Gesamtkonzept}{chapter.7}% 166
+\BOOKMARK [2][-]{subsection.7.4.1}{Einleitung}{section.7.4}% 167
+\BOOKMARK [1][-]{section.7.5}{Hauptteil/Fragen}{chapter.7}% 168
+\BOOKMARK [2][-]{subsection.7.5.1}{Erste Frage Theorie}{section.7.5}% 169
+\BOOKMARK [1][-]{section.7.6}{Erste Frage}{chapter.7}% 170
+\BOOKMARK [1][-]{section.7.7}{Theorie Fragen}{chapter.7}% 171
+\BOOKMARK [1][-]{section.7.8}{Fragen \374ber Aktzeptanz}{chapter.7}% 172
+\BOOKMARK [1][-]{section.7.9}{Frage Anstrengung}{chapter.7}% 173
+\BOOKMARK [1][-]{section.7.10}{Bonus Frage, Umgehung der Absicherung}{chapter.7}% 174
+\BOOKMARK [1][-]{section.7.11}{Weitere Fragen}{chapter.7}% 175
+\BOOKMARK [1][-]{section.7.12}{Abschluss}{chapter.7}% 176
+\BOOKMARK [1][-]{section.7.13}{Verst\344ndlichkeit}{chapter.7}% 177
+\BOOKMARK [1][-]{section.7.14}{Auswertung}{chapter.7}% 178
+\BOOKMARK [2][-]{subsection.7.14.1}{Repr\344sentativit\344t}{section.7.14}% 179
+\BOOKMARK [2][-]{subsection.7.14.2}{Gemogelt an Wettbewerben}{section.7.14}% 180
+\BOOKMARK [2][-]{subsection.7.14.3}{Bonus Frage, Umgehung der Absicherung}{section.7.14}% 181
+\BOOKMARK [1][-]{section.7.15}{Anstrengung}{chapter.7}% 182
+\BOOKMARK [1][-]{section.7.16}{Aktzeptanz}{chapter.7}% 183
+\BOOKMARK [0][-]{chapter.8}{Fazit}{}% 184
+\BOOKMARK [0][-]{appendix.A}{Glossar}{}% 185
+\BOOKMARK [0][-]{appendix.B}{Verzeichnisse}{}% 186
+\BOOKMARK [1][-]{section.B.1}{Abbildungsverzeichnis}{appendix.B}% 187
+\BOOKMARK [1][-]{section.B.2}{Quellenverzeichnis}{appendix.B}% 188
+\BOOKMARK [1][-]{section.B.3}{Tabellenverzeichnis}{appendix.B}% 189
+\BOOKMARK [0][-]{appendix.C}{Danksagung}{}% 190
+\BOOKMARK [0][-]{appendix.D}{Personalienblatt}{}% 191
+\BOOKMARK [0][-]{appendix.E}{Best\344tigung}{}% 192

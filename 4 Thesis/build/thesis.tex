@@ -2855,7 +2855,27 @@ Um die Komponenten unabhängig von einander zu entwickeln, wird bei der
 Entwicklung der Architektur des Authtenifizierungsservice darauf geachte
 möglichst gerine Kopplung aufzuweisen.
 
-\section{Architektur}\label{architektur}
+\section{Systemarchitektur}\label{systemarchitektur}
+
+Gemäss den nichtfunktionalen Anforderungen muss die Serversoftware -
+unter anderem - folgende Eigenschaften erfüllen:
+
+\begin{itemize}
+\tightlist
+\item
+  Hohe Verfügbarkeit von 99.9\%
+\item
+  Wartbarkeit
+\item
+  Performance
+\end{itemize}
+
+Die Softwarearchitektur wurde im Hinblick auf diese Anforderungen
+erstellt.
+
+\newpage
+
+\section{Architekturübersicht}\label{architekturuxfcbersicht}
 
 Der Authtentifizierungsservice besteht aus drei Hauptkomponenten:
 Web-API, Konfigurator und Autorisierung. Die folgende Abbildung zeigt
@@ -2867,12 +2887,6 @@ Authentifizierungservice auf.
 \includegraphics{images/draw_io/BA_KomponentenDiagramm.png}
 \caption{Übersicht der Hauptkomponenten}
 \end{figure}
-
-\section{Software Design}\label{software-design}
-
-\subsection{Webservice}\label{webservice}
-
-\subsection{}\label{section}
 
 \newpage
 
@@ -3329,9 +3343,11 @@ Benutzer und Entwickler den Authenifizierungsservice als ein sicheres
 und glaubwürdiges Produkt für Interaktivitäten wahrnehmen wird so
 versteckt werden.
 
+\newpage
+
 \hypertarget{integrationskonzept}{\subsection{Integrationskonzept}\label{integrationskonzept}}
 
-\subsection{Integrationsparameter}\label{integrationsparameter}
+\subsubsection{Integrationsparameter}\label{integrationsparameter}
 
 \begin{longtable}[c]{@{}lll@{}}
 \caption{Parameter Authenifizierungsservice Lightbox}\tabularnewline
@@ -3421,14 +3437,15 @@ Beim Beispiel gäbe es die Signatur b37b3d4cd7cd8cba3f409f07d6f6d9bd
 Nach Abschluss der Authentifizierung erhält der User visualisiert ein
 Feedback. Sofern die Authentifizierung erfolgreich war, wird im
 Hintergrund die im Konfigurator angegebene Url des Anbieters aufgerufen.
-Über die Post-Parameter ProjectId, ProviderID erfährt die
-Serverapplikation um welchen Datensatz es sich handelt. Die Gefahr
-besteht, dass diese Redirect-Url auch von einem anderen Programm
-aufegrufen werden könnte. Deshalb kann die Serverapplikation des
-Anbieters die Validate WebAPI des Authentifizierungsservice aufrufen und
-die erhaltenen Daten gegeprüfen. Bei erfolgreicher gegenprüfung gilt der
-Datensatz seitens Anbieter auch als valide und kann dan persistiert
-werden.
+Über die Post-Parameter ProjectId + ProviderID erfährt die
+Serverapplikation um welchen Datensatz es sich handelt. Wiederum wird
+der sign-Parameter zum Absichern mitgegeben. Die Gefahr besteht
+trotzdem, dass diese Redirect-Url auch von einem anderen Programm
+aufgerufen werden könnte. Deshalb kann als zweite Absicherung die
+Serverapplikation des Anbieters die Validate WebAPI des
+Authentifizierungsservice aufrufen und die erhaltenen Daten gegeprüfen.
+Bei erfolgreicher Gegenprüfung gilt der Datensatz seitens Anbieter auch
+als valide und kann dann persistiert werden.
 
 \newpage
 
@@ -3729,32 +3746,48 @@ eine Schweizer Schulnote vergeben.
 \bottomrule
 \end{longtable}
 
+\ldots{}Tabelle vervollständigen
+
 \subsection{Auswahl der zu integrierenden
 Sicherheitsstufen}\label{auswahl-der-zu-integrierenden-sicherheitsstufen}
 
 SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in
-der Schweiz (\protect\hyperlink{ux5cux23ux5cux23NFREQ-212}{NFREQ-212})
-keine genügende Note und wird daher ausgeschlossen. Um die geforderte
-Breite an Sicherheitsmethoden zu erlangen wurden die folgenden Methoden
-mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
+der Schweiz (\href{FREQ-212}{NFREQ-212}) keine genügende Note und wird
+daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu
+erlangen wurden die folgenden Methoden mit verschiedenen Stärken in
+Aspekten durch den Auftraggeber ausgewählt:
+
+\begin{itemize}
+\tightlist
+\item
+  IP-Adresse
+\item
+  E-Mail
+\item
+  SMS
+\item
+  Telefon
+\item
+  Ausweisnummer
+\end{itemize}
 
 \newpage
 
 \hypertarget{modularituxe4t-und-erweiterbarkeit}{\section{Modularität
 und Erweiterbarkeit}\label{modularituxe4t-und-erweiterbarkeit}}
 
-Wie in der Einführung zur Architektur erwähnt , sollte eine Architektur
-so konstruiert werden dass Sie möglichst Modular aufgebaut ist. Auch
-wenn wir die zu verwendenden Authentifizierungsmethoden im vorherigen
-Kapitel definiert haben, werden sich diese in Zukunft ändern. Anderseits
-kann sich auch die Authentifizierungsmethoden an sich komplett
-verändern. Sehr realistisch ist, dass für einen Browser Fingerprint neue
-Berechnungsmethodiken bekannt werden. Der Anbieter der hinter eine
-Authentifizierungsmethode steht, kann sich verändern oder dessen
-Anbindung. Kurz gesagt, die Modularität der Authentifizierungsmethoden
-muss unbedingt gewährleistet sein. Eine Implementation der
-Sicherheitsstufe SMS wie im folgenden einfachen Beispiel sollte nicht
-verwendet werden.
+Wie in der Einführung zur {[}Architektur{]} erwähnt, sollte eine
+Architektur so konstruiert werden dass Sie möglichst Modular aufgebaut
+ist. Auch wenn wir die zu verwendenden Authentifizierungsmethoden im
+vorherigen Kapitel definiert haben, werden sich diese in Zukunft ändern.
+Anderseits kann sich auch die Authentifizierungsmethoden an sich
+komplett verändern. Sehr realistisch ist, dass für einen Browser
+Fingerprint neue Berechnungsmethodiken bekannt werden. Der Anbieter der
+hinter eine Authentifizierungsmethode steht, kann sich verändern oder
+dessen Anbindung anpassen. Kurz gesagt, die Modularität der
+Authentifizierungsmethoden muss unbedingt gewährleistet sein. Eine
+Implementation der Sicherheitsstufe SMS wie im folgenden einfachen
+Beispiel sollte nicht verwendet werden.
 
 \begin{verbatim}
 SMSSecurityStep inst = new SMSSecurityStep();
@@ -3764,8 +3797,9 @@ SMSSecurityStep inst = new SMSSecurityStep();
 
 Das Design Pattern ``Design by Contract'' soll das Zusammenspiel von
 Modulen durch eine Definition/Vertrag regeln. Herr Bertrand Meyer führte
-das Pattern bei der Enwicklung der Programmiersprache Eiffel ein. Die
-Verträge enthält besteht aus
+das Pattern bei der Enwicklung der Programmiersprache Eiffel
+ein.\footnote{\autocite{design-By-Contract}} Die Verträge enthält
+besteht aus
 
 \begin{itemize}
 \tightlist
@@ -3796,24 +3830,25 @@ ausgetauscht werden kann. In diesem konkreten Fall, könnten
 beispielsweise die Komponenten SMSSecurityStep und CookieSecurityStep
 die Schnittstelle ISecurityStep implementieren.
 
-SomeFactory muss für die Umsetzung von Desing by Contract implementiert
-werden. Dafür gibt es in der .net Welt einiges an Beispiel Code und
-Frameworks zu finden. Ein beliebtes Framework ist die Windows
-Communication Foundation \footnote{\autocite{design-By-Contract}}
+SomeFactory muss für die Umsetzung jedoch implementiert werden. Dafür
+gibt es in der .net Welt einiges an Beispiel Code und Frameworks zu
+finden. Ein beliebtes Framework ist die Windows Communication
+Foundation.\footnote{\autocite{design-By-Contract}}
 
 \subsection{MEF - Managed Extensibility
 Framework}\label{mef---managed-extensibility-framework}
 
 MEF das Managed Extensibility Framework ist seit der Version 4.0
-Bestandteil des Frameworks. MEF ist eine Bibliothekt und Implementiert
-das Problem der Erweiterbarkeit sogar zur Laufzeit. Es vereinfacht die
-Implementierung von erweiterbaren Anwendungen und bietet Ermittlung von
-Typen, Erzeugung von Instanzen und Composition Fähigkeiten an.
+Bestandteil des .NET Frameworks. MEF ist eine Bibliothekt und
+Implementiert das Problem der Erweiterbarkeit sogar zur Laufzeit. Es
+vereinfacht die Implementierung von erweiterbaren Anwendungen und bietet
+Ermittlung von Typen, Erzeugung von Instanzen und Composition
+Fähigkeiten an.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics{images/mef_architektur.jpg}
-\caption{Vereinfacht die Architektur des Managed Extensibility Framework
+\caption{Vereinfachte Architektur des Managed Extensibility Framework
 Quelle: msdn.microsoft.com}
 \end{figure}
 
@@ -3827,9 +3862,9 @@ instanziert sind nennen sich Exports. Imports sind die Variabeln an den
 Exports gebunden werden sollen.
 
 Um das Konzept besser zu verstehen, soll der Beispielcode von Design by
-Contract herangezogen werden. Die Variable proxy vom Type ISecurityStep
-die die Instanz dieser Komponente enthalten soll, wäre ein „Import`` in
-einer MEF Anwendung. Der SMSSecurityStep oder CookieSecurityStep wären
+Contract herangezogen werden: In einer MEF Anwendung wäre die Variable
+proxy vom Type ISecurityStep und die Instanz dieser Komponente wäre ein
+„Import``. Die Objekte der SMSSecurityStep oder CookieSecurityStep wären
 in einer MEF Anwendung ein Export.
 
 MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
@@ -3915,9 +3950,10 @@ werden. Der Programmierer kann rasch auf die gewünsche Seite switchen.
 In der Mobileansicht kann durch einen einzigen Klick auf die
 ``Burger-Navigation'' das gesamte Menü eingefahren werden. Der
 Entscheid, für eine statische linke Navigationsstruktur in der
-Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch den
-Konfigurator gestalterisch mit Farb und Bild aufzuwerten. Dies ist über
-die linke Spalte einheitlich und einfach umsetzbar.
+Desktopansicht, wurde ausserdem bekräftigt durch den Wunsch des
+Auftraggebers den Konfigurator gestalterisch mit Farb und Bild
+aufzuwerten. Dies ist über die linke Spalte einheitlich und einfach
+umsetzbar.
 
 \newpage
 
@@ -3932,10 +3968,10 @@ oder Login-Seite verwendet werden können. Verschiedene Designe lösen
 diese Problematik mit einem Karten-Konzept English genannt Card Based
 Design. Dabei wird jedes Inhaltselement als ``Card'' dargestellt. Die
 ``Card'' hat einen klar abgerenzten Darstellungsbereich. Die Card ist in
-Header und Content unterteilt. Im Header wird mittels Titel (wenn auch
-repetitiv) dem Anwender kommuniziert, was für ein Inhalt im Breich
-Content der ``Card'' zu erwarten ist. \footnote{Weitere Informationen
-  und Beispiele auf webdesigner.com \autocite{card-based-design}}
+Header und Content unterteilt. Im Header wird mittels Titel dem Anwender
+kommuniziert, was für ein Inhalt im Breich Content der ``Card'' zu
+erwarten ist. \footnote{Weitere Informationen und Beispiele auf
+  webdesigner.com \autocite{card-based-design}}
 
 \begin{figure}[htbp]
 \centering
@@ -3949,13 +3985,13 @@ Content der ``Card'' zu erwarten ist. \footnote{Weitere Informationen
 Template}\label{authentifizierungs-lightbox-template}}
 
 Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der
-Endbenutzer kann ein geringes technische Know-How besitzen. Deshalb muss
-das Design einen Bereich schaffen in diesem die zu tätigenden Schritte
-erklärt werden können. Die Möglichkeiten und Anzahl Schritte sollen auf
-ein Minimum gehalten werden. Im Besten Fall kann der User eine Eingabe
-machen und dies mit einem Knopf bestätigen. Damit der Endbenutzer
-fokusiert bleibt soll, wie bei einer Lightbox üblich, der Rest der Seite
-abgedunkelt werden.
+Endbenutzer kann ein geringes technische Know-How aufweisen. Deshalb
+muss das Design einen Bereich verfügbar machen, in welchem die zu
+tätigenden Schritte erklärt werden können. Die Möglichkeiten und Anzahl
+Schritte sollen auf ein Minimum gehalten werden. Im besten Fall kann der
+User eine Eingabe machen und dies mit einem Button bestätigen. Damit der
+Endbenutzer fokusiert bleibt soll, wie bei einer Lightbox üblich, der
+Rest der Seite abgedunkelt werden.
 
 \begin{figure}[htbp]
 \centering
@@ -4049,8 +4085,8 @@ unseren Köpfen tief verankert sind. Kinder werden beigebracht das man
 Fremde mit ``Sie'' an spricht. In der Familie, die Geborgenheit und
 Vertrautheit ausstrahlt, ist das ``Du'' normal. Gegenüber Lehrern und
 anderen Autoritätspersonen sollte das Kind aber ``Sie'' sagen. Also
-redet das Kind auch im erwachsenen Alter Erwachsene, vor denen es
-zugleich Respekt haben sollte, mit ``Sie'' an.
+spricht das Kind auch im fortgeschrittenen Alter Erwachsene, vor denen
+es zugleich Respekt haben sollte, mit ``Sie'' an.
 
 Eine generelle Antwort zur Verwendung Du oder Sie auf Webseiten kann
 also nicht gemacht werden. Im Jahre 2011 wurden von statista Personen
@@ -4066,13 +4102,14 @@ Sie angesprochen. Einem grossen Teil (43\%) ist die Ansprache egal und
 Die Authentifizierung welche vom Endbenutzer durchgeführt wird darf
 ruhig sprachlich distanziert und emotionslos wirken. Vielmehr sind
 Respekt, Kompetenz und Seriösität wichtige Eckpunkte dieses Produkts.
-Deshalb wird in der Authentifizierung der Endbenutzer falls nötig mit
+Deshalb wird in der Authentifizierung der Endbenutzer, falls nötig, mit
 Sie angesprochen. Der Konfigurator wird durch Programmierer
 administriert. Hier gilt es zu vermitteln, dass der Programmierer sich
 angenommen und unterstützt in seinem Problemen / Herausforderungen
-fühlt. Das Produkt soll zeitgemäss und trendig sein. Deshalb wird mit
-hier die Kommunikation über Du geführt. Dies wird unterstützt das unter
-Programmierern auch in der Wirtschaft mehrheitlich geduzt wird.
+fühlt. Das Produkt soll zeitgemäss und trendig sein. Deshalb wird die
+Kommunikation über Du geführt. Dies Entscheidung wird durch die Annahme
+unterstützt das unter Programmierern auch in der Wirtschaft mehrheitlich
+geduzt wird.
 
 \newpage
 
@@ -4133,7 +4170,7 @@ jQuery Validate Standart Annotationen bereits in der
 Benutzereingabemaske überprüft. So muss der User bei Falscheingabe nicht
 zuerst einen manuellen Request auf den Server setzten sondern wird
 gleich über die Fehleingabe aufmerksam gemacht. Im Konfigurator, eine
-AngularJS-App ist die benutzerseitige Validierung mittels HTML5 Form
+AngularJS-App, ist die benutzerseitige Validierung mittels HTML5 Form
 Validation umgesetzt worden.
 
 \section{Testing}\label{testing}
@@ -4177,25 +4214,7 @@ Funktionalität überprüfen. Weiter bieten Repositories eine zentrale
 Anlaufstelle für Datenbankoperationen. Eine gemeinsame Schnittstelle
 gegenüber den Datenhaltungs-Schichten. Zudem bietet es einen idealen
 Punkt, an dem man Mechanismen wie beispielsweise Caching implementieren
-kann. \footnote{\autocite{repository} \#\#Domänenmodell \#\#\#Entitäten}
-
-\section{Systemarchitektur}\label{systemarchitektur}
-
-Gemäss den nichtfunktionalen Anforderungen muss die Serversoftware -
-unter anderem - folgende Eigenschaften erfüllen:
-
-\begin{itemize}
-\tightlist
-\item
-  Hohe Verfügbarkeit von 99.9\%
-\item
-  Wartbarkeit
-\item
-  Performance
-\end{itemize}
-
-Die Softwarearchitektur wurde im Hinblick auf diese Anforderungen
-erstellt.
+kann. \footnote{\autocite{repository}}
 
 \chapter{Proof Of Concept}\label{proof-of-concept}
 
@@ -4431,10 +4450,14 @@ AngularJS umgestzt wurde. Diese Screens sind abgeleitet von den
 Mockups\footnote{Siehe Kapitel
   \protect\hyperlink{konfigurator-template}{Konfigurator Template}}
 
-Hier würden ein paar Screenshots gezeigt werden
+\ldots{}Hier würden ein paar Screenshots gezeigt werden
 
 Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen
 vom Auftraggeber inaffect AG und die Umfrageergebnisse einsehen.
+
+\ldots{}Hier würden ein paar Screenshots gezeigt werden
+
+\newpage
 
 \subsection{Authentifizierung-Lightbox mit
 Sicherheitsstufen}\label{authentifizierung-lightbox-mit-sicherheitsstufen}
@@ -4444,6 +4467,10 @@ Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens welche
 von den Mockups\footnote{Siehe Kapitel
   \protect\hyperlink{authentifizierungs-lightbox-template}{Authentifizierungs-Lightbox
   Template}} abgeleitet wurden.
+
+\ldots{}Hier würden ein paar Screenshots gezeigt werden
+
+\newpage
 
 \section{Implementation
 Authentifizierung}\label{implementation-authentifizierung}
@@ -4463,6 +4490,8 @@ im Authentifizierungsjavascript mitgeliefert.
 \includegraphics{images/code/implementation_lightbox.png}
 \caption{HTML-Beispiel Implementation der Authentifizierung}
 \end{figure}
+
+\newpage
 
 \subsection{Gegeprüfung der
 Authentifizierung}\label{gegepruxfcfung-der-authentifizierung}
@@ -4490,6 +4519,8 @@ PlugIn integriert. Statt den Code hardkodiert zu integrieren, wurde ein
 eigenes PlugIn entworfen dass nun mit minimaler Konfiguration wieder
 verwendet werden kann. Die Integration ist erfolgreich integriert und
 auf dem github Account verlinkt.\footnote{https://github.com/coffeefan/bachelorarbeit}
+
+Hier würden ein paar Screenshots gezeigt werden
 
 \newpage
 

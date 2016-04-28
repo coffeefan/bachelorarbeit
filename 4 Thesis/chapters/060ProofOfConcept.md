@@ -94,12 +94,20 @@ Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework ei
 ### AngularJS-Konfigurator
 Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJS umgestzt wurde. Diese Screens sind abgeleitet von den Mockups[^Mockups-Konfigurator]
 
-<!--TODOO--Screenshots--> Hier würden ein paar Screenshots gezeigt werden
+<!--TODOO--Screenshots--> ...Hier würden ein paar Screenshots gezeigt werden
 
 Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG und die Umfrageergebnisse einsehen.
 
+<!--TODOO--Screenshots--> ...Hier würden ein paar Screenshots gezeigt werden
+
+\newpage
+
 ### Authentifizierung-Lightbox mit Sicherheitsstufen
 Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden.
+
+...Hier würden ein paar Screenshots gezeigt werden
+
+\newpage
 
 
 ## Implementation Authentifizierung
@@ -107,6 +115,8 @@ Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer 
 Die Implementation der Authentifizierung ist wie im Kapitel [Integrationskonzept] festgelegt, lean umgesetzt worden. Alle CSS-Befehle können von einer Datei abegrufen werden. Die Javascript-Entwicklungen sind in einem File öffentlich verfügbar. Um keine Konflikte mit bereits auf der Webseite implementierten jQuery Bibliotheken zu erhalten wird diese jQuery nicht im Authentifizierungsjavascript mitgeliefert.
 
 ![HTML-Beispiel Implementation der Authentifizierung](images/code/implementation_lightbox.png)
+
+\newpage
 
 ### Gegeprüfung der Authentifizierung
 Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert und kann unter http://iaauth.azurewebsites.net/api/Validate mit den Parameter ProjectId und ProviderId konsumiert werden.
@@ -116,7 +126,7 @@ Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback.
 Die Implementation in einem neuerstellten Testprojekt ist erfolgreich. Das umgesetzte Implentationskonzept soll nun auch in einer bestehenden Webapplikation integriert werden. Daher soll das verbreitete Umfrage Modul WP_Poll aus dem Kapitel [Wordpress PlugIn Hook] eine Implementation der Authentifizierung-Lightbox erhalten. Dafür wurde eine neue Wordpress installation mit einem Standartlayout aufgesetzt und das PlugIn integriert. Statt den Code hardkodiert zu integrieren, wurde ein eigenes PlugIn entworfen dass nun mit minimaler Konfiguration wieder verwendet werden kann. Die Integration ist erfolgreich integriert und auf dem github Account verlinkt.[^demo-github]
 
 
-<TODOO--Screenshots-->
+<!--TODOO--Screenshots--> Hier würden ein paar Screenshots gezeigt werden
 
 [^demo-github]: https://github.com/coffeefan/bachelorarbeit
 
@@ -127,6 +137,7 @@ Die Implementation in einem neuerstellten Testprojekt ist erfolgreich. Das umges
 [^Mockups-Authentifizierungs-Lightbox]: Siehe Kapitel [Authentifizierungs-Lightbox Template]
 
 \newpage
+
 ##Testing
 ###Unit-Test Sicherheitsstufe und Authentifizierungsservice
 Die verschiedenen Sicherheitsstufen könnenen unabhängig geprüft werden. Jede Sicherheitstufe hat ein eigenes Testprojekt. Die verschiedenen Testprojekte der Sicherheitsstufen und das Testprojekt des Authentifizierungsservice basieren auf dem Template des Visual Studio 2015 Unit-Test Frameworks. Die Unit-Tests sind direkt im Visual Studio eingebetet. 
