@@ -248,6 +248,10 @@
     <Compile Include="Migrations\201604212036506_ProjectSecurityStep.Designer.cs">
       <DependentUpon>201604212036506_ProjectSecurityStep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604291348112_SMSInit.cs" />
+    <Compile Include="Migrations\201604291348112_SMSInit.Designer.cs">
+      <DependentUpon>201604291348112_SMSInit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -380,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604212036506_ProjectSecurityStep.resx">
       <DependentUpon>201604212036506_ProjectSecurityStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604291348112_SMSInit.resx">
+      <DependentUpon>201604291348112_SMSInit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource\Email.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

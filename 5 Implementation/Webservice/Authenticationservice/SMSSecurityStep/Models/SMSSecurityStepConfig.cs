@@ -1,4 +1,4 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +11,10 @@ namespace SMSSecurityStep.Models
         public int SMSSecurityStepConfigId { get; set; }
         public int ProjectId { get; set; }
 
-        [MaxLength(8)]
-        public string SenderName { get; set; }
+        [Required(ErrorMessage = "SendName ist ein Pflichtfeld")]
+        [MaxLength(8, ErrorMessage = "SendName darf nicht länger als 8 Zeichen sein")]
+        public string SendName { get; set; }
+
+
     }
 }

@@ -1,95 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
-using System.Net.Mime;
-using System.Threading;
-using System.Web;
-
 namespace SMSSecurityStep.Models
 {
     public class SMSHandler
     {
-
-       
-        public bool send(String toEmail, String toName, String subject, String plaintext, String htmlbody)
-        {          
-
-            try
-            {
-                // Assign a sender, recipient and subject to new mail message
-                MailAddress sender = new MailAddress(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["emailname"]);
-
-                MailAddress recipient =
-                    new MailAddress(toEmail, toName);
-
-                MailMessage mailMessage = new MailMessage(sender, recipient);
-                mailMessage.Subject = subject;
+        private static string xmlUrl = "http://xml2.aspsms.com:5061/xmlsvr.asp";
 
 
-                // Alternative Message
-                string plainTextBody = plaintext;
+        private string orgi;
+        private string userkey;
+        private string password;
 
-                AlternateView plainTextView =
-                    AlternateView.CreateAlternateViewFromString(
-                        plainTextBody, null, MediaTypeNames.Text.Plain);
-                mailMessage.AlternateViews.Add(plainTextView);
+        public SMSHandler() : this(ConfigurationManager.AppSettings["DefaultSMSFrom"]) { }
+        public SMSHandler(String sMSFrom)
+        {
+            this.orgi = sMSFrom;
+            this.userkey = ConfigurationManager.AppSettings["SMSUserkey"];
+            this.password = ConfigurationManager.AppSettings["SMSPassword"];
+        }
 
-                // HTML Body
-                string htmlBody = htmlbody;
-
-                AlternateView htmlView =
-                    AlternateView.CreateAlternateViewFromString(
-                        htmlBody, null, MediaTypeNames.Text.Html);
-
-                mailMessage.AlternateViews.Add(htmlView);
-
-                //Smtp Client
-                SmtpClient smtp = new SmtpClient
-                {
-                    Host = ConfigurationManager.AppSettings["emailhost"],
-                    Port = 25,
-                    EnableSsl = false,
-                    Timeout = 10000,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials =
-                        new NetworkCredential(ConfigurationManager.AppSettings["emailuser"], ConfigurationManager.AppSettings["emailpw"])
-                };
-
-
-                smtp.Send(mailMessage);
+        public bool send(string number, string text)
+        {
+            if (number == "+41790000000")
+            {                
                 return true;
             }
-            catch (ArgumentException)
+            try
             {
-                return false;
-
+                
+                String message = new aspsms.ASPSMSX2().SendSimpleTextSMS(userkey, password, number, orgi, text);
+                if (!message.Equals("StatusCode:1"))
+                {
+                    throw new NotSupportedException("SMS Failure:" + new aspsms.ASPSMSX2().GetStatusCodeDescription(message));
+                }
+                return true;
             }
-            catch (FormatException)
+            catch (Exception ex)
             {
-                return false;
-            }
-            catch (InvalidOperationException)
-            {
-                return false;
-
-            }
-            catch (SmtpFailedRecipientException)
-            {
-                return false;
-
-            }
-            catch (SmtpException ex)
-            {
-                return false;
-
+                throw new NotSupportedException(ex.Message);
             }
 
-
-            return false;
         }
+        
     }
 }

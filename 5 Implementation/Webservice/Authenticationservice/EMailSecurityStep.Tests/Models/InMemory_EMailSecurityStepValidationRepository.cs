@@ -38,7 +38,13 @@ namespace EMailSecurityStep.Tests.Models
 
         public bool IsEMailUsed(string email, int projectid)
         {
-            throw new NotImplementedException();
+            if (_db.Where(essv => essv.EMail == email
+                 && essv.ProjectId == projectid
+                 && essv.StatusId == 1).Count() > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public void resetEMailSecurityStepValidationByValid(int projectid, string providerid)

@@ -25,7 +25,9 @@ namespace EMailSecurityStep.Models
 
         public bool IsEMailUsed(string email,int projectid)
         {
-            if(_db.EMailSecurityStepValidations.Where(essv => essv.EMail == email && essv.ProjectId == projectid).Count() > 0)
+            if(_db.EMailSecurityStepValidations.Where(essv => essv.EMail == email 
+                && essv.ProjectId == projectid 
+                && essv.StatusId== 1).Count() > 0)
             {
                 return true;
             }

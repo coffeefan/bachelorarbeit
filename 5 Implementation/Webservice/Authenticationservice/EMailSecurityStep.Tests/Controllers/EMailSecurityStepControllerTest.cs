@@ -28,6 +28,8 @@ namespace EMailSecurityStep.Tests.Controllers
 
         }
 
+        
+
 
 
 
@@ -79,6 +81,22 @@ namespace EMailSecurityStep.Tests.Controllers
                 RequestContext = new RequestContext(new MockHttpContext(), new RouteData())
             };
             return controller;
+        }
+
+        [TestMethod]
+        public void Index()
+        {
+            HttpContext.Current = MockHelpers.FakeHttpContext();
+            HttpContext.Current.Session["ProviderId"] = providerId;
+            HttpContext.Current.Session["ProjectId"] = projectId;
+            // Arrange
+            EMailSecurityStepController controller = new EMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+
+            // Act
+            ActionResult result = controller.Index() as ActionResult;
+
+            // Assert
+            Assert.IsNotNull(result);
         }
 
         [TestMethod]
@@ -189,6 +207,9 @@ namespace EMailSecurityStep.Tests.Controllers
         [TestMethod]
         public void CodeValidation_Get_AsksForIndexView()
         {
+            HttpContext.Current = MockHelpers.FakeHttpContext();
+            String email = "testmail@testworld.ch";
+            HttpContext.Current.Session["email"] = email;
             // Arrange
             var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
             // Act
@@ -228,7 +249,7 @@ namespace EMailSecurityStep.Tests.Controllers
 
             EMailSecurityStepValidation_Status result = controller.GetEMailSecurityStepValidationStatus(1, "ZZZ");
             // Assert
-            Assert.AreEqual(result, EMailSecurityStepValidation_Status.NOTOPEN);
+            Assert.AreEqual(result, EMailSecurityStepValidation_Status.OPEN);
         }
 
         [TestMethod]

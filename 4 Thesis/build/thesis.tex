@@ -3529,7 +3529,8 @@ pro Brief sind von allen aufgelisteten Methoden am höchsten. Der
 Benutzer muss bei dieser Methode den Brief nach erhalten auf einer
 Webseite quittieren
 
-\subsection{Sicherheitstufen bewerten}\label{sicherheitstufen-bewerten}
+\hypertarget{sicherheitstufen-bewerten}{\subsection{Sicherheitstufen
+bewerten}\label{sicherheitstufen-bewerten}}
 
 Die Recherche der verschiedenen Sicherheitsstufen wurden dem
 Auftraggeber vorgelegt. Beim Auftraggeber wurden die verschiedenen
@@ -3895,6 +3896,45 @@ dem Authenifizierungsservice und den Sicherheitsstufen.
 \centering
 \includegraphics{images/mef_library_overview.png}
 \caption{UML Library Overview}
+\end{figure}
+
+\subsection{Definition der
+Sicherheitsufenverträge}\label{definition-der-sicherheitsufenvertruxe4ge}
+
+\subsubsection{Verträge für das
+Backend}\label{vertruxe4ge-fuxfcr-das-backend}
+
+Pro Projekt des Anbieters und muss der Programmierer für jede
+Sicherheitstufe verschiedene Konfigurationen tätigen können. Die
+Konfigurationen können da varieren. So kann bei der Sicherheitsstufe
+E-Mail der Absendername und Replay-E-Mail definiert werden, bei der
+Telefonvalidierung ein Grusswort. Es soll eine Abfrage der
+Konfigurtionsparameter pro PlugIn vorhanden sein. Diese soll mit
+allfällig bereits erfassten Werten übermittelt werden. Um die Werte zu
+speichern muss eine Speicher funktionion pro PlugIn aufrufbar sein.
+Weiter sollen statische Vergleichsparameter pro PlugIn übergeben werden
+können. Die Vergleichsparameter entsprechen generell den Angaben aus
+Kapitel \protect\hyperlink{sicherheitstufen-bewerten}{Sicherheitstufen
+bewerten}. Für neuere PlugIns werden diese Bewertungen vom
+Auftraggeberteam neu definiert. Anzumerken ist hier, dass die
+Studienergebnisse zentral verwaltet werden und dynmaisch , sofern das
+PlugIn in der Studie bewertet wurde, ausgelesen werden.
+
+\subsubsection{Verträge Frontend}\label{vertruxe4ge-frontend}
+
+Der Authenifizierungsservice soll von jedem Sicherheitstufen-PlugIn den
+Status über die Validierung erfragen können. Um die Validierung der
+einzelnen Stufe (noch einmal) zu beginnen oder als valide zu bezeichnen.
+Das Microsoft MVC Framework braucht, falls nicht anders definiert, eine
+Index-Seite pro Controller. Diese Vorbedinung wird als Einstiegspunkt
+für die Validierung einer Sicherheitsstufe verwendet.
+
+Aus den gegeben Ansprüchen wird folgendes Interface konzeptioniert:
+
+\begin{figure}[htbp]
+\centering
+\includegraphics{images/draw_io/ISecurityStepContract.png}
+\caption{Interface ISecurityStepInfo}
 \end{figure}
 
 \newpage
@@ -5054,6 +5094,205 @@ Resultats. Vielmehr ist es der Anbieter und das Vertrauen das der
 Endbenutzer diesem geben kann.
 
 \chapter{Fazit}\label{fazit-2}
+
+Diese Kapitel enthält die Schlussfolgerungen, welche aus der erarbeiten
+Bachelorarbeit gezogen werden können, einen Ausblick
+
+Das Hauptziel dieser Bachelorarbeit ist ein Konzept eines Services,
+welcher Programmieren hilft Authentifizierungen für Interaktivitäten in
+einem neuen oder bestehenden System einzubinden und zu verwalten. In der
+Recherche wurde aufgezeigt, dass diese Art von Service nicht existiert.
+Das Basiswissen für Authentifizierungen ist in der Recherche erweitert
+und aufgefrischt worden und kompakt in dieser Arbeit nieder geschrieben.
+Verschiedene Authentifizierungensmethoden so genannte Sicherheitsstufen
+wurden recherchiert und auf ihre Möglichkeiten, Grenzen und
+Rahmenbediengugen geprüft. Basierend auf dem recherchierten Wissen wurde
+mit dem Auftraggeber die Anforderungen basierend auf der
+Aufgabenstellung und den Vorstellungen des Auftraggebers erstellt. Diese
+Anforderungen führten zu den verschiedenen
+
+Ein Prototyp dieses Authentifizierungsservice konnte entwickelt und in
+einem vereinfachten neuen System wie in einem bekannten und verbreiteten
+alten System (Wp\_Poll) integriert werden.
+
+In der Recherche konnten die Breite an Möglichkeiten
+
+\section{Ausblick}\label{ausblick}
+
+Der erstellte Prototyp wird nun dem Auftraggeber, der Firma inaffect AG
+übergeben. In der Übergabephase werden entstandene Änderungen- und
+Erweiterungswünsche insbesondere im Bereich des Designs umgesetzt. Das
+1. Projekt, welches bei erfolgreicher Betaphase den
+Authentifizierungensservice verwenden würde, ist eine
+Netzwerk-Eventveranstaltungsreihe mit Aufschaltung in 3 Monaten. Es
+konnte zwar gezeigt werden, dass es möglich ist mit verschiedenen
+Sicherheitsstufen eine genügend hohe eindeutige Authentifizierung zu
+erreichen, jedoch ist dies immer mit Bekanntgabe von persönlichen Daten
+verbunden. Die Angst, dass diese Daten missbraucht werden ist hoch. Dies
+wurde mehrfach ungefragt in den Bemerkungen der Umfrage erwähnt. Ein
+Lösungsansatz wäre für Authentifizierung wie bei Onlinezahlungen ein
+vertrauliches Gateway zu schaffen. Diese Bachelorarbeit beschreibt genau
+dieses Gateway als Konzept Authentifizierungsservice. Es müsste eine
+Firma den Schritt wagen das Konzept als Produkt dem Endkunden zu
+präsentieren, als sicheren Ort für seine Daten für fairen Ablauf von
+Interaktivitäten. Auf der anderen Seite sollen müssten Sicherheitsstufen
+mit anderen technologischen Möglichkeiten folgen, welche nicht mehr
+persönliche Daten benötigen.
+
+\newpage
+
+\section{Validation}\label{validation}
+
+Die erarbeiteten Konzepte haben im Prototyp funktioniert. Nachfolgend
+wird die Erfüllung der Aufgabenstellung überprüft.
+
+\begin{longtable}[c]{@{}lll@{}}
+\toprule
+\begin{minipage}[b]{0.14\columnwidth}\raggedright\strut
+\textbf{Bereich}
+\strut\end{minipage} &
+\begin{minipage}[b]{0.68\columnwidth}\raggedright\strut
+\textbf{Beschreibung}
+\strut\end{minipage} &
+\begin{minipage}[b]{0.09\columnwidth}\raggedright\strut
+\textbf{Status}
+\strut\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\textbf{Recherche}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde eine Marktanalyse bestehende Produkte recherchiert und
+dokumentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurden verschiedene Sicherheitstufen (Arten und Methoden der
+Sicherheits- und Identitätsüberprüfung) recherchiert und dokumentiert
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\textbf{Analyse}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurden die Anforderungen der Authentifizierungsschnittstelle mit dem
+Arbeitgeber analysiert und dokumentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\textbf{Konzept}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde die Evaluation von geeigneten Authentifizierungsmethoden für
+verschiedene Stufen dokumentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurden eine Spezifikation einer Prototypenapplikation für die
+Authentifizierungsschnittstelle entworfen und dokumentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurden eine Spezifikation einer Prototypenapplikation für das Verwalten
+erfüllt der Authentifizierungsschnittstelle entworfen und dokumentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde die Software-Architektur der Authentifizierungsschnittstelle und
+dessen Verwaltung konzeptioniert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\textbf{Studie}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde eine Studie über Akzeptanz und Geschwindigkeit(Anstrengung) von
+Authentifizierungsmethoden ausgearbeitet?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde die Durchführung der Studie dokummentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde die Auswertung dokumentiert und im Prototyp integriert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\textbf{Proof of} \textbf{Concept}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde der Prototypen der Authentifizierungsschnittstelle und der
+Verwaltung entwickelt?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurden die Studienresultate im Prototypen integriert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+\textbf{Fazit}
+\strut\end{minipage} &
+\begin{minipage}[t]{0.68\columnwidth}\raggedright\strut
+Wurde das Fazit dokumentiert?
+\strut\end{minipage} &
+\begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+erfüllt
+\strut\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\newpage
+
+\section{Schlusswort}\label{schlusswort}
+
+Bei der Erarbeitung dieser Bachelorarbeit konnte ich mich intensiv mit
+AngularJS und den Microsoft Web Technologien auseinander setzen.
+Insbesondere die Implementierung der Plugin-Architektur für die
+Sicherheitstufen forderte die Erarbeitung eines tiefen Wissens der Core
+Entwicklung von .net Web API und MVC. Bei der Ladung des PlugIns zur
+Laufzeit musste Methoden gefunden werden um kein Memoryleek zu
+generieren. Dadurch konnten tiefere Einblick in die Techniken und
+Standards gewonnen werden. Im Zusammenhang mit den
+Sicherheitsstufen-PlugIns war die Definition
 
 \newpage
 

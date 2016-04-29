@@ -90,7 +90,7 @@ angular.module('configuratorApp')
             SecurityStepProjectListService.update({projectid: $scope.project.ProjectId}, projectSecuritySteps, function (data) {
 
                 swal({title: "Speicherung erfolgreich", text: "Das Projekt wurde erfolgreich erstellt", type: "success"}, function () {
-                    $location.path("/");
+
                 });
 
             }, function (error) {
@@ -106,7 +106,7 @@ angular.module('configuratorApp')
             ProjectService.add({}, $scope.project, function (data) {
 
                 swal({title: "Speicherung erfolgreich", text: "Das Projekt wurde erfolgreich erstellt", type: "success"}, function () {
-                    $location.path("/");
+
                 });
 
             }, function (error) {
@@ -118,7 +118,7 @@ angular.module('configuratorApp')
             ProjectService.update({id:$scope.project.ProjectId}, $scope.project, function (data) {
 
                 swal({title: "Speicherung erfolgreich", text: "Das Projekt wurde erfolgreich erstellt", type: "success"}, function () {
-                    $location.path("/");
+
                 });
 
             }, function (error) {

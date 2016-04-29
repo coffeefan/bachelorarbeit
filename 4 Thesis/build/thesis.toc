@@ -360,180 +360,192 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.8.4}Sicherheitsstufen Libaray-\IeC {\"U}bersicht anhand MEF}{66}{subsection.5.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.9}Mockup}{67}{section.5.9}
+\contentsline {subsection}{\numberline {5.8.5}Definition der Sicherheitsufenvertr\IeC {\"a}ge}{66}{subsection.5.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.9.1}Konfigurator Template}{67}{subsection.5.9.1}
+\contentsline {subsubsection}{Vertr\IeC {\"a}ge f\IeC {\"u}r das Backend}{66}{subsubsection*.81}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Seitenaufbau}{68}{subsubsection*.83}
+\contentsline {subsubsection}{Vertr\IeC {\"a}ge Frontend}{67}{subsubsection*.82}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Navigation}{68}{subsubsection*.84}
+\contentsline {section}{\numberline {5.9}Mockup}{68}{section.5.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Inhaltaufbau}{69}{subsubsection*.85}
+\contentsline {subsection}{\numberline {5.9.1}Konfigurator Template}{68}{subsection.5.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.9.2}Authentifizierungs-Lightbox Template}{70}{subsection.5.9.2}
+\contentsline {subsubsection}{Seitenaufbau}{69}{subsubsection*.86}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.9.3}Hinweis zur Zusammenarbeit mit dem Auftraggeber}{70}{subsection.5.9.3}
+\contentsline {subsubsection}{Navigation}{69}{subsubsection*.87}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.10}``Du'' oder ``Sie'' -- Ansprache}{71}{section.5.10}
+\contentsline {subsubsection}{Inhaltaufbau}{70}{subsubsection*.88}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.10.1}Bestehende Vorurteile}{71}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.9.2}Authentifizierungs-Lightbox Template}{71}{subsection.5.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Entscheidung}{72}{subsubsection*.88}
+\contentsline {subsection}{\numberline {5.9.3}Hinweis zur Zusammenarbeit mit dem Auftraggeber}{71}{subsection.5.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.11}Wahl des Applikation Hosters}{73}{section.5.11}
+\contentsline {section}{\numberline {5.10}``Du'' oder ``Sie'' -- Ansprache}{72}{section.5.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.11.1}Asp.net Shared Hosting}{73}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.10.1}Bestehende Vorurteile}{72}{subsection.5.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.11.2}Cloud Hosting}{73}{subsection.5.11.2}
+\contentsline {subsubsection}{Entscheidung}{73}{subsubsection*.91}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.11.3}Entscheidung}{73}{subsection.5.11.3}
+\contentsline {section}{\numberline {5.11}Wahl des Applikation Hosters}{74}{section.5.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.12}Validierung von Benutzereingaben}{73}{section.5.12}
+\contentsline {subsection}{\numberline {5.11.1}Asp.net Shared Hosting}{74}{subsection.5.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.13}Testing}{74}{section.5.13}
+\contentsline {subsection}{\numberline {5.11.2}Cloud Hosting}{74}{subsection.5.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.13.1}Wie kann getestet werden?}{74}{subsection.5.13.1}
+\contentsline {subsection}{\numberline {5.11.3}Entscheidung}{74}{subsection.5.11.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.13.2}Was soll getestet werden?}{74}{subsection.5.13.2}
+\contentsline {section}{\numberline {5.12}Validierung von Benutzereingaben}{74}{section.5.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.13.3}Repository Pattern}{74}{subsection.5.13.3}
+\contentsline {section}{\numberline {5.13}Testing}{75}{section.5.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Proof Of Concept}{75}{chapter.6}
+\contentsline {subsection}{\numberline {5.13.1}Wie kann getestet werden?}{75}{subsection.5.13.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Techologien}{75}{section.6.1}
+\contentsline {subsection}{\numberline {5.13.2}Was soll getestet werden?}{75}{subsection.5.13.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.1}C-Sharp}{75}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {5.13.3}Repository Pattern}{75}{subsection.5.13.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.2}ASP.net Web API 2 / ASP.net MVC Framework}{76}{subsection.6.1.2}
+\contentsline {chapter}{\numberline {6}Proof Of Concept}{76}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.3}Entity Framework}{76}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.1}Techologien}{76}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.4}Grunt}{76}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.1}C-Sharp}{76}{subsection.6.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.5}AngularJS}{76}{subsection.6.1.5}
+\contentsline {subsection}{\numberline {6.1.2}ASP.net Web API 2 / ASP.net MVC Framework}{77}{subsection.6.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.6}jQuery}{76}{subsection.6.1.6}
+\contentsline {subsection}{\numberline {6.1.3}Entity Framework}{77}{subsection.6.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.7}JSON}{77}{subsection.6.1.7}
+\contentsline {subsection}{\numberline {6.1.4}Grunt}{77}{subsection.6.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1.8}Entwicklungswerkezeuge}{77}{subsection.6.1.8}
+\contentsline {subsection}{\numberline {6.1.5}AngularJS}{77}{subsection.6.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Umsetzung Sicherheitsstufe}{78}{section.6.2}
+\contentsline {subsection}{\numberline {6.1.6}jQuery}{77}{subsection.6.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}Plugin Entwicklung}{78}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.1.7}JSON}{78}{subsection.6.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}Interface - Vertrag mit den Sicherheitsstufen}{78}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.1.8}Entwicklungswerkezeuge}{78}{subsection.6.1.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}Visualisierung}{78}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.2}Umsetzung Sicherheitsstufe}{79}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Auswahl des Anzeige-Frameworks}{78}{section.6.3}
+\contentsline {subsection}{\numberline {6.2.1}Plugin Entwicklung}{79}{subsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Visualisierung von Daten}{79}{section.6.4}
+\contentsline {subsection}{\numberline {6.2.2}Interface - Vertrag mit den Sicherheitsstufen}{79}{subsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Finale Screens}{80}{section.6.5}
+\contentsline {subsection}{\numberline {6.2.3}Visualisierung}{79}{subsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5.1}AngularJS-Konfigurator}{80}{subsection.6.5.1}
+\contentsline {section}{\numberline {6.3}Auswahl des Anzeige-Frameworks}{79}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.5.2}Authentifizierung-Lightbox mit Sicherheitsstufen}{81}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.4}Visualisierung von Daten}{80}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.6}Implementation Authentifizierung}{82}{section.6.6}
+\contentsline {section}{\numberline {6.5}Finale Screens}{81}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6.1}Aufruf der Lightbox}{82}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.5.1}AngularJS-Konfigurator}{81}{subsection.6.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6.2}Gegepr\IeC {\"u}fung der Authentifizierung}{83}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.5.2}Authentifizierung-Lightbox mit Sicherheitsstufen}{82}{subsection.6.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6.3}WordPressPlugIn / Erweiterung WP-Poll}{83}{subsection.6.6.3}
+\contentsline {section}{\numberline {6.6}Implementation Authentifizierung}{83}{section.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.7}Testing}{84}{section.6.7}
+\contentsline {subsection}{\numberline {6.6.1}Aufruf der Lightbox}{83}{subsection.6.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7.1}Unit-Test Sicherheitsstufe und Authentifizierungsservice}{84}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.6.2}Gegepr\IeC {\"u}fung der Authentifizierung}{84}{subsection.6.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Studie}{85}{chapter.7}
+\contentsline {subsection}{\numberline {6.6.3}WordPressPlugIn / Erweiterung WP-Poll}{84}{subsection.6.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Definition der Begriffe aus Aufgabenstellung}{85}{section.7.1}
+\contentsline {section}{\numberline {6.7}Testing}{85}{section.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}Ziel der Studie}{85}{section.7.2}
+\contentsline {subsection}{\numberline {6.7.1}Unit-Test Sicherheitsstufe und Authentifizierungsservice}{85}{subsection.6.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Art der Studie}{85}{section.7.3}
+\contentsline {chapter}{\numberline {7}Studie}{86}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.1}Vor - und Nachteile schriftlicher Fragebogen}{86}{subsection.7.3.1}
+\contentsline {section}{\numberline {7.1}Definition der Begriffe aus Aufgabenstellung}{86}{section.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.2}Fazit}{87}{subsection.7.3.2}
+\contentsline {section}{\numberline {7.2}Ziel der Studie}{86}{section.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3.3}Webapplikation f\IeC {\"u}r Umfrage}{87}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.3}Art der Studie}{86}{section.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}Aufbau Gesamtkonzept}{87}{section.7.4}
+\contentsline {subsection}{\numberline {7.3.1}Vor - und Nachteile schriftlicher Fragebogen}{87}{subsection.7.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.4.1}Einleitung}{87}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.3.2}Fazit}{88}{subsection.7.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Wer wird befragt?}{87}{subsubsection*.93}
+\contentsline {subsection}{\numberline {7.3.3}Webapplikation f\IeC {\"u}r Umfrage}{88}{subsection.7.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Was ist der Zweck bzw. das Ziel der Untersuchung?}{88}{subsubsection*.94}
+\contentsline {section}{\numberline {7.4}Aufbau Gesamtkonzept}{88}{section.7.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Was passiert mit den Ergebnissen?}{88}{subsubsection*.95}
+\contentsline {subsection}{\numberline {7.4.1}Einleitung}{88}{subsection.7.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{K\IeC {\"o}nnen die Ergebnisse eingesehen werden?}{88}{subsubsection*.96}
+\contentsline {subsubsection}{Wer wird befragt?}{88}{subsubsection*.96}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Wer f\IeC {\"u}hrt die Befragung durch?}{88}{subsubsection*.97}
+\contentsline {subsubsection}{Was ist der Zweck bzw. das Ziel der Untersuchung?}{89}{subsubsection*.97}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Kontakt f\IeC {\"u}r Support und Fragen}{88}{subsubsection*.98}
+\contentsline {subsubsection}{Was passiert mit den Ergebnissen?}{89}{subsubsection*.98}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Wie viel Zeit muss der Befragte Investieren?}{88}{subsubsection*.99}
+\contentsline {subsubsection}{K\IeC {\"o}nnen die Ergebnisse eingesehen werden?}{89}{subsubsection*.99}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.5}Hauptteil/Fragen}{89}{section.7.5}
+\contentsline {subsubsection}{Wer f\IeC {\"u}hrt die Befragung durch?}{89}{subsubsection*.100}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.5.1}Erste Frage Theorie}{89}{subsection.7.5.1}
+\contentsline {subsubsection}{Kontakt f\IeC {\"u}r Support und Fragen}{89}{subsubsection*.101}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.6}Erste Frage}{89}{section.7.6}
+\contentsline {subsubsection}{Wie viel Zeit muss der Befragte Investieren?}{89}{subsubsection*.102}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.7}Theorie Fragen}{90}{section.7.7}
+\contentsline {section}{\numberline {7.5}Hauptteil/Fragen}{90}{section.7.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Frageart}{90}{subsubsection*.100}
+\contentsline {subsection}{\numberline {7.5.1}Erste Frage Theorie}{90}{subsection.7.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Fragetypen}{90}{subsubsection*.101}
+\contentsline {section}{\numberline {7.6}Erste Frage}{90}{section.7.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.8}Fragen \IeC {\"u}ber Aktzeptanz}{91}{section.7.8}
+\contentsline {section}{\numberline {7.7}Theorie Fragen}{91}{section.7.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.9}Frage Anstrengung}{92}{section.7.9}
+\contentsline {subsubsection}{Frageart}{91}{subsubsection*.103}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.10}Bonus ``Frage'', Umgehung der Absicherung}{92}{section.7.10}
+\contentsline {subsubsection}{Fragetypen}{91}{subsubsection*.104}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.11}Weitere Fragen}{92}{section.7.11}
+\contentsline {section}{\numberline {7.8}Fragen \IeC {\"u}ber Aktzeptanz}{92}{section.7.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.12}Abschluss}{92}{section.7.12}
+\contentsline {section}{\numberline {7.9}Frage Anstrengung}{93}{section.7.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Dankensformel}{93}{subsubsection*.104}
+\contentsline {section}{\numberline {7.10}Bonus ``Frage'', Umgehung der Absicherung}{93}{section.7.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Einladung zur Kommentierung}{93}{subsubsection*.105}
+\contentsline {section}{\numberline {7.11}Weitere Fragen}{93}{section.7.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.13}Verst\IeC {\"a}ndlichkeit}{93}{section.7.13}
+\contentsline {section}{\numberline {7.12}Abschluss}{93}{section.7.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.14}Auswertung}{93}{section.7.14}
+\contentsline {subsubsection}{Dankensformel}{94}{subsubsection*.107}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.14.1}Repr\IeC {\"a}sentativit\IeC {\"a}t}{93}{subsection.7.14.1}
+\contentsline {subsubsection}{Einladung zur Kommentierung}{94}{subsubsection*.108}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.14.2}Gemogelt an Wettbewerben}{94}{subsection.7.14.2}
+\contentsline {section}{\numberline {7.13}Verst\IeC {\"a}ndlichkeit}{94}{section.7.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.14.3}Bonus ``Frage'', Umgehung der Absicherung}{94}{subsection.7.14.3}
+\contentsline {section}{\numberline {7.14}Auswertung}{94}{section.7.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.15}Anstrengung}{95}{section.7.15}
+\contentsline {subsection}{\numberline {7.14.1}Repr\IeC {\"a}sentativit\IeC {\"a}t}{94}{subsection.7.14.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.16}Aktzeptanz}{95}{section.7.16}
+\contentsline {subsection}{\numberline {7.14.2}Gemogelt an Wettbewerben}{95}{subsection.7.14.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Fazit}{97}{chapter.8}
+\contentsline {subsection}{\numberline {7.14.3}Bonus ``Frage'', Umgehung der Absicherung}{95}{subsection.7.14.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Glossar}{98}{appendix.A}
+\contentsline {section}{\numberline {7.15}Anstrengung}{96}{section.7.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Verzeichnisse}{99}{appendix.B}
+\contentsline {section}{\numberline {7.16}Aktzeptanz}{96}{section.7.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.1}Abbildungsverzeichnis}{99}{section.B.1}
+\contentsline {chapter}{\numberline {8}Fazit}{98}{chapter.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.2}Quellenverzeichnis}{101}{section.B.2}
+\contentsline {section}{\numberline {8.1}Ausblick}{98}{section.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B.3}Tabellenverzeichnis}{104}{section.B.3}
+\contentsline {section}{\numberline {8.2}Validation}{99}{section.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {C}Danksagung}{105}{appendix.C}
+\contentsline {section}{\numberline {8.3}Schlusswort}{100}{section.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {D}Personalienblatt}{106}{appendix.D}
+\contentsline {chapter}{\numberline {A}Glossar}{101}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {E}Best\IeC {\"a}tigung}{107}{appendix.E}
+\contentsline {chapter}{\numberline {B}Verzeichnisse}{102}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}Abbildungsverzeichnis}{102}{section.B.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Quellenverzeichnis}{104}{section.B.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}Tabellenverzeichnis}{107}{section.B.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}Danksagung}{108}{appendix.C}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}Personalienblatt}{109}{appendix.D}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {E}Best\IeC {\"a}tigung}{110}{appendix.E}

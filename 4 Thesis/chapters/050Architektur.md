@@ -352,8 +352,19 @@ Basierend auf dem Managed Extensibility Framework wird wir der Aufbau unstruktur
 [^design-By-Contract]: [@design-By-Contract]
 
 
+### Definition der Sicherheitsufenverträge
 
-   
+####Verträge für das Backend
+Pro Projekt des Anbieters und muss der Programmierer für jede Sicherheitstufe verschiedene Konfigurationen tätigen können. Die Konfigurationen können da varieren. So kann bei der Sicherheitsstufe E-Mail der Absendername und Replay-E-Mail definiert werden, bei der Telefonvalidierung ein Grusswort. Es soll eine Abfrage der Konfigurtionsparameter pro PlugIn vorhanden sein. Diese soll mit allfällig bereits erfassten Werten übermittelt werden. Um die Werte zu speichern muss eine Speicher funktionion pro PlugIn aufrufbar sein. Weiter sollen statische Vergleichsparameter pro PlugIn übergeben werden können. Die Vergleichsparameter entsprechen generell den Angaben aus Kapitel [Sicherheitstufen bewerten]. Für neuere PlugIns werden diese Bewertungen vom Auftraggeberteam neu definiert. Anzumerken ist hier, dass die Studienergebnisse zentral verwaltet werden und dynmaisch , sofern das PlugIn in der Studie bewertet wurde, ausgelesen werden.
+
+####Verträge Frontend
+Der Authenifizierungsservice soll von jedem Sicherheitstufen-PlugIn den Status über die Validierung erfragen können. Um die Validierung der einzelnen Stufe (noch einmal) zu beginnen oder als valide zu bezeichnen.
+Das Microsoft MVC Framework braucht, falls nicht anders definiert, eine Index-Seite pro Controller. Diese Vorbedinung wird als Einstiegspunkt für die Validierung einer Sicherheitsstufe verwendet.
+
+Aus den gegeben Ansprüchen wird folgendes Interface konzeptioniert:
+
+![Interface ISecurityStepInfo](images/draw_io/ISecurityStepContract.png)
+
 
 
 

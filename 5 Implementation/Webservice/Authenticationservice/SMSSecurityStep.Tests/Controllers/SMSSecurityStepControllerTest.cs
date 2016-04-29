@@ -1,4 +1,4 @@
-﻿using System;
+ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,19 +26,20 @@ namespace SMSSecurityStep.Tests.Controllers
         public static void SMSSecurityStepControllerTestnitialize(TestContext testContext)
         {
 
-        }
+        }      
 
 
 
 
-        SMSSecurityStepValidation GetSMSSecurityStepValidation(int projectId, string providerId, string email, int statusId)
+        SMSSecurityStepValidation GetSMSSecurityStepValidation(int projectId, string providerId, string mobileNumber, int statusId)
         {
             return new SMSSecurityStepValidation()
             {
                 SMSSecurityStepValidationId = 1,
                 ProjectId = projectId,
                 ProviderId = providerId,
-                EMail = email,
+                MobileNumber = mobileNumber,
+                SMSSendCount=1,
                 Code = "1234",
                 CodeEntered = "",
                 Created = new DateTime(2016, 1, 1, 12, 00, 00),
@@ -48,7 +49,7 @@ namespace SMSSecurityStep.Tests.Controllers
         }
         SMSSecurityStepValidation GetSMSSecurityStepValidation()
         {
-            return GetSMSSecurityStepValidation(1, "AAA", "cbwerbung@inaffect.net", -1);
+            return GetSMSSecurityStepValidation(1, "AAA", "0790000000", -1);
         }
 
         private class MockHttpContext : HttpContextBase
@@ -69,9 +70,10 @@ namespace SMSSecurityStep.Tests.Controllers
             }
         }
 
-        private static SMSSecurityStepController GetSMSSecurityStepController(ISMSSecurityStepValidationRepository repository)
+        private static SMSSecurityStepController GetSMSSecurityStepController(ISMSSecurityStepValidationRepository validationRepo,
+            ISMSSecurityStepConfigRepository configRepo)
         {
-            SMSSecurityStepController controller = new SMSSecurityStepController(repository);
+            SMSSecurityStepController controller = new SMSSecurityStepController(validationRepo, configRepo);
 
             controller.ControllerContext = new ControllerContext()
             {
@@ -82,10 +84,28 @@ namespace SMSSecurityStep.Tests.Controllers
         }
 
         [TestMethod]
+        public void Index()
+        {
+            HttpContext.Current = MockHelpers.FakeHttpContext();
+            HttpContext.Current.Session["ProviderId"] = providerId;
+            HttpContext.Current.Session["ProjectId"] = projectId;
+            // Arrange
+            SMSSecurityStepController controller = new SMSSecurityStepController(
+                new InMemory_SMSSecurityStepValidationRepository(), new InMemory_SMSSecurityStepConfigRepository());
+
+            // Act
+            ActionResult result = controller.Index() as ActionResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+
+        [TestMethod]
         public void Index_Get_AsksForIndexView()
         {
             // Arrange
-            var controller = GetSMSSecurityStepController(new InMemory_SMSSecurityStepValidationRepository());
+            var controller = GetSMSSecurityStepController(new InMemory_SMSSecurityStepValidationRepository(),
+                new InMemory_SMSSecurityStepConfigRepository());
             // Act
             //ViewResult result = controller.Index();
             // Assert
@@ -128,22 +148,19 @@ namespace SMSSecurityStep.Tests.Controllers
         }
 
         [TestMethod]
-        public void GenerateMailText()
+        public void GeneratSMSText()
         {
             InMemory_SMSSecurityStepValidationRepository repository = new InMemory_SMSSecurityStepValidationRepository();
-            SMSSecurityStepController controller = GetSMSSecurityStepController(repository);
-            Assert.AreEqual(controller.generateMailText("test"), "Bitte tragen Sie folgenden den Code test im Webformular ein");
+            SMSSecurityStepController controller = GetSMSSecurityStepController(repository, new InMemory_SMSSecurityStepConfigRepository());
+            Assert.AreEqual(controller.generateSMSText("test"), "Bitte tragen Sie folgenden den Code test im Webformular ein");
         }
 
         [TestMethod]
         public void Send_Mail()
         {
-            string email = "cbwerbung@inaffect.net";
-            string name = "Test";
-            string subject = "Testemail";
+            string mobileNumber = "+41790000000";
             string plaintext = "Das ist ein Test";
-            string htmlbody = "Das ist ein <strong>Test</strong>";
-            bool result = new SMSHandler().send(email, name, subject, plaintext, htmlbody);
+            bool result = new SMSHandler().send(mobileNumber, plaintext);
             Assert.IsTrue(result);
         }
 
@@ -155,42 +172,45 @@ namespace SMSSecurityStep.Tests.Controllers
             HttpContext.Current.Session["ProviderId"] = providerId;
             HttpContext.Current.Session["ProjectId"] = projectId;
 
-            string email = "c.bachmann@inaffect.net";
+            string mobileNumber = "+41790000000";
             // Arrange
             InMemory_SMSSecurityStepValidationRepository repository = new InMemory_SMSSecurityStepValidationRepository();
-            SMSSecurityStepController controller = GetSMSSecurityStepController(repository);
+            SMSSecurityStepController controller = GetSMSSecurityStepController(repository, new InMemory_SMSSecurityStepConfigRepository());
 
             // Act
-            controller.Index(new SMSSecurityStepValidation_Mail()
+            controller.Index(new SMSSecurityStepValidation_MobileNumber ()
             {
-                EMail = email
+                MobileNumber = mobileNumber
             });
 
             // Assert
             IEnumerable<SMSSecurityStepValidation> SMSSecurityStepValidations = repository.GetAllSMSSecurityStepValidations();
             SMSSecurityStepValidation SMSSecurityStepValidation =
-                SMSSecurityStepValidations.FirstOrDefault(essv => essv.EMail == email);
+                SMSSecurityStepValidations.FirstOrDefault(essv => essv.MobileNumber == mobileNumber);
             Assert.IsNotNull(SMSSecurityStepValidation);
             Assert.AreEqual(SMSSecurityStepValidation.ProjectId, projectId);
         }
 
         [TestMethod]
-        public void Check_Is_MailInSession()
+        public void Check_Is_MobileInSession()
         {
             HttpContext.Current = MockHelpers.FakeHttpContext();
-            String email = "testmail@testworld.ch";
-            HttpContext.Current.Session["email"] = email;
+            string mobileNumber = "+41790000000";
+            HttpContext.Current.Session["mobilenumber"] = mobileNumber;
 
             InMemory_SMSSecurityStepValidationRepository repository = new InMemory_SMSSecurityStepValidationRepository();
-            SMSSecurityStepController controller = GetSMSSecurityStepController(repository);
-            Assert.IsTrue(controller.isEMailInSession(email));
+            SMSSecurityStepController controller = GetSMSSecurityStepController(repository, new InMemory_SMSSecurityStepConfigRepository());
+            Assert.IsTrue(controller.isMobileNumberInSession(mobileNumber));
         }
 
         [TestMethod]
         public void CodeValidation_Get_AsksForIndexView()
         {
+            HttpContext.Current = MockHelpers.FakeHttpContext();
+            string mobileNumber = "+41790000000";
+            HttpContext.Current.Session["mobilenumber"] = mobileNumber;
             // Arrange
-            var controller = GetSMSSecurityStepController(new InMemory_SMSSecurityStepValidationRepository());
+            var controller = GetSMSSecurityStepController(new InMemory_SMSSecurityStepValidationRepository(), new InMemory_SMSSecurityStepConfigRepository());
             // Act
             ViewResult result = controller.CodeValidation();
             // Assert
@@ -201,7 +221,7 @@ namespace SMSSecurityStep.Tests.Controllers
         public void SMSSecurityStep_Status_NOTOPEN()
         {
             // Arrange
-            var controller = GetSMSSecurityStepController(new InMemory_SMSSecurityStepValidationRepository());
+            var controller = GetSMSSecurityStepController(new InMemory_SMSSecurityStepValidationRepository(), new InMemory_SMSSecurityStepConfigRepository());
             // Act
             SMSSecurityStepValidation_Status result = controller.GetSMSSecurityStepValidationStatus(1, "ZZZ");
             // Assert
@@ -213,7 +233,7 @@ namespace SMSSecurityStep.Tests.Controllers
         {
             InMemory_SMSSecurityStepValidationRepository _repository = new InMemory_SMSSecurityStepValidationRepository();
             // Arrange
-            var controller = GetSMSSecurityStepController(_repository);
+            var controller = GetSMSSecurityStepController(_repository, new InMemory_SMSSecurityStepConfigRepository());
             // Act
 
             _repository.CreateNewSMSSecurityStepValidation(
@@ -228,7 +248,7 @@ namespace SMSSecurityStep.Tests.Controllers
 
             SMSSecurityStepValidation_Status result = controller.GetSMSSecurityStepValidationStatus(1, "ZZZ");
             // Assert
-            Assert.AreEqual(result, SMSSecurityStepValidation_Status.NOTOPEN);
+            Assert.AreEqual(result, SMSSecurityStepValidation_Status.OPEN);
         }
 
         [TestMethod]
@@ -236,7 +256,7 @@ namespace SMSSecurityStep.Tests.Controllers
         {
             InMemory_SMSSecurityStepValidationRepository _repository = new InMemory_SMSSecurityStepValidationRepository();
             // Arrange
-            var controller = GetSMSSecurityStepController(_repository);
+            var controller = GetSMSSecurityStepController(_repository, new InMemory_SMSSecurityStepConfigRepository());
             // Act
 
             _repository.CreateNewSMSSecurityStepValidation(
@@ -259,7 +279,7 @@ namespace SMSSecurityStep.Tests.Controllers
         {
             InMemory_SMSSecurityStepValidationRepository _repository = new InMemory_SMSSecurityStepValidationRepository();
             // Arrange
-            var controller = GetSMSSecurityStepController(_repository);
+            var controller = GetSMSSecurityStepController(_repository, new InMemory_SMSSecurityStepConfigRepository());
             // Act
 
             _repository.CreateNewSMSSecurityStepValidation(
@@ -295,10 +315,11 @@ namespace SMSSecurityStep.Tests.Controllers
                 StatusId = 122
             });
 
-            SMSSecurityStepValidation essv = _repository.GetSMSSecurityStepValidationByValid(1,"ZZZ");
+            SMSSecurityStepValidation essv = _repository.GetSMSSecurityStepValidationForValid(1,"ZZZ");
             Assert.AreEqual(essv.StatusId, 122);
 
         }
 
     }
 }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
