@@ -3,10 +3,10 @@ Dieses Kapitel beschreibt das Durchführen einer Anforderungsanalyse. Anhand der
 
 ##Akteure
 __Programmierer__
-Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media-Modul mit dem Authentifizierungsschnittstellen-Service schützen.
+Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media-Modul mit dem Authentifizierungsservice schützen.
 
 __User__
-Der User ist der Endbenutzer. Er nimmt am Social-Media-Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service.
+Der User ist der Endbenutzer. Er nimmt am Social-Media-Modul teil und authentifiziert sich über den Authentifizierungsservice.
 
 
 
@@ -36,10 +36,10 @@ Die im Diagramm dargestellten Use-Cases werden nun noch beschrieben. Die Use-Cas
 -------------------------------------------------------------------------------
 __Use-Case__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Programmierer ist beim Authentifizierungsschnittstellen-Service registriert.
+__Ziel__                    Ein Programmierer ist beim Authentifizierungsservice registriert.
 
 
-__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service registrieren können.
+__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsservice registrieren können.
 
 __Akteure__                 Programmierer
 
@@ -57,9 +57,9 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 __Use-Case__
 --------------------------- --------------------------------------------------
-__Ziel__                    Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service registrieren. 
+__Ziel__                    Ein Programmierer kann sich beim Authentifizierungsservice registrieren. 
 
-__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsschnittstellen-Service authentifizieren können.
+__Beschreibung__           	Ein Programmierer muss sich am Authentifizierungsservice authentifizieren können.
 
 __Akteure__                 Programmierer
 
@@ -67,9 +67,9 @@ __Vorbedingung__            Der Programmierer ist registriert.
 
 __Ergebnis__                Authentifizierter und eingeloggter Programmierer
 
-__Hauptszenario__           Der Programmierer loggt sich mit E-Mail und Passwort am Authentifizierungsschnittstellen-Service ein.
+__Hauptszenario__           Der Programmierer loggt sich mit E-Mail und Passwort am Authentifizierungsservice ein.
 
-__Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort per E-Mail zu. Er erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsschnittstellen-Service ein.
+__Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort per E-Mail zu. Er erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsservice ein.
 -------------------------------------------------------------------------------
 
 #### UC-21 Konfigurieren eines Authentifizierungsvorgang
@@ -120,17 +120,17 @@ __Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Der User ist authtentifiziert oder der User abgelehnt.
 
-__Beschreibung__           	Der User probiert sich über den Authentifizierungsschnittstellen-Service zu authentifizieren um an einem Social-Media Modul teilzunehmen.
+__Beschreibung__           	Der User probiert sich über den Authentifizierungsservice zu authentifizieren um an einem Social-Media Modul teilzunehmen.
 
 __Akteure__                 User
 
 __Vorbedingung__            Der Programmierer hat den Authentifizierungsvorgang konfiguriert und in seinem System eingebunden.
 
-__Ergebnis__                Der Authentifizierungsschnittstellen-Service authentifiziert den User oder lehnt ihn ab.
+__Ergebnis__                Der Authentifizierungsservice authentifiziert den User oder lehnt ihn ab.
 
-__Hauptszenario__           Der User wird vom Social-Media-Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User authentifiziert sich. Der User kann die Eingabe des Social-Media Moduls erfolgreich abschliessen.
+__Hauptszenario__           Der User wird vom Social-Media-Modul an den Authentifizierungsservice weitergeleitet. Der User authentifiziert sich. Der User kann die Eingabe des Social-Media Moduls erfolgreich abschliessen.
 
-__Alternativszenario__      Der User wird vom Social Media-Modul an den Authentifizierungsschnittstellen-Service weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe des Social-Media-Modul nicht erfolgreich abschliessen.
+__Alternativszenario__      Der User wird vom Social Media-Modul an den Authentifizierungsservice weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe des Social-Media-Modul nicht erfolgreich abschliessen.
 -------------------------------------------------------------------------------
 
 #### UC-41 Report eines Authentifizierungsvorgangs
@@ -158,7 +158,7 @@ __Alternativszenario__      Um den Zwischenstand eines Quizes, Votings, Wettbewe
 -------------------------------------------------------------------------------
 __Use-Case__
 --------------------------- --------------------------------------------------
-__Ziel__                    Der Authentifizierungsschnittstellen-Service soll mit geringem Aufwand angepasst werden können.
+__Ziel__                    Der Authentifizierungsservice soll mit geringem Aufwand angepasst werden können.
 
 __Beschreibung__           	
 
@@ -190,7 +190,7 @@ Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen
 
 \newpage
 ##Funktionale Anforderungen
-Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsschnittstellen-Service fest. Die Wünsche des Arbeitgebers sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, zeigen dass alle gewünschten Funktionen implementiert wurden.
+Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsservice fest. Die Wünsche des Arbeitgebers sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, zeigen dass alle gewünschten Funktionen implementiert wurden.
 
 Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 
@@ -199,7 +199,7 @@ Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-11
 
-__Beschreibung__        Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service registrieren.
+__Beschreibung__        Ein Programmierer kann sich beim Authentifizierungsservice registrieren.
 
 __Techn. Risiko__       Niedrig
 
@@ -211,7 +211,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-12
 
-__Beschreibung__        Ein Programmierer muss sich beim Authentifizierungsschnittstellen-Service mittels E-Mail und Passwort anmelden.
+__Beschreibung__        Ein Programmierer muss sich beim Authentifizierungsservice mittels E-Mail und Passwort anmelden.
 
 __Techn. Risiko__       Niedrig
 
@@ -319,7 +319,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Ein User kann sich über den Authentifizierungsschnittstellen-Service authentifizieren um am Social-Media-Modul teilzunehmen. Der Authentifizierungsschnittstellen-Service authentifiziert oder lehnt den User ab.
+__Beschreibung__        Ein User kann sich über den Authentifizierungsservice authentifizieren um am Social-Media-Modul teilzunehmen. Der Authentifizierungsservice authentifiziert oder lehnt den User ab.
 
 __Techn. Risiko__       Mittel
 
@@ -347,7 +347,7 @@ Nicht Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         Alle
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service muss auf allen bekannten Betriebsystemen mit HTML5 und javascriptfähigen Browser verwendet werden können.
+__Beschreibung__        Der Authentifizierungsservice muss auf allen bekannten Betriebsystemen mit HTML5 und javascriptfähigen Browser verwendet werden können.
 
 __Techn. Risiko__       Mittel
 
@@ -371,7 +371,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach im vorhandenen System eingebunden werden können.
+__Beschreibung__        Der Authentifizierungsservice soll einfach im vorhandenen System eingebunden werden können.
 
 __Techn. Risiko__       Mittel
 
@@ -386,7 +386,7 @@ __Business Value__     	hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll einfach und verständlich optisch konfiguriert werden können.
+__Beschreibung__        Der Authentifizierungsservice soll einfach und verständlich optisch konfiguriert werden können.
 
 __Techn. Risiko__       Sehr hoch
 
@@ -461,7 +461,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsschnittstellen-Service soll eine hohe Verfügbarkeit von 99.9% haben. 
+__Beschreibung__        Der Authentifizierungsservice soll eine hohe Verfügbarkeit von 99.9% haben. 
 
 __Techn. Risiko__       Hoch
 
@@ -503,7 +503,7 @@ __Business Value__     	Hoch
 Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Risiken bezüglich der Bachelorarbeit sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
 
 ###R-01 Akzeptanz
-Programmierer und insbesondere auch User, welche den Authentifizierungsschnittstellen-Service verwenden sollen, sind völlig unterschiedlich. Deren unterschiedlichen Ansprüche machen es schwierig, eine Lösung zu entwickeln, welchen den Akteuren gerecht wird.
+Programmierer und insbesondere auch User, welche den Authentifizierungsservice verwenden sollen, sind völlig unterschiedlich. Deren unterschiedlichen Ansprüche machen es schwierig, eine Lösung zu entwickeln, welchen den Akteuren gerecht wird.
 
 Da der Auftraggeber sowohl die Zielgruppe Programmierer wie auch User kennt, kann er hier gezielt Feedback geben.
 
