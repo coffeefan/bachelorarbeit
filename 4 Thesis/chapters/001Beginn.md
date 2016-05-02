@@ -14,10 +14,10 @@ Bei den meisten angebotenen Umfragen, Abstimmungen und Wettbewerben ist mit geri
 
 Die Glaubwürdigkeit der Umfragen, Abstimmungen und Wettbewerbe ist durch die aktuelle Situation gefährdet und soll wiederhergestellt werden. Deshalb soll diese Bachelorarbeit die Möglichkeiten eines Authentifizierungsservices erörtern. Mit dieser sollen Programmierer über eine visuelle Oberfläche die Bedürfnisse eines Angebots konfigurieren und in ihren jeweiligen Modulen einbinden können.
 
-\newpage
-
 [^digitalerevolutionhz]:[@digitalerevolutionhz]
 [^netmatrixaudit]: [@netmatrixaudit] 
+
+\newpage
 
 ##Aufgabenstellung
 

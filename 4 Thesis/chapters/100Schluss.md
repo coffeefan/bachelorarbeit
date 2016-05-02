@@ -2,7 +2,8 @@
 
 \appendix
 
-#Glossar
+#Anhang
+##Glossar
 
 __2FA__ \
 2FA bedeutet Zwei-Faktor-Authentifizierung. Weitere Infos im Kapitel [Authentifizierungs-Kompononten] \
@@ -25,14 +26,14 @@ POCO ist die Abkürzung für Plain Old CLR Object. Eine POCO-Klasse ist ein ganz
  \
 __REST / Restfull__\
 REST steht für Representational  State Transfer. REST ist eine Software Architektur des Webs. System welche die REST Architektur einhalten nennt man RESTful. REST System kommunizieren allgemein über das HTTP-Protokoll und nutzen die gleichen HTTP verbs wie ein Browser der eine Webseite abfragt. Neben GET und POST werden die weniger bekannten Verben PUT und Delete verwendet. Die URI beschreibt die zu beziehende oder verändernde Webressource.\
-\newpage
+
 __Sicherheitsstufe__\
 Das Wort Sicherheitstufe ist ein domänenspezifische Beschreibung eines einzelnen Authentifizierungsvorgang auch Authentifizierungsart genannt.\newpage
 
-#Verzeichnisse
+##Verzeichnisse
 
 
-##Abbildungsverzeichnis
+###Abbildungsverzeichnis
 \vspace*{-3cm}
 \renewcommand{\listfigurename}{} \begingroup\let\clearpage\relax
 \listoffigures
@@ -40,7 +41,7 @@ Das Wort Sicherheitstufe ist ein domänenspezifische Beschreibung eines einzelne
 
 \pagebreak
 
-## Quellenverzeichnis
+### Quellenverzeichnis
 \vspace*{-3cm}
 \renewcommand{\bibname}{}\begingroup \let\clearpage\relax
 \printbibliography
@@ -48,9 +49,45 @@ Das Wort Sicherheitstufe ist ein domänenspezifische Beschreibung eines einzelne
 
 \pagebreak
 
-##Tabellenverzeichnis
+###Tabellenverzeichnis
 \vspace*{-3cm}
 \renewcommand{\listtablename}{} \begingroup \let\clearpage\relax
 \listoftables
 \endgroup
+
+\newpage
+##Danksagung
+Zunächst möchte ich mich bei meinem Betreuer Jaime Oberle vielmals bedanken. Seine Fähigkeit in richtigem Masse zu hinterfragen, herauszufordern und zu loben unterstützte mich motiviert und fokussiert an der Bachelorarbeit zu bleiben.\
+Auch meinem Auftraggeber, insbesondere Thomas Joss, möchte ich für die Bereitschaft und Zeit ein grosses Dankeschön aussprechen.\
+Meinen grosser Dank gilt allen, die mir auf meinem Weg in der Studienzeit und während der Bachelorarbeit in vieler Hinsicht geholfen haben. Für Ihre Unterstützung/oder ihren positiven Einfluss möchte ich mich insbesonders bedanken bei: Natanja Hofer, Martin Eigemann, Thomas Bachmann, Christian Wyder, Ursula Hollenstein, Michael Eisenburger, Matthieu Jacquier, Ruth Bachmann, Ursi Hofer, Damaris Denzler, Salome Leutert, Kathleen Wunderli, Benjamin Schwenter und Damaris Hollenstein.\
+
+
+
+\newpage
+##Personalienblatt
+
+----------------------- ----------------------------------------------------------
+Name, Vorname			Bachmann, Christian
+
+Adresse 				Bahnhofstrasse 2
+
+Wohnort 				8355 Aadorf
+
+Geboren 				5. September 1986
+
+Heimatort 				Feusisberg
+----------------------------------------------------------------------------------
+
+
+\newpage
+##Bestätigung
+Hiermit bestätigt der Unterzeichnende, dass die Bachelorarbeit mit dem Thema “Individuell Konfigurierbarer Authentifizierungsservice für Votings und Wettbewerb” gemäss freigegebener Aufgabenstellung mit Freigabe vom 18.11.2015 ohne jede fremde Hilfe im Rahmen der gültigen Reglements selbständig ausgeführt wurde.\
+Alle öffentlichen Quellen sind als solche kenntlich gemacht. Die vorliegende Arbeit ist in dieser oder anderer Form zuvor nicht zur Begutachtung vorgelegt worden.\
+\
+\
+Aadorf den 10.05.2016\
+\
+\
+\
+Christian Bachmann
 

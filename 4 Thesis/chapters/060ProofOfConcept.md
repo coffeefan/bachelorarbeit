@@ -113,20 +113,27 @@ Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework ei
 ### AngularJS-Konfigurator
 Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJS umgestzt wurde. Diese Screens sind abgeleitet von den Mockups[^Mockups-Konfigurator]
 
-<!--TODOO--Screenshots--> ...Hier würden ein paar Screenshots gezeigt werden
+![Startseite und Registration des Konfigurator](images/finalscreens/configurator-overview.png)
+
+![Produktübersicht des Konfigurator](images/finalscreens/configurator-projectoverview.jpg)
+
 
 #### Visualisierung Umfrageresultate
 
 Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG und die Umfrageergebnisse einsehen.
 
-<!--TODOO--Screenshots--> ...Hier würden ein paar Screenshots gezeigt werden
+![Detailproduktansicht des Konfigurator](images/finalscreens/configurator-projectdetail.jpg)
+
+![Weitere Umfragauswertung der ausgewählten Sicherheitsstufe](images/finalscreens/configurator-projectdetail.jpg)
 
 \newpage
 
 ### Authentifizierung-Lightbox 
 Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden.
 
-...Hier würden ein paar Screenshots gezeigt werden
+![Desktop-Computer-Ansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-desktop.jpg)
+
+![Mobileansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-mobile.png)
 
 \newpage
 
