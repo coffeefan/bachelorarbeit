@@ -6,7 +6,7 @@ __Programmierer__
 Der Programmierer ist der Entwickler der Webseite. Er möchte sein programmiertes oder sein verwendetes Social-Media-Modul mit dem Authentifizierungsschnittstellen-Service schützen.
 
 __User__
-Der User ist der Endkunde. Er nimmt am Social-Media-Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service.
+Der User ist der Endbenutzer. Er nimmt am Social-Media-Modul teil und authentifiziert sich über den Authentifizierungsschnittstellen-Service.
 
 
 
@@ -17,7 +17,7 @@ Der User ist der Endkunde. Er nimmt am Social-Media-Modul teil und authentifizie
 \newpage
 
 ##Use-Cases
-Im Nachfolgenden werden alle UseCases aufgelistet die im Rahmen dieser Thesis gefunden wurden.
+Im Nachfolgenden werden alle Use-Cases aufgelistet die im Rahmen dieser Thesis gefunden wurden.
 
 ###Use-Cases Diagramm
 
@@ -34,7 +34,7 @@ Die im Diagramm dargestellten Use-Cases werden nun noch beschrieben. Die Use-Cas
 #### UC-11 Registration für den Konfigurator
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Ein Programmierer ist beim Authentifizierungsschnittstellen-Service registriert.
 
@@ -55,7 +55,7 @@ __Alternativszenario__      -
 #### UC-12 Login Konfigurator
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Ein Programmierer kann sich beim Authentifizierungsschnittstellen-Service registrieren. 
 
@@ -75,7 +75,7 @@ __Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort
 #### UC-21 Konfigurieren eines Authentifizierungsvorgang
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Es ist ein neuer Authentifizierungsvorgang für ein neues Social Media-Modul konfiguriert.
 
@@ -96,7 +96,7 @@ __Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupli
 #### UC-25 Authentifizierung in vorhandenes System einbinden
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Die Authentifizierungsschnittstelle kann in ein (bestehendes) System eingebunden werden.
 
@@ -116,7 +116,7 @@ __Alternativszenario__      -
 #### UC-31 User Authentifizieren
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Der User ist authtentifiziert oder der User abgelehnt.
 
@@ -136,7 +136,7 @@ __Alternativszenario__      Der User wird vom Social Media-Modul an den Authenti
 #### UC-41 Report eines Authentifizierungsvorgangs
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Die Verwendung des Authentifizierungsvorgangs ist übersichtlich dargestellt.
 
@@ -156,7 +156,7 @@ __Alternativszenario__      Um den Zwischenstand eines Quizes, Votings, Wettbewe
 #### UC-51 Wartbarkeit des Authentifizierungsservices
 
 -------------------------------------------------------------------------------
-__UseCase__
+__Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Der Authentifizierungsschnittstellen-Service soll mit geringem Aufwand angepasst werden können.
 
@@ -190,7 +190,7 @@ Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen
 
 \newpage
 ##Funktionale Anforderungen
-Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsschnittstellen-Service fest. Die Wünsche des Arbeitgebers aus <!--TODO Vorgehensschritten 1-4 (Kapitel 3.2)--> sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, bringen den Beweis dar, dass alle gewünschten Funktionen implementiert wurden.
+Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsschnittstellen-Service fest. Die Wünsche des Arbeitgebers sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, zeigen dass alle gewünschten Funktionen implementiert wurden.
 
 Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 
@@ -547,11 +547,10 @@ Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Qu
 \newpage
 ### Risikomatrix
 
-![Risikomatrix [^risikomatrix]](images/excel-statistik/risikomatrix.JPG)
+![Risikomatrix [^risikomatrix]](images/excel-statistik/risikomatrix.png)
 
 
 
-__Legende__
 
 R1	Akzeptanz
 
@@ -571,7 +570,7 @@ R7	Auslastung
 ###Massnahmen
 Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende Komplexität einschätzen zu können, wird vor Projektbeginn ein Prototyp mittels Durchstich durch alle Technologien erstellt. Danach kann die Komplexität im Zusammenspiel der Technologie eingeschätzt und bei Bedarf eine Technologie durch eine andere ersetzt werden. So kann das Risiko 3 "Überkomplexität" und Risiko 5 "Schlechte/Unzureichende Frameworks" minimiert werden.
 
-Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich wurde vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen sollte das Risiko 6 Termineinhaltung minimal bleiben.
-Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit wurde auf ein Minimum reduziert. Für die restliche freiwilige Arbeit wurde mit Freunden ein Notfallszenario entwickelt, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen wurden entschärfen auch Risiko 7.
+Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich ist vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen soll das Risiko 6 Termineinhaltung minimal bleiben.
+Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit ist auf ein Minimum reduziert. Für die restliche freiwilige Arbeit ist mit Freunden ein Notfallszenario entwickelt worden, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen sind entschärfen auch Risiko 7.
 
-[^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen.
+[^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen. [@vorlagerisikomatrix]

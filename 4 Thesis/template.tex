@@ -2,6 +2,10 @@
 \begin{document}
 \include{titlepage}
 
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=r,basicstyle=\small\ttfamily}}{}
+$endif$
+
 $if(graphics)$
 
 % We will generate all images so they have a width \maxwidth. This means

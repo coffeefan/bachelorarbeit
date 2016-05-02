@@ -16,43 +16,47 @@ Es konnte zwar gezeigt werden, dass es möglich ist mit verschiedenen Sicherheit
 ##Validation
 Die erarbeiteten Konzepte haben im Prototyp funktioniert. Nachfolgend wird die Erfüllung der Aufgabenstellung überprüft.
 
------------------------------------------------------------------------------------------------------------
-__Bereich__		__Beschreibung__																__Status__
--------------	-------------------------------------------------------------------------------	-----------
-__Recherche__ 	Wurde eine Marktanalyse bestehende Produkte recherchiert und dokumentiert?		erfüllt
-
-				Wurden verschiedene Sicherheitstufen (Arten und Methoden der Sicherheits- 	
-				und Identitätsüberprüfung) recherchiert und dokumentiert						erfüllt
-
-__Analyse__     Wurden die Anforderungen der Authentifizierungsschnittstelle mit dem 			erfüllt
-				Arbeitgeber analysiert und dokumentiert? 	
-
-__Konzept__		Wurde die Evaluation von geeigneten Authentifizierungsmethoden für 				erfüllt
-				verschiedene Stufen dokumentiert?	
-				
-				Wurden eine Spezifikation einer Prototypenapplikation für die					erfüllt
-				 Authentifizierungsschnittstelle entworfen und dokumentiert?	
-				
-				Wurden eine Spezifikation einer Prototypenapplikation für das Verwalten		
-				erfüllt der Authentifizierungsschnittstelle entworfen und dokumentiert?	
-
-				Wurde die Software-Architektur der Authentifizierungsschnittstelle 				erfüllt
-				und dessen Verwaltung konzeptioniert?
-				
-__Studie__		Wurde eine Studie über Akzeptanz und Geschwindigkeit(Anstrengung)				erfüllt
-				von Authentifizierungsmethoden ausgearbeitet?
-				
-				Wurde die Durchführung der Studie dokummentiert?								erfüllt
-				
-				Wurde die Auswertung dokumentiert und im Prototyp integriert?					erfüllt
-				
-__Proof of__	Wurde der Prototypen der Authentifizierungsschnittstelle und der Verwaltung		erfüllt
-__Concept__		entwickelt?
-
-				Wurden die Studienresultate im Prototypen integriert?							erfüllt
-
-__Fazit__		Wurde das Fazit dokumentiert?													erfüllt				
------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------	----------------------
+__Bereich__		__Beschreibung__																__Status__  __Verweise__
+-------------	-------------------------------------------------------------------------------	----------- ----------------------
+__Recherche__ 	Wurde eine Marktanalyse bestehende Produkte recherchiert und dokumentiert?		erfüllt     [Martkanalyse]
+                                                                                                            
+				Wurden verschiedene Sicherheitstufen (Arten und Methoden der Sicherheits- 	    erfüllt     [Authetentifizierungskomponenten]           
+				und Identitätsüberprüfung) recherchiert und dokumentiert						
+                                                                                                            
+__Analyse__     Wurden die Anforderungen der Authentifizierungsschnittstelle mit dem 			erfüllt     [Anforderungen]
+				Arbeitgeber analysiert und dokumentiert? 	                                                
+                                                                                                            
+__Konzept__		Wurde die Evaluation von geeigneten Authentifizierungsmethoden für 				erfüllt     [Sicherheitstufen integrieren],
+				verschiedene Stufen dokumentiert?	                                                        [Sicherheitstufen bewerten]
+				                                                                                            
+				Wurden eine Spezifikation einer Prototypenapplikation für die					erfüllt     [Konzept]
+				 Authentifizierungsschnittstelle entworfen und dokumentiert?	                            
+				                                                                                            
+				Wurden eine Spezifikation einer Prototypenapplikation für das Verwalten		    erfüllt     [Konzept]            
+				erfüllt der Authentifizierungsschnittstelle entworfen und dokumentiert?	                    				
+                                                                                                            
+				Wurde die Software-Architektur der Authentifizierungsschnittstelle 				erfüllt     [Konzept]   
+				und dessen Verwaltung konzeptioniert?                                                       
+				                                                                                            
+__Studie__		Wurde eine Studie über Akzeptanz und Geschwindigkeit(Anstrengung)				erfüllt     [Studie]
+				von Authentifizierungsmethoden ausgearbeitet?                                               Anhang Studie
+				                                                                                            
+				Wurde die Durchführung der Studie dokummentiert?								erfüllt     [Studie]
+				                                                                                            
+				Wurde die Auswertung dokumentiert und im Prototyp integriert?					erfüllt     [Auswertung]
+																											[Visualisierung von Daten],
+																											[Visualisierung Umfrageresultate]
+				                                                                                            
+__Proof of__	Wurde der Prototypen der Authentifizierungsschnittstelle und der Verwaltung		erfüllt     [Prototyp],
+__Concept__		entwickelt?                                                                                 [AngularJS-Konfigurator]
+																											[Authentifizierung-Lightbox]
+                                                                                                            
+				Wurden die Studienresultate im Prototypen integriert?							erfüllt     [Visualisierung von Daten],
+																											[Visualisierung Umfrageresultate]
+                                                                                                            
+__Fazit__		Wurde das Fazit dokumentiert?													erfüllt		[Fazit]				
+----------------------------------------------------------------------------------------------------------- -----------
 
 \newpage
 ##Schlusswort

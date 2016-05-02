@@ -6,13 +6,13 @@
 ##Motivation
 
 
-Die Digitalisierung fordert die Schweizer Wirtschaft heraus. Ob Banken, Pharmaindustrie, Detailhandel oder Medienhäuser – es gibt keine Branche, die nicht vor fundamentalen Veränderungen steht.[^digitalerevolutionhz] Da verwundert es nicht, dass Wettbewerbe oder Kreuzworträtsel nicht nur auf den letzten Seiten der Klatschheftchen oder Zeitungen abgedruckt werden, sondern vermehrt online publiziert und durchgeführt werden. Dass bei meinungsbildenden Umfragen oder Abstimmungen weniger auf Telefonumfragen zurückgegriffen wird, sondern diese immer mehr im Internet durchgeführt werden, ist ebenso wenig erstaunlich. 
+Die Digitalisierung fordert die Schweizer Wirtschaft heraus. Ob Banken, Pharmaindustrie, Detailhandel oder Medienhäuser – es gibt keine Branche, die nicht vor fundamentalen Veränderungen steht.[^digitalerevolutionhz] Da verwundert es nicht, dass Wettbewerbe oder Kreuzworträtsel nicht nur auf den letzten Seiten der Magazinen oder Zeitungen abgedruckt werden, sondern vermehrt online publiziert und durchgeführt werden. Dass bei meinungsbildenden Umfragen oder Abstimmungen weniger auf Telefonumfragen zurückgegriffen wird. Ebenso wenig erstaunt es, dass immer mehr Umfragen im Internet durchgeführt werden. 
 
 In der Schweiz konnten die grossen Medienhäuser ihre Zugriffszahlen auch 2015 steigern und ihre Toprangierungen beibehalten.[^netmatrixaudit] Um ihren Werbegewinn und Resonanz zu bewahren oder sogar auszubauen, sind Medien darauf angewiesen, dass ihre Stories Inhalte auf den Social Media Kanälen verlinkt und so viral verbreitet werden. Neben altbekannten plakativen Titeln und interessanten Bildern beleben die Medienhäuser immer mehr ihren Inhalt mit so genannten "Playfull Contents" oder auf Deutsch: Mit Interaktivitäten. Dabei handelt es sich um Abstimmungen, Wettbewerbe und Umfragen oder andere Interaktivitäten im Zusammenhang mit dem verfassten Inhalt. Diese Social-Module werden gerne verlinkt und fördern so die Verbreitung des Contents und dadurch einen Anstieg der Besucherzahlen.
  
-Bei den meisten angebotenen Umfragen, Abstimmungen und Wettbewerben ist es relativ simpel (gewisses Know-How vorausgesetzt) mehrfach teilzunehmen oder gefälschte Daten zu übermitteln. Dies ist auf zu einfach realisierte Programmierungen zurückzuführen, was der Glaubwürdigkeit solcher Angebote schadet. Interaktivitäten bedürfen somit einer Authentifizierung, um Betrug oder falschen Stimmabgaben vorzubeugen. Die Eigenentwicklung der gewünschten Authentifizierung für eine Interaktivität übersteigt meist die kleinen Budgets für diese Angebote. 
+Bei den meisten angebotenen Umfragen, Abstimmungen und Wettbewerben ist mit geringem technischem Verständnis möglich mehrfach teilzunehmen oder gefälschte Daten zu übermitteln. Dies ist auf zu einfach realisierte Programmierungen zurückzuführen, was der Glaubwürdigkeit solcher Angebote schadet. Interaktivitäten bedürfen somit einer Authentifizierung, um Betrug oder falschen Stimmabgaben vorzubeugen. Die Eigenentwicklung der gewünschten Authentifizierung für eine Interaktivität übersteigt meist die kleinen Budgets für diese Angebote. 
 
-Die Glaubwürdigkeit der Umfragen, Abstimmungen und Wettbewerbe ist durch die aktuelle Situation gefährdet und soll wiederhergestellt werden. Deshalb soll diese Bachelorarbeit die Möglichkeit eines Authentifizierungsservices erörtern. Mit dieser sollen Programmierer über eine visuelle Oberfläche die Bedürfnisse eines Angebots konfigurieren und in ihren jeweiligen Modulen einbinden können.
+Die Glaubwürdigkeit der Umfragen, Abstimmungen und Wettbewerbe ist durch die aktuelle Situation gefährdet und soll wiederhergestellt werden. Deshalb soll diese Bachelorarbeit die Möglichkeiten eines Authentifizierungsservices erörtern. Mit dieser sollen Programmierer über eine visuelle Oberfläche die Bedürfnisse eines Angebots konfigurieren und in ihren jeweiligen Modulen einbinden können.
 
 \newpage
 
@@ -91,9 +91,19 @@ Proof of Concept
 - Dokumentierte Integration der Studienresultate im Prototypen
 - Dokumentiertes Fazit
 
+##Abgrenzung
+Die Studie soll als Hilfsmittel dem Programmier zur Verfügung stehen. Damit soll er seine Zielgruppe einschätzen können und die richtige Sicherheitsstufen wählen. Die Ergebnisse der Studie beinflussen den Prototypen nur dahinghend dass sich die Daten verändern.
+Zusätzlich wird die Arbeit durch folgende Punkte klar abgegrenzt:
+- Die Informationsbeschaffung findet ausschliesslich in öffentlich zugänglichen Bereichen statt. (Internet/Bibliothek) Ausnahme sind die Inputs und Bedürfnisse des Auftraggebers.
+- Grundsätzliches Wissen zu Prozessen und Frameworks wird vorausgesetzt und nur an Schlüsselstellen näher erklärt.
+
+
 ##Rahmenbedingungen Bachelorarbeit
 Die vorliegende Bachelorarbeit umfasst gemäss Regelment unter anderem folgende Punkte:
 
+- Der offizielle Projektstart ist der 18. November 2015. Das Projekt muss bis
+spätestens 18.05.2016 abgegeben werden.
+- Die Bachelorarbeit muss zwei Wochen vor der Präsentation abgegeben werden
 - Eine Bachelorarbeit besteht aus einer konzeptionellen Arbeit und deren Umsetzung. Der
 Schwerpunkt liegt auf dem konzeptionellen Teil, in dem die theoretischen und methodischen
 Grundlagen einer Entwicklung oder eines Konzeptes ausgearbeitet und dargelegt
@@ -103,6 +113,7 @@ um die prinzipielle Realisierbarkeit darzulegen. Die Bachelorarbeit ist als prax
 durchzuführen.
 - Der Aufwand für die Fertigstellung einer Bachelorarbeit beträgt insgesamt mindestens 360
 Stunden.
+- 
 - Die Bachelorarbeit hat die Form eines technischen Berichtes. [^bachelorreglement]
 
 [^bachelorreglement]: [@bachelorreglement]

@@ -4,13 +4,13 @@
 
 
 ## Fachbegriffe
-Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel "[Glossar]".
+Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel [Glossar].
 
 ## Erläuterung der Grundlagen
 In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden. 
 
 ###Authentifizierung
-Duden: Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
+Authentifizierung - beglaubigen, die Echtheit von etwas bezeugen [^duden]
 
 Eine Person oder Objekt eindeutig zu **authentifizieren** bedeutet zu ermitteln, ob die- oder derjenige auch die Person ist, als welche sie oder er sich ausgibt. [^authentifizierungsdef] Dies unterstreicht auch die Ableitung des Wortes vom Englischen Verb *authenticate*, was auf Deutsch "sich als *echt erweisen, sich verbürgen, glaubwürdig sein*" bedeutet.  Das bekannteste Verfahren der Authenfizierung ist die Eingabe von Benutzernamen und Passwort. Weiter ist die PIN-Eingabe bei Bankautomaten oder Mobiltelefonen häufig verbreitet. Die Möglichkeiten von verschiedenen Authentifizierungen ist nahe zu grenzenlos.
 [^authentifizierungsdeforg]
@@ -35,11 +35,11 @@ Der Begriff Authentifizierung wird vielfach mit dem Begriff Autorisierung verwec
 [^stand20160108]: Stand 4. Januar 2016
 
 \newpage
-##Grundlegende Sicherheitsprinzipien
-In diesem Unterkapitel werden die Grundlagen der Sicherheitsprinzipien vermittelt, auf denen eine Authentifizierungssoftware aufgebaut werden kann.
+##Sicherheitsprinzipien
+In diesem Abschnitt werden die Grundlagen der Sicherheitsprinzipien vermittelt, auf denen eine Authentifizierungssoftware aufgebaut werden kann.
 
 ###KISS
-**K**eep **I**t **S**tupid *and* **S**imple
+KISS steht für **K**eep **I**t **S**tupid *and* **S**imple
 
 Ein verbreitetes Problem unter Softwareentwickern und Programmiern heute ist, dass dazu tendiert wird, Probleme zu kompliziert und verschachtelt zu lösen. Acht bis neun von zehn Entwickeln machen den Fehler, Probleme zu wenig auseinanderzubrechen und alles in einem grossen Programm zu lösen, anstatt es in kleinen Paketen verständlich zu programmieren.[^apachekiss]
 
@@ -54,7 +54,6 @@ Die folgenden Punkte listen die Vorteile für Softwareentwickler beim Verwenden 
 - Die Zusammenarbeit in grösseren Entwicklerteams und Projekten wird vereinfacht, da der Code bei allen "stupid and simple" ist
 
 
-####KISS fördert die Sicherheit
 Die Begründung, warum KISS die Sicherheit fördert, liefert Saltzer und Schroeder: Ungewollte Zugriffspfade können nur durch zeilenweise Codeinspektion entdeckt werden und dies wiederum setzt voraus, dass Designs einfach und klein sind. Designs müssen so beschaffen sein, dass sie abgeschlossene Bereiche enthalten, über die konkrete und sichere Aussagen über Zugriffsmöglichkeiten und Effekte getroffen werden können. [^sicheresysteme_93]
 
 
@@ -68,7 +67,7 @@ Abgeleitet von der Theorie der Kryptografie gilt Folgendes: Nicht das Design der
 
 
 ###Zusammenfassung der Sicherheitsprinzipien
-Die wichtigsten Sicherheitsprinzipien lauten zusammengefasst wie folgt:
+Die Sicherheitsprinzipien sind folgend gekürzt zusammen gefasst:
 
 * Die Software muss aus kleinen, isolierten Einheiten aufgebaut werden, deren externe
 Beziehungen am Interface deutlich werden. Damit werden sowohl praktische
@@ -80,21 +79,20 @@ keinesfalls durch immer und global verfügbare Permissions fallen.
 ein interner Review-Prozess stattfinden, in dessen Verlauf eine Sicherheitsanalyse
 durch nicht an der Entwicklung Beteiligte erstellt wird.
 
-[^sicheresysteme_93] : [@sicheresysteme pp.93]
-[^sicheresysteme_94] :[@sicheresysteme pp.94]
-[^sicheresysteme_95] :[@sicheresysteme pp.95]
+
+[^sicheresysteme_93]: [@sicheresysteme pp.93]
+[^sicheresysteme_94]: [@sicheresysteme pp.94]
+[^sicheresysteme_95]: [@sicheresysteme pp.95]
 [^apachekiss]: [@apachekiss]
 [^defaultdeny]: [@defaultdeny]
 
-<!-- TODO: Weitere Konzepte Sicherheitssystem Seite 104 -->
 
 
-## Ähnliche Produkte auf dem Markt
+##Martkanalyse
 Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
 
 ###OAuth-Provider
 
-####OAuth
 OAuth ist ein Protokoll. Es erlaubt sichere API-Autorisierungen.
 
 ####Das Bedürfnis nach OAuth
@@ -123,10 +121,10 @@ Ganze *78%* [@goldbachsocial] der Schweizer Bevölkerung nutzten SocialMedia und
 [^socialmediaschweiz]: Die Statistik wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben.
 
 \newpage
-####Vorteile
+####Vorteil
 Mindestes 78% der Schweizer Bevölkerung besitzt bereits einen OAuth Account. Das Protokoll ist ein etablierter Standard.
 
-####Nachteile
+####Nachteil
 Mehrfachregistrierungen sind möglich. Jenach OAuth-Provider werden verschiedene Daten zur Verfügung gestellt. Pro OAuth Provider kann man sich registrieren. Ein Abgleich der verschiedenen OAuth Provider wird vom [OAuth]-Protokoll nicht zur Verfügung gestellt. Ein Teil der Bevölkerung müsste sich vor Nutzung noch registrieren. Die Implementierung ist trotz vielen Libraries nicht ohne tiefere Programmierkenntnisse möglich.
 
 \newpage
@@ -157,8 +155,8 @@ Seit 1. Juli 2004 müssen auch bei Prepaid-Karten in der Schweiz Personalien hin
 
 ####Swisscom
 Die Swisscom hat kein öffentlich zugängigliches Dokument, welches die maximale Anzahl SIM-Karten pro Person beschreibt. Mündlich durch das Verkaufspersonal des Swisscom-Shops Zürich HB im Dezember 2015 und im Chatprotokoll [^swisscom_chat] wurde der Wert bestätigt. Es wurde darauf hingewiesen, dass kein Dokument mit dieser Zahl vorhanden ist.
-
-#####Selbstversuch
+ \
+__Selbstversuch__ \
 Es wurde versucht, bei zwei unabhängigen Handyanbietern mehr als fünf Swisscom-Perpaid-Abos abzuschliessen. Dabei wurde von Thomas Bachmann über vier Wochen verteilt bei dem Anbieter Interdiscount im Manor Winterthur bei verschiedenem Kaufspersonal ein Prepaidhandy eingekauft. Beim Einkauf des sechsten Handys wurde der Verkauf von der Kasse abgelehnt. Die Fehlermeldung der Kasse beinhaltete den Hinweis, dass die Nummer nicht erneut auf den Kunden registriert werden könne, da er schon fünf SIM Karten bei der Swisscom besitze.
 Christian Bachmann kaufte über zwei Wochen verteilt bei dem Anbieter Migros Electronics in der Migros Limmat, Interdiscount im Manor Winterthur, Interdiscount im Zürich HB bei verschiedenem Kaufspersonal ein Swisscom Prepaidhandy. Beim Einkauf des sechsten Handys wurde der Verkauf von der Kasse abgelehnt. Die Nummer liess sich nicht erneut auf den Kunden registrieren, da er schon fünf SIM Karten bei der Swisscom besessem hat .
 
@@ -193,19 +191,19 @@ Hohe Sicherheit durch sichere und eindeutige Authentifikation ist gewährleistet
 Kleine Verbreitung und hohe Kosten für den Enduser sind die Nachteile von SuisseID.
 
 
-##Fazit
+##Findings
 Auf dem Markt sind verschiedene Anbieter, welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service, welcher es erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
 
 
 
-## Authetentifizierungskomponenten
+## Authentifizierungs-Komponenten
 Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt werden. Folgend gilt es die Komponenten zu erklären.
 
 ###Cookie
 Ein Cookie ist ein kurzes Text-Snippet, welches beim Besuch einer Webseite an den Browser gesendet wird. Dabei kann das Cookie serverseitig vom Webserver an den Browser gesendet werden oder in einem Skript wie Javascript erstellt werden. Der Browser sendet das Cookie bei jeder Aufforderung wieder der Webseite zu. 
 Der Erfinder der Cookie-Technologie ist Vita Lou Montulli, der 1994 nach seinem Studienabbruch bei Netscape einstieg und zudem den Navigator mitentwickelte.
 Der Betreiber der Interaktivität speichert also im Cookie die Teilnahme. Beim erneuten Aufruf erhält er das Cookie und weiss so, dass der Teilnehmer schon einmal teilgenommen hat oder nicht. 
-Das Absichern von Interaktivitäten durch Cookies ist weit verbreitet. Durch die browserseitige/clientseitige Speicherung kann diese Speicherung auch clientseitig manipuliert werden. [^cookie-centra][^google-cookies]
+Das Absichern von Interaktivitäten durch Cookies ist weit verbreitet. Durch die browserseitige/clientseitige Speicherung kann diese Speicherung auch clientseitig manipuliert werden. [^cookie-centra]     [^google-cookies]
 
 ####Automatisierungsmöglichkeit und Mehrfachteilnahme
 Die Automatisierung ist ohne IT-Knowhow möglich. Es stehen einige Browser Plugins zur Verfügung, welche es ermöglichen, sein Surfverhalten über einfache Record-Funktionen aufzunehmen und danach Cookies zu löschen. So kann mehrfach an einer Interkativität wie Umfragen teilgenommen werden.
@@ -217,16 +215,16 @@ Cookies verursachen keine direkten Kosten.
 Ein Flash-Cookie ist, wie es der Name bereits vermuten lässt, ein Cookie, das an den Adobe-Flash Player gebunden ist. Da der Flash-Player im Betriebsystem installiert wird, funktionieren die Flash-Cookies browserunabhängig. Die Bedienungen dieser Flash-Cookies werden von Adobe festgelegt und der Browser kann nicht direkt in das Handling eingreifen. Auch hier wird die Speicherung clientseitige durchgeführt und kann diese Speicherung auch clientseitig manipuliert werden.
 Seit Steven Jobs mit Apple keinen Support für die mobilen Geräte in Aussicht stellte und auf die Probleme und Risiken hinwies, verliert die Plattform gestärkt durch immer wieder auftretende Sicherheitsprobleme an Usern. So haben am 1. Januar noch knapp 10%[^flashussage] aller Webseitenbesucher den Flash-Player. 
 
-[^flashussage][@flashussage]
+[^flashussage]:[@flashussage]
 
-###Mehrfachteilnahme
+####Mehrfachteilnahme
 Flash-Cookies können je nach Betriebsystem mit verschiedenem Aufwand gelöscht werden und dadurch ist eine Mehrfach-Teilnahme möglich.
 
 ####Automatisierungsmöglichkeit
 Die automatisierte Teilnahme und Löschung ist im Gegensatz zu klassischen Cookies aufwendiger, aber durchaus machbar.
 
 ####Kosten
-Cookies verursachen keine direkten Kosten.
+Flash-Cookies verursachen keine direkten Kosten.
 
 ###IP-Adresse
 Bei der Nutzung einer Interkativität wird die IP-Adresse des Teilnehmers gespeichert. So kann bei erneutem Teilnehmen die Teilnahme verweigert werden.
@@ -239,7 +237,7 @@ Es gibt verschiedene Möglichkeiten, die IP-Adresse zu wechseln. Eine einfache M
 ####Automatisierungsmöglichkeit
 Das automatisierte Wechseln eines Proxys ist etwas aufwendiger und braucht technisches Know-How aber durchaus möglich.
 
-###Kosten
+####Kosten
 Das authentifzieren via IP-Adresse verursacht keine direkten Kosten.
 
 
@@ -251,8 +249,7 @@ Das authentifzieren via IP-Adresse verursacht keine direkten Kosten.
 ###Captcha
 Captcha ist ein Test, mit dem festgestellt werden kann, ob sich ein Mensch oder ein Computer eines Programms bedient [^duden].
 
-Im Jahr 2000 wurde das Captcha an der Carnegie Mellon University erfunden. Captcha steht für **C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part. Luis von Ahn, Professor der Entwickler-Gruppe, erklärte die Dringlichkeit von Captcha damals so: "Anybody can write a program to sign up for millions of accounts, and the idea was to prevent that". ****
-[^captcha]
+Im Jahr 2000 wurde das Captcha an der Carnegie Mellon University erfunden. Captcha steht für **C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part. Luis von Ahn, Professor der Entwickler-Gruppe, erklärte die Dringlichkeit von Captcha damals so: "Anybody can write a program to sign up for millions of accounts, and the idea was to prevent that".[^captcha]
 
 ####Captcha Zahlen
 In 2014 wurden 200 Million Captchas  pro Tag eingegeben. Dabei braucht ein User durchschnittlich 10 Sekunden das entspricht 500'000 Stunden.[^statisticinfo]
@@ -271,7 +268,7 @@ Die Zwei-Faktor-Authentifizierung wird häufig 2FA genannt. Der User wird mittel
 Die Zwei-Faktor-Authentifizierung ist in der Schweiz durch das E-Banking bekannt geworden. Der User gibt als erstes Faktor Username/Vertragnummer und Passwort ein. In einem zweiten Schritt gibt er vom System gewünschten Code aus der Codekarte oder des elektrischen Rechners als zweiten Faktor ein. 
 Im Alltag bei einem Einkauf im Detailhandel authentifiziert sich der EC-Kartenchip als erster Faktor. Als zweiter Faktor hat sich der Kunde ein Passwort auswendig gemerkt, welches er eingibt.
 
-. Die folgenden Authenfizierungen basieren auf den Prinzip der Zwei-Faktor-Authentifizierung.
+Die folgenden Authenfizierungen basieren auf den Prinzip der Zwei-Faktor-Authentifizierung.
 
 ###E-Mail-Bestätigungscode
 Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungscode quasi zum Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mailadresse auch tatsächlich existiert und der User darauf Zugriff hat. Der User soll also auch bei der Authentifizierungsschnittstelle seine E-Mailadresse eintragen und erhält dann umgehend den Bestätigungslink an diese zugesandt.
@@ -286,7 +283,7 @@ Anbieter wie 10-Minutes Mail [^10minutemail] stellen auf Knopfdruck für einige 
 Diese Domains müssen über eine aufwendige Blacklist gefiltert werden oder durch ein zeitversetztes Bestätigungsmail ausgehebelt werden.
 
 ####Kosten
-Das Versenden von E-Mails über einen SMTP-Server ist generell kostenlos. Bei hohem Gebrauch dieser Komponente lohnt es sich, die E-Mails über eine professionelle Infrastruktur für Massenversendungen zu versenden und zu analysieren. Beispiele dafür sind Mailchimp [^mailchimp] oder Sendgrid [^sendgrid]
+Bei der Annahme, dass jedes Unternehmen bereits ein E-Mail Server oder ein E-Mail Konto bei einem kostenlosen Anbieter besitzt, verursacht das Versenden von E-Mails über einen SMTP-Server ist generell keine zusätzlichen Kosten. Bei hohem Gebrauch dieser Komponente lohnt es sich, die E-Mails über eine professionelle Infrastruktur für Massenversendungen zu versenden und zu analysieren. Dadurch können weitere Kosten enstehen. Beispiele dafür sind Mailchimp [^mailchimp] oder Sendgrid [^sendgrid]
 
 
 ###SMS- Bestätigungscode
@@ -362,7 +359,7 @@ Für den Betreiber fallen geringe Kosten an. Der Enduser zahlt aber einen bemerk
 ###Browser Fingerprints
 
 Der Fingerabdruck ist aus der Kriminaltechnik nicht mehr wegzudenken. Bereits vor 2000 Jahren haben Chinesen ihre Schuldscheine mit Fingerabdrücken unterzeichnet. Es sollten über 19 Jahrhunderte gehen bis der Fingerabdruck auch in der Kriminaltechnik eingesetzt wurde. Seit über 100 Jahren, genauer seit 1913, ist der Fingerabdruck auch im Dienst der Schweizer Eidgenossenschaft. 
-Im Gegensatz zur DNA unterscheidet sich der Fingerabdruck bei Zwillingen klar, auch wenn ähnliche Merkmale erkennbar sind. Bereits nach nur vier Monaten Schwangerschaft sind die Muster der Papillarleisten beim Embryo festgelegt. Der einzigartige Fingerabdruck des Menschen ist somit fertiggestellt. Dieses Muster ändert sich bis zur Auflösung des Körpers nach dem Tod nicht mehr. [^derfingerabdruck]
+Im Gegensatz zur DNA unterscheidet sich der Fingerabdruck bei Zwillingen klar, auch wenn ähnliche Merkmale erkennbar sind. Bereits nach nur vier Monaten Schwangerschaft sind die Muster der Papillarleisten beim Embryo festgelegt. Der einzigartige Fingerabdruck des Menschen ist bereits dann fertig gestellt. Dieses Muster ändert sich bis zur Auflösung des Körpers nach dem Tod nicht mehr. [^derfingerabdruck]
 
 ![Fingerabdruck Mit Kohlepulver werden Fingerabdrücke sichtbar gemacht und auf Klebefolie gesichert *Quelle:phi-hannover.de*](images/fingerabdruck.jpg)
 
@@ -389,9 +386,6 @@ Auch der Browser übermittelt an den Server verschiedene Informationen:
 [^smspreise]: Die Preise wurden am 1. März 2016 auf aspsms.ch/instruction/prices.asp, tropo.com/pricing und twilio.com/sms/pricing abgefragt
 [^voiceprice]: Die Preise wurden am 1. März 2016 auf nexmo.com/products/voice/, tropo.com/pricing und twilio.com/voice/pricing abgefragt
 [^pingen]: Die Preise wurdem am 10. März 2016 auf pingen.com abgefragt
-[^cnet-2fa]
 [^cnet-2fa]: [@cnet-2fa]
 
-
-####Cookies
 

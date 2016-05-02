@@ -7,7 +7,7 @@ Das Ziel der Implementation des Prototyps ist es, zu zeigen, dass das Architektu
 Der Auftraggeber möchte dass die aktuell in seinem Betrieb eingesetzten Technologien für die Implementation der Arbeit verwendet werden. Die vorgegebenen Technologien sind im folgenden Kapitel erklärt.
 
 ###C-Sharp
-Im Rahmen der Einführung von .net veröffentlichte Microsoft 2002 die Programmiersprache C-Sharp oder verkürzt C#. C# orientiert sich stark an Java, C++, Haskell und Delphi. Daher liegt es Nahe das C# eine objektorientierte Programmiersprache ist und der Wechsel von den zu vorgenannten Programmiersprachen auf C# einfach fällt.
+Im Rahmen der Einführung von .net veröffentlichte Microsoft 2002 die Programmiersprache C-Sharp oder verkürzt C#. C-Sharp orientiert sich stark an Java, C++, Haskell und Delphi. Daher liegt es Nahe das C-Sharp eine objektorientierte Programmiersprache ist und der Wechsel von den zu vorgenannten Programmiersprachen auf C-Sharp einfach fällt.
 
 Neben Grundprinzipen der objektorientierten Programmierung resultiert aus folgende innovativen Sprach-Konstrukte eine vereinfachte Programmierung:
 
@@ -17,7 +17,7 @@ Neben Grundprinzipen der objektorientierten Programmierung resultiert aus folgen
 -	Inline-XML-Dokumentationskommentare
 -	Sprachintegrierte Abfrage (Language-Integrated Query, LINQ), die integrierte Abfragefunktionen für eine Vielzahl von Datenquellen bereitstellt
 
-Der C#-Erstellungsprozess ist im Vergleich zu C und C++ einfach und flexibler als in Java. Es gibt keine separaten Headerdateien und es ist nicht erforderlich, Methoden und Typen in einer bestimmten Reihenfolge zu deklarieren. Eine C#-Quelldatei kann eine beliebige Anzahl von Klassen, Strukturen, Schnittstellen und Ereignissen definieren. [^csharpbasic]
+Der C-Sharp-Erstellungsprozess ist im Vergleich zu C und C++ einfach und flexibler als in Java. Es gibt keine separaten Headerdateien und es ist nicht erforderlich, Methoden und Typen in einer bestimmten Reihenfolge zu deklarieren. Eine C-Sharp-Quelldatei kann eine beliebige Anzahl von Klassen, Strukturen, Schnittstellen und Ereignissen definieren. [^csharpbasic]
 
 \newpage
 ###ASP.net Web API 2 / ASP.net MVC Framework
@@ -73,7 +73,26 @@ Für den Endbenutzer ist der Ablauf der Authentifizierung pro Sicherheitsstufe s
 Damit die Action "Validate/Check" übperüfen kann, ob die Authentifizierung der Sicherheitsstufe erfolgreich war oder zum ersten oder wiederholten mal ausgeführt werden sollte, wir die Methode "checkIsValidated" pro Sicherheitsstufe implementiert. Diese Funktion teil basierend auf den übergebenen Parameter ProjektID und ProviderID mit ob die Validierung erfolgreich ist.
 Das MEF-Contracts Interface aller Sicherheitsstufen enthält ausserdem zwei Methoden zum Abfrage und Speicherung individuellen Konfiguration der Sichstufen und die Methode zur Abfrage der Vergleichsparameter.
 
-![ISecurityStep](images/code/ISecurityStep.png)
+\begin{lstlisting}[language={[Sharp]C}]
+public interface ISecurityStepInfo
+{
+	object getConfigParameters(int projectId);
+	string saveConfigParameters(IDictionary<string, string> config, int projectId);
+	bool checkIsValidated(int projectid, string providerid);
+	SecurityStepCompareInfo getSecurityStepCompareInfo();
+}
+
+public class SecurityStepCompareInfo
+{
+	public float MultipleParticipation { get; set; }
+	public float Automation { get; set; }
+	public float Costs { get; set; }
+	public float ClientEffort { get; set;}
+	public float Awareness { get; set; }
+}
+\end{lstlisting}
+
+<!--![ISecurityStep](images/code/ISecurityStep.png)-->
 
 ###Visualisierung
 ##Auswahl des Anzeige-Frameworks
@@ -96,13 +115,15 @@ Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJ
 
 <!--TODOO--Screenshots--> ...Hier würden ein paar Screenshots gezeigt werden
 
+#### Visualisierung Umfrageresultate
+
 Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG und die Umfrageergebnisse einsehen.
 
 <!--TODOO--Screenshots--> ...Hier würden ein paar Screenshots gezeigt werden
 
 \newpage
 
-### Authentifizierung-Lightbox mit Sicherheitsstufen
+### Authentifizierung-Lightbox 
 Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden.
 
 ...Hier würden ein paar Screenshots gezeigt werden
@@ -114,12 +135,35 @@ Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer 
 ### Aufruf der Lightbox
 Die Implementation der Authentifizierung ist wie im Kapitel [Integrationskonzept] festgelegt, lean umgesetzt worden. Alle CSS-Befehle können von einer Datei abegrufen werden. Die Javascript-Entwicklungen sind in einem File öffentlich verfügbar. Um keine Konflikte mit bereits auf der Webseite implementierten jQuery Bibliotheken zu erhalten wird diese jQuery nicht im Authentifizierungsjavascript mitgeliefert.
 
-![HTML-Beispiel Implementation der Authentifizierung](images/code/implementation_lightbox.png)
+\begin{lstlisting}[language=html] 
+<script src="http://iaauth.christianbachmann.ch/include/js/jquery-1.12.3.min.js"></script>
+<script src="http://iaauth.christianbachmann.ch/include/js/authlightbox.js"></script>
+<link type="text/css" rel="stylesheet" href="http://iaauth.christianbachmann.ch/include/css/lity.css" />
+
+<!--OnClick Event on data-iaauthButton -->
+<button data-iaauthButton>GO</button>
+<div id="inline">
+    <form id="paymentForm" action="https://iaauth.azurewebsites.net/Loading/Home/Validate" target="authframe">
+        <input type="hidden" name="projectId" value="30045" />
+        <input type="hidden" name="providerId" value="12" />
+        <!--Generate sign=mdd5(projectId+providerId+validationCode)-->
+        <input type="hidden" name="sign" value="b37b3d4cd7cd8cba3f409f07d6f6d9bd" />
+    </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    var iaauthlightbox = lity();
+    iaauthlightbox();
+});
+</script>
+\end{lstlisting}
+
+<!--![HTML-Beispiel Implementation der Authentifizierung](images/code/implementation_lightbox.png)-->
 
 \newpage
 
-### Gegeprüfung der Authentifizierung
-Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert und kann unter http://iaauth.azurewebsites.net/api/Validate mit den Parameter ProjectId und ProviderId konsumiert werden.
+### Gegenprüfung der Authentifizierung
+Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert [^url-validate] und kann mit den Parameter ProjectId und ProviderId konsumiert werden.
 
 
 ###WordPressPlugIn / Erweiterung WP-Poll
@@ -128,6 +172,7 @@ Die Implementation in einem neuerstellten Testprojekt ist erfolgreich. Das umges
 
 <!--TODOO--Screenshots--> Hier würden ein paar Screenshots gezeigt werden
 
+[^url-validate]: http://iaauth.azurewebsites.net/api/Validate
 [^demo-github]: https://github.com/coffeefan/bachelorarbeit
 
 

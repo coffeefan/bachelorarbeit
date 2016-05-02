@@ -35,7 +35,7 @@ Diesen Vorteilen stehen auch gewisse Nachteile gegenüber. Die folgenden Punkte 
 [^kzfss01]: [@kzfss01]
 
 \newpage
-###Fazit
+###Findings
 Es gilt also die Vorteile der schriftlichen Fragebogen bei der Gestaltung der Studie zu nutzen. Der ausgeschlossene Bevölkerungsteil verfältscht das Ergebniss nicht, da die Zielgruppe für die Umfrage nur gerade die Personen sind, welche auch tatsächlich an einer Onlineumfrage teilnehmen können. Die Nonresponse-Rate ist ein Risiko, dass Rechnung getragen werden muss um nicht eine ungültige Studie zu erhalten. Damit die Problematik Nonresponse-Rate gering gehalten wird und eine geeignete Umgebung für die Datenerhebungssituation  vorhanden ist, gilt es sich weiter den korrekten Aufbau einer Studie zu recherchieren.
 
 ###Webapplikation für Umfrage
@@ -100,11 +100,10 @@ Es kann Sinn machen eine "perfekte" Einstiegsfrage zu erstellen, die in der Ausw
 ##Erste Frage 
 Die 1. Frage der Studie dieser Bachelorarbeit:
 
-~~~~~~~
 Hatten Sie schon einmal das Gefühl, dass an einem Onlinewettbewerb 
 gemogelt werden kann?
 0 Ja 0 Nein
-~~~~~~~
+
 
 
 \newpage
