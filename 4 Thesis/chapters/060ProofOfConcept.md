@@ -34,7 +34,7 @@ Um RESTful-Webservices einfach entwickeln zu können stellt Microsoft mit ASP.ne
 Entity Framework (EF) ist eine objektrelationale Zuordnung, die .NET-Entwicklern über domänenspezifische Objekte die Nutzung relationaler Daten ermöglicht. Ein Grossteil des Datenzugriffscodes, den Entwickler normalerweise programmieren, muss folglich nicht geschrieben werden. [^efbasic]
 
 ###Grunt
-Grunt.js ist ein sogenannter Taskrunner, d.h. es übernimmt Aufgaben wie das Kompilieren von CSS, überprüft JavaScript auf Fehler ab und optimiert alle Assets für das Web. Grunt.js zeichnet isch dadurch aus, dass, bei richtiger Konfiguration, Grunt.js die Daten selbst überwacht und bei Änderungen die oben genannten Tasks automatisch ausführt.
+Grunt.js ist ein sogenannter Taskrunner, d.h. es übernimmt Aufgaben wie das Kompilieren von CSS, überprüft JavaScript auf Fehler ab und optimiert alle Assets für das Web. Grunt.js zeichnet sich dadurch aus, dass, bei richtiger Konfiguration, Grunt.js die Daten selbst überwacht und bei Änderungen die oben genannten Tasks automatisch ausführt.
 
 ###AngularJS
 Mittels AngularJS ist die Client-Browser App entwickelt. AngularJS ist ein Javascript Framework, welches OpenSource von Google Inc. veröffentlicht wurde. AngularJS macht einen Grossteil des Codes, den man normalerweise schreibt, überflüssig. Die Reduktion des Codes begründet sich durch die Automatisierung von Standardaufgaben. Die manuelle DOM-Selektion, DOM-Manipulation und Event-Behandlung werden durch AngularJS überflüssig. Durch Einsatz von Direktiven und Modulen wird die Wiederverwendbarkeit von Code ermöglicht.
@@ -46,13 +46,13 @@ jQuery ist ein die meistverwendete Javascript-Bibliothek. jQuery wird bei 68% al
 
 
 ###JSON
-Zwischen der AngularJS WebApp und dem Webservice dient JSON(JavaScript Object Notation) als Datenübertragungsformat. JSON zeichnet sich durch seine schlanke Notation und der objektnahen Darstellung aus.
+Zwischen der AngularJS WebApp und dem Webservice dient JSON (JavaScript Object Notation) als Datenübertragungsformat. JSON zeichnet sich durch seine schlanke Notation und der objektnahen Darstellung aus.
 
 [^w3techweb2015]: [@w3techweb2015]
 [^efbasic]: [@efbasic]
 [^angularjsbasic]: [@angularjsbasic]
 
-###Entwicklungswerkezeuge
+###Entwicklungswerkzeuge
 Da die Entwicklungssprache C# verwendet wird, liegt es nahe das Entwicklungswerkezeug VisualStudio einzusetzen. Der Student hat während Studium die JetBrains Entwicklungsplattform PHPStorm kennen gelernt. Daher wird für die Entwicklung der JavaScript-Webapplikationen PHPStorm eingesetzt.
 
 
@@ -61,9 +61,9 @@ Da die Entwicklungssprache C# verwendet wird, liegt es nahe das Entwicklungswerk
 
 ## Umsetzung Sicherheitsstufe
 ### Plugin Entwicklung
-Die Entwicklung einer Sicherheitstufe wird wie im Konzept unter[Modularität und Erweiterbarkeit] vorgesehen losgelöst und unabhängig entwickelt. Pro Sicherheitstufe werden 3 VisualStudio Projekte angelegt. 
+Die Entwicklung einer Sicherheitstufe wird wie im Konzept unter [Modularität und Erweiterbarkeit] vorgesehen losgelöst und unabhängig entwickelt. Pro Sicherheitstufe werden 3 VisualStudio Projekte angelegt. 
 Im Hauptprojekt der Sicherheitstufe wird die klassiche Runtimeumgebung für Webprojekte mit den benötigten Standartreferenzen und Templates für Microsoft MVC und Microsoft WebAPI aufgesetzt. Das PlugIn kann in diesem Projekt ohne Authentifizierungsservice entwickelt und  ausgeführt werden. 
-Das Testprojekt stellt die Lauffähigkeit der im Hauptprojekt entwickelten Implementationen sicher. Um die Entwicklungen im Hauptprojekt als DLL-Klassenbibliothek zu generieren die ClassLibary-Projekt. In diesem werden die entwickelten Klassen aus dem Hauptprojekt verlinkt. Bei vorhandensein aller nötigen Referenzen und verlinkungen erstellt die ClassLibary bei einem Build die DLL-Klassenbibliothek unser PlugIn.
+Das Testprojekt stellt die Lauffähigkeit der im Hauptprojekt entwickelten Implementationen sicher. Um die Entwicklungen im Hauptprojekt als DLL-Klassenbibliothek zu generieren die ClassLibary-Projekt. In diesem werden die entwickelten Klassen aus dem Hauptprojekt verlinkt. Bei Vorhandensein aller nötigen Referenzen und Verlinkungen erstellt die ClassLibary bei einem Build die DLL-Klassenbibliothek unser PlugIn.
 
 ![Screenshot VisualStudio der 3 Projekte der Sicherheitsstufe E-Mail](images/visualstudio_securitystep.png)
 
@@ -96,10 +96,10 @@ public class SecurityStepCompareInfo
 
 ###Visualisierung
 ##Auswahl des Anzeige-Frameworks
-Nach Anforderung [NFREQ-127] und den Kapitel [Mockup] soll die Authentifizierung-Lightbox <!-- und der Konfigurator--> responsive umgesetzt werden. Bootstrap unterstützt den Entwickler bei der visualisierung von Webapplikationen. AngularJS unterstützt seit Anfang an Bootstrap. Mit dem PlugIn AngularJS Boostrap UI stehen erweiterte Bootstrap Funktionalitäten wie Datetime-Picker zur Verfügung. Der Student hat bereits mehrfach Webseiten und Webapplikationen basierend auf Bootstrap umgesetzt. Deshalb fällt die Auswahl auf das mit bekannte Responsive-Framework bootstrap. Neben der Responsiven Unterstützung mit hilfe des Grid-System stehen dem Entwickler umgesetzte Vorlagen für die meistgenutzten Webkomponenten zur Verfügung. Diese können dank zentraler Parametrisierung rasch konfiguriert und individualisiert werden.
+Nach Anforderung [NFREQ-127] und dem Kapitel [Mockup] soll die Authentifizierung-Lightbox <!-- und der Konfigurator--> responsive umgesetzt werden. Bootstrap unterstützt den Entwickler bei der Visualisierung von Webapplikationen. AngularJS unterstützt seit Anfang an Bootstrap. Mit dem PlugIn AngularJS Boostrap UI stehen erweiterte Bootstrap Funktionalitäten wie Datetime-Picker zur Verfügung. Der Student hat bereits mehrfach Webseiten und Webapplikationen basierend auf Bootstrap umgesetzt. Deshalb fällt die Auswahl auf das mit ihm bekannte Responsive-Framework bootstrap. Neben der Responsiven Unterstützung und mit Hilfe des Grid-Systems stehen dem Entwickler umgesetzte Vorlagen für die meistgenutzten Webkomponenten zur Verfügung. Diese können dank zentraler Parametrisierung rasch konfiguriert und individualisiert werden.
 
 ##Visualisierung von Daten
-Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework eingesetzt. Die drei bekannten Charting-Frameworks GoogleCharts, ChartJs und D3 wurden verglichen. GoogleCharts und D3 visaulisieren in SVG. ChartJS visualisiert in Canvas. Ein eindeutiger Vorteil der beiden Konzepte für den Authentifizierungs-Konfigurator ist nicht zu nennen. Alle drei Charting-Frameworks können mit AngularJS integriert werden. GoogleCharts und ChartJs bieten fixfertige Direktiven[^Directiven] an. Damit ist die Integration in AngularJS der beiden Frameworks im Gegensatz zu D3 direkt möglich. Alle drei Charting-Framework bieten die benötigten Diagramme an. ChartJs hat das kleinste Code-Pakat (5KB) und wirkt in den Code deutlich einfacher und aufgeräumter. Visuell passt ChartJs mit den leichten Animationen am besten zum Authentifizierungs-Konfigurator. Zur Visualisierung wird ChartJS verwendet. Die AngularJS-Direktive, der einfache Code, das kleine Paket und die visuelle Umsetzung führen zu diesem Entscheid.
+Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework eingesetzt. Die drei bekannten Charting-Frameworks GoogleCharts, ChartJs und D3 wurden verglichen. GoogleCharts und D3 visaulisieren in SVG. ChartJS visualisiert in Canvas. Ein eindeutiger Vorteil der beiden Konzepte für den Authentifizierungs-Konfigurator ist nicht zu nennen. Alle drei Charting-Frameworks können mit AngularJS integriert werden. GoogleCharts und ChartJs bieten fixfertige Direktiven[^Directiven] an. Damit ist die Integration in AngularJS der beiden Frameworks im Gegensatz zu D3 direkt möglich. Alle drei Charting-Framework bieten die benötigten Diagramme an. ChartJs hat das kleinste Code-Paket (5KB) und wirkt in den Code deutlich einfacher und aufgeräumter. Visuell passt ChartJs mit den leichten Animationen am besten zum Authentifizierungs-Konfigurator. Zur Visualisierung wird ChartJS verwendet. Die AngularJS-Direktive, der einfache Code, das kleine Paket und die visuelle Umsetzung führt zu diesem Entscheid.
 
 
 
@@ -113,23 +113,23 @@ Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework ei
 ### AngularJS-Konfigurator
 Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJS umgestzt wurde. Diese Screens sind abgeleitet von den Mockups[^Mockups-Konfigurator]
 
-![Startseite und Registration des Konfigurator](images/finalscreens/configurator-overview.png)
+![Startseite und Registration des Konfigurators](images/finalscreens/configurator-overview.png)
 
-![Produktübersicht des Konfigurator](images/finalscreens/configurator-projectoverview.jpg)
+![Produktübersicht des Konfigurators](images/finalscreens/configurator-projectoverview.jpg)
 
 
 #### Visualisierung Umfrageresultate
 
 Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG und die Umfrageergebnisse einsehen.
 
-![Detailproduktansicht des Konfigurator](images/finalscreens/configurator-projectdetail.jpg)
+![Detailproduktansicht des Konfigurators](images/finalscreens/configurator-projectdetail.jpg)
 
 ![Weitere Umfragauswertung der ausgewählten Sicherheitsstufe](images/finalscreens/configurator-projectdetail.jpg)
 
 \newpage
 
 ### Authentifizierung-Lightbox 
-Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden.
+Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens, welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden.
 
 ![Desktop-Computer-Ansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-desktop.jpg)
 
@@ -140,7 +140,7 @@ Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer 
 
 ## Implementation Authentifizierung
 ### Aufruf der Lightbox
-Die Implementation der Authentifizierung ist wie im Kapitel [Integrationskonzept] festgelegt, lean umgesetzt worden. Alle CSS-Befehle können von einer Datei abegrufen werden. Die Javascript-Entwicklungen sind in einem File öffentlich verfügbar. Um keine Konflikte mit bereits auf der Webseite implementierten jQuery Bibliotheken zu erhalten wird diese jQuery nicht im Authentifizierungsjavascript mitgeliefert.
+Die Implementation der Authentifizierung ist wie im Kapitel [Integrationskonzept] festgelegt, lean umgesetzt worden. Alle CSS-Befehle können von einer Datei abegrufen werden. Die Javascript-Entwicklungen sind in einem File öffentlich verfügbar. Um keine Konflikte mit bereits auf der Webseite implementierten jQuery Bibliotheken zu erhalten wird jQuery nicht im Authentifizierungsjavascript mitgeliefert.
 
 \begin{lstlisting}[language=html] 
 <script src="http://iaauth.christianbachmann.ch/include/js/jquery-1.12.3.min.js"></script>
@@ -170,7 +170,7 @@ $(document).ready(function() {
 \newpage
 
 ### Gegenprüfung der Authentifizierung
-Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert [^url-validate] und kann mit den Parameter ProjectId und ProviderId konsumiert werden.
+Nach Abschluss der Authentifizierung erhält der User  ein Feedback visualisiert. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene Url ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert [^url-validate] und kann mit den Parameter ProjectId und ProviderId konsumiert werden.
 
 
 ###WordPressPlugIn / Erweiterung WP-Poll

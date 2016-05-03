@@ -17,7 +17,7 @@ Der User ist der Endbenutzer. Er nimmt am Social-Media-Modul teil und authentifi
 \newpage
 
 ##Use-Cases
-Im Nachfolgenden werden alle Use-Cases aufgelistet die im Rahmen dieser Thesis gefunden wurden.
+Im Nachfolgenden werden alle Use-Cases aufgelistet, die im Rahmen dieser Thesis gefunden wurden.
 
 ###Use-Cases Diagramm
 
@@ -118,9 +118,9 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 __Use-Case__
 --------------------------- --------------------------------------------------
-__Ziel__                    Der User ist authtentifiziert oder der User abgelehnt.
+__Ziel__                    Der User ist authentifiziert oder der User abgelehnt.
 
-__Beschreibung__           	Der User probiert sich über den Authentifizierungsservice zu authentifizieren um an einem Social-Media Modul teilzunehmen.
+__Beschreibung__           	Der User probiert sich über den Authentifizierungsservice zu authentifizieren, um an einem Social-Media Modul teilzunehmen.
 
 __Akteure__                 User
 
@@ -181,9 +181,9 @@ Die Anforderungen sollen basierend auf der Satzschablone erstellt werden. Ziel i
 ###Aufbau
 Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen der grundlegenden Version ohne zeitlichen oder bedienungsorientierten Aspekt und der Schablone mit diesen Eigenschaften unterschieden.
 
-![Basis Schablone  *Quelle Rupp*[^rupp]](images/basis-schablone.jpg)
+![Basis Schablone  *Quelle Rupp*[^rupp]](images/basis-schablone.png)
 
-![Erweiterte Schablone  *Quelle Rupp*[^rupp]](images/erweiterte-schablone.jpg)
+![Erweiterte Schablone  *Quelle Rupp*[^rupp]](images/erweiterte-schablone.png)
 
 [^rupp]: Rupp Bilder sind aus dem Buch Basiswissen Requirements Engineering [@rupp]
 
@@ -297,7 +297,7 @@ __UC-Referenz__         UC-21
 
 __Beschreibung__        Ein Programmierer muss eine Authentifizerungsstufe für den Authentifizierungsvorgangs auswählen.
 
-__Techn. Risiko__       Niederig
+__Techn. Risiko__       Niedrig
 
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
@@ -319,7 +319,7 @@ __Business Value__     	Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Ein User kann sich über den Authentifizierungsservice authentifizieren um am Social-Media-Modul teilzunehmen. Der Authentifizierungsservice authentifiziert oder lehnt den User ab.
+__Beschreibung__        Ein User kann sich über den Authentifizierungsservice authentifizieren, um an der Interaktivität teilzunehmen. Der Authentifizierungsservice authentifiziert oder lehnt den User ab.
 
 __Techn. Risiko__       Mittel
 
@@ -340,7 +340,7 @@ __Business Value__     	Sehr Hoch
 
 \newpage
 ##Nicht Funktionale Anforderungen
-Nicht Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
+Nicht Funktionale Anforderungen werden als NFREQ-*Identifikation* bezeichnet.
 
 ### NFREQ-110			Betriebsystemunabhängigkeit
 
@@ -386,7 +386,7 @@ __Business Value__     	hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsservice soll einfach und verständlich optisch konfiguriert werden können.
+__Beschreibung__        Der Authentifizierungsservice soll einfach und verständlich/optisch konfiguriert werden können.
 
 __Techn. Risiko__       Sehr hoch
 
@@ -400,7 +400,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Der User soll einfach und verständlich optisch konfiguriert werden können.
+__Beschreibung__        Der User soll einfach und verständlich/optisch authentifizieren können.
 
 __Techn. Risiko__       Sehr hoch
 
@@ -437,7 +437,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-31
 
-__Beschreibung__        Das System soll insbesondere an der Stelle der Authentifzierung Performant sein.
+__Beschreibung__        Das System soll insbesondere an der Stelle der Authentifzierung performant sein.
 
 __Techn. Risiko__       Sehr hoch
 
@@ -461,7 +461,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-25, UC-21, UC22
 
-__Beschreibung__        Der Authentifizierungsservice soll eine hohe Verfügbarkeit von 99.9% haben. 
+__Beschreibung__        Der Authentifizierungsservice soll eine Verfügbarkeit von mindestens 99.9% haben. 
 
 __Techn. Risiko__       Hoch
 
@@ -500,7 +500,7 @@ __Business Value__     	Hoch
 
 \newpage
 ##Risiken
-Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Risiken bezüglich der Bachelorarbeit sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
+Nachfolgend sind die im Gespräch mit dem Auftraggeber gefundenen Risiken bezüglich der Bachelorarbeit, sowie deren Auswirkungen, aufgeführt. <!-- Für die Risiken werden nur die zur Umsetzung ausgewählten Anforderungen berücksichtigt. -->
 
 ###R-01 Akzeptanz
 Programmierer und insbesondere auch User, welche den Authentifizierungsservice verwenden sollen, sind völlig unterschiedlich. Deren unterschiedlichen Ansprüche machen es schwierig, eine Lösung zu entwickeln, welchen den Akteuren gerecht wird.
@@ -533,13 +533,13 @@ Dieses Risiko wird mit mittlerer Wahrscheinlichkeit eintreten
 Als Auswirkungen dieses Risikos sind Wechsel des Frameworks oder gar manuelle Entwicklungen und daraus zusätzlicher, nicht einschätzbarer Aufwand nötig.
 
 ###R-06 Termineinhaltung
-Den fixe Abgabetermin der Semesterarbeit gilt es einzuhalten. Das Risiko, dass die Arbeit verspätet abgegeben wird besteht.
+Den fixen Abgabetermin der Bachelorarbeit gilt es einzuhalten. Das Risiko, dass die Arbeit verspätet abgegeben wird, besteht.
 
 Dieses Risiko wird mit geringer Wahrscheinlichkeit eintreten.
 Die Auswirkung bei Eintritt dieses Risikos ist das Nichtbestehen der Arbeit.
 
 ###R-07 Auslastung
-Das Projekt wird durch einen Mitarbeiter getragen. Dieser ist sowohl im Beruf wie auch privat stark ausgelastet. Der hohe schulische Aufwand kann beeinflusst werden. Mit zusätzlichen Ausfällen durch Krankheit oder nicht vorhersehbare Vorfällen muss gerechnet werden.
+Das Projekt wird durch einen Mitarbeiter getragen. Dieser ist sowohl im Beruf, wie auch privat stark ausgelastet. Der hohe schulische Aufwand kann beeinflusst werden. Mit zusätzlichen Ausfällen durch Krankheit oder nicht vorhersehbare Vorfällen muss gerechnet werden.
 
 Das Risiko wird mit mittlerer Wahrscheinlichkeit eintreten.
 Die Auswirkungen bei Eintritt dieses Risikos werden sich in der Qualität und Quantität der Arbeit widerspiegeln.
@@ -570,7 +570,7 @@ R7	Auslastung
 ###Massnahmen
 Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende Komplexität einschätzen zu können, wird vor Projektbeginn ein Prototyp mittels Durchstich durch alle Technologien erstellt. Danach kann die Komplexität im Zusammenspiel der Technologie eingeschätzt und bei Bedarf eine Technologie durch eine andere ersetzt werden. So kann das Risiko 3 "Überkomplexität" und Risiko 5 "Schlechte/Unzureichende Frameworks" minimiert werden.
 
-Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich ist vom Studenten eine Arbeitswoche Ferien genommen, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen soll das Risiko 6 Termineinhaltung minimal bleiben.
-Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit ist auf ein Minimum reduziert. Für die restliche freiwilige Arbeit ist mit Freunden ein Notfallszenario entwickelt worden, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen sind entschärfen auch Risiko 7.
+Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich ist vom Studenten eine Arbeitswoche Ferien eingeplant, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen soll das Risiko 6 Termineinhaltung minimal bleiben.
+Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit ist auf ein Minimum reduziert. Für die restliche freiwilige Arbeit ist mit Freunden ein Notfallszenario entwickelt worden, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt, um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen sind, entschärfen auch Risiko 7.
 
 [^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen. [@vorlagerisikomatrix]

@@ -1,7 +1,7 @@
 #Konzept
 In diesem Kapitel soll ein System für den Authentifizierungsservice entworfen werden. Das System soll den Anforderungen, welche im vorherigen Kapitel definiert wurden, entsprechen. 
 
-Um die Komponenten unabhängig voneinander zu entwickeln, wird bei der Entwicklung der Architektur des Authentifizierungsservice darauf geachtet möglichst geringe Kopplung aufzuweisen.
+Um die Komponenten unabhängig voneinander zu entwickeln, wird bei der Entwicklung der Architektur des Authentifizierungsservice darauf geachtet eine möglichst geringe Kopplung aufzuweisen.
 
 
 ##Systemarchitektur
@@ -36,7 +36,7 @@ Ein differenziertes Domänenmodel - auch Domänenmodel Basis Level genannt - erl
 
 \newpage
 ##Datenbankdesign
-In der Systemarchitektur des Authentifizierungservice stehen Objekte nur während der Ausführungszeit zur Verfügung. Um sie zu persitieren, werden sie in einer relationalen Datenbank gespeichert.
+In der Systemarchitektur des Authentifizierungservice stehen Objekte nur während der Ausführungszeit zur Verfügung. Um sie zu persistieren, werden sie in einer relationalen Datenbank gespeichert.
 Die Paradigmen der objektorientierten Programmiersprache und der relationalen Datenbank sind grundlegend verschieden. 
 So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als "object-relational impedance mismatch" bekannt.[^vietnamcomputerscience]
 Um diesen Widerspruch zu mindern, stellt Microsoft das Entity-Framework zur Verfügung. 
@@ -64,24 +64,24 @@ Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen Tabellen d
 
 \newpage
 ##Integration der Schnittstelle
-Wie in der Anforderungsanalyse <!--TODO Punkt beschreiben --> und Aufgabenstellung  <!--TODO Punkt beschreiben -->geschrieben, soll die Schnittstelle möglichst einfach in bestehende Systeme integriert werden können. Bevor wir untersuchen, wie wir die Integration umsetzen können, bedarf es die wichtigsten bestehenden Systeme zu kennen um eventuell für diese Systeme eine spezifisch einfache Integration zu entwickeln.
+Wie in der [Anforderungsanalyse] und [Aufgabenstellung]  geschrieben, soll die Schnittstelle möglichst einfach in bestehende Systeme integriert werden können. Bevor wir untersuchen, wie wir die Integration umsetzen können, bedarf es die wichtigsten bestehenden Systeme zu kennen um eventuell für diese Systeme eine spezifisch einfache Integration zu entwickeln.
 
 ###Bestehende Systeme für Votings, Wettbewerbe und Quizes
-Das bestehende Interaktivitäts-Modul wird als Teil einer Webseite in einer Webapplikation geführt. Webapplikation, welche Inhalte verwalten, werden sinngemäss Content-Management-Systeme genannt. Die Abkürzung CMS hat sich im IT-Fachjargon etabliert. Statista.com  wertet mehrmals im Jahr die Verbreitung der verschiedenen CMS aus [^statisticinfostatista]. Folgend ist die Erhebung aus dem November 2015 abgebildet:
+Das bestehende Interaktivitäts-Modul wird als Teil einer Webseite in einer Webapplikation geführt. Webapplikationen, welche Inhalte verwalten, werden sinngemäss Content-Management-Systeme genannt. Die Abkürzung CMS hat sich im IT-Fachjargon etabliert. Statista.com  wertet mehrmals im Jahr die Verbreitung der verschiedenen CMS aus [^statisticinfostatista]. Folgend ist die Erhebung aus dem November 2015 abgebildet:
 
 ![Nutzungsanteil CMS weltweit *Quelle:de.statista.com*](images/cms_statistik_november2015.JPG)
 
 Die von statista.com veröffentlichten Zahlen wurden mit Werten von W3techs.com verglichen[^statisticinfow3techs]. Die Unterschiede sind für unsere Verwendung minimal und liegen im Zehntelprozentbereich. Da beide bekannten Statistik unternehmen auf die selben Werte gekommen sind, kann von einem hohen Wahrheitsgrad ausgegangen werden.
 Beim Betrachten der Statistik fällt auf, dass Wordpress mit 25,2% mit Abstand am meisten genutzt wird. Alle dynamischen Webseiten unter den Top 10 basieren auf Systemen in PHP[^phpinfotag]. Adobe Dreamviewer und FrontPage sind keine Systeme, welche auf dem Server betrieben werden. Sie sind Editoren, welche auf dem jeweiligen Computer ausgeführt werden und danach mehrheitlich HTML-, CSS- und Javascript-Code an den Server ausliefern. Funktionalitäten werden mit den beiden Editoren manuell geschrieben. 
 
-Basierend auf diesen statistischen Erkenntnissen lohnt es sich die Wordpress Welt kennen zu lernen und recherchieren wie dort eine Authentifizierungsschnittstelle eingebunden werden könnte.
+Basierend auf diesen statistischen Erkenntnissen lohnt es sich die Wordpress-Welt kennen zu lernen und zu recherchieren, wie dort eine Authentifizierungsschnittstelle eingebunden werden könnte.
 
 ### Wordpress-Plugin Hook
 Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können direkt über das CMS-Backend eingespielt werden. Alternativ können sie auch manuell installiert werden. Zum Beispiel, indem man ein Plugin selber programmiert oder beim Hersteller bzw. über das Plugin-Verzeichnis von Wordpress[^Plugin-verzeichnis2] herunterlädt. Wordpress sammelt zugleich die aktiven Installationen der Plugins (sofern man als Entwickler den Informationsaustausch nicht unterbindet). Die Gesamtzahl wird im CMS-Backend Wordpress und auf Ihrer Plugin-Verzeichnis Webseite[^Plugin-verzeichnis2] veröffentlicht. Dank dieser Kennzahl können nun die meistverbreiteten Plugins herausgefunden werden. 
 
 <!--TODO Auflistung von bekannten Plugins -->
 
-Wordpress basiert auf einem sogennanten Hook-System. "Hook" bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle, bei der man seinen eigenen Code  einhaken kann. Der Plugin-Entwickler definiert diese Hooks, um anderen Plugins oder Funktionalitäten zu erlauben sein Plugin zu erweitern. Auch der Core von Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass Plugins oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der Plugin-Entwickler kann selbständig bestimmen, ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle Plugins verfolgen vielfach den Weg möglichst verschlossen zu agieren, um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Interaktivitäten-Plugins ausgewählt. Aus den Top 1000 der installierten Wordpress Plugins, welche von der Art Social-Media Modul sind werden Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen Plugins zur Untersuchung verwendet: [^Plugin-verzeichnis2], [^Plugin-market2]
+Wordpress basiert auf einem sogennanten Hook-System. "Hook" bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle, bei der man seinen eigenen Code  einhaken kann. Der Plugin-Entwickler definiert diese Hooks, um anderen Plugins oder Funktionalitäten zu erlauben, sein Plugin zu erweitern. Auch der Core von Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass Plugins oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der Plugin-Entwickler kann selbständig bestimmen, ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle Plugins verfolgen vielfach den Weg möglichst verschlossen zu agieren, um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Interaktivitäten-Plugins ausgewählt. Aus den Top 1000 der installierten Wordpress Plugins, welche von der Art Social-Media Modul sind werden Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen Plugins zur Untersuchung verwendet: [^Plugin-verzeichnis2], [^Plugin-market2]
 
 ------------------------------------------------------------------------------------------
 __Plugin__				__Kosten__  __Installation__ 	__Info zu Hooks__		
@@ -119,7 +119,7 @@ Wir haben nun verschiedene Wordpress-Plugins für Interaktivitäten auf Hooks un
 
 \newpage
 
-### Parallelen im ähnliches Anwendungsfeld 
+### Parallelen in ähnliche Anwendungsfeld er
 Die vertiefte Untersuchung der letzten Kapitel wird beendet und es wird probiert eine andere Herangehensweise zur Lösungsfindung zu suchen: Forscher adaptieren immer wieder er- folgreiche Modelle aus anderen Bereichen in ihr Gebiet. Vielfach wird die Natur als erfolgreiches Vorlagemodell genommen. Ganz soweit wird hier nicht gegangen. Payment-Gateways, wie der Schweizer Anbieter Datatrans, müssen Webshop-Entwicklern auch eine Möglichkeit bieten das Gateway einfach in Ihren Webshop einbinden zu können. Auch bei ihnen steht die Sicherheit an der ersten Stelle und eine einfache Integration ist für den Erfolg - trotz internationalem Druck - notwendig. 
 Dabei fährt Datatrans eine Zweiwegstrategie. Einerseits stellen sie stellen für bekannte Shopsysteme gleich ganze Plugins zur Verfügung[^dt-Plugin]. Auf der anderen Seite bieten sie ausführlich beschriebene und einfache Schnittstellen an.
 
@@ -129,10 +129,10 @@ Um die Gateway-Implementation der Datatrans als Ganzes zu verstehen, führen wir
 <!--![Nutzungsanteil Zahlungsablauf Webshop mit Datatrans *Quelle:datatrans*](images/datatrans-autorisierung.JPG)-->
 
 1.	Der Endkunde wählt ein oder mehrere Produkte aus und schliesst die Bestellung ab
-2. 	Der Merchant(Webshop) zeigt Zahlungsseite von Datatrans, Karteninhaber gibt seine Kartendaten ein.
-3. 	Datatrans autorisiert und verarbeitet - wenn möglich - die Transaktion zum Acquirer(akquirierende Bank).
-4. 	Datatrans zeigt den Status dem Kunden an und sendet Status dem Merchant(Webshop) zurück.
-5. 	Merchant(Webshop) zeigt dem Karteninhaber die Antwortseite (erfolgreich oder abgelehnt)
+2. 	Der Merchant (Webshop) zeigt Zahlungsseite von Datatrans, Karteninhaber gibt seine Kartendaten ein.
+3. 	Datatrans autorisiert und verarbeitet - wenn möglich - die Transaktion zum Acquirer (akquirierende Bank).
+4. 	Datatrans zeigt den Status dem Kunden an und sendet Status dem Merchant (Webshop) zurück.
+5. 	Merchant (Webshop) zeigt dem Karteninhaber die Antwortseite (erfolgreich oder abgelehnt)
 [^dt-api]
 
 [^dt-Plugin]: Übersicht der Web-Shop Plugins [@datatrans-Plugin]
@@ -178,7 +178,7 @@ Implementierungscode der Datatrans:
 
 Die Stragtegie der Paymentintegration von Datatrans soll für den Authentifizierungservice genutzt werden. 
 
-Durch automatisches Öffnen der Lightbox erreicht der Endbenutzer mühelos den Schritt der Authentifizierung. Die Authentifizierung springt ihm nahe zu entgegen. Dadurch ist eine hohe Effektivität gegeben. Der User bleibt auf derselben Seite und wird dadurch nicht aus dem Fluss der Abarbeitung der Interaktivität geworfen. Das Verfahren ist sehr effizient. Die Javascript- und CSS-Daten werden beim Laden der Interaktivität bereits mitgeladen. So entsteht eine minimale Wartezeit beim Einblenden der Lightbox. Dies ist für den User nicht spürbar oder störend. 
+Durch automatisches Öffnen der Lightbox erreicht der Endbenutzer mühelos den Schritt der Authentifizierung. Die Authentifizierung springt ihm nahezu entgegen. Dadurch ist eine hohe Effektivität gegeben. Der User bleibt auf derselben Seite und wird dadurch nicht aus dem Fluss der Abarbeitung der Interaktivität geworfen. Das Verfahren ist sehr effizient. Die Javascript- und CSS-Daten werden beim Laden der Interaktivität bereits mitgeladen. So entsteht eine minimale Wartezeit beim Einblenden der Lightbox. Dies ist für den User nicht spürbar oder störend. 
 
 Bei der Darstellung der Authentifizierung auf einer einzelnen Seite müsste das Web-Design des Interaktivitäts-Anbieter adaptiert werden können. Da die Authentifizierungs-Lightbox auf seiner Seite dargestellt wird, braucht der Interaktivitäts-Anbieter nicht sein Design mühsam für eine Authentifizierungsseite zu konfigurieren. 
 
@@ -236,7 +236,7 @@ Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivi
 Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP-Adresse vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss". Dadurch könnte nur einmal pro Internetanschluss an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know-How durch Tools möglich ist, lässt sowohl Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand
 
 ####Browser Fingerprint
-Durch Generierung eine Browser Fingerprints (siehe [Recherche]) kann der Browser identifiziert werden. Das Verfahren kann zu 94% einen User wiedererkennen. Das Verwenden mehrerer Browser oder Geräte führt zu verschiedenen Browser Fingerprints. iPhone taugt nicht für disese Methode. Deshalb muss Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewertet werden. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
+Durch Generierung eine Browser Fingerprints (siehe [Recherche]) kann der Browser identifiziert werden. Das Verfahren kann zu 94% einen User wiedererkennen. Das Verwenden mehrerer Browser oder Geräte führt zu verschiedenen Browser Fingerprints. iPhones taugte nicht für diese Methode. Deshalb muss Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewertet werden. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
 
 ####SMS Authentifizierung
 Der Benutzer gibt seine Mobilenummer ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die Telefonnummer gehört. In der Schweiz können maximal 5 Mobilenummern bei den Anbietern gekauft werden (Siehe Kapitel [Recherche]). Der Benutzer kann eindeutig anhand der Mobilenummer erkannt werden. Die möglichen Mobilenummern pro User sind beschränkt. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro SMS sind tragbar. Der Benutzer muss bei dieser Methode sein Handy bei sich tragen und den Code übertragen.
@@ -245,7 +245,7 @@ Der Benutzer gibt seine Mobilenummer ein. Durch Versenden eines Codes wird siche
 Der Benutzer gibt seine Telefonnummer ein. Der Benutzer wird automatisiert angerufen und die Computerstimme liest ein Code vor, welcher der Benutzer im Rückbestätigungsformular einträgt. Dadurch wird sichergestellt, dass die Telefonnummer dem Benutzer gehört. Mobilenummern sind wie vorhin erwähnt eingeschränkt. Festnetzanschlüsse unterliegen einer finanziellen Hürde. 
 
 ####Postversand Authentifizierung
-Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, deshalb wird Unique mit gut und nicht sehr gut bewertet. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach Erhalt auf einer Webseite quittieren.
+Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, wird es bei der Eindeutigkeit in der Bewertung Abzug geben. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach Erhalt auf einer Webseite quittieren.
 
 
 ###Sicherheitstufen bewerten
@@ -299,7 +299,7 @@ SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schwe
 
 \newpage
 ##Modularität und Erweiterbarkeit
-Wie in der Einführung zur [Architektur] erwähnt, sollte eine Architektur so konstruiert werden dass Sie möglichst Modular aufgebaut ist. Auch wenn wir die zu verwendenden Authentifizierungsmethoden im vorherigen Kapitel definiert haben, werden sich diese in Zukunft ändern. Anderseits können sich auch die Authentifizierungsmethoden selbstkomplett verändern. Sehr realistisch ist, dass für einen Browser-Fingerprint neue Berechnungsmethodiken bekannt werden. Der Anbieter, der hinter eine Authentifizierungsmethode steht, kann sich verändern oder dessen Anbindung anpassen. Kurz gesagt, die Modularität der Authentifizierungsmethoden muss unbedingt gewährleistet sein. Eine Implementation der Sicherheitsstufe SMS wie im folgenden einfachen Beispiel sollte nicht verwendet werden.
+Wie in der Einführung zum [Konzept] erwähnt, sollte eine Architektur so konstruiert werden dass Sie möglichst modular aufgebaut ist. Auch wenn wir die zu verwendenden Authentifizierungsmethoden im vorherigen Kapitel definiert haben, werden sich diese in Zukunft ändern. Anderseits können sich auch die Authentifizierungsmethoden selbst komplett verändern. Sehr realistisch ist, dass für einen Browser-Fingerprint neue Berechnungsmethodiken bekannt werden. Der Anbieter, der hinter eine Authentifizierungsmethode steht, kann sich verändern oder dessen Anbindung anpassen. Kurz gesagt, die Modularität der Authentifizierungsmethoden muss unbedingt gewährleistet sein. Eine Implementation der Sicherheitsstufe SMS wie im folgenden einfachen Beispiel, sollte nicht verwendet werden.
 
 \begin{lstlisting}[language={[Sharp]C}]
 SMSSecurityStep inst = new SMSSecurityStep();
@@ -320,7 +320,7 @@ Der Beispielcode als Design by Contract Pattern:
 ISecurityStep proxy = new SomeFactory.GetSecurityStep(...);
 \end{lstlisting}
 
-ISecurityStep-Vertrag ist im Beispielcode der Vertrag. Die Instanz "proxy" liefert ein Objekt zurück, welches nach ISecurityStep-Vertrag definiert ist. Welches Objekt (Implementierung) sich dahinter verbirgt, ist uninteressant da diese Komponente gegen eine andere Implementierung ausgetauscht werden kann. In diesem konkreten Fall, könnten beispielsweise die Komponenten SMSSecurityStep und CookieSecurityStep die Schnittstelle ISecurityStep implementieren.
+ISecurityStep-Vertrag ist im Beispielcode der Vertrag. Die Instanz "proxy" liefert ein Objekt zurück, welches nach ISecurityStep-Vertrag definiert ist. Welches Objekt (Implementierung) sich dahinter verbirgt, ist uninteressant, da diese Komponente gegen eine andere Implementierung ausgetauscht werden kann. In diesem konkreten Fall, könnten beispielsweise die Komponenten SMSSecurityStep und CookieSecurityStep die Schnittstelle ISecurityStep implementieren.
 
 SomeFactory muss für die Umsetzung  jedoch implementiert werden. Dafür gibt es in der .NET-Welt einiges an Beispiel-Code und Frameworks zu finden. Ein beliebtes Framework ist die Windows Communication Foundation.[^design-By-Contract]
 
@@ -340,7 +340,7 @@ Um das Konzept besser zu verstehen, soll der Beispielcode von [Design by Contrac
 MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
 
 ###Entscheidung
-Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory um die Modularität für [NFREQ-115] sicherzustellen. MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zur Verfügung.  MEF bietet des Weiteren die Möglichkeit die DLL-Datein zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authentifizierungsservice basierend auf MEF zu integrieren.
+Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory, um die Modularität für [NFREQ-115] sicherzustellen. MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zur Verfügung.  MEF bietet des Weiteren die Möglichkeit die DLL-Daten zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authentifizierungsservice basierend auf MEF zu integrieren.
 
 \newpage
 ### Sicherheitsstufen Library-Übersicht anhand MEF
@@ -354,7 +354,7 @@ Basierend auf dem Managed Extensibility Framework wird der Aufbau umstrukturiert
 ### Definition der Sicherheitsufenverträge
 
 ####Verträge für das Backend
-Pro Projekt des Anbieters und muss der Programmierer für jede Sicherheitsstufe verschiedene Konfigurationen tätigen können. Die Konfigurationen können da variieren. So kann bei der Sicherheitsstufe E-Mail der Absendername und Antwort-E-Mail-Adresse definiert werden, bei der Telefonvalidierung ein Grusswort. Es soll eine Abfrage der Konfigurationsparameter pro Plugin vorhanden sein. Diese soll mit allfällig bereits erfassten Werten übermittelt werden. Um die Werte zu speichern muss eine Speicherfunktionion pro Plugin aufrufbar sein. Weiter sollen statische Vergleichsparameter pro Plugin übergeben werden können. Die Vergleichsparameter entsprechen generell den Angaben aus Kapitel [Sicherheitstufen bewerten]. Für neuere Plugins werden diese Bewertungen vom Auftraggeberteam neu definiert. Anzumerken ist hier, dass die Studienergebnisse zentral verwaltet werden und dynamisch sofern  das Plugin in der Studie bewertet wurde, ausgelesen werden.
+Pro Projekt des Anbieters und muss der Programmierer für jede Sicherheitsstufe verschiedene Konfigurationen tätigen können. Die Konfigurationen können da variieren. So kann bei der Sicherheitsstufe E-Mail der Absendername und Antwort-E-Mail-Adresse definiert werden, bei der Telefonvalidierung ein Grusswort. Es soll eine Abfrage der Konfigurationsparameter pro Plugin vorhanden sein. Diese soll mit allfällig bereits erfassten Werten übermittelt werden. Um die Werte zu speichern muss eine Speicherfunktionion pro Plugin aufrufbar sein. Weiter sollen statische Vergleichsparameter pro Plugin übergeben werden können. Die Vergleichsparameter entsprechen generell den Angaben aus Kapitel [Sicherheitstufen bewerten]. Für neuere Plugins werden diese Bewertungen vom Auftraggeberteam neu definiert. Anzumerken ist hier, dass die Studienergebnisse zentral verwaltet werden und dynamisch, sofern das Plugin in der Studie bewertet wurde, ausgelesen werden.
 
 ####Verträge Frontend
 Der Authentifizierungsservice soll von jedem Sicherheitstufen-Plugin den Status über die Validierung erfragen können. Um die Validierung der einzelnen Stufe (noch einmal) zu beginnen oder als valide zu bezeichnen.
@@ -389,13 +389,13 @@ Im Designkonzept ist von einer Klappmenü oder Topnavigation abgesehen. Die Wich
 
 \newpage
 ####Inhaltaufbau
-Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben, einerseits Übersichte,n wie Dashboards mit verschiedenen Inhalten, auf einer Seite abzubilden. Andererseits soll die selbe Struktur aber  auch für Seiten mit nur einem Inhaltselement, wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept (Card Based Design). Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgegrenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel dem Anwender kommuniziert, was für ein Inhalt im Bereich Content der "Card" zu erwarten ist. [^card-based-design]
+Trotz unterschiedlichstem Inhalt (Text, Tabellen, Diagramme, Bilder und Formulare) und Grösse soll eine einheitliche Struktur geschaffen werden. Die Struktur soll es erlauben, einerseits Übersichten wie Dashboards mit verschiedenen Inhalten, auf einer Seite abzubilden. Andererseits soll die selbe Struktur aber  auch für Seiten mit nur einem Inhaltselement, wie Registration oder Login-Seite verwendet werden können. Verschiedene Designe lösen diese Problematik mit einem Karten-Konzept (Card Based Design). Dabei wird jedes Inhaltselement als "Card" dargestellt. Die "Card" hat einen klar abgegrenzten Darstellungsbereich. Die Card ist in Header und Content unterteilt. Im Header wird mittels Titel dem Anwender kommuniziert, was für ein Inhalt im Bereich Content der "Card" zu erwarten ist. [^card-based-design]
 
 ![Aufbau Inhalt im Card-Design](images/mockups/card.jpg)
 
 \newpage
 ###Authentifizierungs-Lightbox Template
-Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der Endbenutzer kann ein geringes technisches Know-How aufweisen. Deshalb muss das Design einen Bereich verfügbar machen, in welchem die zu tätigenden Schritte erklärt werden können. Die Möglichkeiten und Anzahl der Schritte sollen auf ein Minimum gehalten werden. Im besten Fall kann der User eine Eingabe machen und dies mit einem Button bestätigen. Damit der Endbenutzer fokussiert bleibt, soll, wie bei einer Lightbox üblich, der Rest der Seite abgedunkelt werden. 
+Die Authentifizierungs-Lightbox wird vom Endbenutzer verwendet. Der Endbenutzer kann ein geringes technisches Know-How aufweisen. Deshalb muss das Design einen Bereich verfügbar machen, in welchem die zu tätigenden Schritte erklärt werden können. Die Möglichkeiten und Anzahl der Schritte sollen auf einem Minimum gehalten werden. Im besten Fall kann der User eine Eingabe machen und dies mit einem Button bestätigen. Damit der Endbenutzer fokussiert bleibt, soll, wie bei einer Lightbox üblich, der Rest der Seite abgedunkelt werden. 
 
 
 ![Mockup Konfigurator Template Mobile](images/mockups/authenticationlightbox.jpg)
@@ -451,7 +451,7 @@ Ein ASP.NET Shared Hosting ist durchaus für komplexere Webapplikationen wie der
 
 ###Cloud Hosting
 Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting ist skalierbar und kann sich automatisiert an die aktuellen Nutzungsbedürfnissen anpassen. Die realen Kosten sind im vornherein schwerer zu definieren. Die Daten sind in der Cloud redundant gehalten. Fällt ein Datencenter aus, kann ein anderes dessen Aufgabe übernehmen. Ein schweizer Anbieter der direkt ASP.NET Webservice als Cloud-Hostingservice anbietet wurde nicht gefunden.[^cloudservicech] Indirekt z.b. über ein Docker Image könnte auch ein Schweizer Anbieter berücksichtigt werden. Die genutzten Serverdienste können komplett an seine eigenen Bedürfnissen angepasst werden.
-Beim Cloud Service von Micorosoft kann direkt im VisualStudio administriert werden. Alle nötigen Resourcen können in der Entwicklungsumgebung konfiguriert werden. Ausserdem ist das einfache publishen der Webanwendung praktisch über einen Knopfdruck aus Visual Studio möglich. 
+Beim Cloud Service von Microsoft kann direkt im VisualStudio administriert werden. Alle nötigen Resourcen können in der Entwicklungsumgebung konfiguriert werden. Ausserdem ist das einfache publishen der Webanwendung praktisch über einen Knopfdruck aus Visual Studio möglich. 
 
 ###Entscheidung
 Die in [NFREQ-132] geforderte Skalierbarkeit, nutzungsabhängige Kosten und die Freiheit in der Serverdienst-Konfiguration überwiegen der Speicherung der Daten in der Schweiz. Das einfache publishen (veröffentlichen) und konfigurieren einer Web-Applikation aus Visual Studio wird bei Microsoft Azure angeboten, was den Development Workflow erheblich unterstützt. Deshalb ist der Authentifizierungsservice im Cloud Hosting zu betreiben. 
@@ -469,7 +469,7 @@ Im Konfigurator, eine AngularJS-App, ist die benutzerseitige Validierung mittels
 Die gewählte Architektur und Dependency Injection vereinfachen das Testing.
 
 ###Wie kann getestet werden?
-Der Authentifizierungsservice und die Sicherheitsstufen können wie normale Web-Applikationen in MVC oder Web-API getestet werden. Jedes Sichrheitsstufen-Plugin sollunabhängig gekapselt getestet werden. Um in Unit-Test keine Datenbank zu nutzen soll das Repository Pattern eingesetzt werden.
+Der Authentifizierungsservice und die Sicherheitsstufen können wie normale Web-Applikationen in MVC oder Web-API getestet werden. Jedes Sichrheitsstufen-Plugin soll unabhängig gekapselt getestet werden. Um in Unit-Test keine Datenbank zu nutzen, soll das Repository Pattern eingesetzt werden.
 
 ###Was soll getestet werden?
 Grundsätzlich sollte die Logik, welche im Controller ist, getestet werden. Wird eine spezielle Logik ausserhalb der Controller verwendet, so soll auch diese getestet werden. 
