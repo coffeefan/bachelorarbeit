@@ -119,7 +119,7 @@ Ganze *78%* [@goldbachsocial] der Schweizer Bevölkerung nutzten SocialMedia und
 [^socialmediaweltweit]: Die Statistik wurde basierend auf den Daten von SocialMedia-Institute [@smi]erstellt. Facebook- und Twitter-Daten sind am 5. November 2015 und die Google-Daten im 2014 erhoben worden.
 
 [^socialmediaschweiz]: Die Statistik wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben.
-[^magnolia]: Ma.gnolia ist eine Leszeichen-Webseite auf der User Leszeichen bis 2009 bewerten und auch privat verwalten können.
+[^magnolia]: Ma.gnolia ist eine Leszeichen-Webseite auf der User Leszeichen bis 2009 bewerten und auch privat verwalten konnte.
 
 \newpage
 ####Vorteil
@@ -247,6 +247,52 @@ Das Authentifzieren via IP-Adresse verursacht keine direkten Kosten.
 [^google-cookies]: [@google-cookies]
 [^pclexikon-ip]: [@pclexikon-ip]]
 
+
+###Ausweisnummer Schweizer Pass oder Identitätskarte
+Die Schweiz führt für ihre Staatangehörigen zwei Ausweisarten: den Schweizer Pass und die Identitätskarte. Diese dienen zum Nachweis der Schweizer Staatsangehörigkeit und der Identität. In der Schweiz besteht weder eine Ausweispflicht noch eine Mitführpflicht, niemand muss eine Identitätskarte oder einen Pass besitzen oder gar bei sich tragen.
+Auf der Rückseite der Identitätskarte oder in der 1. Innenseite des Passes befindet sich im unteren Bereich eine maschinenlesbare Zone, welcher auch von Menschen gelesen werden. Die verschiedenen Bereiche, werden in der folgenden Abbildung beschrieben. Die orange umrandeten Zahlen sind jeweils Checksummen. Der Orange Bereich ist die Gesamtchecksumme.
+
+![Beispiel maschinenlesbare Zone Identitätskarte und Pass mit Legende](images/ausweis.png)
+
+####Checksummenberechnung
+Die Checksummenberechnung funktioniert wie folgt:
+
+1. Stelle wird mit 7 multipliziert,
+2. Stelle wird mit 3 multipliziert,
+3. Stelle wird mit 1 multipliziert,
+4. Stelle wird wieder mit 7 multipliziert, usw.
+
+Alle diese Produkte werden dann addiert, dann Modulo 10.
+Bemerkung: Buchstaben werden in Zahlen umgewandelt. Dabei wird die Position des Alphabets begindend ab N0 verwendet. Also A=0, B=1, C=2 und so weiter. Das Zeichen "<" wird in eine 0 umgewandelt.
+
+
+
+~~~~~~~
+Beispiel: „C1234567<“ => „212345670“
+2 × 7 =	14
+1 × 3 =	3 
+2 × 1 =	2
+3 × 7 =	21
+4 × 3 =	12
+5 × 1 =	5
+6 × 7 =	42
+7 × 3 =	21
+0 × 1 =	0
+Summe = 120
+120 mod 10 = 0
+~~~~~~~
+
+Es gibt aus Datenschutzgründen keinen öffentlichen Service über welchen man die Identität anhand der Passangaben überprüfen könnte. So besteht nur die Möglichkeit zur Überprüfen ob das Eingegebene Muster anhand der Checksummen stimmt und ob bereits dieselben Informationen vorhanden sind.
+
+####Mehrfachteilnahme und Automatisierungsmöglichkeit
+Der Alogrithmus der Checksummen kann nachgebaut werden und so automatisiert Identitätskarten generiert werden. Dadurch kann mehrfach und automatisiert an der Aktivität teilgenommen werden werden.
+
+####Kosten
+Die Überprüfung verursacht keine direkten Kosten.
+
+
+
+
 ###Captcha
 Captcha ist ein Test, mit dem festgestellt werden kann, ob sich ein Mensch oder ein Computer eines Programms bedient [^duden].
 
@@ -256,6 +302,15 @@ Im Jahr 2000 wurde das Captcha an der Carnegie Mellon University erfunden. Captc
 In 2014 wurden 200 Millionen Captchas  pro Tag eingegeben. Dabei braucht ein User durchschnittlich 10 Sekunden das entspricht 500'000 Stunden.[^statisticinfo]
 
 ![Beispiele von Captchas *Quelle:drupal.org*](images/captcha.png)
+
+####Automatisierungsmöglichkeit
+Die Automatisierung wird unterbunden.
+
+####Mehrfachteilnahme
+Eine manuelle Mehrfachteilnahme ist möglich.
+
+####Kosten
+Es enstehen keine direkten Kosten.
 
 
 [^duden]: [@duden]

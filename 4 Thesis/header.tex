@@ -58,7 +58,7 @@
 %
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=iagreen,filecolor=black,urlcolor=red,linktoc=page,plainpages=false, pdfborder={0 0 0}]{hyperref}
 \usepackage{wallpaper} %\ThisTileWallPaper{}
-%\usepackage[super,square]{natbib} für BibTeX Literaturverzeichnis
+%usepackage[super,square]{natbib} für BibTeX Literaturverzeichnis
 \usepackage{enumitem}
 \usepackage{subfig}
 \usepackage[export]{adjustbox}
@@ -69,13 +69,77 @@
 \usepackage{booktabs}
 
 
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\setlength{\itemsep}{18pt}}{}{}
+
+
+
+
+
 % Bibliography
 \usepackage[
 backend=bibtex,
-style=alphabetic-verb,
-citestyle=alphabetic-verb
+style=authoryear,
 ]{biblatex}
 \bibliography{Citer.bib}
+
+\setlength\bibitemsep{1.5\itemsep}
+
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\usebibmacro{cite}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand*{\cite}
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\usebibmacro{citeyear}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\parencite}[\mkbibparens]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+    \printtext[bibhyperref]{\usebibmacro{cite}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand*{\parencite}[\mkbibparens]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+    \printtext[bibhyperref]{\usebibmacro{citeyear}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+  \printtext[bibhyperref]{ \usebibmacro{cite}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\footcitetext}[\mkbibfootnotetext]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\usebibmacro{cite}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\textcite}
+  {\boolfalse{cbx:parens}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\usebibmacro{textcite}}}
+  {\ifbool{cbx:parens}
+     {\bibcloseparen\global\boolfalse{cbx:parens}}
+     {}%
+   \multicitedelim}
+  {\usebibmacro{textcite:postnote}}
+
+
+
+
 
 \usepackage{calc}
 

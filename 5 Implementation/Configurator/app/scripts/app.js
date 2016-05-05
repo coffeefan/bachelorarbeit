@@ -89,8 +89,8 @@ angular
                 redirectTo: '/'
             });
     }).run(function ($rootScope, $window, $sessionStorage,$route, $location) {
-        $rootScope.ServiceUrl ="http://iaauth.azurewebsites.net/";
-        //$rootScope.ServiceUrl = "http://localhost:53204/";
+        //$rootScope.ServiceUrl ="http://iaauth.azurewebsites.net/";
+        $rootScope.ServiceUrl = "http://localhost:53204/";
 
         $rootScope.isLoggedIn = false;
         if (typeof $sessionStorage.accessToken != 'undefined') {

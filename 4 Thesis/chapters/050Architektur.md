@@ -227,10 +227,14 @@ Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback.
 
 Im Kapitel [Recherche] wurden einige Sicherheitskomponenten recherchiert und illustriert. Es gilt nun ein Setting an Komponenten zu finden, welche dem Programmierer eine Breite Auswahlmöglichkeit (NFREQ-210) bietet  und eine genügende Verbreitung in der Schweiz hat (NFREQ-212), ihn aber nicht durch komplexes Auswählen der Sicherheitsstufen aufhält (NFREQ-222).
 
+####Ausweisnummer
+Durch Überprüfung der Checksumme und Doppelspeicherung des Ausweises soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da der Checksummen-Alogrithmus öffentlich ist, können diese auch vom Anwender (automatisch) generiert werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Sicherheitsstufe Ausweisnummer ist, dass es dem Anwender eine, wenn auch nicht existierende, Sicherheit vermittelt und keine Kosten verursacht.
 
 ####Cookie
-Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser-Makro-Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht.
+Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser-Makro-Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht. Die Automatisierung ist bei Flash-Cookies etwas aufwendiger, da die Verbreitung kleiner ist.
 
+####SMS Authentifizierung
+Der Benutzer gibt seine E-Mail ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die E-Mail gehört. Der Benutzer kann nicht eindeutig anhand der E-Mail erkannt, die Automatisierung ist aufwendig, dafür entstehen keine direkten Kosten.
 
 ####IP-Adresse
 Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP-Adresse vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss". Dadurch könnte nur einmal pro Internetanschluss an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know-How durch Tools möglich ist, lässt sowohl Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand
@@ -247,6 +251,9 @@ Der Benutzer gibt seine Telefonnummer ein. Der Benutzer wird automatisiert anger
 ####Postversand Authentifizierung
 Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, wird es bei der Eindeutigkeit in der Bewertung Abzug geben. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach Erhalt auf einer Webseite quittieren.
 
+####SuisseID
+Der Benutzer authentifiziert sich via SuisseID. SuisseID garantiert eine hoche Sicherheit und verhindert Mehrfachteilnahmen. Die Verbreitung ist jedoch ziemlich gering und die Kosten für den Endbenutzer zu hoch.
+
 
 ###Sicherheitstufen bewerten
 Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgelegt. Beim Auftraggeber wurden die verschiedenen Sicherheitsstufen intern besprochen und bewertet. Pro Sicherheitsstufen wurde den vier definierten Aspekten und dem Musskriterium Verbreitung eine Bewertung in Form einer Schweizer Schulnote vergeben.
@@ -255,33 +262,26 @@ Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgel
 __Sicherheitsstufen__		__Verhinderung		 __Automat-			__Kosten__	   	__Aufwand	  	     __Verbreitung	
 							Mehrfachteilnahme__	sierung__							Benutzer__			 in der Schweiz__				
 --------------------------  ------------------- ------------------- --------------- ------------------- -------------------
+
+__Ausweis-					3.5					3.5					6				5          	  		6
+nummer__
+
+__Browser 					3.5					3.5	 				6				6             		6
+Fingerprint__                                                     
+
 __Cookie__				  	2.5 		     	2.5 				6				6                	6
+
+__E-Mail__					4					4.5					6				4.5           		6
  
-__Flash-Cookie__		  	2.5 		     	3					6				6                	6 
+__Flash-Cookie__		  	2.5 		     	3					6				6                	3.5 
                                                                           
 __IP__				      	3					3 					6				6             		6
-                                                                          
-                                                                          
-__Browser 					3.5					3.5	 				6				6             		6
-Fingerprint__			                                                      
-                
-__E-Mail__					4					4.5					6				4.5           		6
-                                                                              
-                                                                              
+                                                                                                                                                        
 __SMS__						5.5					5.75				5				4.5           		5.5
 						                                                      
-                                                                              
+__SuisseID__				5.5					5.75				3.5				5			  		3                                                                              
 						                                                      
 __Telefon__					5.25				5.75				5				4.5           		5.75
-						                                                      
-                                                                              
-						                                                      
-__Ausweis-					3.5					3.5					6				5          	  		6
-nummer__        
-                
-                
-__SuisseID__				5.5					5.75				5				5			  		3
-																		      		
 ------------------------------------------------------------------------- -------------------------------------------------
 Table: Übersicht der Authentifizierungs Methoden
 

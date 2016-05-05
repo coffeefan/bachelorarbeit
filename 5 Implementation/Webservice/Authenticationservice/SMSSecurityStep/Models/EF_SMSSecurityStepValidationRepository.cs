@@ -92,9 +92,10 @@ namespace SMSSecurityStep.Models
 
         public void resetSMSSecurityStepValidationByValid(int projectid, string providerid)
         {
-            foreach(SMSSecurityStepValidation temp 
-                in _db.SMSSecurityStepValidations.Where(essv => essv.ProjectId == projectid 
-                    && essv.ProviderId == providerid && essv.StatusId != 1 && essv.IsDeleted!=true))
+            var sMSSecurityStepValidationList = _db.SMSSecurityStepValidations.Where(essv => essv.ProjectId == projectid
+                     && essv.ProviderId == providerid && essv.StatusId != 1 && essv.IsDeleted != true).ToList();
+            foreach (SMSSecurityStepValidation temp 
+                in sMSSecurityStepValidationList)
             {
                 temp.IsDeleted = true;
                 _db.Entry(temp).State = EntityState.Modified;

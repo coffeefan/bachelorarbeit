@@ -3,12 +3,17 @@
 
 ##Ausblick
 Der erstellte Prototyp wird nun dem Auftraggeber, der Firma inaffect AG übergeben. In der Übergabephase werden entstandene Änderungs- und Erweiterungswünsche umgesetzt. Das erste Projekt, welches bei erfolgreicher Betaphase den Authentifizierungsservice verwenden soll, ist eine Netzwerk-Eventveranstaltungsreihe mit Aufschaltungsdatum in drei Monaten.\
+Einen Verkauf an oder Lizenzierung mit einem grössere Medienunternehmen wäre möglich. Ein grösseres Medienunternehmen möchte vielfach  alles InHouse betreiben. Diesem Wunsch entspricht das Konzept des Authentifizierungsservice. Der Service kann auch auf jedem besseren IIS Server, auf welchem Microsoft MVC und Web API lauft und eine SQL Datenbank installiert ist, betrieben werden. Die ausgelagerten Konfigurationsdateien und Views erlauben es die Authentifizierung, ohne neue Kompilierung der Logik, den optischen und inhaltlichen Ansprüche anzupassen.
 \
 Es konnte gezeigt werden, dass es möglich ist, mit verschiedenen Sicherheitsstufen eine genügend eindeutige Authentifizierung zu erreichen, jedoch ist dies immer mit Bekanntgabe von persönlichen Daten verbunden. Die Angst, dass diese Daten missbraucht werden, ist hoch. Dies wurde mehrfach ungefragt in den Bemerkungen der Studienumfrage erwähnt. Ein Lösungsansatz wäre, für Authentifizierungen wie bei Onlinezahlungen ein vertrauliches Gateway zu schaffen. Diese Bachelorarbeit beschreibt genau dieses Gateway als Konzept. Es müsste eine Firma den Schritt wagen, dieses Konzept als Produkt zu vermarkten und es dem Endkunden bekannt zu machen.
 
+
 ##Offene Fragen
+Q1 Wie soll das Konzept als Produkt einen breiten Publikum bekannt gemacht werden?
+Q2 Wie kann dem Publikum hinreichend Sicherheit für das Konzept vermittelt werden?
 
 ##Limitationen
+Der Authentifizierungservice verrechnet die Kosten noch nicht selbständig an den Programmierer weiter. Hier sollte ein geeignetes Preismodel definiert werden und eine automatisierte Abrechnung implementiert werden. Das Produkt ist für die Deutschweiz entwickelt worden. Auch wenn Multilingualität keine Anforderung war, wurde sie angedacht und in grossen Teilen des Prototyps implementiert. Für den multilingualen Betrieb müssten insbesondere Textbausteine für andere Sprachgebiete entworfen werden und in den fehlenden Teilen die Multilingualität implementiert werden. 
 
 
 \newpage

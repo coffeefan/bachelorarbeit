@@ -1,0 +1,33 @@
+﻿@model PassportSecurityStep.Models.PassportSecurityStepValidation_MobileNumber
+
+@{
+    ViewBag.Title = "Start";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Telefonanruf Validierung</h4>
+        Tragen Sie in folgendem Feld Ihre Telefonnumer ein. Sie werden automatisch angerufen und Ihnen wird der Code vorgesprochen<br/>
+        Beispiel: +41523651234
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.PassportNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PassportNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PassportNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Anrufen" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+

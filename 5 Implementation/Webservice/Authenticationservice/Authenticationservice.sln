@@ -19,6 +19,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSSecurityStepLib", "SMSSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityStepContract", "SecurityStepContract\SecurityStepContract.csproj", "{127B21CF-55D0-4D8B-9814-324985ED05A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneSecurityStep", "PhoneSecurityStep\PhoneSecurityStep.csproj", "{F2C3DE23-4D5A-42E9-A299-54A299ED3290}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneSecurityStep.Tests", "PhoneSecurityStep.Tests\PhoneSecurityStep.Tests.csproj", "{3D8CA3D9-3077-4497-A62E-E61E8907B19A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneSecurityStepLib", "PhoneSecurityStepLib\PhoneSecurityStepLib.csproj", "{2530D77A-575A-4368-B766-A92132A936B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportSecurityStep", "PassportSecurityStep\PassportSecurityStep.csproj", "{4421B0D7-7DF4-467C-B4D0-2521A91F8F63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportSecurityStep.Tests", "PassportSecurityStep.Tests\PassportSecurityStep.Tests.csproj", "{DE354F1E-5956-42AC-B30E-7B069B279F73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportSecurityStepLib", "PassportSecurityStepLib\PassportSecurityStepLib.csproj", "{BE3A7C3A-7529-4E0C-B2CC-81B2A981FF65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +69,30 @@ Global
 		{127B21CF-55D0-4D8B-9814-324985ED05A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{127B21CF-55D0-4D8B-9814-324985ED05A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{127B21CF-55D0-4D8B-9814-324985ED05A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2C3DE23-4D5A-42E9-A299-54A299ED3290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2C3DE23-4D5A-42E9-A299-54A299ED3290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2C3DE23-4D5A-42E9-A299-54A299ED3290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2C3DE23-4D5A-42E9-A299-54A299ED3290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8CA3D9-3077-4497-A62E-E61E8907B19A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8CA3D9-3077-4497-A62E-E61E8907B19A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8CA3D9-3077-4497-A62E-E61E8907B19A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8CA3D9-3077-4497-A62E-E61E8907B19A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2530D77A-575A-4368-B766-A92132A936B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2530D77A-575A-4368-B766-A92132A936B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2530D77A-575A-4368-B766-A92132A936B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2530D77A-575A-4368-B766-A92132A936B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4421B0D7-7DF4-467C-B4D0-2521A91F8F63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4421B0D7-7DF4-467C-B4D0-2521A91F8F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4421B0D7-7DF4-467C-B4D0-2521A91F8F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4421B0D7-7DF4-467C-B4D0-2521A91F8F63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE354F1E-5956-42AC-B30E-7B069B279F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE354F1E-5956-42AC-B30E-7B069B279F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE354F1E-5956-42AC-B30E-7B069B279F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE354F1E-5956-42AC-B30E-7B069B279F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3A7C3A-7529-4E0C-B2CC-81B2A981FF65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3A7C3A-7529-4E0C-B2CC-81B2A981FF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3A7C3A-7529-4E0C-B2CC-81B2A981FF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3A7C3A-7529-4E0C-B2CC-81B2A981FF65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
