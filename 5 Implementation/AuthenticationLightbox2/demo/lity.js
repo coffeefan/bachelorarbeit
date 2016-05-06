@@ -125,7 +125,7 @@
   }
 
   function iframeHandler(target) {
-    var matches, url = target;
+    var matches; /*url = target;*/
 
 
     return '<div class="lity-iframe-container"><iframe name="authframe" ></iframe></div>';
@@ -359,7 +359,7 @@
   $(document).on('click', '[data-iaauthButton]', function () {
     var lightbox = lity();
     // Open a URL in a lightbox
-    lightbox("http://iaauth.azurewebsites.net/Loading");
+    lightbox();
     return false;
 
   });

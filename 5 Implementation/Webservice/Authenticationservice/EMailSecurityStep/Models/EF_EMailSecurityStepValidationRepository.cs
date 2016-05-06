@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EMailSecurityStep.Models
 {
-    public class EF_EMailSecurityStepValidationRepository : EMailSecurityStep.Models.IEMailSecurityStepValidationRepository
+    public class EF_EMailSecurityStepValidationRepository : EMailSecurityStep.Models.IEMailSecurityStepValidationRepository, IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -63,5 +63,21 @@ namespace EMailSecurityStep.Models
             _db.EMailSecurityStepValidations.Where(essv => essv.ProjectId == projectid && essv.ProviderId == providerid && essv.StatusId != 1));
             _db.SaveChanges();
         }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
     }
 }

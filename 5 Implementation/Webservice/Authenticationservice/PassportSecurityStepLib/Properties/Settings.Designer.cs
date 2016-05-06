@@ -22,15 +22,5 @@ namespace PassportSecurityStepLib.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://webservice.aspPassport.com/aspPassportx2.asmx")]
-        public string PassportSecurityStepLib_aspPassport_ASPPassportX2 {
-            get {
-                return ((string)(this["PassportSecurityStepLib_aspPassport_ASPPassportX2"]));
-            }
-        }
     }
 }

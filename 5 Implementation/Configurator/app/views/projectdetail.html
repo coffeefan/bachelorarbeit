@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-lg-6">
         <div class="card">
             <div class="header">
                 <h4 class="title">Projekt Info</h4>
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6" ng-show="project.ProjectId>0">
+    <div class="col-lg-6" ng-show="project.ProjectId>0">
 
         <div class="card">
             <div class="header">
@@ -30,28 +30,36 @@
             <div class="content">
                 <div class="alert alert-success" ng-show="alertCopied">
                     <button type="button" aria-hidden="true" class="close" data-ng-click="hideAlert('alertCopied')">×</button>
-                    <span><b>Kopiert</b> Der Validierungscode wurde in den Zwischenspeicher kopiert"</span>
+                    <span><b>Kopiert</b> Kopie im Zwischenspeicher"</span>
                 </div>
                 <form id="implementation" data-ng-submit="saveProject()">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Validation-Code</label>
-                                <input type="text" class="form-control" ng-model="project.ValidationCode"  readonly/> <br/>
-                                <button class="btn btn-fill" type="button" clipboard text="project.ValidationCode" on-copied="success()" on-error="fail(err)"><i class="pe-7s-copy-file"></i> In Zwischenablage kopieren</button>
-                            </div>
+                <div class="row">
+                    <div class="col-lg-6" >
+                        <div class="form-group">
+                            <label>ProjectId</label>
+                            <input type="text" class="form-control" ng-model="project.ProjectId"  readonly/> <br/>
+                            <button class="btn btn-fill" type="button" clipboard text="project.ProjectId" on-copied="success()" on-error="fail(err)"><i class="pe-7s-copy-file"></i> In Zwischenablage kopieren</button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Return Url</label>
-                                <input type="url" class="form-control" placeholder="Bezeichnung" ng-model="project.ReturnUrl" />
-                            </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Validation-Code</label>
+                            <input type="text" class="form-control" ng-model="project.ValidationCode"  readonly/> <br/>
+                            <button class="btn btn-fill" type="button" clipboard text="project.ValidationCode" on-copied="success()" on-error="fail(err)"><i class="pe-7s-copy-file"></i> In Zwischenablage kopieren</button>
                         </div>
                     </div>
-                    <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Speichern</button><br/>
-                </form>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Return Url</label>
+                            <input type="url" class="form-control" placeholder="Bezeichnung" ng-model="project.ReturnUrl" />
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" data-ng-click="requestRegistration()" class="btn btn-info btn-fill ">Speichern</button><br/>
+            </form>
             </div>
         </div>
     </div>
@@ -69,20 +77,14 @@
             </div>
             <div class="content simpleDemo ">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="row">
                             <div class="col-md-5">
                                 <div class="panel panel-info">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Verwendet</h3>
                                     </div>
-                                    <!-- The dnd-list directive allows to drop elements into it.
-                 The dropped data will be added to the referenced list -->
                                     <ul dnd-list="projectSecuritySteps">
-                                        <!-- The dnd-draggable directive makes an element draggable and will
-                                             transfer the object that was assigned to it. If an element was
-                                             dragged away, you have to remove it from the original list
-                                             yourself using the dnd-moved attribute -->
                                         <li ng-repeat="item in projectSecuritySteps"
                                             dnd-draggable="item"
                                             dnd-moved=" movedProjectSecurityStep($index,item)"
@@ -100,13 +102,7 @@
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Verfügbar</h3>
                                     </div>
-                                    <!-- The dnd-list directive allows to drop elements into it.
-                 The dropped data will be added to the referenced list -->
                                     <ul dnd-list="availableSecuritySteps">
-                                        <!-- The dnd-draggable directive makes an element draggable and will
-                                             transfer the object that was assigned to it. If an element was
-                                             dragged away, you have to remove it from the original list
-                                             yourself using the dnd-moved attribute -->
                                         <li ng-repeat="item in availableSecuritySteps"
                                             dnd-draggable="item"
                                             dnd-moved="movedAvailableSecurityStepst($index,item)"
@@ -122,7 +118,7 @@
 
                         </div>
                     </div>
-                    <div class="col-md-6" ng-show="infobox.securitystepselected">
+                    <div class="col-lg-6" ng-show="infobox.securitystepselected">
 
                         <div class="row">
                             <div class="col-lg-6">
@@ -133,17 +129,17 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12">
-                                <h5>Umfragenteilnehmer, die diese Sicherheitstufe einsetzen</h5>
+                            <div class="col-lg-12 surveyTotalbox">
+                                <h5>Prozentueller Einsatz dieser Sicherheitsstufen nach Interaktivitätsart</h5>
                                 <canvas id="bar" class="chart chart-bar"
-                                        chart-data="surveyTotal.data" chart-labels="surveyTotal.labels"> chart-series="series"
+                                        chart-data="surveyTotal.data" chart-labels="surveyTotal.labels" chart-series="series">
                                 </canvas>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-12">
-                                <h5>Umfragenteilnehmer, die diese Sicherheitstufe einsetzen nach Alter</h5>
-                                <canvas id="bar" class="chart chart-bar"
+                            <div class="col-lg-12 surveyAgebox">
+                                <h5>Prozentueller Einsatz dieser Sicherheitsstufen nach Interaktivitätsart und Alter</h5>
+                                <canvas id="bar2" class="chart chart-bar" chart-series="surveyAge.series"
                                         chart-data="surveyAge.data" chart-labels="surveyAge.labels"> chart-series="series"
                                 </canvas>
                             </div>

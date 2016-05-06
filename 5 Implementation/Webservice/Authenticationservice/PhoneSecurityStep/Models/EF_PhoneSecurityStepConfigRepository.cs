@@ -7,7 +7,7 @@ using System.Web;
 
 namespace PhoneSecurityStep.Models
 {
-    public class EF_PhoneSecurityStepConfigRepository : PhoneSecurityStep.Models.IPhoneSecurityStepConfigRepository
+    public class EF_PhoneSecurityStepConfigRepository : PhoneSecurityStep.Models.IPhoneSecurityStepConfigRepository, IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -45,6 +45,21 @@ namespace PhoneSecurityStep.Models
                 
            
         }
-        
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
     }
 }

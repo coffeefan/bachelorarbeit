@@ -19,6 +19,8 @@ using System.Web.Http.Description;
 using System.Linq;
 using System.Net;
 using System.Data.Entity;
+using System.Globalization;
+using System.Threading;
 
 namespace Authenticationservice.Controllers
 {
@@ -65,6 +67,7 @@ namespace Authenticationservice.Controllers
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-de");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -81,6 +84,13 @@ namespace Authenticationservice.Controllers
             };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
+
+            if (!result.Succeeded)
+            {
+                return GetErrorResult(result);
+            }
+
+
             var code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
 
             Result feedback = SendConfirmMail(model, user, code);

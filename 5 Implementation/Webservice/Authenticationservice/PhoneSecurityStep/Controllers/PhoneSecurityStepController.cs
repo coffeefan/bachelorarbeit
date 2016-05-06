@@ -65,8 +65,22 @@ namespace PhoneSecurityStep.Controllers
 
             if (_validationRepository.IsMaxSend(model.PhoneNumber))
             {
-                ModelState.AddModelError("PhoneNumber", "An die Mobilenummer wurden zu viele Phone versendet");
-                return View("Index", model);
+                String tempcode = RandomString(6);
+                _validationRepository.CreateNewPhoneSecurityStepValidation(
+                new PhoneSecurityStepValidation()
+                {
+                    PhoneSecurityStepValidationId = 1,
+                    ProjectId = (int)System.Web.HttpContext.Current.Session["ProjectId"],
+                    ProviderId = (string)System.Web.HttpContext.Current.Session["ProviderId"],
+                    PhoneNumber = model.PhoneNumber,
+                    PhoneSendCount = -1,
+                    Code = tempcode,
+                    CodeEntered = "",
+                    Created = new DateTime(2016, 1, 1, 12, 00, 00),
+                    StatusId = 0
+                });
+                return RedirectToAction("AlreadyInserted", "Validate");
+                
             }
 
             //Create new PhoneSecurityStepValidation

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace PassportSecurityStep.Models
 {
-    public class EF_PassportSecurityStepConfigRepository : PassportSecurityStep.Models.IPassportSecurityStepConfigRepository
+    public class EF_PassportSecurityStepConfigRepository : PassportSecurityStep.Models.IPassportSecurityStepConfigRepository, IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -45,6 +45,21 @@ namespace PassportSecurityStep.Models
                 
            
         }
-        
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
     }
 }

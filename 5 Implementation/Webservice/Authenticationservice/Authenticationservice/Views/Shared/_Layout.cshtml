@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Authentification Service</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <base target="authframe">
@@ -12,30 +12,34 @@
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">                
-                @Html.ActionLink("Authentication Service", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
+            <div class="navbar-header">
+                <img src="~/Content/Images/icon.png" />                 
+                </div>
             
         </div>
     </div>
-    @if (ViewBag.HeaderImage != null)
-    {
-      string url = "~/ Content / Images / " + ViewBag.HeaderImage;
-      <img src="@url" class="headerimg" />
-    }
-    else
-    {
-        <img src="~/Content/Images/headerimage.jpg" class="headerimg" />
-    }
+    @{ 
+/*
 
-    <div class="container body-content">
-       
-        @RenderBody()
-       
-    </div>
+@if (ViewBag.HeaderImage != null)
+{
+string url = "~/ Content / Images / " + ViewBag.HeaderImage;
+<img src="@url" class="headerimg" />
+}
+else
+{
+<!----><img src="~/Content/Images/headerimage.jpg" class="headerimg" />
+}*/
+}
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+<div class="container body-content">
+
+@RenderBody()
+
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>

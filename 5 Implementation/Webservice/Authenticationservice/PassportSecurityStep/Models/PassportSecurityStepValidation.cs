@@ -58,8 +58,8 @@ namespace PassportSecurityStep.Models
 
         [Display(Name = "Gelber Bereich")]
         [Required(ErrorMessage = "Gelber Bereich  ist Pflichtfeld")]
-        [MaxLength(7, ErrorMessage = "Der Gelber Bereich  ist 7 Zeichen lang")]
-        [MinLength(7, ErrorMessage = "Der Gelber Zusatz ist 7 Zeichen lang")]
+        [MaxLength(1, ErrorMessage = "Der Gelber Bereich  ist 1 Zeichen lang")]
+        [MinLength(1, ErrorMessage = "Der Gelber Zusatz ist 1 Zeichen lang")]
         public string EndCheck { get; set; }
 
     }

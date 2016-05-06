@@ -11,7 +11,7 @@ namespace Authenticationservice.Models
         AuthenticationStatus  OpenProjectAuthentication(int ProjectId, string ProviderId);
 
         void  FinishProjectAuthentication(int ProjectId, string ProviderId);
-        
 
+        string getDeveloperEMailOfProject(int projectId);
     }
 }

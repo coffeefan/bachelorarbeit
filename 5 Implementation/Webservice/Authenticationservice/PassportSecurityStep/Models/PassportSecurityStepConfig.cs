@@ -11,9 +11,7 @@ namespace PassportSecurityStep.Models
         public int PassportSecurityStepConfigId { get; set; }
         public int ProjectId { get; set; }
 
-        [Required(ErrorMessage = "Salutation ist ein Pflichtfeld")]
-        [MaxLength(30, ErrorMessage = "Salutation darf nicht länger als 30 Zeichen sein")]
-        public string Salutation { get; set; }
+
 
 
     }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace SMSSecurityStep.Models
 {
-    public class EF_SMSSecurityStepValidationRepository : SMSSecurityStep.Models.ISMSSecurityStepValidationRepository
+    public class EF_SMSSecurityStepValidationRepository : SMSSecurityStep.Models.ISMSSecurityStepValidationRepository, IDisposable
     {
         private int maxSend = 10;
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -104,6 +104,21 @@ namespace SMSSecurityStep.Models
             
             
             _db.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
         }
     }
 }

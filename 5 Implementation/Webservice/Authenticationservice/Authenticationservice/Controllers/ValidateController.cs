@@ -1,4 +1,5 @@
 ﻿using Authenticationservice.Models;
+using Authenticationservice.Models.Helper;
 using SecurityStepContract;
 using System;
 using System.Collections.Generic;
@@ -91,7 +92,13 @@ namespace Authenticationservice.Controllers
             return View();
         }
 
-        
+        public ActionResult AlreadyInserted()
+        {
+            @ViewBag.Title = "Fehler";
+            return View();
+        }
+
+
 
         public ActionResult Finish()
         {
@@ -99,7 +106,7 @@ namespace Authenticationservice.Controllers
             Project project=new ProjectsController().ProjectById(projectid);
             string result=DownloadString(project.ReturnUrl + "?projectId=" +
                 (int)System.Web.HttpContext.Current.Session["ProjectId"] +
-                "&providerId=" + (string)System.Web.HttpContext.Current.Session["providerid"] +
+                "&providerId=" + (string)System.Web.HttpContext.Current.Session["Providerid"] +
                  "&sign=" + (string)System.Web.HttpContext.Current.Session["sign"]);
             ViewBag.Message = "Your application description page.";
 
@@ -108,11 +115,26 @@ namespace Authenticationservice.Controllers
 
         public string DownloadString(string address)
         {
-            WebClient client = new WebClient();
+            try
+            {
+                WebClient client = new WebClient();
 
-            string reply = client.DownloadString(address);
+                string reply = client.DownloadString(address);
 
-            return reply;
+                return reply;
+            }
+            catch(Exception ex)
+            {
+                string email = par.getDeveloperEMailOfProject((int)System.Web.HttpContext.Current.Session["ProjectId"]);
+                string body = "Der Return Url Server konnte nicht korrekt aufgerufen werden. Providerid="
+                    + System.Web.HttpContext.Current.Session["Providerid"]+ 
+                    "  Projectid=" + System.Web.HttpContext.Current.Session["Projectid"]+
+                    ex.Message;
+                new MailHandler("de-CH").send(
+                    email, email, "Authentication Servie - Return URL Server Fehler", body, body);
+            }
+            return "";
+            
         }
 
         public ActionResult Contact()
@@ -122,4 +144,5 @@ namespace Authenticationservice.Controllers
             return View();
         }
     }
+    
 }

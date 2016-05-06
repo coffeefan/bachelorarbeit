@@ -2,20 +2,25 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 
 namespace Authenticationservice.Models
 {
-    public class EF_ProjectAuthenticationRepository : IProjectAuthenticationRepository
+    public class EF_ProjectAuthenticationRepository : IProjectAuthenticationRepository, IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
 
+        
+
+
         public void FinishProjectAuthentication(int ProjectId, string ProviderId)
         {
-            ProjectAuthentication projectAuthentication = _db.ProjectAuthentications.Where(pa => pa.ProjectId == ProjectId && ProviderId == ProviderId).FirstOrDefault();
+            ProjectAuthentication projectAuthentication = _db.ProjectAuthentications.Where(pa => pa.ProjectId == ProjectId 
+                && pa.ProviderId == ProviderId).FirstOrDefault();
             if (projectAuthentication == null)
             {
                 throw new HttpException("No Project found");
@@ -63,6 +68,35 @@ namespace Authenticationservice.Models
                    
         }
 
-        
+
+        public string getDeveloperEMailOfProject(int projectId)
+        {
+            string email = _db.Database.SqlQuery<string>("Select UserName from AspNetUsers "
+                + "join Projects on AspNetUsers.Id=Projects.ApplicationUserId "
+                + " where Projects.ProjectId=" + projectId).FirstOrDefault();
+
+            return email;
+        }
+
+
+
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
+
+
     }
 }

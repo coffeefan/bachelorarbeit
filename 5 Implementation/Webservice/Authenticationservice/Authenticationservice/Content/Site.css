@@ -79,7 +79,7 @@ body {
 .navbar-header{
     text-align:center;
     float:none;
-    margin:15px 0px 0px 0px;
+    margin:10px 0px 2px 0px;
 }
 .navbar-brand, .navbar-inverse .navbar-brand{
     color:#FFFFFF;

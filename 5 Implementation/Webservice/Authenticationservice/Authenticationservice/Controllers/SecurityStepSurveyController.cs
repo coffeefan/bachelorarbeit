@@ -22,6 +22,9 @@ namespace Authenticationservice.Controllers
         private List<string> interActivityTyps  = new List<string>(new string[] {
             "poll", "casting", "poortrustwin", "richtrustwin", "poorunkownwin", "richunkownwin" });
 
+        private List<string> interActivityTypText = new List<string>(new string[] {
+            "poll", "Casting", "Low-Win Trust Company", "High-Win Trust Company", "Low-Win Unkown Company", "High-Win Unkown Company" });
+
         private List<string> securitystepShortNames = new List<string>(new string[] {
             "captcha", "email", "sms", "phone", "address", "passport" });
 
@@ -54,7 +57,7 @@ namespace Authenticationservice.Controllers
                 
                 new
                 {
-                    labels = interActivityTyps,
+                    labels = interActivityTypText,
                     series = new String[] { "Total" },
                     data = data 
                     ,
@@ -102,7 +105,7 @@ namespace Authenticationservice.Controllers
             return Ok(
                 new
                 {
-                    series  = interActivityTyps,
+                    series  = interActivityTypText,
                     labels =  ages,
                     data = data
                     

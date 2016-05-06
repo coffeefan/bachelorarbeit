@@ -7,7 +7,7 @@ using System.Web;
 
 namespace EMailSecurityStep.Models
 {
-    public class EF_EMailSecurityStepConfigRepository : EMailSecurityStep.Models.IEMailSecurityStepConfigRepository
+    public class EF_EMailSecurityStepConfigRepository : EMailSecurityStep.Models.IEMailSecurityStepConfigRepository, IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -45,6 +45,21 @@ namespace EMailSecurityStep.Models
                 
            
         }
-        
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
     }
 }

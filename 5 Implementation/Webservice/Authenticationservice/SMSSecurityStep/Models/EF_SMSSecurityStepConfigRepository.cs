@@ -7,7 +7,7 @@ using System.Web;
 
 namespace SMSSecurityStep.Models
 {
-    public class EF_SMSSecurityStepConfigRepository : SMSSecurityStep.Models.ISMSSecurityStepConfigRepository
+    public class EF_SMSSecurityStepConfigRepository : SMSSecurityStep.Models.ISMSSecurityStepConfigRepository,IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -45,6 +45,21 @@ namespace SMSSecurityStep.Models
                 
            
         }
-        
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
     }
 }

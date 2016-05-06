@@ -1,0 +1,86 @@
+<div class="row" ng-show="projects.length>=1">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Projektauswahl</h4>
+            </div>
+
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-3">
+                        <select data-ng-options="p.Description for p in projects" data-ng-model="dashboard.selectedProject" class="form-control"></select>
+                    </div>
+                    <div class="col-md-3" >
+                        <button data-ng-click="open()" class="btn btn-info btn-fill " ng-show="dashboard.selectedProject">Projekt bearbeiten</button> <a href="/#/projects/detail/-1" class="btn btn-info btn-fill ">Projekt erstellen</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row dashboardcard" ng-show="projects.length>=1">
+    <div class="col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Zeit für Authentifizierung</h4>
+            </div>
+            <div class="content">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-legend="true"
+                        chart-data="validationTime.data" chart-labels="validationTime.labels" showTooltips="true">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Validierungsversuche letzter Monat</h4>
+            </div>
+            <div class="content">
+                <canvas id="line" class="chart chart-line" chart-data="statsLastMonth.data"
+                        chart-labels="statsLastMonth.label" chart-legend="false" chart-series="statsLastMonth.series"
+                        chart-click="onClick" >
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-4">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Quote erfolgreich/nicht erfolgreich</h4>
+            </div>
+            <div class="content">
+                <canvas id="pie" class="chart chart-pie"
+                        chart-data="authentication.data" chart-labels="authentication.labels" chart-legend="true" >
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" ng-show="projects.length<1">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="header">
+                <h4 class="title">Los geht's - Wir wagen den Sprung ins kalte Wasser</h4>
+            </div>
+
+            <div class="content startinfo">
+                        <img src="images/waterstart.jpg" width="100%" />
+                        <br/><br/>
+                        Nichts wie los erstelle dein erstes Projekt:<br/>
+                        <a href="/#/projects/detail/-1" class="btn btn-info btn-fill ">Projekt erstellen</a>
+                <br/><br/>
+                        Nicht unterghen, Infos beschaffen<br/>
+                        <a href="/#/projects/detail/-1" class="btn btn-info btn-fill ">Zur Dokumentation</a>
+
+
+
+             </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+

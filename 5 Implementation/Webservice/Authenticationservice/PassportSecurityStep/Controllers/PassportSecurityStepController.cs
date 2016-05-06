@@ -59,13 +59,26 @@ namespace PassportSecurityStep.Controllers
 
             if(_validationRepository.IsPassportUsed(model.PassportNumber, (int)System.Web.HttpContext.Current.Session["ProjectId"]))
             {
-                ModelState.AddModelError("PassportNumber", "Sie haben bereits an der Umfrage teilgenommen");
-                return View("Index", model);
+                _validationRepository.CreateNewPassportSecurityStepValidation(
+                new PassportSecurityStepValidation()
+                {
+                    PassportSecurityStepValidationId = 1,
+                    ProjectId = (int)System.Web.HttpContext.Current.Session["ProjectId"],
+                    ProviderId = (string)System.Web.HttpContext.Current.Session["ProviderId"],
+                    PassportNumber = model.PassportNumber,
+                    PassportSendCount = 1,
+
+                    CodeEntered = "",
+                    Created = new DateTime(2016, 1, 1, 12, 00, 00),
+                    StatusId = -1
+                });
+                return RedirectToAction("AlreadyInserted", "Validate");
             }
 
             if (_validationRepository.IsMaxSend(model.PassportNumber))
             {
                 ModelState.AddModelError("PassportNumber", "An die Mobilenummer wurden zu viele Passport versendet");
+
                 return View("Index", model);
             }
 
@@ -103,13 +116,11 @@ namespace PassportSecurityStep.Controllers
                     StatusId = 0
                 });
                 ModelState.AddModelError("PassportNumber", "Die Überprüfung der Angaben schlug leider fehl.");
+                return View("Index", model);
             }
 
-            
 
-
-
-            return RedirectToAction("CodeValidation", "PassportSecurityStep");        
+            return RedirectToAction("Check", "Validate");
         }
 
         public ViewResult SetParameter(int ProjectId, string ProviderId)

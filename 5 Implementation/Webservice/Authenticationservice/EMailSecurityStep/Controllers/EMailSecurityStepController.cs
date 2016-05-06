@@ -55,8 +55,20 @@ namespace EMailSecurityStep.Controllers
 
             if(_repository.IsEMailUsed(model.EMail, (int)System.Web.HttpContext.Current.Session["ProjectId"]))
             {
-                ModelState.AddModelError("EMail", "Sie haben bereits an der Ufmrage teilgenommen");
-                return View("Index", model);
+                string codeTemp = RandomString(6);
+                _repository.CreateNewEMailSecurityStepValidation(
+                new EMailSecurityStepValidation()
+                {
+                    EMailSecurityStepValidationId = 1,
+                    ProjectId = (int)System.Web.HttpContext.Current.Session["ProjectId"],
+                    ProviderId = (string)System.Web.HttpContext.Current.Session["ProviderId"],
+                    EMail = model.EMail,
+                    Code = codeTemp,
+                    CodeEntered = "",
+                    Created = new DateTime(2016, 1, 1, 12, 00, 00),                    
+                    StatusId = -1
+                });
+                return RedirectToAction("AlreadyInserted", "Validate");
             }
 
             //Create new EMailSecurityStepValidation

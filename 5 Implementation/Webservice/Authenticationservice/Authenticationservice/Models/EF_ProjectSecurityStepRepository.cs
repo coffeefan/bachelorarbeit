@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Authenticationservice.Models
 {
-    public class EF_ProjectSecurityStepRepository : IProjectSecurityStepRepository
+    public class EF_ProjectSecurityStepRepository : IProjectSecurityStepRepository, IDisposable
     {
 
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -52,5 +52,21 @@ namespace Authenticationservice.Models
                 throw new HttpException(510, errormessage);
             }
         }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
+        }
+
     }
 }

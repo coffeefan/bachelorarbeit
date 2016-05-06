@@ -10,7 +10,7 @@
   left: 0;
   white-space: nowrap;
   background: #0b0b0b;
-  background: url(http://iaauth.azurewebsites.net/Content/Images/loading.gif) no-repeat  rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   background-position: center;
   outline: none !important;
   opacity: 0;
@@ -187,7 +187,7 @@
   height: 100%;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  background: #000;
+  background: url(http://iaauth.christianbachmann.ch/include/img/loading.gif) no-repeat  #1a1a1a;
 }
 .lity-hide {
   display: none;

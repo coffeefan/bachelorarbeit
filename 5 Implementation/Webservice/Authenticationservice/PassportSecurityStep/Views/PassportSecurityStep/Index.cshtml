@@ -1,4 +1,4 @@
-﻿@model PassportSecurityStep.Models.PassportSecurityStepValidation_MobileNumber
+﻿@model PassportSecurityStep.Models.PassportSecurityStepValidation_Passport
 
 @{
     ViewBag.Title = "Start";
@@ -10,21 +10,54 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Telefonanruf Validierung</h4>
-        Tragen Sie in folgendem Feld Ihre Telefonnumer ein. Sie werden automatisch angerufen und Ihnen wird der Code vorgesprochen<br/>
-        Beispiel: +41523651234
+        <h4>Ausweisvalidierung Validierung</h4>
+        <img src="~/Content/Images/ausweisnumer.png"/>
+        Übertragen Sie die markierten Felder aus Ihrem Ausweis<br/><br /><br />
+        
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.EndCheck, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.ExpiryDate, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.Birthday, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.PassportNumber, "", new { @class = "text-danger" })
+        @Html.ValidationMessageFor(model => model.PassportAddOn, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.PassportNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2" for="Birthday">Rote Bereiche</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PassportNumber, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PassportNumber, "", new { @class = "text-danger" })
+                (IDCHE)
+                @Html.EditorFor(model => model.PassportNumber, new { htmlAttributes = new { @class = "form-control",Style= "width:100px; display:inline;" } })
+                >
+                @Html.EditorFor(model => model.PassportAddOn, new { htmlAttributes = new { @class = "form-control", Style = "width:40px; display:inline;" } })
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-5">
+                @Html.LabelFor(model => model.Birthday, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Birthday, new { htmlAttributes = new { @class = "form-control", Style = "width:100px;" } })
+  
+                </div>
+            </div>
+            <div class="form-group col-xs-5">
+                @Html.LabelFor(model => model.ExpiryDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ExpiryDate, new { htmlAttributes = new { @class = "form-control", Style = "width:100px;" } })
+                    
+                </div>
+            </div>
+            <div class="form-group col-xs-2">
+                <label class="control-label col-md-2" for="Birthday">Gelb</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EndCheck, new { htmlAttributes = new { @class = "form-control", Style = "width:40px;" } })
+                    
+                </div>
             </div>
         </div>
 
+
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Anrufen" class="btn btn-default" />
+                <input type="submit" value="Überprüfen" class="btn btn-default" />
             </div>
         </div>
     </div>

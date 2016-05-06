@@ -18,6 +18,50 @@ namespace Authenticationservice.Controllers
     public class ProjectsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        private IProjectRepository par;
+
+        public ProjectsController() : this(new EF_ProjectRepository()) { }
+        public ProjectsController(IProjectRepository temppar)
+        {
+            par = temppar;
+        }
+
+        // GET: api/Projects/Stats/LastMonth/5
+        [Route("api/Projects/Stats/LastMonth")]
+        public IHttpActionResult GETStatsLastMonth(int id)
+        {
+            if (!par.hasCurrentUserAcessProject(id, User.Identity.Name))
+            {
+                return BadRequest();
+            }
+
+
+            return Ok(par.LastMonthsValidationsOverview(id));
+        }
+
+        // GET: api/Projects/Stats/AuthenticationStatus/5
+        [Route("api/Projects/Stats/AuthenticationStatus")]
+        public IHttpActionResult GETAuthenticationstatus(int id)
+        {
+            if (!par.hasCurrentUserAcessProject(id, User.Identity.Name))
+            {
+                return BadRequest();
+            }
+
+            return Ok(par.GetAuthenticationStatusOverview(id));
+        }
+
+        // GET: api/Projects/Stats/ValidationTime/5
+        [Route("api/Projects/Stats/ValidationTime")]
+        public IHttpActionResult GETValidationTimeOverview(int id)
+        {
+            if (!par.hasCurrentUserAcessProject(id, User.Identity.Name))
+            {
+                return BadRequest();
+            }
+
+            return Ok(par.GetValidationTimeOverview(id));
+        }
 
         // GET: api/Projects
         public IQueryable<Project> GetProjects()
@@ -177,7 +221,10 @@ namespace Authenticationservice.Controllers
         {
             new SecurityStepInfoContainer();
             return Ok();
-        } 
+        }
+
+
+        
 
 
         protected override void Dispose(bool disposing)

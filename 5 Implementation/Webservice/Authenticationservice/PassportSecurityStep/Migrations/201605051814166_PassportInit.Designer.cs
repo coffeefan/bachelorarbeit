@@ -13,7 +13,7 @@ namespace PassportSecurityStep.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201605051205352_PassportInit"; }
+            get { return "201605051814166_PassportInit"; }
         }
         
         string IMigrationMetadata.Source

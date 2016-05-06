@@ -1,3 +1,8 @@
+.sidebar .logo .simple-text{
+  margin-left:-4px;
+  font-size:16px;
+}
+
 .startslide{
   position: relative;
   width:100%;
@@ -162,6 +167,51 @@ a.blacklink, a:hover.blacklink{
   color: #3c763d;
 }
 
-#dynamicForm input{
-  width:100%;
+.startinfo{
+  font-size:18px;
+}
+
+#dynamicForm input {
+  width: 100%;
+}
+
+.dashboardcard .header{
+  padding-bottom: 50px;
+}
+
+.dashboardcard .content{
+  height:380px;
+}
+
+ul.pie-legend {
+  margin-top:-30px;
+}
+
+.pie-legend li{
+  display: block;
+  width:90px;
+  height:25px;
+}
+.pie-legend-text{
+  margin-left:25px;
+}
+
+ul.doughnut-legend {
+  margin-top:-80px;
+}
+
+.doughnut-legend li{
+  display: block;
+  width:90px;
+  height:25px;
+}
+.doughnut-legend-text{
+  margin-left:25px;
+}
+
+.surveyTotalbox{
+  max-width:580px;
+}
+.surveyAgebox{
+  max-width:580px;
 }

@@ -175,9 +175,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605051205352_PassportInit.cs" />
-    <Compile Include="Migrations\201605051205352_PassportInit.Designer.cs">
-      <DependentUpon>201605051205352_PassportInit.cs</DependentUpon>
+    <Compile Include="Migrations\201605051814166_PassportInit.cs" />
+    <Compile Include="Migrations\201605051814166_PassportInit.Designer.cs">
+      <DependentUpon>201605051814166_PassportInit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -201,6 +201,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\ausweisnumer.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -261,7 +262,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\PassportSecurityStep\SetParameter.cshtml" />
     <Content Include="Views\PassportSecurityStep\Index.cshtml" />
-    <Content Include="Views\PassportSecurityStep\CodeValidation.cshtml" />
     <Content Include="Views\PassportSecurityStep\ValidationSuccesed.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -288,8 +288,8 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605051205352_PassportInit.resx">
-      <DependentUpon>201605051205352_PassportInit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605051814166_PassportInit.resx">
+      <DependentUpon>201605051814166_PassportInit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

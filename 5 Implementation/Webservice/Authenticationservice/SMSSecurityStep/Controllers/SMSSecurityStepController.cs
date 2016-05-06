@@ -59,8 +59,22 @@ namespace SMSSecurityStep.Controllers
 
             if(_validationRepository.IsMobileNumberUsed(model.MobileNumber, (int)System.Web.HttpContext.Current.Session["ProjectId"]))
             {
-                ModelState.AddModelError("MobileNumber", "Sie haben bereits an der Umfrage teilgenommen");
-                return View("Index", model);
+                String tempcode = RandomString(6);
+                _validationRepository.CreateNewSMSSecurityStepValidation(
+                    new SMSSecurityStepValidation()
+                    {
+                        SMSSecurityStepValidationId = 1,
+                        ProjectId = (int)System.Web.HttpContext.Current.Session["ProjectId"],
+                        ProviderId = (string)System.Web.HttpContext.Current.Session["ProviderId"],
+                        MobileNumber = model.MobileNumber,
+                        SMSSendCount = 1,
+                        Code = tempcode,
+                        CodeEntered = "",
+                        Created = new DateTime(2016, 1, 1, 12, 00, 00),
+                        StatusId = 0
+                    });
+
+                return RedirectToAction("AlreadyInserted", "Validate");
             }
 
             if (_validationRepository.IsMaxSend(model.MobileNumber))

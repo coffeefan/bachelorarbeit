@@ -6,7 +6,7 @@ using System.Web;
 
 namespace PassportSecurityStep.Models
 {
-    public class EF_PassportSecurityStepValidationRepository : PassportSecurityStep.Models.IPassportSecurityStepValidationRepository
+    public class EF_PassportSecurityStepValidationRepository : PassportSecurityStep.Models.IPassportSecurityStepValidationRepository, IDisposable
     {
         private int maxSend = 10;
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -104,6 +104,21 @@ namespace PassportSecurityStep.Models
             
             
             _db.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (this._db != null)
+            {
+                this._db.Dispose();
+                this._db = null;
+            }
         }
     }
 }

@@ -5,6 +5,7 @@
             <div class="header">
                 <h4 class="title">Meine Projekte</h4>
             </div>
+            <div class="content">
             <table class="table table-hover">
                 <thead>
                 <tr>
@@ -25,10 +26,9 @@
                 </tr>
                 </tbody>
             </table>
-            <uib-pagination total-items="totalitems" ng-show="totalitems>0"
-                            ng-model="currentPage" max-size="pageSize" class="pagination-sm" ng-change="pageChanged()"
-                            boundary-link-numbers="true" rotate="false" next-text=">>" previous-text="<<">
-            </uib-pagination>
+            <p> <br/><a href="/#/projects/detail/-1" class="btn btn-success btn-fill ">Projekt erstellen</a></p>
+            </div>
+
         </div>
     </div>
     <div class="col-md-6" ng-show="project.ProjectId>0">

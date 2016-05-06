@@ -23,16 +23,31 @@ angular
         'ui.bootstrap',
         'chart.js'
     ])
-    .config(function ($routeProvider) {
+    .config(function ($routeProvider,ChartJsProvider) {
+        ChartJsProvider.setOptions({
+            pointHitDetectionRadius : 3,
+            colours : [ '#1DC7EA','#FB404B' , '#a1e82c', '#FFA534', '#CCCCCC', '#8D38C9', '#4D5360']
+
+        });
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
+            .when('/dashboard', {
+                templateUrl: 'views/dashboard.html',
+                controller: 'DashboardCtrl',
+                controllerAs: 'dashboard'
+            })
             .when('/about', {
                 templateUrl: 'views/about.html',
                 controller: 'AboutCtrl',
+                controllerAs: 'about'
+            })
+            .when('/dokumentation', {
+                templateUrl: 'views/doku.html',
+                controller: 'DokuCtrl',
                 controllerAs: 'about'
             })
             .when('/change-password', {
@@ -89,8 +104,8 @@ angular
                 redirectTo: '/'
             });
     }).run(function ($rootScope, $window, $sessionStorage,$route, $location) {
-        //$rootScope.ServiceUrl ="http://iaauth.azurewebsites.net/";
-        $rootScope.ServiceUrl = "http://localhost:53204/";
+        $rootScope.ServiceUrl ="http://iaauth.azurewebsites.net/";
+        //$rootScope.ServiceUrl = "http://localhost:53204/";
 
         $rootScope.isLoggedIn = false;
         if (typeof $sessionStorage.accessToken != 'undefined') {
@@ -131,3 +146,4 @@ angular
             return errortxt;
         };
 });
+

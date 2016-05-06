@@ -202,7 +202,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ValidateApiController.cs" />
     <Compile Include="Controllers\ValidateController.cs" />
-    <Compile Include="Controllers\LoadingController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="Controllers\SecurityStepSurveyController.cs" />
@@ -255,6 +254,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\EF_ProjectRepository.cs" />
     <Compile Include="Models\EF_ProjectAuthenticationRepository.cs" />
     <Compile Include="Models\EF_ProjectSecurityStepRepository.cs" />
     <Compile Include="Models\Helper\MailHandler.cs" />
@@ -262,6 +262,7 @@
     <Compile Include="Models\Helper\RegistrierungDTO.cs" />
     <Compile Include="Models\Helper\Result.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\IProjectRepository.cs" />
     <Compile Include="Models\IProjectAuthenticationRepository.cs" />
     <Compile Include="Models\IProjectSecurityStepRepository.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -284,6 +285,7 @@
     <Content Include="Content\Images\ausweisnumer.png" />
     <Content Include="Content\Images\finish.jpg" />
     <Content Include="Content\Images\headerimage.jpg" />
+    <Content Include="Content\Images\icon.png" />
     <Content Include="Content\Images\loading.gif" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -339,11 +341,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Loading\Index.cshtml" />
     <Content Include="Views\Validate\Check.cshtml" />
     <Content Include="Views\EmailTemplates\Registration.cshtml" />
     <Content Include="Views\EmailTemplates\PasswordForgot.cshtml" />
     <Content Include="Views\Validate\Failedpage.cshtml" />
+    <Content Include="Views\Validate\AlreadyInserted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

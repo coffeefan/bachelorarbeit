@@ -16,6 +16,8 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+
+
     <link href="styles/light-bootstrap-dashboard.css" rel="stylesheet"/>
     <link href="styles/pe-icon-7-stroke.css" rel="stylesheet"/>
     <link rel="stylesheet" href="styles/main.css">
@@ -33,21 +35,21 @@
         <div class="sidebar-wrapper">
           <div class="logo">
             <a href="#" class="simple-text">
-              Authentication Service
+              <img src="images/logo.png" height="23px" /> Authentication Service
             </a>
           </div>
 
           <ul class="nav">
+            <li  ng-show="isLoggedIn">
+              <a href="/#/dashboard">
+                <i class="pe-7s-graph"></i>
+                <p>Dashboard</p>
+              </a>
+            </li>
             <li>
               <a href="/#/projects" ng-show="isLoggedIn">
                 <i class="pe-7s-notebook"></i>
                 <p>Projekte</p>
-              </a>
-            </li>
-            <li  ng-show="isLoggedIn">
-              <a href="dashboard.html">
-                <i class="pe-7s-graph"></i>
-                <p>Dashboard</p>
               </a>
             </li>
             <li>
@@ -56,17 +58,16 @@
                 <p>Mein Profil</p>
               </a>
             </li>
-
             <li>
-              <a href="typography.html" ng-show="isLoggedIn">
+              <a href="/#/dokumentation" >
                 <i class="pe-7s-news-paper"></i>
-                <p>Typography</p>
+                <p>Dokumentation</p>
               </a>
             </li>
             <li>
-              <a href="typography.html" >
-                <i class="pe-7s-news-paper"></i>
-                <p>Typography</p>
+              <a href="/#/about" >
+                <i class="pe-7s-info"></i>
+                <p>About</p>
               </a>
             </li>
 
@@ -128,8 +129,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    FAQ
+                  <a href="mailto:bachmch3@students.zhaw.ch">
+                    Kontakt mit Entwickler
                   </a>
                 </li>
                 <li>
@@ -198,6 +199,8 @@
     <script src="scripts/controllers/projectdetail.js"></script>
     <script src="scripts/controllers/projectoverview.js"></script>
     <script src="scripts/controllers/profil.js"></script>
+    <script src="scripts/controllers/dashboard.js"></script>
+    <script src="scripts/controllers/doku.js"></script>
 
     <script src="scripts/services/changePassword.js"></script>
     <script src="scripts/services/forgotPassword.js"></script>
@@ -208,6 +211,7 @@
     <script src="scripts/services/securitystep.js"></script>
     <script src="scripts/services/profil.js"></script>
     <script src="scripts/services/securitystepsurvey.js"></script>
+    <script src="scripts/services/projectstats.js"></script>
     <!-- endbuild -->
 </body>
 </html>
