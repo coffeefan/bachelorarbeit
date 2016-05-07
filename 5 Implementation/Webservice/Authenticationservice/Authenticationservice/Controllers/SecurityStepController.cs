@@ -22,7 +22,7 @@ namespace Authenticationservice.Controllers
             SecurityStepCompareInfo sSecurityStepCompareInfo = securityStepInfo.getSecurityStepCompareInfo();
             return Ok(
             new {
-                labels =new string[] { "Verhinderung Mehrfachteilnahme", "Automatsierung", "Kosten", "Aufwand Benutzer", "Verbreitung" },
+                labels =new string[] { "Verhinderung Mehrfachteilnahme", "Verhinderung Automatsierung", "Tiefe Kosten", "Geringer Aufwand Benutzer", "Verbreitung" },
                 data = new int[][] {new int[] {
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.MultipleParticipation),
                     MasterFunctions.NoteTo100(sSecurityStepCompareInfo.Automation),

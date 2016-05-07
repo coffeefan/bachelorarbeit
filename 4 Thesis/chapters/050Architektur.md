@@ -83,6 +83,8 @@ Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können direkt über
 
 Wordpress basiert auf einem sogennanten Hook-System. "Hook" bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle, bei der man seinen eigenen Code  einhaken kann. Der Plugin-Entwickler definiert diese Hooks, um anderen Plugins oder Funktionalitäten zu erlauben, sein Plugin zu erweitern. Auch der Core von Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass Plugins oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der Plugin-Entwickler kann selbständig bestimmen, ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle Plugins verfolgen vielfach den Weg möglichst verschlossen zu agieren, um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Interaktivitäten-Plugins ausgewählt. Aus den Top 1000 der installierten Wordpress Plugins, welche von der Art Social-Media Modul sind werden Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen Plugins zur Untersuchung verwendet: [^Plugin-verzeichnis2], [^Plugin-market2]
 
+\newpage
+
 ------------------------------------------------------------------------------------------
 __Plugin__				__Kosten__  __Installation__ 	__Info zu Hooks__		
 -----------------------	-----------	-------------------	----------------------------------
@@ -230,39 +232,46 @@ Im Kapitel [Recherche] wurden einige Sicherheitskomponenten recherchiert und ill
 ####Ausweisnummer
 Durch Überprüfung der Checksumme und Doppelspeicherung des Ausweises soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da der Checksummen-Alogrithmus öffentlich ist, können diese auch vom Anwender (automatisch) generiert werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Sicherheitsstufe Ausweisnummer ist, dass es dem Anwender eine, wenn auch nicht existierende, Sicherheit vermittelt und keine Kosten verursacht.
 
-####Cookie
-Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser-Makro-Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht. Die Automatisierung ist bei Flash-Cookies etwas aufwendiger, da die Verbreitung kleiner ist.
-
-####SMS Authentifizierung
-Der Benutzer gibt seine E-Mail ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die E-Mail gehört. Der Benutzer kann nicht eindeutig anhand der E-Mail erkannt, die Automatisierung ist aufwendig, dafür entstehen keine direkten Kosten.
-
-####IP-Adresse
-Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP-Adresse vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss". Dadurch könnte nur einmal pro Internetanschluss an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know-How durch Tools möglich ist, lässt sowohl Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand
-
 ####Browser Fingerprint
 Durch Generierung eine Browser Fingerprints (siehe [Recherche]) kann der Browser identifiziert werden. Das Verfahren kann zu 94% einen User wiedererkennen. Das Verwenden mehrerer Browser oder Geräte führt zu verschiedenen Browser Fingerprints. iPhones taugte nicht für diese Methode. Deshalb muss Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewertet werden. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
 
-####SMS Authentifizierung
-Der Benutzer gibt seine Mobilenummer ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die Telefonnummer gehört. In der Schweiz können maximal 5 Mobilenummern bei den Anbietern gekauft werden (Siehe Kapitel [Recherche]). Der Benutzer kann eindeutig anhand der Mobilenummer erkannt werden. Die möglichen Mobilenummern pro User sind beschränkt. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro SMS sind tragbar. Der Benutzer muss bei dieser Methode sein Handy bei sich tragen und den Code übertragen.
+####Cookie
+Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser-Makro-Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht. Die Automatisierung ist bei Flash-Cookies etwas aufwendiger, da die Verbreitung kleiner ist.
 
-####Telefon Authentifizierung
-Der Benutzer gibt seine Telefonnummer ein. Der Benutzer wird automatisiert angerufen und die Computerstimme liest ein Code vor, welcher der Benutzer im Rückbestätigungsformular einträgt. Dadurch wird sichergestellt, dass die Telefonnummer dem Benutzer gehört. Mobilenummern sind wie vorhin erwähnt eingeschränkt. Festnetzanschlüsse unterliegen einer finanziellen Hürde. 
+####E-Mail Authentifizierung
+Der Benutzer gibt seine E-Mail ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die E-Mail gehört. Der Benutzer kann nicht eindeutig anhand der E-Mail erkannt, die Automatisierung ist aufwendig, dafür entstehen keine direkten Kosten.
+
+####IP-Adresse
+Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP-Adresse vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss". Dadurch könnte nur einmal pro Internetanschluss an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know-How durch Tools möglich ist, lässt sowohl Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
+
+####OAuth
+Der Benutzer authentifiziert sich beim OAuth Anbieter. Mehrere Accounts können bei einem Anbieter erstellt werden. Die Erstellung eines Accounts ist meist nicht automatisierbar aber deren Verwendung. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer wenig Aufwand. 
 
 ####Postversand Authentifizierung
 Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, wird es bei der Eindeutigkeit in der Bewertung Abzug geben. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach Erhalt auf einer Webseite quittieren.
 
+####SMS Authentifizierung
+Der Benutzer gibt seine Mobilenummer ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die Telefonnummer gehört. In der Schweiz können maximal 5 Mobilenummern bei den Anbietern gekauft werden (Siehe Kapitel [Recherche]). Der Benutzer kann eindeutig anhand der Mobilenummer erkannt werden. Die möglichen Mobilenummern pro User sind beschränkt. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro SMS sind tragbar. Der Benutzer muss bei dieser Methode sein Handy bei sich tragen und den Code übertragen.
+
 ####SuisseID
 Der Benutzer authentifiziert sich via SuisseID. SuisseID garantiert eine hoche Sicherheit und verhindert Mehrfachteilnahmen. Die Verbreitung ist jedoch ziemlich gering und die Kosten für den Endbenutzer zu hoch.
+
+####Telefon Authentifizierung
+Der Benutzer gibt seine Telefonnummer ein. Der Benutzer wird automatisiert angerufen und die Computerstimme liest ein Code vor, welcher der Benutzer im Rückbestätigungsformular einträgt. Dadurch wird sichergestellt, dass die Telefonnummer dem Benutzer gehört. Mobilenummern sind wie vorhin erwähnt eingeschränkt. Festnetzanschlüsse unterliegen einer finanziellen Hürde. 
+
+
+
+
 
 
 ###Sicherheitstufen bewerten
 Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgelegt. Beim Auftraggeber wurden die verschiedenen Sicherheitsstufen intern besprochen und bewertet. Pro Sicherheitsstufen wurde den vier definierten Aspekten und dem Musskriterium Verbreitung eine Bewertung in Form einer Schweizer Schulnote vergeben.
 
-------------------------------------------------------------------------- -------------------------------------------------
-__Sicherheitsstufen__		__Verhinderung		 __Automat-			__Kosten__	   	__Aufwand	  	     __Verbreitung	
-							Mehrfachteilnahme__	sierung__							Benutzer__			 in der Schweiz__				
+---------------------------------------------------------------------------------------------------------------------------
+__Sicherheitsstufen__		__Verhinderung		 __Verhinderung		__Kosten__		__Aufwand	  	     __Verbreitung	
+							Mehrfach-			Automat-							Benutzer__			in der 
+							teilnahme__			sierung__												Schweiz__															
 --------------------------  ------------------- ------------------- --------------- ------------------- -------------------
-
 __Ausweis-					3.5					3.5					6				5          	  		6
 nummer__
 
@@ -276,13 +285,17 @@ __E-Mail__					4					4.5					6				4.5           		6
 __Flash-Cookie__		  	2.5 		     	3					6				6                	3.5 
                                                                           
 __IP__				      	3					3 					6				6             		6
+
+__OAuth__					3.5					4.5					5.75			5.5           		5.25
+
+__Postversand__				5.25				5.75				5				4.5           		5.75
                                                                                                                                                         
 __SMS__						5.5					5.75				5				4.5           		5.5
 						                                                      
 __SuisseID__				5.5					5.75				3.5				5			  		3                                                                              
 						                                                      
-__Telefon__					5.25				5.75				5				4.5           		5.75
-------------------------------------------------------------------------- -------------------------------------------------
+__Telefonanruf__			5.25				5.75				5				4.5           		5.75
+---------------------------------------------------------------------------------------------------------------------------
 Table: Übersicht der Authentifizierungs Methoden
 
 
@@ -291,9 +304,11 @@ Table: Übersicht der Authentifizierungs Methoden
 SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schweiz ([NFREQ-212](FREQ-212)) keine genügende Note und werden daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu erlangen wurden die folgenden Methoden mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
 
 - IP-Adresse
+- Captcha
 - E-Mail
 - SMS
-- Telefon
+- Telefonanruf
+- Postversand
 - Ausweisnummer
  
 
@@ -325,6 +340,7 @@ ISecurityStep-Vertrag ist im Beispielcode der Vertrag. Die Instanz "proxy" liefe
 SomeFactory muss für die Umsetzung  jedoch implementiert werden. Dafür gibt es in der .NET-Welt einiges an Beispiel-Code und Frameworks zu finden. Ein beliebtes Framework ist die Windows Communication Foundation.[^design-By-Contract]
 
 
+\newpage
 
 ###MEF - Managed Extensibility Framework
 MEF, das Managed Extensibility Framework, ist seit der Version 4.0 Bestandteil des .NET Frameworks. MEF ist eine Bibliothek und implementiert das Problem der Erweiterbarkeit sogar zur Laufzeit. Es vereinfacht die Implementierung von erweiterbaren Anwendungen und bietet Ermittlung von Typen, Erzeugung von Instanzen und Composition Fähigkeiten an.
@@ -350,6 +366,7 @@ Basierend auf dem Managed Extensibility Framework wird der Aufbau umstrukturiert
 
 [^design-By-Contract]: [@design-By-Contract]
 
+\newpage
 
 ### Definition der Sicherheitsufenverträge
 

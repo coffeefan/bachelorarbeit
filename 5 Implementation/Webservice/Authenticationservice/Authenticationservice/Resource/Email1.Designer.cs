@@ -79,7 +79,7 @@ namespace Authenticationservice.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Um das Passwort zurück zusetzen klicken Sie bitte auf folgenden Link.
+        ///   Looks up a localized string similar to Um das Passwort zurück zusetzen klicke bitte auf folgenden Link.
         /// </summary>
         public static string PasswordForgot_Text {
             get {
@@ -115,7 +115,7 @@ namespace Authenticationservice.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Klicken Sie auf den folgenden Link und bestätigen Sie Ihre Registration..
+        ///   Looks up a localized string similar to Klicke auf den folgenden Link und bestätige deine Registration..
         /// </summary>
         public static string Registration_Text {
             get {
@@ -124,7 +124,7 @@ namespace Authenticationservice.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sie haben es fast geschafft!.
+        ///   Looks up a localized string similar to Du hast es fast geschafft!.
         /// </summary>
         public static string Registration_Title {
             get {

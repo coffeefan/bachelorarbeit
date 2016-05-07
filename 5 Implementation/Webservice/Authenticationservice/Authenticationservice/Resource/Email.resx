@@ -124,7 +124,7 @@
     <value>Passwort vergessen</value>
   </data>
   <data name="PasswordForgot_Text" xml:space="preserve">
-    <value>Um das Passwort zurück zusetzen klicken Sie bitte auf folgenden Link</value>
+    <value>Um das Passwort zurück zusetzen klicke bitte auf folgenden Link</value>
   </data>
   <data name="PasswordForgot_Titel" xml:space="preserve">
     <value>Passwort vergessen, dass kann jedem passieren</value>
@@ -136,9 +136,9 @@
     <value>Bestätigung Registration</value>
   </data>
   <data name="Registration_Text" xml:space="preserve">
-    <value>Klicken Sie auf den folgenden Link und bestätigen Sie Ihre Registration.</value>
+    <value>Klicke auf den folgenden Link und bestätige deine Registration.</value>
   </data>
   <data name="Registration_Title" xml:space="preserve">
-    <value>Sie haben es fast geschafft!</value>
+    <value>Du hast es fast geschafft!</value>
   </data>
 </root>

@@ -8,7 +8,7 @@
             <div class="content">
                 <div class="row">
                     <div class="col-md-3">
-                        <select data-ng-options="p.Description for p in projects" data-ng-model="dashboard.selectedProject" class="form-control"></select>
+                        <select data-ng-options="p.Description for p in projects" data-ng-model="dashboard.selectedProject" class="form-control" ng-change="reloadStats()"></select>
                     </div>
                     <div class="col-md-3" >
                         <button data-ng-click="open()" class="btn btn-info btn-fill " ng-show="dashboard.selectedProject">Projekt bearbeiten</button> <a href="/#/projects/detail/-1" class="btn btn-info btn-fill ">Projekt erstellen</a>

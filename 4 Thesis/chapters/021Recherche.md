@@ -282,6 +282,7 @@ Summe = 120
 120 mod 10 = 0
 ~~~~~~~
 
+\newpage
 Es gibt aus Datenschutzgründen keinen öffentlichen Service über welchen man die Identität anhand der Passangaben überprüfen könnte. So besteht nur die Möglichkeit zur Überprüfen ob das Eingegebene Muster anhand der Checksummen stimmt und ob bereits dieselben Informationen vorhanden sind.
 
 ####Mehrfachteilnahme und Automatisierungsmöglichkeit
@@ -291,7 +292,7 @@ Der Alogrithmus der Checksummen kann nachgebaut werden und so automatisiert Iden
 Die Überprüfung verursacht keine direkten Kosten.
 
 
-
+\newpage
 
 ###Captcha
 Captcha ist ein Test, mit dem festgestellt werden kann, ob sich ein Mensch oder ein Computer eines Programms bedient [^duden].
@@ -386,6 +387,7 @@ Die Teilnahmeanzahl ist von den vorhandenen Adressanschriften abhängig und dahe
 ####Kosten
 Die Kosten berechnen sich für den Versand in der Schweiz bei dem analysierten Anbietern je nach Druck und Versandart des Empfängers zwischen CHF 1.20 und CHF 1.65.[^pingen]
 
+\newpage
 ###OAuth
 Die Zwei-Faktor-Authentifizierung OAuth wurde im Kapitel [OAuth-Provider] ausführlich erläutert.
 
@@ -398,11 +400,13 @@ Eine Mehrfachregistration ist möglich.
 ####Kosten
 OAuth bewirkt keine direkten Kosten.
 
+
+
 ###SuisseID Integration
 SuisseID wurde bereits im Kapitel [SuisseID] erläutert. 
 
 
-###Automatisierungsmöglichkeit
+####Automatisierungsmöglichkeit
 Eine Automatisierung ist nahezu unmöglich.
 
 ####Mehrfachteilnahme
@@ -411,6 +415,7 @@ Eine Mehrfachteilnahme ist nahezu unmöglich.
 ####Kosten
 Für den Betreiber fallen geringe Kosten an. Der Endnutzer zahlt aber einen relativ hohen Preis.
 
+\newpage
 
 ###Browser Fingerprints
 
@@ -424,15 +429,73 @@ Der Fingerabdruck eignet sich zur Authentifizierung einer Person durch folgende 
 - Der Fingerabdruck ist über den Tod hinaus beständig.
 - Der Fingerabdruck ist von aussen einfach "abrufbar". Er ist von blossem Augenn sichtbar und wir hinterlassen das Muster der Papillarleisten auf Gegenständen wie Glas.
 
+
+
 ####Fingerabdruck des Browsers
-Im Gegensatz zum Datenschutz wäre es aus Sicht der eindeutigen Identifikation wünschenswert, wenn digitale Personen oder deren Geräte auch einen Fingerabdruck von sich geben würden, der sowohl eindeutig, beständig und auch abrufbar ist. Immer wieder versuchten unter dem Thema "Browser Fingerprint" Personen ein Verfahren zu entwickeln, das genau dies ermöglicht.
+Im Gegensatz zum Datenschutz wäre es aus Sicht der eindeutigen Identifikation wünschenswert, wenn digitale Personen oder deren Geräte auch einen Fingerabdruck von sich geben würden, der sowohl eindeutig, beständig und auch abrufbar ist. Immer wieder versuchten unter dem Thema "Hardware Fingerprint" oder "Browser Fingerprint" Personen und Organisationen ein Verfahren zu entwickeln, das genau dies ermöglicht.
 Microsoft führte laut eigenen Angaben [^xpactivation] mit Windows XP Produktaktivierung ein Verfahren ein, das aus Prozesser-Typ, Grafikkarteninformationen und Festplatte einen Fingerabdruck des Geräts erstellt. So konnte bei einer zweiten Aktivierung mit dem selben Registrationsschlüssel Massnahmen getroffen werden.
 
 Auch der Browser übermittelt an den Server verschiedene Informationen:
 
+\newpage
+####Passives Fingerprinting
+Die Kommunikation zwischen Client und Browser ist paketbasiert. Es besteht keine feste Leitung zwischen Client und Server und nicht zwingend gleich bleibender Kommunikationsweg. Jedes HTTP-Pakete besitzt Header Daten aus den verschiedenen OSI-Layern. So können aus IP Header, TCP Header HTTP Header unter anderem folgende Daten gelesen werden: 
+
+---------------------------------------------------------------
+Bezeichnung 										Schicht
+--------------------------------------------------- -----------
+Quell-IP-Adresse 									IP
+
+Quellport 											TCP
+
+Aufrufende Seite („Referer“ [sic!]) 				HTTP
+
+Bezeichnung des Browsers („User-Agent“) 			HTTP
+
+Akzeptierende Dateitypen 							HTTP
+
+Akzeptierende Zeichensätze 							HTTP
+
+Akzeptierende Kompressionsformate 					HTTP
+
+Akzeptierende Sprachen 								HTTP
+---------------------------------------------------------------
+Table: Übersicht möglicher passiven Daten
+
+Diese Daten werden zwingend an den Server gesendet und könnten passiv also ohne das ein zusätzliches "Programm" beim Client läuft ausgelesen werden.
 
 
 
+####Aktives Fingerprinting 
+Beim aktiven Fingerprinting wird per Javascript alle möglichen Browserkennzahlen abgefragt. In der folgenden Tabelle sind die komplexeren Gewinnungen von Kennzahlen aufgelistet.  
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Bezeichnung				Beschreibung	 						
+----------------------- ---------------------------------------------------------------------------------------------------------------------------
+__Browser-Plugins__		Die Funktionalität der Browser wird mit Browserweiterungen ausgebaut. Bekannte Plugins: Adobe Reader, Adobe Flash
+						Abfrage: navigator.plugins
+					
+__Unterstütze 			Internetdokument können verschiedene Datenarten so genannte MIME-Type unterstützen.
+Datenarten__			Abfrage: navigator.mimeTypes
+
+__Installierte			Mittels CSS kann geprüft werden welche Schriftarten beim Client installiert sind. Dabei wird probiert einen Katalog darzustellen. Die installierten Schriften können dargestellt werden.
+Schriften__
+
+__Performance			Basierend auf Javascript Performance-Tests kann unter Berücksichtigung der Implemenation von JavaScript im Browser die Performance des Rechners ermittelt werden
+Messung__
+---------------------------------------------------------------------------------------------------------------------------------------------------
+Table: Komplexere Kennzahlen aktives Fingerprinting
+
+\newpage
+Das aktive Fingerprinting kann vom Endbenutzer festgestellt werden, da Javascript-Code in seinem Browser ausgeführt werden. Noch offensichtlicher wird es, wenn nach der Analyse, die Daten auch an den Server übertragen werden.
+
+Eine Beispieliplementation von Browserfingerprints wurde umgestzt: <http://www.christianbachmann.ch/minifingerprint/> [^tillmannfingerprint]
+
+
+
+
+
+[^tillmannfingerprint]: Die kleine Testimplementation wurde basierend auf der Vorlage von Hennig Tillmann umgesetzt: [@tillmannfingerprint]
 [^xpactivation]: [@xpactivation]
 [^derfingerabdruck]: [@derfingerabdruck]
 [^googlebusiness]: [@googlebusiness]

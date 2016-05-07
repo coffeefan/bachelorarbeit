@@ -183,7 +183,7 @@ Umfrageonline.ch enthält die Sicherheitsstufe Cookie und IP-Adresse. Wobei die 
 ##Weitere Fragen
 Weiter werden die drei Eigenschfatsfragen gestellt. Dabei sollten Alter, Geschlecht und ob es sich um einen Schweizer oder Bewohner der Schweiz handelt, angegeben werden.
 
-
+\newpage
 ##Abschluss
 Der Abschluss des Fragebogens kann sehr kurz gehalten werden. Folgende Elemente sollten enthalten sein:
 
@@ -208,6 +208,7 @@ Damit ist das Ziel der Studie und die Möglichkeit der Auswertung erreicht.
 
 Weiter werden noch einige Anmerkungen zu den Fragen erläutert.
 
+\newpage
 ###Repräsentativität
 Laut Bundesamt für Statistik enthält die definierte Zielgruppe 3.3 Milionen Personen[^bfs]. Diese Zahl beinhaltet die Deutschweizer, welche zwischen 16 und 65 Jahre alt sind.
 An der Umfrage habe 176 Personen teilgenommen. Mit Hilfe der Berechnungsformel für Stichprobengrösse lässt sich die Variable d, das Konfidenzintervall von 7,4% errechnen.

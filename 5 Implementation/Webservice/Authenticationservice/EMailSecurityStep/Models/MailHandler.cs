@@ -14,19 +14,29 @@ namespace EMailSecurityStep.Models
     {
 
        
-        public bool send(String toEmail, String toName, String subject, String plaintext, String htmlbody)
+        public bool send(String toEmail, String toName, String subject, String plaintext, String htmlbody,String fromDisplayName="", String replayTo = "")
         {          
 
             try
             {
+                if (fromDisplayName == "")
+                {
+                    fromDisplayName = ConfigurationManager.AppSettings["emailname"];
+                }
                 // Assign a sender, recipient and subject to new mail message
-                MailAddress sender = new MailAddress(ConfigurationManager.AppSettings["email"], ConfigurationManager.AppSettings["emailname"]);
+                MailAddress sender = new MailAddress(ConfigurationManager.AppSettings["email"], fromDisplayName);
 
                 MailAddress recipient =
                     new MailAddress(toEmail, toName);
 
                 MailMessage mailMessage = new MailMessage(sender, recipient);
                 mailMessage.Subject = subject;
+
+                if (replayTo != "")
+                {
+                    mailMessage.ReplyToList.Add(new MailAddress(replayTo));
+                }
+                
 
 
                 // Alternative Message

@@ -15,10 +15,13 @@ namespace EMailSecurityStep.Controllers
     public class EMailSecurityStepController : Controller
     {
         IEMailSecurityStepValidationRepository _repository;
-        public EMailSecurityStepController() : this(new EF_EMailSecurityStepValidationRepository()) { }
-        public EMailSecurityStepController(IEMailSecurityStepValidationRepository repository)
+        IEMailSecurityStepConfigRepository _configrep;
+        public EMailSecurityStepController() : this(new EF_EMailSecurityStepValidationRepository(),
+            new EF_EMailSecurityStepConfigRepository()) { }
+        public EMailSecurityStepController(IEMailSecurityStepValidationRepository repository, IEMailSecurityStepConfigRepository configrep)
         {
             _repository = repository;
+            _configrep = configrep;
         }
 
         // GET: EMailSecurityStep
@@ -88,7 +91,10 @@ namespace EMailSecurityStep.Controllers
 
             //Send E-Mail to EndUser
             MailHandler mailHandler = new MailHandler();
-            bool mail=mailHandler.send(model.EMail, model.EMail, "Code prüfen", generateMailText(code), generateMailText(code));
+            EMailSecurityStepConfig econfig=
+                _configrep.GetEMailSecurityStepConfigByProjectId((int)System.Web.HttpContext.Current.Session["ProjectId"]);
+            bool mail=mailHandler.send(model.EMail, model.EMail, "Code prüfen", generateMailText(code), generateMailText(code),
+                econfig.FromName, econfig.ReplayMail);
             System.Web.HttpContext.Current.Session["email"] = model.EMail;
 
             return RedirectToAction("CodeValidation", "EMailSecurityStep");        

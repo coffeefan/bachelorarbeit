@@ -72,6 +72,7 @@ __Hauptszenario__           Der Programmierer loggt sich mit E-Mail und Passwort
 __Alternativszenario__      Der Programmierer sendet sich das verpasste Passwort per E-Mail zu. Er erstellt über den im erhaltenden E-Mail enthaltenen Link ein neues Passwort und loggt sich mit E-mail und dem neuen Passwort am Authentifizierungsservice ein.
 -------------------------------------------------------------------------------
 
+\newpage
 #### UC-21 Konfigurieren eines Authentifizierungsvorgang
 
 -------------------------------------------------------------------------------
@@ -113,6 +114,7 @@ __Hauptszenario__           Der Programmierer öffnet die Einbindeseite. Es werd
 __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
+\newpage
 #### UC-31 User Authentifizieren
 
 -------------------------------------------------------------------------------
@@ -153,6 +155,7 @@ __Hauptszenario__           Nach Beenden eines Quizes, Votings, Wettbewerbs logt
 __Alternativszenario__      Um den Zwischenstand eines Quizes, Votings, Wettbewerbs auszuwerten logt sich der Programmierer im System ein und generiert einen automatisierten Report, um die Verwendung des Authentifizierungsvorgangs auszuwerten.
 -------------------------------------------------------------------------------
 
+\newpage
 #### UC-51 Wartbarkeit des Authentifizierungsservices
 
 -------------------------------------------------------------------------------
@@ -242,6 +245,7 @@ __Techn. Risiko__       Niedrig
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
+\newpage
 ### FREQ-211			Konfigurieren eines neuen Social-Media-Modul Authentifizierungsvorgangs
 
 --------------------	-----------------------------------------------------------------------------------------
@@ -302,6 +306,7 @@ __Techn. Risiko__       Niedrig
 __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
+\newpage
 ### FREQ-251			Generierung von Code für Einbinden in ein vorhandenes System
 
 --------------------	-----------------------------------------------------------------------------------------
@@ -467,6 +472,8 @@ __Techn. Risiko__       Hoch
 
 __Business Value__     	Mittel
 -----------------------------------------------------------------------------------------------------------------
+
+\newpage
 
 ### NFREQ-210			Programmierer kann aus Vielzahl von verschiedenen Sicherheitsstufen auswählen
 

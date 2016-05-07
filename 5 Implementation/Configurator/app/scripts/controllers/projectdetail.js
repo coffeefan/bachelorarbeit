@@ -106,7 +106,7 @@ angular.module('configuratorApp')
             ProjectService.add({}, $scope.project, function (data) {
 
                 swal({title: "Speicherung erfolgreich", text: "Das Projekt wurde erfolgreich erstellt", type: "success"}, function () {
-
+                    window.location="/#/projects/detail/"+data.ProjectId;
                 });
 
             }, function (error) {
@@ -120,6 +120,7 @@ angular.module('configuratorApp')
                 swal({title: "Speicherung erfolgreich", text: "Das Projekt wurde erfolgreich erstellt", type: "success"}, function () {
 
                 });
+
 
             }, function (error) {
                 $rootScope.errorAlert(error)

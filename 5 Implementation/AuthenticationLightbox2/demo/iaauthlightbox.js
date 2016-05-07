@@ -348,10 +348,44 @@
   lity.handlers = $.proxy(settings, lity, _defaultHandlers);
   lity.options = $.proxy(settings, lity, _defaultOptions);
 
-  $(document).on('click', '[data-lity]', lity());
+  $(document).on('click', '[data-iaauthButton]', lity());
 
   $(document).on('lity:ready', function(event, lightbox, trigger) {
-    $("#paymentForm").submit();
+    // iPhone Fix
+
+
+    /*$.ajax({
+      type: "POST",
+      url:$("#iaauthForm").attr("action"),
+      data:    {
+        projectId:$('input[name=projectId]').val(),
+        providerId:$('input[name=providerId]').val(),
+        sign:$('input[name=sign]').val(),
+        isAjaxCall:true
+      },
+      success: function(data)
+      {
+        $("#iaauthForm").submit(); // show response from the php script.
+      }
+    });
+
+    $.post($("#iaauthForm").attr("action"),
+        {
+          projectId:$('input[name=projectId]').val(),
+          providerId:$('input[name=providerId]').val(),
+          sign:$('input[name=sign]').val(),
+          isAjaxCall:true
+        }, function (data)
+        {
+          alert("Success " + data.success);
+
+        });*/
+
+    $("#iaauthForm").submit();
+
+    //$('input[name=projectId]').val();
+
+    //
   });
 
 
@@ -359,7 +393,7 @@
   $(document).on('click', '[data-iaauthButton]', function () {
     var lightbox = lity();
     // Open a URL in a lightbox
-    lightbox();
+    lightbox("http://www.google.ch");
     return false;
 
   });

@@ -30,6 +30,7 @@ namespace Authenticationservice.Controllers
 
         public ActionResult Check(int projectId=-1, string providerId="", string sign="")
         {
+            
             try
             {
                 //Session Handling Input/Output
