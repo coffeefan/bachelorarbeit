@@ -11,9 +11,10 @@ Es konnte gezeigt werden, dass es möglich ist, mit verschiedenen Sicherheitsstu
 ##Offene Fragen
 Q1 Wie soll das Konzept als Produkt einem breiten Publikum bekannt gemacht werden? \
 Q2 Wie kann dem Publikum hinreichend Sicherheit für das Konzept vermittelt werden?
+Q2 Wie skaliert das System bei gleichzeitiger Nutzung von über 500 Endbenutzern?
 
 ##Limitationen
-Im Prototyp sind vier Sicherheiststufen implementiert worden. Für eine grössere Konfigurationswahl sollen weitere Sicherheiststufen integriert werden. Der Authentifizierungsservice verrechnet die Kosten noch nicht selbständig an den Programmierer weiter. Hier sollte ein geeignetes Preismodel definiert und eine automatisierte Abrechnung implementiert werden. Das Produkt ist für die Deutschschweiz entwickelt worden. Auch wenn Multilingualität keine Anforderung war, wurde sie angedacht und in grossen Teilen des Prototyps implementiert. Für den multilingualen Betrieb müssten insbesondere Textbausteine für andere Sprachgebiete entworfen werden und in den fehlenden Teilen die Multilingualität implementiert werden. 
+Im Prototyp sind vier Sicherheitsstufen implementiert worden. Für eine grössere Konfigurationswahl sollen weitere Sicherheitsstufen integriert werden. Der Authentifizierungsservice verrechnet die Kosten noch nicht selbständig an den Programmierer weiter. Hier sollte ein geeignetes Preismodell definiert und eine automatisierte Abrechnung implementiert werden. Das Produkt ist für die Deutschschweiz entwickelt worden. Auch wenn Multilingualität keine Anforderung war, wurde sie angedacht und in grossen Teilen des Prototyps implementiert. Für den multilingualen Betrieb müssten insbesondere Textbausteine für andere Sprachgebiete entworfen werden und in den fehlenden Teilen die Multilingualität implementiert werden. 
 
 
 \newpage
@@ -26,14 +27,14 @@ __Bereich__		__Beschreibung__															__Status__  	__Verweise__
 __Recherche__ 	Wurde eine Marktanalyse bestehender Produkte recherchiert und 				erfüllt     	[Martkanalyse]
 				dokumentiert?		
 				
-				Wurden verschiedene Sicherheiststufen (Arten und Methoden der Sicherheits- 	erfüllt     	[Authentifizierungs-Komponenten]           
+				Wurden verschiedene Sicherheitsstufen (Arten und Methoden der Sicherheits- 	erfüllt     	[Authentifizierungs-Komponenten]           
 				und Identitätsüberprüfung) recherchiert und dokumentiert?						
 																											
 __Analyse__     Wurden die Anforderungen der Authentifizierungsschnittstelle mit dem 		erfüllt     	[Anforderungen]
 				Arbeitgeber analysiert und dokumentiert? 	                                            	
 																											
-__Konzept__		Wurde die Evaluation von geeigneten Authentifizierungsmethoden für 			erfüllt     	[Sicherheitstufen integrieren],
-				verschiedene Stufen dokumentiert?	                                                    	[Sicherheitstufen bewerten]
+__Konzept__		Wurde die Evaluation von geeigneten Authentifizierungsmethoden für 			erfüllt     	[Sicherheitsstufen integrieren],
+				verschiedene Stufen dokumentiert?	                                                    	[Sicherheitsstufen bewerten]
 																											
 				Wurden eine Spezifikation einer Prototypenapplikation für die				erfüllt     	[Konzept]
 				 Authentifizierungsschnittstelle entworfen und dokumentiert?	                        	
@@ -51,14 +52,14 @@ __Studie__		Wurde eine Studie über Akzeptanz und Geschwindigkeit(Anstrengung)		
 																											
 				Wurde die Auswertung dokumentiert und im Prototyp integriert?				erfüllt     	[Auswertung]
 																											[Visualisierung von Daten],
-																											[Visualisierung Umfrageresultate]
+																											[Visualisierung der Umfrageresultate]
 																											
 __Proof of__	Wurden die Prototypen der Authentifizierungsschnittstelle und der 			erfüllt     	[Proof of Concept],
 __Concept__		Verwaltung entwickelt?                                                                   	[AngularJS-Konfigurator],
 																											[Authentifizierungs-Lightbox]
 																											
 				Wurden die Studienresultate im Prototypen integriert?						erfüllt     	[Visualisierung von Daten],
-																											[Visualisierung Umfrageresultate]
+																											[Visualisierung der Umfrageresultate]
 																											
 __Fazit__		Wurde das Fazit dokumentiert?												erfüllt			[Fazit]				
 ----------------------------------------------------------------------------------------------------------- ---------------------

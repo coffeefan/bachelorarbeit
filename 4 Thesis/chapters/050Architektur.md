@@ -16,7 +16,7 @@ Die Softwarearchitektur wurde im Hinblick auf diese Anforderungen erstellt.
 \newpage
 
 ##Architekturübersicht
-Der Authentifizierungsservice besteht aus den Hauptkomponenten: Webserver mit Web-API und MVC-Webpages, Konfigurator und Autorisierung. Die folgende Abbildung zeigt die Verbindungen der drei Hauptkomponenten im Systemkontext des Authentifizierungservice auf.
+Der Authentifizierungsservice besteht aus den Hauptkomponenten: Webserver mit Web-API und MVC-Webpages, Konfigurator und Autorisierung. Die folgende Abbildung zeigt die Verbindungen der drei Hauptkomponenten im Systemkontext des Authentifizierungsservice auf.
 
 ![Übersicht der Hauptkomponenten](images/draw_io/BA_KomponentenDiagramm.png)
 
@@ -27,11 +27,11 @@ Der User nimmt an einer Interaktivität eines Anbieters teil. Dabei füllt er de
 
 ![Sequenzidagramm Ablauf der Authentifizierung](images/draw_io/BA_AutorisationOverview.png)
 
-##Domänenmodel Differenziert
-Ein differenziertes Domänenmodel - auch Domänenmodel Basis Level genannt - erlaubt eine vereinfachte Kommunikation zwischen Kunde/Auftraggeber und Entwicklungsteam/Entwicklungsperson. Die Denkweise im Model erfordert keine Programmierkenntnisse und fördert die strukturierte Wiedergabe von Datengefässen. Beim Domänenmodel werden die Begriffe aus der Domäne des Kunden verwendet und fördern so die Verständlichkeit auf beiden Seiten.
+##differenziertes Domänenmodell
+Ein  Domänenmodell - auch Domänenmodell Basis Level genannt - erlaubt eine vereinfachte Kommunikation zwischen Kunde/Auftraggeber und Entwicklungsteam/Entwicklungsperson. Die Denkweise im Modell erfordert keine Programmierkenntnisse und fördert die strukturierte Wiedergabe von Datengefässen. Beim Domänenmodell werden die Begriffe aus der Domäne des Kunden verwendet und fördern so die Verständlichkeit auf beiden Seiten.
 Der Programmierer kann Projekte besitzen. Diese Projekte bestehen aus mehreren Sicherheitsstufen. Die Projekte haben keine oder mehre Authentifizierungssversuche.
 
-![Differenziertes Domänemodel des Authentifizierungservice](images/draw_io/domaenenmodell.png)
+![Differenziertes Domänenmodell des Authentifizierungsservice](images/draw_io/domaenenmodell.png)
 
 
 
@@ -39,7 +39,7 @@ Der Programmierer kann Projekte besitzen. Diese Projekte bestehen aus mehreren S
 
 \newpage
 ##Datenbankdesign
-In der Systemarchitektur des Authentifizierungservice stehen Objekte nur während der Ausführungszeit zur Verfügung. Um sie zu persistieren, werden sie in einer relationalen Datenbank gespeichert.
+In der Systemarchitektur des Authentifizierungsservice stehen Objekte nur während der Ausführungszeit zur Verfügung. Um sie zu persistieren, werden sie in einer relationalen Datenbank gespeichert.
 Die Paradigmen der objektorientierten Programmiersprache und der relationalen Datenbank sind grundlegend verschieden. 
 So kapseln Objekte ihren Zustand und ihr Verhalten hinter einer Schnittstelle und haben eine eindeutige Identität. Relationale Datenbanken basieren dagegen auf dem mathematischen Konzept der relationalen Algebra. Dieser konzeptionelle Widerspruch wurde in den 1990er Jahren als "object-relational impedance mismatch" bekannt.[^vietnamcomputerscience]
 Um diesen Widerspruch zu mindern, stellt Microsoft das Entity-Framework zur Verfügung. 
@@ -74,17 +74,18 @@ Das bestehende Interaktivitäts-Modul wird als Teil einer Webseite in einer Weba
 
 ![Nutzungsanteil CMS weltweit *Quelle:de.statista.com*](images/cms_statistik_november2015.JPG)
 
+\newpage
 Die von statista.com veröffentlichten Zahlen wurden mit Werten von W3techs.com verglichen[^statisticinfow3techs]. Die Unterschiede sind für unsere Verwendung minimal und liegen im Zehntelprozentbereich. Da beide bekannten Statistik unternehmen auf die selben Werte gekommen sind, kann von einem hohen Wahrheitsgrad ausgegangen werden.
 Beim Betrachten der Statistik fällt auf, dass Wordpress mit 25,2% mit Abstand am meisten genutzt wird. Alle dynamischen Webseiten unter den Top 10 basieren auf Systemen in PHP[^phpinfotag]. Adobe Dreamviewer und FrontPage sind keine Systeme, welche auf dem Server betrieben werden. Sie sind Editoren, welche auf dem jeweiligen Computer ausgeführt werden und danach mehrheitlich HTML-, CSS- und Javascript-Code an den Server ausliefern. Funktionalitäten werden mit den beiden Editoren manuell geschrieben. 
 
 Basierend auf diesen statistischen Erkenntnissen lohnt es sich die Wordpress-Welt kennen zu lernen und zu recherchieren, wie dort eine Authentifizierungsschnittstelle eingebunden werden könnte.
 
 ### Wordpress-Plugin Hook
-Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können direkt über das CMS-Backend eingespielt werden. Alternativ können sie auch manuell installiert werden. Zum Beispiel, indem man ein Plugin selber programmiert oder beim Hersteller bzw. über das Plugin-Verzeichnis von Wordpress[^Plugin-verzeichnis2] herunterlädt. Wordpress sammelt zugleich die aktiven Installationen der Plugins (sofern man als Entwickler den Informationsaustausch nicht unterbindet). Die Gesamtzahl wird im CMS-Backend Wordpress und auf Ihrer Plugin-Verzeichnis Webseite[^Plugin-verzeichnis2] veröffentlicht. Dank dieser Kennzahl können nun die meistverbreiteten Plugins herausgefunden werden. 
+Erweiterungen im Wordpress nennen sich Plugins. Die Plugins können direkt über das CMS-Backend eingespielt werden. Alternativ können sie auch manuell installiert werden. Zum Beispiel, indem man ein Plugin selber programmiert oder beim Hersteller bzw. über das Plugin-Verzeichnis von Wordpress[^Plugin-verzeichnis2] herunterlädt. Wordpress sammelt zugleich die aktiven Installationen der Plugins (sofern man als Entwickler den Informationsaustausch nicht unterbindet). Die Gesamtzahl wird im CMS-Backend Wordpress und auf ihrer Plugin-Verzeichnis Webseite[^Plugin-verzeichnis2] veröffentlicht. Dank dieser Kennzahl können nun die meistverbreiteten Plugins herausgefunden werden. 
 
 <!--TODO Auflistung von bekannten Plugins -->
 
-Wordpress basiert auf einem sogennanten Hook-System. "Hook" bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle, bei der man seinen eigenen Code  einhaken kann. Der Plugin-Entwickler definiert diese Hooks, um anderen Plugins oder Funktionalitäten zu erlauben, sein Plugin zu erweitern. Auch der Core von Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass Plugins oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der Plugin-Entwickler kann selbständig bestimmen, ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle Plugins verfolgen vielfach den Weg möglichst verschlossen zu agieren, um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Interaktivitäten-Plugins ausgewählt. Aus den Top 1000 der installierten Wordpress Plugins, welche von der Art Social-Media Modul sind werden Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen Plugins zur Untersuchung verwendet: [^Plugin-verzeichnis2], [^Plugin-market2]
+Wordpress basiert auf einem sogennanten Hook-System. "Hook" bedeutet "Haken", "Aufhänger" oder "Greifer". Ein Hook ist im Wordpress eine definierte Codestelle, bei der man seinen eigenen Code  einhaken kann. Der Plugin-Entwickler definiert diese Hooks, um anderen Plugins oder Funktionalitäten zu erlauben, sein Plugin zu erweitern. Auch der Core von Wordpress enthält solche Hooks. Dadurch soll verhindert werden, dass Plugins oder der Core von Wordpress direkt umgeschrieben werden muss und dann nicht mehr einfach so unabhängig upgedatet werden kann. Um unsere Schnittstelle einzubinden, könnten wir also solche Hooks verwenden. Dieser "Hook"/Haken hat lustigerweise auch einen Haken: Der Plugin-Entwickler kann selbständig bestimmen, ob und wo er solche Hooks einsetzen will und welche Möglichkeiten dann zur Verfügung stehen. Kommerzielle Plugins verfolgen vielfach den Weg möglichst verschlossen zu agieren, um mögliche Erweiterungen monetär umzusetzen und so eine Abhängigkeit zu erzeugen. Diese These gilt es nun zu untersuchen. Dafür wurden verschiedene Interaktivitäten-Plugins ausgewählt. Aus den Top 1000 der installierten Wordpress Plugins, welche von der Art Social-Media Modul sind werden Stichproben von kommerziellen Plugins und Stichproben aus in Beiträgen empfohlenen Plugins zur Untersuchung verwendet: [^Plugin-verzeichnis2] [^Plugin-market2]
 
 \newpage
 
@@ -125,7 +126,7 @@ Wir haben nun verschiedene Wordpress-Plugins für Interaktivitäten auf Hooks un
 \newpage
 
 ### Parallelen in ähnliche Anwendungsfeld er
-Die vertiefte Untersuchung der letzten Kapitel wird beendet und es wird probiert eine andere Herangehensweise zur Lösungsfindung zu suchen: Forscher adaptieren immer wieder er- folgreiche Modelle aus anderen Bereichen in ihr Gebiet. Vielfach wird die Natur als erfolgreiches Vorlagemodell genommen. Ganz soweit wird hier nicht gegangen. Payment-Gateways, wie der Schweizer Anbieter Datatrans, müssen Webshop-Entwicklern auch eine Möglichkeit bieten das Gateway einfach in Ihren Webshop einbinden zu können. Auch bei ihnen steht die Sicherheit an der ersten Stelle und eine einfache Integration ist für den Erfolg - trotz internationalem Druck - notwendig. 
+Die vertiefte Untersuchung der letzten Kapitel wird beendet und es wird probiert eine andere Herangehensweise zur Lösungsfindung zu suchen: Forscher adaptieren immer wieder er- folgreiche Modelle aus anderen Bereichen in ihr Gebiet. Vielfach wird die Natur als erfolgreiches Vorlagemodell genommen. Ganz soweit wird hier nicht gegangen. Payment-Gateways, wie der Schweizer Anbieter Datatrans, müssen Webshop-Entwicklern auch eine Möglichkeit bieten das Gateway einfach in ihren Webshop einbinden zu können. Auch bei ihnen steht die Sicherheit an der ersten Stelle und eine einfache Integration ist für den Erfolg - trotz internationalem Druck - notwendig. 
 Dabei fährt Datatrans eine Zweiwegstrategie. Einerseits stellen sie stellen für bekannte Shopsysteme gleich ganze Plugins zur Verfügung[^dt-Plugin]. Auf der anderen Seite bieten sie ausführlich beschriebene und einfache Schnittstellen an.
 
 #### Datatrans Zahlungsablauf
@@ -137,7 +138,7 @@ Um die Gateway-Implementation der Datatrans als Ganzes zu verstehen, führen wir
 2. 	Der Merchant (Webshop) zeigt Zahlungsseite von Datatrans, Karteninhaber gibt seine Kartendaten ein.
 3. 	Datatrans autorisiert und verarbeitet - wenn möglich - die Transaktion zum Acquirer (akquirierende Bank).
 4. 	Datatrans zeigt den Status dem Kunden an und sendet Status dem Merchant (Webshop) zurück.
-5. 	Merchant (Webshop) zeigt dem Karteninhaber die Antwortseite (erfolgreich oder abgelehnt)
+5. 	Merchant (Webshop) zeigt dem Karteninhaber die Antwortseite (erfolgreich oder abgelehnt).
 [^dt-api]
 
 [^dt-Plugin]: Übersicht der Web-Shop Plugins [@datatrans-Plugin]
@@ -181,7 +182,7 @@ Implementierungscode der Datatrans:
 
 ### Integrationsentscheid
 
-Die Stragtegie der Paymentintegration von Datatrans soll für den Authentifizierungservice genutzt werden. 
+Die Stragtegie der Paymentintegration von Datatrans soll für den Authentifizierungsservice genutzt werden. 
 
 Durch automatisches Öffnen der Lightbox erreicht der Endbenutzer mühelos den Schritt der Authentifizierung. Die Authentifizierung springt ihm nahezu entgegen. Dadurch ist eine hohe Effektivität gegeben. Der User bleibt auf derselben Seite und wird dadurch nicht aus dem Fluss der Abarbeitung der Interaktivität geworfen. Das Verfahren ist sehr effizient. Die Javascript- und CSS-Daten werden beim Laden der Interaktivität bereits mitgeladen. So entsteht eine minimale Wartezeit beim Einblenden der Lightbox. Dies ist für den User nicht spürbar oder störend. 
 
@@ -228,46 +229,46 @@ Nach Abschluss der Authentifizierung erhält der User visualisiert ein Feedback.
 
 \newpage
 
-##Sicherheitstufen integrieren
+##Sicherheitsstufen integrieren
 
-Im Kapitel [Recherche] wurden einige Sicherheitskomponenten recherchiert und illustriert. Es gilt nun ein Setting an Komponenten zu finden, welche dem Programmierer eine Breite Auswahlmöglichkeit (NFREQ-210) bietet  und eine genügende Verbreitung in der Schweiz hat (NFREQ-212), ihn aber nicht durch komplexes Auswählen der Sicherheitsstufen aufhält (NFREQ-222).
+Im Kapitel [Recherche] wurden einige Sicherheitskomponenten recherchiert und illustriert. Es gilt nun ein Setting an Komponenten zu finden, welche dem Programmierer eine breite Auswahlmöglichkeit (NFREQ-210) bietet  und eine genügende Verbreitung in der Schweiz hat (NFREQ-212), ihn aber nicht durch komplexes Auswählen der Sicherheitsstufen aufhält (NFREQ-222).
 
 ####Ausweisnummer
-Durch Überprüfung der Checksumme und Doppelspeicherung des Ausweises soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da der Checksummen-Alogrithmus öffentlich ist, können diese auch vom Anwender (automatisch) generiert werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Sicherheitsstufe Ausweisnummer ist, dass es dem Anwender eine, wenn auch nicht existierende, Sicherheit vermittelt und keine Kosten verursacht.
+Durch Überprüfung der Checksumme und Doppelspeicherung des Ausweises soll ein Benutzer, der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da der Checksummen-Algorithmus öffentlich ist, können diese auch vom Anwender (automatisch) generiert werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Sicherheitsstufe Ausweisnummer ist, dass es dem Anwender eine, wenn auch nicht existierende, Sicherheit vermittelt und keine Kosten verursacht.
 
 ####Browser Fingerprint
-Durch Generierung eine Browser Fingerprints (siehe [Recherche]) kann der Browser identifiziert werden. Das Verfahren kann zu 94% einen User wiedererkennen. Das Verwenden mehrerer Browser oder Geräte führt zu verschiedenen Browser Fingerprints. iPhones taugte nicht für diese Methode. Deshalb muss Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewertet werden. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
+Durch Generierung eines Browser Fingerprints (siehe [Recherche]) kann der Browser identifiziert werden. Das Verfahren kann zu 94% einen User wiedererkennen. Das Verwenden mehrerer Browser oder Geräte führt zu verschiedenen Browser Fingerprints. Das iPhone taugt nicht für diese Methode. Deshalb muss Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewertet werden. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
 
 ####Cookie
 Durch Speicherung des Cookies soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Da die Cookies clientseitig verwaltet werden, können diese auch vom Anwender manipuliert werden. Mit Browser-Makro-Tools wie iMacro kann ganz einfach ein Cookie gelöscht werden. Dadurch ist sowohl das Verhindern mehrfacher Teilnahmen, wie auch das Verhindern einer automatisierten Teilnahme an einer Interaktivität ungenügend geschützt. Vorteilhaft für die Cookiemethode ist, dass der Benutzer keinen Aufwand betreiben muss und es keine Kosten verursacht. Die Automatisierung ist bei Flash-Cookies etwas aufwendiger, da die Verbreitung kleiner ist.
 
 ####E-Mail Authentifizierung
-Der Benutzer gibt seine E-Mail ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die E-Mail gehört. Der Benutzer kann nicht eindeutig anhand der E-Mail erkannt, die Automatisierung ist aufwendig, dafür entstehen keine direkten Kosten.
+Der Benutzer gibt seine E-Mail ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die E-Mail gehört. Da einfach mehrere E-Mail-Adressen registriert werden können, kann der Benutzer nicht eindeutig anhand der E-Mail-Adressen erkannt werden. Die Automatisierung ist aufwendig. Für die E-Mail Authentifizierung entstehen keine direkten Kosten.
 
 ####IP-Adresse
-Durch Speicherung der IP-Adresse soll ein Benutzer der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP-Adresse vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss". Dadurch könnte nur einmal pro Internetanschluss an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know-How durch Tools möglich ist, lässt sowohl Eindeutigkeit und Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
+Durch Speicherung der IP-Adresse soll ein Benutzer, der bereits an einer Interaktivität teilgenommen hat, identifiziert werden. Eine IP-Adresse vertritt gegen Aussen alle Benutzer mit dem selben "Internetanschluss". Dadurch könnte nur einmal pro "Internetanschluss" an einer Interaktivität teilgenommen werden. Dass durch Wechseln des Proxys eine andere IP-Adresse verwendet werden kann und dies auch ohne IT-Know-How durch Tools möglich ist, lässt sowohl Eindeutigkeit als auch Verhinderung von Automatisierung als ungenügend bewerten. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer keinen Aufwand.
 
 ####OAuth
-Der Benutzer authentifiziert sich beim OAuth Anbieter. Mehrere Accounts können bei einem Anbieter erstellt werden. Die Erstellung eines Accounts ist meist nicht automatisierbar aber deren Verwendung. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer wenig Aufwand. 
+Der Benutzer authentifiziert sich beim OAuth Anbieter. Mehrere Accounts können bei einem Anbieter erstellt werden. Die Erstellung eines Accounts ist meist nicht automatisierbar aber dafür deren Verwendung. Die Methode kann als kostenlos eingestuft werden und generiert beim Endbenutzer wenig Aufwand. 
 
 ####Postversand Authentifizierung
-Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht dass falsch adressierte Briefe den Empfänger trotzdem erreichen, wird es bei der Eindeutigkeit in der Bewertung Abzug geben. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach Erhalt auf einer Webseite quittieren.
+Der Benutzer gibt seine Adresse ein. Um sicherzustellen, dass die Adresse dem User gehört, wird automatisiert ein Brief an die Adresse gesendet. Da die Gefahr besteht, dass falsch adressierte Briefe den Empfänger trotzdem erreichen, wird es bei der Eindeutigkeit in der Bewertung Abzug geben. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro Brief sind von allen aufgelisteten Methoden am höchsten. Der Benutzer muss bei dieser Methode den Brief nach Erhalt auf einer Webseite quittieren.
 
 ####SMS Authentifizierung
-Der Benutzer gibt seine Mobilenummer ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die Telefonnummer gehört. In der Schweiz können maximal 5 Mobilenummern bei den Anbietern gekauft werden (Siehe Kapitel [Recherche]). Der Benutzer kann eindeutig anhand der Mobilenummer erkannt werden. Die möglichen Mobilenummern pro User sind beschränkt. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro SMS sind tragbar. Der Benutzer muss bei dieser Methode sein Handy bei sich tragen und den Code übertragen.
+Der Benutzer gibt seine Mobilenummer ein. Durch Versenden eines Codes wird sichergestellt, dass dem Benutzer die Telefonnummer gehört. In der Schweiz können maximal fünf Mobilenummern bei den Anbietern gekauft werden (Siehe Kapitel [Recherche]). Der Benutzer kann eindeutig anhand der Mobilenummer erkannt werden. Die möglichen Mobilenummern pro User sind beschränkt. Eine Automatisierung ist praktisch unmöglich. Die Kosten pro SMS sind tragbar. Der Benutzer muss bei dieser Methode sein Handy bei sich tragen und den Code übertragen.
 
 ####SuisseID
 Der Benutzer authentifiziert sich via SuisseID. SuisseID garantiert eine hoche Sicherheit und verhindert Mehrfachteilnahmen. Die Verbreitung ist jedoch ziemlich gering und die Kosten für den Endbenutzer zu hoch.
 
 ####Telefon Authentifizierung
-Der Benutzer gibt seine Telefonnummer ein. Der Benutzer wird automatisiert angerufen und die Computerstimme liest ein Code vor, welcher der Benutzer im Rückbestätigungsformular einträgt. Dadurch wird sichergestellt, dass die Telefonnummer dem Benutzer gehört. Mobilenummern sind wie vorhin erwähnt eingeschränkt. Festnetzanschlüsse unterliegen einer finanziellen Hürde. 
+Der Benutzer gibt seine Telefonnummer ein. Der Benutzer wird automatisiert angerufen und die Computerstimme liest einen Code vor, welcher der Benutzer im Rückbestätigungsformular einträgt. Dadurch wird sichergestellt, dass die Telefonnummer dem Benutzer gehört. Mobilenummern sind, wie vorhin erwähnt, eingeschränkt. Festnetzanschlüsse unterliegen einer finanziellen Hürde. 
 
 
 
 
 
 
-###Sicherheitstufen bewerten
+###Sicherheitsstufen bewerten
 Die Recherche der verschiedenen Sicherheitsstufen wurden dem Auftraggeber vorgelegt. Beim Auftraggeber wurden die verschiedenen Sicherheitsstufen intern besprochen und bewertet. Pro Sicherheitsstufen wurde den vier definierten Aspekten und dem Musskriterium Verbreitung eine Bewertung in Form einer Schweizer Schulnote vergeben.
 
 ---------------------------------------------------------------------------------------------------------------------------
@@ -304,7 +305,7 @@ Table: Übersicht der Authentifizierungs Methoden
 
 
 ###Auswahl der zu integrierenden Sicherheitsstufen
-SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schweiz ([NFREQ-212](FREQ-212)) keine genügende Note und werden daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu erlangen wurden die folgenden Methoden mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
+SuisseID und Flash-Cookies erreichen beim Musskriterium Verbreitung in der Schweiz (nach NFREQ-212) keine genügende Note und werden daher ausgeschlossen. Um die geforderte Breite an Sicherheitsmethoden zu erlangen, wurden die folgenden Methoden mit verschiedenen Stärken in Aspekten durch den Auftraggeber ausgewählt:
 
 - IP-Adresse
 - Captcha
@@ -359,7 +360,7 @@ Um das Konzept besser zu verstehen, soll der Beispielcode von [Design by Contrac
 MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
 
 ###Entscheidung
-Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory, um die Modularität für NFREQ-115 sicherzustellen. MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zur Verfügung.  MEF bietet des Weiteren die Möglichkeit die DLL-Daten zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authentifizierungsservice basierend auf MEF zu integrieren.
+Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory, um die Modularität für NFREQ-115 sicherzustellen. MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zur Verfügung.  MEF bietet des Weiteren die Möglichkeit die DLL-Daten zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authentifizierungsservices basierend auf MEF zu integrieren.
 
 \newpage
 ### Sicherheitsstufen Library-Übersicht anhand MEF
@@ -371,13 +372,13 @@ Basierend auf dem Managed Extensibility Framework wird der Aufbau umstrukturiert
 
 \newpage
 
-### Definition der Sicherheitsufenverträge
+### Definition der Sicherheitsstufenverträge
 
 ####Verträge für das Backend
-Pro Projekt des Anbieters und muss der Programmierer für jede Sicherheitsstufe verschiedene Konfigurationen tätigen können. Die Konfigurationen können da variieren. So kann bei der Sicherheitsstufe E-Mail der Absendername und Antwort-E-Mail-Adresse definiert werden, bei der Telefonvalidierung ein Grusswort. Es soll eine Abfrage der Konfigurationsparameter pro Plugin vorhanden sein. Diese soll mit allfällig bereits erfassten Werten übermittelt werden. Um die Werte zu speichern muss eine Speicherfunktionion pro Plugin aufrufbar sein. Weiter sollen statische Vergleichsparameter pro Plugin übergeben werden können. Die Vergleichsparameter entsprechen generell den Angaben aus Kapitel [Sicherheitstufen bewerten]. Für neuere Plugins werden diese Bewertungen vom Auftraggeberteam neu definiert. Anzumerken ist hier, dass die Studienergebnisse zentral verwaltet werden und dynamisch, sofern das Plugin in der Studie bewertet wurde, ausgelesen werden.
+Pro Projekt des Anbieters und muss der Programmierer für jede Sicherheitsstufe verschiedene Konfigurationen tätigen können. Die Konfigurationen können da variieren. So kann bei der Sicherheitsstufe E-Mail der Absendername und Antwort-E-Mail-Adresse definiert werden, bei der Telefonvalidierung ein Grusswort. Es soll eine Abfrage der Konfigurationsparameter pro Plugin vorhanden sein. Diese soll mit allfällig bereits erfassten Werten übermittelt werden. Um die Werte zu speichern muss eine Speicherfunktionion pro Plugin aufrufbar sein. Weiter sollen statische Vergleichsparameter pro Plugin übergeben werden können. Die Vergleichsparameter entsprechen generell den Angaben aus Kapitel [Sicherheitsstufen bewerten]. Für neuere Plugins werden diese Bewertungen vom Auftraggeberteam neu definiert. Anzumerken ist hier, dass die Studienergebnisse zentral verwaltet werden und dynamisch, sofern das Plugin in der Studie bewertet wurde, ausgelesen werden.
 
 ####Verträge Frontend
-Der Authentifizierungsservice soll von jedem Sicherheitstufen-Plugin den Status über die Validierung erfragen können. Um die Validierung der einzelnen Stufe (noch einmal) zu beginnen oder als valide zu bezeichnen.
+Der Authentifizierungsservice soll von jedem Sicherheitsstufen-Plugin den Status über die Validierung erfragen können. Um die Validierung der einzelnen Stufe (noch einmal) zu beginnen oder als valide zu bezeichnen.
 Das Microsoft MVC-Framework braucht, falls nicht anders definiert, eine Index-Seite pro Controller. Diese Vorbedingung wird als Einstiegspunkt für die Validierung einer Sicherheitsstufe verwendet.
 
 Aus den gegeben Ansprüchen wird folgendes Interface konzeptioniert:
@@ -467,14 +468,14 @@ Der Konfigurator wird durch den Programmierer administriert. Hier gilt es zu ver
 
 ##Wahl des Applikation Hosters
 ###Asp.net Shared Hosting
-Ein ASP.NET Shared Hosting ist durchaus für komplexere Webapplikationen wie der Authentifizierungservice ausgerichtet. Die Kosten sind jährlich fix und nicht abhängig von der eigentlichen Nutzung. Überschreitet die Applikation den Speicherbedarf, Zugriffszahlen oder Traffic kann auf ein grösseres Paket gewechselt werden. Ein Wechsel zu einem kleineren Paket ist meist nur jährlich möglich. Die Skalierbarkeit ist stark eingeschränkt. Die Daten können innerhalb der Schweiz gespeichert werden. Der zuständige Systemtechniker ist meist direkt oder indirekt kontaktierbar. Spezielle Konfigurationen am Hosting sind nicht möglich. Die Datencenter sind meist nicht redundant geführt. Fällt das Datencenter aus ist, die Applikation nicht verfügbar.
+Ein ASP.NET Shared Hosting ist durchaus für komplexere Webapplikationen wie der Authentifizierungsservice ausgerichtet. Die Kosten sind jährlich fix und nicht abhängig von der eigentlichen Nutzung. Überschreitet die Applikation den Speicherbedarf, Zugriffszahlen oder Traffic kann auf ein grösseres Paket gewechselt werden. Ein Wechsel zu einem kleineren Paket ist meist nur jährlich möglich. Die Skalierbarkeit ist stark eingeschränkt. Die Daten können innerhalb der Schweiz gespeichert werden. Der zuständige Systemtechniker ist meist direkt oder indirekt kontaktierbar. Spezielle Konfigurationen am Hosting sind nicht möglich. Die Datencenter sind meist nicht redundant geführt. Fällt das Datencenter aus ist, die Applikation nicht verfügbar.
 
 ###Cloud Hosting
 Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting ist skalierbar und kann sich automatisiert an die aktuellen Nutzungsbedürfnissen anpassen. Die realen Kosten sind im vornherein schwerer zu definieren. Die Daten sind in der Cloud redundant gehalten. Fällt ein Datencenter aus, kann ein anderes dessen Aufgabe übernehmen. Ein schweizer Anbieter der direkt ASP.NET Webservice als Cloud-Hostingservice anbietet wurde nicht gefunden.[^cloudservicech] Indirekt z.b. über ein Docker Image könnte auch ein Schweizer Anbieter berücksichtigt werden. Die genutzten Serverdienste können komplett an seine eigenen Bedürfnissen angepasst werden.
-Beim Cloud Service von Microsoft kann direkt im VisualStudio administriert werden. Alle nötigen Resourcen können in der Entwicklungsumgebung konfiguriert werden. Ausserdem ist das einfache publishen der Webanwendung praktisch über einen Knopfdruck aus Visual Studio möglich. 
+Beim Cloud Service von Microsoft kann direkt im VisualStudio administriert werden. Alle nötigen Resourcen können in der Entwicklungsumgebung konfiguriert werden. Ausserdem ist das einfache Publishen (veröffentlichen) der Webanwendung praktisch über einen Knopfdruck aus Visual Studio möglich. 
 
 ###Entscheidung
-Die in NFREQ-132 geforderte Skalierbarkeit, nutzungsabhängige Kosten und die Freiheit in der Serverdienst-Konfiguration überwiegen der Speicherung der Daten in der Schweiz. Das einfache publishen (veröffentlichen) und konfigurieren einer Web-Applikation aus Visual Studio wird bei Microsoft Azure angeboten, was den Development Workflow erheblich unterstützt. Deshalb ist der Authentifizierungsservice im Cloud Hosting zu betreiben. 
+Die in NFREQ-132 geforderte Skalierbarkeit, nutzungsabhängige Kosten und die Freiheit in der Serverdienst-Konfiguration überwiegen dem Speicherstandort Schweiz. Das einfache Publishen (veröffentlichen) und konfigurieren einer Web-Applikation aus Visual Studio wird bei Microsoft Azure angeboten, was den Development Workflow erheblich unterstützt. Deshalb ist der Authentifizierungsservice im Cloud Hosting zu betreiben. 
 
 
 [^cloudservicech]: Stand 18. Dezember 2015

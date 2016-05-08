@@ -7,7 +7,7 @@
 Eine ausführliche Erklärung der Fachbegriffe befindet sich im Anhang unter dem Kapitel [Glossar].
 
 ## Erläuterung der Grundlagen
-In diesem Kapitel werden Funktionsweisen und Grundlage ausgeführt, welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden. 
+In diesem Kapitel werden Funktionsweisen und Grundlagen ausgeführt, welche für die Bearbeitung dieser Bachelorthesis herangezogen wurden. 
 
 ###Authentifizierung
 Authentifizieren - beglaubigen, die Echtheit von etwas bezeugen [^duden]
@@ -113,13 +113,13 @@ Dank der weiten Verbreitung gibt es nun in allen bekannten Programmiersprachen e
 
 Die grössten [OAuth]-Provider wie Google, Facebook und Twitter erziehlen eine weite Verbreitung weltweit. Ganze *78%* [@goldbachsocial] der Schweizer Bevölkerung nutzten SocialMedia und besitzen dadurch einen OAuth-Account.
 
-![Aktive Nutzer Weltweit und in der Schweiz [^socialmediaweltweit]](images/excel-statistik/socialmedia-aktivenutzer.png)
+![Aktive Nutzer weltweit und in der Schweiz [^socialmediaweltweit]](images/excel-statistik/socialmedia-aktivenutzer.png)
 
 
 
-[^socialmediaweltweit]: Die Statistik der aktiven Nutzer Weltweit wurde basierend auf den Daten von SocialMedia-Institute [@smi]erstellt. Facebook- und Twitter-Daten sind am 5. November 2015 und die Google-Daten im 2014 erhoben worden.
+[^socialmediaweltweit]: Die Statistik der aktiven Nutzer weltweit wurde basierend auf den Daten von SocialMedia-Institute [@smi]erstellt. Facebook- und Twitter-Daten sind am 5. November 2015 und die Google-Daten im 2014 erhoben worden.
 Die Statistik der aktiven Nutzer in der Schweiz wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben worden.
-[^magnolia]: Ma.gnolia ist eine Leszeichen-Webseite auf der User Leszeichen bis 2009 bewerten und auch privat verwalten konnte.
+[^magnolia]: Ma.gnolia ist eine Lesezeichen-Webseite auf der User Lesezeichen bis 2009 bewerten und auch privat verwalten konnten.
 
 ####Vorteil
 Mindestes 78% der Schweizer Bevölkerung besitzt bereits einen OAuth Account. Das Protokoll ist ein etablierter Standard.
@@ -161,7 +161,7 @@ Es wurde versucht, bei zwei unabhängigen Handyanbietern mehr als fünf Swisscom
 Christian Bachmann kaufte über zwei Wochen verteilt bei dem Anbieter Migros Electronics in der Migros Limmat, Interdiscount im Manor Winterthur, Interdiscount im Zürich HB bei unterschiedlichen Verkäufer ein Swisscom Prepaidhandy. Der Einkauf des sechsten Handys wurde ebenfalls durch die Kasse abgelehnt. Die Nummer liess sich nicht erneut auf den Kunden registrieren, da er schon fünf SIM Karten bei der Swisscom besass.
 
 ####Sunrise
-Die Sunrise hat nach Rücksprache ein PDF mit Ihren Bestell- und Lieferbedingunge zugesendet.[^sunrise_lieferbedienungen] Die maximale Anzahl SIM-Karten ist in diesen Bestell- und Lieferbedingungen festgelegt. Auch die Sunrise hat das Maximum auf fünf SIM-Karten pro Person festgelegt.
+Die Sunrise hat nach Rücksprache ein PDF mit ihren Bestell- und Lieferbedingungen zugesendet.[^sunrise_lieferbedienungen] Die maximale Anzahl SIM-Karten ist in diesen Bestell- und Lieferbedingungen festgelegt. Auch die Sunrise hat das Maximum auf fünf SIM-Karten pro Person festgelegt.
 
 ####SALT
 Bei der Firma SALT konnte mir ebenfalls kein Dokument mit einer Kennzahl gegeben werden. SALT vergibt gemäss ihrer schriftlichen Auskunft [^salt_email] pro Person maxmal drei SIM Karten.
@@ -173,7 +173,7 @@ Die mehrfache Registrierung ist auf maximal fünf SIM-Karten/Rufnummern beschrä
 ####Nachteile
 Der Versand von SMS verursacht Kosten. Die Implementation bedarf spezifisches technisches Know-How.
 
-[^websmskosten]: Die Kosten sind am 28. Dezember 2015 unter folgendem Link abgerufen worden: https://websms.ch/preise#at-preisuebersicht 
+[^websmskosten]: Die Kosten sind am 28. Dezember 2015 unter folgendem Link abgerufen worden: \ https://websms.ch/preise#at-preisuebersicht 
 [^swisscom_chat]: Chat-Protokoll Swisscom 12.Februar 2016 http://bit.ly/swisscom-chat
 [^salt_email]: E-Mail von Salt 13.Februar 2016 http://bit.ly/salt-email
 [^sunrise_lieferbedienungen]: Kopie Bestell- und Lieferbedingungen http://bit.ly/sunrise-bedienungen
@@ -192,21 +192,21 @@ Kleine Verbreitung und hohe Kosten für den Endnutzer sind die Nachteile von Sui
 
 
 ##Findings
-Auf dem Markt sind verschiedene Anbieter, welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service, welcher es erlaubt individuell konfigurierbare Sicherheitstufen festzulegen und diese in eine bestehende Interaktivität einzubauen wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
+Auf dem Markt sind verschiedene Anbieter, welche Interaktivitäten schützen können oder gar ganze Packages anbieten. Ein Service, welcher es erlaubt individuell konfigurierbare Sicherheitsstufen festzulegen und diese in eine bestehende Interaktivität einzubauen, wurde nicht gefunden. Einige Anbieter könnten als einzelne Sicherheitsstufe in der Umsetzung berücksichtigt werden. [^stand20160108]
 
 
 
 ## Authentifizierungs-Komponenten
-Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt werden. Folgend gilt es die Komponenten zu erklären.
+Die Authentifizierung kann mit verschiedenen Komponenten durchgeführt werden. Folgend gilt es, die Komponenten zu erklären.
 
 ###Cookie
 Ein Cookie ist ein kurzes Text-Snippet, welches beim Besuch einer Webseite an den Browser gesendet wird. Dabei kann das Cookie serverseitig vom Webserver an den Browser gesendet werden oder in einem Skript wie Javascript erstellt werden. Der Browser sendet das Cookie bei jeder Aufforderung wieder der Webseite zu. 
 Der Erfinder der Cookie-Technologie ist Vita Lou Montulli, der 1994 nach seinem Studienabbruch bei Netscape einstieg und zudem den Navigator mitentwickelte.
 Der Betreiber der Interaktivität speichert also im Cookie die Teilnahme. Beim erneuten Aufruf erhält er das Cookie und weiss so, dass der Teilnehmer schon einmal teilgenommen hat oder nicht. 
-Das Absichern von Interaktivitäten durch Cookies ist weit verbreitet. Durch die browserseitige/clientseitige Speicherung kann diese Speicherung auch clientseitig relativ einfach manipuliert werden. [^cookie-centra]     [^google-cookies]
+Das Absichern von Interaktivitäten durch Cookies ist weit verbreitet. Durch die browserseitige/clientseitige Speicherung kann diese Speicherung auch clientseitig relativ einfach manipuliert werden.  [^google-cookies]
 
 ####Automatisierungsmöglichkeit und Mehrfachteilnahme
-Die Automatisierung ist ohne IT-Knowhow möglich. Es stehen einige Browser Plugins zur Verfügung, welche es ermöglichen, sein Surfverhalten über einfache Record-Funktionen aufzunehmen und danach Cookies zu löschen. So kann mehrfach an einer Interkativität wie z.B. Umfragen teilgenommen werden.
+Die Automatisierung ist ohne IT-Know-How möglich. Es stehen einige Browser Plugins zur Verfügung, welche es ermöglichen, sein Surfverhalten über einfache Record-Funktionen aufzunehmen und danach Cookies zu löschen. So kann mehrfach an einer Interaktivität wie z.B. Umfragen teilgenommen werden.
 
 ####Kosten
 Cookies verursachen keine direkten Kosten.
@@ -228,7 +228,7 @@ Flash-Cookies verursachen keine direkten Kosten.
 
 ###IP-Adresse
 Bei der Nutzung einer Interaktivität wird die IP-Adresse des Teilnehmers gespeichert. So kann bei erneutem Teilnehmen die Teilnahme verweigert werden.
-Das Internetprotokoll, kurz "IP", sieht für jedes Gerät, welches an einem IP-Netzwerk angeschlossen ist, eine eindeutige Adresse vor. Generell wird im Internet über den "IP Version 4 Standart" kommmuniziert. Damit lassen sich aber nur 4,22 Miliarden eindeutige Adressen im World Wide Web vergeben. Deshalb mussten einige Methoden entwickelt werden um vorerst das Problem umgehen zu können. Unter anderem identifiziert sich ein Router wie ein Rechner, und nutzt intern mittels sub-netting andere IP-Adressen. Gegen aussen haben also alle Nutzer des Netzwerks die selbe IP-Adresse. Dadurch entsteht die Problematik an dieser Methode, dass in einem Grossraumbüro mit einem Internetanschluss auch nur eine Person an einem Wettbewerb teilnehmen kann.[^pclexikon-ip]
+Das Internetprotokoll, kurz "IP", sieht für jedes Gerät, welches an einem IP-Netzwerk angeschlossen ist, eine eindeutige Adresse vor. Generell wird im Internet über den "IP Version 4 Standart" kommuniziert. Damit lassen sich aber nur 4,22 Milliarden eindeutige Adressen im World Wide Web vergeben. Deshalb mussten einige Methoden entwickelt werden um vorerst das Problem umgehen zu können. Unter anderem identifiziert sich ein Router wie ein Rechner, und nutzt intern mittels sub-netting andere IP-Adressen. Gegen aussen haben also alle Nutzer des Netzwerks die selbe IP-Adresse. Dadurch entsteht die Problematik an dieser Methode, dass in einem Grossraumbüro mit einem Internetanschluss auch nur eine Person an einem Wettbewerb teilnehmen kann.[^pclexikon-ip]
 
 
 ####Mehrfachteilnahme
@@ -242,16 +242,17 @@ Das Authentifzieren via IP-Adresse verursacht keine direkten Kosten.
 
 
 
-[^cookie-centra]: [@cookie-centra]
+
 [^google-cookies]: [@google-cookies]
 [^pclexikon-ip]: [@pclexikon-ip]]
 
+\newpage
 
-###Ausweisnummer Schweizer Pass oder Identitätskarte
-Die Schweiz führt für ihre Staatangehörigen zwei Ausweisarten: den Schweizer Pass und die Identitätskarte. Diese dienen zum Nachweis der Schweizer Staatsangehörigkeit und der Identität. In der Schweiz besteht weder eine Ausweispflicht noch eine Mitführpflicht, niemand muss eine Identitätskarte oder einen Pass besitzen oder gar bei sich tragen.
-Auf der Rückseite der Identitätskarte oder in der 1. Innenseite des Passes befindet sich im unteren Bereich eine maschinenlesbare Zone, welcher auch von Menschen gelesen werden können. Die verschiedenen Bereiche, werden in der folgenden Abbildung beschrieben. Die orange umrandeten Zahlen sind jeweils Checksummen. Der Orange Bereich ist die Gesamtchecksumme.
+###Ausweisnummer: Schweizer Pass oder Identitätskarte
+Die Schweiz führt für ihre Bürger zwei Ausweisarten: Den Schweizer Pass und die Identitätskarte. Diese dienen zum Nachweis der Schweizer Staatsangehörigkeit und der Identität. In der Schweiz besteht weder eine Ausweispflicht noch eine Mitführpflicht, niemand muss eine Identitätskarte oder einen Pass besitzen oder gar bei sich tragen.
+Auf der Rückseite der Identitätskarte oder auf der ersten Innenseite des Passes befindet sich im unteren Bereich eine maschinenlesbare Zone, welche auch von Menschen gelesen werden kann. Die verschiedenen Bereiche werden in der folgenden Abbildung beschrieben. Die orange umrandeten Zahlen sind jeweils Checksummen. Der orange Bereich ist die Gesamtchecksumme.
 
-![Beispiel der maschinenlesbare Zone einer Identitätskarte und eines Passes](images/ausweis.png)
+![Beispiel der maschinenlesbaren Zone einer Identitätskarte und eines Passes](images/ausweis.png)
 
 ####Checksummenberechnung
 Die Checksummenberechnung funktioniert wie folgt:
@@ -282,14 +283,16 @@ Summe = 120
 ~~~~~~~
 
 \newpage
-Es gibt aus Datenschutzgründen keinen öffentlichen Service über welchen man die Identität anhand der Passangaben überprüfen könnte. So besteht nur die Möglichkeit zur Überprüfen ob das Eingegebene Muster anhand der Checksummen stimmt und ob bereits dieselben Informationen vorhanden sind.
+Es gibt aus Datenschutzgründen keinen öffentlichen Service, über welchen man die Identität anhand der Passangaben überprüfen könnte. So besteht nur die Möglichkeit zu überprüfen, ob das eingegebene Muster anhand der Checksummen stimmt und ob bereits dieselben Informationen vorhanden sind.
 
 ####Mehrfachteilnahme und Automatisierungsmöglichkeit
-Der Alogrithmus der Checksummen kann nachgebaut werden und so automatisiert Identitätskarten generiert werden. Dadurch kann mehrfach und automatisiert an der Aktivität teilgenommen werden werden.
+Der Algorithmus der Checksummen kann nachgebaut werden und so können automatisiert Identitätskarten generiert werden. Dadurch kann mehrfach und automatisiert an der Aktivität teilgenommen werden werden.
 
 ####Kosten
-Die Überprüfung verursacht keine direkten Kosten.
+Die Überprüfung verursacht keine direkten Kosten. [^ausweis1] [^ausweis2]
 
+[^ausweis1]:[@ausweis1]
+[^ausweis2]:[@ausweis2]
 
 \newpage
 
@@ -299,7 +302,7 @@ Captcha ist ein Test, mit dem festgestellt werden kann, ob sich ein Mensch oder 
 Im Jahr 2000 wurde das Captcha an der Carnegie Mellon University erfunden. Captcha steht für **C**ompletely **A**utomated **P**ublic **T**uring test to tell **C**omputers and **H**umans **A**part. Luis von Ahn, Professor der Entwickler-Gruppe, erklärte die Dringlichkeit von Captcha damals so: "Anybody can write a program to sign up for millions of accounts, and the idea was to prevent that".[^captcha]
 
 ####Captcha Zahlen
-In 2014 wurden 200 Millionen Captchas  pro Tag eingegeben. Dabei braucht ein User durchschnittlich 10 Sekunden das entspricht 500'000 Stunden.[^statisticinfo]
+In 2014 wurden 200 Millionen Captchas  pro Tag eingegeben. Dabei braucht ein User durchschnittlich 10 Sekunden. Das entspricht 500'000 Stunden.[^statisticinfo]
 
 ![Beispiele von Captchas *Quelle:drupal.org*](images/captcha.png)
 
@@ -310,7 +313,7 @@ Die Automatisierung wird unterbunden.
 Eine manuelle Mehrfachteilnahme ist möglich.
 
 ####Kosten
-Es enstehen keine direkten Kosten.
+Es entstehen keine direkten Kosten.
 
 
 [^duden]: [@duden]
@@ -327,7 +330,7 @@ Im Alltag bei einem Einkauf im Detailhandel authentifiziert sich der EC-Kartench
 Die folgenden Authenfizierungen basieren auf den Prinzip der Zwei-Faktor-Authentifizierung.
 
 ###E-Mail-Bestätigungscode
-Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungscode quasi zum Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mailadresse auch tatsächlich existiert und der User darauf Zugriff hat. Der User soll also auch bei der Authentifizierungsschnittstelle seine E-Mailadresse eintragen und erhält dann umgehend den Bestätigungslink an diese zugesandt.
+Im Registrationsprozess ist das Erhalten eines E-Mails mit Bestätigungscode quasi zum Standart geworden. Durch diese Methodik kann man garantieren, dass die angegebene E-Mail Adresse auch tatsächlich existiert und der User darauf Zugriff hat. Der User soll also auch bei der Authentifizierungsschnittstelle seine E-Mail Adresse eintragen und erhält dann umgehend den Bestätigungslink an diese zugesandt.
 
 ####Automatisierungsmöglichkeit
 Das automatische Auslesen von E-Mails ist möglich. Jedoch ist der Aufwand dafür sehr hoch.
@@ -335,7 +338,7 @@ Das automatische Auslesen von E-Mails ist möglich. Jedoch ist der Aufwand dafü
 ####Mehrfachteilnahme
 Ein User kann verschiedene E-Mail Adressen besitzen. Das Erstellen von neuen E-Mail Adressen ist mit Aufwand verbunden, aber einfach möglich.
 
-Anbieter wie 10-Minutes Mail [^10minutemail] stellen auf Knopfdruck für einige Minuten eine temporäre E-Mail Adresse zur Verfügung. Dadurch können schnell einige E-Mailadressen erstellt werden. 
+Anbieter wie 10-Minutes Mail [^10minutemail] stellen auf Knopfdruck für einige Minuten eine temporäre E-Mail Adresse zur Verfügung. Dadurch können schnell einige E-Mail Adressen erstellt werden. 
 Diese Domains müssen über eine aufwendige Blacklist gefiltert werden oder durch ein zeitversetztes Bestätigungsmail ausgehebelt werden.
 
 ####Kosten
@@ -373,9 +376,9 @@ Die Kosten berechnen sich bei den analysierten Anbietern basierend auf einer ger
 
 
 ###Postversand
-Wie kann sichergestellt werden, dass eine Person auch tatsächlich am angegebenen Ort wohnt? Im Telefonbuch digital oder analog waren früher fast alle Personen erfasst. Immer weniger Personen haben heute einen Fixanschluss und einige lassen Ihre Nummern nicht mehr eintragen. Nur vereinzelte Personen tragen ihre mobile Telefonnumer und Adresse im Telefonbuch ein.
+Im Telefonbuch digital oder analog waren früher fast alle Personen erfasst. Immer weniger Personen haben heute einen Fixanschluss und einige lassen ihr Nummern nicht mehr eintragen. Nur vereinzelte Personen tragen ihre mobile Telefonnummer und Adresse im Telefonbuch ein.
 Google steht vor dem gleichen Problem mit ihrem Produkt Google Maps. In Google Maps sollen schnell neue Firmendaten, Veranstaltungslocations oder andere Adresseinträge erfasst werden können. Doch sollen Betrüger oder Spassvögel daran gehindert werden, Falscheinträge zu machen. Daher versendet Google zur Verifikation einfach einen Code per Brief bzw.Postkarte an die Adresse.[^googlebusiness]
-Dieses simple Konzept kann auch für die Authentifizierungsschnittstelle umsetzt werden, um die Adresse eindeutig zu verifizieren. Einen Haken hat dieses Konzept jedoch. Jemand muss den Brief ausdrucken, in ein Couvert legen, frankieren und per Post versenden. Die kann als Service, z.B. beim Schweizer Startup pingen.com eingekauft werden. 
+Dieses simple Konzept kann auch für die Authentifizierungsschnittstelle umsetzt werden, um die Adresse eindeutig zu verifizieren. Einen Haken hat dieses Konzept jedoch. Jemand muss den Brief ausdrucken, in ein Couvert legen, frankieren und per Post versenden. Dies kann als Service, z.B. beim Schweizer Startup pingen.com eingekauft werden. 
 
 ####Automatisierungsmöglichkeit
 Die Automatisierung kann als nicht möglich eingestuft werden.
@@ -384,7 +387,7 @@ Die Automatisierung kann als nicht möglich eingestuft werden.
 Die Teilnahmeanzahl ist von den vorhandenen Adressanschriften abhängig und daher ist eine Mehrfachteilnahme nur eingschränkt möglich.
 
 ####Kosten
-Die Kosten berechnen sich für den Versand in der Schweiz bei dem analysierten Anbietern je nach Druck und Versandart des Empfängers zwischen CHF 1.20 und CHF 1.65.[^pingen]
+Die Kosten berechnen sich für den Versand in der Schweiz bei den analysierten Anbietern je nach Druck und Versandart des Empfängers zwischen CHF 1.20 und CHF 1.65.[^pingen]
 
 \newpage
 ###OAuth
@@ -418,27 +421,28 @@ Für den Betreiber fallen geringe Kosten an. Der Endnutzer zahlt aber einen rela
 
 ###Browser Fingerprints
 
-Der Fingerabdruck ist aus der Kriminaltechnik nicht mehr wegzudenken. Bereits vor 2000 Jahren haben Chinesen ihre Schuldscheine mit Fingerabdrücken unterzeichnet. Es sollten über 19 Jahrhunderte gehen bis der Fingerabdruck auch in der Kriminaltechnik eingesetzt wurde. Seit über 100 Jahren, genauer seit 1913, ist der Fingerabdruck auch im Dienst der Schweizer Eidgenossenschaft. 
+Der Fingerabdruck ist aus der Kriminaltechnik nicht mehr wegzudenken. Bereits vor 2000 Jahren haben Chinesen ihre Schuldscheine mit Fingerabdrücken unterzeichnet. Es sollten über 19 Jahrhunderte vergehen, bis der Fingerabdruck auch in der Kriminaltechnik eingesetzt wurde. Seit über 100 Jahren, genauer seit 1913, ist der Fingerabdruck auch im Dienst der Schweizer Eidgenossenschaft. 
 Im Gegensatz zur DNA unterscheidet sich der Fingerabdruck bei Zwillingen klar, auch wenn ähnliche Merkmale erkennbar sind. Bereits nach nur vier Monaten Schwangerschaft sind die Muster der Papillarleisten beim Embryo festgelegt. Der einzigartige Fingerabdruck des Menschen ist bereits dann fertig gestellt. Dieses Muster ändert sich bis zur Auflösung des Körpers nach dem Tod nicht mehr. [^derfingerabdruck]
 
-![Fingerabdruck Mit Kohlepulver werden Fingerabdrücke sichtbar gemacht und auf Klebefolie gesichert *Quelle:phi-hannover.de*](images/fingerabdruck.jpg)
+![Fingerabdruck: Mit Kohlepulver werden Fingerabdrücke sichtbar gemacht und auf Klebefolie gesichert. *Quelle:phi-hannover.de*](images/fingerabdruck.jpg)
 
 Der Fingerabdruck eignet sich zur Authentifizierung einer Person durch folgende Merkmale:
+
 - Der Fingerabdruck ist eindeutig.
 - Der Fingerabdruck ist über den Tod hinaus beständig.
-- Der Fingerabdruck ist von aussen einfach "abrufbar". Er ist von blossem Augenn sichtbar und wir hinterlassen das Muster der Papillarleisten auf Gegenständen wie Glas.
+- Der Fingerabdruck ist von aussen einfach "abrufbar". Er ist von blossem Auge sichtbar und wir hinterlassen das Muster der Papillarleisten auf Gegenständen wie Gläsern.
 
 
 
 ####Fingerabdruck des Browsers
-Im Gegensatz zum Datenschutz wäre es aus Sicht der eindeutigen Identifikation wünschenswert, wenn digitale Personen oder deren Geräte auch einen Fingerabdruck von sich geben würden, der sowohl eindeutig, beständig und auch abrufbar ist. Immer wieder versuchten unter dem Thema "Hardware Fingerprint" oder "Browser Fingerprint" Personen und Organisationen ein Verfahren zu entwickeln, das genau dies ermöglicht.
+Im Gegensatz zum Datenschutz wäre es aus Sicht der eindeutigen Identifikation wünschenswert, wenn digitale Personen oder deren Geräte auch einen Fingerabdruck von sich geben würden, der sowohl eindeutig, beständig als auch abrufbar ist. Immer wieder versuchten unter dem Thema "Hardware Fingerprint" oder "Browser Fingerprint" Personen und Organisationen ein Verfahren zu entwickeln, das genau dies ermöglicht.
 Microsoft führte laut eigenen Angaben [^xpactivation] mit Windows XP Produktaktivierung ein Verfahren ein, das aus Prozesser-Typ, Grafikkarteninformationen und Festplatte einen Fingerabdruck des Geräts erstellt. So konnte bei einer zweiten Aktivierung mit dem selben Registrationsschlüssel Massnahmen getroffen werden.
 
 Auch der Browser übermittelt an den Server verschiedene Informationen:
 
 \newpage
 ####Passives Fingerprinting
-Die Kommunikation zwischen Client und Browser ist paketbasiert. Es besteht keine feste Leitung zwischen Client und Server und nicht zwingend gleich bleibender Kommunikationsweg. Jedes HTTP-Pakete besitzt Header Daten aus den verschiedenen OSI-Layern. So können aus IP Header, TCP Header HTTP Header unter anderem folgende Daten gelesen werden: 
+Die Kommunikation zwischen Client und Browser ist paketbasiert. Es besteht keine feste Leitung zwischen Client und Server. Ausserdem ist der Kommunikationsweg nicht zwingend gleich bleibend. Jedes HTTP-Paket besitzt Header-Daten aus den verschiedenen OSI-Layern. So können aus IP-Header, TCP-Header und HTTP-Header unter anderem folgende Daten gelesen werden: 
 
 ---------------------------------------------------------------
 Bezeichnung 										Schicht
@@ -447,7 +451,7 @@ Quell-IP-Adresse 									IP
 
 Quellport 											TCP
 
-Aufrufende Seite („Referer“ [sic!]) 				HTTP
+Aufrufende Seite 					 				HTTP
 
 Bezeichnung des Browsers („User-Agent“) 			HTTP
 
@@ -461,34 +465,34 @@ Akzeptierende Sprachen 								HTTP
 ---------------------------------------------------------------
 Table: Übersicht möglicher passiven Daten
 
-Diese Daten werden zwingend an den Server gesendet und könnten passiv also ohne das ein zusätzliches "Programm" beim Client läuft ausgelesen werden.
+Diese Daten werden zwingend an den Server gesendet und könnten passiv, also ohne dass ein zusätzliches "Programm" beim Client läuft, ausgelesen werden.
 
 
 
 ####Aktives Fingerprinting 
-Beim aktiven Fingerprinting wird per Javascript alle möglichen Browserkennzahlen abgefragt. In der folgenden Tabelle sind die komplexeren Gewinnungen von Kennzahlen aufgelistet.  
+Beim aktiven Fingerprinting werden per Javascript mögliche Browserkennzahlen abgefragt. In der folgenden Tabelle sind die komplexeren Gewinnungen von Kennzahlen aufgelistet.  
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 Bezeichnung				Beschreibung	 						
 ----------------------- ---------------------------------------------------------------------------------------------------------------------------
-__Browser-Plugins__		Die Funktionalität der Browser wird mit Browserweiterungen ausgebaut. Bekannte Plugins: Adobe Reader, Adobe Flash
+__Browser-Plugins__		Die Funktionalität der Browser wird mit Browsererweiterungen ausgebaut. Bekannte Plugins: Adobe Reader, Adobe Flash \
 						Abfrage: navigator.plugins
 					
-__Unterstütze 			Internetdokument können verschiedene Datenarten so genannte MIME-Type unterstützen.
+__Unterstütze 			Internetdokument können verschiedene Datenarten so genannte MIME-Type unterstützen. \
 Datenarten__			Abfrage: navigator.mimeTypes
 
 __Installierte			Mittels CSS kann geprüft werden welche Schriftarten beim Client installiert sind. Dabei wird probiert einen Katalog darzustellen. Die installierten Schriften können dargestellt werden.
 Schriften__
 
-__Performance			Basierend auf Javascript Performance-Tests kann unter Berücksichtigung der Implemenation von JavaScript im Browser die Performance des Rechners ermittelt werden
+__Performance			Basierend auf Javascript Performance-Tests kann unter Berücksichtigung der Implemenation von JavaScript im Browser die Performance des Rechners ermittelt werden.
 Messung__
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 Table: Komplexere Kennzahlen aktives Fingerprinting
 
 \newpage
-Das aktive Fingerprinting kann vom Endbenutzer festgestellt werden, da Javascript-Code in seinem Browser ausgeführt werden. Noch offensichtlicher wird es, wenn nach der Analyse, die Daten auch an den Server übertragen werden.
+Das aktive Fingerprinting kann vom Endbenutzer festgestellt werden, da Javascript-Code in seinem Browser ausgeführt werden. Noch offensichtlicher wird es, wenn nach der Analyse die Daten auch an den Server übertragen werden.
 
-Eine Beispieliplementation von Browserfingerprints wurde umgestzt: <http://www.christianbachmann.ch/minifingerprint/> [^tillmannfingerprint]
+Eine Beispielimplementation von Browserfingerprints wurde umgesetzt: <http://www.christianbachmann.ch/minifingerprint/> [^tillmannfingerprint]
 
 
 

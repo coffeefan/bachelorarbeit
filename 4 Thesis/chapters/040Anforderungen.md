@@ -94,7 +94,7 @@ __Alternativszenario__      Ein bestehender Authentifizierungsvorgang wird dupli
 -------------------------------------------------------------------------------
 
 
-#### UC-25 Authentifizierung in vorhandenes System einbinden
+#### UC-25 Authentifizierungsservice in vorhandenes System einbinden
 
 -------------------------------------------------------------------------------
 __Use-Case__
@@ -115,14 +115,14 @@ __Alternativszenario__      -
 -------------------------------------------------------------------------------
 
 \newpage
-#### UC-31 User Authentifizieren
+#### UC-31 User authentifizieren
 
 -------------------------------------------------------------------------------
 __Use-Case__
 --------------------------- --------------------------------------------------
 __Ziel__                    Der User ist authentifiziert oder der User abgelehnt.
 
-__Beschreibung__           	Der User probiert sich über den Authentifizierungsservice zu authentifizieren, um an einem Social-Media Modul teilzunehmen.
+__Beschreibung__           	Der User probiert sich über den Authentifizierungsservice zu authentifizieren, um an einer Interaktivität teilzunehmen.
 
 __Akteure__                 User
 
@@ -130,9 +130,9 @@ __Vorbedingung__            Der Programmierer hat den Authentifizierungsvorgang 
 
 __Ergebnis__                Der Authentifizierungsservice authentifiziert den User oder lehnt ihn ab.
 
-__Hauptszenario__           Der User wird vom Social-Media-Modul an den Authentifizierungsservice weitergeleitet. Der User authentifiziert sich. Der User kann die Eingabe des Social-Media Moduls erfolgreich abschliessen.
+__Hauptszenario__           Der User wird von der Interaktivität an den Authentifizierungsservice weitergeleitet. Der User authentifiziert sich. Der User kann die Eingabe der Interaktivität erfolgreich abschliessen.
 
-__Alternativszenario__      Der User wird vom Social Media-Modul an den Authentifizierungsservice weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe des Social-Media-Modul nicht erfolgreich abschliessen.
+__Alternativszenario__      Der User wird von der Interaktivität an den Authentifizierungsservice weitergeleitet. Der User wird vom System abgelehnt. Der User kann die Eingabe der Interaktivität nicht erfolgreich abschliessen.
 -------------------------------------------------------------------------------
 
 #### UC-41 Report eines Authentifizierungsvorgangs
@@ -193,7 +193,7 @@ Die folgenden Abbildungen zeigen den Aufbau der Satzschablonen. Es wird zwischen
 
 \newpage
 ##Funktionale Anforderungen
-Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsservice fest. Die Wünsche des Arbeitgebers sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, zeigen dass alle gewünschten Funktionen implementiert wurden.
+Die funktionalen Anforderungen legen die Funktionen des Authentifizierungsservices fest. Die Wünsche des Arbeitgebers sind als Anforderungen umformuliert. Die funktionalen Anforderungen dienen als Grundlage für die Testfälle. Die Testfälle wiederum, zeigen dass alle gewünschten Funktionen implementiert wurden.
 
 Funktionale Anforderungen werden als FREQ-*Identifikation* bezeichnet.
 
@@ -246,12 +246,12 @@ __Business Value__     	Hoch
 -----------------------------------------------------------------------------------------------------------------
 
 \newpage
-### FREQ-211			Konfigurieren eines neuen Social-Media-Modul Authentifizierungsvorgangs
+### FREQ-211			Konfigurieren eines neuen Authentifizierungsvorgangs
 
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Programmierer kann einen neuen Authentifizierungsvorgang für sein neues Social-Media Modul erfassen.
+__Beschreibung__        Ein Programmierer kann einen neuen Authentifizierungsvorgang für seine Interaktivität erfassen.
 
 __Techn. Risiko__       Niedrig
 
@@ -263,7 +263,7 @@ __Business Value__     	Sehr Hoch
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Die Umfrageantworten müssen in den Authentifizerungsservice abgespeichert werden können. Der Import ist über direkt über die Datenbank realisierbar.
+__Beschreibung__        Die Umfrageantworten müssen in den Authentifizerungsservice abgespeichert werden können. Der Import ist direkt über die Datenbank realisierbar.
 
 __Techn. Risiko__       Niedrig
 
@@ -287,7 +287,7 @@ __Business Value__     	Mittel
 --------------------	-----------------------------------------------------------------------------------------
 __UC-Referenz__         UC-21
 
-__Beschreibung__        Ein Programmierer kann ein neues Social-Media-Modul erfassen
+__Beschreibung__        Ein Programmierer kann den Authentifizierungsvorgang anpassen.
 
 __Techn. Risiko__       Hoch
 
@@ -481,7 +481,7 @@ __Business Value__     	Mittel
 __UC-Referenz__         UC-25, UC-21, UC22
 
 __Beschreibung__        Dem Programmierer stehen verschiedene Sicherheitsstufen zur Verfügung. Das Wort "verschieden" wurde durch folgende Aspekte mit dem Auftraggeber definiert:
-						Abgeleitet von der Aufgabenstellung sind Aspekte "Mehrfachteilnahme" und "Automatisierung" definiert worden. Beide Aspekte können durch eine Sicherheitsstufe mehr oder weniger verhindern werden.
+						Abgeleitet von der Aufgabenstellung sind die Aspekte "Mehrfachteilnahme" und "Automatisierung" definiert worden. Beide Aspekte können durch eine Sicherheitsstufe mehr oder weniger verhindern werden.
 						Abhängig von der Art der Interaktivität ist es wirtschaftlich sinnvoll, dass Kosten entstehen dürfen. Deshalb sind die Höhe der Kosten ein Aspekt.
 						Ein weiterer Aspekt ist der Aufwand für den Benutzer. 		
 
@@ -536,7 +536,7 @@ Die Auswirkung bei Eintritt dieses Risikos kann nicht abgeschätzt werden. Situa
 ###R-05 Schlechte/Unzureichende Framework
 Die Bachelorarbeit wird basierend auf verschiedenen Frameworks umgesetzt. Das Risiko, dass Frameworks nicht wie beschrieben funktionieren, schlecht dokumtiert oder instabil sind besteht.
 
-Dieses Risiko wird mit mittlerer Wahrscheinlichkeit eintreten
+Dieses Risiko wird mit mittlerer Wahrscheinlichkeit eintreten.
 Als Auswirkungen dieses Risikos sind Wechsel des Frameworks oder gar manuelle Entwicklungen und daraus zusätzlicher, nicht einschätzbarer Aufwand nötig.
 
 ###R-06 Termineinhaltung
@@ -577,7 +577,7 @@ R7	Auslastung
 ###Massnahmen
 Um das Zusammenspiel der verschiedenen Technologien und die daraus resultierende Komplexität einschätzen zu können, wird vor Projektbeginn ein Prototyp mittels Durchstich durch alle Technologien erstellt. Danach kann die Komplexität im Zusammenspiel der Technologie eingeschätzt und bei Bedarf eine Technologie durch eine andere ersetzt werden. So kann das Risiko 3 "Überkomplexität" und Risiko 5 "Schlechte/Unzureichende Frameworks" minimiert werden.
 
-Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich ist vom Studenten eine Arbeitswoche Ferien eingeplant, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen soll das Risiko 6 Termineinhaltung minimal bleiben.
-Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit ist auf ein Minimum reduziert. Für die restliche freiwilige Arbeit ist mit Freunden ein Notfallszenario entwickelt worden, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt, um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen welche für Risiko 6 ergriffen sind, entschärfen auch Risiko 7.
+Das Projekt ist über eine Anzahl von Feiertagen gelegt, welche gebraucht werden könnten. Zusätzlich ist vom Studenten eine Arbeitswoche Ferien eingeplant, welche im Notfall auch für die Arbeit verwendet werden könnte.  Durch diese Massnahmen soll das Risiko 6 "Termineinhaltung" minimal bleiben.
+Das Risiko 7 "Auslastung" kann nicht direkt vermindert werden. Die Aktivitäten im Bereich der freiwilligen Arbeit ist auf ein Minimum reduziert. Für die restliche freiwilige Arbeit ist mit Freunden ein Notfallszenario entwickelt worden, so kann der Student bei Bedarf seine freiwillige Arbeit durch andere Personen übernehmen lassen kann. Der Kontakt mit dem Arbeitgeber wird intensiv gepflegt, um bei Bedarf die Arbeitsbelastung zu vermindern. Die Massnahmen, welche für Risiko 6 ergriffen sind, entschärfen auch Risiko 7.
 
 [^risikomatrix]: Die Risikomatrix wurde basierend auf der Excel-Vorlage der Stadtpolizei Zürich Abteilung Informatik entworfen. [@vorlagerisikomatrix]

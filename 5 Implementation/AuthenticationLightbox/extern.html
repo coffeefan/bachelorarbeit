@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beispiel Implementation</title>
+    </head>
+<body>
+
+<h1></h1>
+
+<script src="http://iaauth.christianbachmann.ch/include/js/jquery-1.12.3.min.js"></script>
+<script src="http://iaauth.christianbachmann.ch/include/js/iaauthlightbox.js"></script>
+<link type="text/css" rel="stylesheet" href="http://iaauth.christianbachmann.ch/include/css/iaauthlightbox.css" />
+
+<!--OnClick Event on data-iaauthButton -->
+<button data-iaauthButton>GO</button>
+<div id="inline">
+    <form id="paymentForm" action="https://iaauth.azurewebsites.net/Loading/Home/Validate" target="authframe">
+        <input type="hidden" name="projectId" value="30045" />
+        <input type="hidden" name="providerId" value="12" />
+        <!--Generate sign=mdd5(projectId+providerId+validationCode)-->
+        <input type="hidden" name="sign" value="b37b3d4cd7cd8cba3f409f07d6f6d9bd" />
+    </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    var iaauthlightbox = lity();
+    iaauthlightbox();
+});
+</script>
+
+</body>
+</html>
+
+
+
+

@@ -10,7 +10,7 @@ Während den Besprechungen zur Definition der Anforderungen wurde der Begriff "G
 Das Ziel ist es, den Programmierer bei der Konfiguration des Authentifizierungsservice mit visualisierten Kennzahlen zu unterstützen. Der Programmierer soll die Akzeptanz der Sicherheitsstufen unter verschiedenen Bedingungen einsehen können und anderseits soll die empfundene Anstrengung der Benutzer für das Authentifizieren pro Sicherheitsstufe visualisiert werden.
 
 ##Art der Studie
-Wie die Aufgabenstellung und der Auftraggeber fordern, wird eine Studie in Form einer Umfrage mit Hilfe eines digitalen Fragebogens durchgeführt. Bevor die Studie aufgebaut wird gilt es sich Vor- und Nachteile einer schriftlichen Befragungen bewusst zu machen und basierend auf diesem Wissen, die Studie zu planen.
+Wie die Aufgabenstellung und der Auftraggeber fordern, wird eine Studie in Form einer Umfrage mit Hilfe eines digitalen Fragebogens durchgeführt. Bevor die Studie aufgebaut wird, gilt es sich Vor- und Nachteile einer schriftlichen Befragungen bewusst zu machen und basierend auf diesem Wissen, die Studie zu planen.
 
 \newpage
 ###Vor - und Nachteile schriftlicher Fragebogen
@@ -79,7 +79,6 @@ Eine Einschätzung der durchschnittlich benötigen Zeit und Anzahl der Fragen so
 
 \newpage
 ##Hauptteil/Fragen
-Offensichtlich stellt der Hauptteil den Löwenanteil des Aufwands dar.
 
 ###Erste Frage Theorie
 Die erste Frage ist nach Dillman[^Dillman] von grosser Bedeutung. Mit ihr wird Motivation und Einsatz für den ganzen Fragebogen gesetzt. Diese Frage soll Interesse und Neugier der Befragten bewirken.
@@ -121,16 +120,16 @@ Diese Klassifizierung soll helfen den Fragebogen zu gestalten.
 
 ####Frageart
 Bei der Stellung der Frage sollte festgestellt werden, welche Art von Frage gestellt wird. Da sich dadurch die Antwort markantlich unterscheidet.
-Folgende drei Hauptgruppen gibt es
+Folgende drei Hauptgruppen gibt es: \
 - **Einstellungsfragen**\
 Dieser Fragestellung bezieht sich auf "Wunschbarkeit" oder negativer Beurteilung, die Befragte mit bestimmten Statements verbinden.\
 - **Verhaltensfragen**\
 Dabei wird direkt auf das Verhalten des Befragten bezug genommen. Dabei muss beachtet werden, dass der Befragte sein Verhalten selbst beschreibt. Einerseits entspricht die Selbstwahrnehmung der Teilnehmer teilweise nicht der Realität, anderseits kann die Antwort auch dem Wunschdenken des Befragten zugrunde liegen\
 - **Eigenschaftsfragen**\
-Diese Fragestellung fragt nach den Eigenschaften von Personen. Vielfach sind es persönliche und demographische Daten.\
+Diese Fragestellung fragt nach den Eigenschaften von Personen. Vielfach sind es persönliche und demographische Daten.
 
 ####Fragetypen
-Die Fragen können generell in zwei Typen unterteilt werden
+Die Fragen können generell in zwei Typen unterteilt werden:
 
 
 __Offene Frage__    
@@ -138,11 +137,11 @@ Der Aufwand bei der Auswertung ist sehr hoch. Ungeübte Teilnehmer können unver
 
 
 __Geschlossene Frage__	
-Die geschlossene Frage kann leicht ausgewertet werden. Die Gefahr besteht, dass der Teilnehmer ratet und durch die Antworten beeinflusst wird. Der Vorbereitungsaufwand für diese Frage ist hoch. Auswahlmöglichkeiten für die Antwort könnten irelevant sein.
+Die geschlossene Frage kann leicht ausgewertet werden. Die Gefahr besteht, dass der Teilnehmer ratet und durch die Antworten beeinflusst wird. Der Vorbereitungsaufwand für diese Frage ist hoch. Auswahlmöglichkeiten für die Antwort könnten irrelevant sein.
 
 \newpage
 ##Fragen über Akzeptanz
-Es wird folgende Hypothese verfolgt: "Die Akzeptanz von Sicherheitsstufen ist nicht beständig. Sie ist abhängig von den Bedienungen der Interkativität: Seriosität des Anbieters, Wichtigkeit der Umfrage und möglicher Verdienste bei der Teilnahme" Der Programmier soll bei der Konfiguration das Umfeld der Interaktivität kategorisieren können. Die Hauptbereiche sind aus der Aufgabenstellung entnommen. Die anderen Kategorisierungen ergeben sich aus der Thesis.
+Es wird folgende Hypothese verfolgt: "Die Akzeptanz von Sicherheitsstufen ist nicht beständig. Sie ist abhängig von den Bedienungen der Interkativität: Seriosität des Anbieters, Wichtigkeit der Umfrage und möglicher Verdienste bei der Teilnahme" Der Programmierer soll bei der Konfiguration das Umfeld der Interaktivität kategorisieren können. Die Hauptbereiche sind aus der Aufgabenstellung entnommen. Die anderen Kategorisierungen ergeben sich aus der Absprache mit dem Arbeitgeber.
 
 - Voting
 
@@ -177,8 +176,8 @@ Die verschiedenen Sicherheitsstufen sollen für den User direkt vergleichbar bea
 
 ![Screenshot der Umfrage zur Anstrengung](images/umfrage_anstrengung.jpg)
 
-##Bonus "Frage", Umgehung der Absicherung
-Umfrageonline.ch enthält die Sicherheitsstufe Cookie und IP-Adresse. Wobei die Sicherheitsstufe IP-Adresse standardmässig deaktiviert ist. Diese beiden Sicherheitstufen, erlauben es, wie mehrfach in dieser Bachelorarbeit dokumentiert, mehrmals an einer Umfrage teilzunehmen. Die Hypothese wird aufgestellt, dass ein Teilnehmer mit genügend technischem Know-How insbesondere bei diesem Umfragethema mehrfach teilnehmen wird.  
+##"Bonus Frage"
+Umfrageonline.ch enthält die Sicherheitsstufe Cookie und IP-Adresse. Wobei die Sicherheitsstufe IP-Adresse standardmässig deaktiviert ist. Diese beiden Sicherheitsstufen, erlauben es, wie mehrfach in dieser Bachelorarbeit dokumentiert, mehrmals an einer Umfrage teilzunehmen. Die Hypothese wird aufgestellt, dass ein Teilnehmer mit genügend technischem Know-How insbesondere bei diesem Umfragethema mehrfach teilnehmen wird.  
 
 ##Weitere Fragen
 Weiter werden die drei Eigenschfatsfragen gestellt. Dabei sollten Alter, Geschlecht und ob es sich um einen Schweizer oder Bewohner der Schweiz handelt, angegeben werden.
@@ -195,7 +194,7 @@ Durch Kommentare am Schluss können Befragte dem Untersuchter Hinweise zukommen 
 
 
 ##Verständlichkeit
-Als der Umfragebogen Personen mit geringem technischem Know-How vorgelegt wurde, wurde klar das die genannten Authentifizierungsmethoden nicht bekannt sind. Selbst der Begriff Authentifizieren konnte nicht erklärt werden.
+Als der Umfragebogen Personen mit geringem technischem Know-How vorgelegt wurde, wurde klar, dass die genannten Authentifizierungsmethoden nicht bekannt sind. Selbst der Begriff Authentifizieren konnte nicht erklärt werden.
 Deshalb wurden die zu analysierenden Methoden erklärt und illustriert.
 
 ![Beispiele der Illustrationen für die Umfrage ](images/studien-ilustrationen.jpg)
@@ -231,21 +230,21 @@ d= Gesuchter Wert, das Konfidenzintervalls Fehlertoleranzwert= 7,4%
 ###Gemogelt an Wettbewerben
 Über 65% der Befragten gehen davon aus, dass sie noch nie an einem Wettbewerb teilgenommen haben, an welchem gemogelt wurde. Bei den 40-65 jährigen sind es sogar über 83 Prozent. Die Einstiegsfrage, welche zur Einführung ins Thema gedacht ist, zeigt überraschend ein hohes Vertrauen in Onlinewettbewerbe.
 
-![Ergebnise Frage zu mogeln an Onlinewettbewerben](images/studie/mogeln.jpg)
+![Ergebnisse Frage zu mogeln an Onlinewettbewerben](images/studie/mogeln.jpg)
 
-###Bonus "Frage", Umgehung der Absicherung
-Drei Umfrageteilnehmer konnte mit den zur Verfügung stehenden technischen Mittel als Mehrfachteilnahme registriert werden. Die Bonusfrage wurde wie angenommen gelöst. Die Thematik der Umfrage beweget die Teilnehmer offensichtlich zum Ausprobieren. Ein Teilnehmer brauchte nach Ende seiner 1. Teilnahme genau 17 Sekunden, bis er erneut mit der Umfrage starten konnte.
+###"Bonus Frage"
+Drei Umfrageteilnehmer konnten mit den zur Verfügung stehenden technischen Mittel als Mehrfachteilnahme registriert werden. Die Bonusfrage wurde wie angenommen gelöst. Die Thematik der Umfrage bewegte die Teilnehmer offensichtlich zum Ausprobieren. Ein Teilnehmer brauchte nach Ende seiner 1. Teilnahme genau 17 Sekunden, bis er erneut mit der Umfrage starten konnte.
 
 ##Anstrengung
 Auf einer fünf stufigen Skala sind die Sicherheitsstufen nach Anstrengung bewertet: 1 Punkt für sehr anstrengend, 5 Punkte für sehr angenehm.
 Anhand dieser Punkte konnte nun ein arithmetisches Mittel errechnet werden.
-Das Empfinden der Anstrengung ist bei allen Teilnehmer ähnlich feststellbar und mit einer Standartabweichung von 0.85 bis 1.1 Punkte festgelegt. Dabei ist feststellbar, dass unser Authentifizierungsservice Sicherheitsstufen mit angenehmem empfinden bis Sicherheitsstufen mit sehr anstrengendem empfinden zur Verfügung stellt. Die gewünschte Breite des Arbeitgebers konnte auch in diesem Aspekt gefunden werden.
+Das Empfinden der Anstrengung ist bei allen Teilnehmer ähnlich feststellbar und mit einer Standartabweichung von 0.85 bis 1.1 Punkte festgelegt. Dabei ist feststellbar, dass unser Authentifizierungsservice Sicherheitsstufen mit angenehmem empfinden bis Sicherheitsstufen mit sehr anstrengendem Empfinden zur Verfügung stellt. Die gewünschte Breite des Arbeitgebers konnte auch in diesem Aspekt gefunden werden.
 
-![Überischt der Ergebnisse zur Umfrage der Anstrengung mit Arithmetischem Mittel und Standardabweichung ](images/studie/anstrengung.jpg)
+![Übersicht der Ergebnisse zur Umfrage der Anstrengung mit Arithmetischem Mittel und Standardabweichung ](images/studie/anstrengung.png)
 
-
+\newpage 
 ##Akzeptanz
-Die Hypothese, dass sich die Aktzeptanz zum Einsatz von Sicherheitsstufen mit Seriosität des Anbieters, Wichtigkeit und möglichen Verdienst verändert, zeigt das Umfrageergebnis in allen Altersstufen. 
+Die Hypothese, dass sich die Akzeptanz zum Einsatz von Sicherheitsstufen mit Seriosität des Anbieters, Wichtigkeit und möglichen Verdienst verändert, zeigt das Umfrageergebnis in allen Altersstufen. 
 Interessant ist, dass die Akzeptanz von einem automatischen Telefonanruf geringer ist, als die Akzeptanz einer SMS von einer Mobilenummer. Diese Erkenntnis kann auf alle Fragen angewendet werden, ist also unabhängig von Bedienungen der Interaktivitäten. Die Angabe seiner eigenen Mobilenummer wird dem mühsamen Abtippen des Anrufes auf ein mögliches Fixnettelefon vorgezogen.
 Der Pass oder die ID-Nummer wird nur bei einem vertrauenswürdigen Unternehmen angegeben. Der zu erhoffende Gewinn hat keinen bedeutenden Einfluss.
 Bei unbekannten Unternehmen als Anbietern, würde die grosse Mehrheit der Teilnehmer ausser Captcha und E-Mail-Adresse, keine Sicherheitsstufe verwenden. Keine andere Sicherheitsstufe konnte bei diesem Anbieter bei mehr als einem 1/5 der Teilnehmer Akzeptanz erhalten.

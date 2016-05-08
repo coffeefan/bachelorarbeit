@@ -14,7 +14,7 @@ Als Soll-Aufwand der Bachelorarbeit wurden 374  Stunden veranschlagt. Der effekt
 \newpage
 
 ##Soll - Ist Analyse/Vergleich
-Im Unterkapitel [Rahmenbedingungen Bachelorarbeit] wurde bereits aufgeführt, dass eine Bachelorarbeit laut Regelement mindestens 360 Stunden betragen soll. Diese Rahmenbedingung wurde bei der Aufgabenstellung und Aufwandschätzung der Bachelorarbeit berücksichtigt.
+Im Unterkapitel [Rahmenbedingungen der Bachelorarbeit] wurde bereits aufgeführt, dass eine Bachelorarbeit laut Regelement mindestens 360 Stunden betragen soll. Diese Rahmenbedingung wurde bei der Aufgabenstellung und Aufwandschätzung der Bachelorarbeit berücksichtigt.
 
 
 ---------------------------------------------------------------------
@@ -43,7 +43,7 @@ __Total__                   __376__              __412__
 ---------------------------------------------------------------------
 Table: Soll - Ist Analyse/Vergleich
 
-\newpage
+
 ##Meilensteine
 Meilensteine sind sehr wichtig für das Projektmanagement, da sie den gesamten Ablauf der Bachelorarbeit in mehrere kleine und überschaubarere Etappen und Zwischenziele einteilen. Dadurch kann auf dem Weg zur erfolgreichen Umsetzung der Bachelorarbeit immer wieder innegehalten und kontrolliert werden, wie der Stand der Dinge ist und ob die Richtung geändert werden muss. So bleibt stets der Überblick gewahrt und das Projekt "Bachelorarbeit" gerät nicht ausser Kontrolle. [^meilenstein]
                  
@@ -75,8 +75,8 @@ Table: Meilensteine
  
  
  
-\vspace{2cm} 
 
+\newpage
 
 ##Termine
 Folgend sind die wichtigsten Termine dieser Bachelorarbeit aufgelistet.
@@ -99,7 +99,7 @@ Table: Termine der Bachelorarbeit
 \newpage
 
 ##Infrastruktur
-Im Unterkapitel "Infrastruktur" sollen die verwendeten Werkzeuge erläutert werden.
+Im Unterkapitel Infrastruktur sollen die verwendeten Werkzeuge erläutert werden.
 
 ###Quellcode-Verwaltung mit GitHub
 Um einerseits eine Datensicherung zu gewährleisten und anderseits die Änderungen nachvollziehbar abzulegen, wird die Bachelorarbeit mittels Git versioniert. Der Quellcode wird auf github.com verwaltet. Das Repository [^gitrepository] ist öffentlich jederzeit einsehbar.

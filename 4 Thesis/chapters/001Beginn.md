@@ -8,7 +8,7 @@
 
 Die Digitalisierung fordert die Schweizer Wirtschaft heraus. Ob Banken, Pharmaindustrie, Detailhandel oder Medienhäuser – es gibt keine Branche, die nicht vor fundamentalen Veränderungen steht.[^digitalerevolutionhz] Da verwundert es nicht, dass Wettbewerbe oder Kreuzworträtsel nicht nur auf den letzten Seiten der Magazinen oder Zeitungen abgedruckt werden, sondern vermehrt online publiziert und durchgeführt werden und dass bei meinungsbildenden Umfragen oder Abstimmungen weniger auf Telefonumfragen zurückgegriffen wird, sondern immer mehr Umfragen im Internet durchgeführt werden. 
 
-In der Schweiz konnten die grossen Medienhäuser ihre Zugriffszahlen auch 2015 steigern und ihre Toprangierungen beibehalten.[^netmatrixaudit] Um ihren Werbegewinn und Ihre Resonanz zu bewahren oder sogar auszubauen, sind Medien darauf angewiesen, dass ihre Stories bzw. Inhalte auf den Social Media Kanälen verlinkt und so viral verbreitet werden. Neben altbekannten plakativen Titeln und interessanten Bildern beleben die Medienhäuser immer mehr ihren Inhalt mit so genannten "Playful Content" oder auf Deutsch: Mit Interaktivitäten. Dabei handelt es sich um Abstimmungen, Wettbewerbe und Umfragen oder andere Interaktivitäten im Zusammenhang mit dem verfassten Inhalt. Diese Social-Module werden gerne verlinkt und fördern so die Verbreitung des Contents und dadurch einen Anstieg der Besucherzahlen.
+In der Schweiz konnten die grossen Medienhäuser ihre Zugriffszahlen auch 2015 steigern und ihre Toprangierungen beibehalten.[^netmatrixaudit] Um ihren Werbegewinn und ihre Resonanz zu bewahren oder sogar auszubauen, sind Medien darauf angewiesen, dass ihre Stories bzw. Inhalte auf den Social Media Kanälen verlinkt und so viral verbreitet werden. Neben altbekannten plakativen Titeln und interessanten Bildern beleben die Medienhäuser immer mehr ihren Inhalt mit so genannten "Playful Content" oder auf Deutsch: Mit Interaktivitäten. Dabei handelt es sich um Abstimmungen, Wettbewerbe und Umfragen oder andere Interaktivitäten im Zusammenhang mit dem verfassten Inhalt. Diese Social-Module werden gerne verlinkt und fördern so die Verbreitung des Contents und dadurch einen Anstieg der Besucherzahlen.
  
 Bei den meisten angebotenen Umfragen, Abstimmungen und Wettbewerben ist es mit geringem technischen Verständnis möglich mehrfach teilzunehmen oder gefälschte Daten zu übermitteln. Dies ist auf zu einfach realisierte Programmierungen zurückzuführen, was der Glaubwürdigkeit solcher Angebote schadet. Interaktivitäten bedürfen somit einer Authentifizierung, um Betrug oder falschen Stimmabgaben vorzubeugen. Die Eigenentwicklung einer angemessenen Authentifizierung für eine Interaktivität übersteigt meist die kleinen Budgets für diese Angebote. 
 
@@ -54,7 +54,7 @@ Studie
 
 Proof of Concept
 
-- Entwicklung eines Prototypen der Authtenifizierungsschnittstelle und der Verwaltung, basierend auf den erarbeiteten Spezifikationen und Architektur
+- Entwicklung eines Prototypen der Authentifizierungsschnittstelle und der Verwaltung, basierend auf den erarbeiteten Spezifikationen und Architektur
 - Integration der Studienresultate im Prototypen
 
 Fazit
@@ -93,7 +93,7 @@ Proof of Concept
 
 
 
-##Rahmenbedingungen Bachelorarbeit
+##Rahmenbedingungen der Bachelorarbeit
 Die vorliegende Bachelorarbeit umfasst gemäss Regelment unter anderem folgende Punkte:
 
 - Der offizielle Projektstart ist der 18. November 2015. Das Projekt muss bis

@@ -63,7 +63,8 @@ Da die Entwicklungssprache C# verwendet wird, liegt es nahe, das Entwicklungswer
 
 ## Umsetzung Sicherheitsstufe
 
-Aufgrund des eingeschränkten Zeitbudgets werden vier der acht definierten Sicherheitsstufen (Siehe Konzept Kapitel [Sicherheitstufen integrieren]) umgesetzt. Dabei wurde nach Rücksprache mit dem Arbeitgeber, folgende Sicherheitsstufen ausgewählt:
+Aufgrund des eingeschränkten Zeitbudgets werden vier der acht definierten Sicherheitsstufen (Siehe Konzept Kapitel [Sicherheitsstufen integrieren]) umgesetzt. Dabei wurden nach Rücksprache mit dem Arbeitgeber, folgende Sicherheitsstufen ausgewählt:
+
 - EMail
 - SMS
 - Ausweissnummer
@@ -86,6 +87,9 @@ Das MEF-Contracts Interface aller Sicherheitsstufen enthält ausserdem zwei Meth
 \newpage
 
 \begin{lstlisting}[language={[Sharp]C}]
+
+Programmcode des Interface ISecurityStepInfo:
+
 public interface ISecurityStepInfo
 {
 	object getConfigParameters(int projectId);
@@ -125,17 +129,17 @@ Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework ei
 
 ## Finale Screens
 ### AngularJS-Konfigurator
-Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJS umgesetzt wurde. Diese Screens sind abgeleitet von den Mockups[^Mockups-Konfigurator]
+Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJS umgesetzt wurde. Diese Screens sind abgeleitet von den Mockups.[^Mockups-Konfigurator]
 
 ![Startseite und Registration des Konfigurators](images/finalscreens/configurator-overview.png)
 
 \newpage
 
 #### Dashboard
-Nachdem sich der Programmierer eingeloggt hat wird ihm das Dashboard mit der Auswahl seiner Projekte dargestellt. Falls der Programmierer noch kein Projekt erfasst hat, wird ihm erklärt wie er nun vorgehen kann um ein Projekt in im Authentifizierungservice zu erfassen. Der 1. Schritt ist dann gleich über einen Button verlinkt. Andernfalls kann der Programmierer im Dashboard auf einen Blick die Entwicklung der Authentifizierungen pro Projekt wahrnehmen.
-Dabei wird ihm die verwendete Zeiten für seine Authentifizierung dargestellt, die Anzahl Authentifizierungen des letzten Monats und eine Übersicht über das Verhältnis Valider und nicht valider Authentifizierungen.
+Nachdem sich der Programmierer eingeloggt hat, wird ihm das Dashboard mit der Auswahl seiner Projekte dargestellt. Falls der Programmierer noch kein Projekt erfasst hat, wird ihm erklärt, wie er nun vorgehen kann um ein Projekt im Authentifizierungsservice zu erfassen. Der 1. Schritt ist dann gleich über einen Button verlinkt. Andernfalls kann der Programmierer im Dashboard auf einen Blick die Entwicklung der Authentifizierungen pro Projekt wahrnehmen.
+Dabei wird ihm die verwendete Zeit für seine Authentifizierung , die Anzahl Authentifizierungen des letzten Monats und eine Übersicht über das Verhältnis valider und nicht valider Authentifizierungen dargestellt.
 
-![Dashboard mit Auswerungen der Authentifizierungen](images/finalscreens/dashboard.png)
+![Dashboard mit Auswertungen der Authentifizierungen](images/finalscreens/dashboard.png)
 
 
 
@@ -149,18 +153,30 @@ In der Projektdetailansicht kann der Programmierer das Projekt konfigurieren.
 
 ![Detailproduktansicht des Konfigurators](images/finalscreens/configurator-projectdetail.png)
 
-#### Visualisierung Umfrageresultate
+#### Visualisierung der Umfrageresultate
 
-Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG aus dieser Bachelorarbeit zurückgreifen. Die Umfrageergebnisse der Studie werden übersichtlich in 2 Diagrammen zusammengefasst und pro Sicherheitsstufe dargestellt.
+Der Programmierer kann bei der Auswahl der Sicherheitsstufe auf die Bewertungen vom Auftraggeber inaffect AG aus dieser Bachelorarbeit zurückgreifen. Die Umfrageergebnisse der Studie werden übersichtlich in zwei Diagrammen zusammengefasst und pro Sicherheitsstufe dargestellt.
 
-![Weitere Umfrageauswertung der ausgewählten Sicherheitsstufe](images/finalscreens/configurator-statistik.png)
+\newpage
+
+
+![Screenshot Spider-Diagramm mit Bewertungen vom Auftraggeber](images/finalscreens/configurator1.png)
+
+\vspace{1cm}
+
+![Screenshot Umfrageergebnisse pro Interaktivität](images/finalscreens/configurator2.png)
+
+\newpage
+
+![Screenshot Umfrageergebnisse pro Interaktivität und Alter ](images/finalscreens/configurator3.png)
+
 
 \newpage
 
 ### Authentifizierungs-Lightbox 
-Dieses Kapitel zeigt die finalen Screens der Authentifizierungs-Lightbox, welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden. Die Authentifizierungs-Lightbox wurde für den Endbenutzer entworfen. Nach Abschluss der Interaktivität authentifiziert sich der Endbenutzer in der Lightbox. Dabei kommen die im Konfigurator definierten Sicherheitstufen zum Einsatz.
+Dieses Kapitel zeigt die finalen Screens der Authentifizierungs-Lightbox, welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden. Die Authentifizierungs-Lightbox wurde für den Endbenutzer entworfen. Nach Abschluss der Interaktivität authentifiziert sich der Endbenutzer in der Lightbox. Dabei kommen die im Konfigurator definierten Sicherheitsstufen zum Einsatz.
 
-![Desktop-Computer-Ansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-desktop.png)
+![Desktop-Computer-Ansicht der Authentifizierungs-Lightbox](images/finalscreens/authlightbox-desktop.png)
 
 \newpage
 
@@ -201,7 +217,7 @@ Die Implementation der Authentifizierung ist wie im Kapitel [Integrationskonzept
 Nach Abschluss der Authentifizierung erhält der User  ein Feedback visualisiert. Wie im Kapitel [Schlussspeicherung] im Architekturkonzept beschrieben, wird im Hintergrund ein Post auf die vom Programmierer angegebene URL ausgeführt. Als Gegenprüfung steht der Webservice Validate zur Verfügung. Der Webservice wurde implementiert [^url-validate] und kann mit den Parametern ProjectId und ProviderId konsumiert werden.
 
 ### Wettbewerbsplattform
-Um verschiedene Projekte parallel und  verschieden Abläufe von Authentifizierung auf verschiedenen Devices und Browser zu testen, wurde eine einfache Wettbewerbsplattform entwickelt. Auf dieser kann ein Wettbewerb mit Titel und Text eröffnet werden. Die Wettbewerbsteilnahme soll am Schluss mit dem Authentifizierungservice authentifiziert werden. Dafür wird im Konfigurator ein neues Projekt angelegt und konfiguriert. Die Parametern ProjectId und Validationcode aus dem Konfigurator werden zu dem erstellten Wettbewerb abgespeichert. Der von der Wettbewerbsplattform generierte Return-Link für die Gegenprüfung wird zum Projekt in der Authentifizierungsplattform eingetragen.
+Projekte sollen mit verschieden Abläufen und auf verschiedenen Devices und Browser getestet werden können. Dafür wurde eine einfache Wettbewerbsplattform entwickelt. Auf dieser kann ein Wettbewerb mit Titel und Text eröffnet werden. Die Wettbewerbsteilnahme soll am Schluss mit dem Authentifizierungsservice authentifiziert werden. Dafür wird im Konfigurator ein neues Projekt angelegt und konfiguriert. Die Parametern ProjectId und Validationcode aus dem Konfigurator werden zu dem erstellten Wettbewerb abgespeichert. Der von der Wettbewerbsplattform generierte Return-Link für die Gegenprüfung wird zum Projekt in der Authentifizierungsplattform eingetragen.
 
  ![Screenshot Konfiguration Wettbewerb und Projekt](images/screenshot_wettbewerbsplattform.png)
 
@@ -211,7 +227,7 @@ Die Implementation in einem neu erstellten Testprojekt ist erfolgreich. Das umge
 
 
 
-<!--TODOO--Screenshots--> Hier würden ein paar Screenshots gezeigt werden
+
 
 [^url-validate]: http://iaauth.azurewebsites.net/api/Validate
 [^demo-github]: https://github.com/coffeefan/bachelorarbeit
@@ -226,7 +242,8 @@ Die Implementation in einem neu erstellten Testprojekt ist erfolgreich. Das umge
 
 ##Testing
 ###Unit-Test Sicherheitsstufe und Authentifizierungsservice
-Die verschiedenen Sicherheitsstufen könnenen unabhängig geprüft werden. Jede Sicherheitstufe hat ein eigenes Testprojekt. Die verschiedenen Testprojekte der Sicherheitsstufen und das Testprojekt des Authentifizierungsservice basieren auf dem Template des Visual Studio 2015 Unit-Test Frameworks. Die Unit-Tests sind direkt im Visual Studio eingebetet. 
+Die verschiedenen Sicherheitsstufen könnenen unabhängig geprüft werden. Jede Sicherheitstufe hat ein eigenes Testprojekt. Die verschiedenen Testprojekte der Sicherheitsstufen und das Testprojekt des Authentifizierungsservice basieren auf dem Template des Visual Studio 2015 Unit-Test Frameworks. Die Unit-Tests sind direkt im Visual Studio eingebettet.
+
 
 ![Screenshot Unit-Test E-Mail Sicherheitsstufe](images/testoverview.png)
 
