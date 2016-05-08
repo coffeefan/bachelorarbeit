@@ -72,7 +72,7 @@ Das Wort Sicherheitsstufe ist eine domänenspezifische Beschreibung eines einzel
 
 Die Bachelorarbeit in PDF-Form und alle Arbeitsergebnisse können unter folgendem github-Link heruntergeladen werden:
 
-**https://github.com/coffeefan/Bachelor**
+**https://github.com/coffeefan/bachelorarbeit**
 
 ##Danksagung
 Zunächst möchte ich mich bei meinem Betreuer Jaime Oberle vielmals bedanken. Seine Fähigkeit, im richtigen Mass zu hinterfragen, herauszufordern und zu loben, unterstützte mich dabei, motiviert und fokussiert an der Bachelorarbeit zu arbeiten.\
