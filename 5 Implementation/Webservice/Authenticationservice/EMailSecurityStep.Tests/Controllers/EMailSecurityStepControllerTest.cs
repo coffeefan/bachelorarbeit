@@ -71,9 +71,9 @@ namespace EMailSecurityStep.Tests.Controllers
             }
         }
 
-        private static EMailSecurityStepController GetEMailSecurityStepController(IEMailSecurityStepValidationRepository repository)
+        private static EMailSecurityStepController GetEMailSecurityStepController(IEMailSecurityStepValidationRepository repository, IEMailSecurityStepConfigRepository validrepository)
         {
-            EMailSecurityStepController controller = new EMailSecurityStepController(repository);
+            EMailSecurityStepController controller = new EMailSecurityStepController(repository, validrepository);
 
             controller.ControllerContext = new ControllerContext()
             {
@@ -90,7 +90,7 @@ namespace EMailSecurityStep.Tests.Controllers
             HttpContext.Current.Session["ProviderId"] = providerId;
             HttpContext.Current.Session["ProjectId"] = projectId;
             // Arrange
-            EMailSecurityStepController controller = new EMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+            EMailSecurityStepController controller = new EMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository(), new InMemory_EMailSecurityStepConfigRepository());
 
             // Act
             ActionResult result = controller.Index() as ActionResult;
@@ -103,7 +103,7 @@ namespace EMailSecurityStep.Tests.Controllers
         public void Index_Get_AsksForIndexView()
         {
             // Arrange
-            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository(), new InMemory_EMailSecurityStepConfigRepository());
             // Act
             //ViewResult result = controller.Index();
             // Assert
@@ -149,7 +149,7 @@ namespace EMailSecurityStep.Tests.Controllers
         public void GenerateMailText()
         {
             InMemory_EMailSecurityStepValidationRepository repository = new InMemory_EMailSecurityStepValidationRepository();
-            EMailSecurityStepController controller = GetEMailSecurityStepController(repository);
+            EMailSecurityStepController controller = GetEMailSecurityStepController(repository, new InMemory_EMailSecurityStepConfigRepository());
             Assert.AreEqual(controller.generateMailText("test"), "Bitte tragen Sie folgenden den Code test im Webformular ein");
         }
 
@@ -162,7 +162,7 @@ namespace EMailSecurityStep.Tests.Controllers
             string plaintext = "Das ist ein Test";
             string htmlbody = "Das ist ein <strong>Test</strong>";
             bool result = new MailHandler().send(email, name, subject, plaintext, htmlbody);
-            Assert.IsTrue(result);
+            Assert.IsFalse(result);
         }
 
 
@@ -176,7 +176,15 @@ namespace EMailSecurityStep.Tests.Controllers
             string email = "c.bachmann@inaffect.net";
             // Arrange
             InMemory_EMailSecurityStepValidationRepository repository = new InMemory_EMailSecurityStepValidationRepository();
-            EMailSecurityStepController controller = GetEMailSecurityStepController(repository);
+            InMemory_EMailSecurityStepConfigRepository repoConfig = new InMemory_EMailSecurityStepConfigRepository();
+            repoConfig.SaveEMailSecurityConfigByProjectId(new EMailSecurityStepConfig()
+            {
+                EMailSecurityStepConfigId = 1,
+                ProjectId = projectId,
+                FromName = "Chris",
+                ReplayMail = "c.bachmann@inaffet.net"
+            });
+            EMailSecurityStepController controller = GetEMailSecurityStepController(repository, repoConfig);
 
             // Act
             controller.Index(new EMailSecurityStepValidation_Mail()
@@ -200,7 +208,7 @@ namespace EMailSecurityStep.Tests.Controllers
             HttpContext.Current.Session["email"] = email;
 
             InMemory_EMailSecurityStepValidationRepository repository = new InMemory_EMailSecurityStepValidationRepository();
-            EMailSecurityStepController controller = GetEMailSecurityStepController(repository);
+            EMailSecurityStepController controller = GetEMailSecurityStepController(repository, new InMemory_EMailSecurityStepConfigRepository());
             Assert.IsTrue(controller.isEMailInSession(email));
         }
 
@@ -211,7 +219,7 @@ namespace EMailSecurityStep.Tests.Controllers
             String email = "testmail@testworld.ch";
             HttpContext.Current.Session["email"] = email;
             // Arrange
-            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository(), new InMemory_EMailSecurityStepConfigRepository());
             // Act
             ViewResult result = controller.CodeValidation();
             // Assert
@@ -222,7 +230,7 @@ namespace EMailSecurityStep.Tests.Controllers
         public void EMailSecurityStep_Status_NOTOPEN()
         {
             // Arrange
-            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository());
+            var controller = GetEMailSecurityStepController(new InMemory_EMailSecurityStepValidationRepository(), new InMemory_EMailSecurityStepConfigRepository());
             // Act
             EMailSecurityStepValidation_Status result = controller.GetEMailSecurityStepValidationStatus(1, "ZZZ");
             // Assert
@@ -234,7 +242,7 @@ namespace EMailSecurityStep.Tests.Controllers
         {
             InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
             // Arrange
-            var controller = GetEMailSecurityStepController(_repository);
+            var controller = GetEMailSecurityStepController(_repository, new InMemory_EMailSecurityStepConfigRepository());
             // Act
 
             _repository.CreateNewEMailSecurityStepValidation(
@@ -257,7 +265,7 @@ namespace EMailSecurityStep.Tests.Controllers
         {
             InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
             // Arrange
-            var controller = GetEMailSecurityStepController(_repository);
+            var controller = GetEMailSecurityStepController(_repository, new InMemory_EMailSecurityStepConfigRepository());
             // Act
 
             _repository.CreateNewEMailSecurityStepValidation(
@@ -280,7 +288,7 @@ namespace EMailSecurityStep.Tests.Controllers
         {
             InMemory_EMailSecurityStepValidationRepository _repository = new InMemory_EMailSecurityStepValidationRepository();
             // Arrange
-            var controller = GetEMailSecurityStepController(_repository);
+            var controller = GetEMailSecurityStepController(_repository, new InMemory_EMailSecurityStepConfigRepository());
             // Act
 
             _repository.CreateNewEMailSecurityStepValidation(

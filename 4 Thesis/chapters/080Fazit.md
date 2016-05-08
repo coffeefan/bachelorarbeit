@@ -54,8 +54,8 @@ __Studie__		Wurde eine Studie über Akzeptanz und Geschwindigkeit(Anstrengung)		
 																											[Visualisierung Umfrageresultate]
 																											
 __Proof of__	Wurden die Prototypen der Authentifizierungsschnittstelle und der 			erfüllt     	[Proof of Concept],
-__Concept__		Verwaltung entwickelt?                                                                   	[AngularJS-Konfigurator]
-																											[Authentifizierung-Lightbox]
+__Concept__		Verwaltung entwickelt?                                                                   	[AngularJS-Konfigurator],
+																											[Authentifizierungs-Lightbox]
 																											
 				Wurden die Studienresultate im Prototypen integriert?						erfüllt     	[Visualisierung von Daten],
 																											[Visualisierung Umfrageresultate]

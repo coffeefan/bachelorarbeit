@@ -110,7 +110,7 @@ public class SecurityStepCompareInfo
 
 ###Visualisierung
 ####Auswahl des Anzeige-Frameworks
-Nach Anforderung [NFREQ-127] und dem Kapitel [Mockup] soll die Authentifizierung-Lightbox <!-- und der Konfigurator--> responsive umgesetzt werden. Bootstrap unterstützt den Entwickler bei der Visualisierung von Webapplikationen. AngularJS unterstützt seit Anfang an Bootstrap. Mit dem PlugIn AngularJS Boostrap UI stehen erweiterte Bootstrap Funktionalitäten wie Datetime-Picker zur Verfügung. Der Student hat bereits mehrfach Webseiten und Webapplikationen basierend auf Bootstrap umgesetzt. Deshalb fällt die Auswahl auf das mit ihm bekannte Responsive-Framework bootstrap. Neben der responsiven Unterstützung und mit Hilfe des Grid-Systems stehen dem Entwickler umgesetzte Vorlagen für die meistgenutzten Webkomponenten zur Verfügung. Diese können dank zentraler Parametrisierung rasch konfiguriert und individualisiert werden.
+Nach Anforderung NFREQ-127 und dem Kapitel [Mockup] soll die Authentifizierung-Lightbox <!-- und der Konfigurator--> responsive umgesetzt werden. Bootstrap unterstützt den Entwickler bei der Visualisierung von Webapplikationen. AngularJS unterstützt seit Anfang an Bootstrap. Mit dem PlugIn AngularJS Boostrap UI stehen erweiterte Bootstrap Funktionalitäten wie Datetime-Picker zur Verfügung. Der Student hat bereits mehrfach Webseiten und Webapplikationen basierend auf Bootstrap umgesetzt. Deshalb fällt die Auswahl auf das mit ihm bekannte Responsive-Framework bootstrap. Neben der responsiven Unterstützung und mit Hilfe des Grid-Systems stehen dem Entwickler umgesetzte Vorlagen für die meistgenutzten Webkomponenten zur Verfügung. Diese können dank zentraler Parametrisierung rasch konfiguriert und individualisiert werden.
 
 ####Visualisierung von Daten
 Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework eingesetzt. Die drei bekannten Charting-Frameworks GoogleCharts, ChartJs und D3 wurden verglichen. GoogleCharts und D3 visualisieren in SVG. ChartJs visualisiert in Canvas. Ein eindeutiger Vorteil der beiden Konzepte für den Authentifizierungskonfigurator ist nicht zu nennen. Alle drei Charting-Frameworks können mit AngularJS integriert werden. GoogleCharts und ChartJs bieten fixfertige Direktiven[^Directiven] an. Damit ist die Integration in AngularJS der beiden Frameworks im Gegensatz zu D3 direkt möglich. Alle drei Charting-Frameworks bieten die benötigten Diagramme an. ChartJs hat das kleinste Code-Paket (5KB) und wirkt in den Code deutlich einfacher und aufgeräumter. Visuell passt ChartJs mit den leichten Animationen am besten zum Authentifizierungskonfigurator. Zur Visualisierung wird ChartJs verwendet. Die AngularJS-Direktive, der einfache Code, das kleine Paket und die visuelle Umsetzung führt zu diesem Entscheid.
@@ -120,8 +120,8 @@ Um die Umfrageergebnisse visualisieren zu können wird ein Charting-Framework ei
 
 
 [^Directiven]: Angular ermöglicht es, benutzerdefinierte HTML-Elemente und -Attribute, so genannte Direktiven, zu erstellen
-\newpage
 
+\newpage
 
 ## Finale Screens
 ### AngularJS-Konfigurator
@@ -129,25 +129,45 @@ Dieses Kapitel zeigt die finalen Screens des Konfigurators, welcher mit AngularJ
 
 ![Startseite und Registration des Konfigurators](images/finalscreens/configurator-overview.png)
 
-![Produktübersicht des Konfigurators](images/finalscreens/configurator-projectoverview.jpg)
+\newpage
+
+#### Dashboard
+Nachdem sich der Programmierer eingeloggt hat wird ihm das Dashboard mit der Auswahl seiner Projekte dargestellt. Falls der Programmierer noch kein Projekt erfasst hat, wird ihm erklärt wie er nun vorgehen kann um ein Projekt in im Authentifizierungservice zu erfassen. Der 1. Schritt ist dann gleich über einen Button verlinkt. Andernfalls kann der Programmierer im Dashboard auf einen Blick die Entwicklung der Authentifizierungen pro Projekt wahrnehmen.
+Dabei wird ihm die verwendete Zeiten für seine Authentifizierung dargestellt, die Anzahl Authentifizierungen des letzten Monats und eine Übersicht über das Verhältnis Valider und nicht valider Authentifizierungen.
+
+![Dashboard mit Auswerungen der Authentifizierungen](images/finalscreens/dashboard.png)
 
 
-#### Visualisierung Umfrageresultate
 
-Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG und die Umfrageergebnisse einsehen.
 
-![Detailproduktansicht des Konfigurators](images/finalscreens/configurator-projectdetail.jpg)
 
-![Weitere Umfrageauswertung der ausgewählten Sicherheitsstufe](images/finalscreens/configurator-projectdetail.jpg)
+
 
 \newpage
 
-### Authentifizierung-Lightbox 
-Die Authentifizierung-Lightbox mit Sicherheitsstufen wurde für den Endbenutzer entworfen. Dieses Kapitel zeigt die finalen Screens, welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden.
+In der Projektdetailansicht kann der Programmierer das Projekt konfigurieren.
 
-![Desktop-Computer-Ansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-desktop.jpg)
+![Detailproduktansicht des Konfigurators](images/finalscreens/configurator-projectdetail.png)
+
+#### Visualisierung Umfrageresultate
+
+Der Programmierer kann bei Auswahl der Sicherheitsstufe die Bewertungen vom Auftraggeber inaffect AG aus dieser Bachelorarbeit zurückgreifen. Die Umfrageergebnisse der Studie werden übersichtlich in 2 Diagrammen zusammengefasst und pro Sicherheitsstufe dargestellt.
+
+![Weitere Umfrageauswertung der ausgewählten Sicherheitsstufe](images/finalscreens/configurator-statistik.png)
+
+\newpage
+
+### Authentifizierungs-Lightbox 
+Dieses Kapitel zeigt die finalen Screens der Authentifizierungs-Lightbox, welche von den Mockups[^Mockups-Authentifizierungs-Lightbox] abgeleitet wurden. Die Authentifizierungs-Lightbox wurde für den Endbenutzer entworfen. Nach Abschluss der Interaktivität authentifiziert sich der Endbenutzer in der Lightbox. Dabei kommen die im Konfigurator definierten Sicherheitstufen zum Einsatz.
+
+![Desktop-Computer-Ansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-desktop.png)
+
+\newpage
+
+Der Endbenutzer kann mit verschiedenen Geräten die Authentifizierung durchführen. Auf der folgenden Abbildung sind Screenshots eines iPhone 6s und eines Nexus 5x mit Android 6 abgebildet.
 
 ![Mobileansicht der Authentifizierung-Lightbox](images/finalscreens/authlightbox-mobile.png)
+
 
 \newpage
 
@@ -187,7 +207,7 @@ Um verschiedene Projekte parallel und  verschieden Abläufe von Authentifizierun
 
 \newpage
 ###WordPressPlugIn / Erweiterung WP-Poll
-Die Implementation in einem neu erstellten Testprojekt ist erfolgreich. Das umgesetzte Implementationskonzept soll nun auch in einer bestehenden Webapplikation integriert werden. Daher soll das verbreitete Umfrage-Modul WP_Poll aus dem Kapitel [Wordpress PlugIn Hook] eine Implementation der Authentifizierung-Lightbox erhalten. Dafür wurde eine neue Wordpress-Installation mit einem Standartlayout aufgesetzt und das PlugIn integriert. Statt den Code hardkodiert zu integrieren, wurde ein eigenes PlugIn entworfen, dass nun mit minimaler Konfiguration wieder verwendet werden kann. Die Integration ist erfolgreich verlaufen und auf dem github Account verlinkt.[^demo-github]
+Die Implementation in einem neu erstellten Testprojekt ist erfolgreich. Das umgesetzte Implementationskonzept soll nun auch in einer bestehenden Webapplikation integriert werden. Daher soll das verbreitete Umfrage-Modul WP_Poll aus dem Kapitel [Wordpress-Plugin Hook] eine Implementation der Authentifizierung-Lightbox erhalten. Dafür wurde eine neue Wordpress-Installation mit einem Standartlayout aufgesetzt und das PlugIn integriert. Statt den Code hardkodiert zu integrieren, wurde ein eigenes PlugIn entworfen, dass nun mit minimaler Konfiguration wieder verwendet werden kann. Die Integration ist erfolgreich verlaufen und auf dem github Account verlinkt.[^demo-github]
 
 
 
@@ -208,7 +228,7 @@ Die Implementation in einem neu erstellten Testprojekt ist erfolgreich. Das umge
 ###Unit-Test Sicherheitsstufe und Authentifizierungsservice
 Die verschiedenen Sicherheitsstufen könnenen unabhängig geprüft werden. Jede Sicherheitstufe hat ein eigenes Testprojekt. Die verschiedenen Testprojekte der Sicherheitsstufen und das Testprojekt des Authentifizierungsservice basieren auf dem Template des Visual Studio 2015 Unit-Test Frameworks. Die Unit-Tests sind direkt im Visual Studio eingebetet. 
 
-![Screenshot Unit-Test E-Mail Sicherheitsstufe](images/screenshot_test.jpg)
+![Screenshot Unit-Test E-Mail Sicherheitsstufe](images/testoverview.png)
 
 
 

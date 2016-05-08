@@ -29,8 +29,11 @@ Der User nimmt an einer Interaktivität eines Anbieters teil. Dabei füllt er de
 
 ##Domänenmodel Differenziert
 Ein differenziertes Domänenmodel - auch Domänenmodel Basis Level genannt - erlaubt eine vereinfachte Kommunikation zwischen Kunde/Auftraggeber und Entwicklungsteam/Entwicklungsperson. Die Denkweise im Model erfordert keine Programmierkenntnisse und fördert die strukturierte Wiedergabe von Datengefässen. Beim Domänenmodel werden die Begriffe aus der Domäne des Kunden verwendet und fördern so die Verständlichkeit auf beiden Seiten.
+Der Programmierer kann Projekte besitzen. Diese Projekte bestehen aus mehreren Sicherheitsstufen. Die Projekte haben keine oder mehre Authentifizierungssversuche.
 
-![Differenziertes Domänemodel des Authentifizierungservice](images/domaenenmodell.png)
+![Differenziertes Domänemodel des Authentifizierungservice](images/draw_io/domaenenmodell.png)
+
+
 
 <!--TODO beschreibung des Models-->
 
@@ -64,7 +67,7 @@ Durch den Codefirst Ansatz werden die Datenbank und alle zugehörigen Tabellen d
 
 \newpage
 ##Integration der Schnittstelle
-Wie in der [Anforderungsanalyse] und [Aufgabenstellung]  geschrieben, soll die Schnittstelle möglichst einfach in bestehende Systeme integriert werden können. Bevor wir untersuchen, wie wir die Integration umsetzen können, bedarf es die wichtigsten bestehenden Systeme zu kennen um eventuell für diese Systeme eine spezifisch einfache Integration zu entwickeln.
+Wie in den [Anforderungen] und der [Aufgabenstellung]  geschrieben, soll die Schnittstelle möglichst einfach in bestehende Systeme integriert werden können. Bevor wir untersuchen, wie wir die Integration umsetzen können, bedarf es die wichtigsten bestehenden Systeme zu kennen um eventuell für diese Systeme eine spezifisch einfache Integration zu entwickeln.
 
 ###Bestehende Systeme für Votings, Wettbewerbe und Quizes
 Das bestehende Interaktivitäts-Modul wird als Teil einer Webseite in einer Webapplikation geführt. Webapplikationen, welche Inhalte verwalten, werden sinngemäss Content-Management-Systeme genannt. Die Abkürzung CMS hat sich im IT-Fachjargon etabliert. Statista.com  wertet mehrmals im Jahr die Verbreitung der verschiedenen CMS aus [^statisticinfostatista]. Folgend ist die Erhebung aus dem November 2015 abgebildet:
@@ -356,7 +359,7 @@ Um das Konzept besser zu verstehen, soll der Beispielcode von [Design by Contrac
 MEF automatisiert die Instanzierung mit Hilfe von Catalog und Container.
 
 ###Entscheidung
-Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory, um die Modularität für [NFREQ-115] sicherzustellen. MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zur Verfügung.  MEF bietet des Weiteren die Möglichkeit die DLL-Daten zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authentifizierungsservice basierend auf MEF zu integrieren.
+Der Ansatz der Umsetzung des Design by Contract bräuchte eine geeignete Integration für die Factory, um die Modularität für NFREQ-115 sicherzustellen. MEF stellt den vollen Umfang an Funktionalität, zur Lösung der Problematik, zur Verfügung.  MEF bietet des Weiteren die Möglichkeit die DLL-Daten zur Laufzeit auszutauschen und eine automatisierte Instanzierung. Deshalb sind die Sicherheitsstufen des Authentifizierungsservice basierend auf MEF zu integrieren.
 
 \newpage
 ### Sicherheitsstufen Library-Übersicht anhand MEF
@@ -471,13 +474,13 @@ Die Serverkosten sind direkt von der eigentlichen Nutzung abhängig. Das Hosting
 Beim Cloud Service von Microsoft kann direkt im VisualStudio administriert werden. Alle nötigen Resourcen können in der Entwicklungsumgebung konfiguriert werden. Ausserdem ist das einfache publishen der Webanwendung praktisch über einen Knopfdruck aus Visual Studio möglich. 
 
 ###Entscheidung
-Die in [NFREQ-132] geforderte Skalierbarkeit, nutzungsabhängige Kosten und die Freiheit in der Serverdienst-Konfiguration überwiegen der Speicherung der Daten in der Schweiz. Das einfache publishen (veröffentlichen) und konfigurieren einer Web-Applikation aus Visual Studio wird bei Microsoft Azure angeboten, was den Development Workflow erheblich unterstützt. Deshalb ist der Authentifizierungsservice im Cloud Hosting zu betreiben. 
+Die in NFREQ-132 geforderte Skalierbarkeit, nutzungsabhängige Kosten und die Freiheit in der Serverdienst-Konfiguration überwiegen der Speicherung der Daten in der Schweiz. Das einfache publishen (veröffentlichen) und konfigurieren einer Web-Applikation aus Visual Studio wird bei Microsoft Azure angeboten, was den Development Workflow erheblich unterstützt. Deshalb ist der Authentifizierungsservice im Cloud Hosting zu betreiben. 
 
 
 [^cloudservicech]: Stand 18. Dezember 2015
 
 ##Validierung von Benutzereingaben
-[NFREQ-126] und die Sicherheit des Authentifizierungsservice verlangen eine geeignete Validierung der Benutzereingaben. Um Fehlspeicherungen oder Fehloperationen vorzubeugen, werden alle Daten vorgängig validiert. Die Fehlermeldungen sollen - falls möglich - klar und spezifisch formuliert werden. 
+NFREQ-126 und die Sicherheit des Authentifizierungsservice verlangen eine geeignete Validierung der Benutzereingaben. Um Fehlspeicherungen oder Fehloperationen vorzubeugen, werden alle Daten vorgängig validiert. Die Fehlermeldungen sollen - falls möglich - klar und spezifisch formuliert werden. 
 Bei den Daten-/POCO-Klassen werden die gültigen Wertebereiche mittels Annotationen festgelegt. Microsoft MVC und Microsoft Web-API stellen eine "Modelstate.Valid()"-Methode zur Verfügung, welche das angelieferte Datenobjekt automatisch gegen die Annotationen prüft. Bei MVC-Implementierungen werden mittels Microsoft jQuery Validate Standard Annotationen bereits in der Benutzereingabemaske überprüft. So muss der User bei Falscheingabe nicht zuerst einen manuellen Request auf den Server setzten, sondern wird gleich über die Fehleingabe aufmerksam gemacht.
 Im Konfigurator, eine AngularJS-App, ist die benutzerseitige Validierung mittels HTML5 Form Validation umgesetzt worden.
 

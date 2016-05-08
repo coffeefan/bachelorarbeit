@@ -60,6 +60,7 @@ Die Begründung, warum KISS die Sicherheit fördert, liefert Saltzer und Schroed
 ###Default-is-deny
 Ob eine Person oder ein Programm Zugriff auf Daten und Funktionen hat, sollte nicht durch Verbote, sondern durch eine explizite Erlaubnis geregelt werden. Dies bedeutet, dass solange keine explizite Erlaubnis gesetzt ist, kann das Programm oder die Person nicht auf die Daten oder Funktionen zugreifen. You *deny* it. So simpel und logisch diese Idee klingt, umso verwunderlicher ist es, dass viele Organisationen und Entwickler dieses Vorgehen nicht anwenden. Zum Beispiel Filesysteme setzen auf Verbote anstatt auf explizite Erlaubnisse.[^sicheresysteme_94] [^defaultdeny]
 
+\newpage 
 
 ###Open Design
 Abgeleitet von der Theorie der Kryptografie gilt Folgendes: Nicht das Design der Software sollte die Sicherheit sein, sondern der verwendete Schlüssel. Dieses Konzept gilt es in der Softwareentwicklung und Systemtechnik nur bedingt einzuhalten. Die Software soll eher nach dem Ansatz entworfen werden: Mindestens intern soll das Software-Design durch einen Design-Review Prozess analysiert werden. In manchen Fällen macht es jedoch Sinn, das Softwaredesign geheimzuhalten, um einem Angreifer nicht zu viele Informationen zur Verfügung zu stellen.
@@ -87,6 +88,7 @@ durch nicht an der Entwicklung Beteiligte erstellt wird.
 [^defaultdeny]: [@defaultdeny]
 
 
+\newpage 
 
 ##Martkanalyse
 Dieses Unterkapitel erläutert existierenden Produkte auf dem Markt.
@@ -107,21 +109,18 @@ Dank der weiten Verbreitung gibt es nun in allen bekannten Programmiersprachen e
 
 [1]: http://oauth.net/2/
 
-Die grössten [OAuth]-Provider wie Google, Facebook und Twitter erziehlen eine weite Verbreitung weltweit:
+\newpage 
 
-![Aktive Nutzer Weltweit [^socialmediaweltweit]](images/excel-statistik/socialmedia-aktivenutzer.jpg)
+Die grössten [OAuth]-Provider wie Google, Facebook und Twitter erziehlen eine weite Verbreitung weltweit. Ganze *78%* [@goldbachsocial] der Schweizer Bevölkerung nutzten SocialMedia und besitzen dadurch einen OAuth-Account.
 
-Ganze *78%* [@goldbachsocial] der Schweizer Bevölkerung nutzten SocialMedia und besitzen dadurch einen OAuth-Account:
-
-![Anzahl Schweizer Nutzer [^socialmediaschweiz]](images/excel-statistik/socialmedia-schweiz.jpg)
+![Aktive Nutzer Weltweit und in der Schweiz [^socialmediaweltweit]](images/excel-statistik/socialmedia-aktivenutzer.png)
 
 
-[^socialmediaweltweit]: Die Statistik wurde basierend auf den Daten von SocialMedia-Institute [@smi]erstellt. Facebook- und Twitter-Daten sind am 5. November 2015 und die Google-Daten im 2014 erhoben worden.
 
-[^socialmediaschweiz]: Die Statistik wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben.
+[^socialmediaweltweit]: Die Statistik der aktiven Nutzer Weltweit wurde basierend auf den Daten von SocialMedia-Institute [@smi]erstellt. Facebook- und Twitter-Daten sind am 5. November 2015 und die Google-Daten im 2014 erhoben worden.
+Die Statistik der aktiven Nutzer in der Schweiz wurde basierend auf den Daten von Goldbach Interactive [@goldbachsocial] generiert. Die Daten sind im März 2015 erhoben worden.
 [^magnolia]: Ma.gnolia ist eine Leszeichen-Webseite auf der User Leszeichen bis 2009 bewerten und auch privat verwalten konnte.
 
-\newpage
 ####Vorteil
 Mindestes 78% der Schweizer Bevölkerung besitzt bereits einen OAuth Account. Das Protokoll ist ein etablierter Standard.
 
@@ -169,7 +168,7 @@ Bei der Firma SALT konnte mir ebenfalls kein Dokument mit einer Kennzahl gegeben
 
 
 ####Vorteile
-Die mehrfache Registrierung ist auf maximal fünf SIM-Karten/Rufnummern beschränkt. Durch die Kosten für eine SIM-Karte/Mobilenummer wird der Wert zusätzlich gemindert. Bei Missbrauch kann der User eindeutig identifiziert werdenund eine Automatisierung ist nahezu unmöglich.
+Die mehrfache Registrierung ist auf maximal fünf SIM-Karten/Rufnummern beschränkt. Durch die Kosten für eine SIM-Karte/Mobilenummer wird der Wert zusätzlich gemindert. Bei Missbrauch kann der User eindeutig identifiziert werden und eine Automatisierung ist nahezu unmöglich.
 
 ####Nachteile
 Der Versand von SMS verursacht Kosten. Die Implementation bedarf spezifisches technisches Know-How.
@@ -250,9 +249,9 @@ Das Authentifzieren via IP-Adresse verursacht keine direkten Kosten.
 
 ###Ausweisnummer Schweizer Pass oder Identitätskarte
 Die Schweiz führt für ihre Staatangehörigen zwei Ausweisarten: den Schweizer Pass und die Identitätskarte. Diese dienen zum Nachweis der Schweizer Staatsangehörigkeit und der Identität. In der Schweiz besteht weder eine Ausweispflicht noch eine Mitführpflicht, niemand muss eine Identitätskarte oder einen Pass besitzen oder gar bei sich tragen.
-Auf der Rückseite der Identitätskarte oder in der 1. Innenseite des Passes befindet sich im unteren Bereich eine maschinenlesbare Zone, welcher auch von Menschen gelesen werden. Die verschiedenen Bereiche, werden in der folgenden Abbildung beschrieben. Die orange umrandeten Zahlen sind jeweils Checksummen. Der Orange Bereich ist die Gesamtchecksumme.
+Auf der Rückseite der Identitätskarte oder in der 1. Innenseite des Passes befindet sich im unteren Bereich eine maschinenlesbare Zone, welcher auch von Menschen gelesen werden können. Die verschiedenen Bereiche, werden in der folgenden Abbildung beschrieben. Die orange umrandeten Zahlen sind jeweils Checksummen. Der Orange Bereich ist die Gesamtchecksumme.
 
-![Beispiel maschinenlesbare Zone Identitätskarte und Pass mit Legende](images/ausweis.png)
+![Beispiel der maschinenlesbare Zone einer Identitätskarte und eines Passes](images/ausweis.png)
 
 ####Checksummenberechnung
 Die Checksummenberechnung funktioniert wie folgt:
@@ -262,8 +261,8 @@ Die Checksummenberechnung funktioniert wie folgt:
 3. Stelle wird mit 1 multipliziert,
 4. Stelle wird wieder mit 7 multipliziert, usw.
 
-Alle diese Produkte werden dann addiert, dann Modulo 10.
-Bemerkung: Buchstaben werden in Zahlen umgewandelt. Dabei wird die Position des Alphabets begindend ab N0 verwendet. Also A=0, B=1, C=2 und so weiter. Das Zeichen "<" wird in eine 0 umgewandelt.
+Alle diese Produkte werden dann summiert und daraus Modulo 10 berechnet. \
+Bemerkung: Buchstaben werden in Zahlen umgewandelt. Dabei wird die Position des Alphabets beginnend ab 0 gezählt. Also A=0, B=1, C=2 und so weiter. Das Zeichen "<" wird in eine 0 umgewandelt.
 
 
 

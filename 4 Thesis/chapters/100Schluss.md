@@ -57,7 +57,7 @@ Das Wort Sicherheitsstufe ist eine domänenspezifische Beschreibung eines einzel
 
 \newpage
 ##Danksagung
-Zunächst möchte ich mich bei meinem Betreuer Jaime Oberle vielmals bedanken. Seine Fähigkeit in richtigem Masse zu hinterfragen, herauszufordern und zu loben unterstützte mich , motiviert und fokussiert an der Bachelorarbeit zu bleiben.\
+Zunächst möchte ich mich bei meinem Betreuer Jaime Oberle vielmals bedanken. Seine Fähigkeit in richtigem Masse zu hinterfragen, herauszufordern und zu loben unterstützte mich, motiviert und fokussiert an der Bachelorarbeit zu bleiben.\
 Auch meinem Auftraggeber, insbesondere Thomas Joss, möchte ich für die Bereitschaft und Zeit ein grosses Dankeschön aussprechen.\
 Meinen grosser Dank gilt allen, die mir auf meinem Weg in der Studienzeit und während der Bachelorarbeit in vieler Hinsicht geholfen haben. Für Ihre Unterstützung/oder ihren positiven Einfluss möchte ich mich insbesondere bedanken bei: Natanja Hofer, Martin Eigemann, Thomas Bachmann, Christian Wyder, Ursula Hollenstein, Michael Eisenburger, Matthieu Jacquier, Ruth Bachmann, Ursi Hofer, Damaris Denzler, Benjamin Golder, Salome Leutert, Kathleen Wunderli, Benjamin Schwenter und Damaris Hollenstein.\
 
